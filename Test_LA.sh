@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Directory containing .pth files
+PTH_DIR="./result/3DViT/LA_Full/Pth"  # 修改为你存放模型的目录
+
+# Directory to save logs
+LOG_DIR="./result/3DViT/LA_Full/Test"  # 修改为你保存日志的目录
+
+# Root path for dataset
+ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
+
+# Number of classes
+NUM_CLASSES=2  # 修改为你的数据集类别数
+
+# SAM2 model checkpoint path and model configuration
+SAM2_CHECKPOINT="./sam2_configs/sam2.1_hiera_tiny.pt"  # SAM2模型路径
+MODEL_CFG="sam2.1/sam2.1_hiera_t.yaml"  # 模型配置文件路径
+
+# Test save path (if none, we just ignore it in this script)
+TEST_SAVE_PATH="None"  # 如果不保存结果，可以保持None
+
+# Ensure LOG_DIR exists, if not, create it
+if [ ! -d "$LOG_DIR" ]; then
+  mkdir -p "$LOG_DIR"
+fi
+
+# Iterate over each .pth file in the directory
+for MODEL_PATH in $PTH_DIR/*.pth; do
+  # Extract epoch number from filename (optional)
+  EPOCH=$(echo $MODEL_PATH | grep -oP '(?<=epoch_)\d+(?=_checkpoint.pth)')
+  
+  # Set log filename to include epoch number for logging
+  LOG_FILE="$LOG_DIR/Test.log"
+
+  echo "Testing $MODEL_PATH, logging to $LOG_FILE"
+
+  # Call the Python script with the current .pth file
+  python Test_LA.py \
+    --model_name "3DViT" \
+    --model_load "$MODEL_PATH" \
+    --log_path "$LOG_FILE" \
+    --test_save_path "$TEST_SAVE_PATH" \
+    --root_path "$ROOT_PATH" \
+    --num_classes "$NUM_CLASSES" \
+    --sam2_checkpoint "$SAM2_CHECKPOINT" \
+    --model_cfg "$MODEL_CFG" \
+    --num_outputs 1  # Assuming this is the default number of outputs
+done

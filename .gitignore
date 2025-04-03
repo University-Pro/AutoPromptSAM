@@ -1,0 +1,8 @@
+# 忽略 datasets 文件夹下的所有内容
+datasets/
+
+# 忽略 result 文件夹下的所有内容
+result/
+
+# 忽略 sam2_config 文件夹下的所有内容
+sam2_configs/
