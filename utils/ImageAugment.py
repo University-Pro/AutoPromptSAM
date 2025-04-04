@@ -480,6 +480,37 @@ class TwoStreamBatchSampler_LA(Sampler):
     def __len__(self):
         return len(self.primary_indices) // self.primary_batch_size
 
+class TwoStreamBatchSampler_LA_v2(torch.utils.data.sampler.Sampler):
+    def __init__(self, labeled_idxs, unlabeled_idxs, batch_size, labeled_bs):
+        self.labeled_idxs = np.array(labeled_idxs)
+        self.unlabeled_idxs = np.array(unlabeled_idxs)
+        self.batch_size = batch_size
+        self.labeled_bs = labeled_bs
+        self.unlabeled_bs = batch_size - labeled_bs
+        
+        # 计算完整遍历有标签数据所需的batch数
+        self.num_batches = len(labeled_idxs) // labeled_bs
+        
+        # 扩展无标签数据索引以匹配有标签数据的batch需求
+        self.unlabeled_idxs_cycled = np.tile(
+            self.unlabeled_idxs,
+            (self.num_batches * self.unlabeled_bs // len(unlabeled_idxs) + 1)
+        )
+
+    def __iter__(self):
+        # 打乱有标签和无标签数据的顺序
+        np.random.shuffle(self.labeled_idxs)
+        np.random.shuffle(self.unlabeled_idxs_cycled)
+        
+        # 生成混合batch
+        for i in range(self.num_batches):
+            labeled_batch = self.labeled_idxs[i*self.labeled_bs : (i+1)*self.labeled_bs]
+            unlabeled_batch = self.unlabeled_idxs_cycled[i*self.unlabeled_bs : (i+1)*self.unlabeled_bs]
+            yield np.concatenate([labeled_batch, unlabeled_batch])
+
+    def __len__(self):
+        return self.num_batches  # 16//2=8 → 需强制改为16
+
 # 生成一次迭代
 def iterate_once_LA(iterable):
     return np.random.permutation(iterable)

@@ -23,11 +23,12 @@ from skimage.measure import label  # 用于标记连通区域
 # 导入网络
 # from SAM2VNet_SSL import SAM2VNet
 # from SAM2UNet_Tiny_Supervised import SAM2VNet
-# from VNet import VNet
+from networks.VNet import VNet
 # from UNet2D_VNet3D import UNet2D_VNet3D
 # from UNet3D import UNet
 # from UNet3D_Source import UNet3D
-from Vit3DUNet3D import UNet3D
+# from Vit3DUNet3D import UNet3D
+# from networks.Vit3DUNet3D import UNet3D
 
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart
@@ -427,10 +428,10 @@ if __name__ == '__main__':
     # 创建模型实例
     logging.info(f"Creating model: {option.model_name}")
     # model = SAM2VNet(checkpoint_path=option.sam2_checkpoint, model_cfg=option.model_cfg, device='cuda', output_channel=option.num_classes).to(device=device)
-    # model = VNet(n_channels=1, n_classes=option.num_classes, normalization="batchnorm",has_dropout=False).to(device=device)
+    model = VNet(n_channels=1, n_classes=option.num_classes, normalization="batchnorm",has_dropout=False).to(device=device)
     # model = UNet2D_VNet3D(n_channels=1, n_classes=option.num_classes).to(device=device)
     # model = UNet(n_channels=1, n_classes=option.num_classes).to(device=device)
-    model = UNet3D(in_channels=1, out_channels=option.num_classes).to(device=device)
+    # model = UNet3D(in_channels=1, out_channels=option.num_classes).to(device=device)
     
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")

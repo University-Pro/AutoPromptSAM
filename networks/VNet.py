@@ -244,7 +244,7 @@ class VNet(nn.Module):
 
 
 if __name__ == '__main__':
-    x = torch.randn(2,1,112,112,80)
+    x = torch.randn(1,1,112,112,80)
     print(f'input shape is {x.shape}')
     model = VNet(n_channels=1,n_classes=2, normalization='batchnorm', has_dropout=True)
     y = model(x)

@@ -10,7 +10,10 @@ from typing import Optional, Tuple, Type
 from torchinfo import summary
 
 # 导入ImageEncoder
-from ImageEncoder3D import ImageEncoderViT3D
+from networks.sam_med3d.modeling.image_encoder3D import ImageEncoderViT3D
+
+# 导入VNet网络
+from networks.VNet import VNet
 
 # 定义3D UNet的编码器部分
 class UNet3DEncoder(nn.Module):
@@ -65,9 +68,13 @@ class UNet3D(nn.Module):
             img_size=112,
             patch_size=8,
             in_chans=1,
+            depth=4,
+            num_heads=12,
+            mlp_ratio=4,
+            qkv_bias=True,
+            norm_layer=nn.LayerNorm,
             embed_dim=768,
-            depth=12,
-            use_abs_pos=False
+            use_abs_pos=True
         )
         
         # 解码器部分
@@ -79,10 +86,43 @@ class UNet3D(nn.Module):
         
         # 最终卷积层 + 维度调整
         self.final_conv = nn.Conv3d(32, out_channels, kernel_size=1)
-        
+
+        # 替代depth_adjust层
+        self.depth_adjust = nn.Sequential(
+            nn.Conv3d(out_channels, out_channels, 
+                    kernel_size=(3, 1, 1),
+                    padding=(1, 0, 0)),
+            nn.Upsample(size=(112, 112, 80), mode='trilinear')  # 直接上采样到目标尺寸
+        )
+
+        # 创建vnet网络
+        self.vnet = VNet(n_channels=1, n_classes=2,normalization="batchnorm", has_dropout=True)
+
+    def padded_intput(self, x):
+        # 目标深度  
+        target_depth = 112
+
+        # 使用插值填充
+        padded_input = F.interpolate(
+            x,
+            size=(112, 112, target_depth),
+            mode='trilinear',
+            align_corners=False
+        )
+        return padded_input
+
+    def padded_output_conv(self, x):
+        x = self.depth_adjust(x)
+        return x
+
     def forward(self, x):
+        vnet_output = self.vnet(x)
+
+        # 填充输入
+        padded_input = self.padded_intput(x)
+
         # 编码过程
-        x = self.encoder(x)
+        x = self.encoder(padded_input)
         
         # 解码过程
         x = self.decoder(x)
@@ -93,14 +133,21 @@ class UNet3D(nn.Module):
         # 调整维度顺序 (B,C,D,H,W) -> (B,C,H,W,D)
         x = x.permute(0, 1, 3, 4, 2)
         
-        return x
+        # 通过卷积层调整输出形状
+        x = self.padded_output_conv(x)
+
+        return x,vnet_output
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    input_tensor = torch.randn(1, 1, 112, 112, 80).to(device)
+    input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
+    print(f'input shape is {input_tensor.shape}')
     model = UNet3D(in_channels=1, out_channels=2).to(device)
-    output = model(input_tensor)
-    print("输出形状:", output.shape)  # 应该得到 torch.Size([1, 2, 112, 112, 80])
+    output,vnet_output = model(input_tensor)
+    print("output shape is:", output.shape,vnet_output.shape)  # 应该得到 torch.Size([1, 2, 112, 112, 80])
+
+    # 计算模型参数量
+    summary(model=model, input_size=(1, 1, 112, 112, 80), device=device)
 
 if __name__ == "__main__":
     # test_PatchEmbed3D()

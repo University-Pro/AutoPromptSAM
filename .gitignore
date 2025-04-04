@@ -6,3 +6,6 @@ result/
 
 # 忽略 sam2_config 文件夹下的所有内容
 sam2_configs/
+
+# 忽略.pyc文件
+*.pyc

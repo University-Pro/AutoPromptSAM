@@ -7,12 +7,9 @@
 config设置是Small
 
 """
-import sys
-sys.path.append('/samba/network-storage/ssd/home/pi/sam2-test')  # 设置运行目录
-
 import torch
 import torch.nn as nn
-from network.sam2.build_sam import build_sam2
+from networks.sam2.build_sam import build_sam2
 import math
 import torch.nn.functional as F
 from einops import rearrange

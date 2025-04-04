@@ -1,8 +1,6 @@
 """
-用于Synapse半监督学习的DataLoader
-"""
-"""
-Synapse的dataloader（支持有标签/无标签数据比例控制）
+Synapse的dataloader
+支持有标签/无标签数据比例控制
 """
 import os
 import sys

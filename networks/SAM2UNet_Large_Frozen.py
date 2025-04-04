@@ -176,8 +176,8 @@ if __name__ == "__main__":
         print("使用CPU")
 
     # 模型配置和检查点路径
-    sam2_checkpoint = "./network/sam2/checkpoints/sam2.1_hiera_large.pt" # 对编码器冻结的情况下有较大的效果
-    model_cfg = "./configs/sam2.1/sam2.1_hiera_l.yaml"
+    sam2_checkpoint = "./networks/sam2_configs/sam2.1_hiera_large.pt" # 对编码器冻结的情况下有较大的效果
+    model_cfg = "./networks/sam2_configs/sam2.1/sam2.1_hiera_l.yaml"
 
     # 实例化SAM2UNet模型，不使用LoRA
     sam2_unet = SAM2UNet(

@@ -33,7 +33,7 @@ from utils.ImageAugment import ToTensor_LA as ToTensor
 from utils.ImageAugment import TwoStreamBatchSampler_LA
 
 # 导入网络框架
-
+from networks.Vit3DUNet3D import UNet3D
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -74,7 +74,7 @@ def latest_checkpoint(path):
     return latest_file
 
 # 自动处理多卡和单卡模型
-def load_model(model, model_path, device):
+def load_model_deprecated(model, model_path, device):
     state_dict = torch.load(model_path, map_location=device, weights_only=True)
     
     # If loading a DataParallel model, remove `module.` prefix
@@ -87,6 +87,32 @@ def load_model(model, model_path, device):
     else:
         model.load_state_dict(state_dict)
     
+    return model
+
+def load_model(model, model_path, device):
+    state_dict = torch.load(model_path, map_location=device, weights_only=True)
+    
+    # 判断当前模型是否是 DataParallel 实例
+    is_dataparallel = isinstance(model, nn.DataParallel)
+    
+    # 动态处理键名前缀
+    from collections import OrderedDict
+    new_state_dict = OrderedDict()
+    
+    for k, v in state_dict.items():
+        # 情况1：当前是 DataParallel，但检查点没有 'module.' 前缀 → 添加前缀
+        if is_dataparallel and not k.startswith('module.'):
+            new_key = 'module.' + k
+        # 情况2：当前不是 DataParallel，但检查点有多余的 'module.' 前缀 → 移除前缀
+        elif not is_dataparallel and k.startswith('module.'):
+            new_key = k[7:]  # 移除 'module.'
+        # 其他情况：保持原样
+        else:
+            new_key = k
+        new_state_dict[new_key] = v
+    
+    # 加载调整后的权重
+    model.load_state_dict(new_state_dict)
     return model
 
 if __name__ == "__main__":
@@ -189,8 +215,8 @@ if __name__ == "__main__":
 
     # ==================== 模型配置 ====================
     # 初始化模型（这里使用UNet2D_VNet3D作为示例模型）
-    model = UNet2D_VNet3D(n_channels=1, n_classes=args.num_classes).to(device=device)
-    
+    model = UNet3D(in_channels=1,out_channels=2).to(device=device)
+
     # 多GPU配置（如果启用多GPU并且设备数量大于1，则包装为DataParallel）
     if args.multi_gpu and torch.cuda.device_count() > 1:
         model = nn.DataParallel(model)
@@ -211,7 +237,7 @@ if __name__ == "__main__":
     
     # 损失函数设置：
     # 1. Dice损失用于监督学习部分（真实标签与vnet_output）
-    # 2. softmax_mse_loss用于半监督学习中，衡量伪标签（unet_output）与vnet_output之间的差异
+    # 2. softmax_mse_loss用于半监督学习中，衡量两个output之间的差异
     criterion_dice = CeDiceLoss(num_classes=args.num_classes)
     criterion_mse = softmax_mse_loss
     
@@ -267,6 +293,7 @@ if __name__ == "__main__":
                     
                     # 伪标签损失计算（使用unet_output作为伪标签进行softmax后计算MSE损失）
                     probs = torch.softmax(unet_output, dim=1)  # 计算伪标签概率分布
+                    
                     # 使用置信度过滤，只选择概率最高值大于0.8的部分参与损失计算
                     confidence_mask = (torch.max(probs, dim=1, keepdim=True)[0] > 0.7)
                     
@@ -291,7 +318,7 @@ if __name__ == "__main__":
                 mse_weight = alpha
 
                 # ==================== 损失计算 ====================
-                vnet_output, unet_output = model(images)
+                unet_output,vnet_output = model(images)
 
                 # 监督学习部分（Dice Loss）
                 dice_loss = criterion_dice(vnet_output, labels)

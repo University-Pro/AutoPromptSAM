@@ -5,13 +5,9 @@
 最后使用PatchExpand进行还原
 在处理Unlabelled标签的时候使用MaskDecoder的作为伪标签进行训练
 """
-
-import sys
-sys.path.append('/samba/network-storage/ssd/home/pi/sam2-test')  # 设置运行目录
-
 import torch
 import torch.nn as nn
-from network.sam2.build_sam import build_sam2
+from networks.sam2.build_sam import build_sam2
 import math
 import torch.nn.functional as F
 from einops import rearrange

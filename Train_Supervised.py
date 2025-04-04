@@ -20,23 +20,14 @@ from torch.utils.tensorboard import SummaryWriter # 启用Tensorboard
 import logging # 日志系统
 import argparse
 from glob import glob
-import medim
-
-# Synapse的DataLoader，只使用3个标签数据，切片数量较多
-# from dataloader.DataLoader_Synapse_3Labeled import Synapse_dataset
-# from dataloader.DataLoader_Synapse_3Labeled import RandomGenerator
-
-# Synapse的DataLoader，只使用3个标签数据，但是切片数量更少
-# from dataloader.DataLoader_Synapse_3Labeled_Lower import Synapse_dataset
-# from dataloader.DataLoader_Synapse_3Labeled_Lower import RandomGenerator
 
 # 完整版本的Synapse的Dataloader
 from dataloader.DataLoader_Synapse import Synapse_dataset
 from dataloader.DataLoader_Synapse import RandomGenerator
 
-
 # LA的DataLoader
-from dataloader.DataLoader_LA import LAHeart
+# from dataloader.DataLoader_LA import LAHeart
+from dataloader.DataLoader_LA_Semi import LAHeart
 
 # 导入LA的数据增强
 from utils.ImageAugment import RandomRotFlip_LA as RandomRotFlip
@@ -47,12 +38,7 @@ from utils.ImageAugment import ToTensor_LA as ToTensor
 from utils.ImageAugment import TwoStreamBatchSampler_LA
 
 # 导入网络框架
-# from SAM2UNet_Tiny_Supervised import SAM2VNet
-# from VNet import VNet
-# from UNet3D import UNet
-# from UNet3D_Source import UNet3D
-# from Vit3DUNet3D import UNet3D
-# from networks.UNet import UNet
+from networks.VNet import VNet
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -126,10 +112,6 @@ if __name__ == "__main__":
     parser.add_argument("--training_num", type=int, default=80)
     parser.add_argument("--use_amp", action="store_true", help="Whether to use mixed precision training") # 如果使用AMP就加上这个参数
 
-    # SAM相关参数，如果训练的不是SAM模型就用不上
-    parser.add_argument("--sam2_checkpoint", type=str, default='./sam2_configs/sam2.1_hiera_tiny.pt')
-    parser.add_argument("--model_cfg", type=str, default='sam2.1/sam2.1_hiera_t.yaml')
-
     args = parser.parse_args()
 
     # 配置设备
@@ -152,21 +134,21 @@ if __name__ == "__main__":
 
     # 创建LA数据集
     patch_size = (112, 112, 80)
-    # db_train = LAHeart(base_dir=args.dataset_path,
-    #                    split='train',
-    #                    transform=transforms.Compose([
-    #                         RandomRotFlip(),
-    #                         RandomCrop(patch_size),
-    #                         ToTensor()
-    #                         # transforms.Normalize(mean=[0.5], std=[0.5]) # 添加数据归一化
-    #                     ]),
-    #                     num=args.training_num)
+    db_train = LAHeart(base_dir=args.dataset_path,
+                       split='train_label',
+                       transform=transforms.Compose([
+                            RandomRotFlip(),
+                            RandomCrop(patch_size),
+                            ToTensor()
+                            # transforms.Normalize(mean=[0.5], std=[0.5]) # 添加数据归一化
+                        ]),
+                        num=args.training_num)
     
     # 创建Synapse数据集
-    db_train = Synapse_dataset(base_dir="./datasets/Synapse/data",
-                               list_dir="./datasets/Synapse/list",
-                               split="train",
-                               transform = RandomGenerator((224,224)))
+    # db_train = Synapse_dataset(base_dir="./datasets/Synapse/data",
+    #                            list_dir="./datasets/Synapse/list",
+    #                            split="train",
+    #                            transform = RandomGenerator((224,224)))
 
     logging.info(f"Training dataset: {len(db_train)}")
     
@@ -181,16 +163,7 @@ if __name__ == "__main__":
     )
 
     # 定义模型
-    # model = SAM2VNet(checkpoint_path=args.sam2_checkpoint, model_cfg=args.model_cfg, device='cuda', output_channel=args.num_classes)
-    # model = VNet(n_channels=1, n_classes=args.num_classes, normalization='batchnorm', has_dropout=True).to(device=device)
-    # model = UNet(n_channels=1, n_classes=args.num_classes).to(device=device)
-    # model = UNet3D(in_channels=1, out_channels=args.num_classes).to(device=device)
-    # model = medim.create_model("SAM-Med3D",
-    #                            pretrained=True,
-    #                            checkpoint_path="sam2_configs/sam_med3d_turbo.pth")
-    # model = UNet3D(in_channels=1,out_channels=2)
-    # model = UNet(n_channels=1,n_classes=args.num_classes)
-    model = KANU_Net(n_channels=1,n_classes=9).to(device=device)
+    model = VNet(n_channels=1, n_classes=args.num_classes, normalization='batchnorm', has_dropout=True).to(device=device)
 
     # 如果继续训练
     if args.continue_train:
@@ -205,14 +178,6 @@ if __name__ == "__main__":
 
     # 设置优化器
     optimizer = optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=1e-4, weight_decay=0.01) # 优化器
-    # 基于医学影像数据特性推荐使用SGD
-    # optimizer = optim.SGD(
-    #     filter(lambda p: p.requires_grad, model.parameters()),
-    #     lr=1e-4,            # 降低初始学习率（医学影像常用1e-3~1e-4）
-    #     momentum=0.9,
-    #     weight_decay=1e-5,
-    #     nesterov=True
-    # )
     logging.info(f"Optimizer: {optimizer.__class__.__name__} with parameters: {optimizer.defaults}")
 
     # 定义损失函数
@@ -228,14 +193,14 @@ if __name__ == "__main__":
     # )
 
     # 设置新的学习率调度器
-    scheduler = optim.lr_scheduler.OneCycleLR(
-        optimizer,
-        max_lr=1e-3,           # 与优化器初始学习率一致
-        epochs=args.epochs,
-        steps_per_epoch=len(train_loader),
-        pct_start=0.1,         # 10%的预热阶段
-        anneal_strategy='cos'
-    )
+    # scheduler = optim.lr_scheduler.OneCycleLR(
+    #     optimizer,
+    #     max_lr=1e-3,           # 与优化器初始学习率一致
+    #     epochs=args.epochs,
+    #     steps_per_epoch=len(train_loader),
+    #     pct_start=0.1,         # 10%的预热阶段
+    #     anneal_strategy='cos'
+    # )
 
     # 模型设置为训练模式
     model.train()
@@ -248,7 +213,6 @@ if __name__ == "__main__":
         for i_batch, sampled_batch in enumerate(train_loader):
             images, labels = sampled_batch['image'].to(device), sampled_batch['label'].to(device) # 原先内容
             
-
             optimizer.zero_grad()
 
             # 使用混合精度
@@ -298,7 +262,7 @@ if __name__ == "__main__":
 
 
         pbar.close()
-        # scheduler.step()
+        # scheduler.step() # 不设置学习率调度器
 
         # 日志记录当前的Loss
         logging.info(f"Epoch {epoch+1}/{args.epochs}, Batch {i_batch+1}/{len(train_loader)}, Loss: {total_loss.item():.4f}")
