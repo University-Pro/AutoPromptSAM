@@ -151,6 +151,8 @@ if __name__ == "__main__":
     parser.add_argument("--multi_gpu", action="store_true", help='使用多GPU训练')
     parser.add_argument("--training_label_num", type=int, default=16, help='有标签样本数量')
     parser.add_argument("--training_unlabel_num", type=int, default=64, help='无标签样本数量')
+    parser.add_argument("--label_bs", type=int, default=2, help='有标签样本批量大小')
+    parser.add_argument("--unlabel_bs", type=int, default=2, help='无标签样本批量大小')
 
     args = parser.parse_args()
 
@@ -285,16 +287,17 @@ if __name__ == "__main__":
             images = torch.cat([labeled_batch['image'], unlabeled_batch['image']], dim=0).to(device)
             labels = torch.cat([labeled_batch['label'], torch.zeros_like(unlabeled_batch['label'])], dim=0).to(device)
 
+            # 确定标注数据的数量
+            labeled_bs = labeled_batch['image'].size(0)
+
             # 检查batch组成
-            print(f"Batch {batch_idx}:")
-            print(f"  Labeled samples: {images[:args.labeled_bs].shape}")    # 应为 [2, 1, 112, 112, 80]
-            print(f"  Unlabeled samples: {images[args.labeled_bs:].shape}")  # 应为 [2, 1, 112, 112, 80]
+            if batch_idx == 0:  # 仅首次batch打印形状
+                print(f"Batch {batch_idx}:")
+                print(f"Labeled samples: {images[:labeled_bs].shape}")
+                print(f"Unlabeled samples: {images[labeled_bs:].shape}")
 
-            # 修改这里：正确获取无标签数据
-            unlabeled_images = images[args.labeled_bs:] 
-            # unlabeled_labels = labels[args.labeled_bs:]  # 不应该使用unlabeled_labeles，因为它们是无标签的
-
-            # 无标签数据进行数据增强
+            # 无标签数据增强
+            unlabeled_images = images[labeled_bs:]
             noise = torch.clamp(torch.randn_like(unlabeled_images) * 0.1, -0.2, 0.2)
             ema_inputs = unlabeled_images + noise
 
@@ -369,18 +372,17 @@ if __name__ == "__main__":
             })
 
             # TensorBoard记录
-            global_step = epoch * len(train_loader) + batch_idx
+            global_step = epoch * len(train_label_loader) + batch_idx
             writer.add_scalar('Loss/Total', total_loss.item(), global_step)
-            if labels is not None: # 只在有标签时记录Dice Loss才有意义
-                writer.add_scalar('Loss/Dice', supervised_loss.item(), global_step)
+            writer.add_scalar('Loss/Dice', supervised_loss.item(), global_step)
             writer.add_scalar('Loss/MSE', consistency_loss.item(), global_step)
-            writer.add_scalar('Learning Rate', optimizer.param_groups[0]['lr'], global_step) # 记录学习率
+            writer.add_scalar('Learning Rate', optimizer.param_groups[0]['lr'], global_step)
 
         # Epoch 结束
         pbar.close()
-        avg_epoch_loss = epoch_loss / len(train_loader)
-        avg_dice_loss = epoch_dice_loss / len(train_loader) # 或更精确地除以有标签的批次数
-        avg_mse_loss = epoch_mse_loss / len(train_loader)
+        avg_epoch_loss = epoch_loss / len(pbar)
+        avg_dice_loss = epoch_dice_loss / len(pbar)
+        avg_mse_loss = epoch_mse_loss / len(pbar)
         logging.info(f"Epoch {epoch+1} completed. Avg Loss: {avg_epoch_loss:.4f}, Avg Dice: {avg_dice_loss:.4f}, Avg MSE: {avg_mse_loss:.4f}")
 
         # 保存检查点 (保持不变)
