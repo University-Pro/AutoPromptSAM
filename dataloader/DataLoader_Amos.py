@@ -17,8 +17,8 @@ class Config:
             self.n_filters = 32  # 网络中卷积层的滤波器数量
             self.early_stop_patience = 100  # 早停的耐心度（训练多少个周期没有提升就停止）
         else:  # 如果任务是 amos
-            self.base_dir = './Datasets/amos22'  # 基本数据目录
-            self.save_dir = './amos_data'  # 保存数据目录
+            self.base_dir = './datasets'  # 基本数据目录
+            self.save_dir = './datasets/Amos/data'  # 保存数据目录
             self.patch_size = (64, 128, 128)  # 图像的切片大小
             self.num_cls = 16  # 类别数
             self.num_channels = 1  # 输入图像的通道数
@@ -127,28 +127,28 @@ def read_test_data(num_samples=5, task="amos"):
         # 这里可以进行其他测试操作，比如查看数据、可视化等
 
 # 创建 DataLoader 用于训练或测试
-def get_dataloader(dst_cls, args, split='train', repeat=None, unlabeled=False, config=None, transforms=None):
-    dst = dst_cls(
-        task=args.task,
-        split=split,
-        repeat=repeat,
-        unlabeled=unlabeled,
-        num_cls=config.num_cls,
-        transform=transforms.Compose([
-            RandomCrop(config.patch_size, args.task),
-            RandomFlip_LR(),
-            RandomFlip_UD(),
-            ToTensor()
-        ])
-    )
-    return DataLoader(
-        dst,
-        batch_size=args.batch_size,
-        shuffle=True,
-        num_workers=args.num_workers,
-        pin_memory=True,
-        worker_init_fn=seed_worker
-    )
+# def get_dataloader(dst_cls, args, split='train', repeat=None, unlabeled=False, config=None, transforms=None):
+#     dst = dst_cls(
+#         task=args.task,
+#         split=split,
+#         repeat=repeat,
+#         unlabeled=unlabeled,
+#         num_cls=config.num_cls,
+#         transform=transforms.Compose([
+#             RandomCrop(config.patch_size, args.task),
+#             RandomFlip_LR(),
+#             RandomFlip_UD(),
+#             ToTensor()
+#         ])
+#     )
+#     return DataLoader(
+#         dst,
+#         batch_size=args.batch_size,
+#         shuffle=True,
+#         num_workers=args.num_workers,
+#         pin_memory=True,
+#         worker_init_fn=seed_worker
+#     )
 
 # 主程序入口
 if __name__ == "__main__":

@@ -1,6 +1,14 @@
 {
     "version": "0.2.0",
     "configurations": [
+    
+        {
+            "name": "Python 调试程序: 模块",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "networks.SAM3DVNet_SSL"
+        },
+        
         {
             "name": "Python: Train_Semi_Supervied_V2",
             "type": "debugpy",
@@ -8,20 +16,33 @@
             "program": "-m",
             "args": [
                 "Train_Semi_Supervied_V2",
-                "--seed", "21",
-                "--epochs", "400",
-                "--batch_size", "5",
-                "--num_classes", "2",
-                "--learning_rate", "1e-3",
-
-                "--dataset_path", "./datasets/LA",
-                "--log_path", "./result/EMA/LA/Training.log",
-                "--pth_path", "./result/EMA/LA/Pth",
-                "--tensorboard_path", "./result/EMA/LA/Train",
-
-                "--training_label_num", "16",
-                "--training_unlabel_num", "64",
-                "--multi_gpu"
+                "--seed",
+                "42",
+                "--epochs",
+                "400",
+                "--batch_size",
+                "5",
+                "--num_classes",
+                "2",
+                "--learning_rate",
+                "1e-3",
+                "--dataset_path",
+                "./datasets/LA",
+                "--log_path",
+                "./result/Vit3DUNet3D/LA/Training.log",
+                "--pth_path",
+                "./result/Vit3DUNet3D/LA/Pth",
+                "--tensorboard_path",
+                "./result/Vit3DUNet3D/LA/Train",
+                "--multi_gpu",
+                "--training_label_num",
+                "16",
+                "--training_unlabel_num",
+                "64",
+                "--label_bs",
+                "1",
+                "--unlabel_bs",
+                "4"
             ],
             "console": "integratedTerminal",
             "justMyCode": true,

@@ -1,7 +1,8 @@
 """
-尝试双流编码器是否真的有作用
-相比于第一版优化一下整体思路
-使用Vit3DUNet进行尝试
+使用双流编码器
+在2D图像上测试加载预训练权重是否有用
+利用Unet网络在Synapse数据集上训练的权重加载到ACDC数据集上
+伪标签的方式进行学习
 """
 import torch.optim as optim
 from torch.utils.data import DataLoader
@@ -23,19 +24,19 @@ import logging  # 日志系统
 import argparse
 from glob import glob
 
-# LA的DataLoader
-from dataloader.DataLoader_LA import LAHeart
+# DataLoader
+from dataloader.DataLoader_Synapse import Synapse_dataset
+from dataloader.DataLoader_ACDC import ACDCdataset
 
-# 导入LA的数据增强
-from utils.ImageAugment import RandomRotFlip_LA as RandomRotFlip
-from utils.ImageAugment import RandomCrop_LA as RandomCrop
-from utils.ImageAugment import ToTensor_LA as ToTensor
+# ACDC数据增强
+from dataloader.DataLoader_ACDC import ACDCdataset as ACDC_dataset
+from dataloader.DataLoader_ACDC import RandomGenerator as ACDC_RandomGenerator
 
 # 导入加载无标签的工具
 from utils.ImageAugment import TwoStreamBatchSampler_LA
 
 # 导入网络框架
-from networks.Vit3DUNet3D import UNet3D
+from networks.Unet2D_Pseudo import UNet_Full
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -97,29 +98,76 @@ def load_model(model, model_state_dict, device):
     model.load_state_dict(new_state_dict)
     return model
 
-def get_current_consistency_weight(iter):
-    return 0.1 * sigmoid_rampup(iter, 1600)  # 假设总迭代次数为200
+def load_pretrained_to_branch1(model, pretrained_path,multi_gpu=False):
+    """改进版权重加载函数，支持自动处理多GPU前缀和分支前缀"""
+    pretrained_dict = torch.load(pretrained_path)
+    
+    print("\n===== 原始权重键名样例 =====")
+    print(list(pretrained_dict.keys())[:5])
+    
+    # 第一步：去除预训练权重中的module前缀（如果存在）
+    pretrained_dict = {k.replace('module.', ''): v for k, v in pretrained_dict.items()}
+    
+    # 第二步：构建目标键名映射
+    model_dict = model.state_dict()
+    updated_dict = {}
+    mismatch_keys = []
+    
+    # 根据是否多GPU决定目标前缀
+    target_prefix = "module.unet_branch1." if multi_gpu else "unet_branch1."
+    
+    print("\n===== 模型期待键名样例 =====")
+    print([k for k in model_dict.keys() if "unet_branch1" in k][:5])
+    
+    for k, v in pretrained_dict.items():
+        # 情况1：权重来自标准UNet（无分支前缀）
+        if not k.startswith(("unet_branch1.", "unet_branch2.")):
+            # 尝试直接添加分支前缀
+            new_key = target_prefix + k
+            if new_key in model_dict and model_dict[new_key].shape == v.shape:
+                updated_dict[new_key] = v
+                continue
+            
+            # 尝试匹配子模块（如inc.double_conv）
+            for module_part in ["inc.", "down", "up", "outc"]:
+                if module_part in k:
+                    new_key = target_prefix + module_part + k.split(module_part)[1]
+                    if new_key in model_dict and model_dict[new_key].shape == v.shape:
+                        updated_dict[new_key] = v
+                        break
+        
+        # 情况2：权重已有部分匹配前缀
+        elif k.startswith("unet_branch1."):
+            new_key = target_prefix + k.replace("unet_branch1.", "")
+            if new_key in model_dict:
+                updated_dict[new_key] = v
+                continue
+        
+        # 记录不匹配的键
+        if k not in updated_dict:
+            mismatch_keys.append(k)
 
-def sigmoid_rampup(current, rampup_length=200):  # 缩短rampup周期
-    if rampup_length == 0:
-        return 1.0
-    current = np.clip(current, 0.0, rampup_length)
-    phase = 1.0 - current / rampup_length
-    return float(np.exp(-5.0 * phase**2))  # 修正公式错误
-
-def mixup_data(x, alpha=1.0):
-    """MixUp数据增强"""
-    if alpha > 0:
-        lam = np.random.beta(alpha, alpha)
-    else:
-        lam = 1
-    batch_size = x.size(0)
-    index = torch.randperm(batch_size).to(x.device)
-    mixed_x = lam * x + (1 - lam) * x[index]
-    return mixed_x, lam, index
+    # 打印调试信息
+    if mismatch_keys:
+        print("\n===== 未加载的权重键 =====")
+        print(f"总数: {len(mismatch_keys)}/{len(pretrained_dict)}")
+        print("示例:", mismatch_keys[:5])
+    
+    # 安全加载并打印统计
+    model.load_state_dict(updated_dict, strict=False)
+    
+    # 计算加载成功率
+    loaded_keys = set(updated_dict.keys())
+    expected_keys = set(k for k in model_dict.keys() if "unet_branch1" in k)
+    
+    print("\n===== 加载结果统计 =====")
+    print(f"成功加载: {len(loaded_keys)}/{len(expected_keys)} 参数")
+    print(f"匹配率: {len(loaded_keys)/len(expected_keys):.1%}")
+    
+    return model
 
 if __name__ == "__main__":
-    # ==================== 参数配置 ====================
+    # ==================== 监督学习参数配置 ====================
     parser = argparse.ArgumentParser(description="3D医学图像分割训练脚本（半监督）")
     parser.add_argument('--seed', type=int, default=21, help='随机种子')
     parser.add_argument("--epochs", type=int, default=200, help='训练总轮数')
@@ -132,13 +180,18 @@ if __name__ == "__main__":
     parser.add_argument("--tensorboard_path", type=str, default='./result/Train', help='TensorBoard日志路径')
     parser.add_argument("--continue_train", action="store_true", help='是否继续训练')
     parser.add_argument("--multi_gpu", action="store_true", help='是否使用多GPU')
+    
+    # ==================== 半监督学习参数配置 ====================
     parser.add_argument("--training_label_num", type=int, default=16, help='有标签样本数量')
     parser.add_argument("--training_unlabel_num", type=int, default=64, help='无标签样本数量')
     parser.add_argument("--label_bs", type=int, default=2, help='有标签样本批量大小')
     parser.add_argument("--unlabel_bs", type=int, default=2, help='无标签样本批量大小')
     parser.add_argument("--consistency_weight", type=float, default=0.1, help='一致性损失权重') 
+    
+    # ==================== 预训练权重加载 ====================
+    parser.add_argument("--pretrained_weights", type=str, default=None, help='预训练权重路径')
     args = parser.parse_args()
-
+    
     # ==================== 文件与目录创建 ====================
     for path in [os.path.dirname(args.log_path), args.pth_path, args.tensorboard_path]:
         os.makedirs(path, exist_ok=True)
@@ -150,14 +203,13 @@ if __name__ == "__main__":
     logging.info(f"训练配置参数:\n{vars(args)}")
 
     # ==================== 数据准备 ====================
-    patch_size = (112, 112, 80)
-    train_transform = transforms.Compose([
-        RandomRotFlip(),
-        RandomCrop(patch_size),
-        ToTensor()
-    ])
-
-    full_dataset = LAHeart(base_dir=args.dataset_path, split='train', transform=train_transform)
+    transform = ACDC_RandomGenerator((224,224))
+    full_dataset = ACDC_dataset(
+            base_dir="./datasets/ACDC",  
+            list_dir="./datasets/ACDC/lists_ACDC", 
+            split="train",
+            transform=transform
+        )
     labeled_idx = list(range(args.training_label_num))
     unlabeled_idx = list(range(args.training_label_num, args.training_label_num + args.training_unlabel_num))
 
@@ -171,7 +223,7 @@ if __name__ == "__main__":
     train_loader = DataLoader(full_dataset, batch_sampler=batch_sampler, num_workers=8, pin_memory=True)
 
     # ==================== 模型初始化 ====================
-    model = UNet3D(in_channels=1, out_channels=args.num_classes).to(device)
+    model = UNet_Full(n_channels=1, n_classes=args.num_classes).to(device)
 
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:
@@ -196,7 +248,11 @@ if __name__ == "__main__":
             # 恢复epoch
             start_epoch = checkpoint_data['epoch'] + 1
             logging.info(f"加载检查点: {checkpoint}，从epoch {start_epoch}继续训练")
+    
+    # 加载预训练权重
+    # model = load_pretrained_to_branch1(model, args.pretrained_weights,multi_gpu=args.multi_gpu)
 
+    # 将模型移动到GPU
     model.to(device)
 
     # 优化器设置

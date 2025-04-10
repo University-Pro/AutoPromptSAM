@@ -1,6 +1,9 @@
 """
+一号网络使用：
 编码器使用ViT3D
 解码器使用UNet3D
+二号网络使用VNet
+一号网络给二号网络提供伪标签
 """
 
 import torch
@@ -147,7 +150,7 @@ def main():
     print("output shape is:", output.shape,vnet_output.shape)  # 应该得到 torch.Size([1, 2, 112, 112, 80])
 
     # 计算模型参数量
-    summary(model=model, input_size=(1, 1, 112, 112, 80), device=device)
+    # summary(model=model, input_size=(1, 1, 112, 112, 80), device=device)
 
 if __name__ == "__main__":
     # test_PatchEmbed3D()

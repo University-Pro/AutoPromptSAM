@@ -27,7 +27,10 @@ from dataloader.DataLoader_Synapse import RandomGenerator
 
 # LA的DataLoader
 # from dataloader.DataLoader_LA import LAHeart
-from dataloader.DataLoader_LA_Semi import LAHeart
+# from dataloader.DataLoader_LA_Semi import LAHeart
+
+# Synapse的Dataloader
+from dataloader.DataLoader_Synapse import Synapse_dataset
 
 # 导入LA的数据增强
 from utils.ImageAugment import RandomRotFlip_LA as RandomRotFlip
@@ -134,21 +137,21 @@ if __name__ == "__main__":
 
     # 创建LA数据集
     patch_size = (112, 112, 80)
-    db_train = LAHeart(base_dir=args.dataset_path,
-                       split='train_label',
-                       transform=transforms.Compose([
-                            RandomRotFlip(),
-                            RandomCrop(patch_size),
-                            ToTensor()
-                            # transforms.Normalize(mean=[0.5], std=[0.5]) # 添加数据归一化
-                        ]),
-                        num=args.training_num)
+    # db_train = LAHeart(base_dir=args.dataset_path,
+    #                    split='train_label',
+    #                    transform=transforms.Compose([
+    #                         RandomRotFlip(),
+    #                         RandomCrop(patch_size),
+    #                         ToTensor()
+    #                         # transforms.Normalize(mean=[0.5], std=[0.5]) # 添加数据归一化
+    #                     ]),
+    #                     num=args.training_num)
     
     # 创建Synapse数据集
-    # db_train = Synapse_dataset(base_dir="./datasets/Synapse/data",
-    #                            list_dir="./datasets/Synapse/list",
-    #                            split="train",
-    #                            transform = RandomGenerator((224,224)))
+    db_train = Synapse_dataset(base_dir="./datasets/Synapse/data",
+                               list_dir="./datasets/Synapse/list",
+                               split="train",
+                               transform = RandomGenerator((224,224)))
 
     logging.info(f"Training dataset: {len(db_train)}")
     

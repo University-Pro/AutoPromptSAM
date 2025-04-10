@@ -111,7 +111,36 @@ class CeDiceLoss(nn.Module):
         loss_dice = self.diceloss(pred, target, softmax=True)
         loss = self.loss_weight[0] * loss_ce + self.loss_weight[1] * loss_dice
         return loss
+
+class CeDiceLoss_Test(nn.Module):
+    """
+    给出的修改意见
+    """
+    def __init__(self, num_classes, loss_weight=[0.4, 0.6]):
+        super().__init__()
+        self.celoss = nn.CrossEntropyLoss()
+        self.diceloss = nDiceLoss(num_classes)
+        self.loss_weight = loss_weight
     
+    def forward(self, pred, target):
+        # 维度修正：假设target原始形状为 [B, 1, D, H, W]
+        target = target.squeeze(1)  # 压缩通道维度 => [B, D, H, W]
+        
+        # 类型转换确保为Long
+        target = target.long()
+        
+        # 交叉熵损失计算
+        loss_ce = self.celoss(pred, target)  # pred应为 [B, C, D, H, W]
+        
+        # Dice损失计算（根据nDiceLoss的实现可能需要不同格式）
+        # 假设nDiceLoss需要one-hot格式
+        target_onehot = F.one_hot(target, num_classes=self.num_classes)  # [B, D, H, W, C]
+        target_onehot = target_onehot.permute(0, 4, 1, 2, 3)  # [B, C, D, H, W]
+        
+        loss_dice = self.diceloss(F.softmax(pred, dim=1), target_onehot)
+        
+        return self.loss_weight[0] * loss_ce + self.loss_weight[1] * loss_dice
+
 # -----------------------------------------------------------------------------------
 # 下面是Github上的LASeg使用的Loss函数
 # -----------------------------------------------------------------------------------
