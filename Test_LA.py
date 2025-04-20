@@ -3,6 +3,7 @@ LA数据集的测试函数
 把逻辑调整到了main函数中，方便调用
 utils的内容放在其他函数中
 """
+
 import logging
 import torch
 import os
@@ -21,20 +22,15 @@ from tqdm import tqdm  # 进度条显示工具
 from skimage.measure import label  # 用于标记连通区域
 
 # 导入网络
-# from SAM2VNet_SSL import SAM2VNet
-# from SAM2UNet_Tiny_Supervised import SAM2VNet
+# from networks.SAM3D_VNet_SSL import Network
+# from networks.SAM3D_VNet_SSL_V2 import Network
 from networks.VNet import VNet
-# from UNet2D_VNet3D import UNet2D_VNet3D
-# from UNet3D import UNet
-# from UNet3D_Source import UNet3D
-# from Vit3DUNet3D import UNet3D
-# from networks.Vit3DUNet3D import UNet3D
 
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart
 
 # 设置可见GPU
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 # 设置随机种子
 def set_seed(seed_value=42):
@@ -200,6 +196,8 @@ def test_all_case(model_name, num_outputs, model, image_list, num_classes, patch
 
 # 对单个图像进行推断并获取预测标签和得分图
 def test_single_case_first_output(model, image, stride_xy, stride_z, patch_size, num_classes=1):
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")  # 检查GPU是否可用
+    
     w, h, d = image.shape  # 获取图像的尺寸（宽、高、深度）
 
     # 如果图像尺寸小于patch_size，则进行零填充
@@ -248,7 +246,7 @@ def test_single_case_first_output(model, image, stride_xy, stride_z, patch_size,
                 # 提取图像的一个patch并进行推断
                 test_patch = image[xs:xs + patch_size[0], ys:ys + patch_size[1], zs:zs + patch_size[2]]
                 test_patch = np.expand_dims(np.expand_dims(test_patch, axis=0), axis=0).astype(np.float32)
-                test_patch = torch.from_numpy(test_patch).cuda()
+                test_patch = torch.from_numpy(test_patch).to(device)  # 转换为PyTorch张量并移动到GPU
 
                 with torch.no_grad():  # 不计算梯度
                     y = model(test_patch)  # 模型推断
@@ -432,6 +430,7 @@ if __name__ == '__main__':
     # model = UNet2D_VNet3D(n_channels=1, n_classes=option.num_classes).to(device=device)
     # model = UNet(n_channels=1, n_classes=option.num_classes).to(device=device)
     # model = UNet3D(in_channels=1, out_channels=option.num_classes).to(device=device)
+    # model = Network().to(device=device)
     
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")

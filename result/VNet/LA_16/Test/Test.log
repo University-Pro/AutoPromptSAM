@@ -1,0 +1,640 @@
+2025-04-25 19:02:35 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:02:35 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:02:35 - INFO - Creating model: VNet
+2025-04-25 19:02:36 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_100_checkpoint.pth
+2025-04-25 19:02:36 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_100_checkpoint.pth
+2025-04-25 19:02:36 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:02:36 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:02:36 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:02:36 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:02:37 - INFO - Image 00 - Dice: 0.60712, Jaccard: 0.43587, HD95: 23.55844, ASD: 4.28452
+2025-04-25 19:02:38 - INFO - Image 01 - Dice: 0.85117, Jaccard: 0.74090, HD95: 28.86174, ASD: 6.36881
+2025-04-25 19:02:40 - INFO - Image 02 - Dice: 0.87762, Jaccard: 0.78193, HD95: 8.94427, ASD: 3.12611
+2025-04-25 19:02:41 - INFO - Image 03 - Dice: 0.84019, Jaccard: 0.72442, HD95: 19.87461, ASD: 4.88113
+2025-04-25 19:02:42 - INFO - Image 04 - Dice: 0.61592, Jaccard: 0.44501, HD95: 60.24948, ASD: 23.60776
+2025-04-25 19:02:44 - INFO - Image 05 - Dice: 0.00376, Jaccard: 0.00188, HD95: 125.63777, ASD: 2.08415
+2025-04-25 19:02:45 - INFO - Image 06 - Dice: 0.88665, Jaccard: 0.79638, HD95: 7.07107, ASD: 3.29087
+2025-04-25 19:02:47 - INFO - Image 07 - Dice: 0.69354, Jaccard: 0.53085, HD95: 16.34013, ASD: 6.00585
+2025-04-25 19:02:48 - INFO - Image 08 - Dice: 0.88513, Jaccard: 0.79392, HD95: 13.19091, ASD: 3.94280
+2025-04-25 19:02:50 - INFO - Image 09 - Dice: 0.85735, Jaccard: 0.75032, HD95: 11.66190, ASD: 3.85741
+2025-04-25 19:02:51 - INFO - Image 10 - Dice: 0.76743, Jaccard: 0.62262, HD95: 13.34166, ASD: 4.46677
+2025-04-25 19:02:52 - INFO - Image 11 - Dice: 0.66892, Jaccard: 0.50254, HD95: 52.65928, ASD: 17.38049
+2025-04-25 19:02:54 - INFO - Image 12 - Dice: 0.78217, Jaccard: 0.64227, HD95: 54.14425, ASD: 16.86598
+2025-04-25 19:02:55 - INFO - Image 13 - Dice: 0.75966, Jaccard: 0.61246, HD95: 22.04541, ASD: 7.00223
+2025-04-25 19:02:56 - INFO - Image 14 - Dice: 0.78492, Jaccard: 0.64598, HD95: 28.75413, ASD: 8.41098
+2025-04-25 19:02:57 - INFO - Image 15 - Dice: 0.85839, Jaccard: 0.75191, HD95: 10.24695, ASD: 3.86462
+2025-04-25 19:02:58 - INFO - Image 16 - Dice: 0.52294, Jaccard: 0.35404, HD95: 25.57342, ASD: 10.75177
+2025-04-25 19:03:00 - INFO - Image 17 - Dice: 0.79774, Jaccard: 0.66353, HD95: 16.61325, ASD: 5.14139
+2025-04-25 19:03:01 - INFO - Image 18 - Dice: 0.91531, Jaccard: 0.84385, HD95: 10.24695, ASD: 3.09378
+2025-04-25 19:03:03 - INFO - Image 19 - Dice: 0.73896, Jaccard: 0.58600, HD95: 17.80449, ASD: 5.29131
+2025-04-25 19:03:03 - INFO - Average metric (decoder 1): [ 0.73574448  0.61133445 28.34100621  7.1859362 ]
+2025-04-25 19:03:03 - INFO - Average metric of decoder 1: [ 0.73574448  0.61133445 28.34100621  7.1859362 ]
+2025-04-25 19:03:03 - INFO - Test results: [ 0.73574448  0.61133445 28.34100621  7.1859362 ]
+2025-04-25 19:03:05 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:03:05 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:03:05 - INFO - Creating model: VNet
+2025-04-25 19:03:05 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_120_checkpoint.pth
+2025-04-25 19:03:05 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_120_checkpoint.pth
+2025-04-25 19:03:05 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:03:05 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:03:05 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:03:05 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:03:06 - INFO - Image 00 - Dice: 0.18721, Jaccard: 0.10327, HD95: 38.60052, ASD: 4.44947
+2025-04-25 19:03:08 - INFO - Image 01 - Dice: 0.84048, Jaccard: 0.72485, HD95: 16.03122, ASD: 2.29162
+2025-04-25 19:03:09 - INFO - Image 02 - Dice: 0.86008, Jaccard: 0.75451, HD95: 13.40708, ASD: 2.47458
+2025-04-25 19:03:11 - INFO - Image 03 - Dice: 0.86083, Jaccard: 0.75566, HD95: 8.77496, ASD: 2.27722
+2025-04-25 19:03:12 - INFO - Image 04 - Dice: 0.67628, Jaccard: 0.51089, HD95: 60.41523, ASD: 24.24492
+2025-04-25 19:03:13 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-04-25 19:03:14 - INFO - Image 06 - Dice: 0.89716, Jaccard: 0.81350, HD95: 5.65685, ASD: 2.62050
+2025-04-25 19:03:16 - INFO - Image 07 - Dice: 0.64556, Jaccard: 0.47663, HD95: 19.09319, ASD: 4.46317
+2025-04-25 19:03:18 - INFO - Image 08 - Dice: 0.87571, Jaccard: 0.77890, HD95: 12.97304, ASD: 4.03125
+2025-04-25 19:03:19 - INFO - Image 09 - Dice: 0.87945, Jaccard: 0.78484, HD95: 8.06226, ASD: 3.17340
+2025-04-25 19:03:20 - INFO - Image 10 - Dice: 0.76742, Jaccard: 0.62262, HD95: 10.24695, ASD: 3.51032
+2025-04-25 19:03:21 - INFO - Image 11 - Dice: 0.73665, Jaccard: 0.58309, HD95: 53.30103, ASD: 16.22925
+2025-04-25 19:03:23 - INFO - Image 12 - Dice: 0.80308, Jaccard: 0.67095, HD95: 57.67148, ASD: 16.64673
+2025-04-25 19:03:24 - INFO - Image 13 - Dice: 0.80812, Jaccard: 0.67802, HD95: 12.20656, ASD: 3.60667
+2025-04-25 19:03:25 - INFO - Image 14 - Dice: 0.76130, Jaccard: 0.61459, HD95: 47.52683, ASD: 14.44257
+2025-04-25 19:03:26 - INFO - Image 15 - Dice: 0.86415, Jaccard: 0.76080, HD95: 9.00000, ASD: 2.74344
+2025-04-25 19:03:27 - INFO - Image 16 - Dice: 0.40623, Jaccard: 0.25488, HD95: 20.61553, ASD: 8.33553
+2025-04-25 19:03:29 - INFO - Image 17 - Dice: 0.79893, Jaccard: 0.66518, HD95: 11.87434, ASD: 3.96840
+2025-04-25 19:03:30 - INFO - Image 18 - Dice: 0.92103, Jaccard: 0.85363, HD95: 5.83095, ASD: 1.81277
+2025-04-25 19:03:32 - INFO - Image 19 - Dice: 0.55037, Jaccard: 0.37967, HD95: 50.45790, ASD: 5.09578
+2025-04-25 19:03:32 - INFO - Average metric (decoder 1): [ 0.70700204  0.58932408 23.08729641  6.32087823]
+2025-04-25 19:03:32 - INFO - Average metric of decoder 1: [ 0.70700204  0.58932408 23.08729641  6.32087823]
+2025-04-25 19:03:32 - INFO - Test results: [ 0.70700204  0.58932408 23.08729641  6.32087823]
+2025-04-25 19:03:34 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:03:34 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:03:34 - INFO - Creating model: VNet
+2025-04-25 19:03:34 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_140_checkpoint.pth
+2025-04-25 19:03:34 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_140_checkpoint.pth
+2025-04-25 19:03:34 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:03:34 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:03:34 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:03:34 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:03:35 - INFO - Image 00 - Dice: 0.69413, Jaccard: 0.53155, HD95: 15.16575, ASD: 4.01745
+2025-04-25 19:03:37 - INFO - Image 01 - Dice: 0.75006, Jaccard: 0.60008, HD95: 18.89444, ASD: 2.99005
+2025-04-25 19:03:38 - INFO - Image 02 - Dice: 0.89478, Jaccard: 0.80959, HD95: 9.16515, ASD: 2.12898
+2025-04-25 19:03:40 - INFO - Image 03 - Dice: 0.88960, Jaccard: 0.80116, HD95: 6.00000, ASD: 2.02809
+2025-04-25 19:03:41 - INFO - Image 04 - Dice: 0.72610, Jaccard: 0.56998, HD95: 59.76621, ASD: 24.80546
+2025-04-25 19:03:43 - INFO - Image 05 - Dice: 0.00029, Jaccard: 0.00015, HD95: 168.68313, ASD: 1.06018
+2025-04-25 19:03:44 - INFO - Image 06 - Dice: 0.90127, Jaccard: 0.82028, HD95: 5.00000, ASD: 1.76012
+2025-04-25 19:03:45 - INFO - Image 07 - Dice: 0.71245, Jaccard: 0.55334, HD95: 18.00000, ASD: 3.49782
+2025-04-25 19:03:47 - INFO - Image 08 - Dice: 0.89727, Jaccard: 0.81368, HD95: 9.00000, ASD: 3.23688
+2025-04-25 19:03:48 - INFO - Image 09 - Dice: 0.89347, Jaccard: 0.80745, HD95: 5.74456, ASD: 1.68859
+2025-04-25 19:03:49 - INFO - Image 10 - Dice: 0.78984, Jaccard: 0.65267, HD95: 10.67708, ASD: 3.18637
+2025-04-25 19:03:51 - INFO - Image 11 - Dice: 0.81434, Jaccard: 0.68682, HD95: 56.61095, ASD: 14.23411
+2025-04-25 19:03:52 - INFO - Image 12 - Dice: 0.74665, Jaccard: 0.59573, HD95: 58.82176, ASD: 20.28825
+2025-04-25 19:03:53 - INFO - Image 13 - Dice: 0.85343, Jaccard: 0.74433, HD95: 8.94427, ASD: 2.46911
+2025-04-25 19:03:54 - INFO - Image 14 - Dice: 0.82775, Jaccard: 0.70612, HD95: 35.01428, ASD: 9.55955
+2025-04-25 19:03:56 - INFO - Image 15 - Dice: 0.88897, Jaccard: 0.80014, HD95: 8.60233, ASD: 3.74740
+2025-04-25 19:03:57 - INFO - Image 16 - Dice: 0.61051, Jaccard: 0.43938, HD95: 16.24808, ASD: 5.92911
+2025-04-25 19:03:58 - INFO - Image 17 - Dice: 0.85210, Jaccard: 0.74231, HD95: 8.06226, ASD: 2.83510
+2025-04-25 19:04:00 - INFO - Image 18 - Dice: 0.88236, Jaccard: 0.78949, HD95: 53.15073, ASD: 12.11136
+2025-04-25 19:04:01 - INFO - Image 19 - Dice: 0.62929, Jaccard: 0.45910, HD95: 21.84033, ASD: 4.65741
+2025-04-25 19:04:01 - INFO - Average metric (decoder 1): [ 0.76273311  0.64616658 29.66956616  6.31156917]
+2025-04-25 19:04:01 - INFO - Average metric of decoder 1: [ 0.76273311  0.64616658 29.66956616  6.31156917]
+2025-04-25 19:04:01 - INFO - Test results: [ 0.76273311  0.64616658 29.66956616  6.31156917]
+2025-04-25 19:04:03 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:04:03 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:04:03 - INFO - Creating model: VNet
+2025-04-25 19:04:03 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_160_checkpoint.pth
+2025-04-25 19:04:03 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_160_checkpoint.pth
+2025-04-25 19:04:03 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:04:03 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:04:03 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:04:03 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:04:05 - INFO - Image 00 - Dice: 0.71676, Jaccard: 0.55855, HD95: 16.30951, ASD: 3.94045
+2025-04-25 19:04:06 - INFO - Image 01 - Dice: 0.86552, Jaccard: 0.76292, HD95: 9.94987, ASD: 2.04876
+2025-04-25 19:04:07 - INFO - Image 02 - Dice: 0.87316, Jaccard: 0.77487, HD95: 12.20656, ASD: 1.57645
+2025-04-25 19:04:09 - INFO - Image 03 - Dice: 0.89183, Jaccard: 0.80478, HD95: 8.54400, ASD: 1.92391
+2025-04-25 19:04:10 - INFO - Image 04 - Dice: 0.81038, Jaccard: 0.68121, HD95: 56.16048, ASD: 20.32863
+2025-04-25 19:04:12 - INFO - Image 05 - Dice: 0.00813, Jaccard: 0.00408, HD95: 66.85058, ASD: 2.43733
+2025-04-25 19:04:13 - INFO - Image 06 - Dice: 0.91519, Jaccard: 0.84364, HD95: 5.74456, ASD: 1.47170
+2025-04-25 19:04:14 - INFO - Image 07 - Dice: 0.69557, Jaccard: 0.53324, HD95: 16.97056, ASD: 3.52601
+2025-04-25 19:04:16 - INFO - Image 08 - Dice: 0.91169, Jaccard: 0.83770, HD95: 8.54400, ASD: 3.00442
+2025-04-25 19:04:17 - INFO - Image 09 - Dice: 0.88875, Jaccard: 0.79977, HD95: 8.12404, ASD: 3.20860
+2025-04-25 19:04:18 - INFO - Image 10 - Dice: 0.81072, Jaccard: 0.68169, HD95: 9.89949, ASD: 2.90933
+2025-04-25 19:04:20 - INFO - Image 11 - Dice: 0.85925, Jaccard: 0.75323, HD95: 44.44660, ASD: 7.95800
+2025-04-25 19:04:21 - INFO - Image 12 - Dice: 0.85582, Jaccard: 0.74797, HD95: 14.45683, ASD: 2.06694
+2025-04-25 19:04:22 - INFO - Image 13 - Dice: 0.85547, Jaccard: 0.74744, HD95: 8.54400, ASD: 2.89013
+2025-04-25 19:04:23 - INFO - Image 14 - Dice: 0.89114, Jaccard: 0.80366, HD95: 10.04988, ASD: 2.16794
+2025-04-25 19:04:24 - INFO - Image 15 - Dice: 0.88749, Jaccard: 0.79774, HD95: 6.63325, ASD: 1.98835
+2025-04-25 19:04:25 - INFO - Image 16 - Dice: 0.56924, Jaccard: 0.39786, HD95: 16.67333, ASD: 6.14988
+2025-04-25 19:04:27 - INFO - Image 17 - Dice: 0.82138, Jaccard: 0.69690, HD95: 11.00000, ASD: 3.19025
+2025-04-25 19:04:28 - INFO - Image 18 - Dice: 0.92331, Jaccard: 0.85754, HD95: 10.09950, ASD: 1.73200
+2025-04-25 19:04:30 - INFO - Image 19 - Dice: 0.71641, Jaccard: 0.55813, HD95: 20.07486, ASD: 4.35751
+2025-04-25 19:04:30 - INFO - Average metric (decoder 1): [ 0.78835885  0.68214512 18.06409604  3.94383014]
+2025-04-25 19:04:30 - INFO - Average metric of decoder 1: [ 0.78835885  0.68214512 18.06409604  3.94383014]
+2025-04-25 19:04:30 - INFO - Test results: [ 0.78835885  0.68214512 18.06409604  3.94383014]
+2025-04-25 19:04:32 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:04:32 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:04:32 - INFO - Creating model: VNet
+2025-04-25 19:04:32 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_180_checkpoint.pth
+2025-04-25 19:04:32 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_180_checkpoint.pth
+2025-04-25 19:04:32 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:04:32 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:04:32 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:04:32 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:04:33 - INFO - Image 00 - Dice: 0.72691, Jaccard: 0.57097, HD95: 14.76482, ASD: 3.49516
+2025-04-25 19:04:35 - INFO - Image 01 - Dice: 0.85552, Jaccard: 0.74752, HD95: 9.43398, ASD: 2.44656
+2025-04-25 19:04:36 - INFO - Image 02 - Dice: 0.87299, Jaccard: 0.77460, HD95: 9.84886, ASD: 1.97204
+2025-04-25 19:04:38 - INFO - Image 03 - Dice: 0.91140, Jaccard: 0.83722, HD95: 4.69042, ASD: 1.65726
+2025-04-25 19:04:39 - INFO - Image 04 - Dice: 0.83595, Jaccard: 0.71814, HD95: 55.09083, ASD: 18.18379
+2025-04-25 19:04:41 - INFO - Image 05 - Dice: 0.01938, Jaccard: 0.00978, HD95: 88.46299, ASD: 2.01500
+2025-04-25 19:04:42 - INFO - Image 06 - Dice: 0.91931, Jaccard: 0.85066, HD95: 4.58258, ASD: 3.61766
+2025-04-25 19:04:43 - INFO - Image 07 - Dice: 0.72967, Jaccard: 0.57439, HD95: 13.60147, ASD: 3.21856
+2025-04-25 19:04:45 - INFO - Image 08 - Dice: 0.91177, Jaccard: 0.83785, HD95: 9.00000, ASD: 3.01296
+2025-04-25 19:04:46 - INFO - Image 09 - Dice: 0.90544, Jaccard: 0.82722, HD95: 5.38516, ASD: 2.99262
+2025-04-25 19:04:48 - INFO - Image 10 - Dice: 0.81823, Jaccard: 0.69238, HD95: 9.69536, ASD: 3.16762
+2025-04-25 19:04:49 - INFO - Image 11 - Dice: 0.86714, Jaccard: 0.76545, HD95: 25.31798, ASD: 7.33015
+2025-04-25 19:04:50 - INFO - Image 12 - Dice: 0.86476, Jaccard: 0.76174, HD95: 26.09598, ASD: 6.35760
+2025-04-25 19:04:52 - INFO - Image 13 - Dice: 0.85865, Jaccard: 0.75232, HD95: 10.24695, ASD: 3.14545
+2025-04-25 19:04:53 - INFO - Image 14 - Dice: 0.91147, Jaccard: 0.83734, HD95: 7.61577, ASD: 2.80351
+2025-04-25 19:04:54 - INFO - Image 15 - Dice: 0.90183, Jaccard: 0.82121, HD95: 6.40312, ASD: 2.39538
+2025-04-25 19:04:55 - INFO - Image 16 - Dice: 0.71891, Jaccard: 0.56117, HD95: 18.22087, ASD: 7.11067
+2025-04-25 19:04:56 - INFO - Image 17 - Dice: 0.86185, Jaccard: 0.75723, HD95: 7.68115, ASD: 2.42517
+2025-04-25 19:04:58 - INFO - Image 18 - Dice: 0.93580, Jaccard: 0.87934, HD95: 5.83095, ASD: 2.18161
+2025-04-25 19:05:00 - INFO - Image 19 - Dice: 0.71963, Jaccard: 0.56205, HD95: 16.52271, ASD: 4.97456
+2025-04-25 19:05:00 - INFO - Average metric (decoder 1): [ 0.80733008  0.70692986 17.42459741  4.22516675]
+2025-04-25 19:05:00 - INFO - Average metric of decoder 1: [ 0.80733008  0.70692986 17.42459741  4.22516675]
+2025-04-25 19:05:00 - INFO - Test results: [ 0.80733008  0.70692986 17.42459741  4.22516675]
+2025-04-25 19:05:02 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:05:02 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:05:02 - INFO - Creating model: VNet
+2025-04-25 19:05:02 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_200_checkpoint.pth
+2025-04-25 19:05:02 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_200_checkpoint.pth
+2025-04-25 19:05:02 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:05:02 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:05:02 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:05:02 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:05:03 - INFO - Image 00 - Dice: 0.74953, Jaccard: 0.59939, HD95: 13.78405, ASD: 3.55915
+2025-04-25 19:05:04 - INFO - Image 01 - Dice: 0.74219, Jaccard: 0.59007, HD95: 16.34472, ASD: 4.83207
+2025-04-25 19:05:06 - INFO - Image 02 - Dice: 0.86917, Jaccard: 0.76861, HD95: 13.74773, ASD: 2.13067
+2025-04-25 19:05:08 - INFO - Image 03 - Dice: 0.89853, Jaccard: 0.81575, HD95: 5.09902, ASD: 1.75914
+2025-04-25 19:05:09 - INFO - Image 04 - Dice: 0.88908, Jaccard: 0.80031, HD95: 34.07345, ASD: 6.04487
+2025-04-25 19:05:10 - INFO - Image 05 - Dice: 0.02323, Jaccard: 0.01175, HD95: 84.90936, ASD: 5.34251
+2025-04-25 19:05:12 - INFO - Image 06 - Dice: 0.91968, Jaccard: 0.85130, HD95: 4.35890, ASD: 1.26443
+2025-04-25 19:05:13 - INFO - Image 07 - Dice: 0.73780, Jaccard: 0.58453, HD95: 13.03840, ASD: 2.97987
+2025-04-25 19:05:15 - INFO - Image 08 - Dice: 0.91990, Jaccard: 0.85168, HD95: 8.00000, ASD: 2.75266
+2025-04-25 19:05:16 - INFO - Image 09 - Dice: 0.90701, Jaccard: 0.82985, HD95: 5.83095, ASD: 2.39018
+2025-04-25 19:05:17 - INFO - Image 10 - Dice: 0.82941, Jaccard: 0.70854, HD95: 8.77496, ASD: 2.68038
+2025-04-25 19:05:19 - INFO - Image 11 - Dice: 0.85761, Jaccard: 0.75072, HD95: 53.06600, ASD: 10.59003
+2025-04-25 19:05:20 - INFO - Image 12 - Dice: 0.79808, Jaccard: 0.66401, HD95: 16.30951, ASD: 2.80086
+2025-04-25 19:05:21 - INFO - Image 13 - Dice: 0.87896, Jaccard: 0.78406, HD95: 8.48528, ASD: 2.38114
+2025-04-25 19:05:22 - INFO - Image 14 - Dice: 0.90967, Jaccard: 0.83431, HD95: 7.34847, ASD: 1.35920
+2025-04-25 19:05:23 - INFO - Image 15 - Dice: 0.91749, Jaccard: 0.84756, HD95: 4.12311, ASD: 1.70169
+2025-04-25 19:05:25 - INFO - Image 16 - Dice: 0.73012, Jaccard: 0.57495, HD95: 16.00000, ASD: 6.08765
+2025-04-25 19:05:26 - INFO - Image 17 - Dice: 0.85520, Jaccard: 0.74703, HD95: 9.43398, ASD: 2.79722
+2025-04-25 19:05:28 - INFO - Image 18 - Dice: 0.91889, Jaccard: 0.84995, HD95: 11.18034, ASD: 2.49083
+2025-04-25 19:05:30 - INFO - Image 19 - Dice: 0.71089, Jaccard: 0.55145, HD95: 17.46425, ASD: 4.51362
+2025-04-25 19:05:30 - INFO - Average metric (decoder 1): [ 0.8031224   0.70079202 17.56862391  3.52290865]
+2025-04-25 19:05:30 - INFO - Average metric of decoder 1: [ 0.8031224   0.70079202 17.56862391  3.52290865]
+2025-04-25 19:05:30 - INFO - Test results: [ 0.8031224   0.70079202 17.56862391  3.52290865]
+2025-04-25 19:05:31 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:05:31 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:05:31 - INFO - Creating model: VNet
+2025-04-25 19:05:31 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_20_checkpoint.pth
+2025-04-25 19:05:31 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_20_checkpoint.pth
+2025-04-25 19:05:31 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:05:31 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:05:31 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:05:31 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:05:33 - INFO - Image 00 - Dice: 0.41542, Jaccard: 0.26216, HD95: 21.63331, ASD: 7.96373
+2025-04-25 19:05:34 - INFO - Image 01 - Dice: 0.58760, Jaccard: 0.41603, HD95: 36.61967, ASD: 14.23818
+2025-04-25 19:05:36 - INFO - Image 02 - Dice: 0.44917, Jaccard: 0.28963, HD95: 48.02083, ASD: 19.20817
+2025-04-25 19:05:37 - INFO - Image 03 - Dice: 0.43251, Jaccard: 0.27592, HD95: 49.16299, ASD: 18.84913
+2025-04-25 19:05:38 - INFO - Image 04 - Dice: 0.28130, Jaccard: 0.16367, HD95: 52.84884, ASD: 21.82504
+2025-04-25 19:05:40 - INFO - Image 05 - Dice: 0.00028, Jaccard: 0.00014, HD95: 58.70264, ASD: 49.21248
+2025-04-25 19:05:41 - INFO - Image 06 - Dice: 0.31986, Jaccard: 0.19038, HD95: 45.48626, ASD: 22.97523
+2025-04-25 19:05:43 - INFO - Image 07 - Dice: 0.50489, Jaccard: 0.33769, HD95: 35.56684, ASD: 16.58511
+2025-04-25 19:05:45 - INFO - Image 08 - Dice: 0.30040, Jaccard: 0.17675, HD95: 50.13980, ASD: 28.00526
+2025-04-25 19:05:46 - INFO - Image 09 - Dice: 0.38331, Jaccard: 0.23709, HD95: 57.22762, ASD: 23.77688
+2025-04-25 19:05:47 - INFO - Image 10 - Dice: 0.43679, Jaccard: 0.27942, HD95: 40.50926, ASD: 19.38531
+2025-04-25 19:05:49 - INFO - Image 11 - Dice: 0.33930, Jaccard: 0.20431, HD95: 56.38262, ASD: 24.98139
+2025-04-25 19:05:50 - INFO - Image 12 - Dice: 0.36443, Jaccard: 0.22282, HD95: 61.82233, ASD: 28.46754
+2025-04-25 19:05:51 - INFO - Image 13 - Dice: 0.45545, Jaccard: 0.29487, HD95: 44.20407, ASD: 16.24497
+2025-04-25 19:05:52 - INFO - Image 14 - Dice: 0.25002, Jaccard: 0.14287, HD95: 60.31584, ASD: 32.11257
+2025-04-25 19:05:54 - INFO - Image 15 - Dice: 0.40932, Jaccard: 0.25732, HD95: 51.77306, ASD: 22.50168
+2025-04-25 19:05:55 - INFO - Image 16 - Dice: 0.18764, Jaccard: 0.10353, HD95: 48.13990, ASD: 16.08580
+2025-04-25 19:05:56 - INFO - Image 17 - Dice: 0.33091, Jaccard: 0.19826, HD95: 46.40636, ASD: 20.73403
+2025-04-25 19:05:58 - INFO - Image 18 - Dice: 0.63801, Jaccard: 0.46844, HD95: 49.81967, ASD: 19.65730
+2025-04-25 19:06:00 - INFO - Image 19 - Dice: 0.49217, Jaccard: 0.32641, HD95: 34.33657, ASD: 13.68972
+2025-04-25 19:06:00 - INFO - Average metric (decoder 1): [ 0.37893821  0.24238595 47.45592382 21.82497453]
+2025-04-25 19:06:00 - INFO - Average metric of decoder 1: [ 0.37893821  0.24238595 47.45592382 21.82497453]
+2025-04-25 19:06:00 - INFO - Test results: [ 0.37893821  0.24238595 47.45592382 21.82497453]
+2025-04-25 19:06:01 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:06:01 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:06:01 - INFO - Creating model: VNet
+2025-04-25 19:06:02 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_220_checkpoint.pth
+2025-04-25 19:06:02 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_220_checkpoint.pth
+2025-04-25 19:06:02 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:06:02 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:06:02 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:06:02 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:06:03 - INFO - Image 00 - Dice: 0.63693, Jaccard: 0.46728, HD95: 17.91647, ASD: 3.50111
+2025-04-25 19:06:04 - INFO - Image 01 - Dice: 0.84896, Jaccard: 0.73756, HD95: 17.05872, ASD: 4.70029
+2025-04-25 19:06:06 - INFO - Image 02 - Dice: 0.90369, Jaccard: 0.82430, HD95: 7.07107, ASD: 1.55923
+2025-04-25 19:06:07 - INFO - Image 03 - Dice: 0.91297, Jaccard: 0.83988, HD95: 4.69042, ASD: 1.85241
+2025-04-25 19:06:08 - INFO - Image 04 - Dice: 0.84845, Jaccard: 0.73679, HD95: 16.67333, ASD: 4.78418
+2025-04-25 19:06:10 - INFO - Image 05 - Dice: 0.01867, Jaccard: 0.00942, HD95: 86.37129, ASD: 3.17632
+2025-04-25 19:06:11 - INFO - Image 06 - Dice: 0.93053, Jaccard: 0.87008, HD95: 3.46410, ASD: 1.60124
+2025-04-25 19:06:13 - INFO - Image 07 - Dice: 0.63732, Jaccard: 0.46769, HD95: 19.26136, ASD: 3.68199
+2025-04-25 19:06:15 - INFO - Image 08 - Dice: 0.90133, Jaccard: 0.82038, HD95: 13.60147, ASD: 3.78676
+2025-04-25 19:06:16 - INFO - Image 09 - Dice: 0.91854, Jaccard: 0.84935, HD95: 4.69042, ASD: 1.59789
+2025-04-25 19:06:17 - INFO - Image 10 - Dice: 0.82875, Jaccard: 0.70757, HD95: 10.04988, ASD: 3.23187
+2025-04-25 19:06:18 - INFO - Image 11 - Dice: 0.87963, Jaccard: 0.78512, HD95: 6.16441, ASD: 2.47109
+2025-04-25 19:06:20 - INFO - Image 12 - Dice: 0.88793, Jaccard: 0.79846, HD95: 7.54983, ASD: 2.25674
+2025-04-25 19:06:21 - INFO - Image 13 - Dice: 0.87108, Jaccard: 0.77161, HD95: 12.96148, ASD: 3.57945
+2025-04-25 19:06:22 - INFO - Image 14 - Dice: 0.91923, Jaccard: 0.85053, HD95: 6.00000, ASD: 1.97080
+2025-04-25 19:06:23 - INFO - Image 15 - Dice: 0.90059, Jaccard: 0.81916, HD95: 13.41641, ASD: 3.56110
+2025-04-25 19:06:24 - INFO - Image 16 - Dice: 0.64860, Jaccard: 0.47994, HD95: 17.00000, ASD: 7.31341
+2025-04-25 19:06:26 - INFO - Image 17 - Dice: 0.86427, Jaccard: 0.76099, HD95: 9.21954, ASD: 4.56021
+2025-04-25 19:06:27 - INFO - Image 18 - Dice: 0.93615, Jaccard: 0.87997, HD95: 6.70820, ASD: 2.69513
+2025-04-25 19:06:29 - INFO - Image 19 - Dice: 0.72618, Jaccard: 0.57008, HD95: 19.02630, ASD: 3.84235
+2025-04-25 19:06:29 - INFO - Average metric (decoder 1): [ 0.80099045  0.70230889 14.94473548  3.28617863]
+2025-04-25 19:06:29 - INFO - Average metric of decoder 1: [ 0.80099045  0.70230889 14.94473548  3.28617863]
+2025-04-25 19:06:29 - INFO - Test results: [ 0.80099045  0.70230889 14.94473548  3.28617863]
+2025-04-25 19:06:31 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:06:31 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:06:31 - INFO - Creating model: VNet
+2025-04-25 19:06:31 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_240_checkpoint.pth
+2025-04-25 19:06:31 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_240_checkpoint.pth
+2025-04-25 19:06:31 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:06:31 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:06:31 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:06:31 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:06:32 - INFO - Image 00 - Dice: 0.79473, Jaccard: 0.65938, HD95: 10.04988, ASD: 3.13472
+2025-04-25 19:06:34 - INFO - Image 01 - Dice: 0.85440, Jaccard: 0.74581, HD95: 10.72381, ASD: 2.07743
+2025-04-25 19:06:35 - INFO - Image 02 - Dice: 0.91103, Jaccard: 0.83659, HD95: 4.69042, ASD: 1.14766
+2025-04-25 19:06:37 - INFO - Image 03 - Dice: 0.91937, Jaccard: 0.85078, HD95: 4.12311, ASD: 1.42291
+2025-04-25 19:06:38 - INFO - Image 04 - Dice: 0.87609, Jaccard: 0.77950, HD95: 13.74773, ASD: 4.70619
+2025-04-25 19:06:40 - INFO - Image 05 - Dice: 0.53457, Jaccard: 0.36479, HD95: 36.46917, ASD: 6.17924
+2025-04-25 19:06:41 - INFO - Image 06 - Dice: 0.91728, Jaccard: 0.84720, HD95: 6.67447, ASD: 4.86608
+2025-04-25 19:06:43 - INFO - Image 07 - Dice: 0.84481, Jaccard: 0.73131, HD95: 7.00000, ASD: 2.22656
+2025-04-25 19:06:44 - INFO - Image 08 - Dice: 0.92360, Jaccard: 0.85805, HD95: 5.91608, ASD: 1.95078
+2025-04-25 19:06:46 - INFO - Image 09 - Dice: 0.91266, Jaccard: 0.83935, HD95: 6.40312, ASD: 4.79070
+2025-04-25 19:06:47 - INFO - Image 10 - Dice: 0.81591, Jaccard: 0.68906, HD95: 9.43398, ASD: 3.53609
+2025-04-25 19:06:48 - INFO - Image 11 - Dice: 0.82931, Jaccard: 0.70840, HD95: 55.46485, ASD: 15.48458
+2025-04-25 19:06:49 - INFO - Image 12 - Dice: 0.85250, Jaccard: 0.74293, HD95: 56.37819, ASD: 11.27869
+2025-04-25 19:06:51 - INFO - Image 13 - Dice: 0.88973, Jaccard: 0.80136, HD95: 5.38516, ASD: 1.35330
+2025-04-25 19:06:52 - INFO - Image 14 - Dice: 0.90884, Jaccard: 0.83291, HD95: 29.69848, ASD: 5.74234
+2025-04-25 19:06:53 - INFO - Image 15 - Dice: 0.91175, Jaccard: 0.83781, HD95: 10.24695, ASD: 4.49291
+2025-04-25 19:06:54 - INFO - Image 16 - Dice: 0.66865, Jaccard: 0.50223, HD95: 17.57840, ASD: 6.67162
+2025-04-25 19:06:55 - INFO - Image 17 - Dice: 0.89869, Jaccard: 0.81602, HD95: 4.89898, ASD: 1.67691
+2025-04-25 19:06:57 - INFO - Image 18 - Dice: 0.93392, Jaccard: 0.87602, HD95: 8.60233, ASD: 2.05837
+2025-04-25 19:06:59 - INFO - Image 19 - Dice: 0.80236, Jaccard: 0.66994, HD95: 18.68154, ASD: 3.37669
+2025-04-25 19:06:59 - INFO - Average metric (decoder 1): [ 0.85000981  0.7494728  16.10833185  4.40868911]
+2025-04-25 19:06:59 - INFO - Average metric of decoder 1: [ 0.85000981  0.7494728  16.10833185  4.40868911]
+2025-04-25 19:06:59 - INFO - Test results: [ 0.85000981  0.7494728  16.10833185  4.40868911]
+2025-04-25 19:07:01 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:07:01 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:07:01 - INFO - Creating model: VNet
+2025-04-25 19:07:01 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_260_checkpoint.pth
+2025-04-25 19:07:01 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_260_checkpoint.pth
+2025-04-25 19:07:01 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:07:01 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:07:01 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:07:01 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:07:02 - INFO - Image 00 - Dice: 0.71229, Jaccard: 0.55314, HD95: 16.27882, ASD: 3.87283
+2025-04-25 19:07:03 - INFO - Image 01 - Dice: 0.83722, Jaccard: 0.72001, HD95: 12.68858, ASD: 2.60093
+2025-04-25 19:07:05 - INFO - Image 02 - Dice: 0.87512, Jaccard: 0.77797, HD95: 11.57584, ASD: 1.30863
+2025-04-25 19:07:07 - INFO - Image 03 - Dice: 0.89683, Jaccard: 0.81296, HD95: 5.38516, ASD: 1.95937
+2025-04-25 19:07:08 - INFO - Image 04 - Dice: 0.88232, Jaccard: 0.78943, HD95: 6.40312, ASD: 2.39963
+2025-04-25 19:07:10 - INFO - Image 05 - Dice: 0.59241, Jaccard: 0.42087, HD95: 22.64950, ASD: 5.69929
+2025-04-25 19:07:11 - INFO - Image 06 - Dice: 0.91408, Jaccard: 0.84176, HD95: 5.38516, ASD: 1.27539
+2025-04-25 19:07:12 - INFO - Image 07 - Dice: 0.74777, Jaccard: 0.59716, HD95: 12.72792, ASD: 3.44494
+2025-04-25 19:07:14 - INFO - Image 08 - Dice: 0.92681, Jaccard: 0.86360, HD95: 4.35890, ASD: 1.72969
+2025-04-25 19:07:15 - INFO - Image 09 - Dice: 0.90394, Jaccard: 0.82472, HD95: 5.38516, ASD: 1.39502
+2025-04-25 19:07:16 - INFO - Image 10 - Dice: 0.79651, Jaccard: 0.66183, HD95: 11.04536, ASD: 2.98414
+2025-04-25 19:07:17 - INFO - Image 11 - Dice: 0.87814, Jaccard: 0.78275, HD95: 5.83095, ASD: 1.54983
+2025-04-25 19:07:19 - INFO - Image 12 - Dice: 0.87143, Jaccard: 0.77216, HD95: 11.04536, ASD: 1.78087
+2025-04-25 19:07:20 - INFO - Image 13 - Dice: 0.89101, Jaccard: 0.80345, HD95: 5.00000, ASD: 1.84786
+2025-04-25 19:07:21 - INFO - Image 14 - Dice: 0.90356, Jaccard: 0.82409, HD95: 8.00000, ASD: 1.47537
+2025-04-25 19:07:22 - INFO - Image 15 - Dice: 0.91426, Jaccard: 0.84206, HD95: 5.00000, ASD: 1.38488
+2025-04-25 19:07:24 - INFO - Image 16 - Dice: 0.78778, Jaccard: 0.64986, HD95: 13.07670, ASD: 4.45810
+2025-04-25 19:07:25 - INFO - Image 17 - Dice: 0.85825, Jaccard: 0.75169, HD95: 7.07107, ASD: 2.63654
+2025-04-25 19:07:27 - INFO - Image 18 - Dice: 0.93103, Jaccard: 0.87096, HD95: 12.56582, ASD: 2.03656
+2025-04-25 19:07:28 - INFO - Image 19 - Dice: 0.73666, Jaccard: 0.58310, HD95: 15.16575, ASD: 4.27671
+2025-04-25 19:07:28 - INFO - Average metric (decoder 1): [0.84287163 0.73717905 9.83195942 2.5058294 ]
+2025-04-25 19:07:28 - INFO - Average metric of decoder 1: [0.84287163 0.73717905 9.83195942 2.5058294 ]
+2025-04-25 19:07:28 - INFO - Test results: [0.84287163 0.73717905 9.83195942 2.5058294 ]
+2025-04-25 19:07:30 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:07:30 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:07:30 - INFO - Creating model: VNet
+2025-04-25 19:07:30 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_280_checkpoint.pth
+2025-04-25 19:07:30 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_280_checkpoint.pth
+2025-04-25 19:07:30 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:07:30 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:07:30 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:07:30 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:07:31 - INFO - Image 00 - Dice: 0.74338, Jaccard: 0.59157, HD95: 13.00000, ASD: 3.00896
+2025-04-25 19:07:33 - INFO - Image 01 - Dice: 0.82827, Jaccard: 0.70687, HD95: 17.25688, ASD: 4.47178
+2025-04-25 19:07:34 - INFO - Image 02 - Dice: 0.90799, Jaccard: 0.83148, HD95: 6.40312, ASD: 1.15296
+2025-04-25 19:07:36 - INFO - Image 03 - Dice: 0.91129, Jaccard: 0.83703, HD95: 4.69042, ASD: 1.99325
+2025-04-25 19:07:37 - INFO - Image 04 - Dice: 0.90344, Jaccard: 0.82389, HD95: 3.74166, ASD: 1.53426
+2025-04-25 19:07:39 - INFO - Image 05 - Dice: 0.32147, Jaccard: 0.19152, HD95: 46.90042, ASD: 8.36511
+2025-04-25 19:07:40 - INFO - Image 06 - Dice: 0.93898, Jaccard: 0.88498, HD95: 3.00000, ASD: 1.09474
+2025-04-25 19:07:42 - INFO - Image 07 - Dice: 0.74631, Jaccard: 0.59530, HD95: 17.72005, ASD: 3.03816
+2025-04-25 19:07:43 - INFO - Image 08 - Dice: 0.92809, Jaccard: 0.86582, HD95: 5.00000, ASD: 2.13341
+2025-04-25 19:07:44 - INFO - Image 09 - Dice: 0.91778, Jaccard: 0.84806, HD95: 4.58258, ASD: 1.34137
+2025-04-25 19:07:46 - INFO - Image 10 - Dice: 0.84004, Jaccard: 0.72420, HD95: 8.00000, ASD: 2.58856
+2025-04-25 19:07:47 - INFO - Image 11 - Dice: 0.89191, Jaccard: 0.80490, HD95: 5.47723, ASD: 1.98265
+2025-04-25 19:07:48 - INFO - Image 12 - Dice: 0.87726, Jaccard: 0.78136, HD95: 16.12452, ASD: 3.81216
+2025-04-25 19:07:49 - INFO - Image 13 - Dice: 0.89733, Jaccard: 0.81378, HD95: 4.89898, ASD: 1.41042
+2025-04-25 19:07:51 - INFO - Image 14 - Dice: 0.89857, Jaccard: 0.81582, HD95: 8.00000, ASD: 1.53529
+2025-04-25 19:07:52 - INFO - Image 15 - Dice: 0.91492, Jaccard: 0.84318, HD95: 5.09902, ASD: 1.84449
+2025-04-25 19:07:53 - INFO - Image 16 - Dice: 0.55938, Jaccard: 0.38829, HD95: 19.02630, ASD: 6.44349
+2025-04-25 19:07:54 - INFO - Image 17 - Dice: 0.87800, Jaccard: 0.78253, HD95: 6.40312, ASD: 2.19251
+2025-04-25 19:07:56 - INFO - Image 18 - Dice: 0.93265, Jaccard: 0.87379, HD95: 9.89949, ASD: 2.35757
+2025-04-25 19:07:58 - INFO - Image 19 - Dice: 0.77475, Jaccard: 0.63232, HD95: 15.74802, ASD: 4.04232
+2025-04-25 19:07:58 - INFO - Average metric (decoder 1): [ 0.83059019  0.73183501 11.04858967  2.81717345]
+2025-04-25 19:07:58 - INFO - Average metric of decoder 1: [ 0.83059019  0.73183501 11.04858967  2.81717345]
+2025-04-25 19:07:58 - INFO - Test results: [ 0.83059019  0.73183501 11.04858967  2.81717345]
+2025-04-25 19:07:59 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:07:59 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:07:59 - INFO - Creating model: VNet
+2025-04-25 19:08:00 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_300_checkpoint.pth
+2025-04-25 19:08:00 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_300_checkpoint.pth
+2025-04-25 19:08:00 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:08:00 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:08:00 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:08:00 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:08:01 - INFO - Image 00 - Dice: 0.74933, Jaccard: 0.59914, HD95: 16.40122, ASD: 3.16324
+2025-04-25 19:08:02 - INFO - Image 01 - Dice: 0.84399, Jaccard: 0.73009, HD95: 15.58846, ASD: 2.09035
+2025-04-25 19:08:04 - INFO - Image 02 - Dice: 0.89525, Jaccard: 0.81037, HD95: 10.04988, ASD: 1.13038
+2025-04-25 19:08:05 - INFO - Image 03 - Dice: 0.90303, Jaccard: 0.82321, HD95: 5.47723, ASD: 1.36317
+2025-04-25 19:08:06 - INFO - Image 04 - Dice: 0.90077, Jaccard: 0.81945, HD95: 3.60555, ASD: 1.33567
+2025-04-25 19:08:08 - INFO - Image 05 - Dice: 0.24573, Jaccard: 0.14008, HD95: 65.81033, ASD: 8.18958
+2025-04-25 19:08:09 - INFO - Image 06 - Dice: 0.92097, Jaccard: 0.85352, HD95: 3.74166, ASD: 1.23862
+2025-04-25 19:08:11 - INFO - Image 07 - Dice: 0.65956, Jaccard: 0.49204, HD95: 20.85665, ASD: 2.62807
+2025-04-25 19:08:13 - INFO - Image 08 - Dice: 0.93431, Jaccard: 0.87671, HD95: 4.35890, ASD: 1.83419
+2025-04-25 19:08:14 - INFO - Image 09 - Dice: 0.91093, Jaccard: 0.83643, HD95: 5.19615, ASD: 1.31797
+2025-04-25 19:08:15 - INFO - Image 10 - Dice: 0.82375, Jaccard: 0.70032, HD95: 10.24695, ASD: 2.68904
+2025-04-25 19:08:16 - INFO - Image 11 - Dice: 0.87492, Jaccard: 0.77765, HD95: 7.14143, ASD: 1.58406
+2025-04-25 19:08:18 - INFO - Image 12 - Dice: 0.85394, Jaccard: 0.74510, HD95: 13.07670, ASD: 1.52507
+2025-04-25 19:08:19 - INFO - Image 13 - Dice: 0.89780, Jaccard: 0.81455, HD95: 5.09902, ASD: 1.44350
+2025-04-25 19:08:20 - INFO - Image 14 - Dice: 0.90369, Jaccard: 0.82431, HD95: 7.68115, ASD: 1.38123
+2025-04-25 19:08:21 - INFO - Image 15 - Dice: 0.90902, Jaccard: 0.83322, HD95: 5.74456, ASD: 1.76350
+2025-04-25 19:08:22 - INFO - Image 16 - Dice: 0.61325, Jaccard: 0.44223, HD95: 16.16013, ASD: 5.07505
+2025-04-25 19:08:24 - INFO - Image 17 - Dice: 0.85391, Jaccard: 0.74506, HD95: 7.87401, ASD: 2.26901
+2025-04-25 19:08:26 - INFO - Image 18 - Dice: 0.93923, Jaccard: 0.88543, HD95: 6.32456, ASD: 1.88413
+2025-04-25 19:08:27 - INFO - Image 19 - Dice: 0.74432, Jaccard: 0.59276, HD95: 24.77902, ASD: 3.48131
+2025-04-25 19:08:27 - INFO - Average metric (decoder 1): [ 0.81888501  0.71708313 12.7606774   2.36935624]
+2025-04-25 19:08:27 - INFO - Average metric of decoder 1: [ 0.81888501  0.71708313 12.7606774   2.36935624]
+2025-04-25 19:08:27 - INFO - Test results: [ 0.81888501  0.71708313 12.7606774   2.36935624]
+2025-04-25 19:08:29 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:08:29 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:08:29 - INFO - Creating model: VNet
+2025-04-25 19:08:29 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_320_checkpoint.pth
+2025-04-25 19:08:29 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_320_checkpoint.pth
+2025-04-25 19:08:29 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:08:29 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:08:29 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:08:29 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:08:30 - INFO - Image 00 - Dice: 0.81473, Jaccard: 0.68738, HD95: 9.27362, ASD: 3.04142
+2025-04-25 19:08:32 - INFO - Image 01 - Dice: 0.89937, Jaccard: 0.81715, HD95: 7.00000, ASD: 2.26146
+2025-04-25 19:08:33 - INFO - Image 02 - Dice: 0.90142, Jaccard: 0.82053, HD95: 8.12404, ASD: 1.16370
+2025-04-25 19:08:35 - INFO - Image 03 - Dice: 0.90224, Jaccard: 0.82188, HD95: 5.83095, ASD: 2.06699
+2025-04-25 19:08:36 - INFO - Image 04 - Dice: 0.88862, Jaccard: 0.79957, HD95: 10.24695, ASD: 2.50828
+2025-04-25 19:08:38 - INFO - Image 05 - Dice: 0.49315, Jaccard: 0.32727, HD95: 46.84976, ASD: 5.74792
+2025-04-25 19:08:39 - INFO - Image 06 - Dice: 0.93220, Jaccard: 0.87301, HD95: 3.31662, ASD: 1.23011
+2025-04-25 19:08:41 - INFO - Image 07 - Dice: 0.77658, Jaccard: 0.63477, HD95: 12.08305, ASD: 3.06922
+2025-04-25 19:08:42 - INFO - Image 08 - Dice: 0.92750, Jaccard: 0.86481, HD95: 6.00000, ASD: 2.65404
+2025-04-25 19:08:44 - INFO - Image 09 - Dice: 0.91838, Jaccard: 0.84907, HD95: 4.58258, ASD: 1.36265
+2025-04-25 19:08:45 - INFO - Image 10 - Dice: 0.81655, Jaccard: 0.68997, HD95: 12.00000, ASD: 4.34474
+2025-04-25 19:08:46 - INFO - Image 11 - Dice: 0.87336, Jaccard: 0.77519, HD95: 10.01247, ASD: 2.41051
+2025-04-25 19:08:47 - INFO - Image 12 - Dice: 0.88926, Jaccard: 0.80060, HD95: 16.49242, ASD: 4.50146
+2025-04-25 19:08:49 - INFO - Image 13 - Dice: 0.89471, Jaccard: 0.80948, HD95: 8.94427, ASD: 2.69650
+2025-04-25 19:08:50 - INFO - Image 14 - Dice: 0.91300, Jaccard: 0.83993, HD95: 6.40312, ASD: 1.29685
+2025-04-25 19:08:51 - INFO - Image 15 - Dice: 0.90685, Jaccard: 0.82958, HD95: 7.28011, ASD: 2.61473
+2025-04-25 19:08:52 - INFO - Image 16 - Dice: 0.69020, Jaccard: 0.52696, HD95: 15.36229, ASD: 5.61380
+2025-04-25 19:08:53 - INFO - Image 17 - Dice: 0.87773, Jaccard: 0.78210, HD95: 7.07107, ASD: 3.19291
+2025-04-25 19:08:55 - INFO - Image 18 - Dice: 0.94434, Jaccard: 0.89455, HD95: 4.47214, ASD: 1.91281
+2025-04-25 19:08:57 - INFO - Image 19 - Dice: 0.78875, Jaccard: 0.65118, HD95: 16.06238, ASD: 4.75750
+2025-04-25 19:08:57 - INFO - Average metric (decoder 1): [ 0.85244748  0.75474916 10.87039184  2.92237998]
+2025-04-25 19:08:57 - INFO - Average metric of decoder 1: [ 0.85244748  0.75474916 10.87039184  2.92237998]
+2025-04-25 19:08:57 - INFO - Test results: [ 0.85244748  0.75474916 10.87039184  2.92237998]
+2025-04-25 19:08:59 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:08:59 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:08:59 - INFO - Creating model: VNet
+2025-04-25 19:08:59 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_340_checkpoint.pth
+2025-04-25 19:08:59 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_340_checkpoint.pth
+2025-04-25 19:08:59 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:08:59 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:08:59 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:08:59 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:09:00 - INFO - Image 00 - Dice: 0.79985, Jaccard: 0.66645, HD95: 11.04536, ASD: 2.94994
+2025-04-25 19:09:01 - INFO - Image 01 - Dice: 0.89979, Jaccard: 0.81784, HD95: 7.87401, ASD: 2.07579
+2025-04-25 19:09:03 - INFO - Image 02 - Dice: 0.90802, Jaccard: 0.83153, HD95: 7.00000, ASD: 1.09401
+2025-04-25 19:09:05 - INFO - Image 03 - Dice: 0.91328, Jaccard: 0.84041, HD95: 4.24264, ASD: 1.83346
+2025-04-25 19:09:06 - INFO - Image 04 - Dice: 0.90227, Jaccard: 0.82193, HD95: 4.00000, ASD: 1.42207
+2025-04-25 19:09:08 - INFO - Image 05 - Dice: 0.64247, Jaccard: 0.47327, HD95: 26.00000, ASD: 5.27365
+2025-04-25 19:09:09 - INFO - Image 06 - Dice: 0.94010, Jaccard: 0.88697, HD95: 2.82843, ASD: 1.01161
+2025-04-25 19:09:10 - INFO - Image 07 - Dice: 0.79807, Jaccard: 0.66399, HD95: 15.26434, ASD: 4.35120
+2025-04-25 19:09:12 - INFO - Image 08 - Dice: 0.93275, Jaccard: 0.87398, HD95: 5.00000, ASD: 2.09163
+2025-04-25 19:09:13 - INFO - Image 09 - Dice: 0.92290, Jaccard: 0.85684, HD95: 4.12311, ASD: 1.19397
+2025-04-25 19:09:14 - INFO - Image 10 - Dice: 0.82180, Jaccard: 0.69750, HD95: 10.72381, ASD: 3.56185
+2025-04-25 19:09:16 - INFO - Image 11 - Dice: 0.90076, Jaccard: 0.81944, HD95: 4.69042, ASD: 1.78494
+2025-04-25 19:09:17 - INFO - Image 12 - Dice: 0.90405, Jaccard: 0.82490, HD95: 5.09902, ASD: 1.37771
+2025-04-25 19:09:18 - INFO - Image 13 - Dice: 0.90315, Jaccard: 0.82341, HD95: 5.19615, ASD: 1.56234
+2025-04-25 19:09:19 - INFO - Image 14 - Dice: 0.90861, Jaccard: 0.83252, HD95: 7.28011, ASD: 1.28715
+2025-04-25 19:09:20 - INFO - Image 15 - Dice: 0.91837, Jaccard: 0.84906, HD95: 5.00000, ASD: 1.86114
+2025-04-25 19:09:21 - INFO - Image 16 - Dice: 0.61900, Jaccard: 0.44823, HD95: 16.12452, ASD: 5.78618
+2025-04-25 19:09:23 - INFO - Image 17 - Dice: 0.89141, Jaccard: 0.80409, HD95: 5.74456, ASD: 1.86132
+2025-04-25 19:09:25 - INFO - Image 18 - Dice: 0.93560, Jaccard: 0.87900, HD95: 9.38083, ASD: 2.38705
+2025-04-25 19:09:26 - INFO - Image 19 - Dice: 0.78361, Jaccard: 0.64420, HD95: 14.45683, ASD: 3.93346
+2025-04-25 19:09:26 - INFO - Average metric (decoder 1): [0.86229282 0.76777787 8.55370623 2.43502355]
+2025-04-25 19:09:26 - INFO - Average metric of decoder 1: [0.86229282 0.76777787 8.55370623 2.43502355]
+2025-04-25 19:09:26 - INFO - Test results: [0.86229282 0.76777787 8.55370623 2.43502355]
+2025-04-25 19:09:28 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:09:28 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:09:28 - INFO - Creating model: VNet
+2025-04-25 19:09:28 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_360_checkpoint.pth
+2025-04-25 19:09:28 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_360_checkpoint.pth
+2025-04-25 19:09:28 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:09:28 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:09:28 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:09:28 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:09:29 - INFO - Image 00 - Dice: 0.81452, Jaccard: 0.68709, HD95: 10.63015, ASD: 2.98898
+2025-04-25 19:09:31 - INFO - Image 01 - Dice: 0.89543, Jaccard: 0.81066, HD95: 11.57584, ASD: 1.33845
+2025-04-25 19:09:32 - INFO - Image 02 - Dice: 0.91629, Jaccard: 0.84552, HD95: 6.00000, ASD: 1.02620
+2025-04-25 19:09:34 - INFO - Image 03 - Dice: 0.91555, Jaccard: 0.84426, HD95: 4.24264, ASD: 1.50512
+2025-04-25 19:09:35 - INFO - Image 04 - Dice: 0.89962, Jaccard: 0.81756, HD95: 3.74166, ASD: 1.53189
+2025-04-25 19:09:37 - INFO - Image 05 - Dice: 0.61705, Jaccard: 0.44618, HD95: 36.34556, ASD: 5.55310
+2025-04-25 19:09:38 - INFO - Image 06 - Dice: 0.91368, Jaccard: 0.84108, HD95: 6.08276, ASD: 3.62830
+2025-04-25 19:09:40 - INFO - Image 07 - Dice: 0.78220, Jaccard: 0.64231, HD95: 14.14214, ASD: 2.59201
+2025-04-25 19:09:41 - INFO - Image 08 - Dice: 0.91177, Jaccard: 0.83785, HD95: 11.22497, ASD: 3.32270
+2025-04-25 19:09:43 - INFO - Image 09 - Dice: 0.91236, Jaccard: 0.83885, HD95: 5.09902, ASD: 1.40278
+2025-04-25 19:09:44 - INFO - Image 10 - Dice: 0.83102, Jaccard: 0.71089, HD95: 9.84886, ASD: 2.85427
+2025-04-25 19:09:45 - INFO - Image 11 - Dice: 0.87578, Jaccard: 0.77901, HD95: 10.24695, ASD: 1.50876
+2025-04-25 19:09:46 - INFO - Image 12 - Dice: 0.89659, Jaccard: 0.81257, HD95: 6.70820, ASD: 1.32203
+2025-04-25 19:09:47 - INFO - Image 13 - Dice: 0.90095, Jaccard: 0.81976, HD95: 6.08276, ASD: 1.92782
+2025-04-25 19:09:49 - INFO - Image 14 - Dice: 0.90668, Jaccard: 0.82928, HD95: 10.86278, ASD: 3.98965
+2025-04-25 19:09:50 - INFO - Image 15 - Dice: 0.91104, Jaccard: 0.83661, HD95: 5.09902, ASD: 2.51244
+2025-04-25 19:09:51 - INFO - Image 16 - Dice: 0.73315, Jaccard: 0.57873, HD95: 15.39480, ASD: 5.19953
+2025-04-25 19:09:52 - INFO - Image 17 - Dice: 0.89451, Jaccard: 0.80915, HD95: 4.58258, ASD: 1.60005
+2025-04-25 19:09:54 - INFO - Image 18 - Dice: 0.93302, Jaccard: 0.87445, HD95: 5.83095, ASD: 2.27872
+2025-04-25 19:09:56 - INFO - Image 19 - Dice: 0.80431, Jaccard: 0.67268, HD95: 14.49138, ASD: 3.08772
+2025-04-25 19:09:56 - INFO - Average metric (decoder 1): [0.86327718 0.7667237  9.9116509  2.55852583]
+2025-04-25 19:09:56 - INFO - Average metric of decoder 1: [0.86327718 0.7667237  9.9116509  2.55852583]
+2025-04-25 19:09:56 - INFO - Test results: [0.86327718 0.7667237  9.9116509  2.55852583]
+2025-04-25 19:09:57 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:09:57 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:09:57 - INFO - Creating model: VNet
+2025-04-25 19:09:57 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_380_checkpoint.pth
+2025-04-25 19:09:58 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_380_checkpoint.pth
+2025-04-25 19:09:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:09:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:09:58 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:09:58 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:09:59 - INFO - Image 00 - Dice: 0.81698, Jaccard: 0.69058, HD95: 10.81665, ASD: 2.63559
+2025-04-25 19:10:00 - INFO - Image 01 - Dice: 0.84230, Jaccard: 0.72757, HD95: 16.76305, ASD: 2.00271
+2025-04-25 19:10:02 - INFO - Image 02 - Dice: 0.91367, Jaccard: 0.84106, HD95: 6.40312, ASD: 1.03354
+2025-04-25 19:10:03 - INFO - Image 03 - Dice: 0.91058, Jaccard: 0.83585, HD95: 5.00000, ASD: 1.43972
+2025-04-25 19:10:04 - INFO - Image 04 - Dice: 0.90381, Jaccard: 0.82451, HD95: 3.74166, ASD: 1.33465
+2025-04-25 19:10:06 - INFO - Image 05 - Dice: 0.51414, Jaccard: 0.34602, HD95: 41.62932, ASD: 6.62162
+2025-04-25 19:10:07 - INFO - Image 06 - Dice: 0.94335, Jaccard: 0.89278, HD95: 3.00000, ASD: 1.04854
+2025-04-25 19:10:09 - INFO - Image 07 - Dice: 0.76159, Jaccard: 0.61497, HD95: 16.27882, ASD: 2.28442
+2025-04-25 19:10:11 - INFO - Image 08 - Dice: 0.93439, Jaccard: 0.87687, HD95: 4.12311, ASD: 1.95782
+2025-04-25 19:10:12 - INFO - Image 09 - Dice: 0.92114, Jaccard: 0.85381, HD95: 4.24264, ASD: 1.16658
+2025-04-25 19:10:13 - INFO - Image 10 - Dice: 0.84439, Jaccard: 0.73068, HD95: 10.09950, ASD: 2.39064
+2025-04-25 19:10:14 - INFO - Image 11 - Dice: 0.88223, Jaccard: 0.78928, HD95: 9.48683, ASD: 1.41549
+2025-04-25 19:10:16 - INFO - Image 12 - Dice: 0.88282, Jaccard: 0.79022, HD95: 11.04536, ASD: 1.25655
+2025-04-25 19:10:17 - INFO - Image 13 - Dice: 0.90114, Jaccard: 0.82007, HD95: 4.58258, ASD: 1.33172
+2025-04-25 19:10:18 - INFO - Image 14 - Dice: 0.90678, Jaccard: 0.82946, HD95: 7.00000, ASD: 1.26535
+2025-04-25 19:10:19 - INFO - Image 15 - Dice: 0.92443, Jaccard: 0.85947, HD95: 4.89898, ASD: 1.76792
+2025-04-25 19:10:20 - INFO - Image 16 - Dice: 0.62760, Jaccard: 0.45730, HD95: 14.31782, ASD: 5.58547
+2025-04-25 19:10:22 - INFO - Image 17 - Dice: 0.86931, Jaccard: 0.76884, HD95: 7.00000, ASD: 2.05050
+2025-04-25 19:10:23 - INFO - Image 18 - Dice: 0.94157, Jaccard: 0.88960, HD95: 6.16441, ASD: 1.81565
+2025-04-25 19:10:25 - INFO - Image 19 - Dice: 0.79294, Jaccard: 0.65692, HD95: 19.53074, ASD: 3.10859
+2025-04-25 19:10:25 - INFO - Average metric (decoder 1): [ 0.85175834  0.75479184 10.30623018  2.17565325]
+2025-04-25 19:10:25 - INFO - Average metric of decoder 1: [ 0.85175834  0.75479184 10.30623018  2.17565325]
+2025-04-25 19:10:25 - INFO - Test results: [ 0.85175834  0.75479184 10.30623018  2.17565325]
+2025-04-25 19:10:27 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:10:27 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:10:27 - INFO - Creating model: VNet
+2025-04-25 19:10:27 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_400_checkpoint.pth
+2025-04-25 19:10:27 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_400_checkpoint.pth
+2025-04-25 19:10:27 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:10:27 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:10:27 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:10:27 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:10:28 - INFO - Image 00 - Dice: 0.68919, Jaccard: 0.52578, HD95: 15.55635, ASD: 3.19718
+2025-04-25 19:10:30 - INFO - Image 01 - Dice: 0.76822, Jaccard: 0.62367, HD95: 22.64950, ASD: 2.66565
+2025-04-25 19:10:31 - INFO - Image 02 - Dice: 0.90006, Jaccard: 0.81828, HD95: 8.66025, ASD: 1.12264
+2025-04-25 19:10:33 - INFO - Image 03 - Dice: 0.88408, Jaccard: 0.79225, HD95: 6.63325, ASD: 1.67318
+2025-04-25 19:10:34 - INFO - Image 04 - Dice: 0.90355, Jaccard: 0.82406, HD95: 3.74166, ASD: 1.34512
+2025-04-25 19:10:36 - INFO - Image 05 - Dice: 0.21237, Jaccard: 0.11880, HD95: 71.47027, ASD: 8.84068
+2025-04-25 19:10:37 - INFO - Image 06 - Dice: 0.93142, Jaccard: 0.87164, HD95: 3.16228, ASD: 1.24839
+2025-04-25 19:10:38 - INFO - Image 07 - Dice: 0.61655, Jaccard: 0.44566, HD95: 28.44293, ASD: 3.13250
+2025-04-25 19:10:40 - INFO - Image 08 - Dice: 0.93847, Jaccard: 0.88407, HD95: 4.12311, ASD: 1.85705
+2025-04-25 19:10:41 - INFO - Image 09 - Dice: 0.91449, Jaccard: 0.84244, HD95: 5.00000, ASD: 1.31634
+2025-04-25 19:10:43 - INFO - Image 10 - Dice: 0.78796, Jaccard: 0.65011, HD95: 15.77180, ASD: 2.44268
+2025-04-25 19:10:44 - INFO - Image 11 - Dice: 0.60961, Jaccard: 0.43844, HD95: 17.94436, ASD: 3.66848
+2025-04-25 19:10:45 - INFO - Image 12 - Dice: 0.88051, Jaccard: 0.78652, HD95: 9.00000, ASD: 1.53287
+2025-04-25 19:10:46 - INFO - Image 13 - Dice: 0.91737, Jaccard: 0.84736, HD95: 3.74166, ASD: 1.36198
+2025-04-25 19:10:48 - INFO - Image 14 - Dice: 0.91637, Jaccard: 0.84565, HD95: 5.47723, ASD: 1.18413
+2025-04-25 19:10:49 - INFO - Image 15 - Dice: 0.91728, Jaccard: 0.84720, HD95: 5.09902, ASD: 1.77694
+2025-04-25 19:10:50 - INFO - Image 16 - Dice: 0.62548, Jaccard: 0.45506, HD95: 15.39480, ASD: 4.98367
+2025-04-25 19:10:51 - INFO - Image 17 - Dice: 0.83805, Jaccard: 0.72124, HD95: 8.06226, ASD: 2.41308
+2025-04-25 19:10:53 - INFO - Image 18 - Dice: 0.92968, Jaccard: 0.86860, HD95: 9.16515, ASD: 2.42485
+2025-04-25 19:10:55 - INFO - Image 19 - Dice: 0.70230, Jaccard: 0.54119, HD95: 27.01851, ASD: 3.68433
+2025-04-25 19:10:55 - INFO - Average metric (decoder 1): [ 0.79415025  0.68740101 14.30571932  2.5935872 ]
+2025-04-25 19:10:55 - INFO - Average metric of decoder 1: [ 0.79415025  0.68740101 14.30571932  2.5935872 ]
+2025-04-25 19:10:55 - INFO - Test results: [ 0.79415025  0.68740101 14.30571932  2.5935872 ]
+2025-04-25 19:10:57 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:10:57 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:10:57 - INFO - Creating model: VNet
+2025-04-25 19:10:57 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_40_checkpoint.pth
+2025-04-25 19:10:57 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_40_checkpoint.pth
+2025-04-25 19:10:57 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:10:57 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:10:57 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:10:57 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:10:58 - INFO - Image 00 - Dice: 0.03547, Jaccard: 0.01806, HD95: 63.54526, ASD: 4.87699
+2025-04-25 19:10:59 - INFO - Image 01 - Dice: 0.68786, Jaccard: 0.52423, HD95: 31.14482, ASD: 11.20495
+2025-04-25 19:11:01 - INFO - Image 02 - Dice: 0.58682, Jaccard: 0.41525, HD95: 48.09366, ASD: 19.14341
+2025-04-25 19:11:02 - INFO - Image 03 - Dice: 0.54957, Jaccard: 0.37890, HD95: 41.14608, ASD: 16.70408
+2025-04-25 19:11:03 - INFO - Image 04 - Dice: 0.35196, Jaccard: 0.21356, HD95: 58.53204, ASD: 24.77322
+2025-04-25 19:11:05 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-04-25 19:11:06 - INFO - Image 06 - Dice: 0.01705, Jaccard: 0.00860, HD95: 41.01219, ASD: 24.46862
+2025-04-25 19:11:07 - INFO - Image 07 - Dice: 0.40423, Jaccard: 0.25331, HD95: 25.17936, ASD: 9.62660
+2025-04-25 19:11:09 - INFO - Image 08 - Dice: 0.24033, Jaccard: 0.13658, HD95: 22.44994, ASD: 8.79692
+2025-04-25 19:11:10 - INFO - Image 09 - Dice: 0.47958, Jaccard: 0.31542, HD95: 51.97115, ASD: 20.57635
+2025-04-25 19:11:11 - INFO - Image 10 - Dice: 0.64971, Jaccard: 0.48116, HD95: 27.73085, ASD: 10.71952
+2025-04-25 19:11:13 - INFO - Image 11 - Dice: 0.39911, Jaccard: 0.24930, HD95: 51.48786, ASD: 23.06570
+2025-04-25 19:11:14 - INFO - Image 12 - Dice: 0.48246, Jaccard: 0.31792, HD95: 50.12983, ASD: 24.81469
+2025-04-25 19:11:15 - INFO - Image 13 - Dice: 0.48738, Jaccard: 0.32221, HD95: 49.28489, ASD: 13.86611
+2025-04-25 19:11:16 - INFO - Image 14 - Dice: 0.60790, Jaccard: 0.43667, HD95: 33.71943, ASD: 15.02043
+2025-04-25 19:11:18 - INFO - Image 15 - Dice: 0.61102, Jaccard: 0.43990, HD95: 55.66866, ASD: 19.57744
+2025-04-25 19:11:19 - INFO - Image 16 - Dice: 0.14043, Jaccard: 0.07552, HD95: 48.03905, ASD: 19.45362
+2025-04-25 19:11:20 - INFO - Image 17 - Dice: 0.39979, Jaccard: 0.24984, HD95: 34.21988, ASD: 14.97655
+2025-04-25 19:11:22 - INFO - Image 18 - Dice: 0.00052, Jaccard: 0.00026, HD95: 56.54202, ASD: 29.74505
+2025-04-25 19:11:23 - INFO - Image 19 - Dice: 0.33171, Jaccard: 0.19883, HD95: 77.03051, ASD: 7.37040
+2025-04-25 19:11:23 - INFO - Average metric (decoder 1): [ 0.37314545  0.25177719 43.34637422 15.93903191]
+2025-04-25 19:11:23 - INFO - Average metric of decoder 1: [ 0.37314545  0.25177719 43.34637422 15.93903191]
+2025-04-25 19:11:23 - INFO - Test results: [ 0.37314545  0.25177719 43.34637422 15.93903191]
+2025-04-25 19:11:25 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:11:25 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:11:25 - INFO - Creating model: VNet
+2025-04-25 19:11:25 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_60_checkpoint.pth
+2025-04-25 19:11:25 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_60_checkpoint.pth
+2025-04-25 19:11:25 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:11:25 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:11:25 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:11:25 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:11:26 - INFO - Image 00 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-04-25 19:11:28 - INFO - Image 01 - Dice: 0.78896, Jaccard: 0.65148, HD95: 29.58040, ASD: 7.32623
+2025-04-25 19:11:29 - INFO - Image 02 - Dice: 0.84269, Jaccard: 0.72814, HD95: 39.30901, ASD: 7.02642
+2025-04-25 19:11:31 - INFO - Image 03 - Dice: 0.80662, Jaccard: 0.67591, HD95: 22.11334, ASD: 2.83558
+2025-04-25 19:11:32 - INFO - Image 04 - Dice: 0.40758, Jaccard: 0.25595, HD95: 60.58052, ASD: 28.06062
+2025-04-25 19:11:33 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-04-25 19:11:34 - INFO - Image 06 - Dice: 0.68837, Jaccard: 0.52482, HD95: 37.81534, ASD: 15.43754
+2025-04-25 19:11:36 - INFO - Image 07 - Dice: 0.40904, Jaccard: 0.25711, HD95: 29.22328, ASD: 5.55976
+2025-04-25 19:11:37 - INFO - Image 08 - Dice: 0.84162, Jaccard: 0.72655, HD95: 13.49074, ASD: 2.65730
+2025-04-25 19:11:39 - INFO - Image 09 - Dice: 0.61445, Jaccard: 0.44347, HD95: 49.64877, ASD: 18.73649
+2025-04-25 19:11:40 - INFO - Image 10 - Dice: 0.73790, Jaccard: 0.58467, HD95: 27.22132, ASD: 3.38278
+2025-04-25 19:11:41 - INFO - Image 11 - Dice: 0.54693, Jaccard: 0.37640, HD95: 48.31149, ASD: 18.29274
+2025-04-25 19:11:42 - INFO - Image 12 - Dice: 0.64824, Jaccard: 0.47955, HD95: 39.62323, ASD: 14.41185
+2025-04-25 19:11:44 - INFO - Image 13 - Dice: 0.62920, Jaccard: 0.45900, HD95: 47.20858, ASD: 10.57872
+2025-04-25 19:11:45 - INFO - Image 14 - Dice: 0.78981, Jaccard: 0.65263, HD95: 23.62202, ASD: 8.65366
+2025-04-25 19:11:46 - INFO - Image 15 - Dice: 0.78142, Jaccard: 0.64126, HD95: 57.78408, ASD: 16.36092
+2025-04-25 19:11:47 - INFO - Image 16 - Dice: 0.12536, Jaccard: 0.06687, HD95: 47.01064, ASD: 19.08025
+2025-04-25 19:11:48 - INFO - Image 17 - Dice: 0.54396, Jaccard: 0.37359, HD95: 27.27636, ASD: 7.78287
+2025-04-25 19:11:50 - INFO - Image 18 - Dice: 0.18935, Jaccard: 0.10457, HD95: 45.45327, ASD: 13.88777
+2025-04-25 19:11:52 - INFO - Image 19 - Dice: 0.40170, Jaccard: 0.25133, HD95: 78.17033, ASD: 5.99465
+2025-04-25 19:11:52 - INFO - Average metric (decoder 1): [ 0.53966052  0.41266475 36.17213561 10.30330709]
+2025-04-25 19:11:52 - INFO - Average metric of decoder 1: [ 0.53966052  0.41266475 36.17213561 10.30330709]
+2025-04-25 19:11:52 - INFO - Test results: [ 0.53966052  0.41266475 36.17213561 10.30330709]
+2025-04-25 19:11:53 - INFO - Log file will be saved at: ./result/VNet/LA_16/Test/Test.log
+2025-04-25 19:11:53 - INFO - Using GPU: NVIDIA GeForce RTX 4090
+2025-04-25 19:11:53 - INFO - Creating model: VNet
+2025-04-25 19:11:54 - INFO - Loading model weights from: ./result/VNet/LA_16/Pth/model_epoch_80_checkpoint.pth
+2025-04-25 19:11:54 - INFO - Model successfully loaded from ./result/VNet/LA_16/Pth/model_epoch_80_checkpoint.pth
+2025-04-25 19:11:54 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-25 19:11:54 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-25 19:11:54 - INFO - Constructed full image paths for 20 images.
+2025-04-25 19:11:54 - INFO - Starting the performance evaluation for VNet.
+2025-04-25 19:11:55 - INFO - Image 00 - Dice: 0.17162, Jaccard: 0.09387, HD95: 34.33657, ASD: 5.27013
+2025-04-25 19:11:56 - INFO - Image 01 - Dice: 0.68878, Jaccard: 0.52530, HD95: 29.45081, ASD: 4.08236
+2025-04-25 19:11:58 - INFO - Image 02 - Dice: 0.85316, Jaccard: 0.74392, HD95: 16.40122, ASD: 3.58095
+2025-04-25 19:11:59 - INFO - Image 03 - Dice: 0.80710, Jaccard: 0.67659, HD95: 11.40175, ASD: 3.81802
+2025-04-25 19:12:00 - INFO - Image 04 - Dice: 0.56626, Jaccard: 0.39495, HD95: 60.44005, ASD: 25.40276
+2025-04-25 19:12:02 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-04-25 19:12:03 - INFO - Image 06 - Dice: 0.88457, Jaccard: 0.79303, HD95: 28.00000, ASD: 6.18058
+2025-04-25 19:12:04 - INFO - Image 07 - Dice: 0.55441, Jaccard: 0.38352, HD95: 20.36663, ASD: 6.08838
+2025-04-25 19:12:06 - INFO - Image 08 - Dice: 0.88804, Jaccard: 0.79862, HD95: 11.57584, ASD: 3.47943
+2025-04-25 19:12:07 - INFO - Image 09 - Dice: 0.69148, Jaccard: 0.52844, HD95: 48.38388, ASD: 15.49344
+2025-04-25 19:12:08 - INFO - Image 10 - Dice: 0.76386, Jaccard: 0.61794, HD95: 14.21267, ASD: 3.77608
+2025-04-25 19:12:10 - INFO - Image 11 - Dice: 0.57155, Jaccard: 0.40012, HD95: 55.54458, ASD: 19.48774
+2025-04-25 19:12:11 - INFO - Image 12 - Dice: 0.69274, Jaccard: 0.52992, HD95: 49.25444, ASD: 16.17203
+2025-04-25 19:12:12 - INFO - Image 13 - Dice: 0.65667, Jaccard: 0.48884, HD95: 17.26268, ASD: 8.08895
+2025-04-25 19:12:13 - INFO - Image 14 - Dice: 0.83607, Jaccard: 0.71831, HD95: 16.40122, ASD: 5.18528
+2025-04-25 19:12:15 - INFO - Image 15 - Dice: 0.85142, Jaccard: 0.74128, HD95: 52.20297, ASD: 10.26149
+2025-04-25 19:12:16 - INFO - Image 16 - Dice: 0.23647, Jaccard: 0.13409, HD95: 43.15090, ASD: 17.04780
+2025-04-25 19:12:17 - INFO - Image 17 - Dice: 0.75002, Jaccard: 0.60003, HD95: 22.84732, ASD: 7.51473
+2025-04-25 19:12:19 - INFO - Image 18 - Dice: 0.89382, Jaccard: 0.80802, HD95: 10.72381, ASD: 2.77946
+2025-04-25 19:12:21 - INFO - Image 19 - Dice: 0.52715, Jaccard: 0.35791, HD95: 68.74300, ASD: 4.44844
+2025-04-25 19:12:21 - INFO - Average metric (decoder 1): [ 0.64425985  0.51673511 30.53501602  8.40790307]
+2025-04-25 19:12:21 - INFO - Average metric of decoder 1: [ 0.64425985  0.51673511 30.53501602  8.40790307]
+2025-04-25 19:12:21 - INFO - Test results: [ 0.64425985  0.51673511 30.53501602  8.40790307]

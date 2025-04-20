@@ -1,0 +1,2000 @@
+2025-04-15 04:39:01 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:39:01 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:39:02 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_10.pth
+2025-04-15 04:39:02 - INFO - Starting inference process
+2025-04-15 04:39:02 - INFO - 40 test iterations per epoch
+2025-04-15 04:39:03 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.764130 mean_hd95 36.833159
+2025-04-15 04:39:03 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.673989 mean_hd95 42.052725
+2025-04-15 04:39:03 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.689842 mean_hd95 14.338788
+2025-04-15 04:39:03 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.693869 mean_hd95 14.755177
+2025-04-15 04:39:04 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.097371 mean_hd95 39.690694
+2025-04-15 04:39:04 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.050308 mean_hd95 42.708949
+2025-04-15 04:39:04 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.710664 mean_hd95 39.470745
+2025-04-15 04:39:05 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.669975 mean_hd95 42.418562
+2025-04-15 04:39:05 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.729083 mean_hd95 28.107834
+2025-04-15 04:39:05 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.590757 mean_hd95 30.077127
+2025-04-15 04:39:06 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.728622 mean_hd95 13.097721
+2025-04-15 04:39:06 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.702697 mean_hd95 13.195721
+2025-04-15 04:39:06 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.627952 mean_hd95 46.179879
+2025-04-15 04:39:06 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.638419 mean_hd95 51.829561
+2025-04-15 04:39:07 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.751580 mean_hd95 6.299213
+2025-04-15 04:39:07 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.699847 mean_hd95 10.751335
+2025-04-15 04:39:07 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.000000 mean_hd95 0.000000
+2025-04-15 04:39:07 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.000000 mean_hd95 0.000000
+2025-04-15 04:39:07 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.739515 mean_hd95 6.272218
+2025-04-15 04:39:08 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.684227 mean_hd95 5.439705
+2025-04-15 04:39:08 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.097214 mean_hd95 17.939297
+2025-04-15 04:39:08 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.001841 mean_hd95 15.098416
+2025-04-15 04:39:08 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.747423 mean_hd95 39.692134
+2025-04-15 04:39:08 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.663457 mean_hd95 41.899502
+2025-04-15 04:39:09 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.492295 mean_hd95 64.573321
+2025-04-15 04:39:09 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.358003 mean_hd95 69.777353
+2025-04-15 04:39:09 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.748862 mean_hd95 30.276102
+2025-04-15 04:39:10 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.461956 mean_hd95 33.032863
+2025-04-15 04:39:10 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.636864 mean_hd95 19.760195
+2025-04-15 04:39:10 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.000753 mean_hd95 58.867320
+2025-04-15 04:39:10 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.643187 mean_hd95 47.759814
+2025-04-15 04:39:11 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.368894 mean_hd95 55.819052
+2025-04-15 04:39:11 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.604467 mean_hd95 49.154151
+2025-04-15 04:39:12 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.509771 mean_hd95 56.020266
+2025-04-15 04:39:12 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.615367 mean_hd95 11.390511
+2025-04-15 04:39:13 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.543048 mean_hd95 8.318553
+2025-04-15 04:39:13 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.677903 mean_hd95 11.897615
+2025-04-15 04:39:14 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.515315 mean_hd95 12.860488
+2025-04-15 04:39:14 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.712910 mean_hd95 18.282894
+2025-04-15 04:39:15 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.626312 mean_hd95 8.479368
+2025-04-15 04:39:15 - INFO - Mean class 1 mean_dice 0.436723 mean_hd95 57.240591
+2025-04-15 04:39:15 - INFO - Mean class 2 mean_dice 0.537560 mean_hd95 14.260828
+2025-04-15 04:39:15 - INFO - Mean class 3 mean_dice 0.620868 mean_hd95 15.079956
+2025-04-15 04:39:15 - INFO - Testing performance in best val model: mean_dice : 0.531717 mean_hd95 : 28.860458
+2025-04-15 04:39:15 - INFO - Testing Finished
+2025-04-15 04:39:17 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:39:17 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:39:18 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_100.pth
+2025-04-15 04:39:18 - INFO - Starting inference process
+2025-04-15 04:39:18 - INFO - 40 test iterations per epoch
+2025-04-15 04:39:19 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.913253 mean_hd95 1.206936
+2025-04-15 04:39:19 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.873625 mean_hd95 1.483163
+2025-04-15 04:39:19 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.898320 mean_hd95 11.699445
+2025-04-15 04:39:19 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.904058 mean_hd95 11.688614
+2025-04-15 04:39:20 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.922751 mean_hd95 1.000000
+2025-04-15 04:39:20 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.888761 mean_hd95 1.000000
+2025-04-15 04:39:20 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.883268 mean_hd95 17.249791
+2025-04-15 04:39:21 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.862140 mean_hd95 12.039053
+2025-04-15 04:39:21 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.780613 mean_hd95 2.065384
+2025-04-15 04:39:21 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.768640 mean_hd95 2.829567
+2025-04-15 04:39:22 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.915446 mean_hd95 1.138071
+2025-04-15 04:39:22 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.926295 mean_hd95 1.000000
+2025-04-15 04:39:22 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.900390 mean_hd95 1.333333
+2025-04-15 04:39:22 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.912245 mean_hd95 1.000000
+2025-04-15 04:39:23 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.934016 mean_hd95 1.000000
+2025-04-15 04:39:23 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.876044 mean_hd95 1.276142
+2025-04-15 04:39:23 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.129709 mean_hd95 21.174451
+2025-04-15 04:39:23 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.011384 mean_hd95 9.367494
+2025-04-15 04:39:23 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.885683 mean_hd95 1.333333
+2025-04-15 04:39:24 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.839668 mean_hd95 3.914376
+2025-04-15 04:39:24 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.858582 mean_hd95 1.471405
+2025-04-15 04:39:24 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.605104 mean_hd95 4.948109
+2025-04-15 04:39:24 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.926931 mean_hd95 1.000000
+2025-04-15 04:39:24 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.862316 mean_hd95 5.635197
+2025-04-15 04:39:25 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.791841 mean_hd95 4.161760
+2025-04-15 04:39:25 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.722390 mean_hd95 4.284205
+2025-04-15 04:39:25 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.942626 mean_hd95 1.000000
+2025-04-15 04:39:25 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.871267 mean_hd95 1.333333
+2025-04-15 04:39:26 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.818867 mean_hd95 2.550094
+2025-04-15 04:39:26 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.511397 mean_hd95 4.524198
+2025-04-15 04:39:26 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.895649 mean_hd95 1.244017
+2025-04-15 04:39:27 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.742115 mean_hd95 4.902205
+2025-04-15 04:39:27 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.668093 mean_hd95 3.914779
+2025-04-15 04:39:28 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.858650 mean_hd95 2.265515
+2025-04-15 04:39:28 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.860388 mean_hd95 1.666667
+2025-04-15 04:39:29 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.832259 mean_hd95 2.333333
+2025-04-15 04:39:29 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.869777 mean_hd95 5.446091
+2025-04-15 04:39:30 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.693805 mean_hd95 6.951438
+2025-04-15 04:39:30 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.916626 mean_hd95 1.138071
+2025-04-15 04:39:31 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.847732 mean_hd95 5.617047
+2025-04-15 04:39:31 - INFO - Mean class 1 mean_dice 0.775899 mean_hd95 7.419083
+2025-04-15 04:39:31 - INFO - Mean class 2 mean_dice 0.778032 mean_hd95 2.215524
+2025-04-15 04:39:31 - INFO - Mean class 3 mean_dice 0.855273 mean_hd95 3.204389
+2025-04-15 04:39:31 - INFO - Testing performance in best val model: mean_dice : 0.803068 mean_hd95 : 4.279665
+2025-04-15 04:39:31 - INFO - Testing Finished
+2025-04-15 04:39:33 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:39:33 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:39:34 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_110.pth
+2025-04-15 04:39:34 - INFO - Starting inference process
+2025-04-15 04:39:34 - INFO - 40 test iterations per epoch
+2025-04-15 04:39:34 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.912145 mean_hd95 15.741112
+2025-04-15 04:39:35 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.857493 mean_hd95 1.745356
+2025-04-15 04:39:35 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.891751 mean_hd95 11.985285
+2025-04-15 04:39:35 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.906223 mean_hd95 10.390635
+2025-04-15 04:39:35 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.930899 mean_hd95 1.000000
+2025-04-15 04:39:36 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.896495 mean_hd95 1.333333
+2025-04-15 04:39:36 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.881962 mean_hd95 15.603942
+2025-04-15 04:39:36 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.854403 mean_hd95 11.712028
+2025-04-15 04:39:37 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.890769 mean_hd95 1.000000
+2025-04-15 04:39:37 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.824110 mean_hd95 1.947149
+2025-04-15 04:39:37 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.887650 mean_hd95 1.333333
+2025-04-15 04:39:38 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.920394 mean_hd95 1.000000
+2025-04-15 04:39:38 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.916366 mean_hd95 1.138071
+2025-04-15 04:39:38 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.926609 mean_hd95 1.000000
+2025-04-15 04:39:38 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.891205 mean_hd95 4.575974
+2025-04-15 04:39:38 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.847444 mean_hd95 19.616519
+2025-04-15 04:39:39 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.701975 mean_hd95 4.666667
+2025-04-15 04:39:39 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.347887 mean_hd95 5.966326
+2025-04-15 04:39:39 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.888820 mean_hd95 3.161105
+2025-04-15 04:39:39 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.832865 mean_hd95 7.215628
+2025-04-15 04:39:40 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.876541 mean_hd95 1.276142
+2025-04-15 04:39:40 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.498541 mean_hd95 9.608126
+2025-04-15 04:39:40 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.922791 mean_hd95 1.333333
+2025-04-15 04:39:40 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.909714 mean_hd95 1.000000
+2025-04-15 04:39:40 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.866400 mean_hd95 1.471405
+2025-04-15 04:39:41 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.831827 mean_hd95 2.492409
+2025-04-15 04:39:41 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.941300 mean_hd95 1.000000
+2025-04-15 04:39:41 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.874050 mean_hd95 1.382088
+2025-04-15 04:39:41 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.825811 mean_hd95 2.006588
+2025-04-15 04:39:42 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.560496 mean_hd95 3.907429
+2025-04-15 04:39:42 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.898927 mean_hd95 1.720759
+2025-04-15 04:39:42 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.818745 mean_hd95 2.054093
+2025-04-15 04:39:43 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.875436 mean_hd95 7.690765
+2025-04-15 04:39:43 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.868490 mean_hd95 19.046342
+2025-04-15 04:39:44 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.835686 mean_hd95 1.804738
+2025-04-15 04:39:44 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.832584 mean_hd95 2.216761
+2025-04-15 04:39:45 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.837533 mean_hd95 2.000000
+2025-04-15 04:39:45 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.719228 mean_hd95 6.629875
+2025-04-15 04:39:46 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.891596 mean_hd95 1.804738
+2025-04-15 04:39:46 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.814329 mean_hd95 20.831449
+2025-04-15 04:39:46 - INFO - Mean class 1 mean_dice 0.776672 mean_hd95 7.032604
+2025-04-15 04:39:46 - INFO - Mean class 2 mean_dice 0.822507 mean_hd95 5.547879
+2025-04-15 04:39:46 - INFO - Mean class 3 mean_dice 0.913883 mean_hd95 3.425229
+2025-04-15 04:39:46 - INFO - Testing performance in best val model: mean_dice : 0.837687 mean_hd95 : 5.335238
+2025-04-15 04:39:46 - INFO - Testing Finished
+2025-04-15 04:39:49 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:39:49 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:39:49 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_120.pth
+2025-04-15 04:39:49 - INFO - Starting inference process
+2025-04-15 04:39:49 - INFO - 40 test iterations per epoch
+2025-04-15 04:39:50 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.919349 mean_hd95 15.521520
+2025-04-15 04:39:50 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.866497 mean_hd95 15.681115
+2025-04-15 04:39:51 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.924001 mean_hd95 1.000000
+2025-04-15 04:39:51 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.917347 mean_hd95 1.138071
+2025-04-15 04:39:51 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.931372 mean_hd95 1.000000
+2025-04-15 04:39:51 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.919911 mean_hd95 1.000000
+2025-04-15 04:39:52 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.920445 mean_hd95 1.138071
+2025-04-15 04:39:52 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.874991 mean_hd95 3.435541
+2025-04-15 04:39:52 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.860733 mean_hd95 1.333333
+2025-04-15 04:39:53 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.799581 mean_hd95 4.401796
+2025-04-15 04:39:53 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.869824 mean_hd95 1.412023
+2025-04-15 04:39:53 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.928835 mean_hd95 1.000000
+2025-04-15 04:39:53 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.917147 mean_hd95 1.000000
+2025-04-15 04:39:54 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.927809 mean_hd95 1.000000
+2025-04-15 04:39:54 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.910830 mean_hd95 1.000000
+2025-04-15 04:39:54 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.856895 mean_hd95 1.804738
+2025-04-15 04:39:54 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.892215 mean_hd95 1.333333
+2025-04-15 04:39:55 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.837170 mean_hd95 1.471405
+2025-04-15 04:39:55 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.905391 mean_hd95 1.000000
+2025-04-15 04:39:55 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.868248 mean_hd95 1.412023
+2025-04-15 04:39:55 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.889164 mean_hd95 1.772208
+2025-04-15 04:39:55 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.717507 mean_hd95 11.719812
+2025-04-15 04:39:56 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.932038 mean_hd95 1.000000
+2025-04-15 04:39:56 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.900460 mean_hd95 1.138071
+2025-04-15 04:39:56 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.831324 mean_hd95 2.208793
+2025-04-15 04:39:56 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.841555 mean_hd95 1.656040
+2025-04-15 04:39:57 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.943962 mean_hd95 1.000000
+2025-04-15 04:39:57 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.913569 mean_hd95 1.276142
+2025-04-15 04:39:57 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.825450 mean_hd95 3.291336
+2025-04-15 04:39:57 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.787682 mean_hd95 2.080880
+2025-04-15 04:39:58 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.943296 mean_hd95 1.000000
+2025-04-15 04:39:58 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.856126 mean_hd95 1.804738
+2025-04-15 04:39:58 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.848507 mean_hd95 12.910946
+2025-04-15 04:39:59 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.847109 mean_hd95 20.106567
+2025-04-15 04:40:00 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.835731 mean_hd95 1.868517
+2025-04-15 04:40:00 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.868721 mean_hd95 1.609476
+2025-04-15 04:40:01 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.875298 mean_hd95 4.771236
+2025-04-15 04:40:01 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.835043 mean_hd95 5.714045
+2025-04-15 04:40:01 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.927716 mean_hd95 1.138071
+2025-04-15 04:40:02 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.847633 mean_hd95 2.157379
+2025-04-15 04:40:02 - INFO - Mean class 1 mean_dice 0.826155 mean_hd95 3.147239
+2025-04-15 04:40:02 - INFO - Mean class 2 mean_dice 0.868513 mean_hd95 3.840229
+2025-04-15 04:40:02 - INFO - Mean class 3 mean_dice 0.939068 mean_hd95 3.385573
+2025-04-15 04:40:02 - INFO - Testing performance in best val model: mean_dice : 0.877912 mean_hd95 : 3.457681
+2025-04-15 04:40:02 - INFO - Testing Finished
+2025-04-15 04:40:04 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:40:04 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:40:05 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_130.pth
+2025-04-15 04:40:05 - INFO - Starting inference process
+2025-04-15 04:40:05 - INFO - 40 test iterations per epoch
+2025-04-15 04:40:06 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.929086 mean_hd95 1.000000
+2025-04-15 04:40:06 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.878179 mean_hd95 1.609476
+2025-04-15 04:40:06 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.925392 mean_hd95 11.570285
+2025-04-15 04:40:06 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.925204 mean_hd95 1.801704
+2025-04-15 04:40:07 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.941070 mean_hd95 1.000000
+2025-04-15 04:40:07 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.919631 mean_hd95 1.000000
+2025-04-15 04:40:07 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.890933 mean_hd95 16.063275
+2025-04-15 04:40:08 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.864964 mean_hd95 6.499044
+2025-04-15 04:40:08 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.868553 mean_hd95 1.333333
+2025-04-15 04:40:08 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.819034 mean_hd95 1.666667
+2025-04-15 04:40:09 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.881626 mean_hd95 1.333333
+2025-04-15 04:40:09 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.927413 mean_hd95 1.000000
+2025-04-15 04:40:09 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.896492 mean_hd95 1.333333
+2025-04-15 04:40:09 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.926653 mean_hd95 1.000000
+2025-04-15 04:40:10 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.925286 mean_hd95 1.000000
+2025-04-15 04:40:10 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.920049 mean_hd95 1.000000
+2025-04-15 04:40:10 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.843633 mean_hd95 2.322302
+2025-04-15 04:40:10 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.747239 mean_hd95 2.425972
+2025-04-15 04:40:10 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.897981 mean_hd95 1.412023
+2025-04-15 04:40:11 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.839796 mean_hd95 3.966498
+2025-04-15 04:40:11 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.906993 mean_hd95 1.000000
+2025-04-15 04:40:11 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.744734 mean_hd95 14.404893
+2025-04-15 04:40:11 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.909543 mean_hd95 5.146246
+2025-04-15 04:40:11 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.835656 mean_hd95 7.626336
+2025-04-15 04:40:12 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.869761 mean_hd95 1.471405
+2025-04-15 04:40:12 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.779307 mean_hd95 2.467105
+2025-04-15 04:40:12 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.948452 mean_hd95 1.000000
+2025-04-15 04:40:13 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.883526 mean_hd95 1.138071
+2025-04-15 04:40:13 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.854768 mean_hd95 2.000000
+2025-04-15 04:40:13 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.774443 mean_hd95 2.846880
+2025-04-15 04:40:13 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.951376 mean_hd95 1.000000
+2025-04-15 04:40:14 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.803821 mean_hd95 2.609476
+2025-04-15 04:40:14 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.820626 mean_hd95 2.000000
+2025-04-15 04:40:15 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.898660 mean_hd95 1.412023
+2025-04-15 04:40:15 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.871546 mean_hd95 1.666667
+2025-04-15 04:40:16 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.843805 mean_hd95 2.138071
+2025-04-15 04:40:16 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.896577 mean_hd95 1.609476
+2025-04-15 04:40:17 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.642961 mean_hd95 6.349806
+2025-04-15 04:40:17 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.935433 mean_hd95 1.000000
+2025-04-15 04:40:18 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.877551 mean_hd95 1.550094
+2025-04-15 04:40:18 - INFO - Mean class 1 mean_dice 0.817385 mean_hd95 6.224510
+2025-04-15 04:40:18 - INFO - Mean class 2 mean_dice 0.862696 mean_hd95 1.295972
+2025-04-15 04:40:18 - INFO - Mean class 3 mean_dice 0.931251 mean_hd95 1.537552
+2025-04-15 04:40:18 - INFO - Testing performance in best val model: mean_dice : 0.870444 mean_hd95 : 3.019345
+2025-04-15 04:40:18 - INFO - Testing Finished
+2025-04-15 04:40:20 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:40:20 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:40:21 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_140.pth
+2025-04-15 04:40:21 - INFO - Starting inference process
+2025-04-15 04:40:21 - INFO - 40 test iterations per epoch
+2025-04-15 04:40:21 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.925508 mean_hd95 1.000000
+2025-04-15 04:40:22 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.866814 mean_hd95 1.333333
+2025-04-15 04:40:22 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.936762 mean_hd95 1.075939
+2025-04-15 04:40:22 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.930459 mean_hd95 1.138071
+2025-04-15 04:40:23 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.926669 mean_hd95 1.000000
+2025-04-15 04:40:23 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.909773 mean_hd95 1.000000
+2025-04-15 04:40:23 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.898269 mean_hd95 14.385806
+2025-04-15 04:40:23 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.858470 mean_hd95 13.688017
+2025-04-15 04:40:24 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.894468 mean_hd95 1.138071
+2025-04-15 04:40:24 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.792146 mean_hd95 2.080880
+2025-04-15 04:40:24 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.901996 mean_hd95 1.333333
+2025-04-15 04:40:25 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.928324 mean_hd95 1.000000
+2025-04-15 04:40:25 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.901677 mean_hd95 1.000000
+2025-04-15 04:40:25 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.925760 mean_hd95 1.000000
+2025-04-15 04:40:25 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.927056 mean_hd95 1.000000
+2025-04-15 04:40:26 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.916685 mean_hd95 1.000000
+2025-04-15 04:40:26 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.884646 mean_hd95 1.412023
+2025-04-15 04:40:26 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.763548 mean_hd95 2.433521
+2025-04-15 04:40:26 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.909874 mean_hd95 1.000000
+2025-04-15 04:40:27 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.850508 mean_hd95 2.395480
+2025-04-15 04:40:27 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.910510 mean_hd95 1.244017
+2025-04-15 04:40:27 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.718934 mean_hd95 6.497619
+2025-04-15 04:40:27 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.936810 mean_hd95 1.000000
+2025-04-15 04:40:27 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.898373 mean_hd95 1.276142
+2025-04-15 04:40:28 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.863785 mean_hd95 1.804738
+2025-04-15 04:40:28 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.837038 mean_hd95 2.216761
+2025-04-15 04:40:28 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.939859 mean_hd95 1.000000
+2025-04-15 04:40:28 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.886149 mean_hd95 1.520159
+2025-04-15 04:40:29 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.863583 mean_hd95 2.102847
+2025-04-15 04:40:29 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.762616 mean_hd95 2.720759
+2025-04-15 04:40:29 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.931652 mean_hd95 1.000000
+2025-04-15 04:40:29 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.772561 mean_hd95 5.345763
+2025-04-15 04:40:30 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.881313 mean_hd95 1.666667
+2025-04-15 04:40:31 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.866968 mean_hd95 3.449490
+2025-04-15 04:40:31 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.893399 mean_hd95 1.471405
+2025-04-15 04:40:32 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.882742 mean_hd95 1.138071
+2025-04-15 04:40:32 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.873957 mean_hd95 5.540256
+2025-04-15 04:40:33 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.714818 mean_hd95 10.734204
+2025-04-15 04:40:33 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.931740 mean_hd95 1.000000
+2025-04-15 04:40:34 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.889948 mean_hd95 1.276142
+2025-04-15 04:40:34 - INFO - Mean class 1 mean_dice 0.836151 mean_hd95 4.182855
+2025-04-15 04:40:34 - INFO - Mean class 2 mean_dice 0.862948 mean_hd95 1.523850
+2025-04-15 04:40:34 - INFO - Mean class 3 mean_dice 0.933863 mean_hd95 2.199759
+2025-04-15 04:40:34 - INFO - Testing performance in best val model: mean_dice : 0.877654 mean_hd95 : 2.635488
+2025-04-15 04:40:34 - INFO - Testing Finished
+2025-04-15 04:40:36 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:40:36 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:40:37 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_150.pth
+2025-04-15 04:40:37 - INFO - Starting inference process
+2025-04-15 04:40:37 - INFO - 40 test iterations per epoch
+2025-04-15 04:40:37 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.925330 mean_hd95 1.000000
+2025-04-15 04:40:38 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.874441 mean_hd95 1.138071
+2025-04-15 04:40:38 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.926579 mean_hd95 9.130271
+2025-04-15 04:40:38 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.921224 mean_hd95 1.138071
+2025-04-15 04:40:38 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.921140 mean_hd95 1.000000
+2025-04-15 04:40:39 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.916960 mean_hd95 1.000000
+2025-04-15 04:40:39 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.912097 mean_hd95 8.772827
+2025-04-15 04:40:39 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.871545 mean_hd95 5.686625
+2025-04-15 04:40:40 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.887644 mean_hd95 1.000000
+2025-04-15 04:40:40 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.816824 mean_hd95 1.913886
+2025-04-15 04:40:40 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.891941 mean_hd95 1.333333
+2025-04-15 04:40:41 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.925394 mean_hd95 1.000000
+2025-04-15 04:40:41 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.911598 mean_hd95 1.138071
+2025-04-15 04:40:41 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.919322 mean_hd95 1.000000
+2025-04-15 04:40:41 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.897248 mean_hd95 1.000000
+2025-04-15 04:40:41 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.862488 mean_hd95 1.550094
+2025-04-15 04:40:42 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.888279 mean_hd95 1.333333
+2025-04-15 04:40:42 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.782965 mean_hd95 2.630974
+2025-04-15 04:40:42 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.919407 mean_hd95 1.000000
+2025-04-15 04:40:42 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.839784 mean_hd95 1.621234
+2025-04-15 04:40:43 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.869121 mean_hd95 7.644383
+2025-04-15 04:40:43 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.744198 mean_hd95 14.062016
+2025-04-15 04:40:43 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.928193 mean_hd95 1.000000
+2025-04-15 04:40:43 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.885582 mean_hd95 2.578950
+2025-04-15 04:40:43 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.834637 mean_hd95 3.894413
+2025-04-15 04:40:44 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.769112 mean_hd95 21.130246
+2025-04-15 04:40:44 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.942967 mean_hd95 1.000000
+2025-04-15 04:40:44 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.867799 mean_hd95 1.471405
+2025-04-15 04:40:44 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.882906 mean_hd95 1.483163
+2025-04-15 04:40:45 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.801441 mean_hd95 2.613873
+2025-04-15 04:40:45 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.906201 mean_hd95 1.138071
+2025-04-15 04:40:45 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.781852 mean_hd95 2.333333
+2025-04-15 04:40:46 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.877472 mean_hd95 1.609476
+2025-04-15 04:40:46 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.875509 mean_hd95 2.453058
+2025-04-15 04:40:47 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.882595 mean_hd95 1.609476
+2025-04-15 04:40:47 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.856619 mean_hd95 1.804738
+2025-04-15 04:40:48 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.855521 mean_hd95 5.330017
+2025-04-15 04:40:48 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.707002 mean_hd95 6.769530
+2025-04-15 04:40:49 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.901921 mean_hd95 2.325908
+2025-04-15 04:40:49 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.808723 mean_hd95 6.339658
+2025-04-15 04:40:49 - INFO - Mean class 1 mean_dice 0.832069 mean_hd95 6.260244
+2025-04-15 04:40:49 - INFO - Mean class 2 mean_dice 0.849674 mean_hd95 1.314446
+2025-04-15 04:40:49 - INFO - Mean class 3 mean_dice 0.927625 mean_hd95 2.473697
+2025-04-15 04:40:49 - INFO - Testing performance in best val model: mean_dice : 0.869790 mean_hd95 : 3.349463
+2025-04-15 04:40:49 - INFO - Testing Finished
+2025-04-15 04:40:52 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:40:52 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:40:53 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_160.pth
+2025-04-15 04:40:53 - INFO - Starting inference process
+2025-04-15 04:40:53 - INFO - 40 test iterations per epoch
+2025-04-15 04:40:53 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.907933 mean_hd95 1.333333
+2025-04-15 04:40:53 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.845367 mean_hd95 1.550094
+2025-04-15 04:40:54 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.896823 mean_hd95 11.797205
+2025-04-15 04:40:54 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.887682 mean_hd95 11.005375
+2025-04-15 04:40:54 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.934456 mean_hd95 1.000000
+2025-04-15 04:40:54 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.889805 mean_hd95 1.276142
+2025-04-15 04:40:55 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.852517 mean_hd95 17.903578
+2025-04-15 04:40:55 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.835904 mean_hd95 17.504948
+2025-04-15 04:40:55 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.834249 mean_hd95 11.164814
+2025-04-15 04:40:56 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.766083 mean_hd95 10.541999
+2025-04-15 04:40:56 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.892815 mean_hd95 1.333333
+2025-04-15 04:40:56 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.935122 mean_hd95 1.000000
+2025-04-15 04:40:56 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.914317 mean_hd95 1.000000
+2025-04-15 04:40:57 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.922695 mean_hd95 1.000000
+2025-04-15 04:40:57 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.932717 mean_hd95 1.000000
+2025-04-15 04:40:57 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.900118 mean_hd95 1.000000
+2025-04-15 04:40:57 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.776148 mean_hd95 2.440479
+2025-04-15 04:40:58 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.309759 mean_hd95 7.299832
+2025-04-15 04:40:58 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.875717 mean_hd95 2.812959
+2025-04-15 04:40:58 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.844219 mean_hd95 18.148324
+2025-04-15 04:40:58 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.829912 mean_hd95 10.889379
+2025-04-15 04:40:58 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.493641 mean_hd95 15.867106
+2025-04-15 04:40:59 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.926838 mean_hd95 1.138071
+2025-04-15 04:40:59 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.868087 mean_hd95 8.966260
+2025-04-15 04:40:59 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.833809 mean_hd95 2.270853
+2025-04-15 04:40:59 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.789612 mean_hd95 2.387426
+2025-04-15 04:41:00 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.939637 mean_hd95 1.000000
+2025-04-15 04:41:00 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.844435 mean_hd95 1.745356
+2025-04-15 04:41:00 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.790715 mean_hd95 2.412023
+2025-04-15 04:41:00 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.617671 mean_hd95 3.729109
+2025-04-15 04:41:01 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.917963 mean_hd95 1.138071
+2025-04-15 04:41:01 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.751527 mean_hd95 3.981424
+2025-04-15 04:41:02 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.899107 mean_hd95 1.609476
+2025-04-15 04:41:02 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.891488 mean_hd95 1.138071
+2025-04-15 04:41:03 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.888099 mean_hd95 1.666667
+2025-04-15 04:41:03 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.857962 mean_hd95 1.804738
+2025-04-15 04:41:04 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.889749 mean_hd95 1.550094
+2025-04-15 04:41:04 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.823945 mean_hd95 3.385290
+2025-04-15 04:41:05 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.927455 mean_hd95 1.138071
+2025-04-15 04:41:05 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.849236 mean_hd95 17.175765
+2025-04-15 04:41:05 - INFO - Mean class 1 mean_dice 0.797982 mean_hd95 11.088862
+2025-04-15 04:41:05 - INFO - Mean class 2 mean_dice 0.817504 mean_hd95 2.864782
+2025-04-15 04:41:05 - INFO - Mean class 3 mean_dice 0.903414 mean_hd95 1.579280
+2025-04-15 04:41:05 - INFO - Testing performance in best val model: mean_dice : 0.839633 mean_hd95 : 5.177642
+2025-04-15 04:41:05 - INFO - Testing Finished
+2025-04-15 04:41:07 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:41:07 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:41:08 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_170.pth
+2025-04-15 04:41:08 - INFO - Starting inference process
+2025-04-15 04:41:08 - INFO - 40 test iterations per epoch
+2025-04-15 04:41:09 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.908836 mean_hd95 15.321201
+2025-04-15 04:41:09 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.875759 mean_hd95 1.382088
+2025-04-15 04:41:09 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.925898 mean_hd95 1.000000
+2025-04-15 04:41:10 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.918576 mean_hd95 1.138071
+2025-04-15 04:41:10 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.934248 mean_hd95 1.000000
+2025-04-15 04:41:10 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.911971 mean_hd95 1.000000
+2025-04-15 04:41:11 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.914875 mean_hd95 1.412023
+2025-04-15 04:41:11 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.849329 mean_hd95 2.119633
+2025-04-15 04:41:11 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.843141 mean_hd95 1.471405
+2025-04-15 04:41:11 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.775159 mean_hd95 3.062709
+2025-04-15 04:41:12 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.901420 mean_hd95 1.333333
+2025-04-15 04:41:12 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.938393 mean_hd95 1.000000
+2025-04-15 04:41:12 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.891326 mean_hd95 1.333333
+2025-04-15 04:41:13 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.904261 mean_hd95 1.000000
+2025-04-15 04:41:13 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.932609 mean_hd95 1.000000
+2025-04-15 04:41:13 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.903826 mean_hd95 1.000000
+2025-04-15 04:41:13 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.864717 mean_hd95 1.483163
+2025-04-15 04:41:13 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.647080 mean_hd95 3.307392
+2025-04-15 04:41:14 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.899325 mean_hd95 1.000000
+2025-04-15 04:41:14 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.881336 mean_hd95 1.138071
+2025-04-15 04:41:14 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.889403 mean_hd95 1.913886
+2025-04-15 04:41:14 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.684961 mean_hd95 13.727367
+2025-04-15 04:41:14 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.933680 mean_hd95 1.000000
+2025-04-15 04:41:15 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.911416 mean_hd95 1.138071
+2025-04-15 04:41:15 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.860061 mean_hd95 1.954568
+2025-04-15 04:41:15 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.829086 mean_hd95 2.139203
+2025-04-15 04:41:15 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.948384 mean_hd95 1.000000
+2025-04-15 04:41:16 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.889015 mean_hd95 1.488034
+2025-04-15 04:41:16 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.866236 mean_hd95 1.720759
+2025-04-15 04:41:16 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.744224 mean_hd95 2.821367
+2025-04-15 04:41:17 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.926360 mean_hd95 1.244017
+2025-04-15 04:41:17 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.825821 mean_hd95 1.824045
+2025-04-15 04:41:17 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.822407 mean_hd95 2.080880
+2025-04-15 04:41:18 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.883310 mean_hd95 1.333333
+2025-04-15 04:41:18 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.912186 mean_hd95 1.244017
+2025-04-15 04:41:19 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.851233 mean_hd95 1.804738
+2025-04-15 04:41:19 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.874772 mean_hd95 3.633165
+2025-04-15 04:41:20 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.769434 mean_hd95 6.085436
+2025-04-15 04:41:20 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.908258 mean_hd95 1.666667
+2025-04-15 04:41:21 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.854127 mean_hd95 2.817886
+2025-04-15 04:41:21 - INFO - Mean class 1 mean_dice 0.822705 mean_hd95 2.923166
+2025-04-15 04:41:21 - INFO - Mean class 2 mean_dice 0.852688 mean_hd95 2.501090
+2025-04-15 04:41:21 - INFO - Mean class 3 mean_dice 0.935091 mean_hd95 1.711234
+2025-04-15 04:41:21 - INFO - Testing performance in best val model: mean_dice : 0.870161 mean_hd95 : 2.378497
+2025-04-15 04:41:21 - INFO - Testing Finished
+2025-04-15 04:41:23 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:41:23 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:41:24 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_180.pth
+2025-04-15 04:41:24 - INFO - Starting inference process
+2025-04-15 04:41:24 - INFO - 40 test iterations per epoch
+2025-04-15 04:41:25 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.928272 mean_hd95 1.000000
+2025-04-15 04:41:25 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.885175 mean_hd95 1.138071
+2025-04-15 04:41:25 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.926785 mean_hd95 1.333333
+2025-04-15 04:41:25 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.916573 mean_hd95 1.138071
+2025-04-15 04:41:26 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.934455 mean_hd95 1.000000
+2025-04-15 04:41:26 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.912595 mean_hd95 1.000000
+2025-04-15 04:41:26 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.892114 mean_hd95 14.449101
+2025-04-15 04:41:27 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.855565 mean_hd95 10.347116
+2025-04-15 04:41:27 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.893607 mean_hd95 1.138071
+2025-04-15 04:41:27 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.782693 mean_hd95 2.840392
+2025-04-15 04:41:27 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.919729 mean_hd95 1.000000
+2025-04-15 04:41:28 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.932959 mean_hd95 1.000000
+2025-04-15 04:41:28 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.920889 mean_hd95 1.000000
+2025-04-15 04:41:28 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.932024 mean_hd95 1.000000
+2025-04-15 04:41:29 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.913233 mean_hd95 1.000000
+2025-04-15 04:41:29 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.909593 mean_hd95 1.000000
+2025-04-15 04:41:29 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.899990 mean_hd95 1.471405
+2025-04-15 04:41:29 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.813960 mean_hd95 1.745356
+2025-04-15 04:41:29 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.913475 mean_hd95 1.000000
+2025-04-15 04:41:30 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.850246 mean_hd95 3.863307
+2025-04-15 04:41:30 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.881590 mean_hd95 1.333333
+2025-04-15 04:41:30 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.678367 mean_hd95 10.600370
+2025-04-15 04:41:30 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.925097 mean_hd95 1.454707
+2025-04-15 04:41:30 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.876369 mean_hd95 6.428127
+2025-04-15 04:41:31 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.847886 mean_hd95 3.045058
+2025-04-15 04:41:31 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.811409 mean_hd95 2.374369
+2025-04-15 04:41:31 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.941773 mean_hd95 1.000000
+2025-04-15 04:41:32 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.852611 mean_hd95 1.550094
+2025-04-15 04:41:32 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.873516 mean_hd95 2.051957
+2025-04-15 04:41:32 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.786149 mean_hd95 2.666667
+2025-04-15 04:41:32 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.925862 mean_hd95 1.000000
+2025-04-15 04:41:33 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.785174 mean_hd95 2.157379
+2025-04-15 04:41:33 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.892338 mean_hd95 10.115941
+2025-04-15 04:41:34 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.864378 mean_hd95 13.177150
+2025-04-15 04:41:34 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.914654 mean_hd95 1.000000
+2025-04-15 04:41:35 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.878952 mean_hd95 1.382088
+2025-04-15 04:41:35 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.892515 mean_hd95 1.621234
+2025-04-15 04:41:36 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.742476 mean_hd95 3.487957
+2025-04-15 04:41:36 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.925578 mean_hd95 1.244017
+2025-04-15 04:41:37 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.859928 mean_hd95 1.688165
+2025-04-15 04:41:37 - INFO - Mean class 1 mean_dice 0.835013 mean_hd95 6.160775
+2025-04-15 04:41:37 - INFO - Mean class 2 mean_dice 0.855695 mean_hd95 1.312715
+2025-04-15 04:41:37 - INFO - Mean class 3 mean_dice 0.941084 mean_hd95 1.439722
+2025-04-15 04:41:37 - INFO - Testing performance in best val model: mean_dice : 0.877264 mean_hd95 : 2.971071
+2025-04-15 04:41:37 - INFO - Testing Finished
+2025-04-15 04:41:39 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:41:39 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:41:40 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_190.pth
+2025-04-15 04:41:40 - INFO - Starting inference process
+2025-04-15 04:41:40 - INFO - 40 test iterations per epoch
+2025-04-15 04:41:40 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.904634 mean_hd95 37.210400
+2025-04-15 04:41:41 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.778982 mean_hd95 39.366914
+2025-04-15 04:41:41 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.931934 mean_hd95 1.000000
+2025-04-15 04:41:41 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.933389 mean_hd95 1.000000
+2025-04-15 04:41:41 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.936244 mean_hd95 1.000000
+2025-04-15 04:41:42 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.917043 mean_hd95 1.000000
+2025-04-15 04:41:42 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.862635 mean_hd95 18.830122
+2025-04-15 04:41:42 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.828448 mean_hd95 17.194421
+2025-04-15 04:41:43 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.880036 mean_hd95 5.119502
+2025-04-15 04:41:43 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.769530 mean_hd95 6.420892
+2025-04-15 04:41:43 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.905899 mean_hd95 1.333333
+2025-04-15 04:41:44 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.919535 mean_hd95 1.138071
+2025-04-15 04:41:44 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.922236 mean_hd95 1.000000
+2025-04-15 04:41:44 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.929748 mean_hd95 1.000000
+2025-04-15 04:41:44 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.935906 mean_hd95 1.000000
+2025-04-15 04:41:45 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.912346 mean_hd95 1.000000
+2025-04-15 04:41:45 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.923032 mean_hd95 1.000000
+2025-04-15 04:41:45 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.840810 mean_hd95 1.276142
+2025-04-15 04:41:45 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.886939 mean_hd95 2.119633
+2025-04-15 04:41:45 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.817485 mean_hd95 3.984535
+2025-04-15 04:41:46 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.906566 mean_hd95 1.244017
+2025-04-15 04:41:46 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.665462 mean_hd95 8.187009
+2025-04-15 04:41:46 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.928705 mean_hd95 1.000000
+2025-04-15 04:41:46 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.884693 mean_hd95 1.902544
+2025-04-15 04:41:46 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.861076 mean_hd95 1.804738
+2025-04-15 04:41:47 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.835601 mean_hd95 1.910684
+2025-04-15 04:41:47 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.947485 mean_hd95 1.000000
+2025-04-15 04:41:47 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.895538 mean_hd95 1.276142
+2025-04-15 04:41:48 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.895000 mean_hd95 1.483163
+2025-04-15 04:41:48 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.784207 mean_hd95 2.412023
+2025-04-15 04:41:48 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.930834 mean_hd95 1.000000
+2025-04-15 04:41:48 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.709079 mean_hd95 4.079382
+2025-04-15 04:41:49 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.915365 mean_hd95 1.138071
+2025-04-15 04:41:49 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.914855 mean_hd95 1.138071
+2025-04-15 04:41:50 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.897872 mean_hd95 1.276142
+2025-04-15 04:41:50 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.866080 mean_hd95 1.609476
+2025-04-15 04:41:51 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.907407 mean_hd95 1.471405
+2025-04-15 04:41:51 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.841814 mean_hd95 5.388787
+2025-04-15 04:41:52 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.931934 mean_hd95 1.000000
+2025-04-15 04:41:52 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.874250 mean_hd95 1.688165
+2025-04-15 04:41:52 - INFO - Mean class 1 mean_dice 0.830508 mean_hd95 11.067283
+2025-04-15 04:41:52 - INFO - Mean class 2 mean_dice 0.861232 mean_hd95 1.290156
+2025-04-15 04:41:52 - INFO - Mean class 3 mean_dice 0.943058 mean_hd95 1.517845
+2025-04-15 04:41:52 - INFO - Testing performance in best val model: mean_dice : 0.878266 mean_hd95 : 4.625095
+2025-04-15 04:41:52 - INFO - Testing Finished
+2025-04-15 04:41:55 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:41:55 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:41:56 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_20.pth
+2025-04-15 04:41:56 - INFO - Starting inference process
+2025-04-15 04:41:56 - INFO - 40 test iterations per epoch
+2025-04-15 04:41:56 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.738470 mean_hd95 3.483163
+2025-04-15 04:41:56 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.730499 mean_hd95 3.692367
+2025-04-15 04:41:57 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.728526 mean_hd95 3.078689
+2025-04-15 04:41:57 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.699985 mean_hd95 3.490712
+2025-04-15 04:41:57 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.673480 mean_hd95 4.146264
+2025-04-15 04:41:58 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.638173 mean_hd95 3.702115
+2025-04-15 04:41:58 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.771886 mean_hd95 2.992405
+2025-04-15 04:41:58 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.774804 mean_hd95 2.299660
+2025-04-15 04:41:58 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.671785 mean_hd95 3.682488
+2025-04-15 04:41:59 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.634276 mean_hd95 5.754779
+2025-04-15 04:41:59 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.721934 mean_hd95 4.082070
+2025-04-15 04:41:59 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.785607 mean_hd95 2.804738
+2025-04-15 04:42:00 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.527878 mean_hd95 5.658786
+2025-04-15 04:42:00 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.664838 mean_hd95 4.089073
+2025-04-15 04:42:00 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.839609 mean_hd95 2.333333
+2025-04-15 04:42:00 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.747957 mean_hd95 4.696863
+2025-04-15 04:42:00 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.020188 mean_hd95 10.033278
+2025-04-15 04:42:01 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.000000 mean_hd95 0.000000
+2025-04-15 04:42:01 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.739142 mean_hd95 2.292772
+2025-04-15 04:42:01 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.627461 mean_hd95 3.743940
+2025-04-15 04:42:01 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.378395 mean_hd95 7.119705
+2025-04-15 04:42:01 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.248570 mean_hd95 13.650197
+2025-04-15 04:42:02 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.834361 mean_hd95 2.512440
+2025-04-15 04:42:02 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.747630 mean_hd95 5.705365
+2025-04-15 04:42:02 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.283400 mean_hd95 10.359831
+2025-04-15 04:42:02 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.134681 mean_hd95 13.420261
+2025-04-15 04:42:03 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.709684 mean_hd95 3.398848
+2025-04-15 04:42:03 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.440848 mean_hd95 6.602449
+2025-04-15 04:42:03 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.449683 mean_hd95 6.746034
+2025-04-15 04:42:03 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.049625 mean_hd95 21.066166
+2025-04-15 04:42:04 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.572263 mean_hd95 6.834989
+2025-04-15 04:42:04 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.100091 mean_hd95 18.426467
+2025-04-15 04:42:04 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.402024 mean_hd95 12.693234
+2025-04-15 04:42:05 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.601698 mean_hd95 7.398198
+2025-04-15 04:42:06 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.538580 mean_hd95 6.026517
+2025-04-15 04:42:06 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.656889 mean_hd95 4.190870
+2025-04-15 04:42:07 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.411618 mean_hd95 10.787410
+2025-04-15 04:42:07 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.292242 mean_hd95 7.926537
+2025-04-15 04:42:07 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.454502 mean_hd95 9.745475
+2025-04-15 04:42:08 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.433966 mean_hd95 5.987267
+2025-04-15 04:42:08 - INFO - Mean class 1 mean_dice 0.355710 mean_hd95 10.031663
+2025-04-15 04:42:08 - INFO - Mean class 2 mean_dice 0.636168 mean_hd95 3.918806
+2025-04-15 04:42:08 - INFO - Mean class 3 mean_dice 0.618915 mean_hd95 5.298713
+2025-04-15 04:42:08 - INFO - Testing performance in best val model: mean_dice : 0.536931 mean_hd95 : 6.416394
+2025-04-15 04:42:08 - INFO - Testing Finished
+2025-04-15 04:42:10 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:42:10 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:42:11 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_200.pth
+2025-04-15 04:42:11 - INFO - Starting inference process
+2025-04-15 04:42:11 - INFO - 40 test iterations per epoch
+2025-04-15 04:42:12 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.923225 mean_hd95 1.000000
+2025-04-15 04:42:12 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.890632 mean_hd95 1.138071
+2025-04-15 04:42:12 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.927415 mean_hd95 1.000000
+2025-04-15 04:42:13 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.916384 mean_hd95 1.244017
+2025-04-15 04:42:13 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.907543 mean_hd95 1.138071
+2025-04-15 04:42:13 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.898473 mean_hd95 1.138071
+2025-04-15 04:42:13 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.905082 mean_hd95 2.826914
+2025-04-15 04:42:14 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.861008 mean_hd95 5.025566
+2025-04-15 04:42:14 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.804110 mean_hd95 1.666667
+2025-04-15 04:42:14 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.790822 mean_hd95 2.080880
+2025-04-15 04:42:15 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.891367 mean_hd95 1.333333
+2025-04-15 04:42:15 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.934495 mean_hd95 1.000000
+2025-04-15 04:42:15 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.830035 mean_hd95 1.666667
+2025-04-15 04:42:15 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.900080 mean_hd95 1.000000
+2025-04-15 04:42:16 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.924759 mean_hd95 1.000000
+2025-04-15 04:42:16 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.890981 mean_hd95 1.244017
+2025-04-15 04:42:16 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.846781 mean_hd95 1.666667
+2025-04-15 04:42:16 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.788937 mean_hd95 1.621234
+2025-04-15 04:42:17 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.890343 mean_hd95 1.666667
+2025-04-15 04:42:17 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.872137 mean_hd95 1.412023
+2025-04-15 04:42:17 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.894785 mean_hd95 1.000000
+2025-04-15 04:42:17 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.732757 mean_hd95 14.366781
+2025-04-15 04:42:17 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.928858 mean_hd95 1.000000
+2025-04-15 04:42:18 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.898930 mean_hd95 5.327373
+2025-04-15 04:42:18 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.749775 mean_hd95 2.860859
+2025-04-15 04:42:18 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.740694 mean_hd95 3.080880
+2025-04-15 04:42:18 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.945717 mean_hd95 1.000000
+2025-04-15 04:42:19 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.892246 mean_hd95 1.276142
+2025-04-15 04:42:19 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.840903 mean_hd95 2.194192
+2025-04-15 04:42:19 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.791777 mean_hd95 2.000000
+2025-04-15 04:42:19 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.877346 mean_hd95 2.492409
+2025-04-15 04:42:20 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.700151 mean_hd95 8.306253
+2025-04-15 04:42:20 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.818914 mean_hd95 2.299660
+2025-04-15 04:42:21 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.857616 mean_hd95 5.091168
+2025-04-15 04:42:21 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.881764 mean_hd95 1.666667
+2025-04-15 04:42:22 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.892993 mean_hd95 1.000000
+2025-04-15 04:42:22 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.843269 mean_hd95 5.259137
+2025-04-15 04:42:23 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.698556 mean_hd95 6.465028
+2025-04-15 04:42:23 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.911155 mean_hd95 1.483163
+2025-04-15 04:42:24 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.859420 mean_hd95 1.883427
+2025-04-15 04:42:24 - INFO - Mean class 1 mean_dice 0.793220 mean_hd95 4.001665
+2025-04-15 04:42:24 - INFO - Mean class 2 mean_dice 0.855108 mean_hd95 1.196325
+2025-04-15 04:42:24 - INFO - Mean class 3 mean_dice 0.928091 mean_hd95 2.446160
+2025-04-15 04:42:24 - INFO - Testing performance in best val model: mean_dice : 0.858806 mean_hd95 : 2.548050
+2025-04-15 04:42:24 - INFO - Testing Finished
+2025-04-15 04:42:26 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:42:26 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:42:27 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_210.pth
+2025-04-15 04:42:27 - INFO - Starting inference process
+2025-04-15 04:42:27 - INFO - 40 test iterations per epoch
+2025-04-15 04:42:27 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.926724 mean_hd95 1.000000
+2025-04-15 04:42:28 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.894273 mean_hd95 1.138071
+2025-04-15 04:42:28 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.905959 mean_hd95 11.128237
+2025-04-15 04:42:28 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.912492 mean_hd95 1.821367
+2025-04-15 04:42:29 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.928400 mean_hd95 1.000000
+2025-04-15 04:42:29 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.916914 mean_hd95 1.000000
+2025-04-15 04:42:29 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.904996 mean_hd95 7.355369
+2025-04-15 04:42:29 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.853076 mean_hd95 4.683986
+2025-04-15 04:42:30 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.837540 mean_hd95 1.412023
+2025-04-15 04:42:30 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.775621 mean_hd95 2.366340
+2025-04-15 04:42:30 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.906060 mean_hd95 1.333333
+2025-04-15 04:42:31 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.934911 mean_hd95 1.000000
+2025-04-15 04:42:31 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.904276 mean_hd95 1.138071
+2025-04-15 04:42:31 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.924732 mean_hd95 1.000000
+2025-04-15 04:42:31 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.924419 mean_hd95 1.000000
+2025-04-15 04:42:32 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.913181 mean_hd95 1.000000
+2025-04-15 04:42:32 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.755422 mean_hd95 4.930825
+2025-04-15 04:42:32 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.652313 mean_hd95 3.385411
+2025-04-15 04:42:32 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.889509 mean_hd95 1.138071
+2025-04-15 04:42:33 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.866526 mean_hd95 2.801041
+2025-04-15 04:42:33 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.887025 mean_hd95 2.066934
+2025-04-15 04:42:33 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.666193 mean_hd95 14.142237
+2025-04-15 04:42:33 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.934343 mean_hd95 1.000000
+2025-04-15 04:42:33 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.897325 mean_hd95 5.255702
+2025-04-15 04:42:34 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.875574 mean_hd95 1.609476
+2025-04-15 04:42:34 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.850240 mean_hd95 1.715421
+2025-04-15 04:42:34 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.944293 mean_hd95 1.000000
+2025-04-15 04:42:34 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.899055 mean_hd95 1.382088
+2025-04-15 04:42:35 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.886790 mean_hd95 1.412023
+2025-04-15 04:42:35 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.822343 mean_hd95 1.804738
+2025-04-15 04:42:35 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.950718 mean_hd95 1.000000
+2025-04-15 04:42:35 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.842274 mean_hd95 2.078689
+2025-04-15 04:42:36 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.864865 mean_hd95 18.926787
+2025-04-15 04:42:37 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.863698 mean_hd95 24.332588
+2025-04-15 04:42:37 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.881601 mean_hd95 1.483163
+2025-04-15 04:42:38 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.846482 mean_hd95 2.000000
+2025-04-15 04:42:38 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.904081 mean_hd95 1.483163
+2025-04-15 04:42:39 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.779941 mean_hd95 4.765764
+2025-04-15 04:42:39 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.928063 mean_hd95 1.000000
+2025-04-15 04:42:39 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.826834 mean_hd95 2.577350
+2025-04-15 04:42:40 - INFO - Mean class 1 mean_dice 0.836519 mean_hd95 4.971320
+2025-04-15 04:42:40 - INFO - Mean class 2 mean_dice 0.853594 mean_hd95 2.424802
+2025-04-15 04:42:40 - INFO - Mean class 3 mean_dice 0.925818 mean_hd95 3.303999
+2025-04-15 04:42:40 - INFO - Testing performance in best val model: mean_dice : 0.871977 mean_hd95 : 3.566707
+2025-04-15 04:42:40 - INFO - Testing Finished
+2025-04-15 04:42:42 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:42:42 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:42:43 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_220.pth
+2025-04-15 04:42:43 - INFO - Starting inference process
+2025-04-15 04:42:43 - INFO - 40 test iterations per epoch
+2025-04-15 04:42:43 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.915555 mean_hd95 1.244017
+2025-04-15 04:42:44 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.880639 mean_hd95 1.577350
+2025-04-15 04:42:44 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.916200 mean_hd95 1.550094
+2025-04-15 04:42:44 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.909563 mean_hd95 3.687419
+2025-04-15 04:42:44 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.897169 mean_hd95 1.138071
+2025-04-15 04:42:45 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.924880 mean_hd95 1.000000
+2025-04-15 04:42:45 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.907171 mean_hd95 2.112237
+2025-04-15 04:42:45 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.868922 mean_hd95 2.333333
+2025-04-15 04:42:46 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.809861 mean_hd95 17.577713
+2025-04-15 04:42:46 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.692497 mean_hd95 34.271996
+2025-04-15 04:42:46 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.879988 mean_hd95 1.471405
+2025-04-15 04:42:46 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.919155 mean_hd95 1.000000
+2025-04-15 04:42:47 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.897374 mean_hd95 1.138071
+2025-04-15 04:42:47 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.903718 mean_hd95 1.000000
+2025-04-15 04:42:47 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.934626 mean_hd95 1.000000
+2025-04-15 04:42:47 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.918750 mean_hd95 1.000000
+2025-04-15 04:42:48 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.746955 mean_hd95 4.375607
+2025-04-15 04:42:48 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.625507 mean_hd95 3.950588
+2025-04-15 04:42:48 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.902656 mean_hd95 1.138071
+2025-04-15 04:42:48 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.860729 mean_hd95 3.070368
+2025-04-15 04:42:49 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.891355 mean_hd95 1.138071
+2025-04-15 04:42:49 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.663015 mean_hd95 14.064490
+2025-04-15 04:42:49 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.926974 mean_hd95 1.333333
+2025-04-15 04:42:49 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.896475 mean_hd95 1.412023
+2025-04-15 04:42:49 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.812572 mean_hd95 2.265515
+2025-04-15 04:42:50 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.785842 mean_hd95 2.357373
+2025-04-15 04:42:50 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.933243 mean_hd95 1.000000
+2025-04-15 04:42:50 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.891540 mean_hd95 1.244017
+2025-04-15 04:42:50 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.866383 mean_hd95 12.409314
+2025-04-15 04:42:51 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.834140 mean_hd95 1.910684
+2025-04-15 04:42:51 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.940066 mean_hd95 1.000000
+2025-04-15 04:42:51 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.841589 mean_hd95 2.078689
+2025-04-15 04:42:52 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.831853 mean_hd95 21.689986
+2025-04-15 04:42:52 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.883887 mean_hd95 21.412215
+2025-04-15 04:42:53 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.846819 mean_hd95 2.218951
+2025-04-15 04:42:53 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.819728 mean_hd95 3.569401
+2025-04-15 04:42:54 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.894840 mean_hd95 2.080880
+2025-04-15 04:42:54 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.859184 mean_hd95 8.878781
+2025-04-15 04:42:55 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.904603 mean_hd95 11.747180
+2025-04-15 04:42:55 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.886630 mean_hd95 12.741818
+2025-04-15 04:42:55 - INFO - Mean class 1 mean_dice 0.829513 mean_hd95 4.297192
+2025-04-15 04:42:55 - INFO - Mean class 2 mean_dice 0.838694 mean_hd95 10.010497
+2025-04-15 04:42:55 - INFO - Mean class 3 mean_dice 0.920992 mean_hd95 1.606491
+2025-04-15 04:42:55 - INFO - Testing performance in best val model: mean_dice : 0.863066 mean_hd95 : 5.304727
+2025-04-15 04:42:55 - INFO - Testing Finished
+2025-04-15 04:42:58 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:42:58 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:42:59 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_230.pth
+2025-04-15 04:42:59 - INFO - Starting inference process
+2025-04-15 04:42:59 - INFO - 40 test iterations per epoch
+2025-04-15 04:42:59 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.917290 mean_hd95 1.000000
+2025-04-15 04:42:59 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.830426 mean_hd95 2.041035
+2025-04-15 04:43:00 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.931561 mean_hd95 1.000000
+2025-04-15 04:43:00 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.907060 mean_hd95 1.412023
+2025-04-15 04:43:00 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.903723 mean_hd95 1.000000
+2025-04-15 04:43:00 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.900966 mean_hd95 1.138071
+2025-04-15 04:43:01 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.888816 mean_hd95 7.130240
+2025-04-15 04:43:01 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.865929 mean_hd95 4.010806
+2025-04-15 04:43:01 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.891638 mean_hd95 1.138071
+2025-04-15 04:43:02 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.830340 mean_hd95 1.772208
+2025-04-15 04:43:02 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.873593 mean_hd95 1.720759
+2025-04-15 04:43:02 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.915964 mean_hd95 1.666667
+2025-04-15 04:43:02 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.911451 mean_hd95 1.000000
+2025-04-15 04:43:03 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.922700 mean_hd95 1.000000
+2025-04-15 04:43:03 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.931358 mean_hd95 1.000000
+2025-04-15 04:43:03 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.867885 mean_hd95 1.244017
+2025-04-15 04:43:03 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.730792 mean_hd95 3.707702
+2025-04-15 04:43:04 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.367323 mean_hd95 6.321867
+2025-04-15 04:43:04 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.863755 mean_hd95 2.832325
+2025-04-15 04:43:04 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.804184 mean_hd95 4.260642
+2025-04-15 04:43:04 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.906122 mean_hd95 1.000000
+2025-04-15 04:43:04 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.777448 mean_hd95 2.366340
+2025-04-15 04:43:05 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.905070 mean_hd95 5.919177
+2025-04-15 04:43:05 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.852026 mean_hd95 8.708321
+2025-04-15 04:43:05 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.788522 mean_hd95 3.355404
+2025-04-15 04:43:05 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.700468 mean_hd95 4.802830
+2025-04-15 04:43:06 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.945389 mean_hd95 1.000000
+2025-04-15 04:43:06 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.896147 mean_hd95 1.276142
+2025-04-15 04:43:06 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.857691 mean_hd95 2.138071
+2025-04-15 04:43:06 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.738591 mean_hd95 3.288254
+2025-04-15 04:43:07 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.899052 mean_hd95 1.577350
+2025-04-15 04:43:07 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.676708 mean_hd95 3.922916
+2025-04-15 04:43:07 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.759352 mean_hd95 3.788467
+2025-04-15 04:43:08 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.875795 mean_hd95 1.333333
+2025-04-15 04:43:09 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.840855 mean_hd95 1.666667
+2025-04-15 04:43:09 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.824959 mean_hd95 2.287901
+2025-04-15 04:43:10 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.863554 mean_hd95 2.412023
+2025-04-15 04:43:10 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.745578 mean_hd95 2.525497
+2025-04-15 04:43:11 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.900290 mean_hd95 1.954568
+2025-04-15 04:43:11 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.796735 mean_hd95 2.673255
+2025-04-15 04:43:11 - INFO - Mean class 1 mean_dice 0.799004 mean_hd95 4.432344
+2025-04-15 04:43:11 - INFO - Mean class 2 mean_dice 0.816120 mean_hd95 1.725184
+2025-04-15 04:43:11 - INFO - Mean class 3 mean_dice 0.905409 mean_hd95 1.671944
+2025-04-15 04:43:11 - INFO - Testing performance in best val model: mean_dice : 0.840178 mean_hd95 : 2.609824
+2025-04-15 04:43:11 - INFO - Testing Finished
+2025-04-15 04:43:13 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:43:13 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:43:14 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_240.pth
+2025-04-15 04:43:14 - INFO - Starting inference process
+2025-04-15 04:43:14 - INFO - 40 test iterations per epoch
+2025-04-15 04:43:15 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.912717 mean_hd95 15.323861
+2025-04-15 04:43:15 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.798727 mean_hd95 4.294604
+2025-04-15 04:43:15 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.933166 mean_hd95 1.000000
+2025-04-15 04:43:16 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.919422 mean_hd95 1.000000
+2025-04-15 04:43:16 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.927368 mean_hd95 1.000000
+2025-04-15 04:43:16 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.905125 mean_hd95 1.138071
+2025-04-15 04:43:16 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.867820 mean_hd95 13.986242
+2025-04-15 04:43:17 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.826289 mean_hd95 10.810083
+2025-04-15 04:43:17 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.907975 mean_hd95 1.138071
+2025-04-15 04:43:17 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.805332 mean_hd95 1.483163
+2025-04-15 04:43:18 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.894245 mean_hd95 1.333333
+2025-04-15 04:43:18 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.906863 mean_hd95 1.138071
+2025-04-15 04:43:18 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.922696 mean_hd95 1.000000
+2025-04-15 04:43:18 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.922244 mean_hd95 1.000000
+2025-04-15 04:43:19 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.906218 mean_hd95 4.162696
+2025-04-15 04:43:19 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.877070 mean_hd95 1.276142
+2025-04-15 04:43:19 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.702240 mean_hd95 3.105542
+2025-04-15 04:43:19 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.370675 mean_hd95 6.482825
+2025-04-15 04:43:20 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.896175 mean_hd95 2.902735
+2025-04-15 04:43:20 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.784043 mean_hd95 18.038895
+2025-04-15 04:43:20 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.871854 mean_hd95 3.811199
+2025-04-15 04:43:20 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.639041 mean_hd95 14.804134
+2025-04-15 04:43:20 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.905713 mean_hd95 5.061737
+2025-04-15 04:43:21 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.850038 mean_hd95 7.834416
+2025-04-15 04:43:21 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.852956 mean_hd95 2.385290
+2025-04-15 04:43:21 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.788973 mean_hd95 3.546397
+2025-04-15 04:43:21 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.942526 mean_hd95 1.000000
+2025-04-15 04:43:22 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.917136 mean_hd95 1.000000
+2025-04-15 04:43:22 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.869552 mean_hd95 2.154701
+2025-04-15 04:43:22 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.629398 mean_hd95 3.054093
+2025-04-15 04:43:23 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.861650 mean_hd95 3.720759
+2025-04-15 04:43:23 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.680084 mean_hd95 23.614416
+2025-04-15 04:43:23 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.874971 mean_hd95 2.190028
+2025-04-15 04:43:24 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.832989 mean_hd95 8.339587
+2025-04-15 04:43:24 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.909486 mean_hd95 1.000000
+2025-04-15 04:43:25 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.847912 mean_hd95 1.609476
+2025-04-15 04:43:25 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.868812 mean_hd95 4.987997
+2025-04-15 04:43:26 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.800219 mean_hd95 6.012802
+2025-04-15 04:43:26 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.864149 mean_hd95 11.064293
+2025-04-15 04:43:27 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.808498 mean_hd95 11.275622
+2025-04-15 04:43:27 - INFO - Mean class 1 mean_dice 0.816869 mean_hd95 9.169359
+2025-04-15 04:43:27 - INFO - Mean class 2 mean_dice 0.812169 mean_hd95 2.851990
+2025-04-15 04:43:27 - INFO - Mean class 3 mean_dice 0.891140 mean_hd95 3.734747
+2025-04-15 04:43:27 - INFO - Testing performance in best val model: mean_dice : 0.840059 mean_hd95 : 5.252032
+2025-04-15 04:43:27 - INFO - Testing Finished
+2025-04-15 04:43:29 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:43:29 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:43:30 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_250.pth
+2025-04-15 04:43:30 - INFO - Starting inference process
+2025-04-15 04:43:30 - INFO - 40 test iterations per epoch
+2025-04-15 04:43:31 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.753210 mean_hd95 13.764664
+2025-04-15 04:43:31 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.758571 mean_hd95 11.068858
+2025-04-15 04:43:31 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.855325 mean_hd95 12.174733
+2025-04-15 04:43:31 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.866936 mean_hd95 11.230673
+2025-04-15 04:43:32 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.825181 mean_hd95 10.654701
+2025-04-15 04:43:32 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.801477 mean_hd95 12.250380
+2025-04-15 04:43:32 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.766186 mean_hd95 26.057694
+2025-04-15 04:43:33 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.759857 mean_hd95 35.115066
+2025-04-15 04:43:33 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.756874 mean_hd95 10.082936
+2025-04-15 04:43:33 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.754762 mean_hd95 8.603542
+2025-04-15 04:43:33 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.773136 mean_hd95 10.843933
+2025-04-15 04:43:34 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.771463 mean_hd95 11.003021
+2025-04-15 04:43:34 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.719547 mean_hd95 29.620274
+2025-04-15 04:43:34 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.735748 mean_hd95 31.082283
+2025-04-15 04:43:34 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.903295 mean_hd95 1.000000
+2025-04-15 04:43:35 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.860168 mean_hd95 9.876376
+2025-04-15 04:43:35 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.852132 mean_hd95 5.815473
+2025-04-15 04:43:35 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.668607 mean_hd95 2.922038
+2025-04-15 04:43:35 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.852712 mean_hd95 5.421691
+2025-04-15 04:43:36 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.798434 mean_hd95 19.874707
+2025-04-15 04:43:36 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.698440 mean_hd95 13.567412
+2025-04-15 04:43:36 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.543363 mean_hd95 14.316637
+2025-04-15 04:43:36 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.819637 mean_hd95 7.998412
+2025-04-15 04:43:36 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.816403 mean_hd95 8.350012
+2025-04-15 04:43:37 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.759687 mean_hd95 28.908456
+2025-04-15 04:43:37 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.715134 mean_hd95 38.146015
+2025-04-15 04:43:37 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.934559 mean_hd95 1.000000
+2025-04-15 04:43:37 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.902407 mean_hd95 1.471405
+2025-04-15 04:43:38 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.880413 mean_hd95 2.520159
+2025-04-15 04:43:38 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.834221 mean_hd95 1.471405
+2025-04-15 04:43:38 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.913934 mean_hd95 1.244017
+2025-04-15 04:43:38 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.770409 mean_hd95 11.238043
+2025-04-15 04:43:39 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.873083 mean_hd95 14.142456
+2025-04-15 04:43:40 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.813737 mean_hd95 27.106681
+2025-04-15 04:43:40 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.901481 mean_hd95 1.244017
+2025-04-15 04:43:41 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.868314 mean_hd95 1.550094
+2025-04-15 04:43:41 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.892799 mean_hd95 4.451797
+2025-04-15 04:43:42 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.840581 mean_hd95 5.783509
+2025-04-15 04:43:42 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.881901 mean_hd95 11.056807
+2025-04-15 04:43:43 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.806606 mean_hd95 9.247165
+2025-04-15 04:43:43 - INFO - Mean class 1 mean_dice 0.732365 mean_hd95 29.317724
+2025-04-15 04:43:43 - INFO - Mean class 2 mean_dice 0.824763 mean_hd95 1.887600
+2025-04-15 04:43:43 - INFO - Mean class 3 mean_dice 0.865427 mean_hd95 5.040492
+2025-04-15 04:43:43 - INFO - Testing performance in best val model: mean_dice : 0.807518 mean_hd95 : 12.081939
+2025-04-15 04:43:43 - INFO - Testing Finished
+2025-04-15 04:43:45 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:43:45 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:43:46 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_260.pth
+2025-04-15 04:43:46 - INFO - Starting inference process
+2025-04-15 04:43:46 - INFO - 40 test iterations per epoch
+2025-04-15 04:43:46 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.934407 mean_hd95 1.000000
+2025-04-15 04:43:47 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.896436 mean_hd95 1.138071
+2025-04-15 04:43:47 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.936943 mean_hd95 1.000000
+2025-04-15 04:43:47 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.923020 mean_hd95 1.000000
+2025-04-15 04:43:47 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.931407 mean_hd95 1.000000
+2025-04-15 04:43:48 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.919145 mean_hd95 1.000000
+2025-04-15 04:43:48 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.907132 mean_hd95 5.887882
+2025-04-15 04:43:48 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.851674 mean_hd95 2.638693
+2025-04-15 04:43:49 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.846014 mean_hd95 1.412023
+2025-04-15 04:43:49 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.785132 mean_hd95 2.398717
+2025-04-15 04:43:49 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.921104 mean_hd95 1.000000
+2025-04-15 04:43:49 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.929360 mean_hd95 1.000000
+2025-04-15 04:43:50 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.880429 mean_hd95 1.333333
+2025-04-15 04:43:50 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.905683 mean_hd95 1.000000
+2025-04-15 04:43:50 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.925439 mean_hd95 1.000000
+2025-04-15 04:43:50 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.909552 mean_hd95 1.000000
+2025-04-15 04:43:51 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.839343 mean_hd95 2.299660
+2025-04-15 04:43:51 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.787091 mean_hd95 2.330420
+2025-04-15 04:43:51 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.908100 mean_hd95 1.000000
+2025-04-15 04:43:51 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.889397 mean_hd95 1.138071
+2025-04-15 04:43:52 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.883357 mean_hd95 1.333333
+2025-04-15 04:43:52 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.703918 mean_hd95 4.066013
+2025-04-15 04:43:52 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.930044 mean_hd95 1.000000
+2025-04-15 04:43:52 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.891101 mean_hd95 6.801720
+2025-04-15 04:43:52 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.859933 mean_hd95 1.715421
+2025-04-15 04:43:53 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.766791 mean_hd95 2.378349
+2025-04-15 04:43:53 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.946972 mean_hd95 1.000000
+2025-04-15 04:43:53 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.864377 mean_hd95 1.138071
+2025-04-15 04:43:53 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.898443 mean_hd95 1.333333
+2025-04-15 04:43:54 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.810763 mean_hd95 2.613873
+2025-04-15 04:43:54 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.914045 mean_hd95 1.000000
+2025-04-15 04:43:54 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.717147 mean_hd95 3.018237
+2025-04-15 04:43:55 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.821500 mean_hd95 2.332263
+2025-04-15 04:43:55 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.887961 mean_hd95 1.333333
+2025-04-15 04:43:56 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.896689 mean_hd95 1.666667
+2025-04-15 04:43:56 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.833492 mean_hd95 2.333333
+2025-04-15 04:43:57 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.914927 mean_hd95 1.333333
+2025-04-15 04:43:57 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.850603 mean_hd95 1.759306
+2025-04-15 04:43:58 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.920292 mean_hd95 1.333333
+2025-04-15 04:43:58 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.843830 mean_hd95 1.688165
+2025-04-15 04:43:58 - INFO - Mean class 1 mean_dice 0.829887 mean_hd95 2.954097
+2025-04-15 04:43:58 - INFO - Mean class 2 mean_dice 0.859061 mean_hd95 1.242000
+2025-04-15 04:43:58 - INFO - Mean class 3 mean_dice 0.934776 mean_hd95 1.260524
+2025-04-15 04:43:58 - INFO - Testing performance in best val model: mean_dice : 0.874575 mean_hd95 : 1.818874
+2025-04-15 04:43:58 - INFO - Testing Finished
+2025-04-15 04:44:01 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:44:01 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:44:02 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_270.pth
+2025-04-15 04:44:02 - INFO - Starting inference process
+2025-04-15 04:44:02 - INFO - 40 test iterations per epoch
+2025-04-15 04:44:02 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.919107 mean_hd95 15.238279
+2025-04-15 04:44:02 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.887692 mean_hd95 1.276142
+2025-04-15 04:44:03 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.914386 mean_hd95 10.743299
+2025-04-15 04:44:03 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.903462 mean_hd95 10.161985
+2025-04-15 04:44:03 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.932775 mean_hd95 1.000000
+2025-04-15 04:44:03 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.927073 mean_hd95 1.000000
+2025-04-15 04:44:04 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.898021 mean_hd95 15.144619
+2025-04-15 04:44:04 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.872511 mean_hd95 3.291336
+2025-04-15 04:44:04 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.870058 mean_hd95 1.138071
+2025-04-15 04:44:05 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.774576 mean_hd95 2.119633
+2025-04-15 04:44:05 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.868921 mean_hd95 4.296456
+2025-04-15 04:44:05 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.933526 mean_hd95 1.000000
+2025-04-15 04:44:06 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.907091 mean_hd95 1.244017
+2025-04-15 04:44:06 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.920170 mean_hd95 1.000000
+2025-04-15 04:44:06 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.918751 mean_hd95 1.000000
+2025-04-15 04:44:06 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.906069 mean_hd95 1.000000
+2025-04-15 04:44:06 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.861769 mean_hd95 1.666667
+2025-04-15 04:44:07 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.713404 mean_hd95 3.092639
+2025-04-15 04:44:07 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.874925 mean_hd95 2.690356
+2025-04-15 04:44:07 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.873865 mean_hd95 2.366340
+2025-04-15 04:44:07 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.862843 mean_hd95 4.072080
+2025-04-15 04:44:08 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.642067 mean_hd95 15.391427
+2025-04-15 04:44:08 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.934357 mean_hd95 1.000000
+2025-04-15 04:44:08 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.885653 mean_hd95 6.776895
+2025-04-15 04:44:08 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.880546 mean_hd95 1.276142
+2025-04-15 04:44:08 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.856215 mean_hd95 1.550094
+2025-04-15 04:44:09 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.940085 mean_hd95 1.000000
+2025-04-15 04:44:09 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.889006 mean_hd95 1.276142
+2025-04-15 04:44:09 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.816786 mean_hd95 2.610317
+2025-04-15 04:44:10 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.710745 mean_hd95 2.699673
+2025-04-15 04:44:10 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.930313 mean_hd95 1.138071
+2025-04-15 04:44:10 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.862779 mean_hd95 1.962117
+2025-04-15 04:44:11 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.875737 mean_hd95 1.735702
+2025-04-15 04:44:11 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.886011 mean_hd95 1.520159
+2025-04-15 04:44:12 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.853173 mean_hd95 1.720759
+2025-04-15 04:44:12 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.862016 mean_hd95 1.883427
+2025-04-15 04:44:13 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.892254 mean_hd95 1.804738
+2025-04-15 04:44:13 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.800793 mean_hd95 3.134375
+2025-04-15 04:44:14 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.918736 mean_hd95 1.488034
+2025-04-15 04:44:14 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.839046 mean_hd95 19.034882
+2025-04-15 04:44:14 - INFO - Mean class 1 mean_dice 0.807844 mean_hd95 6.437467
+2025-04-15 04:44:14 - INFO - Mean class 2 mean_dice 0.861088 mean_hd95 3.682953
+2025-04-15 04:44:14 - INFO - Mean class 3 mean_dice 0.942366 mean_hd95 1.395446
+2025-04-15 04:44:14 - INFO - Testing performance in best val model: mean_dice : 0.870433 mean_hd95 : 3.838622
+2025-04-15 04:44:14 - INFO - Testing Finished
+2025-04-15 04:44:17 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:44:17 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:44:17 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_280.pth
+2025-04-15 04:44:17 - INFO - Starting inference process
+2025-04-15 04:44:17 - INFO - 40 test iterations per epoch
+2025-04-15 04:44:18 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.928588 mean_hd95 1.000000
+2025-04-15 04:44:18 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.868868 mean_hd95 1.333333
+2025-04-15 04:44:18 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.938305 mean_hd95 1.000000
+2025-04-15 04:44:19 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.931830 mean_hd95 1.000000
+2025-04-15 04:44:19 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.940694 mean_hd95 1.000000
+2025-04-15 04:44:19 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.909934 mean_hd95 1.000000
+2025-04-15 04:44:20 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.902271 mean_hd95 14.446684
+2025-04-15 04:44:20 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.869828 mean_hd95 3.757873
+2025-04-15 04:44:20 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.898415 mean_hd95 1.000000
+2025-04-15 04:44:21 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.812245 mean_hd95 2.041035
+2025-04-15 04:44:21 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.918199 mean_hd95 1.333333
+2025-04-15 04:44:21 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.930974 mean_hd95 1.000000
+2025-04-15 04:44:21 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.927091 mean_hd95 1.000000
+2025-04-15 04:44:22 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.927799 mean_hd95 1.000000
+2025-04-15 04:44:22 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.929128 mean_hd95 1.000000
+2025-04-15 04:44:22 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.909228 mean_hd95 1.000000
+2025-04-15 04:44:22 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.807135 mean_hd95 2.504662
+2025-04-15 04:44:23 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.669702 mean_hd95 4.119477
+2025-04-15 04:44:23 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.897161 mean_hd95 1.666667
+2025-04-15 04:44:23 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.838818 mean_hd95 3.294473
+2025-04-15 04:44:23 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.875963 mean_hd95 8.741318
+2025-04-15 04:44:23 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.639329 mean_hd95 14.149989
+2025-04-15 04:44:24 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.931700 mean_hd95 1.000000
+2025-04-15 04:44:24 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.882502 mean_hd95 2.911263
+2025-04-15 04:44:24 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.896227 mean_hd95 1.138071
+2025-04-15 04:44:24 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.850090 mean_hd95 1.609476
+2025-04-15 04:44:25 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.948011 mean_hd95 1.000000
+2025-04-15 04:44:25 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.904214 mean_hd95 1.276142
+2025-04-15 04:44:25 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.880687 mean_hd95 1.550094
+2025-04-15 04:44:25 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.685145 mean_hd95 3.098117
+2025-04-15 04:44:26 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.949456 mean_hd95 1.000000
+2025-04-15 04:44:26 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.826039 mean_hd95 2.385290
+2025-04-15 04:44:26 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.913301 mean_hd95 1.412023
+2025-04-15 04:44:27 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.900912 mean_hd95 1.138071
+2025-04-15 04:44:28 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.907015 mean_hd95 1.333333
+2025-04-15 04:44:28 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.861395 mean_hd95 1.666667
+2025-04-15 04:44:29 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.924891 mean_hd95 1.333333
+2025-04-15 04:44:29 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.817673 mean_hd95 6.058376
+2025-04-15 04:44:29 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.930534 mean_hd95 1.000000
+2025-04-15 04:44:30 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.883393 mean_hd95 1.520159
+2025-04-15 04:44:30 - INFO - Mean class 1 mean_dice 0.851915 mean_hd95 4.582255
+2025-04-15 04:44:30 - INFO - Mean class 2 mean_dice 0.852197 mean_hd95 1.357170
+2025-04-15 04:44:30 - INFO - Mean class 3 mean_dice 0.933239 mean_hd95 1.622020
+2025-04-15 04:44:30 - INFO - Testing performance in best val model: mean_dice : 0.879117 mean_hd95 : 2.520482
+2025-04-15 04:44:30 - INFO - Testing Finished
+2025-04-15 04:44:32 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:44:32 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:44:33 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_290.pth
+2025-04-15 04:44:33 - INFO - Starting inference process
+2025-04-15 04:44:33 - INFO - 40 test iterations per epoch
+2025-04-15 04:44:34 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.921158 mean_hd95 1.138071
+2025-04-15 04:44:34 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.882440 mean_hd95 1.471405
+2025-04-15 04:44:34 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.935635 mean_hd95 1.000000
+2025-04-15 04:44:35 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.929556 mean_hd95 1.000000
+2025-04-15 04:44:35 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.939073 mean_hd95 1.000000
+2025-04-15 04:44:35 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.923508 mean_hd95 1.000000
+2025-04-15 04:44:35 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.911964 mean_hd95 5.212727
+2025-04-15 04:44:36 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.872268 mean_hd95 2.492409
+2025-04-15 04:44:36 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.888933 mean_hd95 1.000000
+2025-04-15 04:44:36 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.838820 mean_hd95 1.666667
+2025-04-15 04:44:37 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.884267 mean_hd95 1.503188
+2025-04-15 04:44:37 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.933263 mean_hd95 1.000000
+2025-04-15 04:44:37 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.922031 mean_hd95 1.000000
+2025-04-15 04:44:37 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.932495 mean_hd95 1.000000
+2025-04-15 04:44:38 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.933969 mean_hd95 1.000000
+2025-04-15 04:44:38 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.893325 mean_hd95 8.727890
+2025-04-15 04:44:38 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.802515 mean_hd95 2.659242
+2025-04-15 04:44:38 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.717740 mean_hd95 3.669915
+2025-04-15 04:44:39 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.903428 mean_hd95 1.138071
+2025-04-15 04:44:39 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.878793 mean_hd95 1.666667
+2025-04-15 04:44:39 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.902547 mean_hd95 1.138071
+2025-04-15 04:44:39 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.710376 mean_hd95 3.239416
+2025-04-15 04:44:39 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.937009 mean_hd95 1.000000
+2025-04-15 04:44:40 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.906307 mean_hd95 1.786376
+2025-04-15 04:44:40 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.876415 mean_hd95 1.196341
+2025-04-15 04:44:40 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.855372 mean_hd95 1.621234
+2025-04-15 04:44:40 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.951468 mean_hd95 1.000000
+2025-04-15 04:44:41 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.921935 mean_hd95 1.138071
+2025-04-15 04:44:41 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.869004 mean_hd95 1.913886
+2025-04-15 04:44:41 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.745816 mean_hd95 2.998930
+2025-04-15 04:44:41 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.954232 mean_hd95 1.000000
+2025-04-15 04:44:42 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.853966 mean_hd95 1.895186
+2025-04-15 04:44:42 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.887746 mean_hd95 1.609476
+2025-04-15 04:44:43 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.908952 mean_hd95 1.244017
+2025-04-15 04:44:43 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.902243 mean_hd95 1.609476
+2025-04-15 04:44:44 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.888578 mean_hd95 1.471405
+2025-04-15 04:44:44 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.914021 mean_hd95 2.795055
+2025-04-15 04:44:45 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.855408 mean_hd95 5.193723
+2025-04-15 04:44:45 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.934944 mean_hd95 1.000000
+2025-04-15 04:44:46 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.884192 mean_hd95 1.609476
+2025-04-15 04:44:46 - INFO - Mean class 1 mean_dice 0.846465 mean_hd95 2.350080
+2025-04-15 04:44:46 - INFO - Mean class 2 mean_dice 0.870936 mean_hd95 1.278220
+2025-04-15 04:44:46 - INFO - Mean class 3 mean_dice 0.945527 mean_hd95 2.132180
+2025-04-15 04:44:46 - INFO - Testing performance in best val model: mean_dice : 0.887643 mean_hd95 : 1.920160
+2025-04-15 04:44:46 - INFO - Testing Finished
+2025-04-15 04:44:48 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:44:48 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:44:49 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_30.pth
+2025-04-15 04:44:49 - INFO - Starting inference process
+2025-04-15 04:44:49 - INFO - 40 test iterations per epoch
+2025-04-15 04:44:49 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.895038 mean_hd95 1.333333
+2025-04-15 04:44:50 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.826140 mean_hd95 1.868517
+2025-04-15 04:44:50 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.821201 mean_hd95 8.015262
+2025-04-15 04:44:50 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.862080 mean_hd95 3.745356
+2025-04-15 04:44:51 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.865814 mean_hd95 1.577350
+2025-04-15 04:44:51 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.858548 mean_hd95 1.550094
+2025-04-15 04:44:51 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.862179 mean_hd95 28.263736
+2025-04-15 04:44:52 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.828673 mean_hd95 22.727202
+2025-04-15 04:44:52 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.847127 mean_hd95 6.114581
+2025-04-15 04:44:52 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.731345 mean_hd95 4.107783
+2025-04-15 04:44:52 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.733635 mean_hd95 13.015565
+2025-04-15 04:44:53 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.762950 mean_hd95 7.386046
+2025-04-15 04:44:53 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.826829 mean_hd95 6.646129
+2025-04-15 04:44:53 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.850108 mean_hd95 4.220142
+2025-04-15 04:44:54 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.893014 mean_hd95 1.138071
+2025-04-15 04:44:54 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.837361 mean_hd95 7.989371
+2025-04-15 04:44:54 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.824350 mean_hd95 2.138071
+2025-04-15 04:44:54 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.557911 mean_hd95 5.551809
+2025-04-15 04:44:54 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.887915 mean_hd95 1.333333
+2025-04-15 04:44:55 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.834484 mean_hd95 1.656040
+2025-04-15 04:44:55 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.743347 mean_hd95 6.988300
+2025-04-15 04:44:55 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.718742 mean_hd95 13.103557
+2025-04-15 04:44:55 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.877982 mean_hd95 2.051957
+2025-04-15 04:44:55 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.833020 mean_hd95 4.272446
+2025-04-15 04:44:56 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.682320 mean_hd95 36.493276
+2025-04-15 04:44:56 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.591072 mean_hd95 43.227201
+2025-04-15 04:44:56 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.879110 mean_hd95 23.651571
+2025-04-15 04:44:57 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.816410 mean_hd95 26.584186
+2025-04-15 04:44:57 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.837717 mean_hd95 2.580552
+2025-04-15 04:44:57 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.721875 mean_hd95 2.856695
+2025-04-15 04:44:57 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.671955 mean_hd95 6.812918
+2025-04-15 04:44:58 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.515521 mean_hd95 10.555936
+2025-04-15 04:44:58 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.807178 mean_hd95 3.666667
+2025-04-15 04:44:59 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.798510 mean_hd95 4.811327
+2025-04-15 04:44:59 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.848962 mean_hd95 2.080880
+2025-04-15 04:45:00 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.801075 mean_hd95 2.299660
+2025-04-15 04:45:00 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.602476 mean_hd95 12.554672
+2025-04-15 04:45:01 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.578029 mean_hd95 12.298015
+2025-04-15 04:45:01 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.647778 mean_hd95 6.416957
+2025-04-15 04:45:02 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.698703 mean_hd95 8.101047
+2025-04-15 04:45:02 - INFO - Mean class 1 mean_dice 0.684747 mean_hd95 6.096695
+2025-04-15 04:45:02 - INFO - Mean class 2 mean_dice 0.775708 mean_hd95 5.088139
+2025-04-15 04:45:02 - INFO - Mean class 3 mean_dice 0.870432 mean_hd95 15.949086
+2025-04-15 04:45:02 - INFO - Testing performance in best val model: mean_dice : 0.776962 mean_hd95 : 9.044640
+2025-04-15 04:45:02 - INFO - Testing Finished
+2025-04-15 04:45:04 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:45:04 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:45:05 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_300.pth
+2025-04-15 04:45:05 - INFO - Starting inference process
+2025-04-15 04:45:05 - INFO - 40 test iterations per epoch
+2025-04-15 04:45:05 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.932244 mean_hd95 1.000000
+2025-04-15 04:45:06 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.893231 mean_hd95 1.138071
+2025-04-15 04:45:06 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.931696 mean_hd95 1.000000
+2025-04-15 04:45:06 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.921564 mean_hd95 1.138071
+2025-04-15 04:45:07 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.936942 mean_hd95 1.000000
+2025-04-15 04:45:07 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.917241 mean_hd95 1.000000
+2025-04-15 04:45:07 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.918662 mean_hd95 1.412023
+2025-04-15 04:45:07 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.884735 mean_hd95 2.387385
+2025-04-15 04:45:08 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.893309 mean_hd95 1.000000
+2025-04-15 04:45:08 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.820024 mean_hd95 1.666667
+2025-04-15 04:45:08 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.910433 mean_hd95 1.333333
+2025-04-15 04:45:09 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.930902 mean_hd95 1.000000
+2025-04-15 04:45:09 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.917003 mean_hd95 1.138071
+2025-04-15 04:45:09 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.923200 mean_hd95 1.000000
+2025-04-15 04:45:09 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.925155 mean_hd95 1.000000
+2025-04-15 04:45:10 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.896906 mean_hd95 1.138071
+2025-04-15 04:45:10 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.890459 mean_hd95 1.333333
+2025-04-15 04:45:10 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.865795 mean_hd95 1.138071
+2025-04-15 04:45:10 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.892087 mean_hd95 1.138071
+2025-04-15 04:45:10 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.874677 mean_hd95 1.412023
+2025-04-15 04:45:11 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.907080 mean_hd95 1.138071
+2025-04-15 04:45:11 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.784586 mean_hd95 13.177945
+2025-04-15 04:45:11 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.935267 mean_hd95 1.000000
+2025-04-15 04:45:11 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.900676 mean_hd95 3.514668
+2025-04-15 04:45:11 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.875593 mean_hd95 1.276142
+2025-04-15 04:45:12 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.835793 mean_hd95 1.688165
+2025-04-15 04:45:12 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.945217 mean_hd95 1.000000
+2025-04-15 04:45:12 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.918109 mean_hd95 1.000000
+2025-04-15 04:45:13 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.898696 mean_hd95 1.333333
+2025-04-15 04:45:13 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.853283 mean_hd95 1.412023
+2025-04-15 04:45:13 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.935615 mean_hd95 1.000000
+2025-04-15 04:45:13 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.790660 mean_hd95 3.391043
+2025-04-15 04:45:14 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.890099 mean_hd95 1.666667
+2025-04-15 04:45:14 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.889492 mean_hd95 1.244017
+2025-04-15 04:45:15 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.915131 mean_hd95 1.138071
+2025-04-15 04:45:15 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.876562 mean_hd95 1.276142
+2025-04-15 04:45:16 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.888701 mean_hd95 3.888285
+2025-04-15 04:45:16 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.768536 mean_hd95 6.304392
+2025-04-15 04:45:17 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.921053 mean_hd95 1.333333
+2025-04-15 04:45:17 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.846894 mean_hd95 1.883427
+2025-04-15 04:45:17 - INFO - Mean class 1 mean_dice 0.854325 mean_hd95 2.798307
+2025-04-15 04:45:17 - INFO - Mean class 2 mean_dice 0.874049 mean_hd95 1.105433
+2025-04-15 04:45:17 - INFO - Mean class 3 mean_dice 0.945624 mean_hd95 1.649179
+2025-04-15 04:45:17 - INFO - Testing performance in best val model: mean_dice : 0.891333 mean_hd95 : 1.850973
+2025-04-15 04:45:17 - INFO - Testing Finished
+2025-04-15 04:45:20 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:45:20 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:45:21 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_310.pth
+2025-04-15 04:45:21 - INFO - Starting inference process
+2025-04-15 04:45:21 - INFO - 40 test iterations per epoch
+2025-04-15 04:45:21 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.938186 mean_hd95 1.000000
+2025-04-15 04:45:21 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.906268 mean_hd95 1.000000
+2025-04-15 04:45:22 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.919989 mean_hd95 1.244017
+2025-04-15 04:45:22 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.909378 mean_hd95 1.333333
+2025-04-15 04:45:22 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.928700 mean_hd95 1.000000
+2025-04-15 04:45:23 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.920779 mean_hd95 1.000000
+2025-04-15 04:45:23 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.912871 mean_hd95 16.504385
+2025-04-15 04:45:23 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.880535 mean_hd95 2.477065
+2025-04-15 04:45:23 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.892647 mean_hd95 1.000000
+2025-04-15 04:45:24 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.793591 mean_hd95 2.366340
+2025-04-15 04:45:24 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.845924 mean_hd95 1.821367
+2025-04-15 04:45:24 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.900036 mean_hd95 1.333333
+2025-04-15 04:45:25 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.923575 mean_hd95 1.000000
+2025-04-15 04:45:25 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.930305 mean_hd95 1.000000
+2025-04-15 04:45:25 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.918000 mean_hd95 1.000000
+2025-04-15 04:45:25 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.878888 mean_hd95 1.412023
+2025-04-15 04:45:26 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.927603 mean_hd95 1.000000
+2025-04-15 04:45:26 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.876458 mean_hd95 1.138071
+2025-04-15 04:45:26 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.913127 mean_hd95 1.000000
+2025-04-15 04:45:26 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.848524 mean_hd95 3.065634
+2025-04-15 04:45:26 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.891954 mean_hd95 1.138071
+2025-04-15 04:45:27 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.704212 mean_hd95 9.293791
+2025-04-15 04:45:27 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.922956 mean_hd95 1.000000
+2025-04-15 04:45:27 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.873375 mean_hd95 7.463472
+2025-04-15 04:45:27 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.783528 mean_hd95 2.048351
+2025-04-15 04:45:27 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.786099 mean_hd95 3.248188
+2025-04-15 04:45:28 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.942630 mean_hd95 1.000000
+2025-04-15 04:45:28 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.915810 mean_hd95 1.000000
+2025-04-15 04:45:28 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.858545 mean_hd95 2.218951
+2025-04-15 04:45:29 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.815659 mean_hd95 2.285052
+2025-04-15 04:45:29 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.944042 mean_hd95 1.000000
+2025-04-15 04:45:29 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.758398 mean_hd95 2.580552
+2025-04-15 04:45:30 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.901333 mean_hd95 1.333333
+2025-04-15 04:45:30 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.902906 mean_hd95 1.244017
+2025-04-15 04:45:31 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.832789 mean_hd95 13.466850
+2025-04-15 04:45:31 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.822510 mean_hd95 31.657746
+2025-04-15 04:45:32 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.903933 mean_hd95 3.632509
+2025-04-15 04:45:32 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.853104 mean_hd95 5.581014
+2025-04-15 04:45:33 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.921101 mean_hd95 1.138071
+2025-04-15 04:45:33 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.852655 mean_hd95 1.883427
+2025-04-15 04:45:33 - INFO - Mean class 1 mean_dice 0.828742 mean_hd95 4.342391
+2025-04-15 04:45:33 - INFO - Mean class 2 mean_dice 0.868287 mean_hd95 3.131344
+2025-04-15 04:45:33 - INFO - Mean class 3 mean_dice 0.939440 mean_hd95 2.794437
+2025-04-15 04:45:33 - INFO - Testing performance in best val model: mean_dice : 0.878823 mean_hd95 : 3.422724
+2025-04-15 04:45:33 - INFO - Testing Finished
+2025-04-15 04:45:36 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:45:36 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:45:36 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_320.pth
+2025-04-15 04:45:36 - INFO - Starting inference process
+2025-04-15 04:45:36 - INFO - 40 test iterations per epoch
+2025-04-15 04:45:37 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.934842 mean_hd95 1.000000
+2025-04-15 04:45:37 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.887743 mean_hd95 1.138071
+2025-04-15 04:45:37 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.927018 mean_hd95 1.000000
+2025-04-15 04:45:38 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.930132 mean_hd95 1.000000
+2025-04-15 04:45:38 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.937477 mean_hd95 1.000000
+2025-04-15 04:45:38 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.917946 mean_hd95 1.000000
+2025-04-15 04:45:39 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.904864 mean_hd95 15.337121
+2025-04-15 04:45:39 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.875534 mean_hd95 1.868517
+2025-04-15 04:45:39 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.866059 mean_hd95 1.333333
+2025-04-15 04:45:39 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.819694 mean_hd95 1.412023
+2025-04-15 04:45:40 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.906725 mean_hd95 1.333333
+2025-04-15 04:45:40 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.931738 mean_hd95 1.000000
+2025-04-15 04:45:40 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.909143 mean_hd95 1.333333
+2025-04-15 04:45:41 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.908102 mean_hd95 1.000000
+2025-04-15 04:45:41 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.923771 mean_hd95 1.000000
+2025-04-15 04:45:41 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.900241 mean_hd95 1.138071
+2025-04-15 04:45:41 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.731093 mean_hd95 3.990004
+2025-04-15 04:45:42 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.650218 mean_hd95 4.832885
+2025-04-15 04:45:42 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.905795 mean_hd95 1.000000
+2025-04-15 04:45:42 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.868239 mean_hd95 2.041035
+2025-04-15 04:45:42 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.885621 mean_hd95 1.772208
+2025-04-15 04:45:42 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.689372 mean_hd95 8.145643
+2025-04-15 04:45:43 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.940678 mean_hd95 1.000000
+2025-04-15 04:45:43 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.888327 mean_hd95 6.064649
+2025-04-15 04:45:43 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.760109 mean_hd95 2.992575
+2025-04-15 04:45:43 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.617163 mean_hd95 4.065384
+2025-04-15 04:45:43 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.945728 mean_hd95 1.000000
+2025-04-15 04:45:44 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.914249 mean_hd95 1.000000
+2025-04-15 04:45:44 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.882003 mean_hd95 1.483163
+2025-04-15 04:45:44 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.775047 mean_hd95 2.333333
+2025-04-15 04:45:45 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.936691 mean_hd95 1.000000
+2025-04-15 04:45:45 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.810485 mean_hd95 2.535184
+2025-04-15 04:45:45 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.807691 mean_hd95 2.366340
+2025-04-15 04:45:46 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.910224 mean_hd95 1.244017
+2025-04-15 04:45:46 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.864614 mean_hd95 1.666667
+2025-04-15 04:45:47 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.914330 mean_hd95 1.138071
+2025-04-15 04:45:47 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.884584 mean_hd95 5.216761
+2025-04-15 04:45:48 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.655055 mean_hd95 9.353175
+2025-04-15 04:45:48 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.922033 mean_hd95 1.666667
+2025-04-15 04:45:49 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.824612 mean_hd95 2.138071
+2025-04-15 04:45:49 - INFO - Mean class 1 mean_dice 0.810723 mean_hd95 4.174882
+2025-04-15 04:45:49 - INFO - Mean class 2 mean_dice 0.861515 mean_hd95 1.471501
+2025-04-15 04:45:49 - INFO - Mean class 3 mean_dice 0.912637 mean_hd95 2.074090
+2025-04-15 04:45:49 - INFO - Testing performance in best val model: mean_dice : 0.861625 mean_hd95 : 2.573491
+2025-04-15 04:45:49 - INFO - Testing Finished
+2025-04-15 04:45:51 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:45:51 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:45:52 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_330.pth
+2025-04-15 04:45:52 - INFO - Starting inference process
+2025-04-15 04:45:52 - INFO - 40 test iterations per epoch
+2025-04-15 04:45:53 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.922876 mean_hd95 1.000000
+2025-04-15 04:45:53 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.875309 mean_hd95 1.414214
+2025-04-15 04:45:53 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.904080 mean_hd95 1.138071
+2025-04-15 04:45:54 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.931027 mean_hd95 1.000000
+2025-04-15 04:45:54 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.937740 mean_hd95 1.000000
+2025-04-15 04:45:54 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.916721 mean_hd95 1.000000
+2025-04-15 04:45:54 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.872732 mean_hd95 29.303442
+2025-04-15 04:45:55 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.839160 mean_hd95 25.390574
+2025-04-15 04:45:55 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.911118 mean_hd95 1.000000
+2025-04-15 04:45:55 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.812232 mean_hd95 1.483163
+2025-04-15 04:45:56 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.910969 mean_hd95 1.138071
+2025-04-15 04:45:56 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.932034 mean_hd95 1.000000
+2025-04-15 04:45:56 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.903082 mean_hd95 1.333333
+2025-04-15 04:45:56 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.924499 mean_hd95 1.000000
+2025-04-15 04:45:57 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.924239 mean_hd95 1.000000
+2025-04-15 04:45:57 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.907112 mean_hd95 1.000000
+2025-04-15 04:45:57 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.823480 mean_hd95 1.989373
+2025-04-15 04:45:57 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.649933 mean_hd95 3.414214
+2025-04-15 04:45:58 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.886212 mean_hd95 6.638824
+2025-04-15 04:45:58 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.823522 mean_hd95 20.283547
+2025-04-15 04:45:58 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.890471 mean_hd95 1.138071
+2025-04-15 04:45:58 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.715822 mean_hd95 7.582347
+2025-04-15 04:45:58 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.938159 mean_hd95 1.000000
+2025-04-15 04:45:59 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.888974 mean_hd95 1.471405
+2025-04-15 04:45:59 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.833916 mean_hd95 2.466115
+2025-04-15 04:45:59 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.743905 mean_hd95 2.535184
+2025-04-15 04:45:59 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.951392 mean_hd95 1.000000
+2025-04-15 04:46:00 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.890479 mean_hd95 1.382088
+2025-04-15 04:46:00 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.866892 mean_hd95 1.804738
+2025-04-15 04:46:00 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.801316 mean_hd95 2.588705
+2025-04-15 04:46:00 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.950882 mean_hd95 1.000000
+2025-04-15 04:46:01 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.775162 mean_hd95 2.786300
+2025-04-15 04:46:01 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.910770 mean_hd95 1.333333
+2025-04-15 04:46:02 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.905665 mean_hd95 1.138071
+2025-04-15 04:46:02 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.854703 mean_hd95 1.666667
+2025-04-15 04:46:03 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.835350 mean_hd95 2.333333
+2025-04-15 04:46:03 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.905288 mean_hd95 23.105213
+2025-04-15 04:46:04 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.784897 mean_hd95 26.177548
+2025-04-15 04:46:04 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.932023 mean_hd95 1.000000
+2025-04-15 04:46:05 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.809400 mean_hd95 4.604811
+2025-04-15 04:46:05 - INFO - Mean class 1 mean_dice 0.844759 mean_hd95 6.053660
+2025-04-15 04:46:05 - INFO - Mean class 2 mean_dice 0.848198 mean_hd95 1.391209
+2025-04-15 04:46:05 - INFO - Mean class 3 mean_dice 0.916560 mean_hd95 6.853188
+2025-04-15 04:46:05 - INFO - Testing performance in best val model: mean_dice : 0.869839 mean_hd95 : 4.766019
+2025-04-15 04:46:05 - INFO - Testing Finished
+2025-04-15 04:46:07 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:46:07 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:46:08 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_340.pth
+2025-04-15 04:46:08 - INFO - Starting inference process
+2025-04-15 04:46:08 - INFO - 40 test iterations per epoch
+2025-04-15 04:46:08 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.929153 mean_hd95 1.000000
+2025-04-15 04:46:09 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.882482 mean_hd95 1.138071
+2025-04-15 04:46:09 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.935713 mean_hd95 1.000000
+2025-04-15 04:46:09 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.934065 mean_hd95 1.000000
+2025-04-15 04:46:10 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.932401 mean_hd95 1.000000
+2025-04-15 04:46:10 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.923065 mean_hd95 1.000000
+2025-04-15 04:46:10 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.910449 mean_hd95 1.913886
+2025-04-15 04:46:10 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.842442 mean_hd95 2.694254
+2025-04-15 04:46:11 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.887909 mean_hd95 1.138071
+2025-04-15 04:46:11 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.799341 mean_hd95 1.666667
+2025-04-15 04:46:11 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.907626 mean_hd95 1.333333
+2025-04-15 04:46:12 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.926304 mean_hd95 1.138071
+2025-04-15 04:46:12 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.916639 mean_hd95 1.000000
+2025-04-15 04:46:12 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.910996 mean_hd95 1.000000
+2025-04-15 04:46:12 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.921916 mean_hd95 1.000000
+2025-04-15 04:46:13 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.917648 mean_hd95 1.000000
+2025-04-15 04:46:13 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.824633 mean_hd95 2.243613
+2025-04-15 04:46:13 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.605359 mean_hd95 4.082070
+2025-04-15 04:46:13 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.892982 mean_hd95 1.483163
+2025-04-15 04:46:14 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.868758 mean_hd95 2.859543
+2025-04-15 04:46:14 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.893437 mean_hd95 1.720759
+2025-04-15 04:46:14 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.774627 mean_hd95 4.866740
+2025-04-15 04:46:14 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.936681 mean_hd95 1.000000
+2025-04-15 04:46:14 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.896574 mean_hd95 1.138071
+2025-04-15 04:46:15 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.881064 mean_hd95 1.488034
+2025-04-15 04:46:15 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.848563 mean_hd95 2.157379
+2025-04-15 04:46:15 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.945583 mean_hd95 1.000000
+2025-04-15 04:46:15 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.891750 mean_hd95 1.276142
+2025-04-15 04:46:16 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.877411 mean_hd95 1.412023
+2025-04-15 04:46:16 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.824203 mean_hd95 1.804738
+2025-04-15 04:46:16 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.948983 mean_hd95 1.000000
+2025-04-15 04:46:16 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.813354 mean_hd95 2.561853
+2025-04-15 04:46:17 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.848976 mean_hd95 2.000000
+2025-04-15 04:46:18 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.893329 mean_hd95 1.412023
+2025-04-15 04:46:18 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.907643 mean_hd95 1.412023
+2025-04-15 04:46:19 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.876225 mean_hd95 1.382088
+2025-04-15 04:46:19 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.909643 mean_hd95 1.333333
+2025-04-15 04:46:20 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.776220 mean_hd95 5.659510
+2025-04-15 04:46:20 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.925840 mean_hd95 1.333333
+2025-04-15 04:46:21 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.829711 mean_hd95 2.244017
+2025-04-15 04:46:21 - INFO - Mean class 1 mean_dice 0.834427 mean_hd95 2.413161
+2025-04-15 04:46:21 - INFO - Mean class 2 mean_dice 0.862801 mean_hd95 1.268951
+2025-04-15 04:46:21 - INFO - Mean class 3 mean_dice 0.940500 mean_hd95 1.484849
+2025-04-15 04:46:21 - INFO - Testing performance in best val model: mean_dice : 0.879242 mean_hd95 : 1.722320
+2025-04-15 04:46:21 - INFO - Testing Finished
+2025-04-15 04:46:23 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:46:23 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:46:24 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_350.pth
+2025-04-15 04:46:24 - INFO - Starting inference process
+2025-04-15 04:46:24 - INFO - 40 test iterations per epoch
+2025-04-15 04:46:24 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.938852 mean_hd95 1.000000
+2025-04-15 04:46:25 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.897974 mean_hd95 1.000000
+2025-04-15 04:46:25 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.934644 mean_hd95 1.138071
+2025-04-15 04:46:25 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.919868 mean_hd95 1.138071
+2025-04-15 04:46:25 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.928032 mean_hd95 1.000000
+2025-04-15 04:46:26 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.919385 mean_hd95 1.000000
+2025-04-15 04:46:26 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.911986 mean_hd95 2.801041
+2025-04-15 04:46:26 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.838156 mean_hd95 2.774852
+2025-04-15 04:46:27 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.865982 mean_hd95 1.333333
+2025-04-15 04:46:27 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.799885 mean_hd95 2.041035
+2025-04-15 04:46:27 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.918688 mean_hd95 1.138071
+2025-04-15 04:46:28 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.937565 mean_hd95 1.000000
+2025-04-15 04:46:28 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.912891 mean_hd95 1.138071
+2025-04-15 04:46:28 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.927420 mean_hd95 1.000000
+2025-04-15 04:46:28 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.919163 mean_hd95 1.000000
+2025-04-15 04:46:28 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.902369 mean_hd95 1.138071
+2025-04-15 04:46:29 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.864823 mean_hd95 1.666667
+2025-04-15 04:46:29 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.735844 mean_hd95 3.000000
+2025-04-15 04:46:29 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.905332 mean_hd95 1.138071
+2025-04-15 04:46:29 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.846246 mean_hd95 3.553475
+2025-04-15 04:46:30 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.896285 mean_hd95 1.138071
+2025-04-15 04:46:30 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.702377 mean_hd95 13.920175
+2025-04-15 04:46:30 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.931286 mean_hd95 1.000000
+2025-04-15 04:46:30 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.872883 mean_hd95 6.573348
+2025-04-15 04:46:30 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.841270 mean_hd95 2.078689
+2025-04-15 04:46:31 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.761554 mean_hd95 3.946488
+2025-04-15 04:46:31 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.948964 mean_hd95 1.000000
+2025-04-15 04:46:31 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.883674 mean_hd95 1.138071
+2025-04-15 04:46:31 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.890215 mean_hd95 1.412023
+2025-04-15 04:46:32 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.812065 mean_hd95 2.577350
+2025-04-15 04:46:32 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.919999 mean_hd95 1.000000
+2025-04-15 04:46:32 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.676887 mean_hd95 4.728454
+2025-04-15 04:46:33 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.834047 mean_hd95 2.495402
+2025-04-15 04:46:33 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.890165 mean_hd95 1.412023
+2025-04-15 04:46:34 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.906603 mean_hd95 1.333333
+2025-04-15 04:46:34 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.841753 mean_hd95 2.138071
+2025-04-15 04:46:35 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.906998 mean_hd95 1.412023
+2025-04-15 04:46:35 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.753724 mean_hd95 6.112658
+2025-04-15 04:46:36 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.925778 mean_hd95 1.138071
+2025-04-15 04:46:36 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.827830 mean_hd95 1.759306
+2025-04-15 04:46:36 - INFO - Mean class 1 mean_dice 0.826964 mean_hd95 3.720382
+2025-04-15 04:46:36 - INFO - Mean class 2 mean_dice 0.860392 mean_hd95 1.290045
+2025-04-15 04:46:36 - INFO - Mean class 3 mean_dice 0.926353 mean_hd95 1.688002
+2025-04-15 04:46:36 - INFO - Testing performance in best val model: mean_dice : 0.871237 mean_hd95 : 2.232810
+2025-04-15 04:46:36 - INFO - Testing Finished
+2025-04-15 04:46:39 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:46:39 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:46:40 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_360.pth
+2025-04-15 04:46:40 - INFO - Starting inference process
+2025-04-15 04:46:40 - INFO - 40 test iterations per epoch
+2025-04-15 04:46:40 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.917552 mean_hd95 1.000000
+2025-04-15 04:46:40 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.853739 mean_hd95 1.382088
+2025-04-15 04:46:41 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.874876 mean_hd95 1.609476
+2025-04-15 04:46:41 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.880323 mean_hd95 1.609476
+2025-04-15 04:46:41 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.899610 mean_hd95 1.000000
+2025-04-15 04:46:41 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.880850 mean_hd95 1.276142
+2025-04-15 04:46:42 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.875868 mean_hd95 31.581989
+2025-04-15 04:46:42 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.800739 mean_hd95 18.542798
+2025-04-15 04:46:42 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.872287 mean_hd95 1.333333
+2025-04-15 04:46:43 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.781507 mean_hd95 2.119633
+2025-04-15 04:46:43 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.854286 mean_hd95 2.666667
+2025-04-15 04:46:43 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.879347 mean_hd95 1.804738
+2025-04-15 04:46:44 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.904014 mean_hd95 1.333333
+2025-04-15 04:46:44 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.894203 mean_hd95 1.000000
+2025-04-15 04:46:44 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.863947 mean_hd95 1.666667
+2025-04-15 04:46:44 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.728821 mean_hd95 2.729109
+2025-04-15 04:46:44 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.783380 mean_hd95 3.248188
+2025-04-15 04:46:45 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.410645 mean_hd95 5.610437
+2025-04-15 04:46:45 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.863725 mean_hd95 1.138071
+2025-04-15 04:46:45 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.844766 mean_hd95 1.520159
+2025-04-15 04:46:45 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.829781 mean_hd95 2.218951
+2025-04-15 04:46:46 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.673308 mean_hd95 4.786160
+2025-04-15 04:46:46 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.887658 mean_hd95 4.419514
+2025-04-15 04:46:46 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.838400 mean_hd95 7.798240
+2025-04-15 04:46:46 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.824576 mean_hd95 2.149830
+2025-04-15 04:46:46 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.751181 mean_hd95 3.000000
+2025-04-15 04:46:47 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.895434 mean_hd95 1.276142
+2025-04-15 04:46:47 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.789646 mean_hd95 2.276142
+2025-04-15 04:46:47 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.834237 mean_hd95 2.138071
+2025-04-15 04:46:48 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.715567 mean_hd95 2.935384
+2025-04-15 04:46:48 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.916149 mean_hd95 1.000000
+2025-04-15 04:46:48 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.728273 mean_hd95 3.146577
+2025-04-15 04:46:49 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.834256 mean_hd95 1.913886
+2025-04-15 04:46:49 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.856849 mean_hd95 1.550094
+2025-04-15 04:46:50 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.887180 mean_hd95 1.412023
+2025-04-15 04:46:50 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.824292 mean_hd95 1.804738
+2025-04-15 04:46:51 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.870276 mean_hd95 4.951507
+2025-04-15 04:46:51 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.709348 mean_hd95 6.424824
+2025-04-15 04:46:52 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.908241 mean_hd95 1.276142
+2025-04-15 04:46:52 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.807072 mean_hd95 2.393847
+2025-04-15 04:46:52 - INFO - Mean class 1 mean_dice 0.799383 mean_hd95 4.505030
+2025-04-15 04:46:52 - INFO - Mean class 2 mean_dice 0.798390 mean_hd95 1.712698
+2025-04-15 04:46:52 - INFO - Mean class 3 mean_dice 0.880693 mean_hd95 4.510601
+2025-04-15 04:46:52 - INFO - Testing performance in best val model: mean_dice : 0.826155 mean_hd95 : 3.576109
+2025-04-15 04:46:52 - INFO - Testing Finished
+2025-04-15 04:46:54 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:46:55 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:46:55 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_370.pth
+2025-04-15 04:46:55 - INFO - Starting inference process
+2025-04-15 04:46:55 - INFO - 40 test iterations per epoch
+2025-04-15 04:46:56 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.934274 mean_hd95 1.000000
+2025-04-15 04:46:56 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.901715 mean_hd95 1.138071
+2025-04-15 04:46:56 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.931428 mean_hd95 1.000000
+2025-04-15 04:46:57 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.924928 mean_hd95 1.138071
+2025-04-15 04:46:57 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.933849 mean_hd95 1.000000
+2025-04-15 04:46:57 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.924945 mean_hd95 1.000000
+2025-04-15 04:46:58 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.919210 mean_hd95 1.483163
+2025-04-15 04:46:58 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.876407 mean_hd95 2.492409
+2025-04-15 04:46:58 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.881418 mean_hd95 1.000000
+2025-04-15 04:46:58 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.747970 mean_hd95 2.927443
+2025-04-15 04:46:59 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.890263 mean_hd95 1.333333
+2025-04-15 04:46:59 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.932892 mean_hd95 1.000000
+2025-04-15 04:46:59 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.913970 mean_hd95 1.000000
+2025-04-15 04:47:00 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.929238 mean_hd95 1.000000
+2025-04-15 04:47:00 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.930865 mean_hd95 1.000000
+2025-04-15 04:47:00 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.906601 mean_hd95 1.000000
+2025-04-15 04:47:00 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.866964 mean_hd95 1.745356
+2025-04-15 04:47:00 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.743196 mean_hd95 3.535184
+2025-04-15 04:47:01 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.910920 mean_hd95 1.000000
+2025-04-15 04:47:01 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.841802 mean_hd95 3.823200
+2025-04-15 04:47:01 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.891138 mean_hd95 1.412023
+2025-04-15 04:47:01 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.733633 mean_hd95 13.662273
+2025-04-15 04:47:01 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.933900 mean_hd95 1.000000
+2025-04-15 04:47:02 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.906963 mean_hd95 1.138071
+2025-04-15 04:47:02 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.790168 mean_hd95 2.517564
+2025-04-15 04:47:02 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.712653 mean_hd95 3.490712
+2025-04-15 04:47:02 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.946754 mean_hd95 1.000000
+2025-04-15 04:47:03 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.914619 mean_hd95 1.000000
+2025-04-15 04:47:03 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.875345 mean_hd95 1.720759
+2025-04-15 04:47:03 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.830119 mean_hd95 2.000000
+2025-04-15 04:47:04 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.931232 mean_hd95 1.000000
+2025-04-15 04:47:04 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.761372 mean_hd95 3.102379
+2025-04-15 04:47:04 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.875143 mean_hd95 1.804738
+2025-04-15 04:47:05 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.906376 mean_hd95 1.333333
+2025-04-15 04:47:05 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.863678 mean_hd95 1.666667
+2025-04-15 04:47:06 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.862953 mean_hd95 1.804738
+2025-04-15 04:47:06 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.898162 mean_hd95 3.333333
+2025-04-15 04:47:07 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.775035 mean_hd95 6.610207
+2025-04-15 04:47:07 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.915303 mean_hd95 1.333333
+2025-04-15 04:47:08 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.841240 mean_hd95 2.159570
+2025-04-15 04:47:08 - INFO - Mean class 1 mean_dice 0.828682 mean_hd95 3.241493
+2025-04-15 04:47:08 - INFO - Mean class 2 mean_dice 0.863799 mean_hd95 1.289074
+2025-04-15 04:47:08 - INFO - Mean class 3 mean_dice 0.933168 mean_hd95 1.747378
+2025-04-15 04:47:08 - INFO - Testing performance in best val model: mean_dice : 0.875216 mean_hd95 : 2.092648
+2025-04-15 04:47:08 - INFO - Testing Finished
+2025-04-15 04:47:10 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:47:10 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:47:11 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_380.pth
+2025-04-15 04:47:11 - INFO - Starting inference process
+2025-04-15 04:47:11 - INFO - 40 test iterations per epoch
+2025-04-15 04:47:12 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.920555 mean_hd95 1.000000
+2025-04-15 04:47:12 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.863571 mean_hd95 1.382088
+2025-04-15 04:47:12 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.933300 mean_hd95 1.000000
+2025-04-15 04:47:12 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.936597 mean_hd95 1.000000
+2025-04-15 04:47:13 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.941719 mean_hd95 1.000000
+2025-04-15 04:47:13 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.909297 mean_hd95 1.000000
+2025-04-15 04:47:13 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.913427 mean_hd95 1.720759
+2025-04-15 04:47:14 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.884988 mean_hd95 2.080880
+2025-04-15 04:47:14 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.892089 mean_hd95 1.138071
+2025-04-15 04:47:14 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.857851 mean_hd95 1.720759
+2025-04-15 04:47:14 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.937213 mean_hd95 1.000000
+2025-04-15 04:47:15 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.936810 mean_hd95 1.000000
+2025-04-15 04:47:15 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.916587 mean_hd95 1.000000
+2025-04-15 04:47:15 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.935394 mean_hd95 1.000000
+2025-04-15 04:47:15 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.914006 mean_hd95 1.000000
+2025-04-15 04:47:16 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.902842 mean_hd95 1.000000
+2025-04-15 04:47:16 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.900695 mean_hd95 1.000000
+2025-04-15 04:47:16 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.737652 mean_hd95 2.354832
+2025-04-15 04:47:16 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.900602 mean_hd95 1.138071
+2025-04-15 04:47:17 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.880656 mean_hd95 1.138071
+2025-04-15 04:47:17 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.879919 mean_hd95 4.694349
+2025-04-15 04:47:17 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.744412 mean_hd95 13.638718
+2025-04-15 04:47:17 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.935940 mean_hd95 1.000000
+2025-04-15 04:47:17 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.881170 mean_hd95 3.512751
+2025-04-15 04:47:18 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.863851 mean_hd95 1.804738
+2025-04-15 04:47:18 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.843993 mean_hd95 1.609476
+2025-04-15 04:47:18 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.949672 mean_hd95 1.000000
+2025-04-15 04:47:18 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.919364 mean_hd95 1.000000
+2025-04-15 04:47:19 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.861312 mean_hd95 2.319378
+2025-04-15 04:47:19 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.809573 mean_hd95 2.000000
+2025-04-15 04:47:19 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.913505 mean_hd95 1.244017
+2025-04-15 04:47:20 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.776566 mean_hd95 2.659242
+2025-04-15 04:47:20 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.818742 mean_hd95 3.237765
+2025-04-15 04:47:21 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.870412 mean_hd95 1.412023
+2025-04-15 04:47:21 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.904044 mean_hd95 1.000000
+2025-04-15 04:47:22 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.862503 mean_hd95 1.471405
+2025-04-15 04:47:22 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.890109 mean_hd95 1.609476
+2025-04-15 04:47:23 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.754397 mean_hd95 5.363764
+2025-04-15 04:47:23 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.928704 mean_hd95 1.138071
+2025-04-15 04:47:24 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.844021 mean_hd95 3.000000
+2025-04-15 04:47:24 - INFO - Mean class 1 mean_dice 0.850393 mean_hd95 3.259229
+2025-04-15 04:47:24 - INFO - Mean class 2 mean_dice 0.857504 mean_hd95 1.222487
+2025-04-15 04:47:24 - INFO - Mean class 3 mean_dice 0.937208 mean_hd95 1.472436
+2025-04-15 04:47:24 - INFO - Testing performance in best val model: mean_dice : 0.881702 mean_hd95 : 1.984718
+2025-04-15 04:47:24 - INFO - Testing Finished
+2025-04-15 04:47:26 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:47:26 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:47:27 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_390.pth
+2025-04-15 04:47:27 - INFO - Starting inference process
+2025-04-15 04:47:27 - INFO - 40 test iterations per epoch
+2025-04-15 04:47:27 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.927208 mean_hd95 1.000000
+2025-04-15 04:47:28 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.884403 mean_hd95 1.333333
+2025-04-15 04:47:28 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.937446 mean_hd95 1.000000
+2025-04-15 04:47:28 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.934148 mean_hd95 1.000000
+2025-04-15 04:47:28 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.941580 mean_hd95 1.000000
+2025-04-15 04:47:29 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.926159 mean_hd95 1.000000
+2025-04-15 04:47:29 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.905930 mean_hd95 6.086756
+2025-04-15 04:47:29 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.883243 mean_hd95 3.023689
+2025-04-15 04:47:30 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.897655 mean_hd95 1.000000
+2025-04-15 04:47:30 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.811544 mean_hd95 2.179106
+2025-04-15 04:47:30 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.911905 mean_hd95 1.333333
+2025-04-15 04:47:30 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.925909 mean_hd95 1.138071
+2025-04-15 04:47:31 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.918196 mean_hd95 1.000000
+2025-04-15 04:47:31 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.923513 mean_hd95 1.000000
+2025-04-15 04:47:31 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.928088 mean_hd95 1.000000
+2025-04-15 04:47:31 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.909826 mean_hd95 1.000000
+2025-04-15 04:47:32 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.911593 mean_hd95 1.000000
+2025-04-15 04:47:32 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.767743 mean_hd95 2.632993
+2025-04-15 04:47:32 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.899642 mean_hd95 1.244017
+2025-04-15 04:47:32 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.870606 mean_hd95 3.070368
+2025-04-15 04:47:33 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.877734 mean_hd95 1.550094
+2025-04-15 04:47:33 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.754439 mean_hd95 10.980627
+2025-04-15 04:47:33 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.932823 mean_hd95 1.000000
+2025-04-15 04:47:33 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.885009 mean_hd95 5.271276
+2025-04-15 04:47:33 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.881030 mean_hd95 1.471405
+2025-04-15 04:47:34 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.865038 mean_hd95 1.488034
+2025-04-15 04:47:34 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.949110 mean_hd95 1.000000
+2025-04-15 04:47:34 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.915280 mean_hd95 1.138071
+2025-04-15 04:47:34 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.897805 mean_hd95 1.138071
+2025-04-15 04:47:35 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.845863 mean_hd95 1.666667
+2025-04-15 04:47:35 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.954797 mean_hd95 1.000000
+2025-04-15 04:47:35 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.847338 mean_hd95 5.261177
+2025-04-15 04:47:36 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.883393 mean_hd95 1.483163
+2025-04-15 04:47:36 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.893902 mean_hd95 1.942809
+2025-04-15 04:47:37 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.907698 mean_hd95 1.138071
+2025-04-15 04:47:37 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.879809 mean_hd95 1.276142
+2025-04-15 04:47:38 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.907948 mean_hd95 3.717349
+2025-04-15 04:47:38 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.851733 mean_hd95 5.651472
+2025-04-15 04:47:39 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.934618 mean_hd95 1.000000
+2025-04-15 04:47:39 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.893349 mean_hd95 1.414214
+2025-04-15 04:47:39 - INFO - Mean class 1 mean_dice 0.866021 mean_hd95 3.172598
+2025-04-15 04:47:39 - INFO - Mean class 2 mean_dice 0.871924 mean_hd95 1.243283
+2025-04-15 04:47:39 - INFO - Mean class 3 mean_dice 0.945184 mean_hd95 1.856393
+2025-04-15 04:47:39 - INFO - Testing performance in best val model: mean_dice : 0.894376 mean_hd95 : 2.090758
+2025-04-15 04:47:39 - INFO - Testing Finished
+2025-04-15 04:47:42 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:47:42 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:47:43 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_40.pth
+2025-04-15 04:47:43 - INFO - Starting inference process
+2025-04-15 04:47:43 - INFO - 40 test iterations per epoch
+2025-04-15 04:47:43 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.905697 mean_hd95 1.000000
+2025-04-15 04:47:43 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.810411 mean_hd95 2.109945
+2025-04-15 04:47:44 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.899912 mean_hd95 1.745356
+2025-04-15 04:47:44 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.899375 mean_hd95 2.051957
+2025-04-15 04:47:44 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.917667 mean_hd95 1.000000
+2025-04-15 04:47:44 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.869468 mean_hd95 1.471405
+2025-04-15 04:47:45 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.854118 mean_hd95 18.271055
+2025-04-15 04:47:45 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.815915 mean_hd95 10.671626
+2025-04-15 04:47:45 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.909555 mean_hd95 1.138071
+2025-04-15 04:47:46 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.793250 mean_hd95 3.949398
+2025-04-15 04:47:46 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.892893 mean_hd95 5.372707
+2025-04-15 04:47:46 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.894963 mean_hd95 4.874418
+2025-04-15 04:47:46 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.897016 mean_hd95 1.138071
+2025-04-15 04:47:47 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.909817 mean_hd95 1.138071
+2025-04-15 04:47:47 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.905450 mean_hd95 1.138071
+2025-04-15 04:47:47 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.848641 mean_hd95 1.626105
+2025-04-15 04:47:47 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.690614 mean_hd95 4.194192
+2025-04-15 04:47:48 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.385312 mean_hd95 5.234564
+2025-04-15 04:47:48 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.873897 mean_hd95 2.041035
+2025-04-15 04:47:48 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.778154 mean_hd95 3.598103
+2025-04-15 04:47:48 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.823044 mean_hd95 4.965004
+2025-04-15 04:47:48 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.604385 mean_hd95 15.152172
+2025-04-15 04:47:49 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.863506 mean_hd95 3.579568
+2025-04-15 04:47:49 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.819360 mean_hd95 5.881870
+2025-04-15 04:47:49 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.842550 mean_hd95 1.883427
+2025-04-15 04:47:49 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.772924 mean_hd95 10.588170
+2025-04-15 04:47:50 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.935868 mean_hd95 1.000000
+2025-04-15 04:47:50 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.851286 mean_hd95 2.522219
+2025-04-15 04:47:50 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.834862 mean_hd95 2.295450
+2025-04-15 04:47:51 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.531339 mean_hd95 3.803668
+2025-04-15 04:47:51 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.912388 mean_hd95 1.000000
+2025-04-15 04:47:51 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.757462 mean_hd95 2.718624
+2025-04-15 04:47:52 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.866468 mean_hd95 6.667411
+2025-04-15 04:47:52 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.868811 mean_hd95 3.939714
+2025-04-15 04:47:53 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.888480 mean_hd95 1.412023
+2025-04-15 04:47:53 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.850617 mean_hd95 1.727180
+2025-04-15 04:47:54 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.850699 mean_hd95 2.779201
+2025-04-15 04:47:54 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.821824 mean_hd95 2.471405
+2025-04-15 04:47:55 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.902990 mean_hd95 1.621234
+2025-04-15 04:47:55 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.863003 mean_hd95 1.688165
+2025-04-15 04:47:55 - INFO - Mean class 1 mean_dice 0.795177 mean_hd95 7.455676
+2025-04-15 04:47:55 - INFO - Mean class 2 mean_dice 0.783948 mean_hd95 2.384027
+2025-04-15 04:47:55 - INFO - Mean class 3 mean_dice 0.911924 mean_hd95 1.519846
+2025-04-15 04:47:55 - INFO - Testing performance in best val model: mean_dice : 0.830350 mean_hd95 : 3.786516
+2025-04-15 04:47:55 - INFO - Testing Finished
+2025-04-15 04:47:57 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:47:57 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:47:58 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_400.pth
+2025-04-15 04:47:58 - INFO - Starting inference process
+2025-04-15 04:47:58 - INFO - 40 test iterations per epoch
+2025-04-15 04:47:59 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.932915 mean_hd95 1.000000
+2025-04-15 04:47:59 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.885818 mean_hd95 1.333333
+2025-04-15 04:47:59 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.919801 mean_hd95 1.138071
+2025-04-15 04:48:00 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.911994 mean_hd95 1.244017
+2025-04-15 04:48:00 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.928072 mean_hd95 1.000000
+2025-04-15 04:48:00 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.918172 mean_hd95 1.000000
+2025-04-15 04:48:00 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.903872 mean_hd95 6.959960
+2025-04-15 04:48:01 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.858156 mean_hd95 3.116156
+2025-04-15 04:48:01 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.873397 mean_hd95 1.138071
+2025-04-15 04:48:01 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.808505 mean_hd95 2.041035
+2025-04-15 04:48:02 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.887698 mean_hd95 1.333333
+2025-04-15 04:48:02 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.924031 mean_hd95 1.333333
+2025-04-15 04:48:02 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.927163 mean_hd95 1.000000
+2025-04-15 04:48:02 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.923000 mean_hd95 1.000000
+2025-04-15 04:48:03 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.909934 mean_hd95 1.000000
+2025-04-15 04:48:03 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.888302 mean_hd95 1.138071
+2025-04-15 04:48:03 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.888570 mean_hd95 1.276142
+2025-04-15 04:48:03 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.695173 mean_hd95 2.299660
+2025-04-15 04:48:04 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.898590 mean_hd95 1.138071
+2025-04-15 04:48:04 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.849003 mean_hd95 3.120651
+2025-04-15 04:48:04 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.822621 mean_hd95 9.397201
+2025-04-15 04:48:04 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.570228 mean_hd95 14.581775
+2025-04-15 04:48:04 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.933204 mean_hd95 1.000000
+2025-04-15 04:48:05 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.882615 mean_hd95 7.131957
+2025-04-15 04:48:05 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.779618 mean_hd95 2.659242
+2025-04-15 04:48:05 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.784462 mean_hd95 2.670770
+2025-04-15 04:48:05 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.939197 mean_hd95 1.000000
+2025-04-15 04:48:06 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.889043 mean_hd95 1.471405
+2025-04-15 04:48:06 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.832768 mean_hd95 1.804738
+2025-04-15 04:48:06 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.738472 mean_hd95 4.231787
+2025-04-15 04:48:06 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.946200 mean_hd95 1.000000
+2025-04-15 04:48:07 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.751335 mean_hd95 2.707702
+2025-04-15 04:48:07 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.874435 mean_hd95 1.666667
+2025-04-15 04:48:08 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.880195 mean_hd95 1.412023
+2025-04-15 04:48:08 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.877919 mean_hd95 1.666667
+2025-04-15 04:48:09 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.834904 mean_hd95 2.412023
+2025-04-15 04:48:09 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.858669 mean_hd95 4.565120
+2025-04-15 04:48:10 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.758140 mean_hd95 6.207846
+2025-04-15 04:48:10 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.913201 mean_hd95 1.666667
+2025-04-15 04:48:11 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.832847 mean_hd95 2.138071
+2025-04-15 04:48:11 - INFO - Mean class 1 mean_dice 0.794784 mean_hd95 4.912621
+2025-04-15 04:48:11 - INFO - Mean class 2 mean_dice 0.853298 mean_hd95 1.280719
+2025-04-15 04:48:11 - INFO - Mean class 3 mean_dice 0.934335 mean_hd95 1.756777
+2025-04-15 04:48:11 - INFO - Testing performance in best val model: mean_dice : 0.860806 mean_hd95 : 2.650039
+2025-04-15 04:48:11 - INFO - Testing Finished
+2025-04-15 04:48:13 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:48:13 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:48:14 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_50.pth
+2025-04-15 04:48:14 - INFO - Starting inference process
+2025-04-15 04:48:14 - INFO - 40 test iterations per epoch
+2025-04-15 04:48:14 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.914538 mean_hd95 1.000000
+2025-04-15 04:48:15 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.821521 mean_hd95 2.246078
+2025-04-15 04:48:15 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.895980 mean_hd95 1.138071
+2025-04-15 04:48:15 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.899098 mean_hd95 1.483163
+2025-04-15 04:48:16 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.926246 mean_hd95 1.000000
+2025-04-15 04:48:16 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.882382 mean_hd95 1.244017
+2025-04-15 04:48:16 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.897034 mean_hd95 3.291336
+2025-04-15 04:48:16 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.868286 mean_hd95 1.384481
+2025-04-15 04:48:17 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.919611 mean_hd95 1.000000
+2025-04-15 04:48:17 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.801709 mean_hd95 2.138071
+2025-04-15 04:48:17 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.881048 mean_hd95 1.333333
+2025-04-15 04:48:18 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.904353 mean_hd95 1.333333
+2025-04-15 04:48:18 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.900989 mean_hd95 1.138071
+2025-04-15 04:48:18 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.907618 mean_hd95 1.138071
+2025-04-15 04:48:18 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.920161 mean_hd95 1.000000
+2025-04-15 04:48:19 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.893936 mean_hd95 1.000000
+2025-04-15 04:48:19 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.767512 mean_hd95 2.992575
+2025-04-15 04:48:19 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.066635 mean_hd95 15.003585
+2025-04-15 04:48:19 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.892339 mean_hd95 1.138071
+2025-04-15 04:48:20 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.824521 mean_hd95 3.343329
+2025-04-15 04:48:20 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.870158 mean_hd95 1.666667
+2025-04-15 04:48:20 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.614227 mean_hd95 8.149364
+2025-04-15 04:48:20 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.928089 mean_hd95 1.000000
+2025-04-15 04:48:20 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.870727 mean_hd95 1.666667
+2025-04-15 04:48:21 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.828865 mean_hd95 2.517564
+2025-04-15 04:48:21 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.746164 mean_hd95 3.811326
+2025-04-15 04:48:21 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.926434 mean_hd95 1.333333
+2025-04-15 04:48:21 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.849110 mean_hd95 1.883427
+2025-04-15 04:48:22 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.818035 mean_hd95 3.011815
+2025-04-15 04:48:22 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.669989 mean_hd95 3.778362
+2025-04-15 04:48:22 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.930492 mean_hd95 1.000000
+2025-04-15 04:48:22 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.790874 mean_hd95 2.890015
+2025-04-15 04:48:23 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.888939 mean_hd95 1.666667
+2025-04-15 04:48:24 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.853618 mean_hd95 8.882027
+2025-04-15 04:48:24 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.873656 mean_hd95 1.747547
+2025-04-15 04:48:25 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.850790 mean_hd95 2.000000
+2025-04-15 04:48:25 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.873248 mean_hd95 3.858830
+2025-04-15 04:48:26 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.769561 mean_hd95 6.784233
+2025-04-15 04:48:26 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.904917 mean_hd95 1.688165
+2025-04-15 04:48:27 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.864664 mean_hd95 1.715421
+2025-04-15 04:48:27 - INFO - Mean class 1 mean_dice 0.800540 mean_hd95 3.497754
+2025-04-15 04:48:27 - INFO - Mean class 2 mean_dice 0.808732 mean_hd95 1.962111
+2025-04-15 04:48:27 - INFO - Mean class 3 mean_dice 0.903834 mean_hd95 2.519912
+2025-04-15 04:48:27 - INFO - Testing performance in best val model: mean_dice : 0.837702 mean_hd95 : 2.659925
+2025-04-15 04:48:27 - INFO - Testing Finished
+2025-04-15 04:48:29 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:48:29 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:48:30 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_60.pth
+2025-04-15 04:48:30 - INFO - Starting inference process
+2025-04-15 04:48:30 - INFO - 40 test iterations per epoch
+2025-04-15 04:48:30 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.888925 mean_hd95 1.138071
+2025-04-15 04:48:31 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.813395 mean_hd95 2.609476
+2025-04-15 04:48:31 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.874728 mean_hd95 1.794111
+2025-04-15 04:48:31 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.873695 mean_hd95 1.745356
+2025-04-15 04:48:31 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.801397 mean_hd95 3.252024
+2025-04-15 04:48:32 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.792284 mean_hd95 3.129506
+2025-04-15 04:48:32 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.844736 mean_hd95 25.740658
+2025-04-15 04:48:32 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.843305 mean_hd95 12.407356
+2025-04-15 04:48:33 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.900561 mean_hd95 2.797113
+2025-04-15 04:48:33 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.814381 mean_hd95 8.609650
+2025-04-15 04:48:33 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.856200 mean_hd95 2.552285
+2025-04-15 04:48:34 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.901433 mean_hd95 1.412023
+2025-04-15 04:48:34 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.879184 mean_hd95 1.471405
+2025-04-15 04:48:34 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.904970 mean_hd95 1.138071
+2025-04-15 04:48:34 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.914135 mean_hd95 1.000000
+2025-04-15 04:48:34 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.867930 mean_hd95 1.471405
+2025-04-15 04:48:35 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.267711 mean_hd95 13.479049
+2025-04-15 04:48:35 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.045711 mean_hd95 9.522248
+2025-04-15 04:48:35 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.869043 mean_hd95 2.276142
+2025-04-15 04:48:35 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.836338 mean_hd95 3.043918
+2025-04-15 04:48:36 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.671359 mean_hd95 3.359452
+2025-04-15 04:48:36 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.553634 mean_hd95 10.156132
+2025-04-15 04:48:36 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.915554 mean_hd95 1.666667
+2025-04-15 04:48:36 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.888206 mean_hd95 1.138071
+2025-04-15 04:48:36 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.850379 mean_hd95 2.890040
+2025-04-15 04:48:37 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.757912 mean_hd95 9.569541
+2025-04-15 04:48:37 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.920136 mean_hd95 1.000000
+2025-04-15 04:48:37 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.791230 mean_hd95 2.466115
+2025-04-15 04:48:37 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.759456 mean_hd95 3.337497
+2025-04-15 04:48:38 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.260699 mean_hd95 10.302128
+2025-04-15 04:48:38 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.931376 mean_hd95 1.000000
+2025-04-15 04:48:38 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.836509 mean_hd95 1.794111
+2025-04-15 04:48:39 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.825958 mean_hd95 2.926663
+2025-04-15 04:48:39 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.876036 mean_hd95 1.382088
+2025-04-15 04:48:40 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.822779 mean_hd95 2.051957
+2025-04-15 04:48:40 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.785581 mean_hd95 2.850898
+2025-04-15 04:48:41 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.828165 mean_hd95 2.471405
+2025-04-15 04:48:41 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.721127 mean_hd95 4.023689
+2025-04-15 04:48:42 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.872182 mean_hd95 2.051957
+2025-04-15 04:48:42 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.826220 mean_hd95 1.996902
+2025-04-15 04:48:42 - INFO - Mean class 1 mean_dice 0.730807 mean_hd95 6.713422
+2025-04-15 04:48:42 - INFO - Mean class 2 mean_dice 0.753859 mean_hd95 2.656531
+2025-04-15 04:48:42 - INFO - Mean class 3 mean_dice 0.876676 mean_hd95 3.306935
+2025-04-15 04:48:42 - INFO - Testing performance in best val model: mean_dice : 0.787114 mean_hd95 : 4.225629
+2025-04-15 04:48:42 - INFO - Testing Finished
+2025-04-15 04:48:45 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:48:45 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:48:46 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_70.pth
+2025-04-15 04:48:46 - INFO - Starting inference process
+2025-04-15 04:48:46 - INFO - 40 test iterations per epoch
+2025-04-15 04:48:46 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.907816 mean_hd95 5.847826
+2025-04-15 04:48:46 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.784511 mean_hd95 46.217320
+2025-04-15 04:48:47 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.898545 mean_hd95 1.333333
+2025-04-15 04:48:47 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.887162 mean_hd95 1.745356
+2025-04-15 04:48:47 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.822849 mean_hd95 1.959438
+2025-04-15 04:48:47 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.777828 mean_hd95 2.486695
+2025-04-15 04:48:48 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.800713 mean_hd95 31.372251
+2025-04-15 04:48:48 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.763105 mean_hd95 32.492767
+2025-04-15 04:48:48 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.902714 mean_hd95 31.870299
+2025-04-15 04:48:49 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.811292 mean_hd95 31.707152
+2025-04-15 04:48:49 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.887112 mean_hd95 4.803225
+2025-04-15 04:48:49 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.894403 mean_hd95 3.514668
+2025-04-15 04:48:50 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.841732 mean_hd95 11.189658
+2025-04-15 04:48:50 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.837931 mean_hd95 11.196704
+2025-04-15 04:48:50 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.904331 mean_hd95 1.138071
+2025-04-15 04:48:50 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.663541 mean_hd95 17.591645
+2025-04-15 04:48:50 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.159977 mean_hd95 10.907232
+2025-04-15 04:48:51 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.001659 mean_hd95 10.929063
+2025-04-15 04:48:51 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.893157 mean_hd95 1.138071
+2025-04-15 04:48:51 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.810207 mean_hd95 3.929145
+2025-04-15 04:48:51 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.567249 mean_hd95 8.519490
+2025-04-15 04:48:51 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.420745 mean_hd95 8.033123
+2025-04-15 04:48:52 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.902798 mean_hd95 5.309463
+2025-04-15 04:48:52 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.854679 mean_hd95 6.802290
+2025-04-15 04:48:52 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.734450 mean_hd95 27.406284
+2025-04-15 04:48:52 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.673652 mean_hd95 29.489871
+2025-04-15 04:48:53 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.929535 mean_hd95 1.000000
+2025-04-15 04:48:53 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.573649 mean_hd95 3.048351
+2025-04-15 04:48:53 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.841613 mean_hd95 2.433521
+2025-04-15 04:48:53 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.375541 mean_hd95 7.728930
+2025-04-15 04:48:54 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.882312 mean_hd95 1.747547
+2025-04-15 04:48:54 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.610837 mean_hd95 11.264239
+2025-04-15 04:48:55 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.886583 mean_hd95 2.333333
+2025-04-15 04:48:55 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.884614 mean_hd95 2.413667
+2025-04-15 04:48:56 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.889998 mean_hd95 1.550094
+2025-04-15 04:48:56 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.859958 mean_hd95 2.138071
+2025-04-15 04:48:57 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.853254 mean_hd95 28.649694
+2025-04-15 04:48:57 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.709095 mean_hd95 32.451385
+2025-04-15 04:48:58 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.908876 mean_hd95 2.832325
+2025-04-15 04:48:58 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.761779 mean_hd95 8.057524
+2025-04-15 04:48:58 - INFO - Mean class 1 mean_dice 0.727865 mean_hd95 22.751966
+2025-04-15 04:48:58 - INFO - Mean class 2 mean_dice 0.732909 mean_hd95 8.897358
+2025-04-15 04:48:58 - INFO - Mean class 3 mean_dice 0.817111 mean_hd95 2.594110
+2025-04-15 04:48:58 - INFO - Testing performance in best val model: mean_dice : 0.759295 mean_hd95 : 11.414478
+2025-04-15 04:48:58 - INFO - Testing Finished
+2025-04-15 04:49:00 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:49:00 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:49:01 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_80.pth
+2025-04-15 04:49:01 - INFO - Starting inference process
+2025-04-15 04:49:01 - INFO - 40 test iterations per epoch
+2025-04-15 04:49:02 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.927212 mean_hd95 1.000000
+2025-04-15 04:49:02 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.824238 mean_hd95 1.720759
+2025-04-15 04:49:02 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.898281 mean_hd95 1.138071
+2025-04-15 04:49:03 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.898464 mean_hd95 1.138071
+2025-04-15 04:49:03 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.938098 mean_hd95 1.000000
+2025-04-15 04:49:03 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.889789 mean_hd95 1.000000
+2025-04-15 04:49:03 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.884922 mean_hd95 16.808228
+2025-04-15 04:49:04 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.854504 mean_hd95 3.542798
+2025-04-15 04:49:04 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.907433 mean_hd95 1.000000
+2025-04-15 04:49:04 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.825541 mean_hd95 1.804738
+2025-04-15 04:49:05 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.901629 mean_hd95 1.333333
+2025-04-15 04:49:05 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.923323 mean_hd95 1.000000
+2025-04-15 04:49:05 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.915942 mean_hd95 1.000000
+2025-04-15 04:49:05 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.931240 mean_hd95 1.000000
+2025-04-15 04:49:06 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.914334 mean_hd95 1.000000
+2025-04-15 04:49:06 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.857694 mean_hd95 1.550094
+2025-04-15 04:49:06 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.851754 mean_hd95 1.883427
+2025-04-15 04:49:06 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.599843 mean_hd95 3.534003
+2025-04-15 04:49:07 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.892716 mean_hd95 1.244017
+2025-04-15 04:49:07 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.810001 mean_hd95 3.668292
+2025-04-15 04:49:07 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.852611 mean_hd95 2.366340
+2025-04-15 04:49:07 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.653878 mean_hd95 10.922751
+2025-04-15 04:49:07 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.927140 mean_hd95 1.000000
+2025-04-15 04:49:08 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.897831 mean_hd95 1.138071
+2025-04-15 04:49:08 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.829842 mean_hd95 2.078689
+2025-04-15 04:49:08 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.689367 mean_hd95 3.890538
+2025-04-15 04:49:08 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.941893 mean_hd95 1.000000
+2025-04-15 04:49:09 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.836709 mean_hd95 1.609476
+2025-04-15 04:49:09 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.860809 mean_hd95 2.051957
+2025-04-15 04:49:09 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.657751 mean_hd95 3.572691
+2025-04-15 04:49:10 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.911321 mean_hd95 1.000000
+2025-04-15 04:49:10 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.709040 mean_hd95 3.614282
+2025-04-15 04:49:10 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.891350 mean_hd95 1.550094
+2025-04-15 04:49:11 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.892803 mean_hd95 1.959438
+2025-04-15 04:49:11 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.886798 mean_hd95 1.412023
+2025-04-15 04:49:12 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.850330 mean_hd95 1.609476
+2025-04-15 04:49:12 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.906499 mean_hd95 1.333333
+2025-04-15 04:49:13 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.754761 mean_hd95 3.080880
+2025-04-15 04:49:13 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.928098 mean_hd95 1.000000
+2025-04-15 04:49:14 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.846279 mean_hd95 1.794111
+2025-04-15 04:49:14 - INFO - Mean class 1 mean_dice 0.835901 mean_hd95 4.150637
+2025-04-15 04:49:14 - INFO - Mean class 2 mean_dice 0.813271 mean_hd95 1.570129
+2025-04-15 04:49:14 - INFO - Mean class 3 mean_dice 0.913733 mean_hd95 1.430482
+2025-04-15 04:49:14 - INFO - Testing performance in best val model: mean_dice : 0.854302 mean_hd95 : 2.383750
+2025-04-15 04:49:14 - INFO - Testing Finished
+2025-04-15 04:49:16 - INFO - log file will be setted at ./result/UNet/ACDC_NoPretrain/Test/Test.log
+2025-04-15 04:49:16 - INFO - Now is Going to use cuda: NVIDIA GeForce RTX 2080 Ti
+2025-04-15 04:49:17 - INFO - Model loaded from ./result/UNet/ACDC_NoPretrain/Pth/epoch_90.pth
+2025-04-15 04:49:17 - INFO - Starting inference process
+2025-04-15 04:49:17 - INFO - 40 test iterations per epoch
+2025-04-15 04:49:18 - INFO - idx 0 case case_002_volume_ED.npz mean_dice 0.918446 mean_hd95 1.138071
+2025-04-15 04:49:18 - INFO - idx 1 case case_002_volume_ES.npz mean_dice 0.856622 mean_hd95 1.276142
+2025-04-15 04:49:18 - INFO - idx 2 case case_003_volume_ED.npz mean_dice 0.899586 mean_hd95 11.767217
+2025-04-15 04:49:18 - INFO - idx 3 case case_003_volume_ES.npz mean_dice 0.893103 mean_hd95 11.809282
+2025-04-15 04:49:19 - INFO - idx 4 case case_008_volume_ED.npz mean_dice 0.910255 mean_hd95 16.849648
+2025-04-15 04:49:19 - INFO - idx 5 case case_008_volume_ES.npz mean_dice 0.884990 mean_hd95 1.550094
+2025-04-15 04:49:19 - INFO - idx 6 case case_009_volume_ED.npz mean_dice 0.846772 mean_hd95 30.468648
+2025-04-15 04:49:20 - INFO - idx 7 case case_009_volume_ES.npz mean_dice 0.819303 mean_hd95 29.801353
+2025-04-15 04:49:20 - INFO - idx 8 case case_012_volume_ED.npz mean_dice 0.891511 mean_hd95 9.654158
+2025-04-15 04:49:20 - INFO - idx 9 case case_012_volume_ES.npz mean_dice 0.783442 mean_hd95 7.621783
+2025-04-15 04:49:20 - INFO - idx 10 case case_014_volume_ED.npz mean_dice 0.895874 mean_hd95 1.333333
+2025-04-15 04:49:21 - INFO - idx 11 case case_014_volume_ES.npz mean_dice 0.923900 mean_hd95 1.000000
+2025-04-15 04:49:21 - INFO - idx 12 case case_017_volume_ED.npz mean_dice 0.917605 mean_hd95 1.000000
+2025-04-15 04:49:21 - INFO - idx 13 case case_017_volume_ES.npz mean_dice 0.929217 mean_hd95 1.000000
+2025-04-15 04:49:21 - INFO - idx 14 case case_024_volume_ED.npz mean_dice 0.907255 mean_hd95 1.000000
+2025-04-15 04:49:22 - INFO - idx 15 case case_024_volume_ES.npz mean_dice 0.864283 mean_hd95 1.471405
+2025-04-15 04:49:22 - INFO - idx 16 case case_042_volume_ED.npz mean_dice 0.884534 mean_hd95 1.804738
+2025-04-15 04:49:22 - INFO - idx 17 case case_042_volume_ES.npz mean_dice 0.741729 mean_hd95 3.054093
+2025-04-15 04:49:22 - INFO - idx 18 case case_048_volume_ED.npz mean_dice 0.897918 mean_hd95 1.412023
+2025-04-15 04:49:23 - INFO - idx 19 case case_048_volume_ES.npz mean_dice 0.811020 mean_hd95 3.492157
+2025-04-15 04:49:23 - INFO - idx 20 case case_049_volume_ED.npz mean_dice 0.849221 mean_hd95 3.696138
+2025-04-15 04:49:23 - INFO - idx 21 case case_049_volume_ES.npz mean_dice 0.545254 mean_hd95 14.616362
+2025-04-15 04:49:23 - INFO - idx 22 case case_053_volume_ED.npz mean_dice 0.900230 mean_hd95 5.220043
+2025-04-15 04:49:23 - INFO - idx 23 case case_053_volume_ES.npz mean_dice 0.850331 mean_hd95 6.823228
+2025-04-15 04:49:24 - INFO - idx 24 case case_055_volume_ED.npz mean_dice 0.862091 mean_hd95 1.276142
+2025-04-15 04:49:24 - INFO - idx 25 case case_055_volume_ES.npz mean_dice 0.830307 mean_hd95 1.715421
+2025-04-15 04:49:24 - INFO - idx 26 case case_064_volume_ED.npz mean_dice 0.939078 mean_hd95 1.000000
+2025-04-15 04:49:24 - INFO - idx 27 case case_064_volume_ES.npz mean_dice 0.843217 mean_hd95 1.626105
+2025-04-15 04:49:25 - INFO - idx 28 case case_067_volume_ED.npz mean_dice 0.849002 mean_hd95 2.423123
+2025-04-15 04:49:25 - INFO - idx 29 case case_067_volume_ES.npz mean_dice 0.621607 mean_hd95 3.280540
+2025-04-15 04:49:25 - INFO - idx 30 case case_079_volume_ED.npz mean_dice 0.906245 mean_hd95 1.138071
+2025-04-15 04:49:26 - INFO - idx 31 case case_079_volume_ES.npz mean_dice 0.815210 mean_hd95 2.149830
+2025-04-15 04:49:26 - INFO - idx 32 case case_081_volume_ED.npz mean_dice 0.876181 mean_hd95 1.804738
+2025-04-15 04:49:27 - INFO - idx 33 case case_081_volume_ES.npz mean_dice 0.866233 mean_hd95 4.165612
+2025-04-15 04:49:27 - INFO - idx 34 case case_088_volume_ED.npz mean_dice 0.890575 mean_hd95 1.412023
+2025-04-15 04:49:28 - INFO - idx 35 case case_088_volume_ES.npz mean_dice 0.826830 mean_hd95 2.333333
+2025-04-15 04:49:28 - INFO - idx 36 case case_092_volume_ED.npz mean_dice 0.891549 mean_hd95 1.621234
+2025-04-15 04:49:29 - INFO - idx 37 case case_092_volume_ES.npz mean_dice 0.796272 mean_hd95 8.285554
+2025-04-15 04:49:29 - INFO - idx 38 case case_095_volume_ED.npz mean_dice 0.916142 mean_hd95 1.000000
+2025-04-15 04:49:30 - INFO - idx 39 case case_095_volume_ES.npz mean_dice 0.840333 mean_hd95 2.048755
+2025-04-15 04:49:30 - INFO - Mean class 1 mean_dice 0.818247 mean_hd95 8.984951
+2025-04-15 04:49:30 - INFO - Mean class 2 mean_dice 0.831944 mean_hd95 2.694400
+2025-04-15 04:49:30 - INFO - Mean class 3 mean_dice 0.914305 mean_hd95 3.781179
+2025-04-15 04:49:30 - INFO - Testing performance in best val model: mean_dice : 0.854832 mean_hd95 : 5.153510
+2025-04-15 04:49:30 - INFO - Testing Finished

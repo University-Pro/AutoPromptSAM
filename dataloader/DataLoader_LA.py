@@ -1,3 +1,6 @@
+"""
+LA数据集的Dataloader
+"""
 from torch.utils.data import Dataset
 import h5py
 import os
@@ -109,7 +112,7 @@ def LA_dataset_test():
                             RandomCrop(patch_size),
                             ToTensor(),
                         ]),
-                        num=80)
+                        num=16)
     
     # 打印数据集大小
     print(f"Dataset size: {len(db_train)}")

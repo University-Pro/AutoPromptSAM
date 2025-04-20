@@ -1,6 +1,7 @@
 """
 LA数据集的测试函数
 为了和SupervisedV2版本适配
+用于测试半监督模型的相关性能
 """
 
 import logging
@@ -22,13 +23,12 @@ from skimage.measure import label  # 用于标记连通区域
 from collections import OrderedDict
 
 # 导入网络
-from networks.VNet import VNet
+# from networks.VNet import VNet
+# from networks.SAM3D_VNet_SSL_V2 import Network
+from networks.SAM3D_VNet_SSL_V3 import Network
 
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart
-
-# 设置可见GPU
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 # 设置随机种子
 def set_seed(seed_value=42):
@@ -468,7 +468,7 @@ if __name__ == '__main__':
     parser.add_argument("--model_load", type=str, default='./result/your_model/Pth/model_epoch_xx_checkpoint.pth', help='The path of the checkpoint')
     parser.add_argument("--log_path", type=str, default='./result/your_model/Test/running.log', help='The path of the test log')
     parser.add_argument("--patch_size", type=str, default='(112, 112, 80)', help='The resolution of test image size (tuple as string)')
-    parser.add_argument("--test_save_path", type=str, default='./test_results/', help="The path to save segmentation results")
+    parser.add_argument("--test_save_path", type=str, default=None, help="The path to save segmentation results")
     parser.add_argument("--root_path", type=str, default='./datasets/LA', help='The path of the dataset')
     parser.add_argument("--num_classes", type=int, default=2, help='The number of classes')
     parser.add_argument("--num_outputs", type=int, default=1, help='The number of outputs of the model')
@@ -487,8 +487,9 @@ if __name__ == '__main__':
 
     # 创建模型实例
     logging.info(f"Creating model: {option.model_name}")
-    model = VNet(n_channels=1, n_classes=option.num_classes, normalization="batchnorm",has_dropout=False).to(device=device)
-    
+    # model = VNet(n_channels=1, n_classes=option.num_classes, normalization="batchnorm",has_dropout=False).to(device=device)
+    model = Network().to(device=device)
+
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")
     model = load_model(model, option.model_load, device)
@@ -518,7 +519,7 @@ if __name__ == '__main__':
         num_classes=option.num_classes, 
         patch_size=tuple(map(int, option.patch_size.strip('()').split(','))),
         stride_xy=18, stride_z=4, 
-        save_result=True, 
+        save_result=False, 
         test_save_path=option.test_save_path, 
         preproc_fn=None, 
         metric_detail=1, 

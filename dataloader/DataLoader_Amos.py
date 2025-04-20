@@ -1,156 +1,135 @@
+"""
+Amos数据集dataloader
+训练数据240
+"""
 import numpy as np
 import os
 from tqdm import tqdm
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms
+from torch.utils.data import Dataset
+from typing import Tuple, Dict
 
-# 配置类，用于根据任务设置相关参数
-class Config:
-    def __init__(self, task):
-        # 根据任务类型加载不同的数据路径和参数配置
-        if task == "synapse":
-            self.base_dir = './Datasets/Synapse'  # 基本数据目录
-            self.save_dir = './synapse_data'  # 保存数据目录
-            self.patch_size = (64, 128, 128)  # 图像的切片大小
-            self.num_cls = 14  # 类别数
-            self.num_channels = 1  # 输入图像的通道数
-            self.n_filters = 32  # 网络中卷积层的滤波器数量
-            self.early_stop_patience = 100  # 早停的耐心度（训练多少个周期没有提升就停止）
-        else:  # 如果任务是 amos
-            self.base_dir = './datasets'  # 基本数据目录
-            self.save_dir = './datasets/Amos/data'  # 保存数据目录
-            self.patch_size = (64, 128, 128)  # 图像的切片大小
-            self.num_cls = 16  # 类别数
-            self.num_channels = 1  # 输入图像的通道数
-            self.n_filters = 32  # 网络中卷积层的滤波器数量
-            self.early_stop_patience = 50  # 早停的耐心度（训练多少个周期没有提升就停止）
+class AmosConfig:
+    def __init__(
+        self,
+        save_dir: str = "./datasets/Amos",  # 修改为更合理的默认路径
+        patch_size: Tuple[int, int, int] = (64, 128, 128),
+        num_classes: int = 16,
+    ):
+        self.save_dir = save_dir
+        self.patch_size = patch_size
+        self.num_classes = num_classes
 
-# 读取训练、验证或测试的样本列表
-def read_list(split, task="synapse"):
-    config = Config(task)  # 初始化配置
-    ids_list = np.loadtxt(
-        os.path.join(config.save_dir, 'splits', f'{split}.txt'),  # 从对应的路径加载split.txt文件
-        dtype=str  # 强制数据为字符串类型
-    ).tolist()
-    return sorted(ids_list)  # 返回排序后的文件ID列表
+class AmosDataset(Dataset):
+    def __init__(
+        self,
+        split: str = 'train',
+        config: AmosConfig = AmosConfig(),
+        transform=None,
+        preload: bool = False,
+        training_num: int = None
+    ):
+        # 初始化配置
+        self.config = config
+        
+        # 读取数据列表
+        self.ids_list = self._read_list(split)
+        
+        # 应用样本数量限制
+        if training_num is not None and training_num > 0:
+            self.ids_list = self.ids_list[:training_num]
+        
+        # 预加载设置
+        self.preload = preload
+        self.data_cache = {}
+        if preload:
+            self._preload_data()
+        
+        self.transform = transform
 
-# 读取数据：包括图像和标签
-def read_data(data_id, task, nifti=False, test=False, normalize=False):
-    config = Config(task)  # 初始化配置
-    im_path = os.path.join(config.save_dir, 'npy', f'{data_id}_image.npy')  # 图像文件路径
-    lb_path = os.path.join(config.save_dir, 'npy', f'{data_id}_label.npy')  # 标签文件路径
+    def _read_list(self, split: str) -> list:
+        """读取数据分割列表"""
+        list_path = os.path.join(self.config.save_dir, f"{split}.txt")
+        if not os.path.exists(list_path):
+            raise FileNotFoundError(f"Split file {list_path} not found")
+        
+        ids = np.loadtxt(list_path, dtype=str).tolist()
+        return sorted(ids)
 
-    # 如果路径不存在，抛出错误
-    if not os.path.exists(im_path) or not os.path.exists(lb_path):
-        raise ValueError(f"数据不存在：{data_id}")
-    
-    # 加载图像和标签数据
-    image = np.load(im_path)
-    label = np.load(lb_path)
+    def _preload_data(self):
+        """预加载数据到内存"""
+        for data_id in tqdm(self.ids_list, desc=f"Preloading {len(self.ids_list)} samples"):
+            self.data_cache[data_id] = self._load_sample(data_id)
 
-    # 如果需要归一化，进行数据归一化处理
-    if normalize:
-        image = image.clip(min=-75, max=275)  # 限制图像的值域
-        image = (image - image.min()) / (image.max() - image.min())  # 归一化到0-1区间
-        image = image.astype(np.float32)  # 转换为32位浮点数
-
-    return image, label  # 返回图像和标签
-
-# 定义一个数据集类，继承自PyTorch的Dataset类
-class Synapse_AMOS(Dataset):
-    def __init__(self, split='train', repeat=None, transform=None, unlabeled=False, is_val=False, task="synapse", num_cls=1):
-        # 初始化参数并加载数据
-        self.ids_list = read_list(split, task=task)  # 加载指定split的ID列表
-        self.repeat = repeat  # 设置数据重复次数
-        self.task = task  # 任务类型
-        if self.repeat is None:
-            self.repeat = len(self.ids_list)  # 如果未指定重复次数，则使用数据集的长度
-        print('total {} datas'.format(self.repeat))  # 输出数据集大小
-        self.transform = transform  # 数据转换（例如数据增强）
-        self.unlabeled = unlabeled  # 是否是无标签数据
-        self.num_cls = num_cls  # 类别数
-        self._weight = None  # 类别权重
-        self.is_val = is_val  # 是否是验证集
-
-        # 如果是验证集，直接将数据加载到内存中
-        if self.is_val:
-            self.data_list = {}
-            for data_id in tqdm(self.ids_list):  # 遍历ID列表并加载数据
-                image, label = read_data(data_id, task=task)
-                self.data_list[data_id] = (image, label)
-
-    # 返回数据集的长度
-    def __len__(self):
-        return self.repeat
-
-    # 获取数据的方法
-    def _get_data(self, data_id):
-        if self.is_val:
-            image, label = self.data_list[data_id]  # 如果是验证集，从内存中获取数据
-        else:
-            image, label = read_data(data_id, task=self.task)  # 否则从文件中读取数据
-        return data_id, image, label
-
-    # 获取一个样本
-    def __getitem__(self, index):
-        index = index % len(self.ids_list)  # 根据索引获取ID，确保不越界
-        data_id = self.ids_list[index]  # 获取数据ID
-        _, image, label = self._get_data(data_id)  # 获取对应的图像和标签
-
-        if self.unlabeled:  # 如果是无标签数据，将标签置为0
-            label[:] = 0
-
+    def _load_sample(self, data_id: str) -> Tuple[np.ndarray, np.ndarray]:
+        """加载单个样本"""
+        img_path = os.path.join(self.config.save_dir, 'data', f'{data_id}_image.npy')
+        label_path = os.path.join(self.config.save_dir, 'data', f'{data_id}_label.npy')
+        
+        # 检查文件存在性
+        if not os.path.exists(img_path):
+            raise FileNotFoundError(f"Image {img_path} not found")
+        if not os.path.exists(label_path):
+            raise FileNotFoundError(f"Label {label_path} not found")
+        
+        # 加载并预处理数据
+        image = np.load(img_path)
+        label = np.load(label_path)
+        
         # 归一化处理
-        image = image.clip(min=-75, max=275)  # 限制像素值范围
-        image = (image - image.min()) / (image.max() - image.min())  # 归一化到0-1
+        image = np.clip(image, -75, 275)
+        image = (image - image.min()) / (image.max() - image.min() + 1e-8)
+        return image.astype(np.float32), label.astype(np.int64)
 
-        sample = {'image': image, 'label': label}  # 包装样本
+    def __len__(self) -> int:
+        return len(self.ids_list)
 
+    def __getitem__(self, index: int) -> Dict:
+        data_id = self.ids_list[index]
+        
+        # 获取数据
+        if self.preload:
+            image, label = self.data_cache[data_id]
+        else:
+            image, label = self._load_sample(data_id)
+        
+        # 构建样本字典
+        sample = {
+            'image': image,
+            'label': label,
+            'id': data_id
+        }
+        
+        # 数据增强
         if self.transform:
-            sample = self.transform(sample)  # 如果有数据增强，进行转换
+            sample = self.transform(sample)
+            
+        return sample
 
-        return sample  # 返回样本
+def analyze_dataset(split: str, training_num: int = None):
+    """数据集分析工具（带错误处理）"""
+    try:
+        config = AmosConfig(save_dir="./datasets/Amos")  # 显式指定路径
+        dataset = AmosDataset(
+            split=split,
+            config=config,
+            training_num=training_num
+        )
+        
+        # 获取第一个样本
+        sample = dataset[0]
+        
+        print(f"\nAMOS {split.upper()} 数据集分析结果:")
+        print(f"- 总样本数: {len(dataset)}")
+        print(f"- 图像尺寸: {sample['image'].shape}")
+        print(f"- 标签尺寸: {sample['label'].shape}")
+        print(f"- 像素值范围: [{sample['image'].min():.2f}, {sample['image'].max():.2f}]")
+        print(f"- 唯一标签值: {np.unique(sample['label'])}")
+        print("-"*60)
+        
+    except Exception as e:
+        print(f"\n分析{split}数据集时出错: {str(e)}")
 
-# 读取测试数据的函数
-def read_test_data(num_samples=5, task="amos"):
-    config = Config(task)  # 使用 AMOS 配置
-    ids_list = read_list('train', task=task)  # 获取训练集列表
-    
-    # 获取前几个样本ID
-    test_samples = ids_list[:num_samples]
-    print(f"读取前{num_samples}个样本数据：")
-    
-    # 读取样本数据
-    for data_id in test_samples:
-        image, label = read_data(data_id, task=task, normalize=True)
-        print(f"样本ID: {data_id}，图像形状: {image.shape}，标签形状: {label.shape}")
-        # 这里可以进行其他测试操作，比如查看数据、可视化等
-
-# 创建 DataLoader 用于训练或测试
-# def get_dataloader(dst_cls, args, split='train', repeat=None, unlabeled=False, config=None, transforms=None):
-#     dst = dst_cls(
-#         task=args.task,
-#         split=split,
-#         repeat=repeat,
-#         unlabeled=unlabeled,
-#         num_cls=config.num_cls,
-#         transform=transforms.Compose([
-#             RandomCrop(config.patch_size, args.task),
-#             RandomFlip_LR(),
-#             RandomFlip_UD(),
-#             ToTensor()
-#         ])
-#     )
-#     return DataLoader(
-#         dst,
-#         batch_size=args.batch_size,
-#         shuffle=True,
-#         num_workers=args.num_workers,
-#         pin_memory=True,
-#         worker_init_fn=seed_worker
-#     )
-
-# 主程序入口
 if __name__ == "__main__":
-    # 读取并显示前5个样本的测试数据
-    read_test_data(num_samples=5, task="amos")
+    # 测试所有分割数据集
+    for split in ['train', 'test', 'eval']:
+        analyze_dataset(split, training_num=24)  # 测试前5个样本
