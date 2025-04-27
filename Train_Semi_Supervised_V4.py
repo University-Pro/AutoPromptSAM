@@ -236,6 +236,13 @@ if __name__ == "__main__":
     # model = UNet_Full(n_channels=1, n_classes=args.num_classes).to(device)
     # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth").to(device=device)
     model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
+    
+    # 冻结Network的ImageEncoder3D模块
+    for param in model.samencoder.parameters():
+        param.requires_grad = False
+        # 输出冻结的参数量
+        print(f"冻结参数: {param.shape}")
+        logging.info("冻结ImageEncoder3D模块的参数")
 
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:
