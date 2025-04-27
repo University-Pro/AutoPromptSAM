@@ -4,8 +4,11 @@ import argparse
 import torch
 import torch.nn.functional as F
 import numpy as np
+import csv
+from datetime import datetime
 import SimpleITK as sitk
 from tqdm import tqdm
+from medpy import metric
 from typing import Tuple, Dict
 
 # 导入VNet模型和数据集类
@@ -88,138 +91,173 @@ def test_single_case(net, image: np.ndarray, stride_xy: int, stride_z: int, patc
     print(f"分数图形状: {score_map_np.shape}")  # 应为 (num_classes, D, H, W)
     return pred_map, score_map_np
 
+def calculate_metrics(pred: np.ndarray, target: np.ndarray, num_classes: int) -> dict:
+    """
+    计算Dice系数和HD95距离
+    """
+    metrics = {'Dice': 0.0, 'HD95': 0.0}
+    
+    # 仅计算前景类别（排除背景0）
+    for cls in range(1, num_classes):
+        pred_cls = (pred == cls).astype(np.uint8)
+        target_cls = (target == cls).astype(np.uint8)
+        
+        if np.sum(target_cls) == 0:
+            continue
+            
+        # 计算Dice
+        dice = metric.binary.dc(pred_cls, target_cls)
+        metrics['Dice'] += dice
+        
+        # 计算HD95
+        try:
+            hd = metric.binary.hd95(pred_cls, target_cls)
+            metrics['HD95'] += hd
+        except RuntimeError:
+            hd = np.nan
+            
+    # 平均指标
+    valid_classes = num_classes - 1  # 排除背景
+    metrics['Dice'] /= valid_classes
+    metrics['HD95'] /= valid_classes
+    
+    return metrics
+
+def save_metrics_to_log(metrics_log: str, case_metrics: dict, header: bool = False):
+    """保存指标到CSV日志文件"""
+    fieldnames = ['CaseID', 'Dice', 'HD95', 'Timestamp']
+    mode = 'w' if header else 'a'
+    
+    with open(metrics_log, mode, newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        if header:
+            writer.writeheader()
+        writer.writerow({
+            'CaseID': case_metrics['id'],
+            'Dice': case_metrics['Dice'],
+            'HD95': case_metrics['HD95'],
+            'Timestamp': datetime.now().isoformat()
+        })
+
+# --- 主执行块 ---
 # --- 主执行块 ---
 if __name__ == '__main__':
+    # 参数解析
     parser = argparse.ArgumentParser(description="在Amos数据集上测试VNet模型")
     parser.add_argument('--model_path', type=str, required=True,
-                       help='预训练VNet .pth模型文件路径')
+                      help='预训练VNet .pth模型文件路径')
     parser.add_argument('--amos_data_path', type=str, default='./datasets/Amos',
-                       help='Amos数据集根目录（包含test.txt和data文件夹）')
+                      help='Amos数据集根目录（包含test.txt和data文件夹）')
     parser.add_argument('--output_dir', type=str, default='./result/VNet/Amos/Test',
-                       help='保存预测结果的目录（.nii.gz文件）')
+                      help='保存预测结果的目录（.nii.gz文件）')
     parser.add_argument('--split', type=str, default='test', choices=['test', 'eval', 'train'],
-                       help='用于测试的Amos数据集分割')
+                      help='用于测试的Amos数据集分割')
     parser.add_argument('--speed', type=int, default=0, choices=[0, 1, 2],
-                       help='推理速度/步长设置（0: 慢/小步长，1: 中，2: 快/大步长）')
+                      help='推理速度/步长设置（0: 慢/小步长，1: 中，2: 快/大步长）')
     parser.add_argument('-g', '--gpu', type=str, default='0',
-                       help='使用的GPU（例如 "0", "0,1"）')
-    # 如果VNet参数未固定或未保存在检查点中，则添加参数
+                      help='使用的GPU（例如 "0", "0,1"）')
     parser.add_argument('--n_filters', type=int, default=16, help='VNet基础滤波器数量')
     parser.add_argument('--num_channels', type=int, default=1, help='VNet输入通道数')
+    parser.add_argument('--metrics_log', type=str, default='./result/metrics_log.csv',
+                      help='评估指标日志文件路径')
+    parser.add_argument('--save_images', action='store_true',
+                      help='是否保存预测结果图像')
     
     args = parser.parse_args()
     
-    # 设置GPU环境变量
+    # 初始化设置
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    maybe_mkdir(args.output_dir)
     
-    # --- 配置 ---
-    # 使用AmosConfig获取数据集特定参数
-    amos_config = AmosConfig(save_dir=args.amos_data_path)
-    
-    # 可能需要根据VNet训练方式或内存限制调整patch_size
-    # 这里使用AmosConfig的默认值，但要确保与VNet兼容
+    # 数据集配置（关键修改点1：设置全尺寸）
+    amos_config = AmosConfig(
+        save_dir=args.amos_data_path,
+        patch_size=(80, 160, 160)  # 全尺寸设置
+    )
     patch_size = amos_config.patch_size
-    num_classes = amos_config.num_classes  # 从Amos配置获取类别数
-    
-    # 根据速度参数定义步长（类似原始脚本）
-    stride_dict = {
-        # stride_xy, stride_z（根据patch_size和期望重叠调整）
-        0: (patch_size[1] // 4, patch_size[0] // 4),  # 小步长，更多重叠（更慢）
-        1: (patch_size[1] // 2, patch_size[0] // 2),  # 中步长
-        2: (patch_size[1], patch_size[0]),            # 大步长，更少重叠（更快）- 可能效果较差
+    num_classes = amos_config.num_classes
+
+    # 步长配置
+    stride_config = {
+        0: (patch_size[1]//4, patch_size[0]//4),
+        1: (patch_size[1]//2, patch_size[0]//2),
+        2: (patch_size[1], patch_size[0])
     }
+    stride_xy, stride_z = [max(1, x) for x in stride_config[args.speed]]
     
-    # 确保步长至少为1
-    stride_xy = max(1, stride_dict[args.speed][0])
-    stride_z = max(1, stride_dict[args.speed][1])
-    
-    # 创建输出目录
-    test_save_path = args.output_dir
-    maybe_mkdir(test_save_path)
-    print(f"预测结果将保存至: {test_save_path}")
-    
-    # --- 模型初始化和加载 ---
-    print("正在初始化VNet模型...")
-    # 确保VNet参数与加载的检查点匹配
+    # 模型初始化
     model = VNet(
-        n_channels=args.num_channels,  # 灰度医学图像应为1
+        n_channels=args.num_channels,
         n_classes=num_classes,
         n_filters=args.n_filters,
-        normalization='batchnorm',  # 或根据训练使用'groupnorm'
-        has_dropout=False           # 推理时通常为False
-    ).cuda()
+        normalization='batchnorm',
+        has_dropout=False
+    ).to(device)
     
-    # 如果VNet定义中没有num_classes属性则添加（用于虚拟类）
-    if not hasattr(model, 'num_classes'):
-        model.num_classes = num_classes
+    # 加载模型权重
+    if os.path.exists(args.model_path):
+        checkpoint = torch.load(args.model_path, map_location=device)
+        model.load_state_dict(checkpoint['state_dict'] if 'state_dict' in checkpoint else checkpoint)
+    else:
+        raise FileNotFoundError(f"模型文件不存在: {args.model_path}")
+    model.eval()
 
-    print(f"正在从 {args.model_path} 加载模型权重...")
-    if not os.path.exists(args.model_path):
-        raise FileNotFoundError(f"在 {args.model_path} 找不到模型检查点")
-    try:
-        # 加载状态字典
-        checkpoint = torch.load(args.model_path, map_location='cuda')
-        # 尝试常见状态字典键名，必要时调整
-        if 'state_dict' in checkpoint:
-            model.load_state_dict(checkpoint['state_dict'])
-        elif 'model_state_dict' in checkpoint:
-             model.load_state_dict(checkpoint['model_state_dict'])
-        elif 'net' in checkpoint:
-             model.load_state_dict(checkpoint['net'])
-        elif 'A' in checkpoint and 'B' not in checkpoint:  # 处理双模型设置中的单个模型保存
-             model.load_state_dict(checkpoint['A'])
-        else:
-            # 假设检查点文件直接包含状态字典
-            model.load_state_dict(checkpoint)
-        print("模型权重加载成功。")
-    except Exception as e:
-        print(f"加载状态字典时出错: {e}")
-        print("请确保模型架构与检查点匹配，且检查点文件有效。")
-        exit(1)
-    
-    model.eval()  # 设置模型为评估模式
-    
-    # --- 数据集和测试循环 ---
-    print(f"正在从 {args.amos_data_path} 加载Amos数据集...")
-    # 如果手动加载样本，不需要完整的Dataset对象实例
-    # 但需要ID列表和加载逻辑
-    # 实例化虚拟数据集以使用其_read_list和_load_sample方法
-    # 注意：_load_sample需要实例具有self.config
+    # 数据加载
     temp_dataset = AmosDataset(split=args.split, config=amos_config)
-    test_ids_list = temp_dataset.ids_list  # 获取指定分割的ID列表
+    test_ids = temp_dataset.ids_list
     
-    print(f"开始在 '{args.split}' 分割的 {len(test_ids_list)} 个病例上进行推理...")
-    with torch.no_grad():  # 禁用梯度计算以进行推理
-        for data_id in tqdm(test_ids_list, desc=f"在Amos {args.split}分割上测试"):
-            try:
-                # 使用AmosDataset的逻辑加载和预处理图像
-                # 确保加载/归一化方式与VNet训练时一致
-                image, _ = temp_dataset._load_sample(data_id)  # 返回归一化后的图像 (D, H, W)
-                print(f"\n正在处理病例: {data_id}, 图像形状: {image.shape}")
-                
-                # 使用滑动窗口函数执行推理
-                pred_map, score_map = test_single_case(
-                    model,
-                    image,
-                    stride_xy=stride_xy,
-                    stride_z=stride_z,
-                    patch_size=patch_size,
-                    num_classes=num_classes
-                )  # pred_map 形状: (D, H, W)
-                
-                # 将预测图保存为NIfTI文件
-                output_filename = os.path.join(test_save_path, f"{data_id}_pred.nii.gz")
-                
-                sitk_out = sitk.GetImageFromArray(pred_map.astype(np.uint8))
-                
-                sitk.WriteImage(sitk_out, output_filename)
+    # 指标记录初始化
+    metrics_header = ['CaseID', 'Dice', 'HD95', 'Timestamp']
+    if not os.path.exists(args.metrics_log):
+        with open(args.metrics_log, 'w') as f:
+            csv.writer(f).writerow(metrics_header)
+    
+    total_metrics = {'Dice': [], 'HD95': []}
 
-            except FileNotFoundError as e:
-                print(f"处理 {data_id} 时出错：文件未找到 - {e}。已跳过。")
+    # 推理循环
+    with torch.no_grad():
+        for case_id in tqdm(test_ids, desc=f"处理{args.split}数据集"):
+            try:
+                # 加载数据
+                image, label = temp_dataset._load_sample(case_id)
+                
+                # 执行推理
+                pred, _ = test_single_case(
+                    model, image, 
+                    stride_xy, stride_z,
+                    patch_size, num_classes
+                )
+                
+                # 计算指标
+                dice = metric.binary.dc(pred > 0, label > 0)  # 全局Dice
+                hd = metric.binary.hd95(pred > 0, label > 0)
+                
+                # 记录指标
+                case_metrics = {
+                    'CaseID': case_id,
+                    'Dice': round(dice, 4),
+                    'HD95': round(hd, 2),
+                    'Timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                }
+                with open(args.metrics_log, 'a') as f:
+                    csv.DictWriter(f, metrics_header).writerow(case_metrics)
+                
+                total_metrics['Dice'].append(dice)
+                total_metrics['HD95'].append(hd)
+                
+                # 保存预测结果
+                if args.save_images:
+                    sitk_img = sitk.GetImageFromArray(pred.astype(np.uint8))
+                    sitk.WriteImage(sitk_img, os.path.join(args.output_dir, f"{case_id}_pred.nii.gz"))
             except Exception as e:
-                print(f"处理 {data_id} 时出错：{e}。已跳过。")
-                # import traceback
-                # traceback.print_exc()  # 取消注释以查看详细堆栈跟踪
-    
-    print("\n推理完成。")
-    print(f"预测结果保存在: {test_save_path}")
+                print(f"处理{case_id}时出错: {str(e)}")
+                continue
+
+    # 输出最终统计结果（关键修改点2：修复类型错误）
+    print("\n" + "="*40)
+    print(f"全局评估结果（共{len(total_metrics['Dice'])}例）:")  # 正确访问列表长度
+    print(f"平均Dice系数: {np.nanmean(total_metrics['Dice']):.4f} ± {np.nanstd(total_metrics['Dice']):.4f}")
+    print(f"平均HD95距离: {np.nanmean(total_metrics['HD95']):.2f} ± {np.nanstd(total_metrics['HD95']):.2f}mm")
+    print(f"详细指标已保存至: {args.metrics_log}")
+    print("="*40)
