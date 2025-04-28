@@ -2,6 +2,7 @@
 DDL_Source版本
 相比于原版减少了编码器和解码器都减少了两层
 """
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

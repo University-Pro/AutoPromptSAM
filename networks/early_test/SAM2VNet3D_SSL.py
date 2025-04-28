@@ -4,7 +4,6 @@ SSL
 VNet处理3D数据
 """
 import sys
-sys.path.append('/samba/network-storage/ssd/home/pi/sam2-test')  # 设置运行目录
 
 from torchinfo import summary
 from einops import rearrange

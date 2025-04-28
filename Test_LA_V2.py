@@ -25,7 +25,8 @@ from collections import OrderedDict
 # 导入网络
 # from networks.VNet import VNet
 # from networks.SAM3D_VNet_SSL_V2 import Network
-from networks.SAM3D_VNet_SSL_V3 import Network
+# from networks.SAM3D_VNet_SSL_V3 import Network
+from networks.SAM3D_VNet_SSL_V1 import Network
 
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart

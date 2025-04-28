@@ -1,7 +1,10 @@
 """
-相比于上一个版本添加了一些功能便于训练
-让一些参数更加方便的调试
-相比于上一版本将12depth修改为8depth看看效果变化
+正式版V1
+模型参数更加容易调整
+
+模型利用粗分割生成点Prompt
+利用SAM3D架构为VNet提供伪标签
+增强半监督学习能力
 """
 
 import sys
@@ -488,11 +491,17 @@ def networktest():
     # 实例化网络
     model = Network(in_channels=1,encoder_depth=8).to(device=device)
 
+        # 冻结Network的ImageEncoder3D模块
+    for param in model.samencoder.parameters():
+        param.requires_grad = False
+
     input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
     vnet_output, sam_output = model(input_tensor)
     print(f'VNet输出形状: {vnet_output.shape}')
     print(f'SAM输出形状: {sam_output.shape}')
     
+    summary(model, input_size=(1, 1, 112, 112, 80), device=device)
+
     return 
 
 

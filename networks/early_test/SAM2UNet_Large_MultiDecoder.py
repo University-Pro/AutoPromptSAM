@@ -1,4 +1,6 @@
 """
+早期2D版本
+
 编码器采用SAM2 Large的Encoder
 不冻结Encoder/MaskDecoder
 解码器使用UNet的Decoder与SAM的MaskDecoder

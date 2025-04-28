@@ -1,4 +1,6 @@
 """
+早期2D处理版本
+
 编码器采用SAM2的Encoder
 解码器使用UNet的Decoder
 最后使用PatchExpand进行还原
