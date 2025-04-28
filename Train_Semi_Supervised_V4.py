@@ -234,12 +234,12 @@ if __name__ == "__main__":
 
     # ==================== 模型初始化 ====================
     # model = UNet_Full(n_channels=1, n_classes=args.num_classes).to(device)
-    model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth").to(device=device)
-    # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
+    # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth").to(device=device)
+    model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
     
     # 冻结Network的ImageEncoder3D模块
-    for param in model.samencoder.parameters():
-        param.requires_grad = False
+    # for param in model.samencoder.parameters():
+    #     param.requires_grad = False
 
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:
@@ -345,7 +345,7 @@ if __name__ == "__main__":
         logging.info(f"Epoch {epoch+1}/{args.epochs}, Loss: {epoch_loss/(batch_idx+1):.4f}, Dice: {epoch_dice_loss/(batch_idx+1):.4f}, MSE: {epoch_consistency_loss/(batch_idx+1):.4f}")
 
         # 保存模型
-        if (epoch + 1) % 10 == 0 or epoch == args.epochs - 1:
+        if (epoch + 1) % 20 == 0 or epoch == args.epochs - 1:
             state = {
                 'epoch': epoch,
                 'model_state_dict': model.state_dict(),
