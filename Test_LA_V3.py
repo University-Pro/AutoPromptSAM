@@ -21,6 +21,8 @@ from tqdm import tqdm  # 进度条显示工具
 from skimage.measure import label  # 用于标记连通区域
 from collections import OrderedDict
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+
 # 导入网络
 from networks.SAM3D_VNet_SSL_V3 import Network
 # 导入数据集

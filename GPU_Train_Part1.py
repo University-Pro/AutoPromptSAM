@@ -51,8 +51,8 @@ def occupy_gpu_memory(gpu_id: int, mb_to_occupy: int, hold_seconds: int = 0):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="GPU显存占用工具")
     parser.add_argument("--gpu", type=int, required=True, help="要占用的GPU编号")
-    parser.add_argument("--mb", type=int, required=True, help="要占用的显存大小(MB)")
+    parser.add_argument("--length", type=int, required=True, help="要占用的显存大小(MB)")
     parser.add_argument("--hold", type=int, default=0, help="占用持续时间(秒)，0表示永久")
     args = parser.parse_args()
     
-    occupy_gpu_memory(args.gpu, args.mb, args.hold)
+    occupy_gpu_memory(args.gpu, args.length, args.hold)
