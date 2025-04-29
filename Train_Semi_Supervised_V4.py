@@ -39,8 +39,10 @@ from utils.ImageAugment import TwoStreamBatchSampler_LA
 # 导入网络框架
 # from networks.VNet import VNet
 # from networks.SAM3D_VNet_SSL import Network
+# from networks.SAM3D_VNet_SSL_V1 import Network
+# from networks.SAM3D_VNet_SSL_V2 import Network
 # from networks.SAM3D_VNet_SSL_V3 import Network
-from networks.SAM3D_VNet_SSL_V1 import Network
+from networks.SAM3D_VNet_SSL_V4 import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -234,9 +236,11 @@ if __name__ == "__main__":
 
     # ==================== 模型初始化 ====================
     # model = UNet_Full(n_channels=1, n_classes=args.num_classes).to(device)
-    # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth").to(device=device)
-    model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
-    
+    # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth").to(device=device) # V1
+    # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device) # V2
+    # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device) # V3
+    model = Network(pretrain_weight_path=None,encoder_depth=8).to(device=device) # V4
+
     # 冻结Network的ImageEncoder3D模块
     # for param in model.samencoder.parameters():
     #     param.requires_grad = False

@@ -1,14 +1,10 @@
-# Part1是指测试所有权重文件Part1的脚本
-# 分成Part1和Part2主要是为了让多张显卡同时进行测试
-# 加快测试速度
-
 #!/bin/bash
 
 # Directory containing .pth files
-PTH_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_8Depth/Pth_Part1"  # 修改为你存放模型的目录
+PTH_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth"  # 修改为你存放模型的目录
 
 # Directory to save logs
-LOG_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_8Depth/Test_Part1"  # 修改为你保存日志的目录
+LOG_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test"  # 修改为你保存日志的目录
 
 # Root path for dataset
 ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
@@ -38,8 +34,8 @@ for MODEL_PATH in $PTH_DIR/*.pth; do
   echo "Testing $MODEL_PATH, logging to $LOG_FILE"
 
   # Call the Python script with the current .pth file
-  python -m Test_LA_V2 \
-    --model_name "SAM3D_VNet_SSL" \
+  python -m Test_LA_V3 \
+    --model_name "SAM3D_VNet_SSL_V3" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \

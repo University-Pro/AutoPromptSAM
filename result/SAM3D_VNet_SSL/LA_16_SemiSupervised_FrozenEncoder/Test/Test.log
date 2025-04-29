@@ -1,0 +1,1055 @@
+2025-04-29 09:19:02 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 09:19:02 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 09:19:02 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 09:19:03 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_100.pth
+2025-04-29 09:19:08 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_100.pth 加载 checkpoint 文件。
+2025-04-29 09:19:08 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 09:19:08 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 09:19:08 - INFO - 成功将状态字典加载到模型。
+2025-04-29 09:19:08 - INFO - 模型已移动到设备: cuda
+2025-04-29 09:19:08 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 09:19:08 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 09:19:08 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 09:19:08 - INFO - Constructed full image paths for 20 images.
+2025-04-29 09:19:08 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 09:19:22 - INFO - Image 00 - Dice: 0.68321, Jaccard: 0.51884, HD95: 15.81139, ASD: 4.81957
+2025-04-29 09:19:22 - INFO - Image 00 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:19:38 - INFO - Image 01 - Dice: 0.77394, Jaccard: 0.63125, HD95: 18.19341, ASD: 3.11225
+2025-04-29 09:19:38 - INFO - Image 01 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:19:56 - INFO - Image 02 - Dice: 0.30985, Jaccard: 0.18333, HD95: 39.21734, ASD: 4.64981
+2025-04-29 09:19:56 - INFO - Image 02 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:20:14 - INFO - Image 03 - Dice: 0.51731, Jaccard: 0.34890, HD95: 25.01999, ASD: 4.23373
+2025-04-29 09:20:14 - INFO - Image 03 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:20:27 - INFO - Image 04 - Dice: 0.80235, Jaccard: 0.66994, HD95: 13.74043, ASD: 3.91989
+2025-04-29 09:20:27 - INFO - Image 04 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:20:51 - INFO - Image 05 - Dice: 0.45478, Jaccard: 0.29431, HD95: 26.01922, ASD: 7.21141
+2025-04-29 09:20:51 - INFO - Image 05 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:21:04 - INFO - Image 06 - Dice: 0.57365, Jaccard: 0.40218, HD95: 18.05547, ASD: 4.20528
+2025-04-29 09:21:04 - INFO - Image 06 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:21:23 - INFO - Image 07 - Dice: 0.23000, Jaccard: 0.12994, HD95: 33.21746, ASD: 8.51456
+2025-04-29 09:21:23 - INFO - Image 07 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:21:44 - INFO - Image 08 - Dice: 0.23047, Jaccard: 0.13025, HD95: 35.58089, ASD: 3.07554
+2025-04-29 09:21:44 - INFO - Image 08 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:21:59 - INFO - Image 09 - Dice: 0.36429, Jaccard: 0.22271, HD95: 35.97221, ASD: 4.83999
+2025-04-29 09:21:59 - INFO - Image 09 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:22:12 - INFO - Image 10 - Dice: 0.57285, Jaccard: 0.40139, HD95: 19.62142, ASD: 4.56069
+2025-04-29 09:22:12 - INFO - Image 10 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:22:28 - INFO - Image 11 - Dice: 0.36085, Jaccard: 0.22015, HD95: 38.07887, ASD: 4.63045
+2025-04-29 09:22:28 - INFO - Image 11 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:22:45 - INFO - Image 12 - Dice: 0.69521, Jaccard: 0.53281, HD95: 16.03122, ASD: 3.88285
+2025-04-29 09:22:45 - INFO - Image 12 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:23:01 - INFO - Image 13 - Dice: 0.60517, Jaccard: 0.43387, HD95: 17.97220, ASD: 6.01003
+2025-04-29 09:23:01 - INFO - Image 13 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:23:14 - INFO - Image 14 - Dice: 0.40075, Jaccard: 0.25059, HD95: 25.57342, ASD: 3.94033
+2025-04-29 09:23:14 - INFO - Image 14 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:23:28 - INFO - Image 15 - Dice: 0.36601, Jaccard: 0.22400, HD95: 29.39388, ASD: 5.07992
+2025-04-29 09:23:28 - INFO - Image 15 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:23:41 - INFO - Image 16 - Dice: 0.28062, Jaccard: 0.16321, HD95: 21.21320, ASD: 8.06009
+2025-04-29 09:23:41 - INFO - Image 16 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:23:58 - INFO - Image 17 - Dice: 0.32298, Jaccard: 0.19259, HD95: 41.98154, ASD: 4.07831
+2025-04-29 09:23:58 - INFO - Image 17 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:24:19 - INFO - Image 18 - Dice: 0.40855, Jaccard: 0.25671, HD95: 33.03029, ASD: 9.33545
+2025-04-29 09:24:19 - INFO - Image 18 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:24:40 - INFO - Image 19 - Dice: 0.30064, Jaccard: 0.17692, HD95: 30.88689, ASD: 7.12254
+2025-04-29 09:24:40 - INFO - Image 19 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:24:40 - INFO - Average metric (decoder 1): [ 0.46267374  0.31919365 26.73053767  5.26413463]
+2025-04-29 09:24:40 - INFO - Average metric (all decoders): [ 0.  0. inf inf]
+2025-04-29 09:24:40 - INFO - Average metric of decoder 1: [ 0.46267374  0.31919365 26.73053767  5.26413463]
+2025-04-29 09:24:40 - INFO - Average metric of all decoders: [ 0.  0. inf inf]
+2025-04-29 09:24:40 - INFO - Test results: [ 0.46267374  0.31919365 26.73053767  5.26413463]
+2025-04-29 09:24:43 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 09:24:43 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 09:24:43 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 09:24:44 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_1000.pth
+2025-04-29 09:24:45 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_1000.pth 加载 checkpoint 文件。
+2025-04-29 09:24:45 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 09:24:45 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 09:24:45 - INFO - 成功将状态字典加载到模型。
+2025-04-29 09:24:45 - INFO - 模型已移动到设备: cuda
+2025-04-29 09:24:45 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 09:24:45 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 09:24:45 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 09:24:45 - INFO - Constructed full image paths for 20 images.
+2025-04-29 09:24:45 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 09:24:59 - INFO - Image 00 - Dice: 0.86397, Jaccard: 0.76052, HD95: 8.77496, ASD: 2.22249
+2025-04-29 09:24:59 - INFO - Image 00 (average output) - Dice: 0.82922, Jaccard: 0.70826, HD95: 9.43398, ASD: 2.36197
+2025-04-29 09:25:15 - INFO - Image 01 - Dice: 0.88144, Jaccard: 0.78802, HD95: 11.00000, ASD: 1.52648
+2025-04-29 09:25:15 - INFO - Image 01 (average output) - Dice: 0.80313, Jaccard: 0.67103, HD95: 18.38478, ASD: 2.53136
+2025-04-29 09:25:34 - INFO - Image 02 - Dice: 0.88928, Jaccard: 0.80064, HD95: 9.89949, ASD: 1.16000
+2025-04-29 09:25:34 - INFO - Image 02 (average output) - Dice: 0.81687, Jaccard: 0.69042, HD95: 14.03567, ASD: 2.01960
+2025-04-29 09:25:53 - INFO - Image 03 - Dice: 0.90665, Jaccard: 0.82924, HD95: 5.19615, ASD: 1.26960
+2025-04-29 09:25:53 - INFO - Image 03 (average output) - Dice: 0.83657, Jaccard: 0.71906, HD95: 8.30662, ASD: 2.06062
+2025-04-29 09:26:06 - INFO - Image 04 - Dice: 0.91493, Jaccard: 0.84319, HD95: 3.60555, ASD: 1.43887
+2025-04-29 09:26:06 - INFO - Image 04 (average output) - Dice: 0.82740, Jaccard: 0.70561, HD95: 21.58703, ASD: 1.26578
+2025-04-29 09:26:31 - INFO - Image 05 - Dice: 0.74078, Jaccard: 0.58829, HD95: 26.62705, ASD: 8.03500
+2025-04-29 09:26:31 - INFO - Image 05 (average output) - Dice: 0.66669, Jaccard: 0.50003, HD95: 26.40076, ASD: 5.15936
+2025-04-29 09:26:44 - INFO - Image 06 - Dice: 0.93468, Jaccard: 0.87738, HD95: 3.00000, ASD: 1.18966
+2025-04-29 09:26:44 - INFO - Image 06 (average output) - Dice: 0.93216, Jaccard: 0.87293, HD95: 3.31662, ASD: 0.98109
+2025-04-29 09:27:03 - INFO - Image 07 - Dice: 0.62503, Jaccard: 0.45458, HD95: 33.58049, ASD: 3.87014
+2025-04-29 09:27:03 - INFO - Image 07 (average output) - Dice: 0.49498, Jaccard: 0.32889, HD95: 39.59797, ASD: 5.47829
+2025-04-29 09:27:24 - INFO - Image 08 - Dice: 0.93965, Jaccard: 0.88617, HD95: 4.00000, ASD: 1.15400
+2025-04-29 09:27:24 - INFO - Image 08 (average output) - Dice: 0.90011, Jaccard: 0.81837, HD95: 6.16441, ASD: 2.08828
+2025-04-29 09:27:41 - INFO - Image 09 - Dice: 0.93094, Jaccard: 0.87081, HD95: 3.60555, ASD: 1.02028
+2025-04-29 09:27:41 - INFO - Image 09 (average output) - Dice: 0.88784, Jaccard: 0.79830, HD95: 7.07107, ASD: 1.46492
+2025-04-29 09:27:55 - INFO - Image 10 - Dice: 0.86518, Jaccard: 0.76240, HD95: 6.16441, ASD: 2.10632
+2025-04-29 09:27:55 - INFO - Image 10 (average output) - Dice: 0.83533, Jaccard: 0.71722, HD95: 16.12452, ASD: 2.03430
+2025-04-29 09:28:12 - INFO - Image 11 - Dice: 0.88429, Jaccard: 0.79258, HD95: 9.11043, ASD: 1.34524
+2025-04-29 09:28:12 - INFO - Image 11 (average output) - Dice: 0.82658, Jaccard: 0.70442, HD95: 16.61325, ASD: 1.86328
+2025-04-29 09:28:28 - INFO - Image 12 - Dice: 0.91420, Jaccard: 0.84197, HD95: 5.09902, ASD: 1.17844
+2025-04-29 09:28:28 - INFO - Image 12 (average output) - Dice: 0.85058, Jaccard: 0.74001, HD95: 12.88410, ASD: 1.63785
+2025-04-29 09:28:45 - INFO - Image 13 - Dice: 0.91388, Jaccard: 0.84142, HD95: 5.09902, ASD: 1.15005
+2025-04-29 09:28:45 - INFO - Image 13 (average output) - Dice: 0.81353, Jaccard: 0.68567, HD95: 13.60147, ASD: 2.13339
+2025-04-29 09:28:59 - INFO - Image 14 - Dice: 0.93752, Jaccard: 0.88239, HD95: 3.74166, ASD: 1.08838
+2025-04-29 09:28:59 - INFO - Image 14 (average output) - Dice: 0.90732, Jaccard: 0.83036, HD95: 5.09902, ASD: 1.30084
+2025-04-29 09:29:13 - INFO - Image 15 - Dice: 0.91386, Jaccard: 0.84139, HD95: 5.09902, ASD: 1.82086
+2025-04-29 09:29:13 - INFO - Image 15 (average output) - Dice: 0.86833, Jaccard: 0.76730, HD95: 6.70820, ASD: 2.01564
+2025-04-29 09:29:26 - INFO - Image 16 - Dice: 0.73644, Jaccard: 0.58283, HD95: 12.32883, ASD: 4.08247
+2025-04-29 09:29:26 - INFO - Image 16 (average output) - Dice: 0.47334, Jaccard: 0.31005, HD95: 20.44505, ASD: 7.48576
+2025-04-29 09:29:43 - INFO - Image 17 - Dice: 0.88479, Jaccard: 0.79338, HD95: 6.00000, ASD: 1.67303
+2025-04-29 09:29:43 - INFO - Image 17 (average output) - Dice: 0.85946, Jaccard: 0.75355, HD95: 6.78233, ASD: 1.85804
+2025-04-29 09:30:04 - INFO - Image 18 - Dice: 0.94154, Jaccard: 0.88954, HD95: 10.39230, ASD: 1.81159
+2025-04-29 09:30:04 - INFO - Image 18 (average output) - Dice: 0.89317, Jaccard: 0.80697, HD95: 12.88410, ASD: 2.26679
+2025-04-29 09:30:26 - INFO - Image 19 - Dice: 0.87714, Jaccard: 0.78116, HD95: 12.32883, ASD: 2.41222
+2025-04-29 09:30:26 - INFO - Image 19 (average output) - Dice: 0.81152, Jaccard: 0.68282, HD95: 14.07125, ASD: 3.11267
+2025-04-29 09:30:26 - INFO - Average metric (decoder 1): [0.87481093 0.78539473 9.23263928 2.07775584]
+2025-04-29 09:30:26 - INFO - Average metric (all decoders): [ 0.80670683  0.69056436 13.97561007  2.55599182]
+2025-04-29 09:30:26 - INFO - Average metric of decoder 1: [0.87481093 0.78539473 9.23263928 2.07775584]
+2025-04-29 09:30:26 - INFO - Average metric of all decoders: [ 0.80670683  0.69056436 13.97561007  2.55599182]
+2025-04-29 09:30:26 - INFO - Test results: [0.87481093 0.78539473 9.23263928 2.07775584]
+2025-04-29 09:30:29 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 09:30:29 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 09:30:29 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 09:30:30 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_120.pth
+2025-04-29 09:30:33 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_120.pth 加载 checkpoint 文件。
+2025-04-29 09:30:33 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 09:30:33 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 09:30:33 - INFO - 成功将状态字典加载到模型。
+2025-04-29 09:30:33 - INFO - 模型已移动到设备: cuda
+2025-04-29 09:30:33 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 09:30:33 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 09:30:33 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 09:30:33 - INFO - Constructed full image paths for 20 images.
+2025-04-29 09:30:33 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 09:30:46 - INFO - Image 00 - Dice: 0.70079, Jaccard: 0.53940, HD95: 17.72005, ASD: 4.85706
+2025-04-29 09:30:46 - INFO - Image 00 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:31:02 - INFO - Image 01 - Dice: 0.85324, Jaccard: 0.74405, HD95: 12.68858, ASD: 2.28088
+2025-04-29 09:31:02 - INFO - Image 01 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:31:20 - INFO - Image 02 - Dice: 0.75490, Jaccard: 0.60629, HD95: 21.40093, ASD: 3.97963
+2025-04-29 09:31:20 - INFO - Image 02 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:31:38 - INFO - Image 03 - Dice: 0.73430, Jaccard: 0.58015, HD95: 25.69047, ASD: 4.34946
+2025-04-29 09:31:38 - INFO - Image 03 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:31:51 - INFO - Image 04 - Dice: 0.83143, Jaccard: 0.71150, HD95: 11.22497, ASD: 3.29878
+2025-04-29 09:31:51 - INFO - Image 04 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:32:15 - INFO - Image 05 - Dice: 0.35927, Jaccard: 0.21897, HD95: 47.47157, ASD: 7.34664
+2025-04-29 09:32:15 - INFO - Image 05 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:32:28 - INFO - Image 06 - Dice: 0.76783, Jaccard: 0.62316, HD95: 19.33908, ASD: 5.99962
+2025-04-29 09:32:28 - INFO - Image 06 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:32:47 - INFO - Image 07 - Dice: 0.58993, Jaccard: 0.41837, HD95: 22.15852, ASD: 8.17818
+2025-04-29 09:32:47 - INFO - Image 07 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:33:09 - INFO - Image 08 - Dice: 0.70476, Jaccard: 0.54411, HD95: 17.29162, ASD: 5.53415
+2025-04-29 09:33:09 - INFO - Image 08 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:33:25 - INFO - Image 09 - Dice: 0.84000, Jaccard: 0.72414, HD95: 19.72308, ASD: 2.04424
+2025-04-29 09:33:25 - INFO - Image 09 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:33:38 - INFO - Image 10 - Dice: 0.70243, Jaccard: 0.54134, HD95: 17.57840, ASD: 4.19862
+2025-04-29 09:33:38 - INFO - Image 10 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:33:55 - INFO - Image 11 - Dice: 0.70499, Jaccard: 0.54439, HD95: 27.31300, ASD: 8.22441
+2025-04-29 09:33:55 - INFO - Image 11 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:34:11 - INFO - Image 12 - Dice: 0.85529, Jaccard: 0.74716, HD95: 12.08305, ASD: 2.86726
+2025-04-29 09:34:11 - INFO - Image 12 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:34:27 - INFO - Image 13 - Dice: 0.72547, Jaccard: 0.56920, HD95: 17.34935, ASD: 3.29539
+2025-04-29 09:34:27 - INFO - Image 13 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:34:40 - INFO - Image 14 - Dice: 0.77278, Jaccard: 0.62970, HD95: 15.36229, ASD: 3.94451
+2025-04-29 09:34:40 - INFO - Image 14 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:34:53 - INFO - Image 15 - Dice: 0.81641, Jaccard: 0.68977, HD95: 15.00000, ASD: 2.19585
+2025-04-29 09:34:53 - INFO - Image 15 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:35:06 - INFO - Image 16 - Dice: 0.44233, Jaccard: 0.28397, HD95: 23.02933, ASD: 9.86340
+2025-04-29 09:35:06 - INFO - Image 16 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:35:22 - INFO - Image 17 - Dice: 0.55643, Jaccard: 0.38545, HD95: 28.46050, ASD: 9.82819
+2025-04-29 09:35:22 - INFO - Image 17 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:35:43 - INFO - Image 18 - Dice: 0.71079, Jaccard: 0.55133, HD95: 20.54264, ASD: 7.01000
+2025-04-29 09:35:43 - INFO - Image 18 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:36:03 - INFO - Image 19 - Dice: 0.73368, Jaccard: 0.57938, HD95: 20.83267, ASD: 6.42970
+2025-04-29 09:36:03 - INFO - Image 19 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:36:03 - INFO - Average metric (decoder 1): [ 0.70785218  0.56159208 20.613004    5.28629902]
+2025-04-29 09:36:03 - INFO - Average metric (all decoders): [ 0.  0. inf inf]
+2025-04-29 09:36:03 - INFO - Average metric of decoder 1: [ 0.70785218  0.56159208 20.613004    5.28629902]
+2025-04-29 09:36:03 - INFO - Average metric of all decoders: [ 0.  0. inf inf]
+2025-04-29 09:36:03 - INFO - Test results: [ 0.70785218  0.56159208 20.613004    5.28629902]
+2025-04-29 09:36:07 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 09:36:07 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 09:36:07 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 09:36:08 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_140.pth
+2025-04-29 09:36:10 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_140.pth 加载 checkpoint 文件。
+2025-04-29 09:36:10 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 09:36:10 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 09:36:10 - INFO - 成功将状态字典加载到模型。
+2025-04-29 09:36:10 - INFO - 模型已移动到设备: cuda
+2025-04-29 09:36:10 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 09:36:10 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 09:36:10 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 09:36:10 - INFO - Constructed full image paths for 20 images.
+2025-04-29 09:36:10 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 09:36:24 - INFO - Image 00 - Dice: 0.71028, Jaccard: 0.55073, HD95: 15.16575, ASD: 6.43609
+2025-04-29 09:36:24 - INFO - Image 00 (average output) - Dice: 0.69405, Jaccard: 0.53146, HD95: 17.60682, ASD: 4.82748
+2025-04-29 09:36:41 - INFO - Image 01 - Dice: 0.74285, Jaccard: 0.59090, HD95: 24.18677, ASD: 3.57391
+2025-04-29 09:36:41 - INFO - Image 01 (average output) - Dice: 0.41675, Jaccard: 0.26323, HD95: 36.19392, ASD: 8.78796
+2025-04-29 09:36:59 - INFO - Image 02 - Dice: 0.65707, Jaccard: 0.48928, HD95: 21.65063, ASD: 4.48064
+2025-04-29 09:36:59 - INFO - Image 02 (average output) - Dice: 0.35794, Jaccard: 0.21798, HD95: 39.59798, ASD: 9.19182
+2025-04-29 09:37:18 - INFO - Image 03 - Dice: 0.81646, Jaccard: 0.68984, HD95: 19.78888, ASD: 2.07248
+2025-04-29 09:37:18 - INFO - Image 03 (average output) - Dice: 0.65698, Jaccard: 0.48918, HD95: 29.96665, ASD: 4.29280
+2025-04-29 09:37:31 - INFO - Image 04 - Dice: 0.76187, Jaccard: 0.61534, HD95: 20.34084, ASD: 2.21222
+2025-04-29 09:37:31 - INFO - Image 04 (average output) - Dice: 0.52135, Jaccard: 0.35259, HD95: 34.26368, ASD: 4.42725
+2025-04-29 09:37:57 - INFO - Image 05 - Dice: 0.71298, Jaccard: 0.55398, HD95: 18.27567, ASD: 6.08958
+2025-04-29 09:37:57 - INFO - Image 05 (average output) - Dice: 0.48547, Jaccard: 0.32054, HD95: 31.06445, ASD: 7.53665
+2025-04-29 09:38:10 - INFO - Image 06 - Dice: 0.85620, Jaccard: 0.74855, HD95: 26.68333, ASD: 6.67655
+2025-04-29 09:38:10 - INFO - Image 06 (average output) - Dice: 0.79357, Jaccard: 0.65778, HD95: 19.23538, ASD: 2.82996
+2025-04-29 09:38:30 - INFO - Image 07 - Dice: 0.48939, Jaccard: 0.32397, HD95: 29.13760, ASD: 10.99566
+2025-04-29 09:38:30 - INFO - Image 07 (average output) - Dice: 0.32445, Jaccard: 0.19364, HD95: 34.22426, ASD: 9.23848
+2025-04-29 09:38:52 - INFO - Image 08 - Dice: 0.84740, Jaccard: 0.73520, HD95: 11.04536, ASD: 2.57027
+2025-04-29 09:38:52 - INFO - Image 08 (average output) - Dice: 0.57132, Jaccard: 0.39989, HD95: 29.10841, ASD: 6.93019
+2025-04-29 09:39:08 - INFO - Image 09 - Dice: 0.78678, Jaccard: 0.64851, HD95: 21.63331, ASD: 2.80200
+2025-04-29 09:39:08 - INFO - Image 09 (average output) - Dice: 0.53414, Jaccard: 0.36439, HD95: 40.62019, ASD: 6.19994
+2025-04-29 09:39:22 - INFO - Image 10 - Dice: 0.81033, Jaccard: 0.68114, HD95: 16.76305, ASD: 2.83635
+2025-04-29 09:39:22 - INFO - Image 10 (average output) - Dice: 0.74373, Jaccard: 0.59201, HD95: 22.56103, ASD: 3.20341
+2025-04-29 09:39:39 - INFO - Image 11 - Dice: 0.68609, Jaccard: 0.52218, HD95: 26.22975, ASD: 6.44879
+2025-04-29 09:39:39 - INFO - Image 11 (average output) - Dice: 0.55907, Jaccard: 0.38800, HD95: 34.71311, ASD: 5.21836
+2025-04-29 09:39:55 - INFO - Image 12 - Dice: 0.72692, Jaccard: 0.57100, HD95: 30.16454, ASD: 2.96709
+2025-04-29 09:39:55 - INFO - Image 12 (average output) - Dice: 0.44287, Jaccard: 0.28441, HD95: 48.42520, ASD: 6.58350
+2025-04-29 09:40:11 - INFO - Image 13 - Dice: 0.53579, Jaccard: 0.36592, HD95: 43.05810, ASD: 18.70061
+2025-04-29 09:40:11 - INFO - Image 13 (average output) - Dice: 0.37973, Jaccard: 0.23436, HD95: 33.85188, ASD: 8.16299
+2025-04-29 09:40:24 - INFO - Image 14 - Dice: 0.80522, Jaccard: 0.67396, HD95: 10.67708, ASD: 2.97336
+2025-04-29 09:40:24 - INFO - Image 14 (average output) - Dice: 0.43976, Jaccard: 0.28185, HD95: 30.36445, ASD: 7.85446
+2025-04-29 09:40:38 - INFO - Image 15 - Dice: 0.81691, Jaccard: 0.69049, HD95: 13.60147, ASD: 2.45578
+2025-04-29 09:40:38 - INFO - Image 15 (average output) - Dice: 0.62530, Jaccard: 0.45486, HD95: 28.26304, ASD: 4.96182
+2025-04-29 09:40:51 - INFO - Image 16 - Dice: 0.38437, Jaccard: 0.23790, HD95: 19.04205, ASD: 8.97182
+2025-04-29 09:40:51 - INFO - Image 16 (average output) - Dice: 0.01695, Jaccard: 0.00855, HD95: 89.49860, ASD: 13.51129
+2025-04-29 09:41:08 - INFO - Image 17 - Dice: 0.72750, Jaccard: 0.57171, HD95: 36.59167, ASD: 11.40051
+2025-04-29 09:41:08 - INFO - Image 17 (average output) - Dice: 0.67985, Jaccard: 0.51497, HD95: 25.67100, ASD: 3.75109
+2025-04-29 09:41:29 - INFO - Image 18 - Dice: 0.85856, Jaccard: 0.75217, HD95: 21.67948, ASD: 4.91795
+2025-04-29 09:41:29 - INFO - Image 18 (average output) - Dice: 0.71986, Jaccard: 0.56233, HD95: 23.00000, ASD: 5.99868
+2025-04-29 09:41:51 - INFO - Image 19 - Dice: 0.72256, Jaccard: 0.56563, HD95: 21.00000, ASD: 5.77676
+2025-04-29 09:41:51 - INFO - Image 19 (average output) - Dice: 0.55974, Jaccard: 0.38864, HD95: 31.89200, ASD: 6.29088
+2025-04-29 09:41:51 - INFO - Average metric (decoder 1): [ 0.72277694  0.57892014 22.33576723  5.7679205 ]
+2025-04-29 09:41:51 - INFO - Average metric (all decoders): [ 0.52614394  0.37503302 34.00610323  6.48995208]
+2025-04-29 09:41:51 - INFO - Average metric of decoder 1: [ 0.72277694  0.57892014 22.33576723  5.7679205 ]
+2025-04-29 09:41:51 - INFO - Average metric of all decoders: [ 0.52614394  0.37503302 34.00610323  6.48995208]
+2025-04-29 09:41:51 - INFO - Test results: [ 0.72277694  0.57892014 22.33576723  5.7679205 ]
+2025-04-29 09:41:54 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 09:41:54 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 09:41:54 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 09:41:55 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_160.pth
+2025-04-29 09:41:58 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_160.pth 加载 checkpoint 文件。
+2025-04-29 09:41:58 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 09:41:58 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 09:41:58 - INFO - 成功将状态字典加载到模型。
+2025-04-29 09:41:58 - INFO - 模型已移动到设备: cuda
+2025-04-29 09:41:58 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 09:41:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 09:41:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 09:41:58 - INFO - Constructed full image paths for 20 images.
+2025-04-29 09:41:58 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 09:42:12 - INFO - Image 00 - Dice: 0.72758, Jaccard: 0.57180, HD95: 16.40122, ASD: 3.31897
+2025-04-29 09:42:12 - INFO - Image 00 (average output) - Dice: 0.55527, Jaccard: 0.38435, HD95: 25.09980, ASD: 5.06845
+2025-04-29 09:42:28 - INFO - Image 01 - Dice: 0.87478, Jaccard: 0.77743, HD95: 10.00000, ASD: 1.96601
+2025-04-29 09:42:28 - INFO - Image 01 (average output) - Dice: 0.72761, Jaccard: 0.57184, HD95: 23.74868, ASD: 3.72744
+2025-04-29 09:42:47 - INFO - Image 02 - Dice: 0.83643, Jaccard: 0.71884, HD95: 14.49138, ASD: 1.68159
+2025-04-29 09:42:47 - INFO - Image 02 (average output) - Dice: 0.66426, Jaccard: 0.49729, HD95: 25.31798, ASD: 3.86841
+2025-04-29 09:43:11 - INFO - Image 03 - Dice: 0.85499, Jaccard: 0.74670, HD95: 9.21954, ASD: 1.99435
+2025-04-29 09:43:11 - INFO - Image 03 (average output) - Dice: 0.74075, Jaccard: 0.58825, HD95: 23.79075, ASD: 3.01724
+2025-04-29 09:43:33 - INFO - Image 04 - Dice: 0.86945, Jaccard: 0.76905, HD95: 6.78233, ASD: 2.46176
+2025-04-29 09:43:33 - INFO - Image 04 (average output) - Dice: 0.71187, Jaccard: 0.55263, HD95: 26.68333, ASD: 2.30390
+2025-04-29 09:44:03 - INFO - Image 05 - Dice: 0.01760, Jaccard: 0.00888, HD95: 123.06096, ASD: 2.20260
+2025-04-29 09:44:03 - INFO - Image 05 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:44:32 - INFO - Image 06 - Dice: 0.89484, Jaccard: 0.80969, HD95: 5.65685, ASD: 1.97722
+2025-04-29 09:44:32 - INFO - Image 06 (average output) - Dice: 0.85434, Jaccard: 0.74572, HD95: 14.31782, ASD: 1.83310
+2025-04-29 09:45:09 - INFO - Image 07 - Dice: 0.39956, Jaccard: 0.24966, HD95: 48.91983, ASD: 4.29417
+2025-04-29 09:45:09 - INFO - Image 07 (average output) - Dice: 0.22031, Jaccard: 0.12379, HD95: 65.57362, ASD: 4.90224
+2025-04-29 09:45:40 - INFO - Image 08 - Dice: 0.88223, Jaccard: 0.78927, HD95: 8.77496, ASD: 2.46111
+2025-04-29 09:45:40 - INFO - Image 08 (average output) - Dice: 0.80719, Jaccard: 0.67671, HD95: 13.74773, ASD: 3.05897
+2025-04-29 09:46:04 - INFO - Image 09 - Dice: 0.88385, Jaccard: 0.79187, HD95: 7.07107, ASD: 1.81591
+2025-04-29 09:46:04 - INFO - Image 09 (average output) - Dice: 0.79296, Jaccard: 0.65694, HD95: 23.43075, ASD: 2.52416
+2025-04-29 09:46:23 - INFO - Image 10 - Dice: 0.79863, Jaccard: 0.66476, HD95: 12.32883, ASD: 3.29905
+2025-04-29 09:46:23 - INFO - Image 10 (average output) - Dice: 0.75201, Jaccard: 0.60258, HD95: 17.29162, ASD: 3.35625
+2025-04-29 09:46:46 - INFO - Image 11 - Dice: 0.58509, Jaccard: 0.41351, HD95: 46.43490, ASD: 15.52181
+2025-04-29 09:46:46 - INFO - Image 11 (average output) - Dice: 0.65807, Jaccard: 0.49039, HD95: 28.39014, ASD: 9.87478
+2025-04-29 09:47:09 - INFO - Image 12 - Dice: 0.85512, Jaccard: 0.74690, HD95: 13.19091, ASD: 2.10352
+2025-04-29 09:47:09 - INFO - Image 12 (average output) - Dice: 0.73353, Jaccard: 0.57920, HD95: 24.10394, ASD: 3.15026
+2025-04-29 09:47:31 - INFO - Image 13 - Dice: 0.58499, Jaccard: 0.41341, HD95: 17.29162, ASD: 4.93432
+2025-04-29 09:47:31 - INFO - Image 13 (average output) - Dice: 0.25153, Jaccard: 0.14386, HD95: 44.24534, ASD: 9.46356
+2025-04-29 09:47:49 - INFO - Image 14 - Dice: 0.82220, Jaccard: 0.69808, HD95: 22.30919, ASD: 6.44397
+2025-04-29 09:47:49 - INFO - Image 14 (average output) - Dice: 0.86743, Jaccard: 0.76589, HD95: 12.80625, ASD: 1.89916
+2025-04-29 09:48:07 - INFO - Image 15 - Dice: 0.87843, Jaccard: 0.78322, HD95: 13.92839, ASD: 3.13428
+2025-04-29 09:48:07 - INFO - Image 15 (average output) - Dice: 0.74398, Jaccard: 0.59233, HD95: 18.68154, ASD: 3.42559
+2025-04-29 09:48:24 - INFO - Image 16 - Dice: 0.23738, Jaccard: 0.13467, HD95: 23.19483, ASD: 8.81479
+2025-04-29 09:48:24 - INFO - Image 16 (average output) - Dice: 0.00423, Jaccard: 0.00212, HD95: 89.07188, ASD: 12.88646
+2025-04-29 09:48:45 - INFO - Image 17 - Dice: 0.75992, Jaccard: 0.61281, HD95: 16.00000, ASD: 5.24883
+2025-04-29 09:48:45 - INFO - Image 17 (average output) - Dice: 0.71000, Jaccard: 0.55039, HD95: 20.02498, ASD: 4.74578
+2025-04-29 09:49:11 - INFO - Image 18 - Dice: 0.89418, Jaccard: 0.80862, HD95: 13.63818, ASD: 2.31255
+2025-04-29 09:49:11 - INFO - Image 18 (average output) - Dice: 0.79600, Jaccard: 0.66113, HD95: 20.54264, ASD: 4.23015
+2025-04-29 09:49:38 - INFO - Image 19 - Dice: 0.73620, Jaccard: 0.58253, HD95: 19.74842, ASD: 5.13483
+2025-04-29 09:49:38 - INFO - Image 19 (average output) - Dice: 0.56950, Jaccard: 0.39811, HD95: 43.18565, ASD: 5.19018
+2025-04-29 09:49:38 - INFO - Average metric (decoder 1): [ 0.71967124  0.60458546 22.4221702   4.05608186]
+2025-04-29 09:49:38 - INFO - Average metric (all decoders): [0.60804175 0.47917611        inf        inf]
+2025-04-29 09:49:38 - INFO - Average metric of decoder 1: [ 0.71967124  0.60458546 22.4221702   4.05608186]
+2025-04-29 09:49:38 - INFO - Average metric of all decoders: [0.60804175 0.47917611        inf        inf]
+2025-04-29 09:49:38 - INFO - Test results: [ 0.71967124  0.60458546 22.4221702   4.05608186]
+2025-04-29 09:49:42 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 09:49:42 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 09:49:42 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 09:49:44 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_180.pth
+2025-04-29 09:49:47 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_180.pth 加载 checkpoint 文件。
+2025-04-29 09:49:47 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 09:49:47 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 09:49:47 - INFO - 成功将状态字典加载到模型。
+2025-04-29 09:49:47 - INFO - 模型已移动到设备: cuda
+2025-04-29 09:49:47 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 09:49:47 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 09:49:47 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 09:49:47 - INFO - Constructed full image paths for 20 images.
+2025-04-29 09:49:47 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 09:50:05 - INFO - Image 00 - Dice: 0.78990, Jaccard: 0.65275, HD95: 10.04988, ASD: 3.57773
+2025-04-29 09:50:05 - INFO - Image 00 (average output) - Dice: 0.75198, Jaccard: 0.60254, HD95: 15.99374, ASD: 3.16562
+2025-04-29 09:50:25 - INFO - Image 01 - Dice: 0.87921, Jaccard: 0.78446, HD95: 10.04988, ASD: 2.06239
+2025-04-29 09:50:25 - INFO - Image 01 (average output) - Dice: 0.80190, Jaccard: 0.66932, HD95: 21.67948, ASD: 2.62642
+2025-04-29 09:50:48 - INFO - Image 02 - Dice: 0.85864, Jaccard: 0.75229, HD95: 14.52584, ASD: 1.97755
+2025-04-29 09:50:48 - INFO - Image 02 (average output) - Dice: 0.68311, Jaccard: 0.51873, HD95: 24.16609, ASD: 3.55337
+2025-04-29 09:51:12 - INFO - Image 03 - Dice: 0.87123, Jaccard: 0.77183, HD95: 7.68115, ASD: 2.18575
+2025-04-29 09:51:12 - INFO - Image 03 (average output) - Dice: 0.78992, Jaccard: 0.65279, HD95: 14.35270, ASD: 2.62705
+2025-04-29 09:51:29 - INFO - Image 04 - Dice: 0.83926, Jaccard: 0.72304, HD95: 21.61018, ASD: 5.80661
+2025-04-29 09:51:29 - INFO - Image 04 (average output) - Dice: 0.76925, Jaccard: 0.62503, HD95: 21.02380, ASD: 1.83845
+2025-04-29 09:52:02 - INFO - Image 05 - Dice: 0.64845, Jaccard: 0.47978, HD95: 25.01999, ASD: 5.17599
+2025-04-29 09:52:02 - INFO - Image 05 (average output) - Dice: 0.46365, Jaccard: 0.30179, HD95: 33.85262, ASD: 8.05440
+2025-04-29 09:52:21 - INFO - Image 06 - Dice: 0.87580, Jaccard: 0.77905, HD95: 8.66025, ASD: 2.45456
+2025-04-29 09:52:21 - INFO - Image 06 (average output) - Dice: 0.89290, Jaccard: 0.80651, HD95: 8.77496, ASD: 1.55404
+2025-04-29 09:52:47 - INFO - Image 07 - Dice: 0.58063, Jaccard: 0.40908, HD95: 21.30728, ASD: 8.01946
+2025-04-29 09:52:47 - INFO - Image 07 (average output) - Dice: 0.42556, Jaccard: 0.27029, HD95: 23.32381, ASD: 6.78863
+2025-04-29 09:53:17 - INFO - Image 08 - Dice: 0.86804, Jaccard: 0.76685, HD95: 11.35782, ASD: 3.85881
+2025-04-29 09:53:17 - INFO - Image 08 (average output) - Dice: 0.84814, Jaccard: 0.73632, HD95: 10.00000, ASD: 2.71336
+2025-04-29 09:53:40 - INFO - Image 09 - Dice: 0.88445, Jaccard: 0.79284, HD95: 8.06226, ASD: 2.12787
+2025-04-29 09:53:40 - INFO - Image 09 (average output) - Dice: 0.81537, Jaccard: 0.68830, HD95: 18.70829, ASD: 2.37011
+2025-04-29 09:54:00 - INFO - Image 10 - Dice: 0.78373, Jaccard: 0.64438, HD95: 12.36932, ASD: 4.04131
+2025-04-29 09:54:00 - INFO - Image 10 (average output) - Dice: 0.77890, Jaccard: 0.63787, HD95: 14.58423, ASD: 3.23015
+2025-04-29 09:54:23 - INFO - Image 11 - Dice: 0.63257, Jaccard: 0.46260, HD95: 51.43345, ASD: 18.23462
+2025-04-29 09:54:23 - INFO - Image 11 (average output) - Dice: 0.78113, Jaccard: 0.64086, HD95: 19.31321, ASD: 4.83758
+2025-04-29 09:54:46 - INFO - Image 12 - Dice: 0.75972, Jaccard: 0.61254, HD95: 42.21374, ASD: 12.65084
+2025-04-29 09:54:46 - INFO - Image 12 (average output) - Dice: 0.80821, Jaccard: 0.67815, HD95: 21.32603, ASD: 2.27470
+2025-04-29 09:55:08 - INFO - Image 13 - Dice: 0.72159, Jaccard: 0.56444, HD95: 41.34247, ASD: 12.06961
+2025-04-29 09:55:08 - INFO - Image 13 (average output) - Dice: 0.61358, Jaccard: 0.44256, HD95: 18.43909, ASD: 5.02793
+2025-04-29 09:55:26 - INFO - Image 14 - Dice: 0.82483, Jaccard: 0.70189, HD95: 15.32971, ASD: 5.03479
+2025-04-29 09:55:26 - INFO - Image 14 (average output) - Dice: 0.86116, Jaccard: 0.75618, HD95: 9.00000, ASD: 2.29414
+2025-04-29 09:55:44 - INFO - Image 15 - Dice: 0.89406, Jaccard: 0.80841, HD95: 6.55744, ASD: 1.96388
+2025-04-29 09:55:44 - INFO - Image 15 (average output) - Dice: 0.80411, Jaccard: 0.67239, HD95: 11.04536, ASD: 2.68662
+2025-04-29 09:56:02 - INFO - Image 16 - Dice: 0.42522, Jaccard: 0.27002, HD95: 17.74824, ASD: 7.36688
+2025-04-29 09:56:02 - INFO - Image 16 (average output) - Dice: 0.06491, Jaccard: 0.03354, HD95: 76.16430, ASD: 11.62401
+2025-04-29 09:56:22 - INFO - Image 17 - Dice: 0.78543, Jaccard: 0.64667, HD95: 13.15295, ASD: 4.22546
+2025-04-29 09:56:22 - INFO - Image 17 (average output) - Dice: 0.75256, Jaccard: 0.60329, HD95: 14.59452, ASD: 3.76704
+2025-04-29 09:56:49 - INFO - Image 18 - Dice: 0.90279, Jaccard: 0.82281, HD95: 13.00000, ASD: 2.68158
+2025-04-29 09:56:49 - INFO - Image 18 (average output) - Dice: 0.85217, Jaccard: 0.74242, HD95: 17.13329, ASD: 3.14997
+2025-04-29 09:57:16 - INFO - Image 19 - Dice: 0.76032, Jaccard: 0.61332, HD95: 18.60108, ASD: 5.20508
+2025-04-29 09:57:16 - INFO - Image 19 (average output) - Dice: 0.62210, Jaccard: 0.45149, HD95: 36.92560, ASD: 5.18729
+2025-04-29 09:57:16 - INFO - Average metric (decoder 1): [ 0.77929396  0.65295254 18.50364534  5.53603913]
+2025-04-29 09:57:16 - INFO - Average metric (all decoders): [ 0.70903077  0.57651735 21.52005574  3.96854494]
+2025-04-29 09:57:16 - INFO - Average metric of decoder 1: [ 0.77929396  0.65295254 18.50364534  5.53603913]
+2025-04-29 09:57:16 - INFO - Average metric of all decoders: [ 0.70903077  0.57651735 21.52005574  3.96854494]
+2025-04-29 09:57:16 - INFO - Test results: [ 0.77929396  0.65295254 18.50364534  5.53603913]
+2025-04-29 09:57:20 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 09:57:20 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 09:57:20 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 09:57:22 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_20.pth
+2025-04-29 09:57:26 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_20.pth 加载 checkpoint 文件。
+2025-04-29 09:57:26 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 09:57:26 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 09:57:26 - INFO - 成功将状态字典加载到模型。
+2025-04-29 09:57:26 - INFO - 模型已移动到设备: cuda
+2025-04-29 09:57:26 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 09:57:26 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 09:57:26 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 09:57:26 - INFO - Constructed full image paths for 20 images.
+2025-04-29 09:57:26 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 09:57:43 - INFO - Image 00 - Dice: 0.62484, Jaccard: 0.45437, HD95: 19.54482, ASD: 4.80433
+2025-04-29 09:57:43 - INFO - Image 00 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:58:02 - INFO - Image 01 - Dice: 0.34985, Jaccard: 0.21201, HD95: 26.09598, ASD: 9.20658
+2025-04-29 09:58:02 - INFO - Image 01 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:58:25 - INFO - Image 02 - Dice: 0.19046, Jaccard: 0.10525, HD95: 42.56935, ASD: 5.83856
+2025-04-29 09:58:25 - INFO - Image 02 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:58:48 - INFO - Image 03 - Dice: 0.10804, Jaccard: 0.05710, HD95: 83.24662, ASD: 6.35961
+2025-04-29 09:58:48 - INFO - Image 03 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:59:05 - INFO - Image 04 - Dice: 0.00000, Jaccard: 0.00000, HD95: 123.12656, ASD: 53.84700
+2025-04-29 09:59:05 - INFO - Image 04 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:59:36 - INFO - Image 05 - Dice: 0.03380, Jaccard: 0.01719, HD95: 67.44665, ASD: 13.97862
+2025-04-29 09:59:36 - INFO - Image 05 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 09:59:53 - INFO - Image 06 - Dice: 0.54011, Jaccard: 0.36996, HD95: 37.53665, ASD: 14.25584
+2025-04-29 09:59:53 - INFO - Image 06 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:00:19 - INFO - Image 07 - Dice: 0.29876, Jaccard: 0.17561, HD95: 30.23243, ASD: 7.56533
+2025-04-29 10:00:19 - INFO - Image 07 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:00:47 - INFO - Image 08 - Dice: 0.70937, Jaccard: 0.54963, HD95: 25.25866, ASD: 9.99430
+2025-04-29 10:00:47 - INFO - Image 08 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:01:10 - INFO - Image 09 - Dice: 0.19536, Jaccard: 0.10826, HD95: 45.22168, ASD: 9.56443
+2025-04-29 10:01:10 - INFO - Image 09 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:01:29 - INFO - Image 10 - Dice: 0.07502, Jaccard: 0.03897, HD95: 55.59676, ASD: 9.53298
+2025-04-29 10:01:29 - INFO - Image 10 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:01:52 - INFO - Image 11 - Dice: 0.25905, Jaccard: 0.14880, HD95: 25.17936, ASD: 8.37895
+2025-04-29 10:01:52 - INFO - Image 11 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:02:14 - INFO - Image 12 - Dice: 0.07179, Jaccard: 0.03723, HD95: 53.11309, ASD: 10.06797
+2025-04-29 10:02:14 - INFO - Image 12 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:02:37 - INFO - Image 13 - Dice: 0.07873, Jaccard: 0.04098, HD95: 47.25357, ASD: 10.50402
+2025-04-29 10:02:37 - INFO - Image 13 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:02:56 - INFO - Image 14 - Dice: 0.53984, Jaccard: 0.36972, HD95: 37.97368, ASD: 17.92194
+2025-04-29 10:02:56 - INFO - Image 14 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:03:14 - INFO - Image 15 - Dice: 0.11222, Jaccard: 0.05945, HD95: 68.82042, ASD: 6.68409
+2025-04-29 10:03:14 - INFO - Image 15 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:03:31 - INFO - Image 16 - Dice: 0.00477, Jaccard: 0.00239, HD95: 70.20043, ASD: 1.78167
+2025-04-29 10:03:31 - INFO - Image 16 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:03:52 - INFO - Image 17 - Dice: 0.00000, Jaccard: 0.00000, HD95: 92.11189, ASD: 16.58361
+2025-04-29 10:03:52 - INFO - Image 17 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:04:20 - INFO - Image 18 - Dice: 0.01571, Jaccard: 0.00792, HD95: 107.27535, ASD: 14.23240
+2025-04-29 10:04:20 - INFO - Image 18 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:04:46 - INFO - Image 19 - Dice: 0.30771, Jaccard: 0.18183, HD95: 33.77869, ASD: 8.27361
+2025-04-29 10:04:46 - INFO - Image 19 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:04:46 - INFO - Average metric (decoder 1): [ 0.22577092  0.14683343 54.57913116 11.96879214]
+2025-04-29 10:04:46 - INFO - Average metric (all decoders): [ 0.  0. inf inf]
+2025-04-29 10:04:46 - INFO - Average metric of decoder 1: [ 0.22577092  0.14683343 54.57913116 11.96879214]
+2025-04-29 10:04:46 - INFO - Average metric of all decoders: [ 0.  0. inf inf]
+2025-04-29 10:04:46 - INFO - Test results: [ 0.22577092  0.14683343 54.57913116 11.96879214]
+2025-04-29 10:04:50 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 10:04:50 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 10:04:50 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 10:04:51 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_200.pth
+2025-04-29 10:04:55 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_200.pth 加载 checkpoint 文件。
+2025-04-29 10:04:55 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 10:04:55 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 10:04:55 - INFO - 成功将状态字典加载到模型。
+2025-04-29 10:04:55 - INFO - 模型已移动到设备: cuda
+2025-04-29 10:04:55 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 10:04:55 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 10:04:55 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 10:04:55 - INFO - Constructed full image paths for 20 images.
+2025-04-29 10:04:55 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 10:05:13 - INFO - Image 00 - Dice: 0.73252, Jaccard: 0.57794, HD95: 23.53720, ASD: 7.37581
+2025-04-29 10:05:13 - INFO - Image 00 (average output) - Dice: 0.70372, Jaccard: 0.54288, HD95: 16.64332, ASD: 4.10876
+2025-04-29 10:05:33 - INFO - Image 01 - Dice: 0.86647, Jaccard: 0.76441, HD95: 14.45683, ASD: 3.22569
+2025-04-29 10:05:33 - INFO - Image 01 (average output) - Dice: 0.76424, Jaccard: 0.61844, HD95: 22.31031, ASD: 3.35511
+2025-04-29 10:05:57 - INFO - Image 02 - Dice: 0.87931, Jaccard: 0.78461, HD95: 18.02776, ASD: 4.58597
+2025-04-29 10:05:57 - INFO - Image 02 (average output) - Dice: 0.73553, Jaccard: 0.58169, HD95: 16.67333, ASD: 3.27912
+2025-04-29 10:06:20 - INFO - Image 03 - Dice: 0.88486, Jaccard: 0.79349, HD95: 7.00000, ASD: 2.32736
+2025-04-29 10:06:20 - INFO - Image 03 (average output) - Dice: 0.71093, Jaccard: 0.55150, HD95: 19.67232, ASD: 3.66871
+2025-04-29 10:06:37 - INFO - Image 04 - Dice: 0.82693, Jaccard: 0.70493, HD95: 17.23369, ASD: 4.42659
+2025-04-29 10:06:37 - INFO - Image 04 (average output) - Dice: 0.74761, Jaccard: 0.59695, HD95: 22.13594, ASD: 2.06866
+2025-04-29 10:07:08 - INFO - Image 05 - Dice: 0.72416, Jaccard: 0.56760, HD95: 17.91647, ASD: 5.38568
+2025-04-29 10:07:08 - INFO - Image 05 (average output) - Dice: 0.36877, Jaccard: 0.22607, HD95: 30.82207, ASD: 10.44322
+2025-04-29 10:07:25 - INFO - Image 06 - Dice: 0.87070, Jaccard: 0.77101, HD95: 20.14944, ASD: 5.40811
+2025-04-29 10:07:25 - INFO - Image 06 (average output) - Dice: 0.86146, Jaccard: 0.75664, HD95: 12.72792, ASD: 1.88138
+2025-04-29 10:07:49 - INFO - Image 07 - Dice: 0.49511, Jaccard: 0.32900, HD95: 38.26225, ASD: 14.88168
+2025-04-29 10:07:49 - INFO - Image 07 (average output) - Dice: 0.04505, Jaccard: 0.02304, HD95: 86.88498, ASD: 9.69413
+2025-04-29 10:08:18 - INFO - Image 08 - Dice: 0.85584, Jaccard: 0.74801, HD95: 11.70470, ASD: 4.02990
+2025-04-29 10:08:18 - INFO - Image 08 (average output) - Dice: 0.72818, Jaccard: 0.57255, HD95: 15.00000, ASD: 4.20642
+2025-04-29 10:08:40 - INFO - Image 09 - Dice: 0.81337, Jaccard: 0.68544, HD95: 25.57342, ASD: 7.73080
+2025-04-29 10:08:40 - INFO - Image 09 (average output) - Dice: 0.81649, Jaccard: 0.68989, HD95: 12.88410, ASD: 2.41963
+2025-04-29 10:08:59 - INFO - Image 10 - Dice: 0.77275, Jaccard: 0.62966, HD95: 16.91153, ASD: 5.65028
+2025-04-29 10:08:59 - INFO - Image 10 (average output) - Dice: 0.70795, Jaccard: 0.54793, HD95: 21.11871, ASD: 3.62827
+2025-04-29 10:09:23 - INFO - Image 11 - Dice: 0.60432, Jaccard: 0.43300, HD95: 51.98509, ASD: 19.36794
+2025-04-29 10:09:23 - INFO - Image 11 (average output) - Dice: 0.74646, Jaccard: 0.59548, HD95: 17.46425, ASD: 4.05915
+2025-04-29 10:09:46 - INFO - Image 12 - Dice: 0.85833, Jaccard: 0.75181, HD95: 14.17745, ASD: 3.54841
+2025-04-29 10:09:46 - INFO - Image 12 (average output) - Dice: 0.76072, Jaccard: 0.61384, HD95: 19.41649, ASD: 3.02083
+2025-04-29 10:10:09 - INFO - Image 13 - Dice: 0.82326, Jaccard: 0.69961, HD95: 15.52417, ASD: 4.44013
+2025-04-29 10:10:09 - INFO - Image 13 (average output) - Dice: 0.64719, Jaccard: 0.47840, HD95: 18.49324, ASD: 4.60417
+2025-04-29 10:10:29 - INFO - Image 14 - Dice: 0.80136, Jaccard: 0.66856, HD95: 39.00000, ASD: 12.13237
+2025-04-29 10:10:29 - INFO - Image 14 (average output) - Dice: 0.83574, Jaccard: 0.71783, HD95: 11.18034, ASD: 2.32497
+2025-04-29 10:10:48 - INFO - Image 15 - Dice: 0.86715, Jaccard: 0.76546, HD95: 20.71232, ASD: 5.06377
+2025-04-29 10:10:48 - INFO - Image 15 (average output) - Dice: 0.72526, Jaccard: 0.56894, HD95: 14.89966, ASD: 3.75203
+2025-04-29 10:11:06 - INFO - Image 16 - Dice: 0.51460, Jaccard: 0.34644, HD95: 32.34192, ASD: 12.72866
+2025-04-29 10:11:06 - INFO - Image 16 (average output) - Dice: 0.18314, Jaccard: 0.10080, HD95: 58.08270, ASD: 10.14098
+2025-04-29 10:11:28 - INFO - Image 17 - Dice: 0.83013, Jaccard: 0.70959, HD95: 13.07670, ASD: 4.17971
+2025-04-29 10:11:28 - INFO - Image 17 (average output) - Dice: 0.71678, Jaccard: 0.55858, HD95: 14.24781, ASD: 3.81796
+2025-04-29 10:11:57 - INFO - Image 18 - Dice: 0.86214, Jaccard: 0.75769, HD95: 23.00000, ASD: 5.61510
+2025-04-29 10:11:57 - INFO - Image 18 (average output) - Dice: 0.76059, Jaccard: 0.61367, HD95: 20.12461, ASD: 5.33087
+2025-04-29 10:12:24 - INFO - Image 19 - Dice: 0.75147, Jaccard: 0.60188, HD95: 28.72281, ASD: 9.47185
+2025-04-29 10:12:24 - INFO - Image 19 (average output) - Dice: 0.67884, Jaccard: 0.51382, HD95: 19.00000, ASD: 4.82361
+2025-04-29 10:12:24 - INFO - Average metric (decoder 1): [ 0.78173933  0.65450673 22.4656885   7.07878951]
+2025-04-29 10:12:24 - INFO - Average metric (all decoders): [ 0.66223245  0.52344742 23.48910517  4.53139878]
+2025-04-29 10:12:24 - INFO - Average metric of decoder 1: [ 0.78173933  0.65450673 22.4656885   7.07878951]
+2025-04-29 10:12:24 - INFO - Average metric of all decoders: [ 0.66223245  0.52344742 23.48910517  4.53139878]
+2025-04-29 10:12:24 - INFO - Test results: [ 0.78173933  0.65450673 22.4656885   7.07878951]
+2025-04-29 10:12:28 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 10:12:28 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 10:12:28 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 10:12:30 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_220.pth
+2025-04-29 10:12:33 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_220.pth 加载 checkpoint 文件。
+2025-04-29 10:12:33 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 10:12:33 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 10:12:33 - INFO - 成功将状态字典加载到模型。
+2025-04-29 10:12:33 - INFO - 模型已移动到设备: cuda
+2025-04-29 10:12:33 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 10:12:33 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 10:12:33 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 10:12:33 - INFO - Constructed full image paths for 20 images.
+2025-04-29 10:12:33 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 10:12:51 - INFO - Image 00 - Dice: 0.63001, Jaccard: 0.45987, HD95: 25.31798, ASD: 4.15460
+2025-04-29 10:12:51 - INFO - Image 00 (average output) - Dice: 0.50295, Jaccard: 0.33596, HD95: 31.79623, ASD: 5.67287
+2025-04-29 10:13:11 - INFO - Image 01 - Dice: 0.85826, Jaccard: 0.75171, HD95: 13.34166, ASD: 1.99901
+2025-04-29 10:13:11 - INFO - Image 01 (average output) - Dice: 0.73712, Jaccard: 0.58369, HD95: 26.32489, ASD: 3.45267
+2025-04-29 10:13:35 - INFO - Image 02 - Dice: 0.83913, Jaccard: 0.72284, HD95: 12.84523, ASD: 1.73110
+2025-04-29 10:13:35 - INFO - Image 02 (average output) - Dice: 0.74629, Jaccard: 0.59527, HD95: 19.54482, ASD: 2.87273
+2025-04-29 10:13:59 - INFO - Image 03 - Dice: 0.84072, Jaccard: 0.72520, HD95: 10.63015, ASD: 1.88149
+2025-04-29 10:13:59 - INFO - Image 03 (average output) - Dice: 0.75431, Jaccard: 0.60554, HD95: 23.19483, ASD: 2.83428
+2025-04-29 10:14:15 - INFO - Image 04 - Dice: 0.84231, Jaccard: 0.72757, HD95: 19.23538, ASD: 2.33998
+2025-04-29 10:14:15 - INFO - Image 04 (average output) - Dice: 0.78380, Jaccard: 0.64446, HD95: 27.09243, ASD: 1.58386
+2025-04-29 10:14:46 - INFO - Image 05 - Dice: 0.00605, Jaccard: 0.00303, HD95: 147.16487, ASD: 1.91601
+2025-04-29 10:14:46 - INFO - Image 05 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 10:15:03 - INFO - Image 06 - Dice: 0.91935, Jaccard: 0.85074, HD95: 4.47214, ASD: 1.31731
+2025-04-29 10:15:03 - INFO - Image 06 (average output) - Dice: 0.89312, Jaccard: 0.80688, HD95: 10.48809, ASD: 1.45741
+2025-04-29 10:15:28 - INFO - Image 07 - Dice: 0.33204, Jaccard: 0.19907, HD95: 64.01601, ASD: 4.77995
+2025-04-29 10:15:28 - INFO - Image 07 (average output) - Dice: 0.25106, Jaccard: 0.14355, HD95: 67.00746, ASD: 5.61323
+2025-04-29 10:15:56 - INFO - Image 08 - Dice: 0.89192, Jaccard: 0.80492, HD95: 7.81025, ASD: 2.97717
+2025-04-29 10:15:56 - INFO - Image 08 (average output) - Dice: 0.86555, Jaccard: 0.76297, HD95: 9.84886, ASD: 2.14622
+2025-04-29 10:16:19 - INFO - Image 09 - Dice: 0.89915, Jaccard: 0.81678, HD95: 6.40312, ASD: 1.65488
+2025-04-29 10:16:19 - INFO - Image 09 (average output) - Dice: 0.84656, Jaccard: 0.73394, HD95: 13.37909, ASD: 2.05635
+2025-04-29 10:16:37 - INFO - Image 10 - Dice: 0.78554, Jaccard: 0.64682, HD95: 14.59452, ASD: 3.02664
+2025-04-29 10:16:37 - INFO - Image 10 (average output) - Dice: 0.75564, Jaccard: 0.60726, HD95: 20.32240, ASD: 3.09625
+2025-04-29 10:17:00 - INFO - Image 11 - Dice: 0.82922, Jaccard: 0.70826, HD95: 10.63015, ASD: 3.19464
+2025-04-29 10:17:00 - INFO - Image 11 (average output) - Dice: 0.78658, Jaccard: 0.64823, HD95: 14.86607, ASD: 3.44549
+2025-04-29 10:17:24 - INFO - Image 12 - Dice: 0.86965, Jaccard: 0.76937, HD95: 12.04159, ASD: 1.60772
+2025-04-29 10:17:24 - INFO - Image 12 (average output) - Dice: 0.78759, Jaccard: 0.64960, HD95: 21.63331, ASD: 2.34022
+2025-04-29 10:17:48 - INFO - Image 13 - Dice: 0.77662, Jaccard: 0.63482, HD95: 20.64461, ASD: 2.51445
+2025-04-29 10:17:48 - INFO - Image 13 (average output) - Dice: 0.61370, Jaccard: 0.44269, HD95: 29.08608, ASD: 4.76876
+2025-04-29 10:18:07 - INFO - Image 14 - Dice: 0.91613, Jaccard: 0.84524, HD95: 7.98110, ASD: 1.76217
+2025-04-29 10:18:07 - INFO - Image 14 (average output) - Dice: 0.89475, Jaccard: 0.80955, HD95: 9.16515, ASD: 1.51481
+2025-04-29 10:18:27 - INFO - Image 15 - Dice: 0.88918, Jaccard: 0.80047, HD95: 7.68115, ASD: 2.37031
+2025-04-29 10:18:27 - INFO - Image 15 (average output) - Dice: 0.83558, Jaccard: 0.71759, HD95: 11.87434, ASD: 2.22299
+2025-04-29 10:18:47 - INFO - Image 16 - Dice: 0.62001, Jaccard: 0.44929, HD95: 18.35756, ASD: 6.62679
+2025-04-29 10:18:47 - INFO - Image 16 (average output) - Dice: 0.08213, Jaccard: 0.04282, HD95: 66.89544, ASD: 12.16063
+2025-04-29 10:19:08 - INFO - Image 17 - Dice: 0.82505, Jaccard: 0.70221, HD95: 9.00000, ASD: 2.73629
+2025-04-29 10:19:08 - INFO - Image 17 (average output) - Dice: 0.76850, Jaccard: 0.62403, HD95: 12.56981, ASD: 3.04528
+2025-04-29 10:19:38 - INFO - Image 18 - Dice: 0.90145, Jaccard: 0.82059, HD95: 16.58312, ASD: 2.62334
+2025-04-29 10:19:38 - INFO - Image 18 (average output) - Dice: 0.84277, Jaccard: 0.72826, HD95: 19.98248, ASD: 3.19372
+2025-04-29 10:20:05 - INFO - Image 19 - Dice: 0.63990, Jaccard: 0.47048, HD95: 24.04163, ASD: 4.81894
+2025-04-29 10:20:05 - INFO - Image 19 (average output) - Dice: 0.50813, Jaccard: 0.34060, HD95: 37.69615, ASD: 5.69680
+2025-04-29 10:20:05 - INFO - Average metric (decoder 1): [ 0.75558497  0.64546436 22.63961146  2.80163993]
+2025-04-29 10:20:05 - INFO - Average metric (all decoders): [0.66280669 0.54114492        inf        inf]
+2025-04-29 10:20:05 - INFO - Average metric of decoder 1: [ 0.75558497  0.64546436 22.63961146  2.80163993]
+2025-04-29 10:20:05 - INFO - Average metric of all decoders: [0.66280669 0.54114492        inf        inf]
+2025-04-29 10:20:05 - INFO - Test results: [ 0.75558497  0.64546436 22.63961146  2.80163993]
+2025-04-29 10:20:09 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 10:20:09 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 10:20:09 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 10:20:11 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_240.pth
+2025-04-29 10:20:15 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_240.pth 加载 checkpoint 文件。
+2025-04-29 10:20:15 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 10:20:15 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 10:20:15 - INFO - 成功将状态字典加载到模型。
+2025-04-29 10:20:15 - INFO - 模型已移动到设备: cuda
+2025-04-29 10:20:15 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 10:20:15 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 10:20:15 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 10:20:15 - INFO - Constructed full image paths for 20 images.
+2025-04-29 10:20:15 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 10:20:32 - INFO - Image 00 - Dice: 0.73384, Jaccard: 0.57958, HD95: 24.10394, ASD: 7.72199
+2025-04-29 10:20:32 - INFO - Image 00 (average output) - Dice: 0.67398, Jaccard: 0.50828, HD95: 16.43168, ASD: 4.18402
+2025-04-29 10:20:52 - INFO - Image 01 - Dice: 0.73436, Jaccard: 0.58023, HD95: 36.81032, ASD: 14.37134
+2025-04-29 10:20:52 - INFO - Image 01 (average output) - Dice: 0.76905, Jaccard: 0.62477, HD95: 18.78829, ASD: 3.43073
+2025-04-29 10:21:16 - INFO - Image 02 - Dice: 0.78368, Jaccard: 0.64430, HD95: 13.74773, ASD: 2.43785
+2025-04-29 10:21:16 - INFO - Image 02 (average output) - Dice: 0.62613, Jaccard: 0.45574, HD95: 22.40536, ASD: 4.23292
+2025-04-29 10:21:39 - INFO - Image 03 - Dice: 0.83888, Jaccard: 0.72247, HD95: 13.74773, ASD: 3.67356
+2025-04-29 10:21:39 - INFO - Image 03 (average output) - Dice: 0.76516, Jaccard: 0.61965, HD95: 14.00000, ASD: 2.88397
+2025-04-29 10:21:56 - INFO - Image 04 - Dice: 0.86697, Jaccard: 0.76518, HD95: 5.00000, ASD: 1.62870
+2025-04-29 10:21:56 - INFO - Image 04 (average output) - Dice: 0.70623, Jaccard: 0.54587, HD95: 26.28117, ASD: 2.41020
+2025-04-29 10:22:28 - INFO - Image 05 - Dice: 0.60756, Jaccard: 0.43632, HD95: 22.36068, ASD: 8.11270
+2025-04-29 10:22:28 - INFO - Image 05 (average output) - Dice: 0.10980, Jaccard: 0.05809, HD95: 59.07622, ASD: 16.94211
+2025-04-29 10:22:45 - INFO - Image 06 - Dice: 0.91157, Jaccard: 0.83751, HD95: 5.38516, ASD: 1.61723
+2025-04-29 10:22:45 - INFO - Image 06 (average output) - Dice: 0.85826, Jaccard: 0.75172, HD95: 11.18034, ASD: 1.90846
+2025-04-29 10:23:10 - INFO - Image 07 - Dice: 0.57464, Jaccard: 0.40315, HD95: 24.51530, ASD: 9.19249
+2025-04-29 10:23:10 - INFO - Image 07 (average output) - Dice: 0.45268, Jaccard: 0.29256, HD95: 22.02272, ASD: 7.38183
+2025-04-29 10:23:38 - INFO - Image 08 - Dice: 0.89105, Jaccard: 0.80351, HD95: 10.24695, ASD: 3.37999
+2025-04-29 10:23:38 - INFO - Image 08 (average output) - Dice: 0.78712, Jaccard: 0.64897, HD95: 12.52996, ASD: 3.48720
+2025-04-29 10:24:01 - INFO - Image 09 - Dice: 0.88466, Jaccard: 0.79317, HD95: 9.69536, ASD: 2.75429
+2025-04-29 10:24:01 - INFO - Image 09 (average output) - Dice: 0.77897, Jaccard: 0.63796, HD95: 10.44031, ASD: 2.97898
+2025-04-29 10:24:19 - INFO - Image 10 - Dice: 0.70631, Jaccard: 0.54597, HD95: 27.74887, ASD: 9.58374
+2025-04-29 10:24:19 - INFO - Image 10 (average output) - Dice: 0.76463, Jaccard: 0.61895, HD95: 15.16575, ASD: 3.87686
+2025-04-29 10:24:42 - INFO - Image 11 - Dice: 0.79741, Jaccard: 0.66307, HD95: 22.82542, ASD: 6.38712
+2025-04-29 10:24:42 - INFO - Image 11 (average output) - Dice: 0.77098, Jaccard: 0.62732, HD95: 16.40122, ASD: 3.59791
+2025-04-29 10:25:07 - INFO - Image 12 - Dice: 0.87674, Jaccard: 0.78053, HD95: 11.48913, ASD: 2.07594
+2025-04-29 10:25:07 - INFO - Image 12 (average output) - Dice: 0.80421, Jaccard: 0.67253, HD95: 18.22087, ASD: 2.16408
+2025-04-29 10:25:30 - INFO - Image 13 - Dice: 0.66720, Jaccard: 0.50060, HD95: 35.74143, ASD: 13.34938
+2025-04-29 10:25:30 - INFO - Image 13 (average output) - Dice: 0.59518, Jaccard: 0.42367, HD95: 17.49286, ASD: 4.92794
+2025-04-29 10:25:50 - INFO - Image 14 - Dice: 0.83738, Jaccard: 0.72026, HD95: 16.00000, ASD: 5.00402
+2025-04-29 10:25:50 - INFO - Image 14 (average output) - Dice: 0.81595, Jaccard: 0.68912, HD95: 11.74734, ASD: 2.62521
+2025-04-29 10:26:09 - INFO - Image 15 - Dice: 0.88450, Jaccard: 0.79291, HD95: 9.89949, ASD: 3.23691
+2025-04-29 10:26:09 - INFO - Image 15 (average output) - Dice: 0.77633, Jaccard: 0.63442, HD95: 11.18034, ASD: 3.10437
+2025-04-29 10:26:28 - INFO - Image 16 - Dice: 0.64608, Jaccard: 0.47720, HD95: 20.32240, ASD: 8.22648
+2025-04-29 10:26:28 - INFO - Image 16 (average output) - Dice: 0.27163, Jaccard: 0.15716, HD95: 19.20937, ASD: 9.33475
+2025-04-29 10:26:50 - INFO - Image 17 - Dice: 0.84256, Jaccard: 0.72795, HD95: 7.81025, ASD: 2.82341
+2025-04-29 10:26:50 - INFO - Image 17 (average output) - Dice: 0.78570, Jaccard: 0.64703, HD95: 9.05539, ASD: 3.02962
+2025-04-29 10:27:19 - INFO - Image 18 - Dice: 0.91300, Jaccard: 0.83992, HD95: 12.68858, ASD: 2.71704
+2025-04-29 10:27:19 - INFO - Image 18 (average output) - Dice: 0.80188, Jaccard: 0.66928, HD95: 16.30951, ASD: 4.22139
+2025-04-29 10:27:47 - INFO - Image 19 - Dice: 0.82670, Jaccard: 0.70459, HD95: 16.91153, ASD: 5.03338
+2025-04-29 10:27:47 - INFO - Image 19 (average output) - Dice: 0.70573, Jaccard: 0.54527, HD95: 18.92089, ASD: 5.73307
+2025-04-29 10:27:47 - INFO - Average metric (decoder 1): [ 0.79125475  0.66592274 17.35251452  5.66637791]
+2025-04-29 10:27:47 - INFO - Average metric (all decoders): [ 0.68098018  0.54141733 18.34297833  4.62277981]
+2025-04-29 10:27:47 - INFO - Average metric of decoder 1: [ 0.79125475  0.66592274 17.35251452  5.66637791]
+2025-04-29 10:27:47 - INFO - Average metric of all decoders: [ 0.68098018  0.54141733 18.34297833  4.62277981]
+2025-04-29 10:27:47 - INFO - Test results: [ 0.79125475  0.66592274 17.35251452  5.66637791]
+2025-04-29 10:27:51 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 10:27:51 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 10:27:51 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 10:27:53 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_260.pth
+2025-04-29 10:27:57 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_260.pth 加载 checkpoint 文件。
+2025-04-29 10:27:57 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 10:27:57 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 10:27:57 - INFO - 成功将状态字典加载到模型。
+2025-04-29 10:27:57 - INFO - 模型已移动到设备: cuda
+2025-04-29 10:27:57 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 10:27:57 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 10:27:57 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 10:27:57 - INFO - Constructed full image paths for 20 images.
+2025-04-29 10:27:57 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 10:28:14 - INFO - Image 00 - Dice: 0.78955, Jaccard: 0.65228, HD95: 15.55635, ASD: 2.94700
+2025-04-29 10:28:14 - INFO - Image 00 (average output) - Dice: 0.65697, Jaccard: 0.48917, HD95: 25.00900, ASD: 4.16515
+2025-04-29 10:28:35 - INFO - Image 01 - Dice: 0.86839, Jaccard: 0.76739, HD95: 10.48809, ASD: 1.91452
+2025-04-29 10:28:35 - INFO - Image 01 (average output) - Dice: 0.72457, Jaccard: 0.56810, HD95: 23.68544, ASD: 3.82356
+2025-04-29 10:28:58 - INFO - Image 02 - Dice: 0.85370, Jaccard: 0.74474, HD95: 12.88410, ASD: 1.76501
+2025-04-29 10:28:58 - INFO - Image 02 (average output) - Dice: 0.66507, Jaccard: 0.49820, HD95: 21.77154, ASD: 4.05104
+2025-04-29 10:29:22 - INFO - Image 03 - Dice: 0.86666, Jaccard: 0.76470, HD95: 8.36660, ASD: 1.67206
+2025-04-29 10:29:22 - INFO - Image 03 (average output) - Dice: 0.72082, Jaccard: 0.56351, HD95: 22.38303, ASD: 3.42223
+2025-04-29 10:29:39 - INFO - Image 04 - Dice: 0.88094, Jaccard: 0.78721, HD95: 8.06226, ASD: 2.54148
+2025-04-29 10:29:39 - INFO - Image 04 (average output) - Dice: 0.72311, Jaccard: 0.56630, HD95: 27.09243, ASD: 2.22785
+2025-04-29 10:30:11 - INFO - Image 05 - Dice: 0.22628, Jaccard: 0.12757, HD95: 46.27094, ASD: 12.64172
+2025-04-29 10:30:11 - INFO - Image 05 (average output) - Dice: 0.01225, Jaccard: 0.00616, HD95: 74.23948, ASD: 21.18621
+2025-04-29 10:30:28 - INFO - Image 06 - Dice: 0.90375, Jaccard: 0.82440, HD95: 8.24621, ASD: 1.56578
+2025-04-29 10:30:28 - INFO - Image 06 (average output) - Dice: 0.86023, Jaccard: 0.75473, HD95: 16.14310, ASD: 1.82630
+2025-04-29 10:30:52 - INFO - Image 07 - Dice: 0.38177, Jaccard: 0.23592, HD95: 57.98276, ASD: 4.98587
+2025-04-29 10:30:52 - INFO - Image 07 (average output) - Dice: 0.07040, Jaccard: 0.03649, HD95: 74.39086, ASD: 6.32589
+2025-04-29 10:31:20 - INFO - Image 08 - Dice: 0.90834, Jaccard: 0.83207, HD95: 6.32456, ASD: 1.77249
+2025-04-29 10:31:20 - INFO - Image 08 (average output) - Dice: 0.80653, Jaccard: 0.67579, HD95: 11.87434, ASD: 3.17673
+2025-04-29 10:31:43 - INFO - Image 09 - Dice: 0.89952, Jaccard: 0.81738, HD95: 7.07107, ASD: 1.67455
+2025-04-29 10:31:43 - INFO - Image 09 (average output) - Dice: 0.79587, Jaccard: 0.66095, HD95: 15.17233, ASD: 2.71750
+2025-04-29 10:32:02 - INFO - Image 10 - Dice: 0.79328, Jaccard: 0.65738, HD95: 13.34166, ASD: 3.03053
+2025-04-29 10:32:02 - INFO - Image 10 (average output) - Dice: 0.72352, Jaccard: 0.56681, HD95: 23.93742, ASD: 3.40480
+2025-04-29 10:32:24 - INFO - Image 11 - Dice: 0.70053, Jaccard: 0.53909, HD95: 51.80492, ASD: 17.19182
+2025-04-29 10:32:24 - INFO - Image 11 (average output) - Dice: 0.77593, Jaccard: 0.63389, HD95: 17.46425, ASD: 3.18031
+2025-04-29 10:32:48 - INFO - Image 12 - Dice: 0.86821, Jaccard: 0.76712, HD95: 10.63015, ASD: 1.62247
+2025-04-29 10:32:48 - INFO - Image 12 (average output) - Dice: 0.75745, Jaccard: 0.60960, HD95: 24.07904, ASD: 2.70624
+2025-04-29 10:33:12 - INFO - Image 13 - Dice: 0.80150, Jaccard: 0.66875, HD95: 12.24745, ASD: 3.71901
+2025-04-29 10:33:12 - INFO - Image 13 (average output) - Dice: 0.57282, Jaccard: 0.40137, HD95: 19.02630, ASD: 5.35091
+2025-04-29 10:33:32 - INFO - Image 14 - Dice: 0.91224, Jaccard: 0.83864, HD95: 7.00000, ASD: 1.57912
+2025-04-29 10:33:32 - INFO - Image 14 (average output) - Dice: 0.85915, Jaccard: 0.75308, HD95: 11.35782, ASD: 1.97472
+2025-04-29 10:33:51 - INFO - Image 15 - Dice: 0.89261, Jaccard: 0.80605, HD95: 6.16441, ASD: 1.74792
+2025-04-29 10:33:51 - INFO - Image 15 (average output) - Dice: 0.76295, Jaccard: 0.61675, HD95: 14.45683, ASD: 3.27112
+2025-04-29 10:34:11 - INFO - Image 16 - Dice: 0.49480, Jaccard: 0.32873, HD95: 18.13836, ASD: 6.76440
+2025-04-29 10:34:11 - INFO - Image 16 (average output) - Dice: 0.10030, Jaccard: 0.05280, HD95: 32.18462, ASD: 9.36109
+2025-04-29 10:34:33 - INFO - Image 17 - Dice: 0.82501, Jaccard: 0.70214, HD95: 10.44031, ASD: 2.95040
+2025-04-29 10:34:33 - INFO - Image 17 (average output) - Dice: 0.74052, Jaccard: 0.58796, HD95: 17.05872, ASD: 3.15252
+2025-04-29 10:35:02 - INFO - Image 18 - Dice: 0.89802, Jaccard: 0.81491, HD95: 15.00000, ASD: 2.38311
+2025-04-29 10:35:02 - INFO - Image 18 (average output) - Dice: 0.78312, Jaccard: 0.64355, HD95: 20.71232, ASD: 4.61195
+2025-04-29 10:35:30 - INFO - Image 19 - Dice: 0.79651, Jaccard: 0.66183, HD95: 23.34524, ASD: 3.37971
+2025-04-29 10:35:30 - INFO - Image 19 (average output) - Dice: 0.60830, Jaccard: 0.43709, HD95: 35.64127, ASD: 5.27930
+2025-04-29 10:35:30 - INFO - Average metric (decoder 1): [ 0.7780796   0.66691504 17.46827092  3.89244862]
+2025-04-29 10:35:30 - INFO - Average metric (all decoders): [ 0.63599435  0.50611455 26.38400642  4.7607712 ]
+2025-04-29 10:35:30 - INFO - Average metric of decoder 1: [ 0.7780796   0.66691504 17.46827092  3.89244862]
+2025-04-29 10:35:30 - INFO - Average metric of all decoders: [ 0.63599435  0.50611455 26.38400642  4.7607712 ]
+2025-04-29 10:35:30 - INFO - Test results: [ 0.7780796   0.66691504 17.46827092  3.89244862]
+2025-04-29 10:35:34 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 10:35:34 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 10:35:34 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 10:35:35 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_280.pth
+2025-04-29 10:35:39 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_280.pth 加载 checkpoint 文件。
+2025-04-29 10:35:39 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 10:35:39 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 10:35:39 - INFO - 成功将状态字典加载到模型。
+2025-04-29 10:35:39 - INFO - 模型已移动到设备: cuda
+2025-04-29 10:35:39 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 10:35:39 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 10:35:39 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 10:35:39 - INFO - Constructed full image paths for 20 images.
+2025-04-29 10:35:39 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 10:35:57 - INFO - Image 00 - Dice: 0.79565, Jaccard: 0.66064, HD95: 11.00000, ASD: 3.80622
+2025-04-29 10:35:57 - INFO - Image 00 (average output) - Dice: 0.80628, Jaccard: 0.67544, HD95: 12.88410, ASD: 2.87549
+2025-04-29 10:36:17 - INFO - Image 01 - Dice: 0.88825, Jaccard: 0.79897, HD95: 10.67708, ASD: 1.72756
+2025-04-29 10:36:17 - INFO - Image 01 (average output) - Dice: 0.81194, Jaccard: 0.68342, HD95: 19.38297, ASD: 2.51061
+2025-04-29 10:36:41 - INFO - Image 02 - Dice: 0.87118, Jaccard: 0.77177, HD95: 13.89244, ASD: 1.34892
+2025-04-29 10:36:41 - INFO - Image 02 (average output) - Dice: 0.75450, Jaccard: 0.60578, HD95: 19.33908, ASD: 2.84242
+2025-04-29 10:37:05 - INFO - Image 03 - Dice: 0.89267, Jaccard: 0.80615, HD95: 5.83095, ASD: 1.56274
+2025-04-29 10:37:05 - INFO - Image 03 (average output) - Dice: 0.82782, Jaccard: 0.70623, HD95: 15.65248, ASD: 2.10954
+2025-04-29 10:37:21 - INFO - Image 04 - Dice: 0.89748, Jaccard: 0.81403, HD95: 5.09902, ASD: 1.76038
+2025-04-29 10:37:21 - INFO - Image 04 (average output) - Dice: 0.79533, Jaccard: 0.66021, HD95: 21.33655, ASD: 1.57417
+2025-04-29 10:37:52 - INFO - Image 05 - Dice: 0.76259, Jaccard: 0.61628, HD95: 18.27567, ASD: 3.88706
+2025-04-29 10:37:52 - INFO - Image 05 (average output) - Dice: 0.62703, Jaccard: 0.45669, HD95: 26.67020, ASD: 6.06161
+2025-04-29 10:38:10 - INFO - Image 06 - Dice: 0.92150, Jaccard: 0.85442, HD95: 4.58258, ASD: 1.27793
+2025-04-29 10:38:10 - INFO - Image 06 (average output) - Dice: 0.89499, Jaccard: 0.80994, HD95: 9.84886, ASD: 1.42307
+2025-04-29 10:38:34 - INFO - Image 07 - Dice: 0.71101, Jaccard: 0.55161, HD95: 30.80828, ASD: 3.62056
+2025-04-29 10:38:34 - INFO - Image 07 (average output) - Dice: 0.51911, Jaccard: 0.35054, HD95: 46.56179, ASD: 4.74379
+2025-04-29 10:39:02 - INFO - Image 08 - Dice: 0.91671, Jaccard: 0.84623, HD95: 7.28011, ASD: 2.46854
+2025-04-29 10:39:02 - INFO - Image 08 (average output) - Dice: 0.87077, Jaccard: 0.77112, HD95: 7.07107, ASD: 2.15342
+2025-04-29 10:39:24 - INFO - Image 09 - Dice: 0.90640, Jaccard: 0.82881, HD95: 6.40312, ASD: 1.49468
+2025-04-29 10:39:24 - INFO - Image 09 (average output) - Dice: 0.85169, Jaccard: 0.74169, HD95: 10.63015, ASD: 1.92786
+2025-04-29 10:39:43 - INFO - Image 10 - Dice: 0.79578, Jaccard: 0.66082, HD95: 11.66190, ASD: 3.60198
+2025-04-29 10:39:43 - INFO - Image 10 (average output) - Dice: 0.81006, Jaccard: 0.68076, HD95: 14.31782, ASD: 2.70217
+2025-04-29 10:40:06 - INFO - Image 11 - Dice: 0.86349, Jaccard: 0.75977, HD95: 9.21954, ASD: 1.79705
+2025-04-29 10:40:06 - INFO - Image 11 (average output) - Dice: 0.79238, Jaccard: 0.65615, HD95: 17.34935, ASD: 2.59634
+2025-04-29 10:40:29 - INFO - Image 12 - Dice: 0.88727, Jaccard: 0.79738, HD95: 9.00000, ASD: 1.46128
+2025-04-29 10:40:29 - INFO - Image 12 (average output) - Dice: 0.80388, Jaccard: 0.67208, HD95: 19.41649, ASD: 2.19374
+2025-04-29 10:40:53 - INFO - Image 13 - Dice: 0.85337, Jaccard: 0.74425, HD95: 10.04988, ASD: 1.90663
+2025-04-29 10:40:53 - INFO - Image 13 (average output) - Dice: 0.69814, Jaccard: 0.53626, HD95: 17.14643, ASD: 3.77975
+2025-04-29 10:41:13 - INFO - Image 14 - Dice: 0.92373, Jaccard: 0.85827, HD95: 5.00000, ASD: 1.19446
+2025-04-29 10:41:13 - INFO - Image 14 (average output) - Dice: 0.87730, Jaccard: 0.78141, HD95: 7.34847, ASD: 1.71305
+2025-04-29 10:41:32 - INFO - Image 15 - Dice: 0.89920, Jaccard: 0.81686, HD95: 6.80421, ASD: 2.27737
+2025-04-29 10:41:32 - INFO - Image 15 (average output) - Dice: 0.85481, Jaccard: 0.74643, HD95: 9.21954, ASD: 1.96530
+2025-04-29 10:41:52 - INFO - Image 16 - Dice: 0.48854, Jaccard: 0.32322, HD95: 19.00000, ASD: 7.83505
+2025-04-29 10:41:52 - INFO - Image 16 (average output) - Dice: 0.07385, Jaccard: 0.03834, HD95: 58.14723, ASD: 12.55189
+2025-04-29 10:42:14 - INFO - Image 17 - Dice: 0.83689, Jaccard: 0.71953, HD95: 12.24745, ASD: 4.16349
+2025-04-29 10:42:14 - INFO - Image 17 (average output) - Dice: 0.80710, Jaccard: 0.67659, HD95: 11.70470, ASD: 2.91556
+2025-04-29 10:42:43 - INFO - Image 18 - Dice: 0.92230, Jaccard: 0.85581, HD95: 9.00000, ASD: 1.90454
+2025-04-29 10:42:43 - INFO - Image 18 (average output) - Dice: 0.84805, Jaccard: 0.73619, HD95: 15.26434, ASD: 3.12256
+2025-04-29 10:43:12 - INFO - Image 19 - Dice: 0.86581, Jaccard: 0.76337, HD95: 11.74734, ASD: 2.72740
+2025-04-29 10:43:12 - INFO - Image 19 (average output) - Dice: 0.77453, Jaccard: 0.63202, HD95: 20.80865, ASD: 3.89590
+2025-04-29 10:43:12 - INFO - Average metric (decoder 1): [ 0.84499117  0.74240969 10.87897858  2.59119161]
+2025-04-29 10:43:12 - INFO - Average metric (all decoders): [ 0.75497831  0.63086446 19.00501269  3.28291187]
+2025-04-29 10:43:12 - INFO - Average metric of decoder 1: [ 0.84499117  0.74240969 10.87897858  2.59119161]
+2025-04-29 10:43:12 - INFO - Average metric of all decoders: [ 0.75497831  0.63086446 19.00501269  3.28291187]
+2025-04-29 10:43:12 - INFO - Test results: [ 0.84499117  0.74240969 10.87897858  2.59119161]
+2025-04-29 10:43:16 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 10:43:16 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 10:43:16 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 10:43:18 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_300.pth
+2025-04-29 10:43:21 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_300.pth 加载 checkpoint 文件。
+2025-04-29 10:43:21 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 10:43:21 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 10:43:21 - INFO - 成功将状态字典加载到模型。
+2025-04-29 10:43:21 - INFO - 模型已移动到设备: cuda
+2025-04-29 10:43:21 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 10:43:21 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 10:43:21 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 10:43:21 - INFO - Constructed full image paths for 20 images.
+2025-04-29 10:43:21 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 10:43:39 - INFO - Image 00 - Dice: 0.81459, Jaccard: 0.68718, HD95: 10.44031, ASD: 3.35218
+2025-04-29 10:43:39 - INFO - Image 00 (average output) - Dice: 0.77516, Jaccard: 0.63287, HD95: 14.76482, ASD: 2.90177
+2025-04-29 10:44:00 - INFO - Image 01 - Dice: 0.87799, Jaccard: 0.78252, HD95: 10.24695, ASD: 1.72039
+2025-04-29 10:44:00 - INFO - Image 01 (average output) - Dice: 0.76856, Jaccard: 0.62412, HD95: 22.34166, ASD: 3.06362
+2025-04-29 10:44:23 - INFO - Image 02 - Dice: 0.82157, Jaccard: 0.69718, HD95: 16.40122, ASD: 1.90515
+2025-04-29 10:44:23 - INFO - Image 02 (average output) - Dice: 0.66014, Jaccard: 0.49269, HD95: 23.42434, ASD: 3.96840
+2025-04-29 10:44:47 - INFO - Image 03 - Dice: 0.89003, Jaccard: 0.80185, HD95: 6.32456, ASD: 1.43092
+2025-04-29 10:44:47 - INFO - Image 03 (average output) - Dice: 0.76666, Jaccard: 0.62162, HD95: 13.89244, ASD: 2.82818
+2025-04-29 10:45:04 - INFO - Image 04 - Dice: 0.90684, Jaccard: 0.82956, HD95: 7.56632, ASD: 2.09224
+2025-04-29 10:45:04 - INFO - Image 04 (average output) - Dice: 0.74613, Jaccard: 0.59507, HD95: 26.26785, ASD: 1.92818
+2025-04-29 10:45:35 - INFO - Image 05 - Dice: 0.75139, Jaccard: 0.60179, HD95: 19.82423, ASD: 3.89958
+2025-04-29 10:45:35 - INFO - Image 05 (average output) - Dice: 0.58225, Jaccard: 0.41068, HD95: 30.14963, ASD: 6.76068
+2025-04-29 10:45:51 - INFO - Image 06 - Dice: 0.92966, Jaccard: 0.86856, HD95: 3.00000, ASD: 1.16284
+2025-04-29 10:45:51 - INFO - Image 06 (average output) - Dice: 0.88711, Jaccard: 0.79713, HD95: 9.84886, ASD: 1.50505
+2025-04-29 10:46:26 - INFO - Image 07 - Dice: 0.48246, Jaccard: 0.31792, HD95: 53.75407, ASD: 4.03269
+2025-04-29 10:46:26 - INFO - Image 07 (average output) - Dice: 0.24907, Jaccard: 0.14225, HD95: 65.31998, ASD: 6.17969
+2025-04-29 10:47:09 - INFO - Image 08 - Dice: 0.92062, Jaccard: 0.85291, HD95: 7.87401, ASD: 2.58486
+2025-04-29 10:47:09 - INFO - Image 08 (average output) - Dice: 0.85161, Jaccard: 0.74156, HD95: 10.00000, ASD: 3.16050
+2025-04-29 10:47:42 - INFO - Image 09 - Dice: 0.90838, Jaccard: 0.83214, HD95: 5.83095, ASD: 1.31940
+2025-04-29 10:47:42 - INFO - Image 09 (average output) - Dice: 0.82278, Jaccard: 0.69891, HD95: 11.83216, ASD: 2.29779
+2025-04-29 10:48:10 - INFO - Image 10 - Dice: 0.80529, Jaccard: 0.67405, HD95: 11.00000, ASD: 2.91350
+2025-04-29 10:48:10 - INFO - Image 10 (average output) - Dice: 0.76276, Jaccard: 0.61650, HD95: 17.45422, ASD: 2.97440
+2025-04-29 10:48:43 - INFO - Image 11 - Dice: 0.86382, Jaccard: 0.76028, HD95: 10.04988, ASD: 1.62734
+2025-04-29 10:48:43 - INFO - Image 11 (average output) - Dice: 0.76297, Jaccard: 0.61677, HD95: 18.54724, ASD: 2.79864
+2025-04-29 10:49:17 - INFO - Image 12 - Dice: 0.88025, Jaccard: 0.78611, HD95: 9.00000, ASD: 1.50902
+2025-04-29 10:49:17 - INFO - Image 12 (average output) - Dice: 0.76218, Jaccard: 0.61574, HD95: 23.02173, ASD: 2.64819
+2025-04-29 10:49:52 - INFO - Image 13 - Dice: 0.77849, Jaccard: 0.63732, HD95: 15.84298, ASD: 2.56919
+2025-04-29 10:49:52 - INFO - Image 13 (average output) - Dice: 0.55857, Jaccard: 0.38751, HD95: 24.63938, ASD: 5.66923
+2025-04-29 10:50:21 - INFO - Image 14 - Dice: 0.91373, Jaccard: 0.84115, HD95: 10.04988, ASD: 2.50622
+2025-04-29 10:50:21 - INFO - Image 14 (average output) - Dice: 0.88353, Jaccard: 0.79136, HD95: 7.14143, ASD: 1.61220
+2025-04-29 10:50:50 - INFO - Image 15 - Dice: 0.89587, Jaccard: 0.81138, HD95: 7.81025, ASD: 2.23813
+2025-04-29 10:50:50 - INFO - Image 15 (average output) - Dice: 0.78982, Jaccard: 0.65265, HD95: 13.00000, ASD: 2.87746
+2025-04-29 10:51:20 - INFO - Image 16 - Dice: 0.23434, Jaccard: 0.13272, HD95: 30.82207, ASD: 8.46621
+2025-04-29 10:51:20 - INFO - Image 16 (average output) - Dice: 0.03063, Jaccard: 0.01555, HD95: 81.45336, ASD: 11.58672
+2025-04-29 10:51:55 - INFO - Image 17 - Dice: 0.84425, Jaccard: 0.73048, HD95: 8.06226, ASD: 2.18166
+2025-04-29 10:51:55 - INFO - Image 17 (average output) - Dice: 0.74539, Jaccard: 0.59412, HD95: 11.57584, ASD: 3.17926
+2025-04-29 10:52:37 - INFO - Image 18 - Dice: 0.92757, Jaccard: 0.86493, HD95: 12.52996, ASD: 2.04887
+2025-04-29 10:52:37 - INFO - Image 18 (average output) - Dice: 0.81274, Jaccard: 0.68456, HD95: 16.40122, ASD: 3.95326
+2025-04-29 10:53:06 - INFO - Image 19 - Dice: 0.86065, Jaccard: 0.75539, HD95: 11.87855, ASD: 2.37895
+2025-04-29 10:53:06 - INFO - Image 19 (average output) - Dice: 0.72775, Jaccard: 0.57202, HD95: 18.70829, ASD: 3.92725
+2025-04-29 10:53:06 - INFO - Average metric (decoder 1): [ 0.81538955  0.71327086 13.41542108  2.59696572]
+2025-04-29 10:53:06 - INFO - Average metric (all decoders): [ 0.69729091  0.56518442 22.98922271  3.79102293]
+2025-04-29 10:53:06 - INFO - Average metric of decoder 1: [ 0.81538955  0.71327086 13.41542108  2.59696572]
+2025-04-29 10:53:06 - INFO - Average metric of all decoders: [ 0.69729091  0.56518442 22.98922271  3.79102293]
+2025-04-29 10:53:06 - INFO - Test results: [ 0.81538955  0.71327086 13.41542108  2.59696572]
+2025-04-29 10:53:10 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 10:53:10 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 10:53:10 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 10:53:12 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_320.pth
+2025-04-29 10:53:15 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_320.pth 加载 checkpoint 文件。
+2025-04-29 10:53:15 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 10:53:15 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 10:53:15 - INFO - 成功将状态字典加载到模型。
+2025-04-29 10:53:15 - INFO - 模型已移动到设备: cuda
+2025-04-29 10:53:15 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 10:53:15 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 10:53:15 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 10:53:15 - INFO - Constructed full image paths for 20 images.
+2025-04-29 10:53:15 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 10:53:33 - INFO - Image 00 - Dice: 0.77646, Jaccard: 0.63460, HD95: 15.74802, ASD: 5.39505
+2025-04-29 10:53:33 - INFO - Image 00 (average output) - Dice: 0.82335, Jaccard: 0.69974, HD95: 11.04536, ASD: 2.59966
+2025-04-29 10:53:54 - INFO - Image 01 - Dice: 0.85917, Jaccard: 0.75310, HD95: 25.96151, ASD: 6.22427
+2025-04-29 10:53:54 - INFO - Image 01 (average output) - Dice: 0.77915, Jaccard: 0.63821, HD95: 23.34524, ASD: 3.21170
+2025-04-29 10:54:28 - INFO - Image 02 - Dice: 0.83308, Jaccard: 0.71392, HD95: 17.66352, ASD: 4.88576
+2025-04-29 10:54:28 - INFO - Image 02 (average output) - Dice: 0.76740, Jaccard: 0.62258, HD95: 14.89966, ASD: 2.97412
+2025-04-29 10:55:08 - INFO - Image 03 - Dice: 0.86521, Jaccard: 0.76244, HD95: 12.88410, ASD: 3.03434
+2025-04-29 10:55:08 - INFO - Image 03 (average output) - Dice: 0.79743, Jaccard: 0.66310, HD95: 14.52584, ASD: 2.42945
+2025-04-29 10:55:36 - INFO - Image 04 - Dice: 0.78223, Jaccard: 0.64235, HD95: 20.71232, ASD: 6.61680
+2025-04-29 10:55:36 - INFO - Image 04 (average output) - Dice: 0.82865, Jaccard: 0.70744, HD95: 7.00000, ASD: 2.02039
+2025-04-29 10:56:29 - INFO - Image 05 - Dice: 0.80788, Jaccard: 0.67768, HD95: 17.91647, ASD: 4.08935
+2025-04-29 10:56:29 - INFO - Image 05 (average output) - Dice: 0.71054, Jaccard: 0.55104, HD95: 25.15949, ASD: 4.93476
+2025-04-29 10:56:58 - INFO - Image 06 - Dice: 0.90210, Jaccard: 0.82166, HD95: 5.09902, ASD: 2.05414
+2025-04-29 10:56:58 - INFO - Image 06 (average output) - Dice: 0.88838, Jaccard: 0.79918, HD95: 11.64469, ASD: 1.45855
+2025-04-29 10:57:39 - INFO - Image 07 - Dice: 0.60990, Jaccard: 0.43874, HD95: 26.92582, ASD: 8.77224
+2025-04-29 10:57:39 - INFO - Image 07 (average output) - Dice: 0.49318, Jaccard: 0.32729, HD95: 29.88311, ASD: 7.33200
+2025-04-29 10:58:24 - INFO - Image 08 - Dice: 0.87494, Jaccard: 0.77768, HD95: 12.24745, ASD: 4.05514
+2025-04-29 10:58:24 - INFO - Image 08 (average output) - Dice: 0.86923, Jaccard: 0.76871, HD95: 12.32883, ASD: 2.89048
+2025-04-29 10:58:58 - INFO - Image 09 - Dice: 0.81178, Jaccard: 0.68319, HD95: 20.12461, ASD: 6.26150
+2025-04-29 10:58:58 - INFO - Image 09 (average output) - Dice: 0.82910, Jaccard: 0.70808, HD95: 11.91638, ASD: 2.54864
+2025-04-29 10:59:26 - INFO - Image 10 - Dice: 0.79290, Jaccard: 0.65687, HD95: 12.04159, ASD: 4.30850
+2025-04-29 10:59:26 - INFO - Image 10 (average output) - Dice: 0.79944, Jaccard: 0.66589, HD95: 17.52427, ASD: 2.59138
+2025-04-29 11:00:02 - INFO - Image 11 - Dice: 0.62327, Jaccard: 0.45272, HD95: 32.46537, ASD: 12.87133
+2025-04-29 11:00:02 - INFO - Image 11 (average output) - Dice: 0.65776, Jaccard: 0.49005, HD95: 24.28992, ASD: 9.41642
+2025-04-29 11:00:36 - INFO - Image 12 - Dice: 0.88505, Jaccard: 0.79381, HD95: 7.87401, ASD: 1.97356
+2025-04-29 11:00:36 - INFO - Image 12 (average output) - Dice: 0.81324, Jaccard: 0.68526, HD95: 20.12461, ASD: 2.23780
+2025-04-29 11:01:12 - INFO - Image 13 - Dice: 0.86478, Jaccard: 0.76177, HD95: 13.74773, ASD: 3.36276
+2025-04-29 11:01:12 - INFO - Image 13 (average output) - Dice: 0.74511, Jaccard: 0.59376, HD95: 19.48588, ASD: 3.05230
+2025-04-29 11:01:42 - INFO - Image 14 - Dice: 0.73814, Jaccard: 0.58497, HD95: 33.43651, ASD: 10.74336
+2025-04-29 11:01:42 - INFO - Image 14 (average output) - Dice: 0.85373, Jaccard: 0.74479, HD95: 19.84943, ASD: 5.03061
+2025-04-29 11:02:13 - INFO - Image 15 - Dice: 0.87073, Jaccard: 0.77106, HD95: 15.26270, ASD: 4.35860
+2025-04-29 11:02:13 - INFO - Image 15 (average output) - Dice: 0.82802, Jaccard: 0.70651, HD95: 16.64332, ASD: 2.23780
+2025-04-29 11:02:44 - INFO - Image 16 - Dice: 0.73552, Jaccard: 0.58167, HD95: 15.52417, ASD: 5.88394
+2025-04-29 11:02:44 - INFO - Image 16 (average output) - Dice: 0.35899, Jaccard: 0.21876, HD95: 39.56008, ASD: 8.43043
+2025-04-29 11:03:21 - INFO - Image 17 - Dice: 0.74489, Jaccard: 0.59348, HD95: 21.84033, ASD: 7.29466
+2025-04-29 11:03:21 - INFO - Image 17 (average output) - Dice: 0.77159, Jaccard: 0.62811, HD95: 13.15295, ASD: 4.14993
+2025-04-29 11:04:10 - INFO - Image 18 - Dice: 0.89541, Jaccard: 0.81062, HD95: 17.74824, ASD: 4.12330
+2025-04-29 11:04:10 - INFO - Image 18 (average output) - Dice: 0.82764, Jaccard: 0.70596, HD95: 16.67333, ASD: 4.00120
+2025-04-29 11:04:59 - INFO - Image 19 - Dice: 0.84091, Jaccard: 0.72550, HD95: 17.37815, ASD: 4.93720
+2025-04-29 11:04:59 - INFO - Image 19 (average output) - Dice: 0.79219, Jaccard: 0.65589, HD95: 17.80449, ASD: 3.51759
+2025-04-29 11:04:59 - INFO - Average metric (decoder 1): [ 0.80571791  0.68189207 18.13008149  5.56229045]
+2025-04-29 11:04:59 - INFO - Average metric (all decoders): [ 0.76170559  0.62901817 18.34284323  3.85326042]
+2025-04-29 11:04:59 - INFO - Average metric of decoder 1: [ 0.80571791  0.68189207 18.13008149  5.56229045]
+2025-04-29 11:04:59 - INFO - Average metric of all decoders: [ 0.76170559  0.62901817 18.34284323  3.85326042]
+2025-04-29 11:04:59 - INFO - Test results: [ 0.80571791  0.68189207 18.13008149  5.56229045]
+2025-04-29 11:05:03 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 11:05:03 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 11:05:03 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 11:05:07 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_340.pth
+2025-04-29 11:05:14 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_340.pth 加载 checkpoint 文件。
+2025-04-29 11:05:14 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 11:05:14 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 11:05:14 - INFO - 成功将状态字典加载到模型。
+2025-04-29 11:05:14 - INFO - 模型已移动到设备: cuda
+2025-04-29 11:05:14 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 11:05:14 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 11:05:14 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 11:05:14 - INFO - Constructed full image paths for 20 images.
+2025-04-29 11:05:14 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 11:05:44 - INFO - Image 00 - Dice: 0.73979, Jaccard: 0.58704, HD95: 17.54993, ASD: 3.48525
+2025-04-29 11:05:44 - INFO - Image 00 (average output) - Dice: 0.62340, Jaccard: 0.45286, HD95: 22.49444, ASD: 4.47165
+2025-04-29 11:06:20 - INFO - Image 01 - Dice: 0.88418, Jaccard: 0.79241, HD95: 9.05539, ASD: 1.75664
+2025-04-29 11:06:20 - INFO - Image 01 (average output) - Dice: 0.81657, Jaccard: 0.69000, HD95: 18.49324, ASD: 2.42687
+2025-04-29 11:07:00 - INFO - Image 02 - Dice: 0.88034, Jaccard: 0.78625, HD95: 10.77033, ASD: 1.57928
+2025-04-29 11:07:00 - INFO - Image 02 (average output) - Dice: 0.74778, Jaccard: 0.59716, HD95: 17.14643, ASD: 2.95840
+2025-04-29 11:07:40 - INFO - Image 03 - Dice: 0.83376, Jaccard: 0.71491, HD95: 13.63818, ASD: 1.92098
+2025-04-29 11:07:40 - INFO - Image 03 (average output) - Dice: 0.73600, Jaccard: 0.58228, HD95: 20.34699, ASD: 3.06544
+2025-04-29 11:08:08 - INFO - Image 04 - Dice: 0.90899, Jaccard: 0.83317, HD95: 7.81025, ASD: 2.18775
+2025-04-29 11:08:08 - INFO - Image 04 (average output) - Dice: 0.79525, Jaccard: 0.66009, HD95: 6.70820, ASD: 1.93453
+2025-04-29 11:09:02 - INFO - Image 05 - Dice: 0.43410, Jaccard: 0.27722, HD95: 42.08325, ASD: 8.19924
+2025-04-29 11:09:02 - INFO - Image 05 (average output) - Dice: 0.26923, Jaccard: 0.15555, HD95: 47.26521, ASD: 10.71958
+2025-04-29 11:09:29 - INFO - Image 06 - Dice: 0.92455, Jaccard: 0.85968, HD95: 3.60555, ASD: 1.34014
+2025-04-29 11:09:29 - INFO - Image 06 (average output) - Dice: 0.89725, Jaccard: 0.81365, HD95: 6.70820, ASD: 1.43002
+2025-04-29 11:10:12 - INFO - Image 07 - Dice: 0.28803, Jaccard: 0.16825, HD95: 56.18808, ASD: 4.36292
+2025-04-29 11:10:12 - INFO - Image 07 (average output) - Dice: 0.09331, Jaccard: 0.04894, HD95: 70.71068, ASD: 6.17929
+2025-04-29 11:10:58 - INFO - Image 08 - Dice: 0.91503, Jaccard: 0.84337, HD95: 6.78233, ASD: 2.70240
+2025-04-29 11:10:58 - INFO - Image 08 (average output) - Dice: 0.81863, Jaccard: 0.69295, HD95: 9.48683, ASD: 3.10249
+2025-04-29 11:11:33 - INFO - Image 09 - Dice: 0.89449, Jaccard: 0.80913, HD95: 7.54983, ASD: 1.97188
+2025-04-29 11:11:33 - INFO - Image 09 (average output) - Dice: 0.85662, Jaccard: 0.74920, HD95: 9.00000, ASD: 1.91281
+2025-04-29 11:12:02 - INFO - Image 10 - Dice: 0.76159, Jaccard: 0.61497, HD95: 18.35756, ASD: 2.97065
+2025-04-29 11:12:02 - INFO - Image 10 (average output) - Dice: 0.72175, Jaccard: 0.56464, HD95: 21.93171, ASD: 3.28422
+2025-04-29 11:12:36 - INFO - Image 11 - Dice: 0.85602, Jaccard: 0.74828, HD95: 7.81025, ASD: 2.43591
+2025-04-29 11:12:36 - INFO - Image 11 (average output) - Dice: 0.80242, Jaccard: 0.67003, HD95: 16.34013, ASD: 2.44313
+2025-04-29 11:13:11 - INFO - Image 12 - Dice: 0.89233, Jaccard: 0.80559, HD95: 6.16441, ASD: 1.49093
+2025-04-29 11:13:11 - INFO - Image 12 (average output) - Dice: 0.82398, Jaccard: 0.70065, HD95: 19.13113, ASD: 1.90539
+2025-04-29 11:13:44 - INFO - Image 13 - Dice: 0.86753, Jaccard: 0.76604, HD95: 6.08276, ASD: 1.68847
+2025-04-29 11:13:44 - INFO - Image 13 (average output) - Dice: 0.68152, Jaccard: 0.51690, HD95: 17.43560, ASD: 3.99794
+2025-04-29 11:14:13 - INFO - Image 14 - Dice: 0.92953, Jaccard: 0.86833, HD95: 4.58258, ASD: 1.31439
+2025-04-29 11:14:13 - INFO - Image 14 (average output) - Dice: 0.88006, Jaccard: 0.78581, HD95: 6.92820, ASD: 1.66558
+2025-04-29 11:14:43 - INFO - Image 15 - Dice: 0.89198, Jaccard: 0.80503, HD95: 7.48331, ASD: 2.47266
+2025-04-29 11:14:43 - INFO - Image 15 (average output) - Dice: 0.81375, Jaccard: 0.68599, HD95: 12.20656, ASD: 2.42811
+2025-04-29 11:15:12 - INFO - Image 16 - Dice: 0.69962, Jaccard: 0.53801, HD95: 13.63818, ASD: 5.60944
+2025-04-29 11:15:12 - INFO - Image 16 (average output) - Dice: 0.31597, Jaccard: 0.18762, HD95: 19.74842, ASD: 9.37454
+2025-04-29 11:15:48 - INFO - Image 17 - Dice: 0.85054, Jaccard: 0.73995, HD95: 7.68115, ASD: 2.25041
+2025-04-29 11:15:48 - INFO - Image 17 (average output) - Dice: 0.78242, Jaccard: 0.64260, HD95: 9.94987, ASD: 2.81154
+2025-04-29 11:16:37 - INFO - Image 18 - Dice: 0.89155, Jaccard: 0.80432, HD95: 17.14643, ASD: 2.97435
+2025-04-29 11:16:37 - INFO - Image 18 (average output) - Dice: 0.79603, Jaccard: 0.66117, HD95: 19.82423, ASD: 4.38089
+2025-04-29 11:17:26 - INFO - Image 19 - Dice: 0.86804, Jaccard: 0.76684, HD95: 11.44552, ASD: 2.41327
+2025-04-29 11:17:26 - INFO - Image 19 (average output) - Dice: 0.75186, Jaccard: 0.60239, HD95: 20.63977, ASD: 3.71493
+2025-04-29 11:17:26 - INFO - Average metric (decoder 1): [ 0.81059883  0.70643903 13.77126368  2.75634743]
+2025-04-29 11:17:26 - INFO - Average metric (all decoders): [ 0.70118985  0.57302443 19.62479235  3.71036819]
+2025-04-29 11:17:26 - INFO - Average metric of decoder 1: [ 0.81059883  0.70643903 13.77126368  2.75634743]
+2025-04-29 11:17:26 - INFO - Average metric of all decoders: [ 0.70118985  0.57302443 19.62479235  3.71036819]
+2025-04-29 11:17:26 - INFO - Test results: [ 0.81059883  0.70643903 13.77126368  2.75634743]
+2025-04-29 11:17:30 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 11:17:30 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 11:17:30 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 11:17:34 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_360.pth
+2025-04-29 11:17:42 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_360.pth 加载 checkpoint 文件。
+2025-04-29 11:17:42 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 11:17:42 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 11:17:42 - INFO - 成功将状态字典加载到模型。
+2025-04-29 11:17:42 - INFO - 模型已移动到设备: cuda
+2025-04-29 11:17:42 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 11:17:42 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 11:17:42 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 11:17:42 - INFO - Constructed full image paths for 20 images.
+2025-04-29 11:17:42 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 11:18:13 - INFO - Image 00 - Dice: 0.80315, Jaccard: 0.67106, HD95: 11.00000, ASD: 3.94569
+2025-04-29 11:18:13 - INFO - Image 00 (average output) - Dice: 0.78021, Jaccard: 0.63963, HD95: 13.15295, ASD: 3.00912
+2025-04-29 11:18:50 - INFO - Image 01 - Dice: 0.89279, Jaccard: 0.80633, HD95: 9.84886, ASD: 2.27117
+2025-04-29 11:18:50 - INFO - Image 01 (average output) - Dice: 0.82291, Jaccard: 0.69910, HD95: 17.74824, ASD: 2.46001
+2025-04-29 11:19:32 - INFO - Image 02 - Dice: 0.89475, Jaccard: 0.80954, HD95: 8.83176, ASD: 1.50953
+2025-04-29 11:19:32 - INFO - Image 02 (average output) - Dice: 0.77306, Jaccard: 0.63007, HD95: 15.16575, ASD: 2.73191
+2025-04-29 11:20:14 - INFO - Image 03 - Dice: 0.87940, Jaccard: 0.78476, HD95: 6.40312, ASD: 1.72852
+2025-04-29 11:20:14 - INFO - Image 03 (average output) - Dice: 0.79389, Jaccard: 0.65822, HD95: 13.00000, ASD: 2.53846
+2025-04-29 11:20:43 - INFO - Image 04 - Dice: 0.86487, Jaccard: 0.76191, HD95: 17.37815, ASD: 4.52023
+2025-04-29 11:20:43 - INFO - Image 04 (average output) - Dice: 0.85316, Jaccard: 0.74392, HD95: 4.69042, ASD: 1.48211
+2025-04-29 11:21:36 - INFO - Image 05 - Dice: 0.56387, Jaccard: 0.39263, HD95: 22.38303, ASD: 6.19409
+2025-04-29 11:21:36 - INFO - Image 05 (average output) - Dice: 0.40925, Jaccard: 0.25727, HD95: 32.15509, ASD: 9.37873
+2025-04-29 11:22:04 - INFO - Image 06 - Dice: 0.92980, Jaccard: 0.86880, HD95: 3.16228, ASD: 1.24833
+2025-04-29 11:22:04 - INFO - Image 06 (average output) - Dice: 0.89580, Jaccard: 0.81126, HD95: 6.55744, ASD: 1.44083
+2025-04-29 11:22:44 - INFO - Image 07 - Dice: 0.70907, Jaccard: 0.54927, HD95: 13.15295, ASD: 3.37336
+2025-04-29 11:22:44 - INFO - Image 07 (average output) - Dice: 0.57478, Jaccard: 0.40329, HD95: 22.82542, ASD: 5.14705
+2025-04-29 11:23:29 - INFO - Image 08 - Dice: 0.90750, Jaccard: 0.83066, HD95: 7.00000, ASD: 3.04099
+2025-04-29 11:23:29 - INFO - Image 08 (average output) - Dice: 0.84082, Jaccard: 0.72535, HD95: 10.72381, ASD: 3.53954
+2025-04-29 11:24:04 - INFO - Image 09 - Dice: 0.91683, Jaccard: 0.84643, HD95: 5.09902, ASD: 1.99405
+2025-04-29 11:24:04 - INFO - Image 09 (average output) - Dice: 0.86114, Jaccard: 0.75614, HD95: 7.87401, ASD: 1.87886
+2025-04-29 11:24:33 - INFO - Image 10 - Dice: 0.78760, Jaccard: 0.64962, HD95: 10.63015, ASD: 3.53124
+2025-04-29 11:24:33 - INFO - Image 10 (average output) - Dice: 0.78370, Jaccard: 0.64434, HD95: 13.49074, ASD: 3.11690
+2025-04-29 11:25:05 - INFO - Image 11 - Dice: 0.88728, Jaccard: 0.79739, HD95: 5.83095, ASD: 1.52514
+2025-04-29 11:25:05 - INFO - Image 11 (average output) - Dice: 0.82831, Jaccard: 0.70693, HD95: 15.36229, ASD: 2.02889
+2025-04-29 11:25:39 - INFO - Image 12 - Dice: 0.88336, Jaccard: 0.79108, HD95: 9.21954, ASD: 2.05478
+2025-04-29 11:25:39 - INFO - Image 12 (average output) - Dice: 0.84036, Jaccard: 0.72468, HD95: 17.14643, ASD: 1.85606
+2025-04-29 11:26:14 - INFO - Image 13 - Dice: 0.85458, Jaccard: 0.74609, HD95: 10.19804, ASD: 3.10809
+2025-04-29 11:26:14 - INFO - Image 13 (average output) - Dice: 0.72807, Jaccard: 0.57241, HD95: 14.69694, ASD: 3.33068
+2025-04-29 11:26:42 - INFO - Image 14 - Dice: 0.90040, Jaccard: 0.81885, HD95: 9.53939, ASD: 2.66723
+2025-04-29 11:26:42 - INFO - Image 14 (average output) - Dice: 0.88477, Jaccard: 0.79336, HD95: 7.07107, ASD: 1.66169
+2025-04-29 11:27:10 - INFO - Image 15 - Dice: 0.89101, Jaccard: 0.80344, HD95: 6.78233, ASD: 2.53960
+2025-04-29 11:27:10 - INFO - Image 15 (average output) - Dice: 0.86095, Jaccard: 0.75584, HD95: 7.87401, ASD: 2.09957
+2025-04-29 11:27:39 - INFO - Image 16 - Dice: 0.65629, Jaccard: 0.48842, HD95: 28.22410, ASD: 10.35311
+2025-04-29 11:27:39 - INFO - Image 16 (average output) - Dice: 0.37228, Jaccard: 0.22871, HD95: 17.02939, ASD: 8.59912
+2025-04-29 11:28:13 - INFO - Image 17 - Dice: 0.84436, Jaccard: 0.73065, HD95: 8.06226, ASD: 2.51343
+2025-04-29 11:28:13 - INFO - Image 17 (average output) - Dice: 0.80036, Jaccard: 0.66717, HD95: 9.43398, ASD: 2.55743
+2025-04-29 11:28:59 - INFO - Image 18 - Dice: 0.91960, Jaccard: 0.85116, HD95: 12.78667, ASD: 2.79323
+2025-04-29 11:28:59 - INFO - Image 18 (average output) - Dice: 0.85893, Jaccard: 0.75273, HD95: 13.96424, ASD: 3.12008
+2025-04-29 11:29:47 - INFO - Image 19 - Dice: 0.82929, Jaccard: 0.70837, HD95: 17.97498, ASD: 4.80032
+2025-04-29 11:29:47 - INFO - Image 19 (average output) - Dice: 0.77152, Jaccard: 0.62802, HD95: 15.93738, ASD: 4.04433
+2025-04-29 11:29:47 - INFO - Average metric (decoder 1): [ 0.84078926  0.73532296 11.17537856  3.28560752]
+2025-04-29 11:29:47 - INFO - Average metric (all decoders): [ 0.76671243  0.63992253 13.79497888  3.30106821]
+2025-04-29 11:29:47 - INFO - Average metric of decoder 1: [ 0.84078926  0.73532296 11.17537856  3.28560752]
+2025-04-29 11:29:47 - INFO - Average metric of all decoders: [ 0.76671243  0.63992253 13.79497888  3.30106821]
+2025-04-29 11:29:47 - INFO - Test results: [ 0.84078926  0.73532296 11.17537856  3.28560752]
+2025-04-29 11:29:51 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 11:29:51 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 11:29:51 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 11:29:54 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_380.pth
+2025-04-29 11:30:02 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_380.pth 加载 checkpoint 文件。
+2025-04-29 11:30:02 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 11:30:02 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 11:30:02 - INFO - 成功将状态字典加载到模型。
+2025-04-29 11:30:02 - INFO - 模型已移动到设备: cuda
+2025-04-29 11:30:02 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 11:30:02 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 11:30:02 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 11:30:02 - INFO - Constructed full image paths for 20 images.
+2025-04-29 11:30:02 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 11:30:33 - INFO - Image 00 - Dice: 0.71468, Jaccard: 0.55604, HD95: 19.54482, ASD: 6.86160
+2025-04-29 11:30:33 - INFO - Image 00 (average output) - Dice: 0.80398, Jaccard: 0.67222, HD95: 13.60147, ASD: 3.72651
+2025-04-29 11:31:10 - INFO - Image 01 - Dice: 0.87500, Jaccard: 0.77778, HD95: 13.85641, ASD: 2.92149
+2025-04-29 11:31:10 - INFO - Image 01 (average output) - Dice: 0.83104, Jaccard: 0.71092, HD95: 18.42823, ASD: 2.52204
+2025-04-29 11:31:53 - INFO - Image 02 - Dice: 0.90833, Jaccard: 0.83206, HD95: 7.34847, ASD: 1.22876
+2025-04-29 11:31:53 - INFO - Image 02 (average output) - Dice: 0.76321, Jaccard: 0.61709, HD95: 18.97367, ASD: 2.75181
+2025-04-29 11:32:36 - INFO - Image 03 - Dice: 0.88156, Jaccard: 0.78820, HD95: 7.00000, ASD: 1.98516
+2025-04-29 11:32:36 - INFO - Image 03 (average output) - Dice: 0.84732, Jaccard: 0.73509, HD95: 9.48683, ASD: 1.97895
+2025-04-29 11:33:07 - INFO - Image 04 - Dice: 0.90334, Jaccard: 0.82371, HD95: 5.83095, ASD: 1.99504
+2025-04-29 11:33:07 - INFO - Image 04 (average output) - Dice: 0.77828, Jaccard: 0.63704, HD95: 21.74856, ASD: 1.76691
+2025-04-29 11:34:03 - INFO - Image 05 - Dice: 0.73354, Jaccard: 0.57921, HD95: 20.00000, ASD: 7.16596
+2025-04-29 11:34:03 - INFO - Image 05 (average output) - Dice: 0.76801, Jaccard: 0.62339, HD95: 18.11077, ASD: 4.45145
+2025-04-29 11:34:32 - INFO - Image 06 - Dice: 0.90645, Jaccard: 0.82891, HD95: 6.16441, ASD: 1.80406
+2025-04-29 11:34:32 - INFO - Image 06 (average output) - Dice: 0.90719, Jaccard: 0.83014, HD95: 9.43398, ASD: 1.24552
+2025-04-29 11:35:13 - INFO - Image 07 - Dice: 0.65215, Jaccard: 0.48385, HD95: 38.46036, ASD: 3.71090
+2025-04-29 11:35:13 - INFO - Image 07 (average output) - Dice: 0.53974, Jaccard: 0.36962, HD95: 41.60529, ASD: 4.72562
+2025-04-29 11:35:58 - INFO - Image 08 - Dice: 0.91435, Jaccard: 0.84222, HD95: 6.00000, ASD: 1.70422
+2025-04-29 11:35:58 - INFO - Image 08 (average output) - Dice: 0.88813, Jaccard: 0.79877, HD95: 7.07107, ASD: 1.85084
+2025-04-29 11:36:32 - INFO - Image 09 - Dice: 0.85120, Jaccard: 0.74095, HD95: 25.23886, ASD: 6.59065
+2025-04-29 11:36:32 - INFO - Image 09 (average output) - Dice: 0.85440, Jaccard: 0.74582, HD95: 11.18034, ASD: 2.26416
+2025-04-29 11:37:02 - INFO - Image 10 - Dice: 0.74653, Jaccard: 0.59557, HD95: 15.42725, ASD: 5.40092
+2025-04-29 11:37:02 - INFO - Image 10 (average output) - Dice: 0.82278, Jaccard: 0.69892, HD95: 13.45362, ASD: 2.67185
+2025-04-29 11:37:36 - INFO - Image 11 - Dice: 0.85895, Jaccard: 0.75277, HD95: 8.83176, ASD: 2.34637
+2025-04-29 11:37:36 - INFO - Image 11 (average output) - Dice: 0.79468, Jaccard: 0.65931, HD95: 17.80449, ASD: 2.67223
+2025-04-29 11:38:10 - INFO - Image 12 - Dice: 0.88505, Jaccard: 0.79380, HD95: 7.21110, ASD: 1.72974
+2025-04-29 11:38:10 - INFO - Image 12 (average output) - Dice: 0.83713, Jaccard: 0.71988, HD95: 19.10497, ASD: 1.92970
+2025-04-29 11:38:44 - INFO - Image 13 - Dice: 0.87661, Jaccard: 0.78033, HD95: 9.00000, ASD: 1.69103
+2025-04-29 11:38:44 - INFO - Image 13 (average output) - Dice: 0.73400, Jaccard: 0.57977, HD95: 17.02939, ASD: 3.16565
+2025-04-29 11:39:13 - INFO - Image 14 - Dice: 0.92132, Jaccard: 0.85412, HD95: 5.09902, ASD: 1.41924
+2025-04-29 11:39:13 - INFO - Image 14 (average output) - Dice: 0.89375, Jaccard: 0.80792, HD95: 7.28011, ASD: 1.47146
+2025-04-29 11:39:42 - INFO - Image 15 - Dice: 0.88247, Jaccard: 0.78966, HD95: 7.54983, ASD: 3.40920
+2025-04-29 11:39:42 - INFO - Image 15 (average output) - Dice: 0.84760, Jaccard: 0.73551, HD95: 9.48683, ASD: 2.07372
+2025-04-29 11:40:10 - INFO - Image 16 - Dice: 0.52951, Jaccard: 0.36009, HD95: 29.27456, ASD: 6.47364
+2025-04-29 11:40:10 - INFO - Image 16 (average output) - Dice: 0.19252, Jaccard: 0.10651, HD95: 65.95377, ASD: 10.06355
+2025-04-29 11:40:43 - INFO - Image 17 - Dice: 0.79232, Jaccard: 0.65607, HD95: 36.71648, ASD: 10.06153
+2025-04-29 11:40:43 - INFO - Image 17 (average output) - Dice: 0.83890, Jaccard: 0.72251, HD95: 9.11043, ASD: 2.33943
+2025-04-29 11:41:29 - INFO - Image 18 - Dice: 0.90996, Jaccard: 0.83480, HD95: 15.84298, ASD: 3.25893
+2025-04-29 11:41:29 - INFO - Image 18 (average output) - Dice: 0.85866, Jaccard: 0.75232, HD95: 14.89966, ASD: 3.04434
+2025-04-29 11:42:14 - INFO - Image 19 - Dice: 0.86951, Jaccard: 0.76915, HD95: 10.67708, ASD: 3.47765
+2025-04-29 11:42:14 - INFO - Image 19 (average output) - Dice: 0.83114, Jaccard: 0.71106, HD95: 11.00000, ASD: 2.88552
+2025-04-29 11:42:14 - INFO - Average metric (decoder 1): [ 0.83064243  0.72196386 14.75371758  3.7618036 ]
+2025-04-29 11:42:14 - INFO - Average metric (all decoders): [ 0.78162368  0.66169117 17.73817521  2.98006359]
+2025-04-29 11:42:14 - INFO - Average metric of decoder 1: [ 0.83064243  0.72196386 14.75371758  3.7618036 ]
+2025-04-29 11:42:14 - INFO - Average metric of all decoders: [ 0.78162368  0.66169117 17.73817521  2.98006359]
+2025-04-29 11:42:14 - INFO - Test results: [ 0.83064243  0.72196386 14.75371758  3.7618036 ]
+2025-04-29 11:42:17 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Test/Test.log
+2025-04-29 11:42:17 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-04-29 11:42:17 - INFO - Creating model: SAM3D_VNet_SSL_V3
+2025-04-29 11:42:21 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_40.pth
+2025-04-29 11:42:26 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_FrozenEncoder/Pth/epoch_40.pth 加载 checkpoint 文件。
+2025-04-29 11:42:26 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-04-29 11:42:26 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-04-29 11:42:26 - INFO - 成功将状态字典加载到模型。
+2025-04-29 11:42:26 - INFO - 模型已移动到设备: cuda
+2025-04-29 11:42:26 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-04-29 11:42:26 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-04-29 11:42:26 - INFO - Successfully loaded 20 image paths from test list.
+2025-04-29 11:42:26 - INFO - Constructed full image paths for 20 images.
+2025-04-29 11:42:26 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V3.
+2025-04-29 11:42:55 - INFO - Image 00 - Dice: 0.71651, Jaccard: 0.55825, HD95: 18.38478, ASD: 5.84569
+2025-04-29 11:42:55 - INFO - Image 00 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:43:30 - INFO - Image 01 - Dice: 0.72283, Jaccard: 0.56597, HD95: 25.49510, ASD: 8.62582
+2025-04-29 11:43:30 - INFO - Image 01 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:44:11 - INFO - Image 02 - Dice: 0.72715, Jaccard: 0.57128, HD95: 23.36664, ASD: 7.58069
+2025-04-29 11:44:11 - INFO - Image 02 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:44:53 - INFO - Image 03 - Dice: 0.66185, Jaccard: 0.49461, HD95: 33.24154, ASD: 12.43419
+2025-04-29 11:44:53 - INFO - Image 03 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:45:23 - INFO - Image 04 - Dice: 0.63921, Jaccard: 0.46973, HD95: 27.20294, ASD: 7.32576
+2025-04-29 11:45:23 - INFO - Image 04 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:46:20 - INFO - Image 05 - Dice: 0.57160, Jaccard: 0.40016, HD95: 22.44994, ASD: 7.45211
+2025-04-29 11:46:20 - INFO - Image 05 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:46:50 - INFO - Image 06 - Dice: 0.43241, Jaccard: 0.27585, HD95: 41.54516, ASD: 20.10586
+2025-04-29 11:46:50 - INFO - Image 06 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:47:32 - INFO - Image 07 - Dice: 0.55671, Jaccard: 0.38572, HD95: 19.74842, ASD: 8.25820
+2025-04-29 11:47:32 - INFO - Image 07 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:48:19 - INFO - Image 08 - Dice: 0.40344, Jaccard: 0.25269, HD95: 45.11097, ASD: 21.75478
+2025-04-29 11:48:19 - INFO - Image 08 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:48:54 - INFO - Image 09 - Dice: 0.64141, Jaccard: 0.47212, HD95: 38.05260, ASD: 14.14026
+2025-04-29 11:48:54 - INFO - Image 09 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:49:23 - INFO - Image 10 - Dice: 0.67194, Jaccard: 0.50595, HD95: 20.27313, ASD: 7.45050
+2025-04-29 11:49:23 - INFO - Image 10 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:49:57 - INFO - Image 11 - Dice: 0.44787, Jaccard: 0.28855, HD95: 43.68066, ASD: 19.93809
+2025-04-29 11:49:57 - INFO - Image 11 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:50:30 - INFO - Image 12 - Dice: 0.59092, Jaccard: 0.41937, HD95: 33.12099, ASD: 14.71729
+2025-04-29 11:50:30 - INFO - Image 12 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:51:04 - INFO - Image 13 - Dice: 0.59900, Jaccard: 0.42755, HD95: 26.47640, ASD: 9.11660
+2025-04-29 11:51:04 - INFO - Image 13 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:51:32 - INFO - Image 14 - Dice: 0.29578, Jaccard: 0.17356, HD95: 50.25933, ASD: 25.54003
+2025-04-29 11:51:32 - INFO - Image 14 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:52:00 - INFO - Image 15 - Dice: 0.71773, Jaccard: 0.55974, HD95: 25.49510, ASD: 9.10832
+2025-04-29 11:52:00 - INFO - Image 15 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:52:29 - INFO - Image 16 - Dice: 0.39031, Jaccard: 0.24248, HD95: 39.34527, ASD: 7.97999
+2025-04-29 11:52:29 - INFO - Image 16 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:53:02 - INFO - Image 17 - Dice: 0.45286, Jaccard: 0.29271, HD95: 38.98461, ASD: 6.70661
+2025-04-29 11:53:02 - INFO - Image 17 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf
+2025-04-29 11:53:48 - INFO - Image 18 - Dice: 0.87426, Jaccard: 0.77660, HD95: 21.57313, ASD: 4.30250
+2025-04-29 11:53:48 - INFO - Image 18 (average output) - Dice: 0.00000, Jaccard: 0.00000, HD95: inf, ASD: inf

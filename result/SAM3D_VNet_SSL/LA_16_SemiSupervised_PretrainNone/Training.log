@@ -1,0 +1,93 @@
+2025-04-29 10:50:50 - INFO - Logging is set up.
+2025-04-29 10:50:50 - INFO - 训练配置参数:
+{'seed': 42, 'epochs': 1000, 'batch_size': 5, 'num_classes': 2, 'learning_rate': 0.001, 'dataset_path': './datasets/LA', 'log_path': './result/SAM3D_VNet_SSL/LA_16_SemiSupervised_PretrainNone/Training.log', 'pth_path': './result/SAM3D_VNet_SSL/LA_16_SemiSupervised_PretrainNone/Pth', 'tensorboard_path': './result/SAM3D_VNet_SSL/LA_16_SemiSupervised_PretrainNone/Train', 'continue_train': False, 'multi_gpu': True, 'training_label_num': 16, 'training_unlabel_num': 64, 'label_bs': 1, 'unlabel_bs': 4, 'consistency_weight': 0.3, 'pretrained_weights': None}
+2025-04-29 10:50:55 - INFO - 使用 2 个GPU
+2025-04-29 10:50:55 - INFO - 模型总参数: 115,813,347
+2025-04-29 10:50:55 - INFO - 可训练参数: 115,813,347
+2025-04-29 10:53:56 - INFO - Logging is set up.
+2025-04-29 10:53:56 - INFO - 训练配置参数:
+{'seed': 42, 'epochs': 1000, 'batch_size': 5, 'num_classes': 2, 'learning_rate': 0.001, 'dataset_path': './datasets/LA', 'log_path': './result/SAM3D_VNet_SSL/LA_16_SemiSupervised_PretrainNone/Training.log', 'pth_path': './result/SAM3D_VNet_SSL/LA_16_SemiSupervised_PretrainNone/Pth', 'tensorboard_path': './result/SAM3D_VNet_SSL/LA_16_SemiSupervised_PretrainNone/Train', 'continue_train': False, 'multi_gpu': True, 'training_label_num': 16, 'training_unlabel_num': 64, 'label_bs': 1, 'unlabel_bs': 4, 'consistency_weight': 0.3, 'pretrained_weights': None}
+2025-04-29 10:53:58 - INFO - 使用 2 个GPU
+2025-04-29 10:53:58 - INFO - 模型总参数: 115,813,347
+2025-04-29 10:53:58 - INFO - 可训练参数: 115,813,347
+2025-04-29 10:54:47 - INFO - Epoch 1/1000, Loss: 0.4952, Dice: 0.4849, MSE: 0.0342
+2025-04-29 10:55:33 - INFO - Epoch 2/1000, Loss: 0.4384, Dice: 0.4324, MSE: 0.0200
+2025-04-29 10:56:19 - INFO - Epoch 3/1000, Loss: 0.3980, Dice: 0.3924, MSE: 0.0186
+2025-04-29 10:57:04 - INFO - Epoch 4/1000, Loss: 0.3977, Dice: 0.3907, MSE: 0.0234
+2025-04-29 10:57:49 - INFO - Epoch 5/1000, Loss: 0.3417, Dice: 0.3345, MSE: 0.0240
+2025-04-29 10:58:35 - INFO - Epoch 6/1000, Loss: 0.3419, Dice: 0.3333, MSE: 0.0285
+2025-04-29 10:59:19 - INFO - Epoch 7/1000, Loss: 0.3119, Dice: 0.3020, MSE: 0.0329
+2025-04-29 11:00:04 - INFO - Epoch 8/1000, Loss: 0.3125, Dice: 0.3012, MSE: 0.0378
+2025-04-29 11:00:52 - INFO - Epoch 9/1000, Loss: 0.3243, Dice: 0.3115, MSE: 0.0427
+2025-04-29 11:01:40 - INFO - Epoch 10/1000, Loss: 0.3217, Dice: 0.3076, MSE: 0.0471
+2025-04-29 11:02:28 - INFO - Epoch 11/1000, Loss: 0.3103, Dice: 0.2973, MSE: 0.0435
+2025-04-29 11:03:17 - INFO - Epoch 12/1000, Loss: 0.3017, Dice: 0.2895, MSE: 0.0407
+2025-04-29 11:04:07 - INFO - Epoch 13/1000, Loss: 0.3211, Dice: 0.3113, MSE: 0.0326
+2025-04-29 11:04:55 - INFO - Epoch 14/1000, Loss: 0.2869, Dice: 0.2733, MSE: 0.0451
+2025-04-29 11:05:34 - INFO - Epoch 15/1000, Loss: 0.2797, Dice: 0.2654, MSE: 0.0477
+2025-04-29 11:06:20 - INFO - Epoch 16/1000, Loss: 0.2749, Dice: 0.2619, MSE: 0.0432
+2025-04-29 11:07:06 - INFO - Epoch 17/1000, Loss: 0.2990, Dice: 0.2871, MSE: 0.0397
+2025-04-29 11:07:51 - INFO - Epoch 18/1000, Loss: 0.2695, Dice: 0.2588, MSE: 0.0358
+2025-04-29 11:08:37 - INFO - Epoch 19/1000, Loss: 0.2893, Dice: 0.2793, MSE: 0.0332
+2025-04-29 11:09:23 - INFO - Epoch 20/1000, Loss: 0.2698, Dice: 0.2614, MSE: 0.0281
+2025-04-29 11:09:25 - INFO - 模型已保存至: epoch_20.pth
+2025-04-29 11:10:10 - INFO - Epoch 21/1000, Loss: 0.2714, Dice: 0.2630, MSE: 0.0280
+2025-04-29 11:10:56 - INFO - Epoch 22/1000, Loss: 0.2716, Dice: 0.2649, MSE: 0.0224
+2025-04-29 11:11:42 - INFO - Epoch 23/1000, Loss: 0.2813, Dice: 0.2733, MSE: 0.0267
+2025-04-29 11:12:27 - INFO - Epoch 24/1000, Loss: 0.2646, Dice: 0.2568, MSE: 0.0262
+2025-04-29 11:13:12 - INFO - Epoch 25/1000, Loss: 0.2651, Dice: 0.2551, MSE: 0.0332
+2025-04-29 11:13:57 - INFO - Epoch 26/1000, Loss: 0.2722, Dice: 0.2636, MSE: 0.0286
+2025-04-29 11:14:43 - INFO - Epoch 27/1000, Loss: 0.2659, Dice: 0.2588, MSE: 0.0235
+2025-04-29 11:15:31 - INFO - Epoch 28/1000, Loss: 0.2611, Dice: 0.2547, MSE: 0.0213
+2025-04-29 11:16:20 - INFO - Epoch 29/1000, Loss: 0.2476, Dice: 0.2399, MSE: 0.0257
+2025-04-29 11:17:09 - INFO - Epoch 30/1000, Loss: 0.2563, Dice: 0.2461, MSE: 0.0338
+2025-04-29 11:17:50 - INFO - Epoch 31/1000, Loss: 0.2621, Dice: 0.2532, MSE: 0.0296
+2025-04-29 11:18:39 - INFO - Epoch 32/1000, Loss: 0.2530, Dice: 0.2415, MSE: 0.0381
+2025-04-29 11:19:27 - INFO - Epoch 33/1000, Loss: 0.2685, Dice: 0.2581, MSE: 0.0346
+2025-04-29 11:20:14 - INFO - Epoch 34/1000, Loss: 0.2429, Dice: 0.2350, MSE: 0.0262
+2025-04-29 11:21:00 - INFO - Epoch 35/1000, Loss: 0.2543, Dice: 0.2471, MSE: 0.0242
+2025-04-29 11:21:45 - INFO - Epoch 36/1000, Loss: 0.2578, Dice: 0.2504, MSE: 0.0249
+2025-04-29 11:22:32 - INFO - Epoch 37/1000, Loss: 0.2668, Dice: 0.2593, MSE: 0.0253
+2025-04-29 11:23:17 - INFO - Epoch 38/1000, Loss: 0.2399, Dice: 0.2314, MSE: 0.0282
+2025-04-29 11:24:03 - INFO - Epoch 39/1000, Loss: 0.2306, Dice: 0.2219, MSE: 0.0290
+2025-04-29 11:24:48 - INFO - Epoch 40/1000, Loss: 0.2349, Dice: 0.2259, MSE: 0.0300
+2025-04-29 11:24:51 - INFO - 模型已保存至: epoch_40.pth
+2025-04-29 11:25:37 - INFO - Epoch 41/1000, Loss: 0.2250, Dice: 0.2131, MSE: 0.0395
+2025-04-29 11:26:22 - INFO - Epoch 42/1000, Loss: 0.2232, Dice: 0.2147, MSE: 0.0283
+2025-04-29 11:27:07 - INFO - Epoch 43/1000, Loss: 0.2073, Dice: 0.1975, MSE: 0.0328
+2025-04-29 11:27:52 - INFO - Epoch 44/1000, Loss: 0.1918, Dice: 0.1803, MSE: 0.0382
+2025-04-29 11:28:37 - INFO - Epoch 45/1000, Loss: 0.1997, Dice: 0.1885, MSE: 0.0375
+2025-04-29 11:29:24 - INFO - Epoch 46/1000, Loss: 0.1961, Dice: 0.1851, MSE: 0.0369
+2025-04-29 11:30:03 - INFO - Epoch 47/1000, Loss: 0.1819, Dice: 0.1705, MSE: 0.0379
+2025-04-29 11:30:52 - INFO - Epoch 48/1000, Loss: 0.2315, Dice: 0.2227, MSE: 0.0291
+2025-04-29 11:31:41 - INFO - Epoch 49/1000, Loss: 0.1923, Dice: 0.1818, MSE: 0.0348
+2025-04-29 11:32:30 - INFO - Epoch 50/1000, Loss: 0.2188, Dice: 0.2081, MSE: 0.0358
+2025-04-29 11:33:19 - INFO - Epoch 51/1000, Loss: 0.1782, Dice: 0.1664, MSE: 0.0392
+2025-04-29 11:34:06 - INFO - Epoch 52/1000, Loss: 0.1965, Dice: 0.1829, MSE: 0.0453
+2025-04-29 11:34:54 - INFO - Epoch 53/1000, Loss: 0.1910, Dice: 0.1790, MSE: 0.0401
+2025-04-29 11:35:39 - INFO - Epoch 54/1000, Loss: 0.1729, Dice: 0.1607, MSE: 0.0406
+2025-04-29 11:36:24 - INFO - Epoch 55/1000, Loss: 0.1764, Dice: 0.1647, MSE: 0.0389
+2025-04-29 11:37:09 - INFO - Epoch 56/1000, Loss: 0.1839, Dice: 0.1731, MSE: 0.0359
+2025-04-29 11:37:55 - INFO - Epoch 57/1000, Loss: 0.1889, Dice: 0.1794, MSE: 0.0317
+2025-04-29 11:38:41 - INFO - Epoch 58/1000, Loss: 0.1748, Dice: 0.1639, MSE: 0.0362
+2025-04-29 11:39:26 - INFO - Epoch 59/1000, Loss: 0.1834, Dice: 0.1709, MSE: 0.0418
+2025-04-29 11:40:11 - INFO - Epoch 60/1000, Loss: 0.2215, Dice: 0.2077, MSE: 0.0458
+2025-04-29 11:40:13 - INFO - 模型已保存至: epoch_60.pth
+2025-04-29 11:40:59 - INFO - Epoch 61/1000, Loss: 0.2354, Dice: 0.2234, MSE: 0.0400
+2025-04-29 11:41:43 - INFO - Epoch 62/1000, Loss: 0.1890, Dice: 0.1778, MSE: 0.0372
+2025-04-29 11:42:23 - INFO - Epoch 63/1000, Loss: 0.1586, Dice: 0.1475, MSE: 0.0371
+2025-04-29 11:43:09 - INFO - Epoch 64/1000, Loss: 0.1650, Dice: 0.1547, MSE: 0.0341
+2025-04-29 11:43:57 - INFO - Epoch 65/1000, Loss: 0.1698, Dice: 0.1589, MSE: 0.0364
+2025-04-29 11:44:45 - INFO - Epoch 66/1000, Loss: 0.2000, Dice: 0.1886, MSE: 0.0381
+2025-04-29 11:45:35 - INFO - Epoch 67/1000, Loss: 0.1748, Dice: 0.1637, MSE: 0.0371
+2025-04-29 11:46:24 - INFO - Epoch 68/1000, Loss: 0.1617, Dice: 0.1500, MSE: 0.0391
+2025-04-29 11:47:13 - INFO - Epoch 69/1000, Loss: 0.1783, Dice: 0.1650, MSE: 0.0444
+2025-04-29 11:48:02 - INFO - Epoch 70/1000, Loss: 0.1398, Dice: 0.1278, MSE: 0.0402
+2025-04-29 11:48:50 - INFO - Epoch 71/1000, Loss: 0.1741, Dice: 0.1611, MSE: 0.0431
+2025-04-29 11:49:37 - INFO - Epoch 72/1000, Loss: 0.1740, Dice: 0.1627, MSE: 0.0376
+2025-04-29 11:50:23 - INFO - Epoch 73/1000, Loss: 0.1777, Dice: 0.1646, MSE: 0.0437
+2025-04-29 11:51:09 - INFO - Epoch 74/1000, Loss: 0.1740, Dice: 0.1631, MSE: 0.0362
+2025-04-29 11:51:55 - INFO - Epoch 75/1000, Loss: 0.1961, Dice: 0.1854, MSE: 0.0354
+2025-04-29 11:52:40 - INFO - Epoch 76/1000, Loss: 0.1619, Dice: 0.1510, MSE: 0.0362
+2025-04-29 11:53:26 - INFO - Epoch 77/1000, Loss: 0.1723, Dice: 0.1611, MSE: 0.0373
+2025-04-29 11:54:12 - INFO - Epoch 78/1000, Loss: 0.1450, Dice: 0.1340, MSE: 0.0365

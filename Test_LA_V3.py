@@ -1,7 +1,6 @@
 """
-LA数据集的测试函数
-为了和SupervisedV2版本适配
-用于测试半监督模型的相关性能
+V3版本的专用测试函数
+即使没有什么差别也不建议其他版本使用
 """
 
 import logging
@@ -23,9 +22,7 @@ from skimage.measure import label  # 用于标记连通区域
 from collections import OrderedDict
 
 # 导入网络
-# from networks.SAM3D_VNet_SSL_V1 import Network
-from networks.SAM3D_VNet_SSL_V2 import Network
-
+from networks.SAM3D_VNet_SSL_V3 import Network
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart
 
