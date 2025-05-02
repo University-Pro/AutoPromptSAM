@@ -34,7 +34,8 @@ from utils.ImageAugment import RandomCrop_LA as RandomCrop
 from utils.ImageAugment import ToTensor_LA as ToTensor
 
 # 导入网络框架
-from networks.VNet import VNet
+# from networks.VNet import VNet
+from networks.SAM3D_VNet_SSL_V5 import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -182,7 +183,8 @@ if __name__ == "__main__":
 
     # 定义模型
     # model = Network(pretrain_weight_path=args.prompt_weight_path).to(device=device)
-    model = VNet(n_channels=1,n_classes=args.num_classes,normalization="batchnorm",has_dropout=True).to(device=device)
+    # model = VNet(n_channels=1,n_classes=args.num_classes,normalization="batchnorm",has_dropout=True).to(device=device)
+    model = Network(pretrain_weight_path=None,encoder_depth=8,in_channels=1).to(device=device)
 
     # 如果继续训练
     if args.continue_train:
@@ -202,6 +204,7 @@ if __name__ == "__main__":
 
     # 定义损失函数
     criterion_dice = CeDiceLoss(num_classes=args.num_classes, loss_weight=[1,1])
+    criterion_ce = nn.CrossEntropyLoss()
     logging.info(f"Using CeDiceLoss 1:1")
 
     # 模型设置为训练模式
@@ -219,7 +222,8 @@ if __name__ == "__main__":
 
             # 全精度训练
             output = model(images)
-            loss_dice = criterion_dice(output, labels)
+            # loss_dice = criterion_dice(output, labels)
+            loss_dice = criterion_ce(output,labels)
             total_loss = loss_dice
 
             total_loss.backward()

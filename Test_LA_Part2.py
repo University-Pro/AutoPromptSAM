@@ -1,7 +1,5 @@
 """
 LA数据集的测试函数
-为了和SupervisedV2版本适配
-用于测试半监督模型的相关性能
 """
 
 import logging
@@ -23,8 +21,8 @@ from skimage.measure import label  # 用于标记连通区域
 from collections import OrderedDict
 
 # 导入网络
-# from networks.SAM3D_VNet_SSL_V1 import Network
-from networks.SAM3D_VNet_SSL_V2 import Network
+# from networks.SAM3D_VNet_SSL_V4 import Network
+from networks.SAM3D_VNet_SSL_V5 import Network
 
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart
@@ -513,7 +511,8 @@ if __name__ == '__main__':
     # 创建模型实例
     logging.info(f"Creating model: {option.model_name}")
     # model = Network().to(device=device) # V1原本
-    model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
+    # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
+    model = Network(pretrain_weight_path=None,encoder_depth=8).to(device=device) # V4
 
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")

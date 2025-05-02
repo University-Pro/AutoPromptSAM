@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Directory containing .pth files
-PTH_DIR="./result/VNet/LA_16/Pth_Part1"  # 修改为你存放模型的目录
+PTH_DIR="./result/SAM3D_VNet_SSL/LA_16_Supervised/Pth_Part1"  # 修改为你存放模型的目录
 
 # Directory to save logs
-LOG_DIR="./result/VNet/LA_16/Test_Part1"  # 修改为你保存日志的目录
+LOG_DIR="./result/SAM3D_VNet_SSL/LA_16_Supervised/Test_Part1"  # 修改为你保存日志的目录
 
 # Root path for dataset
 ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
@@ -12,9 +12,8 @@ ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
 # Number of classes
 NUM_CLASSES=2  # 修改为你的数据集类别数
 
-# SAM2 model checkpoint path and model configuration
-SAM2_CHECKPOINT="./sam2_configs/sam2.1_hiera_tiny.pt"  # SAM2模型路径
-MODEL_CFG="sam2.1/sam2.1_hiera_t.yaml"  # 模型配置文件路径
+# Number of outputs
+NUM_OUTPUT=1  # Assuming this is the default number of outputs
 
 # Test save path (if none, we just ignore it in this script)
 TEST_SAVE_PATH="None"  # 如果不保存结果，可以保持None
@@ -36,13 +35,11 @@ for MODEL_PATH in $PTH_DIR/*.pth; do
 
   # Call the Python script with the current .pth file
   python -m Test_LA \
-    --model_name "VNet" \
+    --model_name "SAM3D_VNet_SSL_V5" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \
     --root_path "$ROOT_PATH" \
     --num_classes "$NUM_CLASSES" \
-    --sam2_checkpoint "$SAM2_CHECKPOINT" \
-    --model_cfg "$MODEL_CFG" \
-    --num_outputs 1  # Assuming this is the default number of outputs
+    --num_outputs "$NUM_OUTPUT"  # Assuming this is the default number of outputs
 done

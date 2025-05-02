@@ -1,9 +1,9 @@
 """
-开发中
-解决之前训练过程中遇到的一些问题
-1. 在测试过程中分支有结果，但是平均下来结果却是0
-2. 训练过程中权重更新是如何更新的
-3. promptencoder相关的有一个tensor的shape是21而不是20，看看能不能解决
+V5
+这里用V4的SAM部分做监督学习，查看效果
+Depth保持8不变
+不加载粗分割模型
+使用CELoss函数
 """
 
 import sys
@@ -446,7 +446,7 @@ class Network(nn.Module):
 
     def forward(self, x):
         # 0.VNet分支输出结果
-        vnet_output = self.vnet(x)
+        # vnet_output = self.vnet(x)
 
         # 1. 图像主干编码
         after_encoder = self.samencoder(x)
@@ -476,7 +476,7 @@ class Network(nn.Module):
         # 5. 插值还原尺寸
         sam_output = self.postprocess_masks(after_maskencoder, input_size=x.shape[-3:], original_size=x.shape[-3:])
 
-        return vnet_output,sam_output
+        return sam_output
 
 
 def networktest():
@@ -491,14 +491,12 @@ def networktest():
     model = Network(in_channels=1,encoder_depth=8).to(device=device)
 
     # 冻结Network的ImageEncoder3D模块
-    for param in model.samencoder.parameters():
-        param.requires_grad = False
+    # for param in model.samencoder.parameters():
+    #     param.requires_grad = False
 
     input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
-    vnet_output, sam_output = model(input_tensor)
-    print(f'VNet输出形状: {vnet_output.shape}')
-    print(f'SAM输出形状: {sam_output.shape}')
-    
+    sam_output = model(input_tensor)
+    print(f"输出形状: {sam_output.shape}")
     summary(model, input_size=(1, 1, 112, 112, 80), device=device)
 
     return 
