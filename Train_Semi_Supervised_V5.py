@@ -275,9 +275,8 @@ if __name__ == "__main__":
     optimizer = optim.Adam(model.parameters(), lr=args.learning_rate, weight_decay=1e-5) # 使用Adam优化器
 
     # 损失函数
-    criterion_dice = CeDiceLoss(num_classes=args.num_classes)
+    criterion_dice = CeDiceLoss(num_classes=args.num_classes,loss_weight=[0.6,1.4])
     criterion_mse = softmax_mse_loss
-    celoss = nn.CrossEntropyLoss()
 
     # TensorBoard
     writer = SummaryWriter(log_dir=args.tensorboard_path)
