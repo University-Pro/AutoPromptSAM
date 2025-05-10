@@ -44,7 +44,8 @@ from utils.ImageAugment import TwoStreamBatchSampler_LA
 # from networks.SAM3D_VNet_SSL_V2 import Network
 # from networks.SAM3D_VNet_SSL_V3 import Network
 # from networks.SAM3D_VNet_SSL_V4 import Network
-from networks.SAM3D_VNet_SSL_V7 import Network
+# from networks.SAM3D_VNet_SSL_V7 import Network
+from networks.SAM3D_VNet_SSL_V8 import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -238,7 +239,8 @@ if __name__ == "__main__":
     train_loader = DataLoader(full_dataset, batch_sampler=batch_sampler, num_workers=8, pin_memory=True)
 
     # ==================== 模型初始化 ====================
-    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V7
+    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V7
+    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
 
     # 冻结Network的ImageEncoder3D模块
     # for param in model.samencoder.parameters():

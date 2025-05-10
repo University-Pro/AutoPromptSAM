@@ -1,0 +1,5 @@
+2025-05-10 20:26:37 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_Basis/Test_Part2/Test.log
+2025-05-10 20:26:37 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-10 20:26:37 - INFO - Creating model: SAM3D_VNet_SSL_V8
+2025-05-10 20:26:38 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_Basis/Pth_Part2/*.pth
+2025-05-10 20:26:38 - ERROR - 错误：模型文件未找到于 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_Basis/Pth_Part2/*.pth
