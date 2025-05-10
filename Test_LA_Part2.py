@@ -23,7 +23,8 @@ from collections import OrderedDict
 # 导入网络
 # from networks.SAM3D_VNet_SSL_V4 import Network
 # from networks.SAM3D_VNet_SSL_V5 import Network
-from networks.SAM3D_VNet_SSL_V6 import Network
+# from networks.SAM3D_VNet_SSL_V6 import Network
+from networks.SAM3D_VNet_SSL_V7 import Network
 
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart
@@ -513,7 +514,8 @@ if __name__ == '__main__':
     logging.info(f"Creating model: {option.model_name}")
     # model = Network().to(device=device) # V1原本
     # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
-    model = Network(pretrain_weight_path=None,encoder_depth=8).to(device=device) # V4
+    # model = Network(pretrain_weight_path=None,encoder_depth=8).to(device=device) # V4
+    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V7
 
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")

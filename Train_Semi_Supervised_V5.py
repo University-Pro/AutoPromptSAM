@@ -3,6 +3,7 @@ LA数据集
 使用双流编码器
 进行半监督训练
 相比于之前的版本调整了Loss函数
+如果使用这个版本进行训练，需要检查一下Loss函数特别是CEDice的比例
 """
 
 import torch.optim as optim
@@ -42,7 +43,8 @@ from utils.ImageAugment import TwoStreamBatchSampler_LA
 # from networks.SAM3D_VNet_SSL_V1 import Network
 # from networks.SAM3D_VNet_SSL_V2 import Network
 # from networks.SAM3D_VNet_SSL_V3 import Network
-from networks.SAM3D_VNet_SSL_V4 import Network
+# from networks.SAM3D_VNet_SSL_V4 import Network
+from networks.SAM3D_VNet_SSL_V7 import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -110,6 +112,7 @@ def load_model(model, model_state_dict, device):
 def load_pretrained_v2(model, pretrained_path,multi_gpu=False):
     """
     改进版权重加载函数，支持自动处理多GPU前缀和分支前缀
+    并且支持非严格加载
     """
     pretrained_dict = torch.load(pretrained_path)
     
@@ -235,7 +238,7 @@ if __name__ == "__main__":
     train_loader = DataLoader(full_dataset, batch_sampler=batch_sampler, num_workers=8, pin_memory=True)
 
     # ==================== 模型初始化 ====================
-    model = Network(pretrain_weight_path=None,encoder_depth=8).to(device=device) # V4
+    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V7
 
     # 冻结Network的ImageEncoder3D模块
     # for param in model.samencoder.parameters():
@@ -265,9 +268,6 @@ if __name__ == "__main__":
             start_epoch = checkpoint_data['epoch'] + 1
             logging.info(f"加载检查点: {checkpoint}，从epoch {start_epoch}继续训练")
     
-    # 加载预训练权重
-    # model = load_pretrained_to_branch1(model, args.pretrained_weights,multi_gpu=args.multi_gpu)
-
     # 将模型移动到GPU
     model.to(device)
 
@@ -299,7 +299,7 @@ if __name__ == "__main__":
             labeled_bs = args.label_bs
             
             # 模型前向传播（双输出）
-            outputs = model(images)
+            outputs = model(images) # 注意这里哪一个是VNet，哪一个是SAM
             A_output = outputs[0]  # 主分支输出
             B_output = outputs[1]  # 辅助分支输出
 

@@ -1,9 +1,8 @@
 """
-V7
-这里进行修改Prompt的相关内容
-要求每一个切片都要有5个点Prompt
-一共是400个Prompt
-相比与原来的只有5个多了很多
+V9 dev
+这里解决一下分支问
+把output1和output2相互之间调换一下之前的算法都不太对
+然后depth保持8不变
 """
 
 import sys
@@ -40,7 +39,7 @@ class PromptGenerator_Encoder(nn.Module):
         normalization: Optional[str] = None,
         has_dropout: bool = False,
         pretrain_weight_path: Optional[str] = None,
-        num_points_per_class: int = 5,
+        num_points_per_class: int =400,
         threshold: float = 0.5,
         sample_mode: str = "random",  # 新增参数，支持 'random' 或 'topk'
         debug: bool = False,          # 是否输出调试信息
@@ -228,20 +227,17 @@ def PromptGenerator_test():
     # --- 参数设置 ---
     input_shape = (1, 1, 112, 112, 80)  # (B, C_in, D, H, W) - B=1, C_in=1
     n_classes = 2                        # 假设有2个类别 (背景 + 1个前景)
-    num_points_per_class = 5             # 每个类别采样5个点
+    num_points_per_class = 400             # 每个类别采样5个点
     threshold = 0.5                      # 概率阈值设为0.5
     sample_mode = 'topk'                 # 使用 topk 采样模式
     debug_mode = True                    # 开启调试信息输出
-    
-    # --- 关键修正：使用合法的normalization参数（如'batch'/'instance'）---
     normalization_type = 'batchnorm'         # 确保与VNet支持的归一化类型匹配
     
     # --- 创建模拟输入 ---
     mock_input = torch.rand(input_shape)
-    print(f"Created Mock Input Tensor with shape: {mock_input.shape}\n")
+    print(f"input shape: {mock_input.shape}")
     
     # --- 实例化模型 ---
-    print("Instantiating PromptGenerator_Encoder...")
     model = PromptGenerator_Encoder(
         n_channels=input_shape[1],        # 输入通道数
         n_classes=n_classes,              # 输出类别数
@@ -253,20 +249,16 @@ def PromptGenerator_test():
         sample_mode=sample_mode,
         debug=debug_mode
     )
-    print("\nModel Instantiation Complete.")
     
     # --- 模型评估模式 ---
     model.eval()
     
     # --- 执行前向传播 ---
-    print("\nRunning Forward Pass...")
     with torch.no_grad():
         coords_output, labels_output = model(mock_input)
-    print("Forward Pass Complete.")
     
     # --- 打印输出结果 ---
     print("\n--- Test Results ---")
-    print(f"Input Shape: {mock_input.shape}")
     print(f"Output Coords Shape: {coords_output.shape}")
     print(f"Output Labels Shape: {labels_output.shape}")
     
@@ -275,10 +267,6 @@ def PromptGenerator_test():
     print(coords_output[0, :5, :])  # 第一个样本前5个坐标
     print("\nSample Output Labels (first 5 points):")
     print(labels_output[0, :5])     # 第一个样本前5个标签
-
-# 执行测试函数
-if __name__ == "__main__":
-    PromptGenerator_test()
 
 class ImageEncoderViT3D(nn.Module):
     def __init__(
@@ -547,7 +535,7 @@ def networktest():
         print("使用CPU")
 
     # 实例化网络
-    model = Network(in_channels=1,encoder_depth=8).to(device=device)
+    model = Network(in_channels=1,encoder_depth=8,num_points_per_class=400).to(device=device)
 
     input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
     vnet_output,sam_output = model(input_tensor)
@@ -558,5 +546,5 @@ def networktest():
 
 
 if __name__ == "__main__":
-    # networktest()
-    PromptGenerator_test()
+    networktest()
+    # PromptGenerator_test()
