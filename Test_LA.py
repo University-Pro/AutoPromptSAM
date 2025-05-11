@@ -25,7 +25,8 @@ from collections import OrderedDict
 # from networks.SAM3D_VNet_SSL_V5 import Network
 # from networks.SAM3D_VNet_SSL_V6 import Network
 # from networks.SAM3D_VNet_SSL_V7 import Network
-from networks.SAM3D_VNet_SSL_V8 import Network
+# from networks.SAM3D_VNet_SSL_V8 import Network
+from networks.SAM3D_VNet_SSL_V9 import Network
 
 # 导入数据集
 from dataloader.DataLoader_LA import LAHeart
@@ -517,8 +518,9 @@ if __name__ == '__main__':
     # model = Network(pretrain_weight_path="./result/VNet/LA/Pth/best.pth",encoder_depth=8).to(device=device)
     # model = Network(pretrain_weight_path=None,encoder_depth=8).to(device=device) # V4
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V7
-    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
-    
+    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
+    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V9
+
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")
     model = load_model(model, option.model_load, device)

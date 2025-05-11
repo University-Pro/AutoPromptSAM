@@ -45,7 +45,8 @@ from utils.ImageAugment import TwoStreamBatchSampler_LA
 # from networks.SAM3D_VNet_SSL_V3 import Network
 # from networks.SAM3D_VNet_SSL_V4 import Network
 # from networks.SAM3D_VNet_SSL_V7 import Network
-from networks.SAM3D_VNet_SSL_V8 import Network
+# from networks.SAM3D_VNet_SSL_V8 import Network
+from networks.SAM3D_VNet_SSL_V9 import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -240,7 +241,8 @@ if __name__ == "__main__":
 
     # ==================== 模型初始化 ====================
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V7
-    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
+    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
+    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V9
 
     # 冻结Network的ImageEncoder3D模块
     # for param in model.samencoder.parameters():
@@ -302,8 +304,12 @@ if __name__ == "__main__":
             
             # 模型前向传播（双输出）
             outputs = model(images) # 注意这里哪一个是VNet，哪一个是SAM
-            A_output = outputs[0]  # 主分支输出
-            B_output = outputs[1]  # 辅助分支输出
+            # A_output = outputs[0]  # 主分支输出
+            # B_output = outputs[1]  # 辅助分支输出
+
+            # V9 调整分支输出顺序
+            A_output = outputs[1]  # 主分支输出
+            B_output = outputs[0]  # 辅助分支输出
 
             # 监督损失（仅计算有标签数据）
             supervised_loss = criterion_dice(A_output[:labeled_bs], labels[:labeled_bs])
