@@ -1,0 +1,24 @@
+2025-05-12 20:23:09 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V10/Test_Part1/Test.log
+2025-05-12 20:23:09 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-12 20:23:09 - INFO - Creating model: SAM3D_VNet_SSL_V10
+2025-05-12 20:23:10 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V10/Pth_Part1/epoch_100.pth
+2025-05-12 20:23:11 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V10/Pth_Part1/epoch_100.pth 加载 checkpoint 文件。
+2025-05-12 20:23:11 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-05-12 20:23:11 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-05-12 20:23:11 - INFO - 成功将状态字典加载到模型。
+2025-05-12 20:23:11 - INFO - 模型已移动到设备: cuda
+2025-05-12 20:23:11 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-12 20:23:11 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-12 20:23:11 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-12 20:23:11 - INFO - Constructed full image paths for 20 images.
+2025-05-12 20:23:11 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V10.
+2025-05-12 20:23:19 - INFO - Image 00 - Dice: 0.78095, Jaccard: 0.64062, HD95: 13.30413, ASD: 4.02831
+2025-05-12 20:23:19 - INFO - Image 00 (average output) - Dice: 0.52522, Jaccard: 0.35613, HD95: 33.48134, ASD: 5.01532
+2025-05-12 20:23:29 - INFO - Image 01 - Dice: 0.82331, Jaccard: 0.69969, HD95: 20.02498, ASD: 2.44959
+2025-05-12 20:23:29 - INFO - Image 01 (average output) - Dice: 0.35363, Jaccard: 0.21479, HD95: 42.53234, ASD: 9.47718
+2025-05-12 20:23:39 - INFO - Image 02 - Dice: 0.78145, Jaccard: 0.64130, HD95: 16.06238, ASD: 3.13653
+2025-05-12 20:23:39 - INFO - Image 02 (average output) - Dice: 0.30820, Jaccard: 0.18217, HD95: 37.81534, ASD: 9.23338
+2025-05-12 20:23:50 - INFO - Image 03 - Dice: 0.84239, Jaccard: 0.72769, HD95: 12.52996, ASD: 2.59013
+2025-05-12 20:23:50 - INFO - Image 03 (average output) - Dice: 0.33646, Jaccard: 0.20225, HD95: 44.21312, ASD: 8.10654
+2025-05-12 20:23:58 - INFO - Image 04 - Dice: 0.74251, Jaccard: 0.59047, HD95: 17.11724, ASD: 5.51311
+2025-05-12 20:23:58 - INFO - Image 04 (average output) - Dice: 0.33807, Jaccard: 0.20342, HD95: 40.47221, ASD: 6.51645

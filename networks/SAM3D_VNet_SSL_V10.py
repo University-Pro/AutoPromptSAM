@@ -1,9 +1,7 @@
 """
-v10 dev
-这里对Prompt进行修改
-每一层都要增加一些点Prompt
-prompt增加到每一层每一类10个，二分类的话就是20个点
-80层就是1600个点
+v10
+减少Depth为4
+点Prompt保持不变，查看效果
 """
 
 import sys
@@ -495,6 +493,7 @@ class Network(nn.Module):
     def forward(self, x):
         # 0.VNet分支输出结果
         vnet_output = self.vnet(x)
+        # print(f'vnet output shape is {vnet_output.shape}')
 
         # 1. 图像主干编码
         after_encoder = self.samencoder(x)
@@ -536,12 +535,12 @@ def networktest():
         print("使用CPU")
 
     # 实例化网络
-    model = Network(in_channels=1,encoder_depth=8,num_points_per_class=400).to(device=device)
+    model = Network(in_channels=1,encoder_depth=4,num_points_per_class=400).to(device=device)
 
     input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
     vnet_output,sam_output = model(input_tensor)
     print(f"输出形状: {vnet_output.shape,sam_output.shape}")
-    # summary(model, input_size=(1, 1, 112, 112, 80), device=device)
+    summary(model, input_size=(1, 1, 112, 112, 80), device=device)
 
     return 
 

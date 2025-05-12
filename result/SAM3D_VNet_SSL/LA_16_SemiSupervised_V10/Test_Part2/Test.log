@@ -1,0 +1,18 @@
+2025-05-12 20:23:45 - INFO - Log file will be saved at: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V10/Test_Part2/Test.log
+2025-05-12 20:23:45 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-12 20:23:45 - INFO - Creating model: SAM3D_VNet_SSL_V10
+2025-05-12 20:23:46 - INFO - Loading model weights from: ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V10/Pth_Part2/epoch_380.pth
+2025-05-12 20:23:46 - INFO - 成功从 ./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V10/Pth_Part2/epoch_380.pth 加载 checkpoint 文件。
+2025-05-12 20:23:46 - INFO - 未找到 EMA 权重，选择 'model_state_dict' 进行加载。
+2025-05-12 20:23:46 - INFO - 检测到 'module.' 前缀，将进行移除。
+2025-05-12 20:23:46 - INFO - 成功将状态字典加载到模型。
+2025-05-12 20:23:46 - INFO - 模型已移动到设备: cuda
+2025-05-12 20:23:46 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-12 20:23:46 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-12 20:23:46 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-12 20:23:46 - INFO - Constructed full image paths for 20 images.
+2025-05-12 20:23:46 - INFO - Starting the performance evaluation for SAM3D_VNet_SSL_V10.
+2025-05-12 20:23:54 - INFO - Image 00 - Dice: 0.78938, Jaccard: 0.65205, HD95: 21.40093, ASD: 6.12824
+2025-05-12 20:23:54 - INFO - Image 00 (average output) - Dice: 0.78834, Jaccard: 0.65063, HD95: 15.16575, ASD: 3.35692
+2025-05-12 20:24:04 - INFO - Image 01 - Dice: 0.89996, Jaccard: 0.81811, HD95: 7.34847, ASD: 1.49538
+2025-05-12 20:24:04 - INFO - Image 01 (average output) - Dice: 0.74176, Jaccard: 0.58953, HD95: 26.32489, ASD: 3.75033
