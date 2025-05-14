@@ -48,7 +48,10 @@ from utils.ImageAugment import TwoStreamBatchSampler_LA
 # from networks.SAM3D_VNet_SSL_V8 import Network
 # from networks.SAM3D_VNet_SSL_V9 import Network
 # from networks.SAM3D_VNet_SSL_V10 import Network
-from networks.Double_VNet import Network
+from networks.SAM3D_VNet_SSL_V11 import Network
+
+# 导入其他网络
+# from networks.Double_VNet import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -246,9 +249,9 @@ if __name__ == "__main__":
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V9
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # V10
-    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # DoubleVNet
+    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # DoubleVNet
+    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V11
     
-
     # 冻结Network的ImageEncoder3D模块
     # for param in model.samencoder.parameters():
     #     param.requires_grad = False
