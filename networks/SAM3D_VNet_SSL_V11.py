@@ -1,5 +1,5 @@
 """
-v11 dev
+v11
 Depth保持8不变
 想办法实现点Prompt在每一层都要有10个
 一共是800个点
@@ -70,7 +70,7 @@ class PromptGenerator_Encoder(nn.Module):
         if pretrain_weight_path:
             if self.debug:
                 print(f'从 {pretrain_weight_path} 加载预训练权重')
-            self.load_model(self.network, pretrain_weight_path)
+            self.load_model(model=self.network, model_path=pretrain_weight_path)
 
         self.num_points_per_slice = num_points_per_slice # 存储每片采样点数
         self.threshold = threshold
@@ -79,7 +79,7 @@ class PromptGenerator_Encoder(nn.Module):
 
 
     @staticmethod
-    def load_model(self,model, model_path, device=None):
+    def load_model(model, model_path, device=None):
         """
         加载模型权重，自动处理单卡/多卡模型保存的权重。
         """
@@ -92,12 +92,9 @@ class PromptGenerator_Encoder(nn.Module):
                 name = k[7:] # 移除 'module.' 前缀
                 new_state_dict[name] = v
             model.load_state_dict(new_state_dict, strict=False)
-            if self.debug:
-                 print("从 DataParallel 模型加载权重")
         else:
             model.load_state_dict(state_dict, strict=False)
-            if self.debug:
-                print("从标准模型加载权重")
+
         return model
 
     @staticmethod
@@ -549,7 +546,7 @@ class Network(nn.Module):
             normalization: str = "batchnorm",
             has_dropout: bool = True,
             pretrain_weight_path: str = "./result/VNet/LA/Pth/best.pth",
-            num_points_per_class: int = 10,
+            num_points_per_slice: int = 5, # 每个切片的Prompt的数量
             threshold: float = 0.5,
             mask_in_chans: int = 16,
             activation=nn.GELU,
@@ -575,7 +572,7 @@ class Network(nn.Module):
 
         # ------- PromptGenerator参数 -------
         self.pretrain_weight_path = pretrain_weight_path
-        self.num_points_per_class = num_points_per_class
+        self.num_points_per_slice = num_points_per_slice # 添加切片参数
         self.threshold = threshold
         self.generatorways = generatorways
         self.debug = debug
@@ -596,7 +593,7 @@ class Network(nn.Module):
             normalization=self.normalization,
             has_dropout=self.has_dropout,
             pretrain_weight_path=self.pretrain_weight_path,
-            num_points_per_class=self.num_points_per_class,
+            num_points_per_slice=self.num_points_per_slice, # 添加切片中prompt数量
             threshold=self.threshold,
             sample_mode=self.generatorways,
             debug=self.debug
@@ -699,16 +696,16 @@ def networktest():
         print("使用CPU")
 
     # 实例化网络
-    model = Network(in_channels=1,encoder_depth=4,num_points_per_class=400).to(device=device)
+    model = Network(in_channels=1,encoder_depth=4,num_points_per_slice=5).to(device=device)
 
     input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
     vnet_output,sam_output = model(input_tensor)
     print(f"输出形状: {vnet_output.shape,sam_output.shape}")
-    summary(model, input_size=(1, 1, 112, 112, 80), device=device)
+    # summary(model, input_size=(1, 1, 112, 112, 80), device=device)
 
     return 
 
 
 if __name__ == "__main__":
-    # networktest()
-    PromptGenerator_test()
+    networktest()
+    # PromptGenerator_test()
