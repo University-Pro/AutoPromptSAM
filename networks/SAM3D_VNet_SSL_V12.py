@@ -2,7 +2,7 @@
 v12 dev
 Depth保持4
 另外这里不使用Prompt
-使用一个假的数据进行测试
+查看效果
 用于测试prompt的效果
 """
 
@@ -664,10 +664,13 @@ class Network(nn.Module):
 
         # 3. prompt 编码
         sparse_embeddings, dense_embeddings = self.promptencoder(
-            points=(coords, labels),
+            points=None, # 这里不设置prompt
             boxes=None,
             masks=None
         )
+
+        # print(f'sparse_embeddings shape is {sparse_embeddings.shape}')
+        # print(f'dense_embeddings shape is {dense_embeddings.shape}')
 
         # 获得位置编码
         image_pe = self.promptencoder.get_dense_pe()

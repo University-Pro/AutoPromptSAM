@@ -701,7 +701,7 @@ def networktest():
     input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
     vnet_output,sam_output = model(input_tensor)
     print(f"输出形状: {vnet_output.shape,sam_output.shape}")
-    # summary(model, input_size=(1, 1, 112, 112, 80), device=device)
+    summary(model, input_size=(1, 1, 112, 112, 80), device=device)
 
     return 
 

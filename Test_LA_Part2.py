@@ -28,7 +28,8 @@ from collections import OrderedDict
 # from networks.SAM3D_VNet_SSL_V8 import Network
 # from networks.SAM3D_VNet_SSL_V9 import Network
 # from networks.SAM3D_VNet_SSL_V10 import Network
-from networks.SAM3D_VNet_SSL_V11 import Network
+# from networks.SAM3D_VNet_SSL_V11 import Network
+from networks.SAM3D_VNet_SSL_V12 import Network
 
 # 导入其他网络
 # from networks.Double_VNet import Network
@@ -526,7 +527,8 @@ if __name__ == '__main__':
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V9
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # V10
-    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V11
+    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V11
+    model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V12
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # DoubleVNet
 
     # 加载模型
