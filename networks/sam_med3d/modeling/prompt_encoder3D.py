@@ -26,7 +26,7 @@ class LayerNorm3d(nn.Module):
         return x
 
 
-class PromptEncoder3D(nn.Module):
+class PromptEncoder3D_backup(nn.Module):
     def __init__(
         self,
         embed_dim: int,
@@ -236,6 +236,183 @@ class PromptEncoder3D(nn.Module):
 
         return sparse_embeddings, dense_embeddings
 
+# 测试使用
+class PromptEncoder3D(nn.Module):
+    def __init__(
+        self,
+        embed_dim: int,
+        image_embedding_size: Tuple[int, int, int],
+        input_image_size: Tuple[int, int, int],
+        mask_in_chans: int,
+        activation: Type[nn.Module] = nn.GELU,
+    ) -> None:
+
+        super().__init__()
+        self.embed_dim = embed_dim
+        self.input_image_size = input_image_size
+        self.image_embedding_size = image_embedding_size
+        
+        # 三维随机位置编码生成器，将空间坐标映射到嵌入空间
+        self.pe_layer = PositionEmbeddingRandom3D(embed_dim // 3)
+
+        # 点提示嵌入相关配置
+        self.num_point_embeddings = 2  # 两种点类型：前景点/背景点
+        # 创建可学习的点类型嵌入向量
+        self.point_embeddings = nn.ModuleList([nn.Embedding(1, embed_dim) for _ in range(self.num_point_embeddings)])
+        # 特殊嵌入：用于表示无效点
+        self.not_a_point_embed = nn.Embedding(1, embed_dim)
+
+        # 掩码下采样模块配置
+        self.mask_input_size = image_embedding_size
+        self.mask_downscaling = nn.Sequential(
+            # 第一层卷积：2x2x2卷积，步长2，通道数缩减为1/4
+            nn.Conv3d(1, mask_in_chans//4, kernel_size=2, stride=2),
+            LayerNorm3d(mask_in_chans//4),  # 三维层归一化
+            activation(),  # 激活函数
+            # 第二层卷积：继续下采样，恢复通道数
+            nn.Conv3d(mask_in_chans//4, mask_in_chans, kernel_size=2, stride=2),
+            LayerNorm3d(mask_in_chans),
+            activation(),
+            # 最终卷积：将通道数映射到嵌入维度
+            nn.Conv3d(mask_in_chans, embed_dim, kernel_size=1)
+        )
+
+        # 无掩码时的默认嵌入
+        self.no_mask_embed = nn.Embedding(1, embed_dim)
+
+    def get_dense_pe(self) -> torch.Tensor:
+        """
+        生成位置编码
+        """
+        return self.pe_layer(self.image_embedding_size).unsqueeze(0)
+
+    def _embed_points(
+        self,
+        points: torch.Tensor,  # 点坐标张量，形状为[B, N, 3]
+        labels: torch.Tensor,   # 点标签张量，形状为[B, N]
+        pad: bool              # 是否需要进行填充
+    ) -> torch.Tensor:
+        """
+        对点提示进行嵌入编码
+        
+        处理流程：
+        1. 坐标中心化：将坐标偏移0.5到像素中心
+        2. 填充处理：当需要填充时，添加一个无效点
+        3. 生成位置编码
+        4. 根据标签类型叠加对应的嵌入向量
+        """
+        # 坐标中心化调整
+        points = points + 0.5
+
+        # 填充处理：当需要填充时，添加一个无效点
+        if pad:
+            padding_point = torch.zeros((points.shape[0], 1, 3), device=points.device)
+            padding_label = -torch.ones((labels.shape[0], 1), device=labels.device)
+            points = torch.cat([points, padding_point], dim=1)
+            labels = torch.cat([labels, padding_label], dim=1)
+
+        # 生成位置编码 [B, N, embed_dim//3]
+        point_embedding = self.pe_layer.forward_with_coords(points, self.input_image_size)
+        
+        # 维度调整：确保嵌入维度匹配
+        if point_embedding.shape[-1] != self.not_a_point_embed.weight.shape[-1]:
+            padding_size = self.not_a_point_embed.weight.shape[-1] - point_embedding.shape[-1]
+            padding = torch.zeros(*point_embedding.shape[:-1], padding_size, device=point_embedding.device)
+            point_embedding = torch.cat([point_embedding, padding], dim=-1)
+
+        # 根据标签添加对应的嵌入向量
+        # 无效点：使用特殊嵌入
+        point_embedding[labels == -1] = 0.0
+        point_embedding[labels == -1] += self.not_a_point_embed.weight
+        # 背景点：使用第一个点嵌入
+        point_embedding[labels == 0] += self.point_embeddings[0].weight
+        # 前景点：使用第二个点嵌入
+        point_embedding[labels == 1] += self.point_embeddings[1].weight
+
+        return point_embedding
+
+    def _embed_boxes(self, boxes: torch.Tensor) -> torch.Tensor:
+        """
+        对框提示进行嵌入编码
+        
+        处理流程：
+        1. 坐标中心化调整
+        2. 将框分解为两个对角点
+        3. 分别对两个角点进行编码
+        4. 添加对应的嵌入向量
+        """
+        boxes = boxes + 0.5  # 坐标调整
+        coords = boxes.reshape(-1, 2, 3)  # 转换为两个对角点 [B, 2, 3]
+        corner_embedding = self.pe_layer.forward_with_coords(coords, self.input_image_size)
+        
+        # 对角点分别使用不同的嵌入向量
+        corner_embedding[:, 0, :] += self.point_embeddings[2].weight  # 左上角点
+        corner_embedding[:, 1, :] += self.point_embeddings[3].weight  # 右下角点
+        
+        return corner_embedding
+
+    def _embed_masks(self, masks: torch.Tensor) -> torch.Tensor:
+        """
+        对掩码输入进行编码
+        
+        通过多层卷积进行下采样，最终输出形状为[B, embed_dim, D/4, H/4, W/4]
+        """
+        return self.mask_downscaling(masks)
+
+    def forward(
+        self,
+        points: Optional[Tuple[torch.Tensor, torch.Tensor]],  # (坐标, 标签)元组
+        boxes: Optional[torch.Tensor],  # 框坐标
+        masks: Optional[torch.Tensor]   # 输入掩码
+    ) -> Tuple[torch.Tensor, torch.Tensor]:
+        """
+        前向传播流程：
+        1. 确定批量大小
+        2. 分别处理各类型提示
+        3. 组合稀疏嵌入（点/框）
+        4. 生成密集嵌入（掩码）
+        
+        返回：
+            稀疏嵌入：形状为[B, N, embed_dim]，包含所有点/框的嵌入
+            密集嵌入：形状为[B, embed_dim, D, H, W]，空间特征图
+        """
+
+        bs = self._get_batch_size(points, boxes, masks)
+        sparse_embeddings = torch.empty((bs, 0, self.embed_dim), device=self._get_device())
+
+        # 处理点提示
+        if points is not None:
+            coords, labels = points
+            point_embeddings = self._embed_points(coords, labels, pad=(boxes is None))
+            sparse_embeddings = torch.cat([sparse_embeddings, point_embeddings], dim=1)
+
+        # 处理框提示
+        if boxes is not None:
+            box_embeddings = self._embed_boxes(boxes)
+            sparse_embeddings = torch.cat([sparse_embeddings, box_embeddings], dim=1)
+
+        # 处理掩码输入
+        if masks is not None:
+            dense_embeddings = self._embed_masks(masks)
+        else:
+            # 无掩码时使用默认嵌入
+            dense_embeddings = self.no_mask_embed.weight.reshape(1, -1, 1, 1, 1).expand(
+                bs, -1, *self.image_embedding_size
+            )
+
+        return sparse_embeddings, dense_embeddings
+
+    # ------------ 辅助方法 ------------
+    def _get_batch_size(self, points, boxes, masks) -> int:
+        """根据输入类型确定批量大小"""
+        if points: return points[0].shape[0]
+        if boxes: return boxes.shape[0]
+        if masks: return masks.shape[0]
+        return 1
+
+    def _get_device(self) -> torch.device:
+        """获取当前模块使用的计算设备"""
+        return self.point_embeddings[0].weight.device
 
 class PositionEmbeddingRandom3D(nn.Module):
     """
