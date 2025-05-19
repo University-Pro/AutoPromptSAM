@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Directory containing .pth files
-PTH_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V12/Pth_Part2"  # 修改为你存放模型的目录
+PTH_DIR="result/VNet/LA_16/Pth_Part1"  # 修改为你存放模型的目录
 
 # Directory to save logs
-LOG_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V12/Test_Part2"  # 修改为你保存日志的目录
+LOG_DIR="result/VNet/LA_16/Test_Part1"  # 修改为你保存日志的目录
 
 # Root path for dataset
 ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
@@ -13,7 +13,7 @@ ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
 NUM_CLASSES=2  # 修改为你的数据集类别数
 
 # Number of outputs
-NUM_OUTPUT=2  # Assuming this is the default number of outputs
+NUM_OUTPUT=1  # Assuming this is the default number of outputs
 
 # Test save path (if none, we just ignore it in this script)
 TEST_SAVE_PATH="None"  # 如果不保存结果，可以保持None
@@ -35,7 +35,7 @@ for MODEL_PATH in $PTH_DIR/*.pth; do
 
   # Call the Python script with the current .pth file
   python -m Test_LA_Part2 \
-    --model_name "SAMV12" \
+    --model_name "VNet_16" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \

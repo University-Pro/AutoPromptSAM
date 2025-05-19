@@ -1,0 +1,1850 @@
+2025-05-19 19:15:41 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:15:41 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:15:41 - INFO - Creating model: VNet_16
+2025-05-19 19:15:42 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_100_checkpoint.pth
+2025-05-19 19:15:42 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_100_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:15:42 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:15:42 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:15:42 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:15:42 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:15:42 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:15:42 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:15:42 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:15:42 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:15:42 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:15:43 - INFO - Image 00 - Dice: 0.04006, Jaccard: 0.02044, HD95: 62.29767, ASD: 3.17610
+2025-05-19 19:15:45 - INFO - Image 01 - Dice: 0.76147, Jaccard: 0.61481, HD95: 18.46619, ASD: 3.05339
+2025-05-19 19:15:47 - INFO - Image 02 - Dice: 0.86277, Jaccard: 0.75865, HD95: 14.21267, ASD: 1.59694
+2025-05-19 19:15:48 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:15:48 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:15:48 - INFO - Creating model: VNet_16
+2025-05-19 19:15:48 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_100_checkpoint.pth
+2025-05-19 19:15:48 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_100_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:15:48 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:15:48 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:15:48 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:15:48 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:15:48 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:15:48 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:15:48 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:15:48 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:15:48 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:15:49 - INFO - Image 03 - Dice: 0.88182, Jaccard: 0.78863, HD95: 9.48683, ASD: 1.47023
+2025-05-19 19:15:50 - INFO - Image 00 - Dice: 0.04006, Jaccard: 0.02044, HD95: 62.29767, ASD: 3.17610
+2025-05-19 19:15:51 - INFO - Image 04 - Dice: 0.87345, Jaccard: 0.77533, HD95: 8.66025, ASD: 2.58039
+2025-05-19 19:15:52 - INFO - Image 01 - Dice: 0.76147, Jaccard: 0.61481, HD95: 18.46619, ASD: 3.05339
+2025-05-19 19:15:53 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:15:54 - INFO - Image 02 - Dice: 0.86277, Jaccard: 0.75865, HD95: 14.21267, ASD: 1.59694
+2025-05-19 19:15:54 - INFO - Image 06 - Dice: 0.91356, Jaccard: 0.84087, HD95: 4.75298, ASD: 1.44899
+2025-05-19 19:15:56 - INFO - Image 03 - Dice: 0.88182, Jaccard: 0.78863, HD95: 9.48683, ASD: 1.47023
+2025-05-19 19:15:56 - INFO - Image 07 - Dice: 0.60796, Jaccard: 0.43674, HD95: 31.04754, ASD: 3.44327
+2025-05-19 19:15:57 - INFO - Image 04 - Dice: 0.87345, Jaccard: 0.77533, HD95: 8.66025, ASD: 2.58039
+2025-05-19 19:15:59 - INFO - Image 08 - Dice: 0.90690, Jaccard: 0.82965, HD95: 6.32456, ASD: 2.58965
+2025-05-19 19:15:59 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:16:00 - INFO - Image 09 - Dice: 0.90909, Jaccard: 0.83333, HD95: 4.47214, ASD: 1.35311
+2025-05-19 19:16:01 - INFO - Image 06 - Dice: 0.91356, Jaccard: 0.84087, HD95: 4.75298, ASD: 1.44899
+2025-05-19 19:16:02 - INFO - Image 10 - Dice: 0.79764, Jaccard: 0.66340, HD95: 13.07670, ASD: 2.93570
+2025-05-19 19:16:03 - INFO - Image 07 - Dice: 0.60796, Jaccard: 0.43674, HD95: 31.04754, ASD: 3.44327
+2025-05-19 19:16:04 - INFO - Image 11 - Dice: 0.87815, Jaccard: 0.78277, HD95: 6.70446, ASD: 1.58489
+2025-05-19 19:16:05 - INFO - Image 08 - Dice: 0.90690, Jaccard: 0.82965, HD95: 6.32456, ASD: 2.58965
+2025-05-19 19:16:05 - INFO - Image 12 - Dice: 0.86134, Jaccard: 0.75644, HD95: 12.00000, ASD: 1.64774
+2025-05-19 19:16:07 - INFO - Image 09 - Dice: 0.90909, Jaccard: 0.83333, HD95: 4.47214, ASD: 1.35311
+2025-05-19 19:16:07 - INFO - Image 13 - Dice: 0.87147, Jaccard: 0.77222, HD95: 6.40312, ASD: 2.15011
+2025-05-19 19:16:08 - INFO - Image 10 - Dice: 0.79764, Jaccard: 0.66340, HD95: 13.07670, ASD: 2.93570
+2025-05-19 19:16:09 - INFO - Image 14 - Dice: 0.89654, Jaccard: 0.81248, HD95: 8.00000, ASD: 1.76626
+2025-05-19 19:16:10 - INFO - Image 11 - Dice: 0.87815, Jaccard: 0.78277, HD95: 6.70446, ASD: 1.58489
+2025-05-19 19:16:10 - INFO - Image 15 - Dice: 0.89204, Jaccard: 0.80512, HD95: 5.91608, ASD: 2.15541
+2025-05-19 19:16:12 - INFO - Image 12 - Dice: 0.86134, Jaccard: 0.75644, HD95: 12.00000, ASD: 1.64774
+2025-05-19 19:16:12 - INFO - Image 16 - Dice: 0.44440, Jaccard: 0.28568, HD95: 28.94823, ASD: 5.44281
+2025-05-19 19:16:13 - INFO - Image 13 - Dice: 0.87147, Jaccard: 0.77222, HD95: 6.40312, ASD: 2.15011
+2025-05-19 19:16:14 - INFO - Image 17 - Dice: 0.86542, Jaccard: 0.76276, HD95: 6.08276, ASD: 1.86095
+2025-05-19 19:16:15 - INFO - Image 14 - Dice: 0.89654, Jaccard: 0.81248, HD95: 8.00000, ASD: 1.76626
+2025-05-19 19:16:16 - INFO - Image 18 - Dice: 0.92365, Jaccard: 0.85813, HD95: 13.17193, ASD: 1.51690
+2025-05-19 19:16:16 - INFO - Image 15 - Dice: 0.89204, Jaccard: 0.80512, HD95: 5.91608, ASD: 2.15541
+2025-05-19 19:16:18 - INFO - Image 16 - Dice: 0.44440, Jaccard: 0.28568, HD95: 28.94823, ASD: 5.44281
+2025-05-19 19:16:19 - INFO - Image 19 - Dice: 0.49722, Jaccard: 0.33086, HD95: 61.98508, ASD: 5.12495
+2025-05-19 19:16:19 - INFO - Average metric (decoder 1): [ 0.73424674  0.63641667 16.10045948  2.34488939]
+2025-05-19 19:16:19 - INFO - Average metric of decoder 1: [ 0.73424674  0.63641667 16.10045948  2.34488939]
+2025-05-19 19:16:19 - INFO - Test results: [ 0.73424674  0.63641667 16.10045948  2.34488939]
+2025-05-19 19:16:20 - INFO - Image 17 - Dice: 0.86542, Jaccard: 0.76276, HD95: 6.08276, ASD: 1.86095
+2025-05-19 19:16:21 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:16:21 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:16:21 - INFO - Creating model: VNet_16
+2025-05-19 19:16:21 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_120_checkpoint.pth
+2025-05-19 19:16:21 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_120_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:16:21 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:16:21 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:16:21 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:16:21 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:16:21 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:16:21 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:16:21 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:16:21 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:16:21 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:16:22 - INFO - Image 18 - Dice: 0.92365, Jaccard: 0.85813, HD95: 13.17193, ASD: 1.51690
+2025-05-19 19:16:23 - INFO - Image 00 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:16:24 - INFO - Image 19 - Dice: 0.49722, Jaccard: 0.33086, HD95: 61.98508, ASD: 5.12495
+2025-05-19 19:16:24 - INFO - Average metric (decoder 1): [ 0.73424674  0.63641667 16.10045948  2.34488939]
+2025-05-19 19:16:24 - INFO - Average metric of decoder 1: [ 0.73424674  0.63641667 16.10045948  2.34488939]
+2025-05-19 19:16:24 - INFO - Test results: [ 0.73424674  0.63641667 16.10045948  2.34488939]
+2025-05-19 19:16:24 - INFO - Image 01 - Dice: 0.53664, Jaccard: 0.36671, HD95: 26.92582, ASD: 5.33514
+2025-05-19 19:16:26 - INFO - Image 02 - Dice: 0.88641, Jaccard: 0.79599, HD95: 9.94987, ASD: 1.54670
+2025-05-19 19:16:27 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:16:27 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:16:27 - INFO - Creating model: VNet_16
+2025-05-19 19:16:27 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_120_checkpoint.pth
+2025-05-19 19:16:27 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_120_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:16:27 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:16:27 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:16:27 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:16:27 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:16:27 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:16:27 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:16:27 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:16:27 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:16:27 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:16:28 - INFO - Image 00 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:16:28 - INFO - Image 03 - Dice: 0.90513, Jaccard: 0.82671, HD95: 5.19615, ASD: 1.31846
+2025-05-19 19:16:30 - INFO - Image 04 - Dice: 0.84870, Jaccard: 0.73716, HD95: 15.16575, ASD: 3.94565
+2025-05-19 19:16:30 - INFO - Image 01 - Dice: 0.53664, Jaccard: 0.36671, HD95: 26.92582, ASD: 5.33514
+2025-05-19 19:16:32 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:16:32 - INFO - Image 02 - Dice: 0.88641, Jaccard: 0.79599, HD95: 9.94987, ASD: 1.54670
+2025-05-19 19:16:33 - INFO - Image 06 - Dice: 0.90610, Jaccard: 0.82832, HD95: 5.09902, ASD: 1.87044
+2025-05-19 19:16:34 - INFO - Image 03 - Dice: 0.90513, Jaccard: 0.82671, HD95: 5.19615, ASD: 1.31846
+2025-05-19 19:16:35 - INFO - Image 07 - Dice: 0.38281, Jaccard: 0.23672, HD95: 39.33192, ASD: 4.89466
+2025-05-19 19:16:36 - INFO - Image 04 - Dice: 0.84870, Jaccard: 0.73716, HD95: 15.16575, ASD: 3.94565
+2025-05-19 19:16:38 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:16:38 - INFO - Image 08 - Dice: 0.87443, Jaccard: 0.77688, HD95: 16.03122, ASD: 4.60739
+2025-05-19 19:16:39 - INFO - Image 06 - Dice: 0.90610, Jaccard: 0.82832, HD95: 5.09902, ASD: 1.87044
+2025-05-19 19:16:40 - INFO - Image 09 - Dice: 0.91824, Jaccard: 0.84884, HD95: 4.24264, ASD: 1.43771
+2025-05-19 19:16:41 - INFO - Image 10 - Dice: 0.64042, Jaccard: 0.47105, HD95: 27.09243, ASD: 3.73766
+2025-05-19 19:16:41 - INFO - Image 07 - Dice: 0.38281, Jaccard: 0.23672, HD95: 39.33192, ASD: 4.89466
+2025-05-19 19:16:43 - INFO - Image 11 - Dice: 0.87424, Jaccard: 0.77657, HD95: 6.78233, ASD: 1.72395
+2025-05-19 19:16:43 - INFO - Image 08 - Dice: 0.87443, Jaccard: 0.77688, HD95: 16.03122, ASD: 4.60739
+2025-05-19 19:16:44 - INFO - Image 12 - Dice: 0.76800, Jaccard: 0.62337, HD95: 21.65641, ASD: 1.78230
+2025-05-19 19:16:45 - INFO - Image 09 - Dice: 0.91824, Jaccard: 0.84884, HD95: 4.24264, ASD: 1.43771
+2025-05-19 19:16:46 - INFO - Image 13 - Dice: 0.88908, Jaccard: 0.80031, HD95: 5.38516, ASD: 1.59800
+2025-05-19 19:16:47 - INFO - Image 10 - Dice: 0.64042, Jaccard: 0.47105, HD95: 27.09243, ASD: 3.73766
+2025-05-19 19:16:48 - INFO - Image 14 - Dice: 0.89434, Jaccard: 0.80888, HD95: 7.07107, ASD: 2.27765
+2025-05-19 19:16:48 - INFO - Image 11 - Dice: 0.87424, Jaccard: 0.77657, HD95: 6.78233, ASD: 1.72395
+2025-05-19 19:16:49 - INFO - Image 15 - Dice: 0.89970, Jaccard: 0.81769, HD95: 6.16441, ASD: 2.45674
+2025-05-19 19:16:50 - INFO - Image 12 - Dice: 0.76800, Jaccard: 0.62337, HD95: 21.65641, ASD: 1.78230
+2025-05-19 19:16:51 - INFO - Image 16 - Dice: 0.64796, Jaccard: 0.47924, HD95: 16.30951, ASD: 5.47968
+2025-05-19 19:16:52 - INFO - Image 13 - Dice: 0.88908, Jaccard: 0.80031, HD95: 5.38516, ASD: 1.59800
+2025-05-19 19:16:53 - INFO - Image 17 - Dice: 0.86166, Jaccard: 0.75695, HD95: 6.55744, ASD: 2.28244
+2025-05-19 19:16:53 - INFO - Image 14 - Dice: 0.89434, Jaccard: 0.80888, HD95: 7.07107, ASD: 2.27765
+2025-05-19 19:16:55 - INFO - Image 15 - Dice: 0.89970, Jaccard: 0.81769, HD95: 6.16441, ASD: 2.45674
+2025-05-19 19:16:55 - INFO - Image 18 - Dice: 0.93686, Jaccard: 0.88122, HD95: 9.31114, ASD: 1.72536
+2025-05-19 19:16:56 - INFO - Image 16 - Dice: 0.64796, Jaccard: 0.47924, HD95: 16.30951, ASD: 5.47968
+2025-05-19 19:16:57 - INFO - Image 19 - Dice: 0.28982, Jaccard: 0.16947, HD95: 55.14526, ASD: 4.12373
+2025-05-19 19:16:57 - INFO - Average metric (decoder 1): [ 0.69802733  0.60010405 14.17087859  2.60718332]
+2025-05-19 19:16:57 - INFO - Average metric of decoder 1: [ 0.69802733  0.60010405 14.17087859  2.60718332]
+2025-05-19 19:16:57 - INFO - Test results: [ 0.69802733  0.60010405 14.17087859  2.60718332]
+2025-05-19 19:16:58 - INFO - Image 17 - Dice: 0.86166, Jaccard: 0.75695, HD95: 6.55744, ASD: 2.28244
+2025-05-19 19:17:00 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:17:00 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:17:00 - INFO - Creating model: VNet_16
+2025-05-19 19:17:00 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_140_checkpoint.pth
+2025-05-19 19:17:00 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_140_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:17:00 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:17:00 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:17:00 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:17:00 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:17:00 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:17:00 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:17:00 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:17:00 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:17:00 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:17:00 - INFO - Image 18 - Dice: 0.93686, Jaccard: 0.88122, HD95: 9.31114, ASD: 1.72536
+2025-05-19 19:17:02 - INFO - Image 00 - Dice: 0.36535, Jaccard: 0.22350, HD95: 34.23449, ASD: 4.93109
+2025-05-19 19:17:03 - INFO - Image 19 - Dice: 0.28982, Jaccard: 0.16947, HD95: 55.14526, ASD: 4.12373
+2025-05-19 19:17:03 - INFO - Average metric (decoder 1): [ 0.69802733  0.60010405 14.17087859  2.60718332]
+2025-05-19 19:17:03 - INFO - Average metric of decoder 1: [ 0.69802733  0.60010405 14.17087859  2.60718332]
+2025-05-19 19:17:03 - INFO - Test results: [ 0.69802733  0.60010405 14.17087859  2.60718332]
+2025-05-19 19:17:04 - INFO - Image 01 - Dice: 0.86739, Jaccard: 0.76583, HD95: 10.77033, ASD: 1.99447
+2025-05-19 19:17:05 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:17:05 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:17:05 - INFO - Creating model: VNet_16
+2025-05-19 19:17:05 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_140_checkpoint.pth
+2025-05-19 19:17:05 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_140_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:17:05 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:17:05 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:17:05 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:17:05 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:17:05 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:17:05 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:17:05 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:17:05 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:17:05 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:17:06 - INFO - Image 02 - Dice: 0.88506, Jaccard: 0.79382, HD95: 10.44031, ASD: 1.33346
+2025-05-19 19:17:07 - INFO - Image 00 - Dice: 0.36535, Jaccard: 0.22350, HD95: 34.23449, ASD: 4.93109
+2025-05-19 19:17:08 - INFO - Image 03 - Dice: 0.85881, Jaccard: 0.75256, HD95: 11.04536, ASD: 1.83779
+2025-05-19 19:17:09 - INFO - Image 01 - Dice: 0.86739, Jaccard: 0.76583, HD95: 10.77033, ASD: 1.99447
+2025-05-19 19:17:09 - INFO - Image 04 - Dice: 0.90445, Jaccard: 0.82557, HD95: 4.24264, ASD: 1.47921
+2025-05-19 19:17:11 - INFO - Image 02 - Dice: 0.88506, Jaccard: 0.79382, HD95: 10.44031, ASD: 1.33346
+2025-05-19 19:17:12 - INFO - Image 05 - Dice: 0.00022, Jaccard: 0.00011, HD95: 136.77701, ASD: 2.77640
+2025-05-19 19:17:13 - INFO - Image 03 - Dice: 0.85881, Jaccard: 0.75256, HD95: 11.04536, ASD: 1.83779
+2025-05-19 19:17:13 - INFO - Image 06 - Dice: 0.93149, Jaccard: 0.87177, HD95: 4.12311, ASD: 1.08993
+2025-05-19 19:17:14 - INFO - Image 04 - Dice: 0.90445, Jaccard: 0.82557, HD95: 4.24264, ASD: 1.47921
+2025-05-19 19:17:15 - INFO - Image 07 - Dice: 0.63462, Jaccard: 0.46479, HD95: 37.10795, ASD: 3.11229
+2025-05-19 19:17:17 - INFO - Image 05 - Dice: 0.00022, Jaccard: 0.00011, HD95: 136.77701, ASD: 2.77640
+2025-05-19 19:17:18 - INFO - Image 08 - Dice: 0.90794, Jaccard: 0.83141, HD95: 6.70820, ASD: 1.70032
+2025-05-19 19:17:18 - INFO - Image 06 - Dice: 0.93149, Jaccard: 0.87177, HD95: 4.12311, ASD: 1.08993
+2025-05-19 19:17:19 - INFO - Image 09 - Dice: 0.90451, Jaccard: 0.82566, HD95: 5.38516, ASD: 1.37270
+2025-05-19 19:17:20 - INFO - Image 07 - Dice: 0.63462, Jaccard: 0.46479, HD95: 37.10795, ASD: 3.11229
+2025-05-19 19:17:21 - INFO - Image 10 - Dice: 0.77737, Jaccard: 0.63582, HD95: 17.72005, ASD: 3.11222
+2025-05-19 19:17:23 - INFO - Image 11 - Dice: 0.87583, Jaccard: 0.77908, HD95: 6.40312, ASD: 1.62306
+2025-05-19 19:17:23 - INFO - Image 08 - Dice: 0.90794, Jaccard: 0.83141, HD95: 6.70820, ASD: 1.70032
+2025-05-19 19:17:24 - INFO - Image 12 - Dice: 0.88072, Jaccard: 0.78686, HD95: 15.55635, ASD: 1.32652
+2025-05-19 19:17:24 - INFO - Image 09 - Dice: 0.90451, Jaccard: 0.82566, HD95: 5.38516, ASD: 1.37270
+2025-05-19 19:17:26 - INFO - Image 10 - Dice: 0.77737, Jaccard: 0.63582, HD95: 17.72005, ASD: 3.11222
+2025-05-19 19:17:26 - INFO - Image 13 - Dice: 0.88051, Jaccard: 0.78653, HD95: 7.81025, ASD: 1.50372
+2025-05-19 19:17:28 - INFO - Image 11 - Dice: 0.87583, Jaccard: 0.77908, HD95: 6.40312, ASD: 1.62306
+2025-05-19 19:17:28 - INFO - Image 14 - Dice: 0.91773, Jaccard: 0.84796, HD95: 6.63325, ASD: 1.18643
+2025-05-19 19:17:29 - INFO - Image 15 - Dice: 0.90191, Jaccard: 0.82134, HD95: 7.00000, ASD: 2.28129
+2025-05-19 19:17:29 - INFO - Image 12 - Dice: 0.88072, Jaccard: 0.78686, HD95: 15.55635, ASD: 1.32652
+2025-05-19 19:17:31 - INFO - Image 16 - Dice: 0.75429, Jaccard: 0.60551, HD95: 15.16575, ASD: 5.34186
+2025-05-19 19:17:31 - INFO - Image 13 - Dice: 0.88051, Jaccard: 0.78653, HD95: 7.81025, ASD: 1.50372
+2025-05-19 19:17:33 - INFO - Image 17 - Dice: 0.87488, Jaccard: 0.77758, HD95: 5.74456, ASD: 1.70427
+2025-05-19 19:17:33 - INFO - Image 14 - Dice: 0.91773, Jaccard: 0.84796, HD95: 6.63325, ASD: 1.18643
+2025-05-19 19:17:34 - INFO - Image 15 - Dice: 0.90191, Jaccard: 0.82134, HD95: 7.00000, ASD: 2.28129
+2025-05-19 19:17:35 - INFO - Image 18 - Dice: 0.92792, Jaccard: 0.86553, HD95: 13.49074, ASD: 1.59955
+2025-05-19 19:17:36 - INFO - Image 16 - Dice: 0.75429, Jaccard: 0.60551, HD95: 15.16575, ASD: 5.34186
+2025-05-19 19:17:37 - INFO - Image 19 - Dice: 0.79070, Jaccard: 0.65384, HD95: 30.30593, ASD: 4.14435
+2025-05-19 19:17:37 - INFO - Average metric (decoder 1): [ 0.79208405  0.6957541  19.33322802  2.27254632]
+2025-05-19 19:17:37 - INFO - Average metric of decoder 1: [ 0.79208405  0.6957541  19.33322802  2.27254632]
+2025-05-19 19:17:37 - INFO - Test results: [ 0.79208405  0.6957541  19.33322802  2.27254632]
+2025-05-19 19:17:38 - INFO - Image 17 - Dice: 0.87488, Jaccard: 0.77758, HD95: 5.74456, ASD: 1.70427
+2025-05-19 19:17:40 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:17:40 - INFO - Image 18 - Dice: 0.92792, Jaccard: 0.86553, HD95: 13.49074, ASD: 1.59955
+2025-05-19 19:17:40 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:17:40 - INFO - Creating model: VNet_16
+2025-05-19 19:17:40 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_160_checkpoint.pth
+2025-05-19 19:17:40 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_160_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:17:40 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:17:40 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:17:40 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:17:40 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:17:40 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:17:40 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:17:40 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:17:40 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:17:40 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:17:42 - INFO - Image 00 - Dice: 0.04566, Jaccard: 0.02336, HD95: 101.32399, ASD: 1.85038
+2025-05-19 19:17:42 - INFO - Image 19 - Dice: 0.79070, Jaccard: 0.65384, HD95: 30.30593, ASD: 4.14435
+2025-05-19 19:17:42 - INFO - Average metric (decoder 1): [ 0.79208405  0.6957541  19.33322802  2.27254632]
+2025-05-19 19:17:42 - INFO - Average metric of decoder 1: [ 0.79208405  0.6957541  19.33322802  2.27254632]
+2025-05-19 19:17:42 - INFO - Test results: [ 0.79208405  0.6957541  19.33322802  2.27254632]
+2025-05-19 19:17:44 - INFO - Image 01 - Dice: 0.80968, Jaccard: 0.68022, HD95: 16.64332, ASD: 2.58660
+2025-05-19 19:17:45 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:17:45 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:17:45 - INFO - Creating model: VNet_16
+2025-05-19 19:17:45 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_160_checkpoint.pth
+2025-05-19 19:17:45 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_160_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:17:45 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:17:45 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:17:45 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:17:45 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:17:45 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:17:45 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:17:45 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:17:45 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:17:45 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:17:46 - INFO - Image 02 - Dice: 0.84800, Jaccard: 0.73611, HD95: 11.35782, ASD: 1.80001
+2025-05-19 19:17:47 - INFO - Image 00 - Dice: 0.04566, Jaccard: 0.02336, HD95: 101.32399, ASD: 1.85038
+2025-05-19 19:17:48 - INFO - Image 03 - Dice: 0.85565, Jaccard: 0.74771, HD95: 9.21954, ASD: 1.69353
+2025-05-19 19:17:48 - INFO - Image 01 - Dice: 0.80968, Jaccard: 0.68022, HD95: 16.64332, ASD: 2.58660
+2025-05-19 19:17:49 - INFO - Image 04 - Dice: 0.83294, Jaccard: 0.71370, HD95: 19.51922, ASD: 2.13633
+2025-05-19 19:17:50 - INFO - Image 02 - Dice: 0.84800, Jaccard: 0.73611, HD95: 11.35782, ASD: 1.80001
+2025-05-19 19:17:52 - INFO - Image 05 - Dice: 0.00196, Jaccard: 0.00098, HD95: 135.55663, ASD: 2.93528
+2025-05-19 19:17:52 - INFO - Image 03 - Dice: 0.85565, Jaccard: 0.74771, HD95: 9.21954, ASD: 1.69353
+2025-05-19 19:17:53 - INFO - Image 06 - Dice: 0.92187, Jaccard: 0.85507, HD95: 5.74456, ASD: 1.37806
+2025-05-19 19:17:54 - INFO - Image 04 - Dice: 0.83294, Jaccard: 0.71370, HD95: 19.51922, ASD: 2.13633
+2025-05-19 19:17:55 - INFO - Image 07 - Dice: 0.31087, Jaccard: 0.18404, HD95: 60.69102, ASD: 5.47431
+2025-05-19 19:17:56 - INFO - Image 05 - Dice: 0.00196, Jaccard: 0.00098, HD95: 135.55663, ASD: 2.93528
+2025-05-19 19:17:58 - INFO - Image 08 - Dice: 0.92038, Jaccard: 0.85251, HD95: 5.00000, ASD: 1.36932
+2025-05-19 19:17:58 - INFO - Image 06 - Dice: 0.92187, Jaccard: 0.85507, HD95: 5.74456, ASD: 1.37806
+2025-05-19 19:17:59 - INFO - Image 09 - Dice: 0.89740, Jaccard: 0.81389, HD95: 5.38516, ASD: 1.33364
+2025-05-19 19:18:00 - INFO - Image 07 - Dice: 0.31087, Jaccard: 0.18404, HD95: 60.69102, ASD: 5.47431
+2025-05-19 19:18:01 - INFO - Image 10 - Dice: 0.84102, Jaccard: 0.72565, HD95: 8.48528, ASD: 2.52091
+2025-05-19 19:18:02 - INFO - Image 08 - Dice: 0.92038, Jaccard: 0.85251, HD95: 5.00000, ASD: 1.36932
+2025-05-19 19:18:03 - INFO - Image 11 - Dice: 0.85957, Jaccard: 0.75372, HD95: 13.74773, ASD: 1.55987
+2025-05-19 19:18:04 - INFO - Image 09 - Dice: 0.89740, Jaccard: 0.81389, HD95: 5.38516, ASD: 1.33364
+2025-05-19 19:18:04 - INFO - Image 12 - Dice: 0.83321, Jaccard: 0.71411, HD95: 17.37815, ASD: 1.72094
+2025-05-19 19:18:06 - INFO - Image 10 - Dice: 0.84102, Jaccard: 0.72565, HD95: 8.48528, ASD: 2.52091
+2025-05-19 19:18:06 - INFO - Image 13 - Dice: 0.83284, Jaccard: 0.71356, HD95: 13.74773, ASD: 1.89758
+2025-05-19 19:18:07 - INFO - Image 11 - Dice: 0.85957, Jaccard: 0.75372, HD95: 13.74773, ASD: 1.55987
+2025-05-19 19:18:08 - INFO - Image 14 - Dice: 0.90338, Jaccard: 0.82378, HD95: 7.28011, ASD: 1.53080
+2025-05-19 19:18:09 - INFO - Image 12 - Dice: 0.83321, Jaccard: 0.71411, HD95: 17.37815, ASD: 1.72094
+2025-05-19 19:18:09 - INFO - Image 15 - Dice: 0.90441, Jaccard: 0.82551, HD95: 5.47723, ASD: 1.83112
+2025-05-19 19:18:11 - INFO - Image 16 - Dice: 0.02801, Jaccard: 0.01420, HD95: 106.72394, ASD: 2.77271
+2025-05-19 19:18:11 - INFO - Image 13 - Dice: 0.83284, Jaccard: 0.71356, HD95: 13.74773, ASD: 1.89758
+2025-05-19 19:18:12 - INFO - Image 14 - Dice: 0.90338, Jaccard: 0.82378, HD95: 7.28011, ASD: 1.53080
+2025-05-19 19:18:13 - INFO - Image 17 - Dice: 0.86185, Jaccard: 0.75724, HD95: 7.07107, ASD: 2.05337
+2025-05-19 19:18:14 - INFO - Image 15 - Dice: 0.90441, Jaccard: 0.82551, HD95: 5.47723, ASD: 1.83112
+2025-05-19 19:18:15 - INFO - Image 18 - Dice: 0.93375, Jaccard: 0.87573, HD95: 14.86607, ASD: 2.08453
+2025-05-19 19:18:15 - INFO - Image 16 - Dice: 0.02801, Jaccard: 0.01420, HD95: 106.72394, ASD: 2.77271
+2025-05-19 19:18:17 - INFO - Image 17 - Dice: 0.86185, Jaccard: 0.75724, HD95: 7.07107, ASD: 2.05337
+2025-05-19 19:18:17 - INFO - Image 19 - Dice: 0.68346, Jaccard: 0.51914, HD95: 42.40283, ASD: 4.80687
+2025-05-19 19:18:17 - INFO - Average metric (decoder 1): [ 0.7062952   0.61651178 30.38106943  2.26680835]
+2025-05-19 19:18:17 - INFO - Average metric of decoder 1: [ 0.7062952   0.61651178 30.38106943  2.26680835]
+2025-05-19 19:18:17 - INFO - Test results: [ 0.7062952   0.61651178 30.38106943  2.26680835]
+2025-05-19 19:18:20 - INFO - Image 18 - Dice: 0.93375, Jaccard: 0.87573, HD95: 14.86607, ASD: 2.08453
+2025-05-19 19:18:20 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:18:20 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:18:20 - INFO - Creating model: VNet_16
+2025-05-19 19:18:20 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_180_checkpoint.pth
+2025-05-19 19:18:20 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_180_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:18:20 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:18:20 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:18:20 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:18:20 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:18:20 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:18:20 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:18:20 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:18:20 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:18:20 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:18:22 - INFO - Image 00 - Dice: 0.02520, Jaccard: 0.01276, HD95: 108.91832, ASD: 2.44050
+2025-05-19 19:18:22 - INFO - Image 19 - Dice: 0.68346, Jaccard: 0.51914, HD95: 42.40283, ASD: 4.80687
+2025-05-19 19:18:22 - INFO - Average metric (decoder 1): [ 0.7062952   0.61651178 30.38106943  2.26680835]
+2025-05-19 19:18:22 - INFO - Average metric of decoder 1: [ 0.7062952   0.61651178 30.38106943  2.26680835]
+2025-05-19 19:18:22 - INFO - Test results: [ 0.7062952   0.61651178 30.38106943  2.26680835]
+2025-05-19 19:18:24 - INFO - Image 01 - Dice: 0.76197, Jaccard: 0.61547, HD95: 18.05547, ASD: 3.06705
+2025-05-19 19:18:24 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:18:24 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:18:24 - INFO - Creating model: VNet_16
+2025-05-19 19:18:24 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_180_checkpoint.pth
+2025-05-19 19:18:25 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_180_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:18:25 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:18:25 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:18:25 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:18:25 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:18:25 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:18:25 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:18:25 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:18:25 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:18:25 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:18:26 - INFO - Image 02 - Dice: 0.89952, Jaccard: 0.81739, HD95: 9.00000, ASD: 1.20407
+2025-05-19 19:18:26 - INFO - Image 00 - Dice: 0.02520, Jaccard: 0.01276, HD95: 108.91832, ASD: 2.44050
+2025-05-19 19:18:28 - INFO - Image 03 - Dice: 0.89857, Jaccard: 0.81583, HD95: 7.48331, ASD: 1.28901
+2025-05-19 19:18:28 - INFO - Image 01 - Dice: 0.76197, Jaccard: 0.61547, HD95: 18.05547, ASD: 3.06705
+2025-05-19 19:18:29 - INFO - Image 04 - Dice: 0.89345, Jaccard: 0.80741, HD95: 4.24264, ASD: 1.53787
+2025-05-19 19:18:30 - INFO - Image 02 - Dice: 0.89952, Jaccard: 0.81739, HD95: 9.00000, ASD: 1.20407
+2025-05-19 19:18:32 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 192.02500, ASD: 31.62444
+2025-05-19 19:18:32 - INFO - Image 03 - Dice: 0.89857, Jaccard: 0.81583, HD95: 7.48331, ASD: 1.28901
+2025-05-19 19:18:33 - INFO - Image 06 - Dice: 0.93518, Jaccard: 0.87825, HD95: 3.00000, ASD: 1.12978
+2025-05-19 19:18:34 - INFO - Image 04 - Dice: 0.89345, Jaccard: 0.80741, HD95: 4.24264, ASD: 1.53787
+2025-05-19 19:18:35 - INFO - Image 07 - Dice: 0.65624, Jaccard: 0.48836, HD95: 28.24712, ASD: 2.61683
+2025-05-19 19:18:36 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 192.02500, ASD: 31.62444
+2025-05-19 19:18:37 - INFO - Image 06 - Dice: 0.93518, Jaccard: 0.87825, HD95: 3.00000, ASD: 1.12978
+2025-05-19 19:18:38 - INFO - Image 08 - Dice: 0.93166, Jaccard: 0.87207, HD95: 4.69042, ASD: 1.28196
+2025-05-19 19:18:39 - INFO - Image 09 - Dice: 0.91315, Jaccard: 0.84018, HD95: 5.91608, ASD: 1.09444
+2025-05-19 19:18:40 - INFO - Image 07 - Dice: 0.65624, Jaccard: 0.48836, HD95: 28.24712, ASD: 2.61683
+2025-05-19 19:18:41 - INFO - Image 10 - Dice: 0.82526, Jaccard: 0.70250, HD95: 18.49324, ASD: 2.03956
+2025-05-19 19:18:42 - INFO - Image 08 - Dice: 0.93166, Jaccard: 0.87207, HD95: 4.69042, ASD: 1.28196
+2025-05-19 19:18:43 - INFO - Image 11 - Dice: 0.86918, Jaccard: 0.76863, HD95: 12.88410, ASD: 1.51870
+2025-05-19 19:18:44 - INFO - Image 09 - Dice: 0.91315, Jaccard: 0.84018, HD95: 5.91608, ASD: 1.09444
+2025-05-19 19:18:44 - INFO - Image 12 - Dice: 0.82710, Jaccard: 0.70518, HD95: 14.86607, ASD: 1.72281
+2025-05-19 19:18:45 - INFO - Image 10 - Dice: 0.82526, Jaccard: 0.70250, HD95: 18.49324, ASD: 2.03956
+2025-05-19 19:18:46 - INFO - Image 13 - Dice: 0.86022, Jaccard: 0.75473, HD95: 10.72381, ASD: 1.68695
+2025-05-19 19:18:47 - INFO - Image 11 - Dice: 0.86918, Jaccard: 0.76863, HD95: 12.88410, ASD: 1.51870
+2025-05-19 19:18:48 - INFO - Image 14 - Dice: 0.92512, Jaccard: 0.86068, HD95: 5.14759, ASD: 1.18442
+2025-05-19 19:18:48 - INFO - Image 12 - Dice: 0.82710, Jaccard: 0.70518, HD95: 14.86607, ASD: 1.72281
+2025-05-19 19:18:49 - INFO - Image 15 - Dice: 0.91653, Jaccard: 0.84592, HD95: 4.47214, ASD: 1.63276
+2025-05-19 19:18:50 - INFO - Image 13 - Dice: 0.86022, Jaccard: 0.75473, HD95: 10.72381, ASD: 1.68695
+2025-05-19 19:18:51 - INFO - Image 16 - Dice: 0.51384, Jaccard: 0.34575, HD95: 17.49286, ASD: 6.82905
+2025-05-19 19:18:52 - INFO - Image 14 - Dice: 0.92512, Jaccard: 0.86068, HD95: 5.14759, ASD: 1.18442
+2025-05-19 19:18:52 - INFO - Image 17 - Dice: 0.87989, Jaccard: 0.78554, HD95: 7.00000, ASD: 1.89076
+2025-05-19 19:18:53 - INFO - Image 15 - Dice: 0.91653, Jaccard: 0.84592, HD95: 4.47214, ASD: 1.63276
+2025-05-19 19:18:55 - INFO - Image 16 - Dice: 0.51384, Jaccard: 0.34575, HD95: 17.49286, ASD: 6.82905
+2025-05-19 19:18:55 - INFO - Image 18 - Dice: 0.93617, Jaccard: 0.87999, HD95: 12.12436, ASD: 1.87301
+2025-05-19 19:18:57 - INFO - Image 17 - Dice: 0.87989, Jaccard: 0.78554, HD95: 7.00000, ASD: 1.89076
+2025-05-19 19:18:57 - INFO - Image 19 - Dice: 0.73750, Jaccard: 0.58415, HD95: 35.37796, ASD: 3.85052
+2025-05-19 19:18:57 - INFO - Average metric (decoder 1): [ 0.76028709  0.66903892 26.00802336  3.57572518]
+2025-05-19 19:18:57 - INFO - Average metric of decoder 1: [ 0.76028709  0.66903892 26.00802336  3.57572518]
+2025-05-19 19:18:57 - INFO - Test results: [ 0.76028709  0.66903892 26.00802336  3.57572518]
+2025-05-19 19:18:59 - INFO - Image 18 - Dice: 0.93617, Jaccard: 0.87999, HD95: 12.12436, ASD: 1.87301
+2025-05-19 19:19:00 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:19:00 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:19:00 - INFO - Creating model: VNet_16
+2025-05-19 19:19:00 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_200_checkpoint.pth
+2025-05-19 19:19:00 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_200_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:19:00 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:19:00 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:19:00 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:19:00 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:19:00 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:19:00 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:19:00 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:19:00 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:19:00 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:19:01 - INFO - Image 19 - Dice: 0.73750, Jaccard: 0.58415, HD95: 35.37796, ASD: 3.85052
+2025-05-19 19:19:01 - INFO - Average metric (decoder 1): [ 0.76028709  0.66903892 26.00802336  3.57572518]
+2025-05-19 19:19:01 - INFO - Average metric of decoder 1: [ 0.76028709  0.66903892 26.00802336  3.57572518]
+2025-05-19 19:19:01 - INFO - Test results: [ 0.76028709  0.66903892 26.00802336  3.57572518]
+2025-05-19 19:19:02 - INFO - Image 00 - Dice: 0.16718, Jaccard: 0.09122, HD95: 46.41121, ASD: 3.12013
+2025-05-19 19:19:04 - INFO - Image 01 - Dice: 0.79719, Jaccard: 0.66278, HD95: 15.74802, ASD: 2.73791
+2025-05-19 19:19:04 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:19:04 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:19:04 - INFO - Creating model: VNet_16
+2025-05-19 19:19:04 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_200_checkpoint.pth
+2025-05-19 19:19:04 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_200_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:19:04 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:19:04 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:19:04 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:19:04 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:19:04 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:19:04 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:19:04 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:19:04 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:19:04 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:19:06 - INFO - Image 02 - Dice: 0.90327, Jaccard: 0.82360, HD95: 9.27362, ASD: 1.13591
+2025-05-19 19:19:06 - INFO - Image 00 - Dice: 0.16718, Jaccard: 0.09122, HD95: 46.41121, ASD: 3.12013
+2025-05-19 19:19:08 - INFO - Image 01 - Dice: 0.79719, Jaccard: 0.66278, HD95: 15.74802, ASD: 2.73791
+2025-05-19 19:19:08 - INFO - Image 03 - Dice: 0.90690, Jaccard: 0.82966, HD95: 5.38516, ASD: 1.29671
+2025-05-19 19:19:09 - INFO - Image 04 - Dice: 0.89859, Jaccard: 0.81585, HD95: 4.58258, ASD: 1.61383
+2025-05-19 19:19:10 - INFO - Image 02 - Dice: 0.90327, Jaccard: 0.82360, HD95: 9.27362, ASD: 1.13591
+2025-05-19 19:19:11 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:12 - INFO - Image 03 - Dice: 0.90690, Jaccard: 0.82966, HD95: 5.38516, ASD: 1.29671
+2025-05-19 19:19:13 - INFO - Image 06 - Dice: 0.91757, Jaccard: 0.84770, HD95: 4.12311, ASD: 1.39903
+2025-05-19 19:19:13 - INFO - Image 04 - Dice: 0.89859, Jaccard: 0.81585, HD95: 4.58258, ASD: 1.61383
+2025-05-19 19:19:15 - INFO - Image 07 - Dice: 0.68016, Jaccard: 0.51533, HD95: 24.51530, ASD: 2.87714
+2025-05-19 19:19:15 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:17 - INFO - Image 06 - Dice: 0.91757, Jaccard: 0.84770, HD95: 4.12311, ASD: 1.39903
+2025-05-19 19:19:17 - INFO - Image 08 - Dice: 0.92028, Jaccard: 0.85234, HD95: 5.38516, ASD: 1.80134
+2025-05-19 19:19:19 - INFO - Image 07 - Dice: 0.68016, Jaccard: 0.51533, HD95: 24.51530, ASD: 2.87714
+2025-05-19 19:19:19 - INFO - Image 09 - Dice: 0.91338, Jaccard: 0.84056, HD95: 6.70820, ASD: 1.11494
+2025-05-19 19:19:20 - INFO - Image 10 - Dice: 0.81088, Jaccard: 0.68192, HD95: 11.18034, ASD: 2.80746
+2025-05-19 19:19:21 - INFO - Image 08 - Dice: 0.92028, Jaccard: 0.85234, HD95: 5.38516, ASD: 1.80134
+2025-05-19 19:19:22 - INFO - Image 11 - Dice: 0.88068, Jaccard: 0.78680, HD95: 11.20266, ASD: 1.46402
+2025-05-19 19:19:23 - INFO - Image 09 - Dice: 0.91338, Jaccard: 0.84056, HD95: 6.70820, ASD: 1.11494
+2025-05-19 19:19:24 - INFO - Image 12 - Dice: 0.87166, Jaccard: 0.77252, HD95: 11.44552, ASD: 1.47647
+2025-05-19 19:19:24 - INFO - Image 10 - Dice: 0.81088, Jaccard: 0.68192, HD95: 11.18034, ASD: 2.80746
+2025-05-19 19:19:26 - INFO - Image 13 - Dice: 0.91326, Jaccard: 0.84037, HD95: 4.00000, ASD: 1.10957
+2025-05-19 19:19:26 - INFO - Image 11 - Dice: 0.88068, Jaccard: 0.78680, HD95: 11.20266, ASD: 1.46402
+2025-05-19 19:19:27 - INFO - Image 14 - Dice: 0.91924, Jaccard: 0.85055, HD95: 5.38516, ASD: 1.29343
+2025-05-19 19:19:28 - INFO - Image 12 - Dice: 0.87166, Jaccard: 0.77252, HD95: 11.44552, ASD: 1.47647
+2025-05-19 19:19:29 - INFO - Image 15 - Dice: 0.90583, Jaccard: 0.82786, HD95: 5.09902, ASD: 1.96929
+2025-05-19 19:19:29 - INFO - Image 13 - Dice: 0.91326, Jaccard: 0.84037, HD95: 4.00000, ASD: 1.10957
+2025-05-19 19:19:30 - INFO - Image 16 - Dice: 0.60184, Jaccard: 0.43045, HD95: 16.91153, ASD: 5.59521
+2025-05-19 19:19:31 - INFO - Image 14 - Dice: 0.91924, Jaccard: 0.85055, HD95: 5.38516, ASD: 1.29343
+2025-05-19 19:19:32 - INFO - Image 17 - Dice: 0.88280, Jaccard: 0.79018, HD95: 5.38516, ASD: 1.75766
+2025-05-19 19:19:33 - INFO - Image 15 - Dice: 0.90583, Jaccard: 0.82786, HD95: 5.09902, ASD: 1.96929
+2025-05-19 19:19:34 - INFO - Image 16 - Dice: 0.60184, Jaccard: 0.43045, HD95: 16.91153, ASD: 5.59521
+2025-05-19 19:19:34 - INFO - Image 18 - Dice: 0.93228, Jaccard: 0.87316, HD95: 12.36932, ASD: 1.78249
+2025-05-19 19:19:36 - INFO - Image 17 - Dice: 0.88280, Jaccard: 0.79018, HD95: 5.38516, ASD: 1.75766
+2025-05-19 19:19:37 - INFO - Image 19 - Dice: 0.72516, Jaccard: 0.56883, HD95: 36.20773, ASD: 4.44382
+2025-05-19 19:19:37 - INFO - Average metric (decoder 1): [ 0.77740769  0.68508342 12.06594035  2.03981774]
+2025-05-19 19:19:37 - INFO - Average metric of decoder 1: [ 0.77740769  0.68508342 12.06594035  2.03981774]
+2025-05-19 19:19:37 - INFO - Test results: [ 0.77740769  0.68508342 12.06594035  2.03981774]
+2025-05-19 19:19:38 - INFO - Image 18 - Dice: 0.93228, Jaccard: 0.87316, HD95: 12.36932, ASD: 1.78249
+2025-05-19 19:19:39 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:19:39 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:19:39 - INFO - Creating model: VNet_16
+2025-05-19 19:19:39 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_20_checkpoint.pth
+2025-05-19 19:19:39 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_20_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:19:39 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:19:39 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:19:39 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:19:39 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:19:39 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:19:39 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:19:39 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:19:39 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:19:39 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:19:41 - INFO - Image 19 - Dice: 0.72516, Jaccard: 0.56883, HD95: 36.20773, ASD: 4.44382
+2025-05-19 19:19:41 - INFO - Average metric (decoder 1): [ 0.77740769  0.68508342 12.06594035  2.03981774]
+2025-05-19 19:19:41 - INFO - Average metric of decoder 1: [ 0.77740769  0.68508342 12.06594035  2.03981774]
+2025-05-19 19:19:41 - INFO - Test results: [ 0.77740769  0.68508342 12.06594035  2.03981774]
+2025-05-19 19:19:41 - INFO - Image 00 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:42 - INFO - Image 01 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:43 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:19:43 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:19:43 - INFO - Creating model: VNet_16
+2025-05-19 19:19:43 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_20_checkpoint.pth
+2025-05-19 19:19:43 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_20_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:19:43 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:19:43 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:19:43 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:19:43 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:19:43 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:19:43 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:19:43 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:19:43 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:19:43 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:19:44 - INFO - Image 02 - Dice: 0.00000, Jaccard: 0.00000, HD95: 140.21287, ASD: 48.05208
+2025-05-19 19:19:45 - INFO - Image 00 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:46 - INFO - Image 01 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:46 - INFO - Image 03 - Dice: 0.00000, Jaccard: 0.00000, HD95: 95.43584, ASD: 20.32658
+2025-05-19 19:19:47 - INFO - Image 04 - Dice: 0.00000, Jaccard: 0.00000, HD95: 104.11004, ASD: 53.47605
+2025-05-19 19:19:48 - INFO - Image 02 - Dice: 0.00000, Jaccard: 0.00000, HD95: 140.21287, ASD: 48.05208
+2025-05-19 19:19:50 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:50 - INFO - Image 03 - Dice: 0.00000, Jaccard: 0.00000, HD95: 95.43584, ASD: 20.32658
+2025-05-19 19:19:51 - INFO - Image 06 - Dice: 0.65855, Jaccard: 0.49093, HD95: 41.62932, ASD: 17.48424
+2025-05-19 19:19:51 - INFO - Image 04 - Dice: 0.00000, Jaccard: 0.00000, HD95: 104.11004, ASD: 53.47605
+2025-05-19 19:19:53 - INFO - Image 07 - Dice: 0.00000, Jaccard: 0.00000, HD95: 127.45941, ASD: 18.53363
+2025-05-19 19:19:53 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:55 - INFO - Image 06 - Dice: 0.65855, Jaccard: 0.49093, HD95: 41.62932, ASD: 17.48424
+2025-05-19 19:19:55 - INFO - Image 08 - Dice: 0.69742, Jaccard: 0.53542, HD95: 25.72936, ASD: 8.55677
+2025-05-19 19:19:57 - INFO - Image 07 - Dice: 0.00000, Jaccard: 0.00000, HD95: 127.45941, ASD: 18.53363
+2025-05-19 19:19:57 - INFO - Image 09 - Dice: 0.46371, Jaccard: 0.30184, HD95: 43.22037, ASD: 7.18376
+2025-05-19 19:19:58 - INFO - Image 10 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:19:59 - INFO - Image 08 - Dice: 0.69742, Jaccard: 0.53542, HD95: 25.72936, ASD: 8.55677
+2025-05-19 19:20:00 - INFO - Image 11 - Dice: 0.59513, Jaccard: 0.42362, HD95: 32.54305, ASD: 4.49763
+2025-05-19 19:20:01 - INFO - Image 09 - Dice: 0.46371, Jaccard: 0.30184, HD95: 43.22037, ASD: 7.18376
+2025-05-19 19:20:02 - INFO - Image 12 - Dice: 0.02492, Jaccard: 0.01262, HD95: 70.74602, ASD: 11.73671
+2025-05-19 19:20:02 - INFO - Image 10 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:20:03 - INFO - Image 13 - Dice: 0.00000, Jaccard: 0.00000, HD95: 145.70518, ASD: 52.05499
+2025-05-19 19:20:04 - INFO - Image 11 - Dice: 0.59513, Jaccard: 0.42362, HD95: 32.54305, ASD: 4.49763
+2025-05-19 19:20:05 - INFO - Image 14 - Dice: 0.55937, Jaccard: 0.38828, HD95: 37.85499, ASD: 17.51766
+2025-05-19 19:20:05 - INFO - Image 12 - Dice: 0.02492, Jaccard: 0.01262, HD95: 70.74602, ASD: 11.73671
+2025-05-19 19:20:07 - INFO - Image 15 - Dice: 0.00000, Jaccard: 0.00000, HD95: 133.13151, ASD: 56.18749
+2025-05-19 19:20:07 - INFO - Image 13 - Dice: 0.00000, Jaccard: 0.00000, HD95: 145.70518, ASD: 52.05499
+2025-05-19 19:20:08 - INFO - Image 16 - Dice: 0.00000, Jaccard: 0.00000, HD95: 142.39382, ASD: 49.29787
+2025-05-19 19:20:09 - INFO - Image 14 - Dice: 0.55937, Jaccard: 0.38828, HD95: 37.85499, ASD: 17.51766
+2025-05-19 19:20:10 - INFO - Image 17 - Dice: 0.46541, Jaccard: 0.30328, HD95: 42.04997, ASD: 4.88278
+2025-05-19 19:20:10 - INFO - Image 15 - Dice: 0.00000, Jaccard: 0.00000, HD95: 133.13151, ASD: 56.18749
+2025-05-19 19:20:12 - INFO - Image 16 - Dice: 0.00000, Jaccard: 0.00000, HD95: 142.39382, ASD: 49.29787
+2025-05-19 19:20:12 - INFO - Image 18 - Dice: 0.82344, Jaccard: 0.69987, HD95: 23.53614, ASD: 3.44039
+2025-05-19 19:20:13 - INFO - Image 17 - Dice: 0.46541, Jaccard: 0.30328, HD95: 42.04997, ASD: 4.88278
+2025-05-19 19:20:14 - INFO - Image 19 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:20:14 - INFO - Average metric (decoder 1): [ 0.21439782  0.1577925  60.28789445 18.66143147]
+2025-05-19 19:20:14 - INFO - Average metric of decoder 1: [ 0.21439782  0.1577925  60.28789445 18.66143147]
+2025-05-19 19:20:14 - INFO - Test results: [ 0.21439782  0.1577925  60.28789445 18.66143147]
+2025-05-19 19:20:16 - INFO - Image 18 - Dice: 0.82344, Jaccard: 0.69987, HD95: 23.53614, ASD: 3.44039
+2025-05-19 19:20:17 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:20:17 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:20:17 - INFO - Creating model: VNet_16
+2025-05-19 19:20:17 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_220_checkpoint.pth
+2025-05-19 19:20:17 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_220_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:20:17 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:20:17 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:20:17 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:20:17 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:20:17 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:20:17 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:20:17 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:20:17 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:20:17 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:20:17 - INFO - Image 19 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:20:17 - INFO - Average metric (decoder 1): [ 0.21439782  0.1577925  60.28789445 18.66143147]
+2025-05-19 19:20:17 - INFO - Average metric of decoder 1: [ 0.21439782  0.1577925  60.28789445 18.66143147]
+2025-05-19 19:20:17 - INFO - Test results: [ 0.21439782  0.1577925  60.28789445 18.66143147]
+2025-05-19 19:20:18 - INFO - Image 00 - Dice: 0.07116, Jaccard: 0.03689, HD95: 61.04097, ASD: 2.18125
+2025-05-19 19:20:20 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:20:20 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:20:20 - INFO - Creating model: VNet_16
+2025-05-19 19:20:20 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_220_checkpoint.pth
+2025-05-19 19:20:20 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_220_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:20:20 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:20:20 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:20:20 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:20:20 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:20:20 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:20:20 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:20:20 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:20:20 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:20:20 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:20:20 - INFO - Image 01 - Dice: 0.86477, Jaccard: 0.76176, HD95: 17.02939, ASD: 1.80862
+2025-05-19 19:20:22 - INFO - Image 00 - Dice: 0.07116, Jaccard: 0.03689, HD95: 61.04097, ASD: 2.18125
+2025-05-19 19:20:22 - INFO - Image 02 - Dice: 0.89467, Jaccard: 0.80941, HD95: 9.43398, ASD: 1.25301
+2025-05-19 19:20:24 - INFO - Image 01 - Dice: 0.86477, Jaccard: 0.76176, HD95: 17.02939, ASD: 1.80862
+2025-05-19 19:20:24 - INFO - Image 03 - Dice: 0.90090, Jaccard: 0.81967, HD95: 7.81025, ASD: 1.32910
+2025-05-19 19:20:26 - INFO - Image 02 - Dice: 0.89467, Jaccard: 0.80941, HD95: 9.43398, ASD: 1.25301
+2025-05-19 19:20:26 - INFO - Image 04 - Dice: 0.90150, Jaccard: 0.82067, HD95: 5.48621, ASD: 1.75059
+2025-05-19 19:20:28 - INFO - Image 03 - Dice: 0.90090, Jaccard: 0.81967, HD95: 7.81025, ASD: 1.32910
+2025-05-19 19:20:28 - INFO - Image 05 - Dice: 0.00215, Jaccard: 0.00108, HD95: 137.58670, ASD: 2.05715
+2025-05-19 19:20:29 - INFO - Image 04 - Dice: 0.90150, Jaccard: 0.82067, HD95: 5.48621, ASD: 1.75059
+2025-05-19 19:20:30 - INFO - Image 06 - Dice: 0.93762, Jaccard: 0.88257, HD95: 3.00000, ASD: 1.16825
+2025-05-19 19:20:32 - INFO - Image 05 - Dice: 0.00215, Jaccard: 0.00108, HD95: 137.58670, ASD: 2.05715
+2025-05-19 19:20:32 - INFO - Image 07 - Dice: 0.72210, Jaccard: 0.56507, HD95: 28.67054, ASD: 2.61757
+2025-05-19 19:20:33 - INFO - Image 06 - Dice: 0.93762, Jaccard: 0.88257, HD95: 3.00000, ASD: 1.16825
+2025-05-19 19:20:34 - INFO - Image 08 - Dice: 0.93208, Jaccard: 0.87280, HD95: 4.12311, ASD: 1.23063
+2025-05-19 19:20:35 - INFO - Image 07 - Dice: 0.72210, Jaccard: 0.56507, HD95: 28.67054, ASD: 2.61757
+2025-05-19 19:20:36 - INFO - Image 09 - Dice: 0.90838, Jaccard: 0.83215, HD95: 6.78233, ASD: 1.15306
+2025-05-19 19:20:38 - INFO - Image 10 - Dice: 0.83400, Jaccard: 0.71527, HD95: 14.31782, ASD: 2.34534
+2025-05-19 19:20:38 - INFO - Image 08 - Dice: 0.93208, Jaccard: 0.87280, HD95: 4.12311, ASD: 1.23063
+2025-05-19 19:20:39 - INFO - Image 11 - Dice: 0.86909, Jaccard: 0.76849, HD95: 12.87244, ASD: 1.48202
+2025-05-19 19:20:39 - INFO - Image 09 - Dice: 0.90838, Jaccard: 0.83215, HD95: 6.78233, ASD: 1.15306
+2025-05-19 19:20:41 - INFO - Image 10 - Dice: 0.83400, Jaccard: 0.71527, HD95: 14.31782, ASD: 2.34534
+2025-05-19 19:20:41 - INFO - Image 12 - Dice: 0.88128, Jaccard: 0.78776, HD95: 12.88410, ASD: 1.39189
+2025-05-19 19:20:43 - INFO - Image 11 - Dice: 0.86909, Jaccard: 0.76849, HD95: 12.87244, ASD: 1.48202
+2025-05-19 19:20:43 - INFO - Image 13 - Dice: 0.87632, Jaccard: 0.77987, HD95: 10.04988, ASD: 1.43757
+2025-05-19 19:20:44 - INFO - Image 14 - Dice: 0.92444, Jaccard: 0.85950, HD95: 5.38516, ASD: 1.14057
+2025-05-19 19:20:44 - INFO - Image 12 - Dice: 0.88128, Jaccard: 0.78776, HD95: 12.88410, ASD: 1.39189
+2025-05-19 19:20:46 - INFO - Image 15 - Dice: 0.91121, Jaccard: 0.83691, HD95: 5.00000, ASD: 2.08038
+2025-05-19 19:20:46 - INFO - Image 13 - Dice: 0.87632, Jaccard: 0.77987, HD95: 10.04988, ASD: 1.43757
+2025-05-19 19:20:48 - INFO - Image 16 - Dice: 0.46545, Jaccard: 0.30331, HD95: 19.94994, ASD: 6.44736
+2025-05-19 19:20:48 - INFO - Image 14 - Dice: 0.92444, Jaccard: 0.85950, HD95: 5.38516, ASD: 1.14057
+2025-05-19 19:20:49 - INFO - Image 15 - Dice: 0.91121, Jaccard: 0.83691, HD95: 5.00000, ASD: 2.08038
+2025-05-19 19:20:49 - INFO - Image 17 - Dice: 0.88113, Jaccard: 0.78752, HD95: 6.08276, ASD: 1.75736
+2025-05-19 19:20:51 - INFO - Image 16 - Dice: 0.46545, Jaccard: 0.30331, HD95: 19.94994, ASD: 6.44736
+2025-05-19 19:20:52 - INFO - Image 18 - Dice: 0.93306, Jaccard: 0.87451, HD95: 14.76482, ASD: 2.15401
+2025-05-19 19:20:53 - INFO - Image 17 - Dice: 0.88113, Jaccard: 0.78752, HD95: 6.08276, ASD: 1.75736
+2025-05-19 19:20:54 - INFO - Image 19 - Dice: 0.78025, Jaccard: 0.63968, HD95: 37.38783, ASD: 3.38097
+2025-05-19 19:20:54 - INFO - Average metric (decoder 1): [ 0.77457877  0.68774403 20.98291128  2.00833478]
+2025-05-19 19:20:54 - INFO - Average metric of decoder 1: [ 0.77457877  0.68774403 20.98291128  2.00833478]
+2025-05-19 19:20:54 - INFO - Test results: [ 0.77457877  0.68774403 20.98291128  2.00833478]
+2025-05-19 19:20:55 - INFO - Image 18 - Dice: 0.93306, Jaccard: 0.87451, HD95: 14.76482, ASD: 2.15401
+2025-05-19 19:20:57 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:20:57 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:20:57 - INFO - Creating model: VNet_16
+2025-05-19 19:20:57 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_240_checkpoint.pth
+2025-05-19 19:20:57 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_240_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:20:57 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:20:57 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:20:57 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:20:57 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:20:57 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:20:57 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:20:57 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:20:57 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:20:57 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:20:57 - INFO - Image 19 - Dice: 0.78025, Jaccard: 0.63968, HD95: 37.38783, ASD: 3.38097
+2025-05-19 19:20:57 - INFO - Average metric (decoder 1): [ 0.77457877  0.68774403 20.98291128  2.00833478]
+2025-05-19 19:20:57 - INFO - Average metric of decoder 1: [ 0.77457877  0.68774403 20.98291128  2.00833478]
+2025-05-19 19:20:57 - INFO - Test results: [ 0.77457877  0.68774403 20.98291128  2.00833478]
+2025-05-19 19:20:59 - INFO - Image 00 - Dice: 0.77100, Jaccard: 0.62734, HD95: 15.52417, ASD: 4.47582
+2025-05-19 19:21:00 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:21:00 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:21:00 - INFO - Creating model: VNet_16
+2025-05-19 19:21:00 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_240_checkpoint.pth
+2025-05-19 19:21:00 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_240_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:21:00 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:21:00 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:21:00 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:21:00 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:21:00 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:21:00 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:21:00 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:21:00 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:21:00 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:21:00 - INFO - Image 01 - Dice: 0.88917, Jaccard: 0.80045, HD95: 11.74734, ASD: 1.67601
+2025-05-19 19:21:02 - INFO - Image 00 - Dice: 0.77100, Jaccard: 0.62734, HD95: 15.52417, ASD: 4.47582
+2025-05-19 19:21:03 - INFO - Image 02 - Dice: 0.92378, Jaccard: 0.85835, HD95: 4.58258, ASD: 1.14910
+2025-05-19 19:21:03 - INFO - Image 01 - Dice: 0.88917, Jaccard: 0.80045, HD95: 11.74734, ASD: 1.67601
+2025-05-19 19:21:05 - INFO - Image 03 - Dice: 0.90589, Jaccard: 0.82797, HD95: 5.00000, ASD: 1.45667
+2025-05-19 19:21:06 - INFO - Image 02 - Dice: 0.92378, Jaccard: 0.85835, HD95: 4.58258, ASD: 1.14910
+2025-05-19 19:21:06 - INFO - Image 04 - Dice: 0.90989, Jaccard: 0.83467, HD95: 4.12311, ASD: 1.53606
+2025-05-19 19:21:08 - INFO - Image 03 - Dice: 0.90589, Jaccard: 0.82797, HD95: 5.00000, ASD: 1.45667
+2025-05-19 19:21:09 - INFO - Image 05 - Dice: 0.73622, Jaccard: 0.58255, HD95: 24.98799, ASD: 4.03629
+2025-05-19 19:21:09 - INFO - Image 04 - Dice: 0.90989, Jaccard: 0.83467, HD95: 4.12311, ASD: 1.53606
+2025-05-19 19:21:10 - INFO - Image 06 - Dice: 0.93168, Jaccard: 0.87209, HD95: 3.00000, ASD: 1.19750
+2025-05-19 19:21:12 - INFO - Image 05 - Dice: 0.73622, Jaccard: 0.58255, HD95: 24.98799, ASD: 4.03629
+2025-05-19 19:21:12 - INFO - Image 07 - Dice: 0.76843, Jaccard: 0.62395, HD95: 23.11925, ASD: 2.61010
+2025-05-19 19:21:13 - INFO - Image 06 - Dice: 0.93168, Jaccard: 0.87209, HD95: 3.00000, ASD: 1.19750
+2025-05-19 19:21:15 - INFO - Image 08 - Dice: 0.91237, Jaccard: 0.83887, HD95: 6.32456, ASD: 1.74282
+2025-05-19 19:21:15 - INFO - Image 07 - Dice: 0.76843, Jaccard: 0.62395, HD95: 23.11925, ASD: 2.61010
+2025-05-19 19:21:16 - INFO - Image 09 - Dice: 0.91279, Jaccard: 0.83958, HD95: 4.58258, ASD: 1.33808
+2025-05-19 19:21:17 - INFO - Image 08 - Dice: 0.91237, Jaccard: 0.83887, HD95: 6.32456, ASD: 1.74282
+2025-05-19 19:21:18 - INFO - Image 10 - Dice: 0.79418, Jaccard: 0.65862, HD95: 13.26650, ASD: 3.86864
+2025-05-19 19:21:19 - INFO - Image 09 - Dice: 0.91279, Jaccard: 0.83958, HD95: 4.58258, ASD: 1.33808
+2025-05-19 19:21:20 - INFO - Image 11 - Dice: 0.87755, Jaccard: 0.78181, HD95: 5.91608, ASD: 1.66667
+2025-05-19 19:21:21 - INFO - Image 10 - Dice: 0.79418, Jaccard: 0.65862, HD95: 13.26650, ASD: 3.86864
+2025-05-19 19:21:21 - INFO - Image 12 - Dice: 0.88716, Jaccard: 0.79720, HD95: 10.51650, ASD: 1.35121
+2025-05-19 19:21:22 - INFO - Image 11 - Dice: 0.87755, Jaccard: 0.78181, HD95: 5.91608, ASD: 1.66667
+2025-05-19 19:21:23 - INFO - Image 13 - Dice: 0.90994, Jaccard: 0.83476, HD95: 5.00000, ASD: 1.31688
+2025-05-19 19:21:24 - INFO - Image 12 - Dice: 0.88716, Jaccard: 0.79720, HD95: 10.51650, ASD: 1.35121
+2025-05-19 19:21:25 - INFO - Image 14 - Dice: 0.93327, Jaccard: 0.87490, HD95: 4.12311, ASD: 1.02303
+2025-05-19 19:21:26 - INFO - Image 13 - Dice: 0.90994, Jaccard: 0.83476, HD95: 5.00000, ASD: 1.31688
+2025-05-19 19:21:26 - INFO - Image 15 - Dice: 0.90750, Jaccard: 0.83066, HD95: 5.38516, ASD: 1.80632
+2025-05-19 19:21:27 - INFO - Image 14 - Dice: 0.93327, Jaccard: 0.87490, HD95: 4.12311, ASD: 1.02303
+2025-05-19 19:21:28 - INFO - Image 16 - Dice: 0.80816, Jaccard: 0.67808, HD95: 14.45683, ASD: 4.13467
+2025-05-19 19:21:29 - INFO - Image 15 - Dice: 0.90750, Jaccard: 0.83066, HD95: 5.38516, ASD: 1.80632
+2025-05-19 19:21:30 - INFO - Image 17 - Dice: 0.87673, Jaccard: 0.78052, HD95: 5.38516, ASD: 1.76445
+2025-05-19 19:21:31 - INFO - Image 16 - Dice: 0.80816, Jaccard: 0.67808, HD95: 14.45683, ASD: 4.13467
+2025-05-19 19:21:32 - INFO - Image 18 - Dice: 0.92650, Jaccard: 0.86307, HD95: 10.44031, ASD: 1.82473
+2025-05-19 19:21:32 - INFO - Image 17 - Dice: 0.87673, Jaccard: 0.78052, HD95: 5.38516, ASD: 1.76445
+2025-05-19 19:21:35 - INFO - Image 19 - Dice: 0.83090, Jaccard: 0.71072, HD95: 23.02173, ASD: 3.95798
+2025-05-19 19:21:35 - INFO - Average metric (decoder 1): [ 0.87065558  0.77580803 10.02514715  2.19665077]
+2025-05-19 19:21:35 - INFO - Average metric of decoder 1: [ 0.87065558  0.77580803 10.02514715  2.19665077]
+2025-05-19 19:21:35 - INFO - Test results: [ 0.87065558  0.77580803 10.02514715  2.19665077]
+2025-05-19 19:21:35 - INFO - Image 18 - Dice: 0.92650, Jaccard: 0.86307, HD95: 10.44031, ASD: 1.82473
+2025-05-19 19:21:37 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:21:37 - INFO - Image 19 - Dice: 0.83090, Jaccard: 0.71072, HD95: 23.02173, ASD: 3.95798
+2025-05-19 19:21:37 - INFO - Average metric (decoder 1): [ 0.87065558  0.77580803 10.02514715  2.19665077]
+2025-05-19 19:21:37 - INFO - Average metric of decoder 1: [ 0.87065558  0.77580803 10.02514715  2.19665077]
+2025-05-19 19:21:37 - INFO - Test results: [ 0.87065558  0.77580803 10.02514715  2.19665077]
+2025-05-19 19:21:37 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:21:37 - INFO - Creating model: VNet_16
+2025-05-19 19:21:37 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_260_checkpoint.pth
+2025-05-19 19:21:37 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_260_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:21:37 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:21:37 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:21:37 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:21:37 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:21:37 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:21:37 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:21:37 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:21:37 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:21:37 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:21:39 - INFO - Image 00 - Dice: 0.75846, Jaccard: 0.61091, HD95: 15.58846, ASD: 4.77541
+2025-05-19 19:21:40 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:21:40 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:21:40 - INFO - Creating model: VNet_16
+2025-05-19 19:21:40 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_260_checkpoint.pth
+2025-05-19 19:21:40 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_260_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:21:40 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:21:40 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:21:40 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:21:40 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:21:40 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:21:40 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:21:40 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:21:40 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:21:40 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:21:41 - INFO - Image 01 - Dice: 0.81940, Jaccard: 0.69405, HD95: 33.00151, ASD: 8.02424
+2025-05-19 19:21:41 - INFO - Image 00 - Dice: 0.75846, Jaccard: 0.61091, HD95: 15.58846, ASD: 4.77541
+2025-05-19 19:21:43 - INFO - Image 02 - Dice: 0.87853, Jaccard: 0.78337, HD95: 13.49074, ASD: 1.26842
+2025-05-19 19:21:43 - INFO - Image 01 - Dice: 0.81940, Jaccard: 0.69405, HD95: 33.00151, ASD: 8.02424
+2025-05-19 19:21:45 - INFO - Image 03 - Dice: 0.86863, Jaccard: 0.76776, HD95: 7.68115, ASD: 1.68238
+2025-05-19 19:21:45 - INFO - Image 02 - Dice: 0.87853, Jaccard: 0.78337, HD95: 13.49074, ASD: 1.26842
+2025-05-19 19:21:46 - INFO - Image 04 - Dice: 0.81904, Jaccard: 0.69354, HD95: 20.19901, ASD: 1.60354
+2025-05-19 19:21:47 - INFO - Image 03 - Dice: 0.86863, Jaccard: 0.76776, HD95: 7.68115, ASD: 1.68238
+2025-05-19 19:21:49 - INFO - Image 04 - Dice: 0.81904, Jaccard: 0.69354, HD95: 20.19901, ASD: 1.60354
+2025-05-19 19:21:49 - INFO - Image 05 - Dice: 0.11635, Jaccard: 0.06177, HD95: 51.40039, ASD: 10.18550
+2025-05-19 19:21:51 - INFO - Image 06 - Dice: 0.93119, Jaccard: 0.87124, HD95: 4.58258, ASD: 1.00456
+2025-05-19 19:21:51 - INFO - Image 05 - Dice: 0.11635, Jaccard: 0.06177, HD95: 51.40039, ASD: 10.18550
+2025-05-19 19:21:53 - INFO - Image 07 - Dice: 0.64917, Jaccard: 0.48057, HD95: 28.47806, ASD: 5.22351
+2025-05-19 19:21:53 - INFO - Image 06 - Dice: 0.93119, Jaccard: 0.87124, HD95: 4.58258, ASD: 1.00456
+2025-05-19 19:21:55 - INFO - Image 08 - Dice: 0.92514, Jaccard: 0.86071, HD95: 8.77496, ASD: 2.24311
+2025-05-19 19:21:55 - INFO - Image 07 - Dice: 0.64917, Jaccard: 0.48057, HD95: 28.47806, ASD: 5.22351
+2025-05-19 19:21:57 - INFO - Image 09 - Dice: 0.90134, Jaccard: 0.82040, HD95: 9.16515, ASD: 1.19774
+2025-05-19 19:21:57 - INFO - Image 08 - Dice: 0.92514, Jaccard: 0.86071, HD95: 8.77496, ASD: 2.24311
+2025-05-19 19:21:58 - INFO - Image 10 - Dice: 0.75900, Jaccard: 0.61160, HD95: 21.65641, ASD: 6.46518
+2025-05-19 19:21:59 - INFO - Image 09 - Dice: 0.90134, Jaccard: 0.82040, HD95: 9.16515, ASD: 1.19774
+2025-05-19 19:22:00 - INFO - Image 11 - Dice: 0.81719, Jaccard: 0.69088, HD95: 14.03567, ASD: 2.11193
+2025-05-19 19:22:01 - INFO - Image 10 - Dice: 0.75900, Jaccard: 0.61160, HD95: 21.65641, ASD: 6.46518
+2025-05-19 19:22:02 - INFO - Image 12 - Dice: 0.82681, Jaccard: 0.70476, HD95: 13.60147, ASD: 1.74938
+2025-05-19 19:22:02 - INFO - Image 11 - Dice: 0.81719, Jaccard: 0.69088, HD95: 14.03567, ASD: 2.11193
+2025-05-19 19:22:04 - INFO - Image 13 - Dice: 0.86036, Jaccard: 0.75494, HD95: 9.79796, ASD: 1.68686
+2025-05-19 19:22:04 - INFO - Image 12 - Dice: 0.82681, Jaccard: 0.70476, HD95: 13.60147, ASD: 1.74938
+2025-05-19 19:22:05 - INFO - Image 14 - Dice: 0.87100, Jaccard: 0.77147, HD95: 10.70979, ASD: 1.63941
+2025-05-19 19:22:06 - INFO - Image 13 - Dice: 0.86036, Jaccard: 0.75494, HD95: 9.79796, ASD: 1.68686
+2025-05-19 19:22:07 - INFO - Image 15 - Dice: 0.89054, Jaccard: 0.80269, HD95: 8.30662, ASD: 1.88892
+2025-05-19 19:22:07 - INFO - Image 14 - Dice: 0.87100, Jaccard: 0.77147, HD95: 10.70979, ASD: 1.63941
+2025-05-19 19:22:08 - INFO - Image 16 - Dice: 0.57350, Jaccard: 0.40203, HD95: 18.00000, ASD: 7.21724
+2025-05-19 19:22:09 - INFO - Image 15 - Dice: 0.89054, Jaccard: 0.80269, HD95: 8.30662, ASD: 1.88892
+2025-05-19 19:22:10 - INFO - Image 17 - Dice: 0.82636, Jaccard: 0.70409, HD95: 9.38083, ASD: 2.10606
+2025-05-19 19:22:10 - INFO - Image 16 - Dice: 0.57350, Jaccard: 0.40203, HD95: 18.00000, ASD: 7.21724
+2025-05-19 19:22:12 - INFO - Image 17 - Dice: 0.82636, Jaccard: 0.70409, HD95: 9.38083, ASD: 2.10606
+2025-05-19 19:22:12 - INFO - Image 18 - Dice: 0.93706, Jaccard: 0.88158, HD95: 12.36932, ASD: 1.33567
+2025-05-19 19:22:14 - INFO - Image 18 - Dice: 0.93706, Jaccard: 0.88158, HD95: 12.36932, ASD: 1.33567
+2025-05-19 19:22:15 - INFO - Image 19 - Dice: 0.78704, Jaccard: 0.64886, HD95: 24.20744, ASD: 4.80617
+2025-05-19 19:22:15 - INFO - Average metric (decoder 1): [ 0.79080519  0.68086141 16.72137548  3.41076119]
+2025-05-19 19:22:15 - INFO - Average metric of decoder 1: [ 0.79080519  0.68086141 16.72137548  3.41076119]
+2025-05-19 19:22:15 - INFO - Test results: [ 0.79080519  0.68086141 16.72137548  3.41076119]
+2025-05-19 19:22:17 - INFO - Image 19 - Dice: 0.78704, Jaccard: 0.64886, HD95: 24.20744, ASD: 4.80617
+2025-05-19 19:22:17 - INFO - Average metric (decoder 1): [ 0.79080519  0.68086141 16.72137548  3.41076119]
+2025-05-19 19:22:17 - INFO - Average metric of decoder 1: [ 0.79080519  0.68086141 16.72137548  3.41076119]
+2025-05-19 19:22:17 - INFO - Test results: [ 0.79080519  0.68086141 16.72137548  3.41076119]
+2025-05-19 19:22:17 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:22:17 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:22:17 - INFO - Creating model: VNet_16
+2025-05-19 19:22:17 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_280_checkpoint.pth
+2025-05-19 19:22:18 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_280_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:22:18 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:22:18 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:22:18 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:22:18 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:22:18 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:22:18 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:22:18 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:22:18 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:22:18 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:22:19 - INFO - Image 00 - Dice: 0.00083, Jaccard: 0.00042, HD95: 122.58466, ASD: 1.99761
+2025-05-19 19:22:19 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:22:19 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:22:19 - INFO - Creating model: VNet_16
+2025-05-19 19:22:19 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_280_checkpoint.pth
+2025-05-19 19:22:20 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_280_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:22:20 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:22:20 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:22:20 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:22:20 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:22:20 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:22:20 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:22:20 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:22:20 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:22:20 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:22:21 - INFO - Image 01 - Dice: 0.69703, Jaccard: 0.53495, HD95: 35.28456, ASD: 3.21118
+2025-05-19 19:22:21 - INFO - Image 00 - Dice: 0.00083, Jaccard: 0.00042, HD95: 122.58466, ASD: 1.99761
+2025-05-19 19:22:23 - INFO - Image 01 - Dice: 0.69703, Jaccard: 0.53495, HD95: 35.28456, ASD: 3.21118
+2025-05-19 19:22:23 - INFO - Image 02 - Dice: 0.88812, Jaccard: 0.79875, HD95: 8.36660, ASD: 1.23854
+2025-05-19 19:22:25 - INFO - Image 02 - Dice: 0.88812, Jaccard: 0.79875, HD95: 8.36660, ASD: 1.23854
+2025-05-19 19:22:25 - INFO - Image 03 - Dice: 0.88062, Jaccard: 0.78670, HD95: 7.81025, ASD: 1.43733
+2025-05-19 19:22:27 - INFO - Image 04 - Dice: 0.89976, Jaccard: 0.81778, HD95: 5.00000, ASD: 1.49783
+2025-05-19 19:22:27 - INFO - Image 03 - Dice: 0.88062, Jaccard: 0.78670, HD95: 7.81025, ASD: 1.43733
+2025-05-19 19:22:29 - INFO - Image 04 - Dice: 0.89976, Jaccard: 0.81778, HD95: 5.00000, ASD: 1.49783
+2025-05-19 19:22:29 - INFO - Image 05 - Dice: 0.00006, Jaccard: 0.00003, HD95: 137.80493, ASD: 4.96234
+2025-05-19 19:22:31 - INFO - Image 06 - Dice: 0.93586, Jaccard: 0.87946, HD95: 4.12311, ASD: 1.06351
+2025-05-19 19:22:31 - INFO - Image 05 - Dice: 0.00006, Jaccard: 0.00003, HD95: 137.80493, ASD: 4.96234
+2025-05-19 19:22:33 - INFO - Image 06 - Dice: 0.93586, Jaccard: 0.87946, HD95: 4.12311, ASD: 1.06351
+2025-05-19 19:22:33 - INFO - Image 07 - Dice: 0.45531, Jaccard: 0.29476, HD95: 46.78675, ASD: 4.32475
+2025-05-19 19:22:35 - INFO - Image 07 - Dice: 0.45531, Jaccard: 0.29476, HD95: 46.78675, ASD: 4.32475
+2025-05-19 19:22:35 - INFO - Image 08 - Dice: 0.90216, Jaccard: 0.82176, HD95: 7.07107, ASD: 1.59945
+2025-05-19 19:22:37 - INFO - Image 08 - Dice: 0.90216, Jaccard: 0.82176, HD95: 7.07107, ASD: 1.59945
+2025-05-19 19:22:37 - INFO - Image 09 - Dice: 0.89601, Jaccard: 0.81161, HD95: 6.40312, ASD: 1.34051
+2025-05-19 19:22:38 - INFO - Image 10 - Dice: 0.78143, Jaccard: 0.64126, HD95: 18.02776, ASD: 2.63179
+2025-05-19 19:22:39 - INFO - Image 09 - Dice: 0.89601, Jaccard: 0.81161, HD95: 6.40312, ASD: 1.34051
+2025-05-19 19:22:40 - INFO - Image 10 - Dice: 0.78143, Jaccard: 0.64126, HD95: 18.02776, ASD: 2.63179
+2025-05-19 19:22:40 - INFO - Image 11 - Dice: 0.81233, Jaccard: 0.68397, HD95: 17.02939, ASD: 1.99963
+2025-05-19 19:22:42 - INFO - Image 11 - Dice: 0.81233, Jaccard: 0.68397, HD95: 17.02939, ASD: 1.99963
+2025-05-19 19:22:42 - INFO - Image 12 - Dice: 0.79780, Jaccard: 0.66361, HD95: 19.02630, ASD: 2.01060
+2025-05-19 19:22:44 - INFO - Image 12 - Dice: 0.79780, Jaccard: 0.66361, HD95: 19.02630, ASD: 2.01060
+2025-05-19 19:22:44 - INFO - Image 13 - Dice: 0.87248, Jaccard: 0.77380, HD95: 9.43398, ASD: 1.44245
+2025-05-19 19:22:45 - INFO - Image 14 - Dice: 0.89536, Jaccard: 0.81055, HD95: 8.54400, ASD: 1.44227
+2025-05-19 19:22:45 - INFO - Image 13 - Dice: 0.87248, Jaccard: 0.77380, HD95: 9.43398, ASD: 1.44245
+2025-05-19 19:22:47 - INFO - Image 15 - Dice: 0.90031, Jaccard: 0.81869, HD95: 6.16441, ASD: 1.81847
+2025-05-19 19:22:47 - INFO - Image 14 - Dice: 0.89536, Jaccard: 0.81055, HD95: 8.54400, ASD: 1.44227
+2025-05-19 19:22:48 - INFO - Image 16 - Dice: 0.46232, Jaccard: 0.30066, HD95: 22.02272, ASD: 6.27629
+2025-05-19 19:22:48 - INFO - Image 15 - Dice: 0.90031, Jaccard: 0.81869, HD95: 6.16441, ASD: 1.81847
+2025-05-19 19:22:50 - INFO - Image 16 - Dice: 0.46232, Jaccard: 0.30066, HD95: 22.02272, ASD: 6.27629
+2025-05-19 19:22:50 - INFO - Image 17 - Dice: 0.86584, Jaccard: 0.76342, HD95: 7.07107, ASD: 1.76408
+2025-05-19 19:22:52 - INFO - Image 17 - Dice: 0.86584, Jaccard: 0.76342, HD95: 7.07107, ASD: 1.76408
+2025-05-19 19:22:53 - INFO - Image 18 - Dice: 0.93768, Jaccard: 0.88266, HD95: 13.92839, ASD: 1.75406
+2025-05-19 19:22:54 - INFO - Image 18 - Dice: 0.93768, Jaccard: 0.88266, HD95: 13.92839, ASD: 1.75406
+2025-05-19 19:22:55 - INFO - Image 19 - Dice: 0.56763, Jaccard: 0.39629, HD95: 54.26785, ASD: 5.11282
+2025-05-19 19:22:55 - INFO - Average metric (decoder 1): [ 0.72244624  0.62405643 27.83754598  2.44627516]
+2025-05-19 19:22:55 - INFO - Average metric of decoder 1: [ 0.72244624  0.62405643 27.83754598  2.44627516]
+2025-05-19 19:22:55 - INFO - Test results: [ 0.72244624  0.62405643 27.83754598  2.44627516]
+2025-05-19 19:22:56 - INFO - Image 19 - Dice: 0.56763, Jaccard: 0.39629, HD95: 54.26785, ASD: 5.11282
+2025-05-19 19:22:56 - INFO - Average metric (decoder 1): [ 0.72244624  0.62405643 27.83754598  2.44627516]
+2025-05-19 19:22:56 - INFO - Average metric of decoder 1: [ 0.72244624  0.62405643 27.83754598  2.44627516]
+2025-05-19 19:22:56 - INFO - Test results: [ 0.72244624  0.62405643 27.83754598  2.44627516]
+2025-05-19 19:22:57 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:22:58 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:22:58 - INFO - Creating model: VNet_16
+2025-05-19 19:22:58 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_300_checkpoint.pth
+2025-05-19 19:22:58 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_300_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:22:58 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:22:58 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:22:58 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:22:58 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:22:58 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:22:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:22:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:22:58 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:22:58 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:22:59 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:22:59 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:22:59 - INFO - Creating model: VNet_16
+2025-05-19 19:22:59 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_300_checkpoint.pth
+2025-05-19 19:22:59 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_300_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:22:59 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:22:59 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:22:59 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:22:59 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:22:59 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:22:59 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:22:59 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:22:59 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:22:59 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:22:59 - INFO - Image 00 - Dice: 0.01607, Jaccard: 0.00810, HD95: 93.47861, ASD: 1.75007
+2025-05-19 19:23:01 - INFO - Image 00 - Dice: 0.01607, Jaccard: 0.00810, HD95: 93.47861, ASD: 1.75007
+2025-05-19 19:23:01 - INFO - Image 01 - Dice: 0.86824, Jaccard: 0.76715, HD95: 15.16575, ASD: 1.75100
+2025-05-19 19:23:03 - INFO - Image 01 - Dice: 0.86824, Jaccard: 0.76715, HD95: 15.16575, ASD: 1.75100
+2025-05-19 19:23:03 - INFO - Image 02 - Dice: 0.91066, Jaccard: 0.83597, HD95: 7.00000, ASD: 1.27008
+2025-05-19 19:23:05 - INFO - Image 02 - Dice: 0.91066, Jaccard: 0.83597, HD95: 7.00000, ASD: 1.27008
+2025-05-19 19:23:05 - INFO - Image 03 - Dice: 0.89421, Jaccard: 0.80866, HD95: 6.32456, ASD: 1.45284
+2025-05-19 19:23:07 - INFO - Image 03 - Dice: 0.89421, Jaccard: 0.80866, HD95: 6.32456, ASD: 1.45284
+2025-05-19 19:23:07 - INFO - Image 04 - Dice: 0.90442, Jaccard: 0.82551, HD95: 3.74166, ASD: 1.63487
+2025-05-19 19:23:08 - INFO - Image 04 - Dice: 0.90442, Jaccard: 0.82551, HD95: 3.74166, ASD: 1.63487
+2025-05-19 19:23:09 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:23:10 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:23:10 - INFO - Image 06 - Dice: 0.92479, Jaccard: 0.86009, HD95: 3.74166, ASD: 1.33103
+2025-05-19 19:23:12 - INFO - Image 06 - Dice: 0.92479, Jaccard: 0.86009, HD95: 3.74166, ASD: 1.33103
+2025-05-19 19:23:12 - INFO - Image 07 - Dice: 0.53356, Jaccard: 0.36385, HD95: 38.49675, ASD: 3.27832
+2025-05-19 19:23:14 - INFO - Image 07 - Dice: 0.53356, Jaccard: 0.36385, HD95: 38.49675, ASD: 3.27832
+2025-05-19 19:23:15 - INFO - Image 08 - Dice: 0.92148, Jaccard: 0.85439, HD95: 5.38516, ASD: 2.40437
+2025-05-19 19:23:16 - INFO - Image 08 - Dice: 0.92148, Jaccard: 0.85439, HD95: 5.38516, ASD: 2.40437
+2025-05-19 19:23:16 - INFO - Image 09 - Dice: 0.92487, Jaccard: 0.86023, HD95: 3.60555, ASD: 1.11665
+2025-05-19 19:23:18 - INFO - Image 09 - Dice: 0.92487, Jaccard: 0.86023, HD95: 3.60555, ASD: 1.11665
+2025-05-19 19:23:18 - INFO - Image 10 - Dice: 0.79451, Jaccard: 0.65907, HD95: 17.37815, ASD: 2.55060
+2025-05-19 19:23:19 - INFO - Image 10 - Dice: 0.79451, Jaccard: 0.65907, HD95: 17.37815, ASD: 2.55060
+2025-05-19 19:23:20 - INFO - Image 11 - Dice: 0.87215, Jaccard: 0.77329, HD95: 8.66025, ASD: 1.59716
+2025-05-19 19:23:21 - INFO - Image 11 - Dice: 0.87215, Jaccard: 0.77329, HD95: 8.66025, ASD: 1.59716
+2025-05-19 19:23:21 - INFO - Image 12 - Dice: 0.88362, Jaccard: 0.79150, HD95: 9.00000, ASD: 1.38098
+2025-05-19 19:23:23 - INFO - Image 12 - Dice: 0.88362, Jaccard: 0.79150, HD95: 9.00000, ASD: 1.38098
+2025-05-19 19:23:23 - INFO - Image 13 - Dice: 0.90289, Jaccard: 0.82297, HD95: 6.70820, ASD: 1.21901
+2025-05-19 19:23:24 - INFO - Image 13 - Dice: 0.90289, Jaccard: 0.82297, HD95: 6.70820, ASD: 1.21901
+2025-05-19 19:23:25 - INFO - Image 14 - Dice: 0.91666, Jaccard: 0.84614, HD95: 5.38516, ASD: 1.33694
+2025-05-19 19:23:26 - INFO - Image 14 - Dice: 0.91666, Jaccard: 0.84614, HD95: 5.38516, ASD: 1.33694
+2025-05-19 19:23:26 - INFO - Image 15 - Dice: 0.90766, Jaccard: 0.83094, HD95: 5.47723, ASD: 2.10249
+2025-05-19 19:23:27 - INFO - Image 15 - Dice: 0.90766, Jaccard: 0.83094, HD95: 5.47723, ASD: 2.10249
+2025-05-19 19:23:28 - INFO - Image 16 - Dice: 0.75321, Jaccard: 0.60412, HD95: 15.13275, ASD: 4.93855
+2025-05-19 19:23:29 - INFO - Image 16 - Dice: 0.75321, Jaccard: 0.60412, HD95: 15.13275, ASD: 4.93855
+2025-05-19 19:23:30 - INFO - Image 17 - Dice: 0.85133, Jaccard: 0.74114, HD95: 7.48331, ASD: 2.14155
+2025-05-19 19:23:31 - INFO - Image 17 - Dice: 0.85133, Jaccard: 0.74114, HD95: 7.48331, ASD: 2.14155
+2025-05-19 19:23:32 - INFO - Image 18 - Dice: 0.93113, Jaccard: 0.87114, HD95: 12.08305, ASD: 2.07384
+2025-05-19 19:23:33 - INFO - Image 18 - Dice: 0.93113, Jaccard: 0.87114, HD95: 12.08305, ASD: 2.07384
+2025-05-19 19:23:35 - INFO - Image 19 - Dice: 0.47933, Jaccard: 0.31521, HD95: 50.02000, ASD: 4.39974
+2025-05-19 19:23:35 - INFO - Average metric (decoder 1): [ 0.75953795  0.67197341 15.71338976  1.98650401]
+2025-05-19 19:23:35 - INFO - Average metric of decoder 1: [ 0.75953795  0.67197341 15.71338976  1.98650401]
+2025-05-19 19:23:35 - INFO - Test results: [ 0.75953795  0.67197341 15.71338976  1.98650401]
+2025-05-19 19:23:36 - INFO - Image 19 - Dice: 0.47933, Jaccard: 0.31521, HD95: 50.02000, ASD: 4.39974
+2025-05-19 19:23:36 - INFO - Average metric (decoder 1): [ 0.75953795  0.67197341 15.71338976  1.98650401]
+2025-05-19 19:23:36 - INFO - Average metric of decoder 1: [ 0.75953795  0.67197341 15.71338976  1.98650401]
+2025-05-19 19:23:36 - INFO - Test results: [ 0.75953795  0.67197341 15.71338976  1.98650401]
+2025-05-19 19:23:37 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:23:37 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:23:37 - INFO - Creating model: VNet_16
+2025-05-19 19:23:37 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_320_checkpoint.pth
+2025-05-19 19:23:37 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_320_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:23:37 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:23:37 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:23:37 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:23:37 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:23:37 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:23:37 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:23:37 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:23:37 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:23:37 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:23:38 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:23:38 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:23:38 - INFO - Creating model: VNet_16
+2025-05-19 19:23:38 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_320_checkpoint.pth
+2025-05-19 19:23:38 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_320_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:23:38 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:23:38 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:23:38 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:23:38 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:23:38 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:23:38 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:23:38 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:23:38 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:23:38 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:23:39 - INFO - Image 00 - Dice: 0.38932, Jaccard: 0.24171, HD95: 35.48239, ASD: 3.87427
+2025-05-19 19:23:40 - INFO - Image 00 - Dice: 0.38932, Jaccard: 0.24171, HD95: 35.48239, ASD: 3.87427
+2025-05-19 19:23:41 - INFO - Image 01 - Dice: 0.84712, Jaccard: 0.73478, HD95: 15.39480, ASD: 1.97746
+2025-05-19 19:23:42 - INFO - Image 01 - Dice: 0.84712, Jaccard: 0.73478, HD95: 15.39480, ASD: 1.97746
+2025-05-19 19:23:43 - INFO - Image 02 - Dice: 0.89512, Jaccard: 0.81016, HD95: 9.48683, ASD: 1.21789
+2025-05-19 19:23:44 - INFO - Image 02 - Dice: 0.89512, Jaccard: 0.81016, HD95: 9.48683, ASD: 1.21789
+2025-05-19 19:23:45 - INFO - Image 03 - Dice: 0.88449, Jaccard: 0.79290, HD95: 6.55744, ASD: 1.53244
+2025-05-19 19:23:46 - INFO - Image 03 - Dice: 0.88449, Jaccard: 0.79290, HD95: 6.55744, ASD: 1.53244
+2025-05-19 19:23:46 - INFO - Image 04 - Dice: 0.90010, Jaccard: 0.81834, HD95: 5.00000, ASD: 1.68692
+2025-05-19 19:23:47 - INFO - Image 04 - Dice: 0.90010, Jaccard: 0.81834, HD95: 5.00000, ASD: 1.68692
+2025-05-19 19:23:49 - INFO - Image 05 - Dice: 0.00192, Jaccard: 0.00096, HD95: 144.53252, ASD: 2.15251
+2025-05-19 19:23:50 - INFO - Image 05 - Dice: 0.00192, Jaccard: 0.00096, HD95: 144.53252, ASD: 2.15251
+2025-05-19 19:23:51 - INFO - Image 06 - Dice: 0.93365, Jaccard: 0.87556, HD95: 3.74166, ASD: 1.13687
+2025-05-19 19:23:51 - INFO - Image 06 - Dice: 0.93365, Jaccard: 0.87556, HD95: 3.74166, ASD: 1.13687
+2025-05-19 19:23:53 - INFO - Image 07 - Dice: 0.61052, Jaccard: 0.43938, HD95: 33.66007, ASD: 2.89670
+2025-05-19 19:23:53 - INFO - Image 07 - Dice: 0.61052, Jaccard: 0.43938, HD95: 33.66007, ASD: 2.89670
+2025-05-19 19:23:55 - INFO - Image 08 - Dice: 0.92206, Jaccard: 0.85538, HD95: 5.47723, ASD: 2.16392
+2025-05-19 19:23:56 - INFO - Image 08 - Dice: 0.92206, Jaccard: 0.85538, HD95: 5.47723, ASD: 2.16392
+2025-05-19 19:23:57 - INFO - Image 09 - Dice: 0.91591, Jaccard: 0.84486, HD95: 3.74166, ASD: 1.16926
+2025-05-19 19:23:57 - INFO - Image 09 - Dice: 0.91591, Jaccard: 0.84486, HD95: 3.74166, ASD: 1.16926
+2025-05-19 19:23:58 - INFO - Image 10 - Dice: 0.81351, Jaccard: 0.68565, HD95: 13.00000, ASD: 2.52427
+2025-05-19 19:23:59 - INFO - Image 10 - Dice: 0.81351, Jaccard: 0.68565, HD95: 13.00000, ASD: 2.52427
+2025-05-19 19:24:00 - INFO - Image 11 - Dice: 0.84511, Jaccard: 0.73177, HD95: 12.56981, ASD: 1.80535
+2025-05-19 19:24:01 - INFO - Image 11 - Dice: 0.84511, Jaccard: 0.73177, HD95: 12.56981, ASD: 1.80535
+2025-05-19 19:24:02 - INFO - Image 12 - Dice: 0.85652, Jaccard: 0.74905, HD95: 16.15549, ASD: 1.49244
+2025-05-19 19:24:02 - INFO - Image 12 - Dice: 0.85652, Jaccard: 0.74905, HD95: 16.15549, ASD: 1.49244
+2025-05-19 19:24:04 - INFO - Image 13 - Dice: 0.90712, Jaccard: 0.83002, HD95: 5.83095, ASD: 1.19957
+2025-05-19 19:24:04 - INFO - Image 13 - Dice: 0.90712, Jaccard: 0.83002, HD95: 5.83095, ASD: 1.19957
+2025-05-19 19:24:05 - INFO - Image 14 - Dice: 0.90054, Jaccard: 0.81907, HD95: 8.48528, ASD: 1.41814
+2025-05-19 19:24:06 - INFO - Image 14 - Dice: 0.90054, Jaccard: 0.81907, HD95: 8.48528, ASD: 1.41814
+2025-05-19 19:24:07 - INFO - Image 15 - Dice: 0.90257, Jaccard: 0.82244, HD95: 6.40312, ASD: 2.03976
+2025-05-19 19:24:07 - INFO - Image 15 - Dice: 0.90257, Jaccard: 0.82244, HD95: 6.40312, ASD: 2.03976
+2025-05-19 19:24:08 - INFO - Image 16 - Dice: 0.67646, Jaccard: 0.51110, HD95: 16.00000, ASD: 5.03007
+2025-05-19 19:24:09 - INFO - Image 16 - Dice: 0.67646, Jaccard: 0.51110, HD95: 16.00000, ASD: 5.03007
+2025-05-19 19:24:10 - INFO - Image 17 - Dice: 0.85432, Jaccard: 0.74569, HD95: 8.06226, ASD: 2.04851
+2025-05-19 19:24:10 - INFO - Image 17 - Dice: 0.85432, Jaccard: 0.74569, HD95: 8.06226, ASD: 2.04851
+2025-05-19 19:24:12 - INFO - Image 18 - Dice: 0.93298, Jaccard: 0.87438, HD95: 14.44125, ASD: 2.12044
+2025-05-19 19:24:13 - INFO - Image 18 - Dice: 0.93298, Jaccard: 0.87438, HD95: 14.44125, ASD: 2.12044
+2025-05-19 19:24:15 - INFO - Image 19 - Dice: 0.75770, Jaccard: 0.60992, HD95: 30.47950, ASD: 3.79353
+2025-05-19 19:24:15 - INFO - Average metric (decoder 1): [ 0.78735202  0.68965686 19.725113    2.16401555]
+2025-05-19 19:24:15 - INFO - Average metric of decoder 1: [ 0.78735202  0.68965686 19.725113    2.16401555]
+2025-05-19 19:24:15 - INFO - Test results: [ 0.78735202  0.68965686 19.725113    2.16401555]
+2025-05-19 19:24:15 - INFO - Image 19 - Dice: 0.75770, Jaccard: 0.60992, HD95: 30.47950, ASD: 3.79353
+2025-05-19 19:24:15 - INFO - Average metric (decoder 1): [ 0.78735202  0.68965686 19.725113    2.16401555]
+2025-05-19 19:24:15 - INFO - Average metric of decoder 1: [ 0.78735202  0.68965686 19.725113    2.16401555]
+2025-05-19 19:24:15 - INFO - Test results: [ 0.78735202  0.68965686 19.725113    2.16401555]
+2025-05-19 19:24:17 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:24:17 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:24:17 - INFO - Creating model: VNet_16
+2025-05-19 19:24:17 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_340_checkpoint.pth
+2025-05-19 19:24:18 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_340_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:24:18 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:24:18 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:24:18 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:24:18 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:24:18 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:24:18 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:24:18 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:24:18 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:24:18 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:24:18 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:24:18 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:24:18 - INFO - Creating model: VNet_16
+2025-05-19 19:24:18 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_340_checkpoint.pth
+2025-05-19 19:24:18 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_340_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:24:18 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:24:18 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:24:18 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:24:18 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:24:18 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:24:18 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:24:18 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:24:18 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:24:18 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:24:19 - INFO - Image 00 - Dice: 0.06520, Jaccard: 0.03370, HD95: 98.35649, ASD: 1.75101
+2025-05-19 19:24:20 - INFO - Image 00 - Dice: 0.06520, Jaccard: 0.03370, HD95: 98.35649, ASD: 1.75101
+2025-05-19 19:24:21 - INFO - Image 01 - Dice: 0.83623, Jaccard: 0.71856, HD95: 15.55635, ASD: 1.98681
+2025-05-19 19:24:21 - INFO - Image 01 - Dice: 0.83623, Jaccard: 0.71856, HD95: 15.55635, ASD: 1.98681
+2025-05-19 19:24:23 - INFO - Image 02 - Dice: 0.85028, Jaccard: 0.73956, HD95: 14.03567, ASD: 1.56248
+2025-05-19 19:24:23 - INFO - Image 02 - Dice: 0.85028, Jaccard: 0.73956, HD95: 14.03567, ASD: 1.56248
+2025-05-19 19:24:25 - INFO - Image 03 - Dice: 0.82147, Jaccard: 0.69703, HD95: 12.68858, ASD: 2.04335
+2025-05-19 19:24:25 - INFO - Image 03 - Dice: 0.82147, Jaccard: 0.69703, HD95: 12.68858, ASD: 2.04335
+2025-05-19 19:24:27 - INFO - Image 04 - Dice: 0.87033, Jaccard: 0.77043, HD95: 7.07107, ASD: 1.80696
+2025-05-19 19:24:27 - INFO - Image 04 - Dice: 0.87033, Jaccard: 0.77043, HD95: 7.07107, ASD: 1.80696
+2025-05-19 19:24:29 - INFO - Image 05 - Dice: 0.00001, Jaccard: 0.00001, HD95: 145.56287, ASD: 3.08114
+2025-05-19 19:24:29 - INFO - Image 05 - Dice: 0.00001, Jaccard: 0.00001, HD95: 145.56287, ASD: 3.08114
+2025-05-19 19:24:31 - INFO - Image 06 - Dice: 0.93431, Jaccard: 0.87672, HD95: 3.31662, ASD: 1.16115
+2025-05-19 19:24:31 - INFO - Image 06 - Dice: 0.93431, Jaccard: 0.87672, HD95: 3.31662, ASD: 1.16115
+2025-05-19 19:24:33 - INFO - Image 07 - Dice: 0.62289, Jaccard: 0.45232, HD95: 31.96873, ASD: 2.53120
+2025-05-19 19:24:33 - INFO - Image 07 - Dice: 0.62289, Jaccard: 0.45232, HD95: 31.96873, ASD: 2.53120
+2025-05-19 19:24:35 - INFO - Image 08 - Dice: 0.93023, Jaccard: 0.86956, HD95: 5.09902, ASD: 2.12788
+2025-05-19 19:24:35 - INFO - Image 08 - Dice: 0.93023, Jaccard: 0.86956, HD95: 5.09902, ASD: 2.12788
+2025-05-19 19:24:37 - INFO - Image 09 - Dice: 0.91956, Jaccard: 0.85110, HD95: 4.12311, ASD: 1.11579
+2025-05-19 19:24:37 - INFO - Image 09 - Dice: 0.91956, Jaccard: 0.85110, HD95: 4.12311, ASD: 1.11579
+2025-05-19 19:24:38 - INFO - Image 10 - Dice: 0.40881, Jaccard: 0.25692, HD95: 33.89690, ASD: 3.95708
+2025-05-19 19:24:39 - INFO - Image 10 - Dice: 0.40881, Jaccard: 0.25692, HD95: 33.89690, ASD: 3.95708
+2025-05-19 19:24:40 - INFO - Image 11 - Dice: 0.75175, Jaccard: 0.60224, HD95: 16.03122, ASD: 2.50875
+2025-05-19 19:24:40 - INFO - Image 11 - Dice: 0.75175, Jaccard: 0.60224, HD95: 16.03122, ASD: 2.50875
+2025-05-19 19:24:42 - INFO - Image 12 - Dice: 0.82892, Jaccard: 0.70782, HD95: 12.72792, ASD: 1.67340
+2025-05-19 19:24:42 - INFO - Image 12 - Dice: 0.82892, Jaccard: 0.70782, HD95: 12.72792, ASD: 1.67340
+2025-05-19 19:24:44 - INFO - Image 13 - Dice: 0.88064, Jaccard: 0.78673, HD95: 8.12404, ASD: 1.51511
+2025-05-19 19:24:44 - INFO - Image 13 - Dice: 0.88064, Jaccard: 0.78673, HD95: 8.12404, ASD: 1.51511
+2025-05-19 19:24:45 - INFO - Image 14 - Dice: 0.91089, Jaccard: 0.83636, HD95: 7.54983, ASD: 1.30920
+2025-05-19 19:24:45 - INFO - Image 14 - Dice: 0.91089, Jaccard: 0.83636, HD95: 7.54983, ASD: 1.30920
+2025-05-19 19:24:47 - INFO - Image 15 - Dice: 0.86203, Jaccard: 0.75751, HD95: 9.89949, ASD: 1.97252
+2025-05-19 19:24:47 - INFO - Image 15 - Dice: 0.86203, Jaccard: 0.75751, HD95: 9.89949, ASD: 1.97252
+2025-05-19 19:24:48 - INFO - Image 16 - Dice: 0.62349, Jaccard: 0.45295, HD95: 15.93738, ASD: 5.81675
+2025-05-19 19:24:48 - INFO - Image 16 - Dice: 0.62349, Jaccard: 0.45295, HD95: 15.93738, ASD: 5.81675
+2025-05-19 19:24:50 - INFO - Image 17 - Dice: 0.80914, Jaccard: 0.67945, HD95: 13.07670, ASD: 2.44529
+2025-05-19 19:24:50 - INFO - Image 17 - Dice: 0.80914, Jaccard: 0.67945, HD95: 13.07670, ASD: 2.44529
+2025-05-19 19:24:53 - INFO - Image 18 - Dice: 0.89423, Jaccard: 0.80869, HD95: 15.13275, ASD: 2.92199
+2025-05-19 19:24:53 - INFO - Image 18 - Dice: 0.89423, Jaccard: 0.80869, HD95: 15.13275, ASD: 2.92199
+2025-05-19 19:24:55 - INFO - Image 19 - Dice: 0.81011, Jaccard: 0.68083, HD95: 22.36068, ASD: 3.16663
+2025-05-19 19:24:55 - INFO - Average metric (decoder 1): [ 0.7315262   0.62892513 24.62577137  2.32272568]
+2025-05-19 19:24:55 - INFO - Average metric of decoder 1: [ 0.7315262   0.62892513 24.62577137  2.32272568]
+2025-05-19 19:24:55 - INFO - Test results: [ 0.7315262   0.62892513 24.62577137  2.32272568]
+2025-05-19 19:24:55 - INFO - Image 19 - Dice: 0.81011, Jaccard: 0.68083, HD95: 22.36068, ASD: 3.16663
+2025-05-19 19:24:55 - INFO - Average metric (decoder 1): [ 0.7315262   0.62892513 24.62577137  2.32272568]
+2025-05-19 19:24:55 - INFO - Average metric of decoder 1: [ 0.7315262   0.62892513 24.62577137  2.32272568]
+2025-05-19 19:24:55 - INFO - Test results: [ 0.7315262   0.62892513 24.62577137  2.32272568]
+2025-05-19 19:24:58 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:24:58 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:24:58 - INFO - Creating model: VNet_16
+2025-05-19 19:24:58 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:24:58 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_360_checkpoint.pth
+2025-05-19 19:24:58 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:24:58 - INFO - Creating model: VNet_16
+2025-05-19 19:24:58 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_360_checkpoint.pth
+2025-05-19 19:24:58 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_360_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:24:58 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:24:58 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:24:58 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:24:58 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:24:58 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:24:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:24:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:24:58 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:24:58 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:24:58 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_360_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:24:58 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:24:58 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:24:58 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:24:58 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:24:58 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:24:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:24:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:24:58 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:24:58 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:24:59 - INFO - Image 00 - Dice: 0.66950, Jaccard: 0.50319, HD95: 16.88194, ASD: 3.97184
+2025-05-19 19:25:00 - INFO - Image 00 - Dice: 0.66950, Jaccard: 0.50319, HD95: 16.88194, ASD: 3.97184
+2025-05-19 19:25:01 - INFO - Image 01 - Dice: 0.72130, Jaccard: 0.56409, HD95: 37.01351, ASD: 2.63124
+2025-05-19 19:25:01 - INFO - Image 01 - Dice: 0.72130, Jaccard: 0.56409, HD95: 37.01351, ASD: 2.63124
+2025-05-19 19:25:03 - INFO - Image 02 - Dice: 0.92623, Jaccard: 0.86259, HD95: 4.58258, ASD: 0.99665
+2025-05-19 19:25:03 - INFO - Image 02 - Dice: 0.92623, Jaccard: 0.86259, HD95: 4.58258, ASD: 0.99665
+2025-05-19 19:25:05 - INFO - Image 03 - Dice: 0.90864, Jaccard: 0.83258, HD95: 4.69042, ASD: 1.26403
+2025-05-19 19:25:06 - INFO - Image 03 - Dice: 0.90864, Jaccard: 0.83258, HD95: 4.69042, ASD: 1.26403
+2025-05-19 19:25:07 - INFO - Image 04 - Dice: 0.91086, Jaccard: 0.83631, HD95: 4.00000, ASD: 1.31882
+2025-05-19 19:25:07 - INFO - Image 04 - Dice: 0.91086, Jaccard: 0.83631, HD95: 4.00000, ASD: 1.31882
+2025-05-19 19:25:09 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:25:09 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:25:10 - INFO - Image 06 - Dice: 0.93737, Jaccard: 0.88212, HD95: 3.31662, ASD: 1.13525
+2025-05-19 19:25:11 - INFO - Image 06 - Dice: 0.93737, Jaccard: 0.88212, HD95: 3.31662, ASD: 1.13525
+2025-05-19 19:25:12 - INFO - Image 07 - Dice: 0.65788, Jaccard: 0.49018, HD95: 40.81666, ASD: 2.95417
+2025-05-19 19:25:13 - INFO - Image 07 - Dice: 0.65788, Jaccard: 0.49018, HD95: 40.81666, ASD: 2.95417
+2025-05-19 19:25:15 - INFO - Image 08 - Dice: 0.93034, Jaccard: 0.86975, HD95: 4.47214, ASD: 1.31022
+2025-05-19 19:25:15 - INFO - Image 08 - Dice: 0.93034, Jaccard: 0.86975, HD95: 4.47214, ASD: 1.31022
+2025-05-19 19:25:16 - INFO - Image 09 - Dice: 0.92046, Jaccard: 0.85263, HD95: 4.47214, ASD: 1.17084
+2025-05-19 19:25:17 - INFO - Image 09 - Dice: 0.92046, Jaccard: 0.85263, HD95: 4.47214, ASD: 1.17084
+2025-05-19 19:25:18 - INFO - Image 10 - Dice: 0.80042, Jaccard: 0.66725, HD95: 16.49242, ASD: 3.27869
+2025-05-19 19:25:18 - INFO - Image 10 - Dice: 0.80042, Jaccard: 0.66725, HD95: 16.49242, ASD: 3.27869
+2025-05-19 19:25:20 - INFO - Image 11 - Dice: 0.87971, Jaccard: 0.78525, HD95: 8.71780, ASD: 1.49216
+2025-05-19 19:25:20 - INFO - Image 11 - Dice: 0.87971, Jaccard: 0.78525, HD95: 8.71780, ASD: 1.49216
+2025-05-19 19:25:21 - INFO - Image 12 - Dice: 0.68799, Jaccard: 0.52437, HD95: 24.37212, ASD: 2.87548
+2025-05-19 19:25:22 - INFO - Image 12 - Dice: 0.68799, Jaccard: 0.52437, HD95: 24.37212, ASD: 2.87548
+2025-05-19 19:25:23 - INFO - Image 13 - Dice: 0.91364, Jaccard: 0.84101, HD95: 5.00000, ASD: 1.06234
+2025-05-19 19:25:24 - INFO - Image 13 - Dice: 0.91364, Jaccard: 0.84101, HD95: 5.00000, ASD: 1.06234
+2025-05-19 19:25:25 - INFO - Image 14 - Dice: 0.93591, Jaccard: 0.87955, HD95: 4.00000, ASD: 1.00752
+2025-05-19 19:25:25 - INFO - Image 14 - Dice: 0.93591, Jaccard: 0.87955, HD95: 4.00000, ASD: 1.00752
+2025-05-19 19:25:26 - INFO - Image 15 - Dice: 0.91277, Jaccard: 0.83953, HD95: 4.89898, ASD: 1.67568
+2025-05-19 19:25:27 - INFO - Image 15 - Dice: 0.91277, Jaccard: 0.83953, HD95: 4.89898, ASD: 1.67568
+2025-05-19 19:25:28 - INFO - Image 16 - Dice: 0.62712, Jaccard: 0.45679, HD95: 17.00000, ASD: 5.62696
+2025-05-19 19:25:28 - INFO - Image 16 - Dice: 0.62712, Jaccard: 0.45679, HD95: 17.00000, ASD: 5.62696
+2025-05-19 19:25:29 - INFO - Image 17 - Dice: 0.88483, Jaccard: 0.79346, HD95: 5.38516, ASD: 1.72957
+2025-05-19 19:25:30 - INFO - Image 17 - Dice: 0.88483, Jaccard: 0.79346, HD95: 5.38516, ASD: 1.72957
+2025-05-19 19:25:32 - INFO - Image 18 - Dice: 0.93474, Jaccard: 0.87748, HD95: 13.89244, ASD: 2.01596
+2025-05-19 19:25:33 - INFO - Image 18 - Dice: 0.93474, Jaccard: 0.87748, HD95: 13.89244, ASD: 2.01596
+2025-05-19 19:25:34 - INFO - Image 19 - Dice: 0.80071, Jaccard: 0.66765, HD95: 30.82207, ASD: 3.31735
+2025-05-19 19:25:34 - INFO - Average metric (decoder 1): [ 0.79802027  0.70128911 12.54134997  2.04173886]
+2025-05-19 19:25:34 - INFO - Average metric of decoder 1: [ 0.79802027  0.70128911 12.54134997  2.04173886]
+2025-05-19 19:25:34 - INFO - Test results: [ 0.79802027  0.70128911 12.54134997  2.04173886]
+2025-05-19 19:25:35 - INFO - Image 19 - Dice: 0.80071, Jaccard: 0.66765, HD95: 30.82207, ASD: 3.31735
+2025-05-19 19:25:35 - INFO - Average metric (decoder 1): [ 0.79802027  0.70128911 12.54134997  2.04173886]
+2025-05-19 19:25:35 - INFO - Average metric of decoder 1: [ 0.79802027  0.70128911 12.54134997  2.04173886]
+2025-05-19 19:25:35 - INFO - Test results: [ 0.79802027  0.70128911 12.54134997  2.04173886]
+2025-05-19 19:25:37 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:25:37 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:25:37 - INFO - Creating model: VNet_16
+2025-05-19 19:25:37 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_380_checkpoint.pth
+2025-05-19 19:25:37 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_380_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:25:37 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:25:37 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:25:37 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:25:37 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:25:37 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:25:37 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:25:37 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:25:37 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:25:37 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:25:37 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:25:38 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:25:38 - INFO - Creating model: VNet_16
+2025-05-19 19:25:38 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_380_checkpoint.pth
+2025-05-19 19:25:38 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_380_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:25:38 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:25:38 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:25:38 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:25:38 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:25:38 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:25:38 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:25:38 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:25:38 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:25:38 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:25:39 - INFO - Image 00 - Dice: 0.77261, Jaccard: 0.62948, HD95: 16.55295, ASD: 2.95290
+2025-05-19 19:25:39 - INFO - Image 00 - Dice: 0.77261, Jaccard: 0.62948, HD95: 16.55295, ASD: 2.95290
+2025-05-19 19:25:40 - INFO - Image 01 - Dice: 0.85477, Jaccard: 0.74638, HD95: 19.00000, ASD: 1.72128
+2025-05-19 19:25:41 - INFO - Image 01 - Dice: 0.85477, Jaccard: 0.74638, HD95: 19.00000, ASD: 1.72128
+2025-05-19 19:25:43 - INFO - Image 02 - Dice: 0.88796, Jaccard: 0.79850, HD95: 10.86278, ASD: 1.22602
+2025-05-19 19:25:43 - INFO - Image 02 - Dice: 0.88796, Jaccard: 0.79850, HD95: 10.86278, ASD: 1.22602
+2025-05-19 19:25:45 - INFO - Image 03 - Dice: 0.89658, Jaccard: 0.81255, HD95: 6.63325, ASD: 1.27839
+2025-05-19 19:25:45 - INFO - Image 03 - Dice: 0.89658, Jaccard: 0.81255, HD95: 6.63325, ASD: 1.27839
+2025-05-19 19:25:46 - INFO - Image 04 - Dice: 0.88678, Jaccard: 0.79659, HD95: 5.38516, ASD: 1.60117
+2025-05-19 19:25:47 - INFO - Image 04 - Dice: 0.88678, Jaccard: 0.79659, HD95: 5.38516, ASD: 1.60117
+2025-05-19 19:25:49 - INFO - Image 05 - Dice: 0.00052, Jaccard: 0.00026, HD95: 104.62313, ASD: 3.86189
+2025-05-19 19:25:49 - INFO - Image 05 - Dice: 0.00052, Jaccard: 0.00026, HD95: 104.62313, ASD: 3.86189
+2025-05-19 19:25:50 - INFO - Image 06 - Dice: 0.93852, Jaccard: 0.88415, HD95: 3.00000, ASD: 1.13120
+2025-05-19 19:25:51 - INFO - Image 06 - Dice: 0.93852, Jaccard: 0.88415, HD95: 3.00000, ASD: 1.13120
+2025-05-19 19:25:52 - INFO - Image 07 - Dice: 0.66433, Jaccard: 0.49737, HD95: 35.39774, ASD: 2.68930
+2025-05-19 19:25:53 - INFO - Image 07 - Dice: 0.66433, Jaccard: 0.49737, HD95: 35.39774, ASD: 2.68930
+2025-05-19 19:25:54 - INFO - Image 08 - Dice: 0.93325, Jaccard: 0.87485, HD95: 5.19615, ASD: 2.06687
+2025-05-19 19:25:55 - INFO - Image 08 - Dice: 0.93325, Jaccard: 0.87485, HD95: 5.19615, ASD: 2.06687
+2025-05-19 19:25:56 - INFO - Image 09 - Dice: 0.91663, Jaccard: 0.84609, HD95: 4.35890, ASD: 1.11837
+2025-05-19 19:25:57 - INFO - Image 09 - Dice: 0.91663, Jaccard: 0.84609, HD95: 4.35890, ASD: 1.11837
+2025-05-19 19:25:58 - INFO - Image 10 - Dice: 0.83800, Jaccard: 0.72117, HD95: 17.57840, ASD: 1.89677
+2025-05-19 19:25:59 - INFO - Image 10 - Dice: 0.83800, Jaccard: 0.72117, HD95: 17.57840, ASD: 1.89677
+2025-05-19 19:25:59 - INFO - Image 11 - Dice: 0.85308, Jaccard: 0.74380, HD95: 9.84886, ASD: 1.66155
+2025-05-19 19:26:00 - INFO - Image 11 - Dice: 0.85308, Jaccard: 0.74380, HD95: 9.84886, ASD: 1.66155
+2025-05-19 19:26:01 - INFO - Image 12 - Dice: 0.87213, Jaccard: 0.77326, HD95: 11.68972, ASD: 1.31358
+2025-05-19 19:26:02 - INFO - Image 12 - Dice: 0.87213, Jaccard: 0.77326, HD95: 11.68972, ASD: 1.31358
+2025-05-19 19:26:03 - INFO - Image 13 - Dice: 0.90853, Jaccard: 0.83239, HD95: 6.16441, ASD: 1.13367
+2025-05-19 19:26:04 - INFO - Image 13 - Dice: 0.90853, Jaccard: 0.83239, HD95: 6.16441, ASD: 1.13367
+2025-05-19 19:26:04 - INFO - Image 14 - Dice: 0.91981, Jaccard: 0.85153, HD95: 6.16441, ASD: 1.24536
+2025-05-19 19:26:05 - INFO - Image 14 - Dice: 0.91981, Jaccard: 0.85153, HD95: 6.16441, ASD: 1.24536
+2025-05-19 19:26:06 - INFO - Image 15 - Dice: 0.91944, Jaccard: 0.85090, HD95: 4.58258, ASD: 1.48538
+2025-05-19 19:26:07 - INFO - Image 15 - Dice: 0.91944, Jaccard: 0.85090, HD95: 4.58258, ASD: 1.48538
+2025-05-19 19:26:07 - INFO - Image 16 - Dice: 0.55500, Jaccard: 0.38409, HD95: 20.39608, ASD: 5.15336
+2025-05-19 19:26:08 - INFO - Image 16 - Dice: 0.55500, Jaccard: 0.38409, HD95: 20.39608, ASD: 5.15336
+2025-05-19 19:26:09 - INFO - Image 17 - Dice: 0.88012, Jaccard: 0.78591, HD95: 5.83095, ASD: 1.64960
+2025-05-19 19:26:10 - INFO - Image 17 - Dice: 0.88012, Jaccard: 0.78591, HD95: 5.83095, ASD: 1.64960
+2025-05-19 19:26:12 - INFO - Image 18 - Dice: 0.93461, Jaccard: 0.87725, HD95: 15.00000, ASD: 2.16242
+2025-05-19 19:26:13 - INFO - Image 18 - Dice: 0.93461, Jaccard: 0.87725, HD95: 15.00000, ASD: 2.16242
+2025-05-19 19:26:14 - INFO - Image 19 - Dice: 0.81326, Jaccard: 0.68528, HD95: 32.21646, ASD: 2.93275
+2025-05-19 19:26:14 - INFO - Average metric (decoder 1): [ 0.8122969   0.71958954 17.02409642  2.01409187]
+2025-05-19 19:26:14 - INFO - Average metric of decoder 1: [ 0.8122969   0.71958954 17.02409642  2.01409187]
+2025-05-19 19:26:14 - INFO - Test results: [ 0.8122969   0.71958954 17.02409642  2.01409187]
+2025-05-19 19:26:15 - INFO - Image 19 - Dice: 0.81326, Jaccard: 0.68528, HD95: 32.21646, ASD: 2.93275
+2025-05-19 19:26:15 - INFO - Average metric (decoder 1): [ 0.8122969   0.71958954 17.02409642  2.01409187]
+2025-05-19 19:26:15 - INFO - Average metric of decoder 1: [ 0.8122969   0.71958954 17.02409642  2.01409187]
+2025-05-19 19:26:15 - INFO - Test results: [ 0.8122969   0.71958954 17.02409642  2.01409187]
+2025-05-19 19:26:17 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:26:17 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:26:17 - INFO - Creating model: VNet_16
+2025-05-19 19:26:17 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_400_checkpoint.pth
+2025-05-19 19:26:17 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_400_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:26:17 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:26:17 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:26:17 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:26:17 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:26:17 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:26:17 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:26:17 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:26:17 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:26:17 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:26:18 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:26:18 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:26:18 - INFO - Creating model: VNet_16
+2025-05-19 19:26:18 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_400_checkpoint.pth
+2025-05-19 19:26:18 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_400_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:26:18 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:26:18 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:26:18 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:26:18 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:26:18 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:26:18 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:26:18 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:26:18 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:26:18 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:26:18 - INFO - Image 00 - Dice: 0.30606, Jaccard: 0.18068, HD95: 39.16504, ASD: 3.65071
+2025-05-19 19:26:19 - INFO - Image 00 - Dice: 0.30606, Jaccard: 0.18068, HD95: 39.16504, ASD: 3.65071
+2025-05-19 19:26:20 - INFO - Image 01 - Dice: 0.80656, Jaccard: 0.67583, HD95: 16.15549, ASD: 2.53209
+2025-05-19 19:26:21 - INFO - Image 01 - Dice: 0.80656, Jaccard: 0.67583, HD95: 16.15549, ASD: 2.53209
+2025-05-19 19:26:22 - INFO - Image 02 - Dice: 0.90675, Jaccard: 0.82940, HD95: 6.32456, ASD: 1.31258
+2025-05-19 19:26:23 - INFO - Image 02 - Dice: 0.90675, Jaccard: 0.82940, HD95: 6.32456, ASD: 1.31258
+2025-05-19 19:26:24 - INFO - Image 03 - Dice: 0.87679, Jaccard: 0.78062, HD95: 6.70820, ASD: 1.76991
+2025-05-19 19:26:25 - INFO - Image 03 - Dice: 0.87679, Jaccard: 0.78062, HD95: 6.70820, ASD: 1.76991
+2025-05-19 19:26:26 - INFO - Image 04 - Dice: 0.90608, Jaccard: 0.82829, HD95: 7.28011, ASD: 2.13410
+2025-05-19 19:26:27 - INFO - Image 04 - Dice: 0.90608, Jaccard: 0.82829, HD95: 7.28011, ASD: 2.13410
+2025-05-19 19:26:28 - INFO - Image 05 - Dice: 0.00201, Jaccard: 0.00101, HD95: 146.98775, ASD: 2.66902
+2025-05-19 19:26:29 - INFO - Image 05 - Dice: 0.00201, Jaccard: 0.00101, HD95: 146.98775, ASD: 2.66902
+2025-05-19 19:26:30 - INFO - Image 06 - Dice: 0.93726, Jaccard: 0.88192, HD95: 3.60555, ASD: 1.32931
+2025-05-19 19:26:31 - INFO - Image 06 - Dice: 0.93726, Jaccard: 0.88192, HD95: 3.60555, ASD: 1.32931
+2025-05-19 19:26:32 - INFO - Image 07 - Dice: 0.56323, Jaccard: 0.39201, HD95: 39.63963, ASD: 3.65223
+2025-05-19 19:26:33 - INFO - Image 07 - Dice: 0.56323, Jaccard: 0.39201, HD95: 39.63963, ASD: 3.65223
+2025-05-19 19:26:34 - INFO - Image 08 - Dice: 0.92662, Jaccard: 0.86328, HD95: 6.16441, ASD: 2.43952
+2025-05-19 19:26:35 - INFO - Image 08 - Dice: 0.92662, Jaccard: 0.86328, HD95: 6.16441, ASD: 2.43952
+2025-05-19 19:26:36 - INFO - Image 09 - Dice: 0.92287, Jaccard: 0.85679, HD95: 4.00000, ASD: 1.20377
+2025-05-19 19:26:37 - INFO - Image 09 - Dice: 0.92287, Jaccard: 0.85679, HD95: 4.00000, ASD: 1.20377
+2025-05-19 19:26:37 - INFO - Image 10 - Dice: 0.77562, Jaccard: 0.63349, HD95: 15.55635, ASD: 2.97847
+2025-05-19 19:26:39 - INFO - Image 10 - Dice: 0.77562, Jaccard: 0.63349, HD95: 15.55635, ASD: 2.97847
+2025-05-19 19:26:39 - INFO - Image 11 - Dice: 0.87287, Jaccard: 0.77441, HD95: 8.77496, ASD: 1.48004
+2025-05-19 19:26:40 - INFO - Image 11 - Dice: 0.87287, Jaccard: 0.77441, HD95: 8.77496, ASD: 1.48004
+2025-05-19 19:26:41 - INFO - Image 12 - Dice: 0.88640, Jaccard: 0.79597, HD95: 12.08305, ASD: 1.26091
+2025-05-19 19:26:42 - INFO - Image 12 - Dice: 0.88640, Jaccard: 0.79597, HD95: 12.08305, ASD: 1.26091
+2025-05-19 19:26:43 - INFO - Image 13 - Dice: 0.89162, Jaccard: 0.80443, HD95: 8.54400, ASD: 2.32696
+2025-05-19 19:26:44 - INFO - Image 13 - Dice: 0.89162, Jaccard: 0.80443, HD95: 8.54400, ASD: 2.32696
+2025-05-19 19:26:44 - INFO - Image 14 - Dice: 0.91598, Jaccard: 0.84499, HD95: 5.83095, ASD: 1.30105
+2025-05-19 19:26:46 - INFO - Image 14 - Dice: 0.91598, Jaccard: 0.84499, HD95: 5.83095, ASD: 1.30105
+2025-05-19 19:26:46 - INFO - Image 15 - Dice: 0.91862, Jaccard: 0.84949, HD95: 4.12311, ASD: 1.56814
+2025-05-19 19:26:47 - INFO - Image 15 - Dice: 0.91862, Jaccard: 0.84949, HD95: 4.12311, ASD: 1.56814
+2025-05-19 19:26:47 - INFO - Image 16 - Dice: 0.55074, Jaccard: 0.38001, HD95: 16.88194, ASD: 6.10692
+2025-05-19 19:26:49 - INFO - Image 16 - Dice: 0.55074, Jaccard: 0.38001, HD95: 16.88194, ASD: 6.10692
+2025-05-19 19:26:49 - INFO - Image 17 - Dice: 0.87921, Jaccard: 0.78446, HD95: 7.21110, ASD: 1.91880
+2025-05-19 19:26:51 - INFO - Image 17 - Dice: 0.87921, Jaccard: 0.78446, HD95: 7.21110, ASD: 1.91880
+2025-05-19 19:26:51 - INFO - Image 18 - Dice: 0.93399, Jaccard: 0.87615, HD95: 15.93738, ASD: 2.34427
+2025-05-19 19:26:53 - INFO - Image 18 - Dice: 0.93399, Jaccard: 0.87615, HD95: 15.93738, ASD: 2.34427
+2025-05-19 19:26:54 - INFO - Image 19 - Dice: 0.81933, Jaccard: 0.69396, HD95: 29.88311, ASD: 3.05936
+2025-05-19 19:26:54 - INFO - Average metric (decoder 1): [ 0.77993132  0.68636015 20.04283465  2.35190735]
+2025-05-19 19:26:54 - INFO - Average metric of decoder 1: [ 0.77993132  0.68636015 20.04283465  2.35190735]
+2025-05-19 19:26:54 - INFO - Test results: [ 0.77993132  0.68636015 20.04283465  2.35190735]
+2025-05-19 19:26:55 - INFO - Image 19 - Dice: 0.81933, Jaccard: 0.69396, HD95: 29.88311, ASD: 3.05936
+2025-05-19 19:26:55 - INFO - Average metric (decoder 1): [ 0.77993132  0.68636015 20.04283465  2.35190735]
+2025-05-19 19:26:55 - INFO - Average metric of decoder 1: [ 0.77993132  0.68636015 20.04283465  2.35190735]
+2025-05-19 19:26:55 - INFO - Test results: [ 0.77993132  0.68636015 20.04283465  2.35190735]
+2025-05-19 19:26:56 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:26:56 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:26:56 - INFO - Creating model: VNet_16
+2025-05-19 19:26:56 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_40_checkpoint.pth
+2025-05-19 19:26:56 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_40_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:26:56 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:26:56 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:26:56 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:26:56 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:26:56 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:26:56 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:26:56 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:26:56 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:26:56 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:26:58 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:26:58 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:26:58 - INFO - Creating model: VNet_16
+2025-05-19 19:26:58 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_40_checkpoint.pth
+2025-05-19 19:26:58 - INFO - Image 00 - Dice: 0.00071, Jaccard: 0.00035, HD95: 72.93936, ASD: 7.88661
+2025-05-19 19:26:58 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_40_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:26:58 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:26:58 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:26:58 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:26:58 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:26:58 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:26:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:26:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:26:58 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:26:58 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:27:00 - INFO - Image 00 - Dice: 0.00071, Jaccard: 0.00035, HD95: 72.93936, ASD: 7.88661
+2025-05-19 19:27:00 - INFO - Image 01 - Dice: 0.19148, Jaccard: 0.10588, HD95: 52.77310, ASD: 9.77898
+2025-05-19 19:27:02 - INFO - Image 01 - Dice: 0.19148, Jaccard: 0.10588, HD95: 52.77310, ASD: 9.77898
+2025-05-19 19:27:02 - INFO - Image 02 - Dice: 0.71077, Jaccard: 0.55131, HD95: 21.47091, ASD: 3.50877
+2025-05-19 19:27:04 - INFO - Image 02 - Dice: 0.71077, Jaccard: 0.55131, HD95: 21.47091, ASD: 3.50877
+2025-05-19 19:27:04 - INFO - Image 03 - Dice: 0.84110, Jaccard: 0.72578, HD95: 13.45362, ASD: 1.94181
+2025-05-19 19:27:05 - INFO - Image 04 - Dice: 0.64623, Jaccard: 0.47735, HD95: 33.61398, ASD: 3.06263
+2025-05-19 19:27:06 - INFO - Image 03 - Dice: 0.84110, Jaccard: 0.72578, HD95: 13.45362, ASD: 1.94181
+2025-05-19 19:27:07 - INFO - Image 04 - Dice: 0.64623, Jaccard: 0.47735, HD95: 33.61398, ASD: 3.06263
+2025-05-19 19:27:07 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:27:09 - INFO - Image 06 - Dice: 0.89045, Jaccard: 0.80253, HD95: 9.27362, ASD: 1.46718
+2025-05-19 19:27:09 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:27:11 - INFO - Image 06 - Dice: 0.89045, Jaccard: 0.80253, HD95: 9.27362, ASD: 1.46718
+2025-05-19 19:27:11 - INFO - Image 07 - Dice: 0.46394, Jaccard: 0.30203, HD95: 49.20366, ASD: 4.58711
+2025-05-19 19:27:13 - INFO - Image 07 - Dice: 0.46394, Jaccard: 0.30203, HD95: 49.20366, ASD: 4.58711
+2025-05-19 19:27:13 - INFO - Image 08 - Dice: 0.85626, Jaccard: 0.74865, HD95: 13.30601, ASD: 2.37374
+2025-05-19 19:27:15 - INFO - Image 09 - Dice: 0.81514, Jaccard: 0.68796, HD95: 21.67948, ASD: 2.36798
+2025-05-19 19:27:15 - INFO - Image 08 - Dice: 0.85626, Jaccard: 0.74865, HD95: 13.30601, ASD: 2.37374
+2025-05-19 19:27:17 - INFO - Image 10 - Dice: 0.61646, Jaccard: 0.44557, HD95: 31.09661, ASD: 4.44442
+2025-05-19 19:27:17 - INFO - Image 09 - Dice: 0.81514, Jaccard: 0.68796, HD95: 21.67948, ASD: 2.36798
+2025-05-19 19:27:18 - INFO - Image 11 - Dice: 0.75310, Jaccard: 0.60397, HD95: 20.61553, ASD: 2.97576
+2025-05-19 19:27:18 - INFO - Image 10 - Dice: 0.61646, Jaccard: 0.44557, HD95: 31.09661, ASD: 4.44442
+2025-05-19 19:27:20 - INFO - Image 12 - Dice: 0.75233, Jaccard: 0.60299, HD95: 22.38303, ASD: 2.90517
+2025-05-19 19:27:20 - INFO - Image 11 - Dice: 0.75310, Jaccard: 0.60397, HD95: 20.61553, ASD: 2.97576
+2025-05-19 19:27:22 - INFO - Image 13 - Dice: 0.46459, Jaccard: 0.30259, HD95: 30.29026, ASD: 7.30720
+2025-05-19 19:27:22 - INFO - Image 12 - Dice: 0.75233, Jaccard: 0.60299, HD95: 22.38303, ASD: 2.90517
+2025-05-19 19:27:23 - INFO - Image 14 - Dice: 0.77343, Jaccard: 0.63057, HD95: 22.64950, ASD: 6.72540
+2025-05-19 19:27:24 - INFO - Image 13 - Dice: 0.46459, Jaccard: 0.30259, HD95: 30.29026, ASD: 7.30720
+2025-05-19 19:27:25 - INFO - Image 15 - Dice: 0.87959, Jaccard: 0.78507, HD95: 13.37909, ASD: 1.84870
+2025-05-19 19:27:25 - INFO - Image 14 - Dice: 0.77343, Jaccard: 0.63057, HD95: 22.64950, ASD: 6.72540
+2025-05-19 19:27:26 - INFO - Image 16 - Dice: 0.00000, Jaccard: 0.00000, HD95: 147.22177, ASD: 53.51161
+2025-05-19 19:27:27 - INFO - Image 15 - Dice: 0.87959, Jaccard: 0.78507, HD95: 13.37909, ASD: 1.84870
+2025-05-19 19:27:28 - INFO - Image 17 - Dice: 0.82265, Jaccard: 0.69873, HD95: 13.78405, ASD: 2.33314
+2025-05-19 19:27:28 - INFO - Image 16 - Dice: 0.00000, Jaccard: 0.00000, HD95: 147.22177, ASD: 53.51161
+2025-05-19 19:27:30 - INFO - Image 17 - Dice: 0.82265, Jaccard: 0.69873, HD95: 13.78405, ASD: 2.33314
+2025-05-19 19:27:30 - INFO - Image 18 - Dice: 0.89703, Jaccard: 0.81328, HD95: 15.00000, ASD: 1.95846
+2025-05-19 19:27:32 - INFO - Image 18 - Dice: 0.89703, Jaccard: 0.81328, HD95: 15.00000, ASD: 1.95846
+2025-05-19 19:27:33 - INFO - Image 19 - Dice: 0.39370, Jaccard: 0.24510, HD95: 69.01811, ASD: 6.76129
+2025-05-19 19:27:33 - INFO - Average metric (decoder 1): [ 0.58844798  0.47648527 33.65758495  6.38729844]
+2025-05-19 19:27:33 - INFO - Average metric of decoder 1: [ 0.58844798  0.47648527 33.65758495  6.38729844]
+2025-05-19 19:27:33 - INFO - Test results: [ 0.58844798  0.47648527 33.65758495  6.38729844]
+2025-05-19 19:27:35 - INFO - Image 19 - Dice: 0.39370, Jaccard: 0.24510, HD95: 69.01811, ASD: 6.76129
+2025-05-19 19:27:35 - INFO - Average metric (decoder 1): [ 0.58844798  0.47648527 33.65758495  6.38729844]
+2025-05-19 19:27:35 - INFO - Average metric of decoder 1: [ 0.58844798  0.47648527 33.65758495  6.38729844]
+2025-05-19 19:27:35 - INFO - Test results: [ 0.58844798  0.47648527 33.65758495  6.38729844]
+2025-05-19 19:27:35 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:27:35 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:27:35 - INFO - Creating model: VNet_16
+2025-05-19 19:27:35 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_420_checkpoint.pth
+2025-05-19 19:27:35 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_420_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:27:35 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:27:35 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:27:35 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:27:35 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:27:35 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:27:35 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:27:35 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:27:35 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:27:35 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:27:37 - INFO - Image 00 - Dice: 0.03448, Jaccard: 0.01754, HD95: 103.27149, ASD: 2.11744
+2025-05-19 19:27:37 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:27:37 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:27:37 - INFO - Creating model: VNet_16
+2025-05-19 19:27:37 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_420_checkpoint.pth
+2025-05-19 19:27:38 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_420_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:27:38 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:27:38 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:27:38 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:27:38 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:27:38 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:27:38 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:27:38 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:27:38 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:27:38 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:27:39 - INFO - Image 01 - Dice: 0.87401, Jaccard: 0.77622, HD95: 15.36229, ASD: 1.58994
+2025-05-19 19:27:39 - INFO - Image 00 - Dice: 0.03448, Jaccard: 0.01754, HD95: 103.27149, ASD: 2.11744
+2025-05-19 19:27:41 - INFO - Image 02 - Dice: 0.91034, Jaccard: 0.83544, HD95: 7.85169, ASD: 1.17492
+2025-05-19 19:27:41 - INFO - Image 01 - Dice: 0.87401, Jaccard: 0.77622, HD95: 15.36229, ASD: 1.58994
+2025-05-19 19:27:43 - INFO - Image 03 - Dice: 0.88635, Jaccard: 0.79589, HD95: 6.40312, ASD: 1.45247
+2025-05-19 19:27:43 - INFO - Image 02 - Dice: 0.91034, Jaccard: 0.83544, HD95: 7.85169, ASD: 1.17492
+2025-05-19 19:27:44 - INFO - Image 04 - Dice: 0.88789, Jaccard: 0.79838, HD95: 4.35890, ASD: 1.49104
+2025-05-19 19:27:45 - INFO - Image 03 - Dice: 0.88635, Jaccard: 0.79589, HD95: 6.40312, ASD: 1.45247
+2025-05-19 19:27:47 - INFO - Image 04 - Dice: 0.88789, Jaccard: 0.79838, HD95: 4.35890, ASD: 1.49104
+2025-05-19 19:27:47 - INFO - Image 05 - Dice: 0.00081, Jaccard: 0.00040, HD95: 144.77983, ASD: 2.76065
+2025-05-19 19:27:48 - INFO - Image 06 - Dice: 0.93851, Jaccard: 0.88414, HD95: 3.00000, ASD: 1.14299
+2025-05-19 19:27:49 - INFO - Image 05 - Dice: 0.00081, Jaccard: 0.00040, HD95: 144.77983, ASD: 2.76065
+2025-05-19 19:27:50 - INFO - Image 07 - Dice: 0.04028, Jaccard: 0.02056, HD95: 61.28621, ASD: 3.78905
+2025-05-19 19:27:51 - INFO - Image 06 - Dice: 0.93851, Jaccard: 0.88414, HD95: 3.00000, ASD: 1.14299
+2025-05-19 19:27:53 - INFO - Image 08 - Dice: 0.91381, Jaccard: 0.84129, HD95: 5.65685, ASD: 1.45967
+2025-05-19 19:27:53 - INFO - Image 07 - Dice: 0.04028, Jaccard: 0.02056, HD95: 61.28621, ASD: 3.78905
+2025-05-19 19:27:54 - INFO - Image 09 - Dice: 0.92064, Jaccard: 0.85295, HD95: 4.35890, ASD: 1.10085
+2025-05-19 19:27:55 - INFO - Image 08 - Dice: 0.91381, Jaccard: 0.84129, HD95: 5.65685, ASD: 1.45967
+2025-05-19 19:27:56 - INFO - Image 10 - Dice: 0.78718, Jaccard: 0.64904, HD95: 17.88854, ASD: 2.56726
+2025-05-19 19:27:57 - INFO - Image 09 - Dice: 0.92064, Jaccard: 0.85295, HD95: 4.35890, ASD: 1.10085
+2025-05-19 19:27:58 - INFO - Image 11 - Dice: 0.85767, Jaccard: 0.75081, HD95: 10.63015, ASD: 1.68702
+2025-05-19 19:27:58 - INFO - Image 10 - Dice: 0.78718, Jaccard: 0.64904, HD95: 17.88854, ASD: 2.56726
+2025-05-19 19:27:59 - INFO - Image 12 - Dice: 0.88543, Jaccard: 0.79442, HD95: 13.63818, ASD: 1.18706
+2025-05-19 19:28:00 - INFO - Image 11 - Dice: 0.85767, Jaccard: 0.75081, HD95: 10.63015, ASD: 1.68702
+2025-05-19 19:28:01 - INFO - Image 13 - Dice: 0.90509, Jaccard: 0.82663, HD95: 6.08276, ASD: 1.23098
+2025-05-19 19:28:02 - INFO - Image 12 - Dice: 0.88543, Jaccard: 0.79442, HD95: 13.63818, ASD: 1.18706
+2025-05-19 19:28:03 - INFO - Image 14 - Dice: 0.92330, Jaccard: 0.85752, HD95: 5.09902, ASD: 1.14590
+2025-05-19 19:28:04 - INFO - Image 13 - Dice: 0.90509, Jaccard: 0.82663, HD95: 6.08276, ASD: 1.23098
+2025-05-19 19:28:04 - INFO - Image 15 - Dice: 0.92135, Jaccard: 0.85417, HD95: 4.24264, ASD: 1.31517
+2025-05-19 19:28:05 - INFO - Image 14 - Dice: 0.92330, Jaccard: 0.85752, HD95: 5.09902, ASD: 1.14590
+2025-05-19 19:28:06 - INFO - Image 16 - Dice: 0.51637, Jaccard: 0.34804, HD95: 23.53720, ASD: 4.95704
+2025-05-19 19:28:07 - INFO - Image 15 - Dice: 0.92135, Jaccard: 0.85417, HD95: 4.24264, ASD: 1.31517
+2025-05-19 19:28:07 - INFO - Image 17 - Dice: 0.87738, Jaccard: 0.78155, HD95: 6.40312, ASD: 1.76163
+2025-05-19 19:28:08 - INFO - Image 16 - Dice: 0.51637, Jaccard: 0.34804, HD95: 23.53720, ASD: 4.95704
+2025-05-19 19:28:10 - INFO - Image 18 - Dice: 0.93134, Jaccard: 0.87150, HD95: 17.57840, ASD: 2.20643
+2025-05-19 19:28:10 - INFO - Image 17 - Dice: 0.87738, Jaccard: 0.78155, HD95: 6.40312, ASD: 1.76163
+2025-05-19 19:28:12 - INFO - Image 19 - Dice: 0.71065, Jaccard: 0.55118, HD95: 27.20294, ASD: 4.11596
+2025-05-19 19:28:12 - INFO - Average metric (decoder 1): [ 0.73614326  0.65538321 24.43161268  2.01267333]
+2025-05-19 19:28:12 - INFO - Average metric of decoder 1: [ 0.73614326  0.65538321 24.43161268  2.01267333]
+2025-05-19 19:28:12 - INFO - Test results: [ 0.73614326  0.65538321 24.43161268  2.01267333]
+2025-05-19 19:28:13 - INFO - Image 18 - Dice: 0.93134, Jaccard: 0.87150, HD95: 17.57840, ASD: 2.20643
+2025-05-19 19:28:15 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:28:15 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:28:15 - INFO - Creating model: VNet_16
+2025-05-19 19:28:15 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_440_checkpoint.pth
+2025-05-19 19:28:15 - INFO - Image 19 - Dice: 0.71065, Jaccard: 0.55118, HD95: 27.20294, ASD: 4.11596
+2025-05-19 19:28:15 - INFO - Average metric (decoder 1): [ 0.73614326  0.65538321 24.43161268  2.01267333]
+2025-05-19 19:28:15 - INFO - Average metric of decoder 1: [ 0.73614326  0.65538321 24.43161268  2.01267333]
+2025-05-19 19:28:15 - INFO - Test results: [ 0.73614326  0.65538321 24.43161268  2.01267333]
+2025-05-19 19:28:15 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_440_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:28:15 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:28:15 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:28:15 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:28:15 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:28:15 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:28:15 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:28:15 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:28:15 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:28:15 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:28:17 - INFO - Image 00 - Dice: 0.59757, Jaccard: 0.42610, HD95: 29.54657, ASD: 3.44352
+2025-05-19 19:28:17 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:28:17 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:28:17 - INFO - Creating model: VNet_16
+2025-05-19 19:28:17 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_440_checkpoint.pth
+2025-05-19 19:28:18 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_440_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:28:18 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:28:18 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:28:18 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:28:18 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:28:18 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:28:18 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:28:18 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:28:18 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:28:18 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:28:18 - INFO - Image 01 - Dice: 0.79934, Jaccard: 0.66575, HD95: 12.84523, ASD: 2.63456
+2025-05-19 19:28:19 - INFO - Image 00 - Dice: 0.59757, Jaccard: 0.42610, HD95: 29.54657, ASD: 3.44352
+2025-05-19 19:28:20 - INFO - Image 02 - Dice: 0.91039, Jaccard: 0.83552, HD95: 6.70820, ASD: 1.20318
+2025-05-19 19:28:21 - INFO - Image 01 - Dice: 0.79934, Jaccard: 0.66575, HD95: 12.84523, ASD: 2.63456
+2025-05-19 19:28:22 - INFO - Image 03 - Dice: 0.90533, Jaccard: 0.82704, HD95: 5.00000, ASD: 1.38324
+2025-05-19 19:28:23 - INFO - Image 02 - Dice: 0.91039, Jaccard: 0.83552, HD95: 6.70820, ASD: 1.20318
+2025-05-19 19:28:24 - INFO - Image 04 - Dice: 0.90828, Jaccard: 0.83197, HD95: 4.12311, ASD: 1.35889
+2025-05-19 19:28:25 - INFO - Image 03 - Dice: 0.90533, Jaccard: 0.82704, HD95: 5.00000, ASD: 1.38324
+2025-05-19 19:28:26 - INFO - Image 05 - Dice: 0.03675, Jaccard: 0.01872, HD95: 106.63958, ASD: 1.98058
+2025-05-19 19:28:27 - INFO - Image 04 - Dice: 0.90828, Jaccard: 0.83197, HD95: 4.12311, ASD: 1.35889
+2025-05-19 19:28:28 - INFO - Image 06 - Dice: 0.93338, Jaccard: 0.87508, HD95: 3.60555, ASD: 1.29374
+2025-05-19 19:28:29 - INFO - Image 05 - Dice: 0.03675, Jaccard: 0.01872, HD95: 106.63958, ASD: 1.98058
+2025-05-19 19:28:30 - INFO - Image 07 - Dice: 0.68398, Jaccard: 0.51973, HD95: 30.29851, ASD: 2.42009
+2025-05-19 19:28:31 - INFO - Image 06 - Dice: 0.93338, Jaccard: 0.87508, HD95: 3.60555, ASD: 1.29374
+2025-05-19 19:28:32 - INFO - Image 08 - Dice: 0.93381, Jaccard: 0.87583, HD95: 4.35890, ASD: 1.21186
+2025-05-19 19:28:33 - INFO - Image 07 - Dice: 0.68398, Jaccard: 0.51973, HD95: 30.29851, ASD: 2.42009
+2025-05-19 19:28:34 - INFO - Image 09 - Dice: 0.92644, Jaccard: 0.86296, HD95: 3.60555, ASD: 1.07476
+2025-05-19 19:28:35 - INFO - Image 08 - Dice: 0.93381, Jaccard: 0.87583, HD95: 4.35890, ASD: 1.21186
+2025-05-19 19:28:36 - INFO - Image 10 - Dice: 0.83158, Jaccard: 0.71172, HD95: 12.24745, ASD: 2.48772
+2025-05-19 19:28:37 - INFO - Image 09 - Dice: 0.92644, Jaccard: 0.86296, HD95: 3.60555, ASD: 1.07476
+2025-05-19 19:28:37 - INFO - Image 11 - Dice: 0.89010, Jaccard: 0.80196, HD95: 4.58258, ASD: 1.44013
+2025-05-19 19:28:39 - INFO - Image 10 - Dice: 0.83158, Jaccard: 0.71172, HD95: 12.24745, ASD: 2.48772
+2025-05-19 19:28:39 - INFO - Image 12 - Dice: 0.89096, Jaccard: 0.80335, HD95: 10.29563, ASD: 1.22833
+2025-05-19 19:28:40 - INFO - Image 11 - Dice: 0.89010, Jaccard: 0.80196, HD95: 4.58258, ASD: 1.44013
+2025-05-19 19:28:41 - INFO - Image 13 - Dice: 0.90188, Jaccard: 0.82130, HD95: 6.00000, ASD: 1.51445
+2025-05-19 19:28:42 - INFO - Image 12 - Dice: 0.89096, Jaccard: 0.80335, HD95: 10.29563, ASD: 1.22833
+2025-05-19 19:28:42 - INFO - Image 14 - Dice: 0.92812, Jaccard: 0.86588, HD95: 4.89898, ASD: 1.11535
+2025-05-19 19:28:44 - INFO - Image 15 - Dice: 0.92545, Jaccard: 0.86125, HD95: 3.74166, ASD: 1.31790
+2025-05-19 19:28:44 - INFO - Image 13 - Dice: 0.90188, Jaccard: 0.82130, HD95: 6.00000, ASD: 1.51445
+2025-05-19 19:28:45 - INFO - Image 16 - Dice: 0.74884, Jaccard: 0.59852, HD95: 15.00000, ASD: 4.74359
+2025-05-19 19:28:45 - INFO - Image 14 - Dice: 0.92812, Jaccard: 0.86588, HD95: 4.89898, ASD: 1.11535
+2025-05-19 19:28:47 - INFO - Image 15 - Dice: 0.92545, Jaccard: 0.86125, HD95: 3.74166, ASD: 1.31790
+2025-05-19 19:28:47 - INFO - Image 17 - Dice: 0.87783, Jaccard: 0.78226, HD95: 5.91608, ASD: 1.81337
+2025-05-19 19:28:49 - INFO - Image 16 - Dice: 0.74884, Jaccard: 0.59852, HD95: 15.00000, ASD: 4.74359
+2025-05-19 19:28:50 - INFO - Image 18 - Dice: 0.92639, Jaccard: 0.86287, HD95: 16.40122, ASD: 2.38616
+2025-05-19 19:28:50 - INFO - Image 17 - Dice: 0.87783, Jaccard: 0.78226, HD95: 5.91608, ASD: 1.81337
+2025-05-19 19:28:52 - INFO - Image 19 - Dice: 0.83728, Jaccard: 0.72011, HD95: 25.61250, ASD: 3.14598
+2025-05-19 19:28:52 - INFO - Average metric (decoder 1): [ 0.81968543  0.72839679 15.57136494  1.95986944]
+2025-05-19 19:28:52 - INFO - Average metric of decoder 1: [ 0.81968543  0.72839679 15.57136494  1.95986944]
+2025-05-19 19:28:52 - INFO - Test results: [ 0.81968543  0.72839679 15.57136494  1.95986944]
+2025-05-19 19:28:53 - INFO - Image 18 - Dice: 0.92639, Jaccard: 0.86287, HD95: 16.40122, ASD: 2.38616
+2025-05-19 19:28:55 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:28:55 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:28:55 - INFO - Creating model: VNet_16
+2025-05-19 19:28:55 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_460_checkpoint.pth
+2025-05-19 19:28:55 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_460_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:28:55 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:28:55 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:28:55 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:28:55 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:28:55 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:28:55 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:28:55 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:28:55 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:28:55 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:28:55 - INFO - Image 19 - Dice: 0.83728, Jaccard: 0.72011, HD95: 25.61250, ASD: 3.14598
+2025-05-19 19:28:55 - INFO - Average metric (decoder 1): [ 0.81968543  0.72839679 15.57136494  1.95986944]
+2025-05-19 19:28:55 - INFO - Average metric of decoder 1: [ 0.81968543  0.72839679 15.57136494  1.95986944]
+2025-05-19 19:28:55 - INFO - Test results: [ 0.81968543  0.72839679 15.57136494  1.95986944]
+2025-05-19 19:28:56 - INFO - Image 00 - Dice: 0.73792, Jaccard: 0.58468, HD95: 18.49324, ASD: 2.91229
+2025-05-19 19:28:58 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:28:58 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:28:58 - INFO - Creating model: VNet_16
+2025-05-19 19:28:58 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_460_checkpoint.pth
+2025-05-19 19:28:58 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_460_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:28:58 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:28:58 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:28:58 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:28:58 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:28:58 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:28:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:28:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:28:58 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:28:58 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:28:58 - INFO - Image 01 - Dice: 0.82774, Jaccard: 0.70610, HD95: 16.54236, ASD: 2.15611
+2025-05-19 19:29:00 - INFO - Image 00 - Dice: 0.73792, Jaccard: 0.58468, HD95: 18.49324, ASD: 2.91229
+2025-05-19 19:29:00 - INFO - Image 02 - Dice: 0.89296, Jaccard: 0.80662, HD95: 9.00000, ASD: 1.19253
+2025-05-19 19:29:02 - INFO - Image 01 - Dice: 0.82774, Jaccard: 0.70610, HD95: 16.54236, ASD: 2.15611
+2025-05-19 19:29:02 - INFO - Image 03 - Dice: 0.90881, Jaccard: 0.83286, HD95: 4.47214, ASD: 1.25678
+2025-05-19 19:29:04 - INFO - Image 02 - Dice: 0.89296, Jaccard: 0.80662, HD95: 9.00000, ASD: 1.19253
+2025-05-19 19:29:04 - INFO - Image 04 - Dice: 0.90787, Jaccard: 0.83129, HD95: 5.38516, ASD: 1.72513
+2025-05-19 19:29:06 - INFO - Image 03 - Dice: 0.90881, Jaccard: 0.83286, HD95: 4.47214, ASD: 1.25678
+2025-05-19 19:29:06 - INFO - Image 05 - Dice: 0.05808, Jaccard: 0.02991, HD95: 69.36137, ASD: 5.60563
+2025-05-19 19:29:07 - INFO - Image 04 - Dice: 0.90787, Jaccard: 0.83129, HD95: 5.38516, ASD: 1.72513
+2025-05-19 19:29:08 - INFO - Image 06 - Dice: 0.93218, Jaccard: 0.87297, HD95: 3.16228, ASD: 1.16674
+2025-05-19 19:29:10 - INFO - Image 05 - Dice: 0.05808, Jaccard: 0.02991, HD95: 69.36137, ASD: 5.60563
+2025-05-19 19:29:10 - INFO - Image 07 - Dice: 0.76431, Jaccard: 0.61853, HD95: 23.04344, ASD: 2.14118
+2025-05-19 19:29:11 - INFO - Image 06 - Dice: 0.93218, Jaccard: 0.87297, HD95: 3.16228, ASD: 1.16674
+2025-05-19 19:29:12 - INFO - Image 08 - Dice: 0.93917, Jaccard: 0.88532, HD95: 3.74166, ASD: 1.07045
+2025-05-19 19:29:13 - INFO - Image 07 - Dice: 0.76431, Jaccard: 0.61853, HD95: 23.04344, ASD: 2.14118
+2025-05-19 19:29:14 - INFO - Image 09 - Dice: 0.91745, Jaccard: 0.84749, HD95: 4.24264, ASD: 1.13212
+2025-05-19 19:29:15 - INFO - Image 10 - Dice: 0.83627, Jaccard: 0.71861, HD95: 10.44031, ASD: 2.96794
+2025-05-19 19:29:16 - INFO - Image 08 - Dice: 0.93917, Jaccard: 0.88532, HD95: 3.74166, ASD: 1.07045
+2025-05-19 19:29:17 - INFO - Image 11 - Dice: 0.85987, Jaccard: 0.75419, HD95: 11.78983, ASD: 1.63428
+2025-05-19 19:29:17 - INFO - Image 09 - Dice: 0.91745, Jaccard: 0.84749, HD95: 4.24264, ASD: 1.13212
+2025-05-19 19:29:19 - INFO - Image 12 - Dice: 0.88590, Jaccard: 0.79518, HD95: 10.63719, ASD: 1.25633
+2025-05-19 19:29:19 - INFO - Image 10 - Dice: 0.83627, Jaccard: 0.71861, HD95: 10.44031, ASD: 2.96794
+2025-05-19 19:29:21 - INFO - Image 13 - Dice: 0.90718, Jaccard: 0.83014, HD95: 5.65685, ASD: 1.27998
+2025-05-19 19:29:21 - INFO - Image 11 - Dice: 0.85987, Jaccard: 0.75419, HD95: 11.78983, ASD: 1.63428
+2025-05-19 19:29:22 - INFO - Image 14 - Dice: 0.89937, Jaccard: 0.81713, HD95: 8.36660, ASD: 1.40581
+2025-05-19 19:29:23 - INFO - Image 12 - Dice: 0.88590, Jaccard: 0.79518, HD95: 10.63719, ASD: 1.25633
+2025-05-19 19:29:24 - INFO - Image 15 - Dice: 0.91730, Jaccard: 0.84723, HD95: 4.47214, ASD: 1.68546
+2025-05-19 19:29:24 - INFO - Image 13 - Dice: 0.90718, Jaccard: 0.83014, HD95: 5.65685, ASD: 1.27998
+2025-05-19 19:29:25 - INFO - Image 16 - Dice: 0.57115, Jaccard: 0.39973, HD95: 16.09348, ASD: 4.91083
+2025-05-19 19:29:26 - INFO - Image 14 - Dice: 0.89937, Jaccard: 0.81713, HD95: 8.36660, ASD: 1.40581
+2025-05-19 19:29:27 - INFO - Image 17 - Dice: 0.87776, Jaccard: 0.78214, HD95: 6.32456, ASD: 1.73311
+2025-05-19 19:29:27 - INFO - Image 15 - Dice: 0.91730, Jaccard: 0.84723, HD95: 4.47214, ASD: 1.68546
+2025-05-19 19:29:29 - INFO - Image 16 - Dice: 0.57115, Jaccard: 0.39973, HD95: 16.09348, ASD: 4.91083
+2025-05-19 19:29:29 - INFO - Image 18 - Dice: 0.93068, Jaccard: 0.87035, HD95: 14.24781, ASD: 2.05998
+2025-05-19 19:29:31 - INFO - Image 17 - Dice: 0.87776, Jaccard: 0.78214, HD95: 6.32456, ASD: 1.73311
+2025-05-19 19:29:32 - INFO - Image 19 - Dice: 0.87116, Jaccard: 0.77172, HD95: 15.82402, ASD: 2.44479
+2025-05-19 19:29:32 - INFO - Average metric (decoder 1): [ 0.8221558   0.73010934 13.06485323  2.086873  ]
+2025-05-19 19:29:32 - INFO - Average metric of decoder 1: [ 0.8221558   0.73010934 13.06485323  2.086873  ]
+2025-05-19 19:29:32 - INFO - Test results: [ 0.8221558   0.73010934 13.06485323  2.086873  ]
+2025-05-19 19:29:33 - INFO - Image 18 - Dice: 0.93068, Jaccard: 0.87035, HD95: 14.24781, ASD: 2.05998
+2025-05-19 19:29:34 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:29:34 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:29:34 - INFO - Creating model: VNet_16
+2025-05-19 19:29:34 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_480_checkpoint.pth
+2025-05-19 19:29:35 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_480_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:29:35 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:29:35 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:29:35 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:29:35 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:29:35 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:29:35 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:29:35 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:29:35 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:29:35 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:29:36 - INFO - Image 19 - Dice: 0.87116, Jaccard: 0.77172, HD95: 15.82402, ASD: 2.44479
+2025-05-19 19:29:36 - INFO - Average metric (decoder 1): [ 0.8221558   0.73010934 13.06485323  2.086873  ]
+2025-05-19 19:29:36 - INFO - Average metric of decoder 1: [ 0.8221558   0.73010934 13.06485323  2.086873  ]
+2025-05-19 19:29:36 - INFO - Test results: [ 0.8221558   0.73010934 13.06485323  2.086873  ]
+2025-05-19 19:29:36 - INFO - Image 00 - Dice: 0.37937, Jaccard: 0.23409, HD95: 38.80722, ASD: 4.70613
+2025-05-19 19:29:38 - INFO - Image 01 - Dice: 0.68487, Jaccard: 0.52076, HD95: 36.01389, ASD: 3.31243
+2025-05-19 19:29:38 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:29:38 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:29:38 - INFO - Creating model: VNet_16
+2025-05-19 19:29:38 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_480_checkpoint.pth
+2025-05-19 19:29:38 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_480_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:29:38 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:29:38 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:29:38 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:29:38 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:29:38 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:29:38 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:29:38 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:29:38 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:29:38 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:29:40 - INFO - Image 02 - Dice: 0.90287, Jaccard: 0.82294, HD95: 8.60233, ASD: 1.24635
+2025-05-19 19:29:40 - INFO - Image 00 - Dice: 0.37937, Jaccard: 0.23409, HD95: 38.80722, ASD: 4.70613
+2025-05-19 19:29:42 - INFO - Image 01 - Dice: 0.68487, Jaccard: 0.52076, HD95: 36.01389, ASD: 3.31243
+2025-05-19 19:29:42 - INFO - Image 03 - Dice: 0.85298, Jaccard: 0.74365, HD95: 8.60233, ASD: 1.70006
+2025-05-19 19:29:44 - INFO - Image 04 - Dice: 0.89115, Jaccard: 0.80367, HD95: 7.81025, ASD: 1.59959
+2025-05-19 19:29:44 - INFO - Image 02 - Dice: 0.90287, Jaccard: 0.82294, HD95: 8.60233, ASD: 1.24635
+2025-05-19 19:29:46 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:29:46 - INFO - Image 03 - Dice: 0.85298, Jaccard: 0.74365, HD95: 8.60233, ASD: 1.70006
+2025-05-19 19:29:47 - INFO - Image 06 - Dice: 0.93631, Jaccard: 0.88024, HD95: 5.00000, ASD: 0.93333
+2025-05-19 19:29:48 - INFO - Image 04 - Dice: 0.89115, Jaccard: 0.80367, HD95: 7.81025, ASD: 1.59959
+2025-05-19 19:29:49 - INFO - Image 07 - Dice: 0.58781, Jaccard: 0.41624, HD95: 39.29504, ASD: 2.86480
+2025-05-19 19:29:50 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:29:51 - INFO - Image 06 - Dice: 0.93631, Jaccard: 0.88024, HD95: 5.00000, ASD: 0.93333
+2025-05-19 19:29:51 - INFO - Image 08 - Dice: 0.91234, Jaccard: 0.83881, HD95: 6.16441, ASD: 1.49910
+2025-05-19 19:29:53 - INFO - Image 09 - Dice: 0.91614, Jaccard: 0.84525, HD95: 4.35890, ASD: 1.13133
+2025-05-19 19:29:53 - INFO - Image 07 - Dice: 0.58781, Jaccard: 0.41624, HD95: 39.29504, ASD: 2.86480
+2025-05-19 19:29:55 - INFO - Image 10 - Dice: 0.82869, Jaccard: 0.70749, HD95: 17.26268, ASD: 2.08741
+2025-05-19 19:29:56 - INFO - Image 08 - Dice: 0.91234, Jaccard: 0.83881, HD95: 6.16441, ASD: 1.49910
+2025-05-19 19:29:56 - INFO - Image 11 - Dice: 0.85422, Jaccard: 0.74554, HD95: 8.28246, ASD: 1.75886
+2025-05-19 19:29:57 - INFO - Image 09 - Dice: 0.91614, Jaccard: 0.84525, HD95: 4.35890, ASD: 1.13133
+2025-05-19 19:29:58 - INFO - Image 12 - Dice: 0.85832, Jaccard: 0.75180, HD95: 12.40967, ASD: 1.49221
+2025-05-19 19:29:59 - INFO - Image 10 - Dice: 0.82869, Jaccard: 0.70749, HD95: 17.26268, ASD: 2.08741
+2025-05-19 19:30:00 - INFO - Image 13 - Dice: 0.91054, Jaccard: 0.83577, HD95: 6.40312, ASD: 1.11283
+2025-05-19 19:30:01 - INFO - Image 11 - Dice: 0.85422, Jaccard: 0.74554, HD95: 8.28246, ASD: 1.75886
+2025-05-19 19:30:01 - INFO - Image 14 - Dice: 0.90280, Jaccard: 0.82282, HD95: 8.54400, ASD: 1.31390
+2025-05-19 19:30:02 - INFO - Image 12 - Dice: 0.85832, Jaccard: 0.75180, HD95: 12.40967, ASD: 1.49221
+2025-05-19 19:30:03 - INFO - Image 15 - Dice: 0.91524, Jaccard: 0.84373, HD95: 4.47214, ASD: 1.37686
+2025-05-19 19:30:04 - INFO - Image 13 - Dice: 0.91054, Jaccard: 0.83577, HD95: 6.40312, ASD: 1.11283
+2025-05-19 19:30:04 - INFO - Image 16 - Dice: 0.35063, Jaccard: 0.21258, HD95: 27.80288, ASD: 5.34831
+2025-05-19 19:30:06 - INFO - Image 14 - Dice: 0.90280, Jaccard: 0.82282, HD95: 8.54400, ASD: 1.31390
+2025-05-19 19:30:06 - INFO - Image 17 - Dice: 0.87061, Jaccard: 0.77086, HD95: 6.63325, ASD: 1.77898
+2025-05-19 19:30:07 - INFO - Image 15 - Dice: 0.91524, Jaccard: 0.84373, HD95: 4.47214, ASD: 1.37686
+2025-05-19 19:30:09 - INFO - Image 18 - Dice: 0.93319, Jaccard: 0.87475, HD95: 13.92839, ASD: 1.92499
+2025-05-19 19:30:09 - INFO - Image 16 - Dice: 0.35063, Jaccard: 0.21258, HD95: 27.80288, ASD: 5.34831
+2025-05-19 19:30:11 - INFO - Image 17 - Dice: 0.87061, Jaccard: 0.77086, HD95: 6.63325, ASD: 1.77898
+2025-05-19 19:30:11 - INFO - Image 19 - Dice: 0.80643, Jaccard: 0.67565, HD95: 28.44293, ASD: 3.04890
+2025-05-19 19:30:11 - INFO - Average metric (decoder 1): [ 0.76472497  0.66733187 14.44179332  2.01181831]
+2025-05-19 19:30:11 - INFO - Average metric of decoder 1: [ 0.76472497  0.66733187 14.44179332  2.01181831]
+2025-05-19 19:30:11 - INFO - Test results: [ 0.76472497  0.66733187 14.44179332  2.01181831]
+2025-05-19 19:30:13 - INFO - Image 18 - Dice: 0.93319, Jaccard: 0.87475, HD95: 13.92839, ASD: 1.92499
+2025-05-19 19:30:14 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:30:14 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:30:14 - INFO - Creating model: VNet_16
+2025-05-19 19:30:14 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_500_checkpoint.pth
+2025-05-19 19:30:14 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_500_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:30:14 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:30:14 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:30:14 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:30:14 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:30:14 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:30:14 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:30:14 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:30:14 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:30:14 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:30:15 - INFO - Image 00 - Dice: 0.37396, Jaccard: 0.22998, HD95: 38.06573, ASD: 4.02346
+2025-05-19 19:30:15 - INFO - Image 19 - Dice: 0.80643, Jaccard: 0.67565, HD95: 28.44293, ASD: 3.04890
+2025-05-19 19:30:15 - INFO - Average metric (decoder 1): [ 0.76472497  0.66733187 14.44179332  2.01181831]
+2025-05-19 19:30:15 - INFO - Average metric of decoder 1: [ 0.76472497  0.66733187 14.44179332  2.01181831]
+2025-05-19 19:30:15 - INFO - Test results: [ 0.76472497  0.66733187 14.44179332  2.01181831]
+2025-05-19 19:30:17 - INFO - Image 01 - Dice: 0.68901, Jaccard: 0.52557, HD95: 35.51267, ASD: 3.17337
+2025-05-19 19:30:18 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:30:18 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:30:18 - INFO - Creating model: VNet_16
+2025-05-19 19:30:18 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_500_checkpoint.pth
+2025-05-19 19:30:18 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_500_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:30:18 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:30:18 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:30:18 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:30:18 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:30:18 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:30:18 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:30:18 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:30:18 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:30:18 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:30:19 - INFO - Image 02 - Dice: 0.90472, Jaccard: 0.82602, HD95: 9.38083, ASD: 1.25144
+2025-05-19 19:30:20 - INFO - Image 00 - Dice: 0.37396, Jaccard: 0.22998, HD95: 38.06573, ASD: 4.02346
+2025-05-19 19:30:21 - INFO - Image 03 - Dice: 0.90794, Jaccard: 0.83140, HD95: 4.47214, ASD: 1.30182
+2025-05-19 19:30:22 - INFO - Image 01 - Dice: 0.68901, Jaccard: 0.52557, HD95: 35.51267, ASD: 3.17337
+2025-05-19 19:30:23 - INFO - Image 04 - Dice: 0.90666, Jaccard: 0.82926, HD95: 5.38516, ASD: 1.53783
+2025-05-19 19:30:24 - INFO - Image 02 - Dice: 0.90472, Jaccard: 0.82602, HD95: 9.38083, ASD: 1.25144
+2025-05-19 19:30:25 - INFO - Image 05 - Dice: 0.00001, Jaccard: 0.00000, HD95: 112.98230, ASD: 5.00000
+2025-05-19 19:30:26 - INFO - Image 03 - Dice: 0.90794, Jaccard: 0.83140, HD95: 4.47214, ASD: 1.30182
+2025-05-19 19:30:27 - INFO - Image 06 - Dice: 0.93907, Jaccard: 0.88513, HD95: 4.00000, ASD: 1.04472
+2025-05-19 19:30:27 - INFO - Image 04 - Dice: 0.90666, Jaccard: 0.82926, HD95: 5.38516, ASD: 1.53783
+2025-05-19 19:30:29 - INFO - Image 07 - Dice: 0.71521, Jaccard: 0.55668, HD95: 25.96151, ASD: 2.17687
+2025-05-19 19:30:30 - INFO - Image 05 - Dice: 0.00001, Jaccard: 0.00000, HD95: 112.98230, ASD: 5.00000
+2025-05-19 19:30:31 - INFO - Image 08 - Dice: 0.93632, Jaccard: 0.88026, HD95: 3.60555, ASD: 1.13886
+2025-05-19 19:30:31 - INFO - Image 06 - Dice: 0.93907, Jaccard: 0.88513, HD95: 4.00000, ASD: 1.04472
+2025-05-19 19:30:33 - INFO - Image 09 - Dice: 0.92640, Jaccard: 0.86290, HD95: 3.74166, ASD: 1.05975
+2025-05-19 19:30:33 - INFO - Image 07 - Dice: 0.71521, Jaccard: 0.55668, HD95: 25.96151, ASD: 2.17687
+2025-05-19 19:30:34 - INFO - Image 10 - Dice: 0.82768, Jaccard: 0.70602, HD95: 13.00000, ASD: 2.86863
+2025-05-19 19:30:36 - INFO - Image 08 - Dice: 0.93632, Jaccard: 0.88026, HD95: 3.60555, ASD: 1.13886
+2025-05-19 19:30:36 - INFO - Image 11 - Dice: 0.87317, Jaccard: 0.77488, HD95: 6.70820, ASD: 1.57153
+2025-05-19 19:30:38 - INFO - Image 09 - Dice: 0.92640, Jaccard: 0.86290, HD95: 3.74166, ASD: 1.05975
+2025-05-19 19:30:38 - INFO - Image 12 - Dice: 0.88526, Jaccard: 0.79413, HD95: 9.98747, ASD: 1.28232
+2025-05-19 19:30:39 - INFO - Image 10 - Dice: 0.82768, Jaccard: 0.70602, HD95: 13.00000, ASD: 2.86863
+2025-05-19 19:30:40 - INFO - Image 13 - Dice: 0.91376, Jaccard: 0.84121, HD95: 4.69042, ASD: 1.16452
+2025-05-19 19:30:41 - INFO - Image 11 - Dice: 0.87317, Jaccard: 0.77488, HD95: 6.70820, ASD: 1.57153
+2025-05-19 19:30:41 - INFO - Image 14 - Dice: 0.91968, Jaccard: 0.85130, HD95: 7.00000, ASD: 1.11354
+2025-05-19 19:30:43 - INFO - Image 12 - Dice: 0.88526, Jaccard: 0.79413, HD95: 9.98747, ASD: 1.28232
+2025-05-19 19:30:43 - INFO - Image 15 - Dice: 0.92444, Jaccard: 0.85950, HD95: 3.74166, ASD: 1.45424
+2025-05-19 19:30:44 - INFO - Image 16 - Dice: 0.51071, Jaccard: 0.34292, HD95: 18.68154, ASD: 5.60932
+2025-05-19 19:30:44 - INFO - Image 13 - Dice: 0.91376, Jaccard: 0.84121, HD95: 4.69042, ASD: 1.16452
+2025-05-19 19:30:46 - INFO - Image 14 - Dice: 0.91968, Jaccard: 0.85130, HD95: 7.00000, ASD: 1.11354
+2025-05-19 19:30:46 - INFO - Image 17 - Dice: 0.88307, Jaccard: 0.79063, HD95: 6.40312, ASD: 1.74717
+2025-05-19 19:30:47 - INFO - Image 15 - Dice: 0.92444, Jaccard: 0.85950, HD95: 3.74166, ASD: 1.45424
+2025-05-19 19:30:48 - INFO - Image 18 - Dice: 0.93423, Jaccard: 0.87658, HD95: 13.03840, ASD: 2.13175
+2025-05-19 19:30:49 - INFO - Image 16 - Dice: 0.51071, Jaccard: 0.34292, HD95: 18.68154, ASD: 5.60932
+2025-05-19 19:30:51 - INFO - Image 19 - Dice: 0.78246, Jaccard: 0.64265, HD95: 37.05401, ASD: 3.24627
+2025-05-19 19:30:51 - INFO - Average metric (decoder 1): [ 0.78768813  0.69535228 18.17061938  2.19487015]
+2025-05-19 19:30:51 - INFO - Average metric of decoder 1: [ 0.78768813  0.69535228 18.17061938  2.19487015]
+2025-05-19 19:30:51 - INFO - Test results: [ 0.78768813  0.69535228 18.17061938  2.19487015]
+2025-05-19 19:30:51 - INFO - Image 17 - Dice: 0.88307, Jaccard: 0.79063, HD95: 6.40312, ASD: 1.74717
+2025-05-19 19:30:53 - INFO - Image 18 - Dice: 0.93423, Jaccard: 0.87658, HD95: 13.03840, ASD: 2.13175
+2025-05-19 19:30:53 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:30:53 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:30:53 - INFO - Creating model: VNet_16
+2025-05-19 19:30:53 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_60_checkpoint.pth
+2025-05-19 19:30:53 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_60_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:30:53 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:30:53 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:30:53 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:30:53 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:30:53 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:30:53 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:30:53 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:30:53 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:30:53 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:30:55 - INFO - Image 00 - Dice: 0.00125, Jaccard: 0.00062, HD95: 121.34661, ASD: 2.73723
+2025-05-19 19:30:56 - INFO - Image 19 - Dice: 0.78246, Jaccard: 0.64265, HD95: 37.05401, ASD: 3.24627
+2025-05-19 19:30:56 - INFO - Average metric (decoder 1): [ 0.78768813  0.69535228 18.17061938  2.19487015]
+2025-05-19 19:30:56 - INFO - Average metric of decoder 1: [ 0.78768813  0.69535228 18.17061938  2.19487015]
+2025-05-19 19:30:56 - INFO - Test results: [ 0.78768813  0.69535228 18.17061938  2.19487015]
+2025-05-19 19:30:57 - INFO - Image 01 - Dice: 0.56692, Jaccard: 0.39560, HD95: 38.01316, ASD: 4.88187
+2025-05-19 19:30:58 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:30:58 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:30:58 - INFO - Creating model: VNet_16
+2025-05-19 19:30:58 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_60_checkpoint.pth
+2025-05-19 19:30:58 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_60_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:30:58 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:30:58 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:30:58 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:30:58 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:30:58 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:30:58 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:30:58 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:30:58 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:30:58 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:30:59 - INFO - Image 02 - Dice: 0.80108, Jaccard: 0.66816, HD95: 17.23369, ASD: 2.13635
+2025-05-19 19:31:00 - INFO - Image 00 - Dice: 0.00125, Jaccard: 0.00062, HD95: 121.34661, ASD: 2.73723
+2025-05-19 19:31:01 - INFO - Image 03 - Dice: 0.87258, Jaccard: 0.77395, HD95: 7.68115, ASD: 1.67433
+2025-05-19 19:31:02 - INFO - Image 01 - Dice: 0.56692, Jaccard: 0.39560, HD95: 38.01316, ASD: 4.88187
+2025-05-19 19:31:02 - INFO - Image 04 - Dice: 0.85963, Jaccard: 0.75382, HD95: 4.69042, ASD: 1.58231
+2025-05-19 19:31:04 - INFO - Image 02 - Dice: 0.80108, Jaccard: 0.66816, HD95: 17.23369, ASD: 2.13635
+2025-05-19 19:31:04 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:31:06 - INFO - Image 06 - Dice: 0.91766, Jaccard: 0.84785, HD95: 4.69042, ASD: 1.33679
+2025-05-19 19:31:06 - INFO - Image 03 - Dice: 0.87258, Jaccard: 0.77395, HD95: 7.68115, ASD: 1.67433
+2025-05-19 19:31:07 - INFO - Image 04 - Dice: 0.85963, Jaccard: 0.75382, HD95: 4.69042, ASD: 1.58231
+2025-05-19 19:31:08 - INFO - Image 07 - Dice: 0.63794, Jaccard: 0.46836, HD95: 29.15476, ASD: 3.56794
+2025-05-19 19:31:09 - INFO - Image 05 - Dice: 0.00000, Jaccard: 0.00000, HD95: 0.00000, ASD: 0.00000
+2025-05-19 19:31:10 - INFO - Image 08 - Dice: 0.89869, Jaccard: 0.81603, HD95: 8.36660, ASD: 3.08029
+2025-05-19 19:31:11 - INFO - Image 06 - Dice: 0.91766, Jaccard: 0.84785, HD95: 4.69042, ASD: 1.33679
+2025-05-19 19:31:12 - INFO - Image 09 - Dice: 0.87948, Jaccard: 0.78488, HD95: 6.48074, ASD: 1.58635
+2025-05-19 19:31:13 - INFO - Image 07 - Dice: 0.63794, Jaccard: 0.46836, HD95: 29.15476, ASD: 3.56794
+2025-05-19 19:31:13 - INFO - Image 10 - Dice: 0.72922, Jaccard: 0.57383, HD95: 23.70654, ASD: 3.47144
+2025-05-19 19:31:15 - INFO - Image 11 - Dice: 0.85606, Jaccard: 0.74834, HD95: 13.07670, ASD: 1.69342
+2025-05-19 19:31:15 - INFO - Image 08 - Dice: 0.89869, Jaccard: 0.81603, HD95: 8.36660, ASD: 3.08029
+2025-05-19 19:31:17 - INFO - Image 12 - Dice: 0.72266, Jaccard: 0.56576, HD95: 23.57965, ASD: 2.67386
+2025-05-19 19:31:17 - INFO - Image 09 - Dice: 0.87948, Jaccard: 0.78488, HD95: 6.48074, ASD: 1.58635
+2025-05-19 19:31:19 - INFO - Image 13 - Dice: 0.75397, Jaccard: 0.60510, HD95: 21.02380, ASD: 2.76342
+2025-05-19 19:31:19 - INFO - Image 10 - Dice: 0.72922, Jaccard: 0.57383, HD95: 23.70654, ASD: 3.47144
+2025-05-19 19:31:20 - INFO - Image 14 - Dice: 0.88627, Jaccard: 0.79577, HD95: 10.63015, ASD: 3.00674
+2025-05-19 19:31:20 - INFO - Image 11 - Dice: 0.85606, Jaccard: 0.74834, HD95: 13.07670, ASD: 1.69342
+2025-05-19 19:31:22 - INFO - Image 15 - Dice: 0.88517, Jaccard: 0.79399, HD95: 7.54983, ASD: 1.87945
+2025-05-19 19:31:22 - INFO - Image 12 - Dice: 0.72266, Jaccard: 0.56576, HD95: 23.57965, ASD: 2.67386
+2025-05-19 19:31:23 - INFO - Image 16 - Dice: 0.02260, Jaccard: 0.01143, HD95: 102.90214, ASD: 4.36033
+2025-05-19 19:31:24 - INFO - Image 13 - Dice: 0.75397, Jaccard: 0.60510, HD95: 21.02380, ASD: 2.76342
+2025-05-19 19:31:25 - INFO - Image 17 - Dice: 0.78038, Jaccard: 0.63985, HD95: 28.63564, ASD: 7.81991
+2025-05-19 19:31:25 - INFO - Image 14 - Dice: 0.88627, Jaccard: 0.79577, HD95: 10.63015, ASD: 3.00674
+2025-05-19 19:31:27 - INFO - Image 15 - Dice: 0.88517, Jaccard: 0.79399, HD95: 7.54983, ASD: 1.87945
+2025-05-19 19:31:27 - INFO - Image 18 - Dice: 0.92677, Jaccard: 0.86354, HD95: 11.74734, ASD: 1.38425
+2025-05-19 19:31:29 - INFO - Image 16 - Dice: 0.02260, Jaccard: 0.01143, HD95: 102.90214, ASD: 4.36033
+2025-05-19 19:31:30 - INFO - Image 19 - Dice: 0.65253, Jaccard: 0.48427, HD95: 44.51966, ASD: 4.03565
+2025-05-19 19:31:30 - INFO - Average metric (decoder 1): [ 0.6825427   0.5795575  26.25144878  2.78359611]
+2025-05-19 19:31:30 - INFO - Average metric of decoder 1: [ 0.6825427   0.5795575  26.25144878  2.78359611]
+2025-05-19 19:31:30 - INFO - Test results: [ 0.6825427   0.5795575  26.25144878  2.78359611]
+2025-05-19 19:31:30 - INFO - Image 17 - Dice: 0.78038, Jaccard: 0.63985, HD95: 28.63564, ASD: 7.81991
+2025-05-19 19:31:32 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:31:32 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:31:32 - INFO - Creating model: VNet_16
+2025-05-19 19:31:32 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_80_checkpoint.pth
+2025-05-19 19:31:32 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_80_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:31:32 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:31:32 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:31:32 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:31:32 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:31:32 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:31:32 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:31:32 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:31:32 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:31:32 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:31:33 - INFO - Image 18 - Dice: 0.92677, Jaccard: 0.86354, HD95: 11.74734, ASD: 1.38425
+2025-05-19 19:31:34 - INFO - Image 00 - Dice: 0.20808, Jaccard: 0.11612, HD95: 42.63273, ASD: 3.23170
+2025-05-19 19:31:35 - INFO - Image 19 - Dice: 0.65253, Jaccard: 0.48427, HD95: 44.51966, ASD: 4.03565
+2025-05-19 19:31:35 - INFO - Average metric (decoder 1): [ 0.6825427   0.5795575  26.25144878  2.78359611]
+2025-05-19 19:31:35 - INFO - Average metric of decoder 1: [ 0.6825427   0.5795575  26.25144878  2.78359611]
+2025-05-19 19:31:35 - INFO - Test results: [ 0.6825427   0.5795575  26.25144878  2.78359611]
+2025-05-19 19:31:36 - INFO - Image 01 - Dice: 0.14767, Jaccard: 0.07972, HD95: 46.48656, ASD: 4.41459
+2025-05-19 19:31:38 - INFO - Log file will be saved at: result/VNet/LA_16/Test_Part1/Test.log
+2025-05-19 19:31:38 - INFO - Using GPU: NVIDIA GeForce RTX 2080 Ti
+2025-05-19 19:31:38 - INFO - Creating model: VNet_16
+2025-05-19 19:31:38 - INFO - Loading model weights from: result/VNet/LA_16/Pth_Part1/model_epoch_80_checkpoint.pth
+2025-05-19 19:31:38 - INFO - Image 02 - Dice: 0.84232, Jaccard: 0.72759, HD95: 15.39480, ASD: 1.73547
+2025-05-19 19:31:38 - INFO - 成功从 result/VNet/LA_16/Pth_Part1/model_epoch_80_checkpoint.pth 加载 checkpoint 文件。
+2025-05-19 19:31:38 - WARNING - 在 checkpoint 中未找到 'ema_model_state_dict' 或 'model_state_dict'。将尝试直接加载整个 checkpoint 内容作为 state_dict。
+2025-05-19 19:31:38 - INFO - 未检测到 'module.' 前缀。
+2025-05-19 19:31:38 - INFO - 成功将状态字典加载到模型。
+2025-05-19 19:31:38 - INFO - 模型已移动到设备: cuda
+2025-05-19 19:31:38 - INFO - 模型已设置为评估模式 (model.eval())。
+2025-05-19 19:31:38 - INFO - Loading test list from: ./datasets/LA/test.list
+2025-05-19 19:31:38 - INFO - Successfully loaded 20 image paths from test list.
+2025-05-19 19:31:38 - INFO - Constructed full image paths for 20 images.
+2025-05-19 19:31:38 - INFO - Starting the performance evaluation for VNet_16.
+2025-05-19 19:31:40 - INFO - Image 00 - Dice: 0.20808, Jaccard: 0.11612, HD95: 42.63273, ASD: 3.23170
+2025-05-19 19:31:40 - INFO - Image 03 - Dice: 0.87438, Jaccard: 0.77680, HD95: 7.61577, ASD: 1.71307
+2025-05-19 19:31:41 - INFO - Image 01 - Dice: 0.14767, Jaccard: 0.07972, HD95: 46.48656, ASD: 4.41459
+2025-05-19 19:31:41 - INFO - Image 04 - Dice: 0.85803, Jaccard: 0.75137, HD95: 9.00000, ASD: 2.71297
+2025-05-19 19:31:43 - INFO - Image 02 - Dice: 0.84232, Jaccard: 0.72759, HD95: 15.39480, ASD: 1.73547
+2025-05-19 19:31:44 - INFO - Image 05 - Dice: 0.00003, Jaccard: 0.00002, HD95: 133.93917, ASD: 1.10838
+2025-05-19 19:31:45 - INFO - Image 06 - Dice: 0.91099, Jaccard: 0.83654, HD95: 4.35890, ASD: 1.49564
+2025-05-19 19:31:46 - INFO - Image 03 - Dice: 0.87438, Jaccard: 0.77680, HD95: 7.61577, ASD: 1.71307
+2025-05-19 19:31:47 - INFO - Image 04 - Dice: 0.85803, Jaccard: 0.75137, HD95: 9.00000, ASD: 2.71297
+2025-05-19 19:31:48 - INFO - Image 07 - Dice: 0.66257, Jaccard: 0.49541, HD95: 26.35905, ASD: 3.00076
+2025-05-19 19:31:50 - INFO - Image 05 - Dice: 0.00003, Jaccard: 0.00002, HD95: 133.93917, ASD: 1.10838
+2025-05-19 19:31:50 - INFO - Image 08 - Dice: 0.89427, Jaccard: 0.80875, HD95: 10.63015, ASD: 3.44679
+2025-05-19 19:31:51 - INFO - Image 06 - Dice: 0.91099, Jaccard: 0.83654, HD95: 4.35890, ASD: 1.49564
+2025-05-19 19:31:52 - INFO - Image 09 - Dice: 0.91128, Jaccard: 0.83702, HD95: 5.00000, ASD: 1.37369
+2025-05-19 19:31:53 - INFO - Image 10 - Dice: 0.71962, Jaccard: 0.56204, HD95: 14.73092, ASD: 4.09967
+2025-05-19 19:31:53 - INFO - Image 07 - Dice: 0.66257, Jaccard: 0.49541, HD95: 26.35905, ASD: 3.00076
+2025-05-19 19:31:55 - INFO - Image 11 - Dice: 0.88557, Jaccard: 0.79465, HD95: 7.81025, ASD: 1.45077
+2025-05-19 19:31:55 - INFO - Image 08 - Dice: 0.89427, Jaccard: 0.80875, HD95: 10.63015, ASD: 3.44679
+2025-05-19 19:31:56 - INFO - Image 12 - Dice: 0.64696, Jaccard: 0.47816, HD95: 28.17801, ASD: 3.29801
+2025-05-19 19:31:57 - INFO - Image 09 - Dice: 0.91128, Jaccard: 0.83702, HD95: 5.00000, ASD: 1.37369
+2025-05-19 19:31:58 - INFO - Image 13 - Dice: 0.82563, Jaccard: 0.70303, HD95: 12.12436, ASD: 2.17128
+2025-05-19 19:31:59 - INFO - Image 10 - Dice: 0.71962, Jaccard: 0.56204, HD95: 14.73092, ASD: 4.09967
+2025-05-19 19:32:00 - INFO - Image 14 - Dice: 0.90039, Jaccard: 0.81882, HD95: 6.40312, ASD: 1.79665
+2025-05-19 19:32:01 - INFO - Image 11 - Dice: 0.88557, Jaccard: 0.79465, HD95: 7.81025, ASD: 1.45077
+2025-05-19 19:32:01 - INFO - Image 15 - Dice: 0.88447, Jaccard: 0.79287, HD95: 8.71780, ASD: 2.80221
+2025-05-19 19:32:02 - INFO - Image 12 - Dice: 0.64696, Jaccard: 0.47816, HD95: 28.17801, ASD: 3.29801
+2025-05-19 19:32:03 - INFO - Image 16 - Dice: 0.09477, Jaccard: 0.04974, HD95: 68.78227, ASD: 5.27401
+2025-05-19 19:32:04 - INFO - Image 13 - Dice: 0.82563, Jaccard: 0.70303, HD95: 12.12436, ASD: 2.17128
+2025-05-19 19:32:05 - INFO - Image 17 - Dice: 0.85611, Jaccard: 0.74841, HD95: 6.70820, ASD: 2.29866
+2025-05-19 19:32:06 - INFO - Image 14 - Dice: 0.90039, Jaccard: 0.81882, HD95: 6.40312, ASD: 1.79665
+2025-05-19 19:32:07 - INFO - Image 18 - Dice: 0.92901, Jaccard: 0.86743, HD95: 10.63015, ASD: 1.41762
+2025-05-19 19:32:07 - INFO - Image 15 - Dice: 0.88447, Jaccard: 0.79287, HD95: 8.71780, ASD: 2.80221
+2025-05-19 19:32:09 - INFO - Image 16 - Dice: 0.09477, Jaccard: 0.04974, HD95: 68.78227, ASD: 5.27401
+2025-05-19 19:32:09 - INFO - Image 19 - Dice: 0.55176, Jaccard: 0.38099, HD95: 42.02202, ASD: 4.62822
+2025-05-19 19:32:09 - INFO - Average metric (decoder 1): [ 0.68019605  0.58127395 25.37621082  2.67350698]
+2025-05-19 19:32:09 - INFO - Average metric of decoder 1: [ 0.68019605  0.58127395 25.37621082  2.67350698]
+2025-05-19 19:32:09 - INFO - Test results: [ 0.68019605  0.58127395 25.37621082  2.67350698]
+2025-05-19 19:32:10 - INFO - Image 17 - Dice: 0.85611, Jaccard: 0.74841, HD95: 6.70820, ASD: 2.29866
+2025-05-19 19:32:13 - INFO - Image 18 - Dice: 0.92901, Jaccard: 0.86743, HD95: 10.63015, ASD: 1.41762
+2025-05-19 19:32:15 - INFO - Image 19 - Dice: 0.55176, Jaccard: 0.38099, HD95: 42.02202, ASD: 4.62822
+2025-05-19 19:32:15 - INFO - Average metric (decoder 1): [ 0.68019605  0.58127395 25.37621082  2.67350698]
+2025-05-19 19:32:15 - INFO - Average metric of decoder 1: [ 0.68019605  0.58127395 25.37621082  2.67350698]
+2025-05-19 19:32:15 - INFO - Test results: [ 0.68019605  0.58127395 25.37621082  2.67350698]
