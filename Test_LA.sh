@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Directory containing .pth files
-PTH_DIR="result/VNet/LA_16/Pth_Part1"  # 修改为你存放模型的目录
+PTH_DIR="result/VNet_Multi/LA_8/Pth"  # 修改为你存放模型的目录
 
 # Directory to save logs
-LOG_DIR="result/VNet/LA_16/Test_Part1"  # 修改为你保存日志的目录
+LOG_DIR="result/VNet_Multi/LA_8/Test"  # 修改为你保存日志的目录
 
 # Root path for dataset
 ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
@@ -35,7 +35,7 @@ for MODEL_PATH in $PTH_DIR/*.pth; do
 
   # Call the Python script with the current .pth file
   python -m Test_LA \
-    --model_name "VNet_16" \
+    --model_name "VNet_Multi" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \

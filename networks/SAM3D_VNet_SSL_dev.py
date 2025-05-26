@@ -3,6 +3,7 @@ v13 dev
 
 Tasks:
 1. refine the ImageEncoder
+2. Change PromptGenerator_Encoder
 """
 
 import sys
@@ -1033,4 +1034,4 @@ if __name__ == "__main__":
     # networktest()
     # ImageEncoderViT3D_test()
     # PromptGenerator_test_v2()
-    # test_BayesianProbabilityGenerator()
+    test_BayesianProbabilityGenerator()
