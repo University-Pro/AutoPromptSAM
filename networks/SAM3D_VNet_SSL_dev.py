@@ -1,9 +1,6 @@
 """
 v13 dev
-
-Tasks:
-1. refine the ImageEncoder
-2. Change PromptGenerator_Encoder
+开发用的文件
 """
 
 import sys
@@ -29,7 +26,207 @@ from networks.sam_med3d.modeling.image_encoder3D import PatchEmbed3D
 from networks.sam_med3d.modeling.image_encoder3D import LayerNorm3d
 
 # 导入粗分割VNet网络
-from networks.VNet import VNet
+# from networks.VNet import VNet
+from networks.VNet_MultiOutput import VNet
+
+def set_mc_dropout_mode(model: nn.Module):
+    """
+    正确的MC Dropout模式设置：
+    开启Dropout，但将所有Normalization层（BatchNorm, InstanceNorm等）固定在评估模式。
+    这是获取稳定且有意义不确定性的关键。
+    """
+    for m in model.modules():
+        if m.__class__.__name__.startswith('Dropout'):
+            m.train()
+        elif m.__class__.__name__.startswith(('BatchNorm', 'InstanceNorm')):
+            m.eval()
+
+class DecoupledUncertaintyGenerator(nn.Module):
+    """
+    一个用于计算解耦不确定性的、符合顶会标准的生成器。
+    它假定网络有两个输出头：(logits, log_aleatoric_variance)。
+    """
+    def __init__(self, network: nn.Module, num_mc_samples: int = 30):
+        super().__init__()
+        if num_mc_samples <= 1:
+            raise ValueError("num_mc_samples must be > 1.")
+        
+        self.network = network
+        self.num_mc_samples = num_mc_samples
+        
+        # 关键：使用正确的模式设置函数
+        set_mc_dropout_mode(self.network)
+
+    @torch.no_grad()
+    def forward(self, x: torch.Tensor):
+        """
+        执行MC采样并返回解耦的 H_epistemic 和 H_aleatoric 地图。
+
+        Returns:
+            Tuple[torch.Tensor, torch.Tensor]:
+            - H_epistemic (torch.Tensor): 模型不确定性地图, Shape: [B, 1, D, H, W]
+            - H_aleatoric (torch.Tensor): 数据不确定性地图, Shape: [B, 1, D, H, W]
+        """
+        all_softmax_outputs = []
+        all_aleatoric_vars = []
+
+        for _ in range(self.num_mc_samples):
+            # 假设你的VNetAleatoric返回两个值
+            logits, log_aleatoric_var = self.network(x)
+            
+            # 1. 收集softmax输出，用于计算模型不确定性
+            softmax_out = F.softmax(logits, dim=1)
+            all_softmax_outputs.append(softmax_out)
+            
+            # 2. 收集数据不确定性
+            aleatoric_var = torch.exp(log_aleatoric_var)
+            all_aleatoric_vars.append(aleatoric_var)
+
+        # Shape: [num_samples, B, C, D, H, W]
+        stacked_softmax = torch.stack(all_softmax_outputs)
+        stacked_aleatoric = torch.stack(all_aleatoric_vars)
+
+        # --- 计算 H_epistemic (模型不确定性) ---
+        # H_epistemic 可以通过预测概率的方差来近似
+        # 这是衡量模型在不同MC样本间分歧的直接方式
+        variance_of_probs = torch.var(stacked_softmax, dim=0) # Shape: [B, C, D, H, W]
+        # 我们将所有类别的方差相加，得到每个像素的一个总不确定性分数
+        H_epistemic = torch.sum(variance_of_probs, dim=1, keepdim=True) # Shape: [B, 1, D, H, W]
+
+        # --- 计算 H_aleatoric (数据不确定性) ---
+        # H_aleatoric 是网络对数据噪声的直接预测，我们取其在MC样本间的期望
+        mean_aleatoric_var = torch.mean(stacked_aleatoric, dim=0) # Shape: [B, C, D, H, W]
+        # 同样，将所有类别的方差相加
+        H_aleatoric = torch.sum(mean_aleatoric_var, dim=1, keepdim=True) # Shape: [B, 1, D, H, W]
+
+        # 你也可以返回平均概率用于最终分割
+        mean_probs = torch.mean(stacked_softmax, dim=0)
+
+        return H_epistemic, H_aleatoric, mean_probs
+
+def find_top_k_prompts(score_map: torch.Tensor, k: int, suppression_radius: int = 5) -> List[torch.Tensor]:
+    """
+    通过非极大值抑制迭代寻找最优K个提示点
+    参数：
+        score_map: 3D张量[D,H,W]，表示提示点适宜性得分
+        k: 需选取的提示点数量
+        suppression_radius: 抑制半径（像素单位）
+    返回：
+        包含K个3D坐标[Z,Y,X]的列表
+    """
+    top_k_prompts = []
+    temp_score_map = score_map.clone()
+    d, h, w = temp_score_map.shape
+    
+    # 预建坐标网格提升效率
+    zz, yy, xx = torch.meshgrid(
+        torch.arange(d, device=score_map.device),
+        torch.arange(h, device=score_map.device),
+        torch.arange(w, device=score_map.device),
+        indexing='ij'
+    )
+
+    for _ in range(k):
+        best_idx = torch.argmax(temp_score_map)
+        if temp_score_map.view(-1)[best_idx] == -float('inf'):
+            break  # 无有效点时提前终止
+        
+        # 转换坐标
+        z, y, x = best_idx // (h*w), (best_idx % (h*w)) // w, best_idx % w
+        top_k_prompts.append(torch.tensor([z,y,x], device=score_map.device))
+        
+        # 球形抑制区域
+        suppression_mask = ((zz-z)**2 + (yy-y)**2 + (xx-x)**2) < suppression_radius**2
+        temp_score_map[suppression_mask] = -float('inf')
+        
+    return top_k_prompts
+
+def run_prompt_generation():
+    """主工作流执行函数"""
+    # --- 1. 参数设置 ---
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    
+    # --- 2. 加载模型 ---
+    trained_vnet_aleatoric = VNet(n_channels=1, n_classes=2).to(device)
+    uncertainty_gen = DecoupledUncertaintyGenerator(trained_vnet_aleatoric, num_mc_samples=25)
+    
+    # --- 3. 生成不确定性图 ---
+    dummy_input = torch.randn(1, 1, 112, 112, 80).to(device)
+    H_epistemic, H_aleatoric, _ = uncertainty_gen(dummy_input)
+    
+    # --- 4. 计算提示点适宜性得分 ---
+    def normalize(tensor):
+        return (tensor - tensor.min()) / (tensor.max() - tensor.min() + 1e-8)
+    
+    prompt_score = 0.5*(1-normalize(H_epistemic)) + 0.5*(1-normalize(H_aleatoric))
+    
+    # --- 5. 寻找最优K个提示点 ---
+    best_prompts = find_top_k_prompts(
+        prompt_score.squeeze(0).squeeze(0), 
+        k=5, 
+        suppression_radius=10
+    )
+    
+    print("\n--- 找到的顶级提示点 ---")
+    for i, (z,y,x) in enumerate(best_prompts):
+        print(f"提示点{i+1}: Z={z.item()}, Y={y.item()}, X={x.item()}")
+
+def DecoupledUncertaintyGenerator_test():
+    # --- 1. 准备工作 ---
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    # 假设你已经有了一个训练好的双头VNet
+    trained_vnet_aleatoric = VNet(n_channels=1, n_classes=2, normalization='batchnorm', has_dropout=True)
+    trained_vnet_aleatoric.load_state_dict(torch.load('result/VNet_Multi/LA_16/Pth/Best.pth', map_location=device))
+    trained_vnet_aleatoric.to(device)
+
+    # --- 2. 实例化新的不确定性生成器 ---
+    uncertainty_gen = DecoupledUncertaintyGenerator(network=trained_vnet_aleatoric, num_mc_samples=25)
+
+    # --- 3. 获取不确定性地图 ---
+    dummy_input = torch.randn(1, 1, 112, 112, 80).to(device)
+    H_epistemic, H_aleatoric, final_segmentation_probs = uncertainty_gen(dummy_input)
+
+    print(f"模型不确定性 H_epistemic shape: {H_epistemic.shape}")
+    print(f"数据不确定性 H_aleatoric shape: {H_aleatoric.shape}")
+
+    # --- 4. 计算Prompt适宜度分数 S ---
+    # 权重可以作为超参数进行调整和实验
+    w_epistemic = 0.5
+    w_aleatoric = 0.5
+
+    # 我们要寻找不确定性低的点，所以用 (1 - H)
+    # 注意：你需要对H进行归一化，使其范围在[0, 1]之间，这样(1-H)才有意义
+    # 简单的min-max归一化
+    def normalize(tensor):
+        return (tensor - tensor.min()) / (tensor.max() - tensor.min() + 1e-8)
+
+    H_epistemic_norm = normalize(H_epistemic)
+    H_aleatoric_norm = normalize(H_aleatoric)
+
+    # 计算分数 S (我们想要S越大越好)
+    prompt_suitability_score = w_epistemic * (1 - H_epistemic_norm) + w_aleatoric * (1 - H_aleatoric_norm)
+    print(f"Prompt分数地图 shape: {prompt_suitability_score.shape}")
+
+
+    # --- 5. 找到最佳Prompt的坐标 ---
+    # S是一个 [B, 1, D, H, W] 的张量，我们需要找到最大值的位置
+    # 先处理batch和channel维度
+    score_map = prompt_suitability_score.squeeze(0).squeeze(0) # Shape: [D, H, W]
+
+    # 找到扁平化后数组中最大值的索引
+    best_prompt_flat_idx = torch.argmax(score_map)
+
+    # 将一维索引转换回三维坐标
+    best_prompt_coords = torch.tensor(
+        [
+            best_prompt_flat_idx // (score_map.shape[1] * score_map.shape[2]),
+            (best_prompt_flat_idx % (score_map.shape[1] * score_map.shape[2])) // score_map.shape[2],
+            best_prompt_flat_idx % score_map.shape[2],
+        ]
+    )
+
+    print(f"最佳Prompt点的3D坐标 (Z, Y, X): {best_prompt_coords.tolist()}")
 
 class BayesianProbabilityGenerator(nn.Module):
     def __init__(self, network, num_mc_samples=3):  # 进一步减少采样次数
@@ -1034,4 +1231,6 @@ if __name__ == "__main__":
     # networktest()
     # ImageEncoderViT3D_test()
     # PromptGenerator_test_v2()
-    test_BayesianProbabilityGenerator()
+    # test_BayesianProbabilityGenerator()
+    # DecoupledUncertaintyGenerator_test()
+    run_prompt_generation()

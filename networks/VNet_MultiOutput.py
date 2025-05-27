@@ -238,7 +238,7 @@ class VNet(nn.Module):
         logits = self.logits_head(x9)
         aleatoric_variance = self.variance_head(x9)
         
-        return logits, aleatoric_variance  # 返回两个输出
+        return logits, aleatoric_variance  #s 返回两个输出
 
     def forward(self, input, turnoff_drop=False):
         if turnoff_drop:

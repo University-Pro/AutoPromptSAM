@@ -1,8 +1,7 @@
 """
 v14
 在V10的基础上修改了ImageEncoder
-另外通过不确定性熵选择更加合适的点/Box/Mask
-
+另外通过解耦不确定性选择更加合适的点/Box/Mask
 """
 
 import sys
@@ -27,6 +26,22 @@ from networks.sam_med3d.modeling.image_encoder3D import LayerNorm3d
 
 # 导入粗分割VNet网络
 from networks.VNet_MultiOutput import VNet
+
+class DecoupledUncertaintyGenerator(nn.Module):
+    """解耦不确定性生成器（需网络支持双输出头）"""
+    def __init__(self, network: nn.Module, num_mc_samples: int = 30):
+        super().__init__()
+        self.network = network
+        self.num_mc_samples = num_mc_samples
+        self._set_mc_dropout_mode()
+
+    def _set_mc_dropout_mode(self):
+        """设置MC Dropout模式：保持Dropout激活，归一化层处于评估模式"""
+        for m in self.network.modules():
+            if isinstance(m, (nn.Dropout, nn.Dropout2d, nn.Dropout3d)):
+                m.train()
+            elif isinstance(m, (nn.BatchNorm, nn.InstanceNorm, nn.GroupNorm)):
+                m.eval()
 
 class PromptGenerator_Encoder(nn.Module):
     """
