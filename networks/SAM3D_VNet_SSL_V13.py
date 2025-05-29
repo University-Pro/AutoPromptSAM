@@ -218,6 +218,7 @@ class PromptGenerator_Encoder(nn.Module):
 
         logits = self.network(x)  # [B, num_classes, *spatial]
         coords, labels = self._extract_point_prompts(logits, n_pts, thr, mode)
+        print(f'coords shape is {coords.shape}, labels shape is {labels.shape}')
         return coords, labels
 
 def PromptGenerator_test():

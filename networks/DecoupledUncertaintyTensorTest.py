@@ -422,19 +422,7 @@ class DecoupledUncertaintyGenerator(nn.Module):
 def find_top_k_prompts_per_class(score_map: torch.Tensor, segmentation_probs: torch.Tensor, 
                                 k_per_class: int = 20, num_classes: int = 2, 
                                 suppression_radius: int = 5):
-    """
-    为每个类别通过非极大值抑制迭代寻找最优K个提示点
     
-    参数：
-        score_map: 3D张量[D,H,W]，表示提示点适宜性得分
-        segmentation_probs: 4D张量[C,H,W,D]，每个位置的类别概率
-        k_per_class: 每个类别需要的提示点数量
-        num_classes: 类别总数
-        suppression_radius: 抑制半径（像素单位）
-        
-    返回：
-        字典，键为类别ID，值为该类别的提示点列表
-    """
     d, h, w = score_map.shape
     c, h_seg, w_seg, d_seg = segmentation_probs.shape
     
@@ -464,14 +452,12 @@ def find_top_k_prompts_per_class(score_map: torch.Tensor, segmentation_probs: to
         
         temp_score_map = class_score_map.clone()
         
-        print(f"\n开始为类别 {class_id} 寻找 {k_per_class} 个提示点...")
-        
         for i in range(k_per_class):
             best_idx = torch.argmax(temp_score_map)
             best_score = temp_score_map.reshape(-1)[best_idx]
             
             if best_score == -float('inf'):
-                print(f"类别 {class_id} 只能找到 {i} 个有效点")
+                # print(f"类别 {class_id} 只能找到 {i} 个有效点")
                 break  # 无有效点时提前终止
             
             # 转换坐标
@@ -507,8 +493,6 @@ def find_top_k_prompts_per_class(score_map: torch.Tensor, segmentation_probs: to
             # 球形抑制区域
             suppression_mask = ((zz-z)**2 + (yy-y)**2 + (xx-x)**2) < suppression_radius**2
             temp_score_map[suppression_mask] = -float('inf')
-        
-        print(f"类别 {class_id} 成功找到 {len(class_prompts[class_id])} 个提示点")
     
     return class_prompts
 
@@ -641,9 +625,9 @@ def DecoupledUncertaintyGenerator_test():
             print(f"类别 {class_id} - 点间距离: 最小{min_distance:.2f}, 最大{max_distance:.2f}, 平均{avg_distance:.2f}")
             
             if min_distance < suppression_radius:
-                print(f"  ⚠️ 警告: 存在距离小于抑制半径({suppression_radius})的点对")
+                print(f"⚠️ 警告: 存在距离小于抑制半径({suppression_radius})的点对")
             else:
-                print(f"  ✅ 所有点都满足最小距离约束")
+                print(f"✅ 所有点都满足最小距离约束")
     
     # --- 9. SAM模型提示点格式输出 ---
     print(f"\n=== SAM模型提示点格式 (前10个示例) ===")
@@ -655,6 +639,32 @@ def DecoupledUncertaintyGenerator_test():
     if len(all_sam_prompts) > 10:
         print(f"... 还有 {len(all_sam_prompts) - 10} 个提示点")
     
+    # --- 10. 转化为SAM的输入格式 ---
+    all_coords = []
+    all_labels = []
+
+    # 收集所有有效的提示点（按排名顺序）
+    for class_id in range(num_classes):
+        prompts = class_prompts.get(class_id, [])
+        for prompt in prompts:
+            # 注意：坐标顺序调整为 [x, y, z]（与SAM的坐标系一致）
+            x, y, z = prompt['coords_3d']
+            all_coords.append([x, y, z])
+            # 使用预测类别作为标签（0或1）
+            all_labels.append(prompt['predicted_class'])
+
+    # 转换为张量
+    coords_tensor = torch.tensor(all_coords, dtype=torch.float32)  # [27, 3]
+    labels_tensor = torch.tensor(all_labels, dtype=torch.long)     # [27]
+    
+    # 添加批次维度
+    coords_tensor = coords_tensor.unsqueeze(0)  # [1, 400, 3]
+    labels_tensor = labels_tensor.unsqueeze(0)  # [1, 400]
+
+    print(f"\nSAM输入张量:")
+    print(f"coords shape: {coords_tensor.shape}")
+    print(f"labels shape: {labels_tensor.shape}")
+
     return {
         'class_prompts': class_prompts,
         'sam_prompts': all_sam_prompts,
@@ -663,9 +673,10 @@ def DecoupledUncertaintyGenerator_test():
             'suppression_radius': suppression_radius,
             'k_per_class': k_per_class,
             'num_classes': num_classes
-        }
+        },
+        'sam_coords': coords_tensor,
+        'sam_labels': labels_tensor,
     }
-
 
 if __name__ == "__main__":
     results = DecoupledUncertaintyGenerator_test()

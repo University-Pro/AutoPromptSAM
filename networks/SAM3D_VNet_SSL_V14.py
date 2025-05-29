@@ -2,6 +2,7 @@
 v14
 在V10的基础上修改了ImageEncoder
 另外通过解耦不确定性选择更加合适的点/Box/Mask
+另外使用Train_Semi_Supervised_V5修改训练的大模型和小模型的逻辑
 """
 
 import sys
@@ -24,24 +25,203 @@ from networks.sam_med3d.modeling.image_encoder3D import Block3D
 from networks.sam_med3d.modeling.image_encoder3D import PatchEmbed3D
 from networks.sam_med3d.modeling.image_encoder3D import LayerNorm3d
 
-# 导入粗分割VNet网络
+# 导入不确定性VNet网络
 from networks.VNet_MultiOutput import VNet
 
-class DecoupledUncertaintyGenerator(nn.Module):
-    """解耦不确定性生成器（需网络支持双输出头）"""
-    def __init__(self, network: nn.Module, num_mc_samples: int = 30):
-        super().__init__()
-        self.network = network
-        self.num_mc_samples = num_mc_samples
-        self._set_mc_dropout_mode()
+# 导入解耦不确定性Prompt部分
+from networks.DecoupledUncertaintyTensorTest import DecoupledUncertaintyGenerator
+from networks.DecoupledUncertaintyTensorTest import find_top_k_prompts_per_class
 
-    def _set_mc_dropout_mode(self):
-        """设置MC Dropout模式：保持Dropout激活，归一化层处于评估模式"""
-        for m in self.network.modules():
-            if isinstance(m, (nn.Dropout, nn.Dropout2d, nn.Dropout3d)):
-                m.train()
-            elif isinstance(m, (nn.BatchNorm, nn.InstanceNorm, nn.GroupNorm)):
-                m.eval()
+# 导入可以生成明显背景和前景的张量的函数
+from networks.DecoupledUncertaintyTensorTest import create_sphere_tensor
+
+class DecoupledUncertaintyPrompt(nn.Module):
+    """
+    解耦不确定性点Prompt生成器
+    """
+    def __init__(self, n_channels: int, n_classes: int, normalization: Optional[str] = 'batchnorm',
+                 has_dropout: bool = True, pretrain_weight_path: Optional[str] = None,
+                 num_mc_samples=25,w_epistemic: float = 0.5, w_aleatoric: float = 0.5,k_per_class=20,
+                 suppression_radius=10):
+        super().__init__()
+
+        self.network = VNet(n_channels=n_channels, n_classes=n_classes,
+                            normalization=normalization, has_dropout=has_dropout)
+
+        # 一些参数
+        self.w_epistemic = w_epistemic
+        self.w_aleatoric = w_aleatoric
+        self.num_mc_samples = num_mc_samples
+        self.num_classes = n_classes
+        self.k_per_class = k_per_class
+        self.suppression_radius = suppression_radius
+
+        # 加载预训练权重（如有）
+        if pretrain_weight_path:
+            self.load_model(self.network, pretrain_weight_path)
+
+        # 加载不确定性生成器
+        self.uncertainty_gen = DecoupledUncertaintyGenerator(network=self.network,
+                                                             num_mc_samples=self.num_mc_samples)
+        
+    @staticmethod
+    def normalize(tensor):
+        return (tensor - tensor.min()) / (tensor.max() - tensor.min() + 1e-8)
+
+    @staticmethod
+    def load_model(model, model_path, device=None):
+        """
+        加载权重，自动处理单卡/多卡模型
+        """
+        state_dict = torch.load(model_path, map_location=device)
+        if any(key.startswith('module.') for key in state_dict.keys()):
+            from collections import OrderedDict
+            new_state_dict = OrderedDict()
+            for k, v in state_dict.items():
+                new_state_dict[k[7:]] = v
+            model.load_state_dict(new_state_dict, strict=False)
+        else:
+            model.load_state_dict(state_dict, strict=False)
+        return model
+
+    def forward(self, x):
+        # 返回列表
+        all_coords = []
+        all_labels = []
+
+        H_epistemic, H_aleatoric, final_segmentation_probs = self.uncertainty_gen(x)
+
+        # 归一化处理数据
+        H_epistemic_norm = self.normalize(H_epistemic)
+        H_aleatoric_norm = self.normalize(H_aleatoric)
+
+        # 计算分数 S (我们想要S越大越好)
+        prompt_suitability_score = self.w_epistemic * (1 - H_epistemic_norm) + self.w_aleatoric * (1 - H_aleatoric_norm)
+
+        # 转换格式
+        score_map = prompt_suitability_score.squeeze(0).squeeze(0).permute(2, 0, 1)  # [D, H, W]
+        segmentation_probs = final_segmentation_probs.squeeze(0).permute(0, 1, 2, 3)  # [C, H, W, D]
+
+        # 使用非极大值抑制为每个类别找到Top-K个提示点        
+        class_prompts = find_top_k_prompts_per_class(
+            score_map=score_map,
+            segmentation_probs=segmentation_probs,
+            k_per_class=self.k_per_class,
+            num_classes=self.num_classes,
+            suppression_radius=self.suppression_radius
+        )
+
+        # --- 6. 输出每个类别的结果 ---
+        # print(f"\n=== 每个类别的Top-{self.k_per_class}最佳Prompt点 ===")
+        
+        # all_sam_prompts = []
+        # all_results = []
+        
+        # for class_id in range(self.num_classes):
+        #     prompts = class_prompts.get(class_id, [])
+        #     print(f"\n--- 类别 {class_id} ({len(prompts)} 个点) ---")
+            
+        #     for i, prompt in enumerate(prompts[:10]):  # 只显示前10个以节省空间
+        #         y, x, z = prompt['coords_3d']
+        #         print(f"第{i+1}名: 坐标[{y}, {x}, {z}], "
+        #             f"类别{prompt['predicted_class']}, 概率{prompt['class_probability']:.4f}, "
+        #             f"分数{prompt['suitability_score']:.4f}")
+            
+        #     if len(prompts) > 10:
+        #         print(f"    ... 还有 {len(prompts) - 10} 个点")
+            
+        #     # 为SAM模型生成提示点格式
+        #     for prompt in prompts:
+        #         y, x, z = prompt['coords_3d']
+        #         sam_prompt = {
+        #             'point_2d': [x, y],  # SAM使用 [x, y] 格式
+        #             'point_3d': [x, y, z],
+        #             'label': prompt['predicted_class'],  # 重要：现在包含标签
+        #             'target_class': prompt['target_class'],  # 目标类别
+        #             'confidence': prompt['class_probability'],
+        #             'uncertainty_score': 1 - prompt['suitability_score']
+        #         }
+        #         all_sam_prompts.append(sam_prompt)
+                
+        #     all_results.extend(prompts)
+
+        # 收集所有有效的提示点
+        for class_id in range(self.num_classes):
+            prompts = class_prompts.get(class_id, [])
+            for prompt in prompts:
+                # 注意：坐标顺序调整为 [x, y, z]（与SAM的坐标系一致）
+                x, y, z = prompt['coords_3d']
+                all_coords.append([x, y, z])
+                # 使用预测类别作为标签（0或1）
+                all_labels.append(prompt['predicted_class'])
+
+        # 转换为张量
+        coords_tensor = torch.tensor(all_coords, dtype=torch.float32)  # [27, 3]
+        labels_tensor = torch.tensor(all_labels, dtype=torch.long)     # [27]
+        
+        # 添加批次维度
+        coords_tensor = coords_tensor.unsqueeze(0)  # [1, 400, 3]
+        labels_tensor = labels_tensor.unsqueeze(0)  # [1, 400]
+        
+        return coords_tensor, labels_tensor
+
+def DecoupledUncertaintyPrompt_test():
+    # --- 参数设置 ---
+    input_shape = (1, 1, 112, 112, 80)
+    n_classes = 2                        # 类别数 (背景+前景)
+    k_per_class = 20                    # 每类采样点数 (替代num_points_per_class)
+    normalization_type = 'batchnorm'     # 归一化类型
+    
+    # --- 新增参数 ---
+    num_mc_samples = 25                  # Monte Carlo采样次数
+    w_epistemic = 0.5                    # 模型不确定性权重
+    w_aleatoric = 0.5                    # 数据不确定性权重
+    suppression_radius = 10               # 非极大值抑制半径
+
+    # --- 创建模拟输入 ---
+    mock_input = create_sphere_tensor(
+        tensor_size=(1, 1, 112, 112, 80),
+        device='cuda',
+        sphere_center=(56, 56, 40),  # 球心位置（在体积中心）
+        sphere_radius=15,          # 球体半径
+        noise_level=0.1,           # 背景噪声强度
+        foreground_brightness=1.0   # 前景亮度
+    )
+
+    print(f"input shape: {mock_input.shape}")
+    
+    # --- 实例化新模型 ---
+    model = DecoupledUncertaintyPrompt(
+        n_channels=input_shape[1],        # 输入通道数
+        n_classes=n_classes,              # 输出类别数
+        normalization=normalization_type,
+        has_dropout=False,
+        pretrain_weight_path="./result/VNet_Multi/LA_16/Pth/Best.pth",
+        # 新增参数
+        num_mc_samples=num_mc_samples,
+        w_epistemic=w_epistemic,
+        w_aleatoric=w_aleatoric,
+        k_per_class=k_per_class,
+        suppression_radius=suppression_radius
+    ).to(device='cuda')
+    
+    # --- 模型评估模式 ---
+    model.eval()
+    
+    # --- 执行前向传播 ---
+    with torch.no_grad():
+        coords_output, labels_output = model(mock_input)
+    
+    # --- 打印输出结果 ---
+    print("\n--- Test Results ---")
+    print(f"Output Coords Shape: {coords_output.shape}")
+    print(f"Output Labels Shape: {labels_output.shape}")
+    
+    # 打印采样点示例
+    print("\nSample Output Coords (first 5 points):")
+    print(coords_output[0, :5, :])  # 第一个样本前5个坐标
+    print("\nSample Output Labels (first 5 points):")
+    print(labels_output[0, :5])     # 第一个样本前5个标签
 
 class PromptGenerator_Encoder(nn.Module):
     """
@@ -467,15 +647,16 @@ class Network(nn.Module):
             num_classes: int = 2,
             normalization: str = "batchnorm",
             has_dropout: bool = True,
-            pretrain_weight_path: str = "./result/VNet/LA/Pth/best.pth",
-            num_points_per_class: int = 10,
-            threshold: float = 0.5,
+            pretrain_weight_path: str = "./result/VNet_Multi/LA_16/Pth/best.pth",
+            num_mc_samples:int = 25,
+            w_epistemic:float=0.5,
+            w_aleatoric:float=0.5,
+            k_per_class:int=50,
+            suppression_radius:int=10,
             mask_in_chans: int = 16,
             activation=nn.GELU,
             num_multimask_outputs: int = 2,
             iou_head_depth: int = 3,
-            generatorways: str = "random",
-            debug: bool = False,
     ):
         super(Network, self).__init__()
 
@@ -494,10 +675,11 @@ class Network(nn.Module):
 
         # ------- PromptGenerator参数 -------
         self.pretrain_weight_path = pretrain_weight_path
-        self.num_points_per_class = num_points_per_class
-        self.threshold = threshold
-        self.generatorways = generatorways
-        self.debug = debug
+        self.num_mc_samples = num_mc_samples
+        self.w_epistemic = w_epistemic
+        self.aleatoric = w_aleatoric
+        self.k_per_class = k_per_class
+        self.suppression_radius = suppression_radius
 
         # ------- PromptEncoder参数 -------
         self.embedding_size = tuple(s // patch_size for s in image_size)  # e.g., 112 -> 14
@@ -509,16 +691,18 @@ class Network(nn.Module):
         self.iou_head_depth = iou_head_depth
 
         # ------- Prompt Generator -------
-        self.promptgenerator = PromptGenerator_Encoder(
-            n_channels=self.in_channels,
-            n_classes=self.n_classes,
+        self.promptgenerator = DecoupledUncertaintyPrompt(
+            n_channels=self.in_channels,        # 输入通道数
+            n_classes=self.n_classes,              # 输出类别数
             normalization=self.normalization,
             has_dropout=self.has_dropout,
             pretrain_weight_path=self.pretrain_weight_path,
-            num_points_per_class=self.num_points_per_class,
-            threshold=self.threshold,
-            sample_mode=self.generatorways,
-            debug=self.debug
+            # 新增参数
+            num_mc_samples=self.num_mc_samples,
+            w_epistemic=self.w_epistemic,
+            w_aleatoric=self.w_aleatoric,
+            k_per_class=self.k_per_class,
+            suppression_radius = self.suppression_radius
         )
 
         # ------- Prompt Encoder -------
@@ -572,7 +756,7 @@ class Network(nn.Module):
 
     def forward(self, x):
         # 0.VNet分支输出结果
-        vnet_output = self.vnet(x)
+        vnet_output,variance = self.vnet(x)
         # print(f'vnet output shape is {vnet_output.shape}')
 
         # 1. 图像主干编码
@@ -625,3 +809,4 @@ def networktest():
 
 if __name__ == "__main__":
     networktest()
+    # DecoupledUncertaintyPrompt_test()
