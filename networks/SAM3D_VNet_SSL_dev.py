@@ -42,10 +42,6 @@ def set_mc_dropout_mode(model: nn.Module):
             m.eval()
 
 class DecoupledUncertaintyGenerator(nn.Module):
-    """
-    一个用于计算解耦不确定性的、符合顶会标准的生成器。
-    它假定网络有两个输出头：(logits, log_aleatoric_variance)。
-    """
     def __init__(self, network: nn.Module, num_mc_samples: int = 30):
         super().__init__()
         if num_mc_samples <= 1:
@@ -54,8 +50,7 @@ class DecoupledUncertaintyGenerator(nn.Module):
         self.network = network
         self.num_mc_samples = num_mc_samples
         
-        # 关键：使用正确的模式设置函数
-        set_mc_dropout_mode(self.network)
+        set_mc_dropout_mode(self.network) # 确保dropout在评估时也开启
 
     @torch.no_grad()
     def forward(self, x: torch.Tensor):
@@ -141,41 +136,137 @@ def find_top_k_prompts(score_map: torch.Tensor, k: int, suppression_radius: int 
         
     return top_k_prompts
 
-def run_prompt_generation():
+def run_prompt_generation(num_classes_to_select_from: int, k_per_class: int = 5):
     """主工作流执行函数"""
     # --- 1. 参数设置 ---
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # --- 2. 加载模型 ---
-    trained_vnet_aleatoric = VNet(n_channels=1, n_classes=2).to(device)
-    uncertainty_gen = DecoupledUncertaintyGenerator(trained_vnet_aleatoric, num_mc_samples=25)
+    # 假设 VNet 的 n_classes 是包括背景在内的总类别数
+    # 例如，n_classes=2 表示 背景(0) 和一个前景类(1)
+    # num_classes_to_select_from 应该是网络输出的类别数
+    trained_vnet_aleatoric = VNet(n_channels=1, n_classes=num_classes_to_select_from).to(device)
+    uncertainty_gen = DecoupledUncertaintyGenerator(trained_vnet_aleatoric, num_mc_samples=25) # 减少样本数以便快速测试
     
-    # --- 3. 生成不确定性图 ---
-    dummy_input = torch.randn(1, 1, 112, 112, 80).to(device)
-    H_epistemic, H_aleatoric, _ = uncertainty_gen(dummy_input)
+    # --- 3. 生成不确定性图和平均概率 ---
+    dummy_input = torch.randn(1, 1, 64, 64, 40).to(device) # 缩小尺寸以便快速测试
+    # H_epistemic_pc: [B, C, D, H, W], H_aleatoric_pc: [B, C, D, H, W], mean_probs: [B, C, D, H, W]
+    H_epistemic_pc, H_aleatoric_pc, mean_probs = uncertainty_gen(dummy_input)
     
-    # --- 4. 计算提示点适宜性得分 ---
-    def normalize(tensor):
-        return (tensor - tensor.min()) / (tensor.max() - tensor.min() + 1e-8)
+    # 假设我们处理单张图片 (Batch size B=1)
+    H_epistemic_pc = H_epistemic_pc.squeeze(0) # Shape: [C, D, H, W]
+    H_aleatoric_pc = H_aleatoric_pc.squeeze(0) # Shape: [C, D, H, W]
+    mean_probs = mean_probs.squeeze(0)         # Shape: [C, D, H, W]
+
+    # --- 4. 为每个类别计算提示点适宜性得分并寻找最优K个提示点 ---
+    def normalize_per_channel(tensor_ch_first): # tensor_ch_first: [C, D, H, W]
+        # 逐通道归一化到 [0, 1]
+        # C, D, H, W = tensor_ch_first.shape
+        # flat = tensor_ch_first.view(C, -1)
+        # ch_min = flat.min(dim=1, keepdim=True)[0]
+        # ch_max = flat.max(dim=1, keepdim=True)[0]
+        # normalized = (flat - ch_min) / (ch_max - ch_min + 1e-8)
+        # return normalized.view(C,D,H,W)
+        # 全局归一化可能更简单，避免某些通道范围过小导致的问题
+        min_val = tensor_ch_first.min()
+        max_val = tensor_ch_first.max()
+        return (tensor_ch_first - min_val) / (max_val - min_val + 1e-8)
+
+
+    # 归一化不确定性图 (可以按通道或全局归一化，这里使用全局)
+    norm_H_epistemic_pc = normalize_per_channel(H_epistemic_pc)
+    norm_H_aleatoric_pc = normalize_per_channel(H_aleatoric_pc)
+
+    all_prompts_with_labels = [] # List to store (class_idx, [z,y,x])
+
+    # 迭代你感兴趣的类别
+    # 例如，如果 n_classes=2 (背景0, 前景1)，你可能只对前景类1感兴趣
+    # 如果 n_classes > 2，你可能对所有类别都感兴趣，或者只对前景类别感兴趣
+    # 这里我们假设从类别1开始 (跳过背景类0，如果适用)
+    start_class_idx = 1 if num_classes_to_select_from > 1 else 0 # 如果只有一个类，就选它
     
-    prompt_score = 0.5*(1-normalize(H_epistemic)) + 0.5*(1-normalize(H_aleatoric))
+    for c in range(start_class_idx, num_classes_to_select_from):
+        print(f"\n--- Processing Class {c} ---")
+        
+        # 当前类别的概率图
+        class_probs = mean_probs[c, ...] # Shape: [D, H, W]
+        
+        # 当前类别的归一化不确定性
+        class_norm_H_epistemic = norm_H_epistemic_pc[c, ...] # Shape: [D, H, W]
+        class_norm_H_aleatoric = norm_H_aleatoric_pc[c, ...] # Shape: [D, H, W]
+        
+        # 计算高置信度得分：高概率 + 低不确定性
+        # score = P(class_c) * (1 - epistemic_uncertainty_c) * (1 - aleatoric_uncertainty_c)
+        # 权重可以调整，这里简单处理
+        # 注意：(1 - uncertainty) 表示置信度。我们希望这个值大。
+        # 这里的uncertainty已经是0-1范围了
+        confidence_score = class_probs * \
+                           (1.0 - 0.5 * class_norm_H_epistemic) * \
+                           (1.0 - 0.5 * class_norm_H_aleatoric)
+        
+        # 确保分数非负
+        confidence_score = torch.clamp(confidence_score, min=0.0)
+
+        # 如果该类别的最大置信度分都非常低，可能不需要选点
+        if confidence_score.max() < 0.01: # 可调阈值
+            print(f"Class {c} has very low confidence scores, skipping point selection.")
+            continue
+
+        best_prompts_for_class = find_top_k_prompts(
+            confidence_score, # Shape [D, H, W]
+            k=k_per_class, 
+            suppression_radius=5 # 可调
+        )
+        
+        if best_prompts_for_class:
+            print(f"Found {len(best_prompts_for_class)} prompts for class {c}:")
+            for i, (z,y,x) in enumerate(best_prompts_for_class):
+                # 获取该点的具体数值
+                prob_val = class_probs[z,y,x].item()
+                ep_val = H_epistemic_pc[c,z,y,x].item() #原始值
+                al_val = H_aleatoric_pc[c,z,y,x].item() #原始值
+                score_val = confidence_score[z,y,x].item()
+
+                print(f"  Prompt {i+1}: Label={c}, Coords=(Z:{z.item()}, Y:{y.item()}, X:{x.item()}), "
+                      f"Score={score_val:.4f}, Prob={prob_val:.4f}, Epistemic={ep_val:.4E}, Aleatoric={al_val:.4E}")
+                all_prompts_with_labels.append({'label': c, 'coords': [z.item(), y.item(), x.item()], 'score': score_val})
+        else:
+            print(f"No prompts found for class {c} with current settings.")
+            
+    print("\n--- Summary of All Found Prompts ---")
+    if not all_prompts_with_labels:
+        print("No prompts were selected for any class.")
+    else:
+        for prompt_info in all_prompts_with_labels:
+            print(f"Label: {prompt_info['label']}, Coords: {prompt_info['coords']}, Score: {prompt_info['score']:.4f}")
     
-    # --- 5. 寻找最优K个提示点 ---
-    best_prompts = find_top_k_prompts(
-        prompt_score.squeeze(0).squeeze(0), 
-        k=5, 
-        suppression_radius=10
+    return all_prompts_with_labels
+
+def run_prompt_generation_test():
+    
+    # 二分类，每一类选择10个高置信度的点
+    N_CLASSES_IN_MODEL = 2 
+    K_POINTS_PER_CLASS = 10
+    
+    # 检查VNet是否有Dropout层，如果没有，MC Dropout效果有限
+    temp_model = VNet(n_classes=N_CLASSES_IN_MODEL)
+    has_dropout = any(isinstance(m, (nn.Dropout, nn.Dropout2d, nn.Dropout3d)) for m in temp_model.modules())
+    if not has_dropout:
+        print("Warning: VNet model does not seem to have Dropout layers. MC Dropout for epistemic uncertainty might be ineffective.")
+    del temp_model
+
+    selected_prompts = run_prompt_generation(
+        num_classes_to_select_from=N_CLASSES_IN_MODEL, 
+        k_per_class=K_POINTS_PER_CLASS
     )
-    
-    print("\n--- 找到的顶级提示点 ---")
-    for i, (z,y,x) in enumerate(best_prompts):
-        print(f"提示点{i+1}: Z={z.item()}, Y={y.item()}, X={x.item()}")
+
+    print(f'selected_prompts: {selected_prompts}')
 
 def DecoupledUncertaintyGenerator_test():
     # --- 1. 准备工作 ---
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # 假设你已经有了一个训练好的双头VNet
+    # 加载预训练网络
     trained_vnet_aleatoric = VNet(n_channels=1, n_classes=2, normalization='batchnorm', has_dropout=True)
     trained_vnet_aleatoric.load_state_dict(torch.load('result/VNet_Multi/LA_16/Pth/Best.pth', map_location=device))
     trained_vnet_aleatoric.to(device)
@@ -189,6 +280,7 @@ def DecoupledUncertaintyGenerator_test():
 
     print(f"模型不确定性 H_epistemic shape: {H_epistemic.shape}")
     print(f"数据不确定性 H_aleatoric shape: {H_aleatoric.shape}")
+    print(f'最终分割概率图 final_segmentation_probs shape: {final_segmentation_probs.shape}')
 
     # --- 4. 计算Prompt适宜度分数 S ---
     # 权重可以作为超参数进行调整和实验
@@ -208,25 +300,94 @@ def DecoupledUncertaintyGenerator_test():
     prompt_suitability_score = w_epistemic * (1 - H_epistemic_norm) + w_aleatoric * (1 - H_aleatoric_norm)
     print(f"Prompt分数地图 shape: {prompt_suitability_score.shape}")
 
-
-    # --- 5. 找到最佳Prompt的坐标 ---
-    # S是一个 [B, 1, D, H, W] 的张量，我们需要找到最大值的位置
+    # --- 5. 找到最佳Prompt的坐标和类别标签 ---
+    # S是一个 [B, 1, H, W, D] 的张量，我们需要找到最大值的位置
     # 先处理batch和channel维度
-    score_map = prompt_suitability_score.squeeze(0).squeeze(0) # Shape: [D, H, W]
+    score_map = prompt_suitability_score.squeeze(0).squeeze(0) # Shape: [H, W, D]
+    
+    print(f"Score map shape after squeeze: {score_map.shape}")  # 调试信息
 
     # 找到扁平化后数组中最大值的索引
     best_prompt_flat_idx = torch.argmax(score_map)
 
-    # 将一维索引转换回三维坐标
+    # 将一维索引转换回三维坐标 (H, W, D)
+    # 对于形状 [H, W, D]，索引计算为：
+    # h = idx // (W * D)
+    # w = (idx % (W * D)) // D  
+    # d = idx % D
+    H, W, D = score_map.shape
     best_prompt_coords = torch.tensor(
         [
-            best_prompt_flat_idx // (score_map.shape[1] * score_map.shape[2]),
-            (best_prompt_flat_idx % (score_map.shape[1] * score_map.shape[2])) // score_map.shape[2],
-            best_prompt_flat_idx % score_map.shape[2],
+            best_prompt_flat_idx // (W * D),  # h
+            (best_prompt_flat_idx % (W * D)) // D,  # w
+            best_prompt_flat_idx % D,  # d
         ]
     )
 
-    print(f"最佳Prompt点的3D坐标 (Z, Y, X): {best_prompt_coords.tolist()}")
+    # --- 6. 获取最佳点的类别标签 ---
+    h, w, d = best_prompt_coords.tolist()
+    
+    # 从分割概率图中获取该点的类别概率
+    # final_segmentation_probs 形状: [B, C, H, W, D]
+    point_probs = final_segmentation_probs[0, :, h, w, d]  # Shape: [2] (假设2个类别)
+    
+    # 获取预测的类别标签 (概率最大的类别)
+    predicted_class = torch.argmax(point_probs).item()
+    class_probability = torch.max(point_probs).item()
+    
+    # 获取该点的不确定性值
+    # 不确定性张量形状: [B, C, H, W, D]
+    epistemic_uncertainty = H_epistemic[0, 0, h, w, d].item()
+    aleatoric_uncertainty = H_aleatoric[0, 0, h, w, d].item()
+    suitability_score = prompt_suitability_score[0, 0, h, w, d].item()
+    
+    # --- 7. 输出详细结果 ---
+    print(f"\n=== 最佳Prompt点信息 ===")
+    print(f"3D坐标 (H, W, D): [{h}, {w}, {d}]")
+    print(f"预测类别: {predicted_class}")
+    print(f"类别概率: {class_probability:.4f}")
+    print(f"模型不确定性 (认知不确定性): {epistemic_uncertainty:.4f}")
+    print(f"数据不确定性 (偶然不确定性): {aleatoric_uncertainty:.4f}")
+    print(f"Prompt适宜度分数: {suitability_score:.4f}")
+    
+    # 显示所有类别的概率分布
+    print(f"所有类别概率分布:")
+    for class_idx in range(final_segmentation_probs.shape[1]):
+        prob = point_probs[class_idx].item()
+        print(f"  类别 {class_idx}: {prob:.4f}")
+    
+    # --- 8. 可选：找到多个高分点 ---
+    print(f"\n=== Top-5 最佳Prompt点 ===")
+    
+    # 展平分数地图并找到top-k个点
+    flat_scores = score_map.flatten()
+    top_k = 5
+    top_indices = torch.topk(flat_scores, k=top_k).indices
+    
+    for i, flat_idx in enumerate(top_indices):
+        # 转换为3D坐标 (H, W, D)
+        h_coord = flat_idx // (W * D)
+        w_coord = (flat_idx % (W * D)) // D
+        d_coord = flat_idx % D
+        
+        # 获取该点的信息
+        point_probs_i = final_segmentation_probs[0, :, h_coord, w_coord, d_coord]
+        predicted_class_i = torch.argmax(point_probs_i).item()
+        class_prob_i = torch.max(point_probs_i).item()
+        score_i = flat_scores[flat_idx].item()
+        
+        print(f"第{i+1}名: 坐标[{h_coord}, {w_coord}, {d_coord}], "
+              f"类别{predicted_class_i}, 概率{class_prob_i:.4f}, 分数{score_i:.4f}")
+    
+    return {
+        'best_coords': best_prompt_coords.tolist(),
+        'predicted_class': predicted_class,
+        'class_probability': class_probability,
+        'epistemic_uncertainty': epistemic_uncertainty,
+        'aleatoric_uncertainty': aleatoric_uncertainty,
+        'suitability_score': suitability_score,
+        'all_class_probs': point_probs.tolist()
+    }
 
 class BayesianProbabilityGenerator(nn.Module):
     def __init__(self, network, num_mc_samples=3):  # 进一步减少采样次数
@@ -1228,9 +1389,4 @@ def networktest():
     return
 
 if __name__ == "__main__":
-    # networktest()
-    # ImageEncoderViT3D_test()
-    # PromptGenerator_test_v2()
-    # test_BayesianProbabilityGenerator()
-    # DecoupledUncertaintyGenerator_test()
-    run_prompt_generation()
+    DecoupledUncertaintyGenerator_test()
