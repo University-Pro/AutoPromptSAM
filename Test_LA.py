@@ -31,10 +31,11 @@ from collections import OrderedDict
 # from networks.SAM3D_VNet_SSL_V11 import Network
 # from networks.SAM3D_VNet_SSL_V12 import Network
 # from networks.SAM3D_VNet_SSL_V13 import Network
+from networks.SAM3D_VNet_SSL_V14 import Network
 
 # 其他网络
 # from networks.VNet import VNet
-from networks.VNet_MultiOutput import VNet
+# from networks.VNet_MultiOutput import VNet
 # from networks.Double_VNet import Network
 
 # 导入数据集
@@ -350,7 +351,7 @@ def test_single_case_first_output(model, image, stride_xy, stride_z, patch_size,
 
                 with torch.no_grad():  # 不计算梯度
                     # y = model(test_patch)  # 模型推断
-                    y,variance = model(test_patch) # 适用于Vnet_Multi
+                    y = model(test_patch) # 适用于Vnet_Multi
                     # print(f'y0 shape: {y[0].shape}')
                     # print(f'y1 shape: {y[1].shape}')
 
@@ -537,7 +538,8 @@ if __name__ == '__main__':
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V11
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V12
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # V13
-    model = VNet(n_channels=1,n_classes=2,normalization="batchnorm",has_dropout=True).to(device=device)
+    model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
+    # model = VNet(n_channels=1,n_classes=2,normalization="batchnorm",has_dropout=True).to(device=device)
 
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")
