@@ -37,6 +37,9 @@ from utils.ImageAugment import ToTensor_LA as ToTensor
 # 导入加载无标签的工具
 from utils.ImageAugment import TwoStreamBatchSampler_LA
 
+# 导入Amos数据集
+from dataloader.DataLoader_Amos import AmosDataset
+
 # 导入网络框架
 # from networks.VNet import VNet
 # from networks.SAM3D_VNet_SSL import Network
@@ -223,12 +226,12 @@ if __name__ == "__main__":
         os.makedirs(path, exist_ok=True)
 
     # ==================== 初始化设置 ====================
-    torch.manual_seed(args.seed)
+    set_seed(args.seed)  # 设置随机种子
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     setup_logging(args.log_path)
     logging.info(f"训练配置参数:\n{vars(args)}")
 
-    # ==================== 数据准备 ====================
+    # ==================== LA数据准备 ====================
     patch_size = (112, 112, 80)
     train_transform = transforms.Compose([
         RandomRotFlip(),

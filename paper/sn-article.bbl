@@ -1,0 +1,653 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{38}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{De~Fauw et~al.}{2018}]{de2018clinically}
+\begin{barticle}
+\bauthor{\bsnm{De~Fauw}, \binits{J.}},
+\bauthor{\bsnm{Ledsam}, \binits{J.R.}},
+\bauthor{\bsnm{Romera-Paredes}, \binits{B.}},
+\bauthor{\bsnm{Nikolov}, \binits{S.}},
+\bauthor{\bsnm{Tomasev}, \binits{N.}},
+\bauthor{\bsnm{Blackwell}, \binits{S.}},
+\bauthor{\bsnm{Askham}, \binits{H.}},
+\bauthor{\bsnm{Glorot}, \binits{X.}},
+\bauthor{\bsnm{O’Donoghue}, \binits{B.}},
+\bauthor{\bsnm{Visentin}, \binits{D.}}, \betal:
+\batitle{Clinically applicable deep learning for diagnosis and referral in retinal disease}.
+\bjtitle{Nature medicine}
+\bvolume{24}(\bissue{9}),
+\bfpage{1342}--\blpage{1350}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Ouyang et~al.}{2020}]{ouyang2020video}
+\begin{barticle}
+\bauthor{\bsnm{Ouyang}, \binits{D.}},
+\bauthor{\bsnm{He}, \binits{B.}},
+\bauthor{\bsnm{Ghorbani}, \binits{A.}},
+\bauthor{\bsnm{Yuan}, \binits{N.}},
+\bauthor{\bsnm{Ebinger}, \binits{J.}},
+\bauthor{\bsnm{Langlotz}, \binits{C.P.}},
+\bauthor{\bsnm{Heidenreich}, \binits{P.A.}},
+\bauthor{\bsnm{Harrington}, \binits{R.A.}},
+\bauthor{\bsnm{Liang}, \binits{D.H.}},
+\bauthor{\bsnm{Ashley}, \binits{E.A.}}, \betal:
+\batitle{Video-based ai for beat-to-beat assessment of cardiac function}.
+\bjtitle{Nature}
+\bvolume{580}(\bissue{7802}),
+\bfpage{252}--\blpage{256}
+(\byear{2020})
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Ma et~al.}{2024}]{ma2024segment}
+\begin{barticle}
+\bauthor{\bsnm{Ma}, \binits{J.}},
+\bauthor{\bsnm{He}, \binits{Y.}},
+\bauthor{\bsnm{Li}, \binits{F.}},
+\bauthor{\bsnm{Han}, \binits{L.}},
+\bauthor{\bsnm{You}, \binits{C.}},
+\bauthor{\bsnm{Wang}, \binits{B.}}:
+\batitle{Segment anything in medical images}.
+\bjtitle{Nature Communications}
+\bvolume{15}(\bissue{1}),
+\bfpage{654}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Ponikowski et~al.}{2017}]{ponikowski20172016}
+\begin{botherref}
+\oauthor{\bsnm{Ponikowski}, \binits{P.}},
+\oauthor{\bsnm{Voors}, \binits{A.A.}},
+\oauthor{\bsnm{Anker}, \binits{S.D.}},
+\oauthor{\bsnm{Bueno}, \binits{H.}},
+\oauthor{\bsnm{Cleland}, \binits{J.G.}},
+\oauthor{\bsnm{Coats}, \binits{A.J.}},
+\oauthor{\bsnm{Falk}, \binits{V.}},
+\oauthor{\bsnm{Gonz{\'a}lez-Juanatey}, \binits{J.R.}},
+\oauthor{\bsnm{Harjola}, \binits{V.-P.}},
+\oauthor{\bsnm{Jankowska}, \binits{E.A.}}, et al.:
+2016 esc guidelines for the diagnosis and treatment of acute and chronic heart failure.
+Russian journal of cardiology
+(1),
+7--81
+(2017)
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2022}]{wang2022medical}
+\begin{barticle}
+\bauthor{\bsnm{Wang}, \binits{R.}},
+\bauthor{\bsnm{Lei}, \binits{T.}},
+\bauthor{\bsnm{Cui}, \binits{R.}},
+\bauthor{\bsnm{Zhang}, \binits{B.}},
+\bauthor{\bsnm{Meng}, \binits{H.}},
+\bauthor{\bsnm{Nandi}, \binits{A.K.}}:
+\batitle{Medical image segmentation using deep learning: A survey}.
+\bjtitle{IET image processing}
+\bvolume{16}(\bissue{5}),
+\bfpage{1243}--\blpage{1267}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Han et~al.}{2021}]{han2021transformer}
+\begin{barticle}
+\bauthor{\bsnm{Han}, \binits{K.}},
+\bauthor{\bsnm{Xiao}, \binits{A.}},
+\bauthor{\bsnm{Wu}, \binits{E.}},
+\bauthor{\bsnm{Guo}, \binits{J.}},
+\bauthor{\bsnm{Xu}, \binits{C.}},
+\bauthor{\bsnm{Wang}, \binits{Y.}}:
+\batitle{Transformer in transformer}.
+\bjtitle{Advances in neural information processing systems}
+\bvolume{34},
+\bfpage{15908}--\blpage{15919}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Ramesh et~al.}{2021}]{ramesh2021review}
+\begin{barticle}
+\bauthor{\bsnm{Ramesh}, \binits{K.}},
+\bauthor{\bsnm{Kumar}, \binits{G.K.}},
+\bauthor{\bsnm{Swapna}, \binits{K.}},
+\bauthor{\bsnm{Datta}, \binits{D.}},
+\bauthor{\bsnm{Rajest}, \binits{S.S.}}:
+\batitle{A review of medical image segmentation algorithms}.
+\bjtitle{EAI Endorsed Transactions on Pervasive Health and Technology}
+\bvolume{7}(\bissue{27}),
+\bfpage{6}--\blpage{6}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Long et~al.}{2015}]{long2015fully}
+\begin{bchapter}
+\bauthor{\bsnm{Long}, \binits{J.}},
+\bauthor{\bsnm{Shelhamer}, \binits{E.}},
+\bauthor{\bsnm{Darrell}, \binits{T.}}:
+\bctitle{Fully convolutional networks for semantic segmentation}.
+In: \bbtitle{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+pp. \bfpage{3431}--\blpage{3440}
+(\byear{2015})
+\end{bchapter}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Ronneberger et~al.}{2015}]{ronneberger2015u}
+\begin{bchapter}
+\bauthor{\bsnm{Ronneberger}, \binits{O.}},
+\bauthor{\bsnm{Fischer}, \binits{P.}},
+\bauthor{\bsnm{Brox}, \binits{T.}}:
+\bctitle{U-net: Convolutional networks for biomedical image segmentation}.
+In: \bbtitle{Medical Image Computing and Computer-assisted intervention--MICCAI 2015: 18th International Conference, Munich, Germany, October 5-9, 2015, Proceedings, Part III 18},
+pp. \bfpage{234}--\blpage{241}
+(\byear{2015}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Maji and Mullins}{2018}]{maji2018reduction}
+\begin{barticle}
+\bauthor{\bsnm{Maji}, \binits{P.}},
+\bauthor{\bsnm{Mullins}, \binits{R.}}:
+\batitle{On the reduction of computational complexity of deep convolutional neural networks}.
+\bjtitle{Entropy}
+\bvolume{20}(\bissue{4}),
+\bfpage{305}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Nie et~al.}{2018}]{nie2018asdnet}
+\begin{bchapter}
+\bauthor{\bsnm{Nie}, \binits{D.}},
+\bauthor{\bsnm{Gao}, \binits{Y.}},
+\bauthor{\bsnm{Wang}, \binits{L.}},
+\bauthor{\bsnm{Shen}, \binits{D.}}:
+\bctitle{Asdnet: Attention based semi-supervised deep networks for medical image segmentation}.
+In: \bbtitle{Medical Image Computing and Computer Assisted Intervention--MICCAI 2018: 21st International Conference, Granada, Spain, September 16-20, 2018, Proceedings, Part IV 11},
+pp. \bfpage{370}--\blpage{378}
+(\byear{2018}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Dosovitskiy}{2020}]{dosovitskiy2020image}
+\begin{botherref}
+\oauthor{\bsnm{Dosovitskiy}, \binits{A.}}:
+An image is worth 16x16 words: Transformers for image recognition at scale.
+arXiv preprint arXiv:2010.11929
+(2020)
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2021}]{chen2021transunet}
+\begin{botherref}
+\oauthor{\bsnm{Chen}, \binits{J.}},
+\oauthor{\bsnm{Lu}, \binits{Y.}},
+\oauthor{\bsnm{Yu}, \binits{Q.}},
+\oauthor{\bsnm{Luo}, \binits{X.}},
+\oauthor{\bsnm{Adeli}, \binits{E.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}},
+\oauthor{\bsnm{Lu}, \binits{L.}},
+\oauthor{\bsnm{Yuille}, \binits{A.L.}},
+\oauthor{\bsnm{Zhou}, \binits{Y.}}:
+Transunet: Transformers make strong encoders for medical image segmentation.
+arXiv preprint arXiv:2102.04306
+(2021)
+\end{botherref}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2022}]{wang2022uctransnet}
+\begin{bchapter}
+\bauthor{\bsnm{Wang}, \binits{H.}},
+\bauthor{\bsnm{Cao}, \binits{P.}},
+\bauthor{\bsnm{Wang}, \binits{J.}},
+\bauthor{\bsnm{Zaiane}, \binits{O.R.}}:
+\bctitle{Uctransnet: rethinking the skip connections in u-net from a channel-wise perspective with transformer}.
+In: \bbtitle{Proceedings of the AAAI Conference on Artificial Intelligence},
+vol. \bseriesno{36},
+pp. \bfpage{2441}--\blpage{2449}
+(\byear{2022})
+\end{bchapter}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Ding et~al.}{2021}]{ding2021repvgg}
+\begin{bchapter}
+\bauthor{\bsnm{Ding}, \binits{X.}},
+\bauthor{\bsnm{Zhang}, \binits{X.}},
+\bauthor{\bsnm{Ma}, \binits{N.}},
+\bauthor{\bsnm{Han}, \binits{J.}},
+\bauthor{\bsnm{Ding}, \binits{G.}},
+\bauthor{\bsnm{Sun}, \binits{J.}}:
+\bctitle{Repvgg: Making vgg-style convnets great again}.
+In: \bbtitle{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+pp. \bfpage{13733}--\blpage{13742}
+(\byear{2021})
+\end{bchapter}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Howard}{2017}]{howard2017mobilenets}
+\begin{botherref}
+\oauthor{\bsnm{Howard}, \binits{A.G.}}:
+Mobilenets: Efficient convolutional neural networks for mobile vision applications.
+arXiv preprint arXiv:1704.04861
+(2017)
+\end{botherref}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Gu and Dao}{2023}]{DBLP:journals/corr/abs-2312-00752}
+\begin{botherref}
+\oauthor{\bsnm{Gu}, \binits{A.}},
+\oauthor{\bsnm{Dao}, \binits{T.}}:
+Mamba: Linear-time sequence modeling with selective state spaces.
+CoRR
+\textbf{abs/2312.00752}
+(2023)
+\doiurl{10.48550/ARXIV.2312.00752}
+{\href{https://arxiv.org/abs/2312.00752}{{2312.00752}}}
+\end{botherref}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Aitken et~al.}{2021}]{aitken2021understanding}
+\begin{barticle}
+\bauthor{\bsnm{Aitken}, \binits{K.}},
+\bauthor{\bsnm{Ramasesh}, \binits{V.}},
+\bauthor{\bsnm{Cao}, \binits{Y.}},
+\bauthor{\bsnm{Maheswaranathan}, \binits{N.}}:
+\batitle{Understanding how encoder-decoder architectures attend}.
+\bjtitle{Advances in Neural Information Processing Systems}
+\bvolume{34},
+\bfpage{22184}--\blpage{22195}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Milletari et~al.}{2016}]{milletari2016v}
+\begin{bchapter}
+\bauthor{\bsnm{Milletari}, \binits{F.}},
+\bauthor{\bsnm{Navab}, \binits{N.}},
+\bauthor{\bsnm{Ahmadi}, \binits{S.-A.}}:
+\bctitle{V-net: Fully convolutional neural networks for volumetric medical image segmentation}.
+In: \bbtitle{2016 Fourth International Conference on 3D Vision (3DV)},
+pp. \bfpage{565}--\blpage{571}
+(\byear{2016}).
+\bcomment{Ieee}
+\end{bchapter}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Zhou et~al.}{2018}]{zhou2018unet++}
+\begin{bchapter}
+\bauthor{\bsnm{Zhou}, \binits{Z.}},
+\bauthor{\bsnm{Rahman~Siddiquee}, \binits{M.M.}},
+\bauthor{\bsnm{Tajbakhsh}, \binits{N.}},
+\bauthor{\bsnm{Liang}, \binits{J.}}:
+\bctitle{Unet++: A nested u-net architecture for medical image segmentation}.
+In: \bbtitle{Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support: 4th International Workshop, DLMIA 2018, and 8th International Workshop, ML-CDS 2018, Held in Conjunction with MICCAI 2018, Granada, Spain, September 20, 2018, Proceedings 4},
+pp. \bfpage{3}--\blpage{11}
+(\byear{2018}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Lou et~al.}{2021}]{lou2021dc}
+\begin{bchapter}
+\bauthor{\bsnm{Lou}, \binits{A.}},
+\bauthor{\bsnm{Guan}, \binits{S.}},
+\bauthor{\bsnm{Loew}, \binits{M.}}:
+\bctitle{Dc-unet: rethinking the u-net architecture with dual channel efficient cnn for medical image segmentation}.
+In: \bbtitle{Medical Imaging 2021: Image Processing},
+vol. \bseriesno{11596},
+pp. \bfpage{758}--\blpage{768}
+(\byear{2021}).
+\bcomment{SPIE}
+\end{bchapter}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Huang et~al.}{2020}]{huang2020unet}
+\begin{bchapter}
+\bauthor{\bsnm{Huang}, \binits{H.}},
+\bauthor{\bsnm{Lin}, \binits{L.}},
+\bauthor{\bsnm{Tong}, \binits{R.}},
+\bauthor{\bsnm{Hu}, \binits{H.}},
+\bauthor{\bsnm{Zhang}, \binits{Q.}},
+\bauthor{\bsnm{Iwamoto}, \binits{Y.}},
+\bauthor{\bsnm{Han}, \binits{X.}},
+\bauthor{\bsnm{Chen}, \binits{Y.-W.}},
+\bauthor{\bsnm{Wu}, \binits{J.}}:
+\bctitle{Unet 3+: A full-scale connected unet for medical image segmentation}.
+In: \bbtitle{ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+pp. \bfpage{1055}--\blpage{1059}
+(\byear{2020}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2019}]{chen2019multi}
+\begin{bchapter}
+\bauthor{\bsnm{Chen}, \binits{S.}},
+\bauthor{\bsnm{Bortsova}, \binits{G.}},
+\bauthor{\bsnm{Garc{\'\i}a-Uceda~Ju{\'a}rez}, \binits{A.}},
+\bauthor{\bsnm{Van~Tulder}, \binits{G.}},
+\bauthor{\bsnm{De~Bruijne}, \binits{M.}}:
+\bctitle{Multi-task attention-based semi-supervised learning for medical image segmentation}.
+In: \bbtitle{Medical Image Computing and Computer Assisted Intervention--MICCAI 2019: 22nd International Conference, Shenzhen, China, October 13--17, 2019, Proceedings, Part III 22},
+pp. \bfpage{457}--\blpage{465}
+(\byear{2019}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Hu et~al.}{2018}]{hu2018squeeze}
+\begin{bchapter}
+\bauthor{\bsnm{Hu}, \binits{J.}},
+\bauthor{\bsnm{Shen}, \binits{L.}},
+\bauthor{\bsnm{Sun}, \binits{G.}}:
+\bctitle{Squeeze-and-excitation networks}.
+In: \bbtitle{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+pp. \bfpage{7132}--\blpage{7141}
+(\byear{2018})
+\end{bchapter}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{Oktay et~al.}{2018}]{oktay2018attention}
+\begin{botherref}
+\oauthor{\bsnm{Oktay}, \binits{O.}},
+\oauthor{\bsnm{Schlemper}, \binits{J.}},
+\oauthor{\bsnm{Folgoc}, \binits{L.L.}},
+\oauthor{\bsnm{Lee}, \binits{M.}},
+\oauthor{\bsnm{Heinrich}, \binits{M.}},
+\oauthor{\bsnm{Misawa}, \binits{K.}},
+\oauthor{\bsnm{Mori}, \binits{K.}},
+\oauthor{\bsnm{McDonagh}, \binits{S.}},
+\oauthor{\bsnm{Hammerla}, \binits{N.Y.}},
+\oauthor{\bsnm{Kainz}, \binits{B.}}, et al.:
+Attention u-net: Learning where to look for the pancreas.
+arXiv preprint arXiv:1804.03999
+(2018)
+\end{botherref}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{Liu et~al.}{2021}]{liu2021swin}
+\begin{bchapter}
+\bauthor{\bsnm{Liu}, \binits{Z.}},
+\bauthor{\bsnm{Lin}, \binits{Y.}},
+\bauthor{\bsnm{Cao}, \binits{Y.}},
+\bauthor{\bsnm{Hu}, \binits{H.}},
+\bauthor{\bsnm{Wei}, \binits{Y.}},
+\bauthor{\bsnm{Zhang}, \binits{Z.}},
+\bauthor{\bsnm{Lin}, \binits{S.}},
+\bauthor{\bsnm{Guo}, \binits{B.}}:
+\bctitle{Swin transformer: Hierarchical vision transformer using shifted windows}.
+In: \bbtitle{Proceedings of the IEEE/CVF International Conference on Computer Vision},
+pp. \bfpage{10012}--\blpage{10022}
+(\byear{2021})
+\end{bchapter}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{Cao et~al.}{2022}]{cao2022swin}
+\begin{bchapter}
+\bauthor{\bsnm{Cao}, \binits{H.}},
+\bauthor{\bsnm{Wang}, \binits{Y.}},
+\bauthor{\bsnm{Chen}, \binits{J.}},
+\bauthor{\bsnm{Jiang}, \binits{D.}},
+\bauthor{\bsnm{Zhang}, \binits{X.}},
+\bauthor{\bsnm{Tian}, \binits{Q.}},
+\bauthor{\bsnm{Wang}, \binits{M.}}:
+\bctitle{Swin-unet: Unet-like pure transformer for medical image segmentation}.
+In: \bbtitle{European Conference on Computer Vision},
+pp. \bfpage{205}--\blpage{218}
+(\byear{2022}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{Huang et~al.}{2022}]{huang2022missformer}
+\begin{barticle}
+\bauthor{\bsnm{Huang}, \binits{X.}},
+\bauthor{\bsnm{Deng}, \binits{Z.}},
+\bauthor{\bsnm{Li}, \binits{D.}},
+\bauthor{\bsnm{Yuan}, \binits{X.}},
+\bauthor{\bsnm{Fu}, \binits{Y.}}:
+\batitle{Missformer: An effective transformer for 2d medical image segmentation}.
+\bjtitle{IEEE Transactions on Medical Imaging}
+\bvolume{42}(\bissue{5}),
+\bfpage{1484}--\blpage{1494}
+(\byear{2022})
+\end{barticle}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{Zheng et~al.}{2024}]{zheng2024lightweight}
+\begin{barticle}
+\bauthor{\bsnm{Zheng}, \binits{W.}},
+\bauthor{\bsnm{Lu}, \binits{S.}},
+\bauthor{\bsnm{Yang}, \binits{Y.}},
+\bauthor{\bsnm{Yin}, \binits{Z.}},
+\bauthor{\bsnm{Yin}, \binits{L.}}:
+\batitle{Lightweight transformer image feature extraction network}.
+\bjtitle{PeerJ Computer Science}
+\bvolume{10},
+\bfpage{1755}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Xie et~al.}{2017}]{xie2017aggregated}
+\begin{bchapter}
+\bauthor{\bsnm{Xie}, \binits{S.}},
+\bauthor{\bsnm{Girshick}, \binits{R.}},
+\bauthor{\bsnm{Doll{\'a}r}, \binits{P.}},
+\bauthor{\bsnm{Tu}, \binits{Z.}},
+\bauthor{\bsnm{He}, \binits{K.}}:
+\bctitle{Aggregated residual transformations for deep neural networks}.
+In: \bbtitle{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+pp. \bfpage{1492}--\blpage{1500}
+(\byear{2017})
+\end{bchapter}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{Trockman and Kolter}{2022}]{trockman2022patches}
+\begin{botherref}
+\oauthor{\bsnm{Trockman}, \binits{A.}},
+\oauthor{\bsnm{Kolter}, \binits{J.Z.}}:
+Patches are all you need?
+arXiv preprint arXiv:2201.09792
+(2022)
+\end{botherref}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2021}]{wang2021pyramid}
+\begin{bchapter}
+\bauthor{\bsnm{Wang}, \binits{W.}},
+\bauthor{\bsnm{Xie}, \binits{E.}},
+\bauthor{\bsnm{Li}, \binits{X.}},
+\bauthor{\bsnm{Fan}, \binits{D.-P.}},
+\bauthor{\bsnm{Song}, \binits{K.}},
+\bauthor{\bsnm{Liang}, \binits{D.}},
+\bauthor{\bsnm{Lu}, \binits{T.}},
+\bauthor{\bsnm{Luo}, \binits{P.}},
+\bauthor{\bsnm{Shao}, \binits{L.}}:
+\bctitle{Pyramid vision transformer: A versatile backbone for dense prediction without convolutions}.
+In: \bbtitle{Proceedings of the IEEE/CVF International Conference on Computer Vision},
+pp. \bfpage{568}--\blpage{578}
+(\byear{2021})
+\end{bchapter}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{Liu et~al.}{2022}]{liu2022convnet}
+\begin{bchapter}
+\bauthor{\bsnm{Liu}, \binits{Z.}},
+\bauthor{\bsnm{Mao}, \binits{H.}},
+\bauthor{\bsnm{Wu}, \binits{C.-Y.}},
+\bauthor{\bsnm{Feichtenhofer}, \binits{C.}},
+\bauthor{\bsnm{Darrell}, \binits{T.}},
+\bauthor{\bsnm{Xie}, \binits{S.}}:
+\bctitle{A convnet for the 2020s}.
+In: \bbtitle{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+pp. \bfpage{11976}--\blpage{11986}
+(\byear{2022})
+\end{bchapter}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Tolstikhin et~al.}{2021}]{tolstikhin2021mlp}
+\begin{barticle}
+\bauthor{\bsnm{Tolstikhin}, \binits{I.O.}},
+\bauthor{\bsnm{Houlsby}, \binits{N.}},
+\bauthor{\bsnm{Kolesnikov}, \binits{A.}},
+\bauthor{\bsnm{Beyer}, \binits{L.}},
+\bauthor{\bsnm{Zhai}, \binits{X.}},
+\bauthor{\bsnm{Unterthiner}, \binits{T.}},
+\bauthor{\bsnm{Yung}, \binits{J.}},
+\bauthor{\bsnm{Steiner}, \binits{A.}},
+\bauthor{\bsnm{Keysers}, \binits{D.}},
+\bauthor{\bsnm{Uszkoreit}, \binits{J.}}, \betal:
+\batitle{Mlp-mixer: An all-mlp architecture for vision}.
+\bjtitle{Advances in neural information processing systems}
+\bvolume{34},
+\bfpage{24261}--\blpage{24272}
+(\byear{2021})
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem[\protect\citeauthoryear{Tang et~al.}{2023}]{tang2023cmu}
+\begin{bchapter}
+\bauthor{\bsnm{Tang}, \binits{F.}},
+\bauthor{\bsnm{Wang}, \binits{L.}},
+\bauthor{\bsnm{Ning}, \binits{C.}},
+\bauthor{\bsnm{Xian}, \binits{M.}},
+\bauthor{\bsnm{Ding}, \binits{J.}}:
+\bctitle{Cmu-net: a strong convmixer-based medical ultrasound image segmentation network}.
+In: \bbtitle{2023 IEEE 20th International Symposium on Biomedical Imaging (ISBI)},
+pp. \bfpage{1}--\blpage{5}
+(\byear{2023}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 36
+\bibitem[\protect\citeauthoryear{Guo et~al.}{2023}]{guo2023visual}
+\begin{barticle}
+\bauthor{\bsnm{Guo}, \binits{M.-H.}},
+\bauthor{\bsnm{Lu}, \binits{C.-Z.}},
+\bauthor{\bsnm{Liu}, \binits{Z.-N.}},
+\bauthor{\bsnm{Cheng}, \binits{M.-M.}},
+\bauthor{\bsnm{Hu}, \binits{S.-M.}}:
+\batitle{Visual attention network}.
+\bjtitle{Computational Visual Media}
+\bvolume{9}(\bissue{4}),
+\bfpage{733}--\blpage{752}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 37
+\bibitem[\protect\citeauthoryear{Sudre et~al.}{2017}]{sudre2017generalised}
+\begin{bchapter}
+\bauthor{\bsnm{Sudre}, \binits{C.H.}},
+\bauthor{\bsnm{Li}, \binits{W.}},
+\bauthor{\bsnm{Vercauteren}, \binits{T.}},
+\bauthor{\bsnm{Ourselin}, \binits{S.}},
+\bauthor{\bsnm{Jorge~Cardoso}, \binits{M.}}:
+\bctitle{Generalised dice overlap as a deep learning loss function for highly unbalanced segmentations}.
+In: \bbtitle{Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support: Third International Workshop, DLMIA 2017, and 7th International Workshop, ML-CDS 2017, Held in Conjunction with MICCAI 2017, Qu{\'e}bec City, QC, Canada, September 14, Proceedings 3},
+pp. \bfpage{240}--\blpage{248}
+(\byear{2017}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 38
+\bibitem[\protect\citeauthoryear{Huttenlocher et~al.}{1993}]{huttenlocher1993comparing}
+\begin{barticle}
+\bauthor{\bsnm{Huttenlocher}, \binits{D.P.}},
+\bauthor{\bsnm{Klanderman}, \binits{G.A.}},
+\bauthor{\bsnm{Rucklidge}, \binits{W.J.}}:
+\batitle{Comparing images using the hausdorff distance}.
+\bjtitle{IEEE Transactions on pattern analysis and machine intelligence}
+\bvolume{15}(\bissue{9}),
+\bfpage{850}--\blpage{863}
+(\byear{1993})
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}

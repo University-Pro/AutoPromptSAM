@@ -132,4 +132,4 @@ def analyze_dataset(split: str, training_num: int = None):
 if __name__ == "__main__":
     # 测试所有分割数据集
     for split in ['train', 'test', 'eval']:
-        analyze_dataset(split, training_num=24)  # 测试前5个样本
+        analyze_dataset(split, training_num=0)  # training_num=0表示不限制样本数量
