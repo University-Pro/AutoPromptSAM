@@ -35,7 +35,7 @@ for MODEL_PATH in $PTH_DIR/*.pth; do
 
   # Call the Python script with the current .pth file
   python -m Test_LA \
-    --model_name "SAMV14" \
+    --model_name "SAMV14_1" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \

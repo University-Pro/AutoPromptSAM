@@ -513,11 +513,11 @@ def networktest():
         print("使用CPU")
 
     # 实例化网络
-    model = Network(in_channels=1,).to(device=device)
+    model = Network(in_channels=1).to(device=device)
 
     input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
     model(input_tensor) # 向前传播
-    summary(model, input_size=(1, 1, 112, 112, 80), device=device)
+    # summary(model, input_size=(1, 1, 112, 112, 80), device=device)
 
     return 
 

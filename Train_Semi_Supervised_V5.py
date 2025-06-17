@@ -1,11 +1,3 @@
-"""
-LA数据集
-使用双流编码器
-进行半监督训练
-相比于之前的版本调整了Loss函数
-如果使用这个版本进行训练，需要检查一下Loss函数特别是CEDice的比例
-"""
-
 import torch.optim as optim
 from torch.utils.data import DataLoader
 import torch
@@ -56,7 +48,6 @@ from dataloader.DataLoader_Amos import AmosDataset
 # from networks.SAM3D_VNet_SSL_V13 import Network
 # from networks.SAM3D_VNet_SSL_V14 import Network
 from networks.SAM3D_VNet_SSL_V14_1 import Network
-
 
 # 导入其他网络
 # from networks.Double_VNet import Network
@@ -264,10 +255,6 @@ if __name__ == "__main__":
     # model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
     model = Network(in_channels=1).to(device=device) # V14_1
     
-    # 冻结Network的ImageEncoder3D模块
-    # for param in model.samencoder.parameters():
-    #     param.requires_grad = False
-
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:
         model = nn.DataParallel(model)
@@ -326,10 +313,6 @@ if __name__ == "__main__":
             outputs = model(images) # 注意这里哪一个是VNet，哪一个是SAM
             A_output = outputs[0]  # 主分支输出
             B_output = outputs[1]  # 辅助分支输出
-
-            # V9 调整分支输出顺序
-            # A_output = outputs[1]  # 主分支输出
-            # B_output = outputs[0]  # 辅助分支输出
 
             # 监督损失（仅计算有标签数据）
             supervised_loss = criterion_dice(A_output[:labeled_bs], labels[:labeled_bs])
