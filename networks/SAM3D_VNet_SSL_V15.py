@@ -1,7 +1,8 @@
 """
-v14_2
-调整一些参数
-SAM的上采样过程使用卷积替换原来的插值
+v15 dev
+优化很多代码，根据LLM建议优化一下网络结构
+跑一下多种不同比例的有标签和无标签的数据
+跑一下不同训练策略的下的不同内容
 """
 
 import sys
@@ -196,158 +197,127 @@ class PatchMerging3D(nn.Module):
 class ImageEncoderViT3D(nn.Module):
     def __init__(
         self,
-        img_size: Union[int, Tuple[int, int, int]] = (112, 112, 80),  # 支持动态尺寸
-        patch_size: int = 8,
-        embed_dim: int = 192,
-        num_heads: int = 12,
+        img_size: Union[int, Tuple[int, int, int]] = (112, 112, 80),
+        patch_size: int = 4,  # 减小patch size保持更多空间细节
+        embed_dim: int = 256,  # 增加初始特征维度
+        depths: Tuple[int, ...] = (2, 2, 6, 2),  # 每个阶段的block数量
+        num_heads: Tuple[int, ...] = (8, 16, 32, 32),  # 每个阶段的注意力头数
+        window_sizes: Tuple[int, ...] = (7, 7, 7, 7),  # 增大窗口大小
         mlp_ratio: float = 4.0,
         qkv_bias: bool = True,
         norm_layer: Type[nn.Module] = nn.LayerNorm,
         act_layer: Type[nn.Module] = nn.GELU,
         use_abs_pos: bool = True,
-        use_rel_pos: bool = False,
-        rel_pos_zero_init: bool = True,
-        window_size: int = 0,
-        global_attn_indexes: Tuple[int, ...] = (),
+        use_rel_pos: bool = True,  # 启用相对位置编码
+        drop_path_rate: float = 0.1,  # 添加dropout path
     ) -> None:
-
         super().__init__()
-
+        
         if isinstance(img_size, int):
             img_size = (img_size, img_size, img_size)
         self.img_size = img_size
         self.patch_size = patch_size
-
-        self.patch_embed1 = PatchEmbed3D(
-            kernel_size=(2, 2, 2),
-            stride=(2, 2, 2),
+        self.num_stages = len(depths)
+        
+        # 计算每个阶段的特征图尺寸和嵌入维度
+        self.embed_dims = [embed_dim * (2 ** i) for i in range(self.num_stages)]
+        
+        # 初始patch embedding
+        self.patch_embed = PatchEmbed3D(
+            kernel_size=(patch_size, patch_size, patch_size),
+            stride=(patch_size, patch_size, patch_size),
             in_chans=1,
-            embed_dim=192
+            embed_dim=embed_dim
         )
-
-        # 动态位置编码
-        self.pos_embed: Optional[nn.Parameter] = None
+        
+        # 计算patch后的空间尺寸
+        self.patch_resolution = [s // patch_size for s in img_size]
+        
+        # 位置编码
         if use_abs_pos:
             self.pos_embed = nn.Parameter(
-                torch.zeros(
-                    1,
-                    img_size[0] // 2,  # D
-                    img_size[1] // 2,  # H
-                    img_size[2] // 2,  # W
-                    embed_dim
+                torch.zeros(1, *self.patch_resolution, embed_dim)
+            )
+            nn.init.trunc_normal_(self.pos_embed, std=0.02)
+        else:
+            self.pos_embed = None
+            
+        # 构建多阶段transformer blocks
+        self.stages = nn.ModuleList()
+        dpr = [x.item() for x in torch.linspace(0, drop_path_rate, sum(depths))]
+        cur_stage = 0
+        
+        for i in range(self.num_stages):
+            # 计算当前阶段的输入尺寸
+            if i == 0:
+                input_resolution = self.patch_resolution
+            else:
+                input_resolution = [r // 2 for r in input_resolution]
+            
+            stage = nn.ModuleList([
+                Block3D(
+                    dim=self.embed_dims[i],
+                    num_heads=num_heads[i],
+                    mlp_ratio=mlp_ratio,
+                    qkv_bias=qkv_bias,
+                    norm_layer=norm_layer,
+                    act_layer=act_layer,
+                    use_rel_pos=use_rel_pos,
+                    window_size=window_sizes[i],
+                    input_size=input_resolution,
+                    drop_path=dpr[cur_stage + j],
+                ) for j in range(depths[i])
+            ])
+            self.stages.append(stage)
+            cur_stage += depths[i]
+        
+        # Patch merging layers (下采样)
+        self.patch_mergings = nn.ModuleList()
+        for i in range(self.num_stages - 1):
+            self.patch_mergings.append(
+                PatchMerging3D(
+                    input_dim=self.embed_dims[i],
+                    out_dim=self.embed_dims[i + 1]
                 )
             )
-
-        # 设置其他规格的block进行尝试
-        self.block1 = Block3D(
-            dim=192,  
-            num_heads=num_heads,
-            mlp_ratio=mlp_ratio,
-            qkv_bias=qkv_bias,
-            norm_layer=norm_layer,
-            act_layer=act_layer,
-            use_rel_pos=use_rel_pos,
-            rel_pos_zero_init=rel_pos_zero_init,
-            window_size=4,  # 如果不设置window_size会进行全局注意力，导致显存爆炸
-            input_size=(
-                img_size[0] // 2,
-                img_size[1] // 2,
-                img_size[2] // 2,
-            ),
-        )
-
-        self.block2 = Block3D(
-            dim=384,  
-            num_heads=num_heads,
-            mlp_ratio=mlp_ratio,
-            qkv_bias=qkv_bias,
-            norm_layer=norm_layer,
-            act_layer=act_layer,
-            use_rel_pos=use_rel_pos,
-            rel_pos_zero_init=rel_pos_zero_init,
-            window_size=4,  # 如果不设置window_size会进行全局注意力，导致显存爆炸
-            input_size=(
-                img_size[0] // 4,
-                img_size[1] // 4,
-                img_size[2] // 4,
-            )
-        )
-
-        self.block3 = Block3D(
-            dim=768,  
-            num_heads=num_heads,
-            mlp_ratio=mlp_ratio,
-            qkv_bias=qkv_bias,
-            norm_layer=norm_layer,
-            act_layer=act_layer,
-            use_rel_pos=use_rel_pos,
-            rel_pos_zero_init=rel_pos_zero_init,
-            window_size=4,  # 如果不设置window_size会进行全局注意力，导致显存爆炸
-            input_size=(
-                img_size[0] // 4,
-                img_size[1] // 4,
-                img_size[2] // 4,
-            )
-        )
-
-        self.block4 = Block3D(
-            dim=768,  
-            num_heads=num_heads,
-            mlp_ratio=mlp_ratio,
-            qkv_bias=qkv_bias,
-            norm_layer=norm_layer,
-            act_layer=act_layer,
-            use_rel_pos=use_rel_pos,
-            rel_pos_zero_init=rel_pos_zero_init,
-            window_size=4,  # 如果不设置window_size会进行全局注意力，导致显存爆炸
-            input_size=(
-                img_size[0] // 4,
-                img_size[1] // 4,
-                img_size[2] // 4,
-            )
-        )
-
-        # patchmerging方式
-        self.patchmerging1 = PatchMerging3D(input_dim=192, out_dim=384)
-        self.patchmerging2 = PatchMerging3D(input_dim=384, out_dim=768)
-        self.patchmerging3 = PatchMerging3D(input_dim=768, out_dim=768)
-
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-
-        # 检查输入尺寸合法性
+        
+        # 用于分割的特征金字塔输出
+        self.feature_pyramid_norms = nn.ModuleList([
+            norm_layer(dim) for dim in self.embed_dims
+        ])
+        
+    def forward(self, x: torch.Tensor) -> Dict[str, torch.Tensor]:
+        """
+        返回多尺度特征图，用于分割任务
+        """
+        # 输入检查
         assert x.ndim == 5, f"Input must be 5D [B,C,D,H,W], got {x.shape}"
-        assert all([s % self.patch_size == 0 for s in x.shape[-3:]]), \
-            f"Input spatial size {x.shape[-3:]} must be divisible by patch_size {self.patch_size}"
-
-        # Patch Embedding
-        x = self.patch_embed1(x)
-
+        B, C, D, H, W = x.shape
+        
+        # Patch embedding
+        x = self.patch_embed(x)  # [B, D', H', W', embed_dim]
+        
         # 添加位置编码
         if self.pos_embed is not None:
             x = x + self.pos_embed
-
-        # 通过第一个Block
-        x = x.permute(0, 3, 1, 2, 4)
-        x = self.block1(x)
-
-        # Patchmerging操作
-        x = self.patchmerging1(x)
-
-        # 通过第二个Block
-        x = self.block2(x)
-
-        # 通过PatchMerging
-        x = self.patchmerging2(x)
-
-        # 通过第三个Block
-        x = self.block3(x)
-
-        # 通过第四个Block
-        x = self.block4(x)
-
-        x = x.permute(0,4,2,3,1)
-
-        return x
+        
+        # 存储多尺度特征
+        features = {}
+        
+        # 通过各个阶段
+        for i, (stage, norm) in enumerate(zip(self.stages, self.feature_pyramid_norms)):
+            # 通过当前阶段的所有blocks
+            for block in stage:
+                x = block(x)
+            
+            # 保存当前尺度的特征 (归一化后)
+            features[f'stage_{i}'] = norm(x)
+            
+            # 如果不是最后一个阶段，进行下采样
+            if i < len(self.patch_mergings):
+                x = self.patch_mergings[i](x)
+        
+        return features
 
 class Network(nn.Module):
     def __init__(

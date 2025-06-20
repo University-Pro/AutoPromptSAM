@@ -47,7 +47,8 @@ from dataloader.DataLoader_Amos import AmosDataset
 # from networks.SAM3D_VNet_SSL_V12 import Network
 # from networks.SAM3D_VNet_SSL_V13 import Network
 # from networks.SAM3D_VNet_SSL_V14 import Network
-from networks.SAM3D_VNet_SSL_V14_1 import Network
+# from networks.SAM3D_VNet_SSL_V14_1 import Network
+from networks.SAM3D_VNet_SSL_V14_2 import Network
 
 # 导入其他网络
 # from networks.Double_VNet import Network
@@ -253,7 +254,9 @@ if __name__ == "__main__":
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V12
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # V13
     # model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
-    model = Network(in_channels=1).to(device=device) # V14_1
+    # model = Network(in_channels=1).to(device=device) # V14_1
+    # model = Network(in_channels=1).to(device=device) # V14_2
+    model = Network(in_channels=1).to(device=device) # V14_3
     
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:

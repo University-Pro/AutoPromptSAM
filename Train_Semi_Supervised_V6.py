@@ -36,24 +36,7 @@ from utils.ImageAugment import ToTensor_LA as ToTensor
 from utils.ImageAugment import TwoStreamBatchSampler_LA
 
 # 导入网络框架
-# from networks.VNet import VNet
-# from networks.SAM3D_VNet_SSL import Network
-# from networks.SAM3D_VNet_SSL_V1 import Network
-# from networks.SAM3D_VNet_SSL_V2 import Network
-# from networks.SAM3D_VNet_SSL_V3 import Network
-# from networks.SAM3D_VNet_SSL_V4 import Network
-# from networks.SAM3D_VNet_SSL_V7 import Network
-# from networks.SAM3D_VNet_SSL_V8 import Network
-# from networks.SAM3D_VNet_SSL_V9 import Network
-# from networks.SAM3D_VNet_SSL_V10 import Network
-# from networks.SAM3D_VNet_SSL_V11 import Network
-# from networks.SAM3D_VNet_SSL_V12 import Network
-# from networks.SAM3D_VNet_SSL_V13 import Network
-from networks.SAM3D_VNet_SSL_V14 import Network
-
-
-# 导入其他网络
-# from networks.Double_VNet import Network
+from networks.SAM3D_VNet_SSL_V14_2 import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -257,7 +240,6 @@ if __name__ == "__main__":
     # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # V13
     model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
     
-    # 冻结Network的ImageEncoder3D模块
     # for param in model.samencoder.parameters():
     #     param.requires_grad = False
 
@@ -319,10 +301,6 @@ if __name__ == "__main__":
             outputs = model(images) # 注意这里哪一个是VNet，哪一个是SAM
             A_output = outputs[0]  # 主分支输出
             B_output = outputs[1]  # 辅助分支输出
-
-            # V9 调整分支输出顺序
-            # A_output = outputs[1]  # 主分支输出
-            # B_output = outputs[0]  # 辅助分支输出
 
             # 监督损失（仅计算有标签数据）
             supervised_loss = criterion_dice(A_output[:labeled_bs], labels[:labeled_bs])
