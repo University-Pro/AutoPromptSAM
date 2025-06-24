@@ -33,8 +33,7 @@ from collections import OrderedDict
 # from networks.SAM3D_VNet_SSL_V13 import Network
 # from networks.SAM3D_VNet_SSL_V14 import Network
 # from networks.SAM3D_VNet_SSL_V14_1 import Network
-# from networks.SAM3D_VNet_SSL_V14_2 import Network
-from networks.SAM3D_VNet_SSL_V14_3 import Network
+from networks.SAM3D_VNet_SSL_V14_2 import Network
 
 # 其他网络
 # from networks.VNet import VNet

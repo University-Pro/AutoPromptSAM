@@ -33,8 +33,8 @@ from collections import OrderedDict
 # from networks.SAM3D_VNet_SSL_V13 import Network
 # from networks.SAM3D_VNet_SSL_V14 import Network
 # from networks.SAM3D_VNet_SSL_V14_1 import Network
-# from networks.SAM3D_VNet_SSL_V14_2 import Network
-from networks.SAM3D_VNet_SSL_V14_3 import Network
+from networks.SAM3D_VNet_SSL_V14_2 import Network
+# from networks.SAM3D_VNet_SSL_V14_3 import Network
 
 # 其他网络
 # from networks.VNet import VNet
@@ -544,7 +544,7 @@ if __name__ == '__main__':
     # model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
     # model = Network(in_channels=1).to(device=device) # V14_1
     # model = Network(in_channels=1).to(device=device) # V14_2
-    model = Network(in_channels=1).to(device=device) # V14_3
+    model = Network(in_channels=1).to(device=device) # V14_2_2
     # model = VNet(n_channels=1,n_classes=2,normalization="batchnorm",has_dropout=True).to(device=device)
 
     # 加载模型
