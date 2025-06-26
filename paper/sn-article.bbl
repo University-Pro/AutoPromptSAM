@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{38}
+\begin{thebibliography}{27}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -44,136 +44,6 @@
 \csname PreBibitemsHook\endcsname
 
 %%% 1
-\bibitem[\protect\citeauthoryear{De~Fauw et~al.}{2018}]{de2018clinically}
-\begin{barticle}
-\bauthor{\bsnm{De~Fauw}, \binits{J.}},
-\bauthor{\bsnm{Ledsam}, \binits{J.R.}},
-\bauthor{\bsnm{Romera-Paredes}, \binits{B.}},
-\bauthor{\bsnm{Nikolov}, \binits{S.}},
-\bauthor{\bsnm{Tomasev}, \binits{N.}},
-\bauthor{\bsnm{Blackwell}, \binits{S.}},
-\bauthor{\bsnm{Askham}, \binits{H.}},
-\bauthor{\bsnm{Glorot}, \binits{X.}},
-\bauthor{\bsnm{O’Donoghue}, \binits{B.}},
-\bauthor{\bsnm{Visentin}, \binits{D.}}, \betal:
-\batitle{Clinically applicable deep learning for diagnosis and referral in retinal disease}.
-\bjtitle{Nature medicine}
-\bvolume{24}(\bissue{9}),
-\bfpage{1342}--\blpage{1350}
-(\byear{2018})
-\end{barticle}
-\endbibitem
-
-%%% 2
-\bibitem[\protect\citeauthoryear{Ouyang et~al.}{2020}]{ouyang2020video}
-\begin{barticle}
-\bauthor{\bsnm{Ouyang}, \binits{D.}},
-\bauthor{\bsnm{He}, \binits{B.}},
-\bauthor{\bsnm{Ghorbani}, \binits{A.}},
-\bauthor{\bsnm{Yuan}, \binits{N.}},
-\bauthor{\bsnm{Ebinger}, \binits{J.}},
-\bauthor{\bsnm{Langlotz}, \binits{C.P.}},
-\bauthor{\bsnm{Heidenreich}, \binits{P.A.}},
-\bauthor{\bsnm{Harrington}, \binits{R.A.}},
-\bauthor{\bsnm{Liang}, \binits{D.H.}},
-\bauthor{\bsnm{Ashley}, \binits{E.A.}}, \betal:
-\batitle{Video-based ai for beat-to-beat assessment of cardiac function}.
-\bjtitle{Nature}
-\bvolume{580}(\bissue{7802}),
-\bfpage{252}--\blpage{256}
-(\byear{2020})
-\end{barticle}
-\endbibitem
-
-%%% 3
-\bibitem[\protect\citeauthoryear{Ma et~al.}{2024}]{ma2024segment}
-\begin{barticle}
-\bauthor{\bsnm{Ma}, \binits{J.}},
-\bauthor{\bsnm{He}, \binits{Y.}},
-\bauthor{\bsnm{Li}, \binits{F.}},
-\bauthor{\bsnm{Han}, \binits{L.}},
-\bauthor{\bsnm{You}, \binits{C.}},
-\bauthor{\bsnm{Wang}, \binits{B.}}:
-\batitle{Segment anything in medical images}.
-\bjtitle{Nature Communications}
-\bvolume{15}(\bissue{1}),
-\bfpage{654}
-(\byear{2024})
-\end{barticle}
-\endbibitem
-
-%%% 4
-\bibitem[\protect\citeauthoryear{Ponikowski et~al.}{2017}]{ponikowski20172016}
-\begin{botherref}
-\oauthor{\bsnm{Ponikowski}, \binits{P.}},
-\oauthor{\bsnm{Voors}, \binits{A.A.}},
-\oauthor{\bsnm{Anker}, \binits{S.D.}},
-\oauthor{\bsnm{Bueno}, \binits{H.}},
-\oauthor{\bsnm{Cleland}, \binits{J.G.}},
-\oauthor{\bsnm{Coats}, \binits{A.J.}},
-\oauthor{\bsnm{Falk}, \binits{V.}},
-\oauthor{\bsnm{Gonz{\'a}lez-Juanatey}, \binits{J.R.}},
-\oauthor{\bsnm{Harjola}, \binits{V.-P.}},
-\oauthor{\bsnm{Jankowska}, \binits{E.A.}}, et al.:
-2016 esc guidelines for the diagnosis and treatment of acute and chronic heart failure.
-Russian journal of cardiology
-(1),
-7--81
-(2017)
-\end{botherref}
-\endbibitem
-
-%%% 5
-\bibitem[\protect\citeauthoryear{Wang et~al.}{2022}]{wang2022medical}
-\begin{barticle}
-\bauthor{\bsnm{Wang}, \binits{R.}},
-\bauthor{\bsnm{Lei}, \binits{T.}},
-\bauthor{\bsnm{Cui}, \binits{R.}},
-\bauthor{\bsnm{Zhang}, \binits{B.}},
-\bauthor{\bsnm{Meng}, \binits{H.}},
-\bauthor{\bsnm{Nandi}, \binits{A.K.}}:
-\batitle{Medical image segmentation using deep learning: A survey}.
-\bjtitle{IET image processing}
-\bvolume{16}(\bissue{5}),
-\bfpage{1243}--\blpage{1267}
-(\byear{2022})
-\end{barticle}
-\endbibitem
-
-%%% 6
-\bibitem[\protect\citeauthoryear{Han et~al.}{2021}]{han2021transformer}
-\begin{barticle}
-\bauthor{\bsnm{Han}, \binits{K.}},
-\bauthor{\bsnm{Xiao}, \binits{A.}},
-\bauthor{\bsnm{Wu}, \binits{E.}},
-\bauthor{\bsnm{Guo}, \binits{J.}},
-\bauthor{\bsnm{Xu}, \binits{C.}},
-\bauthor{\bsnm{Wang}, \binits{Y.}}:
-\batitle{Transformer in transformer}.
-\bjtitle{Advances in neural information processing systems}
-\bvolume{34},
-\bfpage{15908}--\blpage{15919}
-(\byear{2021})
-\end{barticle}
-\endbibitem
-
-%%% 7
-\bibitem[\protect\citeauthoryear{Ramesh et~al.}{2021}]{ramesh2021review}
-\begin{barticle}
-\bauthor{\bsnm{Ramesh}, \binits{K.}},
-\bauthor{\bsnm{Kumar}, \binits{G.K.}},
-\bauthor{\bsnm{Swapna}, \binits{K.}},
-\bauthor{\bsnm{Datta}, \binits{D.}},
-\bauthor{\bsnm{Rajest}, \binits{S.S.}}:
-\batitle{A review of medical image segmentation algorithms}.
-\bjtitle{EAI Endorsed Transactions on Pervasive Health and Technology}
-\bvolume{7}(\bissue{27}),
-\bfpage{6}--\blpage{6}
-(\byear{2021})
-\end{barticle}
-\endbibitem
-
-%%% 8
 \bibitem[\protect\citeauthoryear{Long et~al.}{2015}]{long2015fully}
 \begin{bchapter}
 \bauthor{\bsnm{Long}, \binits{J.}},
@@ -186,7 +56,7 @@ pp. \bfpage{3431}--\blpage{3440}
 \end{bchapter}
 \endbibitem
 
-%%% 9
+%%% 2
 \bibitem[\protect\citeauthoryear{Ronneberger et~al.}{2015}]{ronneberger2015u}
 \begin{bchapter}
 \bauthor{\bsnm{Ronneberger}, \binits{O.}},
@@ -200,118 +70,7 @@ pp. \bfpage{234}--\blpage{241}
 \end{bchapter}
 \endbibitem
 
-%%% 10
-\bibitem[\protect\citeauthoryear{Maji and Mullins}{2018}]{maji2018reduction}
-\begin{barticle}
-\bauthor{\bsnm{Maji}, \binits{P.}},
-\bauthor{\bsnm{Mullins}, \binits{R.}}:
-\batitle{On the reduction of computational complexity of deep convolutional neural networks}.
-\bjtitle{Entropy}
-\bvolume{20}(\bissue{4}),
-\bfpage{305}
-(\byear{2018})
-\end{barticle}
-\endbibitem
-
-%%% 11
-\bibitem[\protect\citeauthoryear{Nie et~al.}{2018}]{nie2018asdnet}
-\begin{bchapter}
-\bauthor{\bsnm{Nie}, \binits{D.}},
-\bauthor{\bsnm{Gao}, \binits{Y.}},
-\bauthor{\bsnm{Wang}, \binits{L.}},
-\bauthor{\bsnm{Shen}, \binits{D.}}:
-\bctitle{Asdnet: Attention based semi-supervised deep networks for medical image segmentation}.
-In: \bbtitle{Medical Image Computing and Computer Assisted Intervention--MICCAI 2018: 21st International Conference, Granada, Spain, September 16-20, 2018, Proceedings, Part IV 11},
-pp. \bfpage{370}--\blpage{378}
-(\byear{2018}).
-\bcomment{Springer}
-\end{bchapter}
-\endbibitem
-
-%%% 12
-\bibitem[\protect\citeauthoryear{Dosovitskiy}{2020}]{dosovitskiy2020image}
-\begin{botherref}
-\oauthor{\bsnm{Dosovitskiy}, \binits{A.}}:
-An image is worth 16x16 words: Transformers for image recognition at scale.
-arXiv preprint arXiv:2010.11929
-(2020)
-\end{botherref}
-\endbibitem
-
-%%% 13
-\bibitem[\protect\citeauthoryear{Chen et~al.}{2021}]{chen2021transunet}
-\begin{botherref}
-\oauthor{\bsnm{Chen}, \binits{J.}},
-\oauthor{\bsnm{Lu}, \binits{Y.}},
-\oauthor{\bsnm{Yu}, \binits{Q.}},
-\oauthor{\bsnm{Luo}, \binits{X.}},
-\oauthor{\bsnm{Adeli}, \binits{E.}},
-\oauthor{\bsnm{Wang}, \binits{Y.}},
-\oauthor{\bsnm{Lu}, \binits{L.}},
-\oauthor{\bsnm{Yuille}, \binits{A.L.}},
-\oauthor{\bsnm{Zhou}, \binits{Y.}}:
-Transunet: Transformers make strong encoders for medical image segmentation.
-arXiv preprint arXiv:2102.04306
-(2021)
-\end{botherref}
-\endbibitem
-
-%%% 14
-\bibitem[\protect\citeauthoryear{Wang et~al.}{2022}]{wang2022uctransnet}
-\begin{bchapter}
-\bauthor{\bsnm{Wang}, \binits{H.}},
-\bauthor{\bsnm{Cao}, \binits{P.}},
-\bauthor{\bsnm{Wang}, \binits{J.}},
-\bauthor{\bsnm{Zaiane}, \binits{O.R.}}:
-\bctitle{Uctransnet: rethinking the skip connections in u-net from a channel-wise perspective with transformer}.
-In: \bbtitle{Proceedings of the AAAI Conference on Artificial Intelligence},
-vol. \bseriesno{36},
-pp. \bfpage{2441}--\blpage{2449}
-(\byear{2022})
-\end{bchapter}
-\endbibitem
-
-%%% 15
-\bibitem[\protect\citeauthoryear{Ding et~al.}{2021}]{ding2021repvgg}
-\begin{bchapter}
-\bauthor{\bsnm{Ding}, \binits{X.}},
-\bauthor{\bsnm{Zhang}, \binits{X.}},
-\bauthor{\bsnm{Ma}, \binits{N.}},
-\bauthor{\bsnm{Han}, \binits{J.}},
-\bauthor{\bsnm{Ding}, \binits{G.}},
-\bauthor{\bsnm{Sun}, \binits{J.}}:
-\bctitle{Repvgg: Making vgg-style convnets great again}.
-In: \bbtitle{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-pp. \bfpage{13733}--\blpage{13742}
-(\byear{2021})
-\end{bchapter}
-\endbibitem
-
-%%% 16
-\bibitem[\protect\citeauthoryear{Howard}{2017}]{howard2017mobilenets}
-\begin{botherref}
-\oauthor{\bsnm{Howard}, \binits{A.G.}}:
-Mobilenets: Efficient convolutional neural networks for mobile vision applications.
-arXiv preprint arXiv:1704.04861
-(2017)
-\end{botherref}
-\endbibitem
-
-%%% 17
-\bibitem[\protect\citeauthoryear{Gu and Dao}{2023}]{DBLP:journals/corr/abs-2312-00752}
-\begin{botherref}
-\oauthor{\bsnm{Gu}, \binits{A.}},
-\oauthor{\bsnm{Dao}, \binits{T.}}:
-Mamba: Linear-time sequence modeling with selective state spaces.
-CoRR
-\textbf{abs/2312.00752}
-(2023)
-\doiurl{10.48550/ARXIV.2312.00752}
-{\href{https://arxiv.org/abs/2312.00752}{{2312.00752}}}
-\end{botherref}
-\endbibitem
-
-%%% 18
+%%% 3
 \bibitem[\protect\citeauthoryear{Aitken et~al.}{2021}]{aitken2021understanding}
 \begin{barticle}
 \bauthor{\bsnm{Aitken}, \binits{K.}},
@@ -326,7 +85,7 @@ CoRR
 \end{barticle}
 \endbibitem
 
-%%% 19
+%%% 4
 \bibitem[\protect\citeauthoryear{Milletari et~al.}{2016}]{milletari2016v}
 \begin{bchapter}
 \bauthor{\bsnm{Milletari}, \binits{F.}},
@@ -340,7 +99,7 @@ pp. \bfpage{565}--\blpage{571}
 \end{bchapter}
 \endbibitem
 
-%%% 20
+%%% 5
 \bibitem[\protect\citeauthoryear{Zhou et~al.}{2018}]{zhou2018unet++}
 \begin{bchapter}
 \bauthor{\bsnm{Zhou}, \binits{Z.}},
@@ -355,7 +114,7 @@ pp. \bfpage{3}--\blpage{11}
 \end{bchapter}
 \endbibitem
 
-%%% 21
+%%% 6
 \bibitem[\protect\citeauthoryear{Lou et~al.}{2021}]{lou2021dc}
 \begin{bchapter}
 \bauthor{\bsnm{Lou}, \binits{A.}},
@@ -370,7 +129,7 @@ pp. \bfpage{758}--\blpage{768}
 \end{bchapter}
 \endbibitem
 
-%%% 22
+%%% 7
 \bibitem[\protect\citeauthoryear{Huang et~al.}{2020}]{huang2020unet}
 \begin{bchapter}
 \bauthor{\bsnm{Huang}, \binits{H.}},
@@ -390,7 +149,7 @@ pp. \bfpage{1055}--\blpage{1059}
 \end{bchapter}
 \endbibitem
 
-%%% 23
+%%% 8
 \bibitem[\protect\citeauthoryear{Chen et~al.}{2019}]{chen2019multi}
 \begin{bchapter}
 \bauthor{\bsnm{Chen}, \binits{S.}},
@@ -406,7 +165,7 @@ pp. \bfpage{457}--\blpage{465}
 \end{bchapter}
 \endbibitem
 
-%%% 24
+%%% 9
 \bibitem[\protect\citeauthoryear{Hu et~al.}{2018}]{hu2018squeeze}
 \begin{bchapter}
 \bauthor{\bsnm{Hu}, \binits{J.}},
@@ -419,7 +178,7 @@ pp. \bfpage{7132}--\blpage{7141}
 \end{bchapter}
 \endbibitem
 
-%%% 25
+%%% 10
 \bibitem[\protect\citeauthoryear{Oktay et~al.}{2018}]{oktay2018attention}
 \begin{botherref}
 \oauthor{\bsnm{Oktay}, \binits{O.}},
@@ -438,7 +197,35 @@ arXiv preprint arXiv:1804.03999
 \end{botherref}
 \endbibitem
 
-%%% 26
+%%% 11
+\bibitem[\protect\citeauthoryear{Dosovitskiy}{2020}]{dosovitskiy2020image}
+\begin{botherref}
+\oauthor{\bsnm{Dosovitskiy}, \binits{A.}}:
+An image is worth 16x16 words: Transformers for image recognition at scale.
+arXiv preprint arXiv:2010.11929
+(2020)
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2021}]{chen2021transunet}
+\begin{botherref}
+\oauthor{\bsnm{Chen}, \binits{J.}},
+\oauthor{\bsnm{Lu}, \binits{Y.}},
+\oauthor{\bsnm{Yu}, \binits{Q.}},
+\oauthor{\bsnm{Luo}, \binits{X.}},
+\oauthor{\bsnm{Adeli}, \binits{E.}},
+\oauthor{\bsnm{Wang}, \binits{Y.}},
+\oauthor{\bsnm{Lu}, \binits{L.}},
+\oauthor{\bsnm{Yuille}, \binits{A.L.}},
+\oauthor{\bsnm{Zhou}, \binits{Y.}}:
+Transunet: Transformers make strong encoders for medical image segmentation.
+arXiv preprint arXiv:2102.04306
+(2021)
+\end{botherref}
+\endbibitem
+
+%%% 13
 \bibitem[\protect\citeauthoryear{Liu et~al.}{2021}]{liu2021swin}
 \begin{bchapter}
 \bauthor{\bsnm{Liu}, \binits{Z.}},
@@ -456,7 +243,7 @@ pp. \bfpage{10012}--\blpage{10022}
 \end{bchapter}
 \endbibitem
 
-%%% 27
+%%% 14
 \bibitem[\protect\citeauthoryear{Cao et~al.}{2022}]{cao2022swin}
 \begin{bchapter}
 \bauthor{\bsnm{Cao}, \binits{H.}},
@@ -474,7 +261,7 @@ pp. \bfpage{205}--\blpage{218}
 \end{bchapter}
 \endbibitem
 
-%%% 28
+%%% 15
 \bibitem[\protect\citeauthoryear{Huang et~al.}{2022}]{huang2022missformer}
 \begin{barticle}
 \bauthor{\bsnm{Huang}, \binits{X.}},
@@ -490,7 +277,7 @@ pp. \bfpage{205}--\blpage{218}
 \end{barticle}
 \endbibitem
 
-%%% 29
+%%% 16
 \bibitem[\protect\citeauthoryear{Zheng et~al.}{2024}]{zheng2024lightweight}
 \begin{barticle}
 \bauthor{\bsnm{Zheng}, \binits{W.}},
@@ -506,7 +293,7 @@ pp. \bfpage{205}--\blpage{218}
 \end{barticle}
 \endbibitem
 
-%%% 30
+%%% 17
 \bibitem[\protect\citeauthoryear{Xie et~al.}{2017}]{xie2017aggregated}
 \begin{bchapter}
 \bauthor{\bsnm{Xie}, \binits{S.}},
@@ -521,7 +308,33 @@ pp. \bfpage{1492}--\blpage{1500}
 \end{bchapter}
 \endbibitem
 
-%%% 31
+%%% 18
+\bibitem[\protect\citeauthoryear{Howard}{2017}]{howard2017mobilenets}
+\begin{botherref}
+\oauthor{\bsnm{Howard}, \binits{A.G.}}:
+Mobilenets: Efficient convolutional neural networks for mobile vision applications.
+arXiv preprint arXiv:1704.04861
+(2017)
+\end{botherref}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Ding et~al.}{2021}]{ding2021repvgg}
+\begin{bchapter}
+\bauthor{\bsnm{Ding}, \binits{X.}},
+\bauthor{\bsnm{Zhang}, \binits{X.}},
+\bauthor{\bsnm{Ma}, \binits{N.}},
+\bauthor{\bsnm{Han}, \binits{J.}},
+\bauthor{\bsnm{Ding}, \binits{G.}},
+\bauthor{\bsnm{Sun}, \binits{J.}}:
+\bctitle{Repvgg: Making vgg-style convnets great again}.
+In: \bbtitle{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+pp. \bfpage{13733}--\blpage{13742}
+(\byear{2021})
+\end{bchapter}
+\endbibitem
+
+%%% 20
 \bibitem[\protect\citeauthoryear{Trockman and Kolter}{2022}]{trockman2022patches}
 \begin{botherref}
 \oauthor{\bsnm{Trockman}, \binits{A.}},
@@ -532,7 +345,7 @@ arXiv preprint arXiv:2201.09792
 \end{botherref}
 \endbibitem
 
-%%% 32
+%%% 21
 \bibitem[\protect\citeauthoryear{Wang et~al.}{2021}]{wang2021pyramid}
 \begin{bchapter}
 \bauthor{\bsnm{Wang}, \binits{W.}},
@@ -551,7 +364,7 @@ pp. \bfpage{568}--\blpage{578}
 \end{bchapter}
 \endbibitem
 
-%%% 33
+%%% 22
 \bibitem[\protect\citeauthoryear{Liu et~al.}{2022}]{liu2022convnet}
 \begin{bchapter}
 \bauthor{\bsnm{Liu}, \binits{Z.}},
@@ -567,7 +380,7 @@ pp. \bfpage{11976}--\blpage{11986}
 \end{bchapter}
 \endbibitem
 
-%%% 34
+%%% 23
 \bibitem[\protect\citeauthoryear{Tolstikhin et~al.}{2021}]{tolstikhin2021mlp}
 \begin{barticle}
 \bauthor{\bsnm{Tolstikhin}, \binits{I.O.}},
@@ -588,7 +401,7 @@ pp. \bfpage{11976}--\blpage{11986}
 \end{barticle}
 \endbibitem
 
-%%% 35
+%%% 24
 \bibitem[\protect\citeauthoryear{Tang et~al.}{2023}]{tang2023cmu}
 \begin{bchapter}
 \bauthor{\bsnm{Tang}, \binits{F.}},
@@ -604,7 +417,7 @@ pp. \bfpage{1}--\blpage{5}
 \end{bchapter}
 \endbibitem
 
-%%% 36
+%%% 25
 \bibitem[\protect\citeauthoryear{Guo et~al.}{2023}]{guo2023visual}
 \begin{barticle}
 \bauthor{\bsnm{Guo}, \binits{M.-H.}},
@@ -620,7 +433,7 @@ pp. \bfpage{1}--\blpage{5}
 \end{barticle}
 \endbibitem
 
-%%% 37
+%%% 26
 \bibitem[\protect\citeauthoryear{Sudre et~al.}{2017}]{sudre2017generalised}
 \begin{bchapter}
 \bauthor{\bsnm{Sudre}, \binits{C.H.}},
@@ -636,7 +449,7 @@ pp. \bfpage{240}--\blpage{248}
 \end{bchapter}
 \endbibitem
 
-%%% 38
+%%% 27
 \bibitem[\protect\citeauthoryear{Huttenlocher et~al.}{1993}]{huttenlocher1993comparing}
 \begin{barticle}
 \bauthor{\bsnm{Huttenlocher}, \binits{D.P.}},

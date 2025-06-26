@@ -101,12 +101,13 @@ def networktest():
         print("使用CPU")
 
     # 实例化网络
-    model = Network(in_channels=1,encoder_depth=4,num_points_per_class=400).to(device=device)
+    model = Network(in_channels=1,num_classes=16).to(device=device)
 
-    input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
+    # input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
+    input_tensor = torch.randn(1, 1, 80, 160, 160).to(device=device)
+    input_tensor = input_tensor.permute(0,1,3,4,2)
     vnet_output,sam_output = model(input_tensor)
     print(f"输出形状: {vnet_output.shape,sam_output.shape}")
-    summary(model=model,input_size=(1,1,112,112,80))
 
     return 
 

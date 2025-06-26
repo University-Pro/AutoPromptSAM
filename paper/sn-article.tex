@@ -43,73 +43,43 @@
 \affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
 
 \abstract{
-Deep learning-based methods typically require large amount of labeled data for training, this limitation restricts their broader clinical use in disease diagnosis, treatment planning, and monitoring.
-Semi-supervised learning (SSL) has recently emerged as a promising approach to address this challenge, enabling the utilization of both labeled and unlabeled data to improve model performance.
-
-
-Accurate multi-organ segmentation is crucial in computer-aided diagnosis, surgical navigation, and radiotherapy.
-Deep learning-based methods for automated multi-organ segmentation have made significant progress recently.
-However, these improvements often increase model complexity, leading to higher computational costs.
-To address this problem, we propose a novel network called DLKUNet, significantly reducing parameter counts while enhancing feature extraction.
-Our method utilizes a hierarchical architecture combined with the DLKBlock to effectively capture multi-scale features.
-Additionally, we employ a novel training strategy that works seamlessly with this module to enhance performance.
-We conducted extensive experiments on the multi-organ abdominal segmentation (Synapse) and the Automated Cardiac Diagnosis Challenge (ACDC) dataset.
-DLKUNet-L significantly improves the 95\% Hausdorff Distance to 13.89mm with 65\% parameters of Swin-Unet on the Synapse.
-Furthermore, DLKUNet-S and DLKUNet-M use only 4.5\% and 16.52\% parameters of Swin-Unet, achieving Dice Similarity Coefficient 91.71 and 91.74 on the ACDC.
-These results underscore the proposed model's superior performance in terms of accuracy, efficiency, and practical applicability.
+Large amount of high-quality annotated data for training is required by medical image segmentation area, this limitation restricts their broader clinical use in disease diagnosis, treatment planning, and monitoring.
+Semi-supervised learning (SSL) has recently emerged as a promising approach to address this challenge, enabling the utilization of both labeled and unlabeled data to improve segmentation performance.
+Also, Segment Anything (SAM) from Meta has shown great potential in medical image segmentation, leveraging large-scale pretraining on diverse datasets to enhance model generalization.
+However, existing SSL methods often rely on complex architectures and extensive computational resources, making them less practical for real-world applications.
 }
 
-\keywords{Large Kernel, Depthwise Convolution, Medical Image Segmentation, U-shape}
+\keywords{Medical Image Segmentation, Semi-Supervised Learning, Deep Learning}
 
 \maketitle
 
 \section{Introduction}\label{sec1}
-% 介绍深度学习在医疗影像中的重要性
-Accurate segmentation is essential for disease diagnosis, treatment planning, and monitoring of disease progression \cite{de2018clinically,ouyang2020video}.
-Manual segmentation has long been the gold standard for delineating anatomical structures and pathological regions, but this process is time-consuming, labor-intensive, and often requires a high degree of expertise \cite{ma2024segment}.
-Automated medical image segmentation is pivotal in improving diagnostic efficiency \cite{ponikowski20172016}.
-Deep learning has been widely used for automated medical image segmentation, achieving remarkable success in this field \cite{wang2022medical}.
+% 介绍医学图像分割任务的重要性,以及全监督方法的弊端
+Medical image segmentation plays a pivotal role in medical imaging by enabling precise delineation of anatomical structures and pathological regions.  
+Accurate segmentation is indispensable for clinical applications, including disease diagnosis, treatment planning, and longitudinal monitoring of disease progression.  
+Deep learning-based methods have revolutionized medical image segmentation, achieving remarkable success in various tasks.
+However, these fully-supervised methods often face two main challenges:
+(1) A large amounts of annotated data is required in training part, which is a significant limitation in clinical practice due to the time-consuming and labor-intensive nature of manual annotation.
+(2) The performance of these methods heavily relies on the availability of high-quality annotated data, which is often scarce in many medical imaging tasks.
+Besides, many commonly used medical images like computed tomography (CT) and magnetic resonance imaging (MRI) scans are 3D volumetric data, further increase the burden of manual annotation compared with 2D images.
+Therefore, training deep learning models with limited annotated data remains a significant challenge in the field of medical image segmentation.
 
-% 介绍最初的卷积操作被广泛使用以及一些缺点
-Convolution Neural Networks (CNNs) are used for medical image segmentation due to their strong feature extraction capabilities.
-It can capture local spatial patterns effectively, making them well-suited for identifying fine-grained features within medical images.
-However, they faced numerous challenges in dealing with complex organ structures, particularly in low-contrast images or those with blurred boundaries \cite{han2021transformer}.
+% 半监督学习过程
+To address the challenge of limited annotated data, researchers have made substantial efforts in developing annotation-efficient methods in medical image segmentation.
+Semi-supervised learning (SSL) could effectively leverage the information contained in both labeled and unlabeled data and improves model performance.
+this method have shown great potential in medical image segmentation, enabling the utilization of both labeled and unlabeled data to improve segmentation performance.
+there are mainly two types of SSL methods: consistency regularization and pseudo-labeling.
+Using pseudo-labeling path,it could enlarge the training data through label generalization to improve stability of the model while training.
+it also could use data augmentation and consistency regularization to enhance the model's robustness and generalization ability.
+these methods have shown promising results in various medical image segmentation tasks, demonstrating their effectiveness in improving model performance with limited annotated data.
 
-% 介绍使用卷积操作的深度学习网络的发展
-With the advancement of deep learning, existing medical image segmentation networks have achieved significant progress in multiple areas \cite{ramesh2021review}.
-Previous research explored networks demonstrating strong feature learning capabilities by utilizing Fully Convolutional Networks (FCNs) to gradually extract multi-layered features \cite{long2015fully}.
-Subsequently, U-Net \cite{ronneberger2015u} effectively captures and integrates multi-scale features through an encoder-decoder architecture and convolutional modules.
-% 介绍卷积网络的缺点（缺少全局信息、计算复杂度高）
-However, convolutions are limited in their ability to capture long-range dependencies.
-This limitation makes it challenging for convolutional networks to effectively integrate information from distant regions of the input, thereby reducing their capability to understand the overall structure and context within an image.
-Moreover, convolution operations often come with high computational complexity, further limiting their scalability and efficiency, especially when dealing with high-resolution images \cite{maji2018reduction}.
+% Segment anything相关内容
+Recent years have witnessed the emergence of foundation models in computer vision, notably represented by the Segment Anything Model (SAM) for 2D image segmentation, which demonstrates impressive zero-shot generalization capabilities across various natural image segmentation tasks.
+However, because of the suubstantial domaingap, its performance remains suboptimal in medical images segmentation tasks.
 
-% 介绍面对卷积网络的缺点1（缺少全局信息），一些研究人员提出了注意力机制和大核卷积
-To overcome the limitations of convolutional networks, researchers introduced attention mechanisms to dynamically adjust feature weights and capture global contextual information \cite{nie2018asdnet}.
-The advent of the Vision Transformer (ViT) \cite{dosovitskiy2020image}, which enables outstanding performance by acquiring global information through self-attention computation, has made ViT-based models \cite{chen2021transunet,wang2022uctransnet} a popular medical segmentation backbone.
-Subsequently, the introduction of large kernel module significantly expands the receptive field of the convolutional operation, allowing it to capture a broader range of contextual information compared to standard convolutional kernels \cite{ding2021repvgg}.
-By increasing the size of the receptive field, the large kernel is capable of aggregating features from distant spatial regions, effectively incorporating more global context.
-% 介绍面对卷积网络的缺点2，一些研究人员提出了轻量化的卷积操作
-Additionally, some researchers have proposed lightweight variants of convolution to reduce the computational cost \cite{howard2017mobilenets}.
-By incorporating depthwise separable convolutions into the network, the complexity of convolutional operations is effectively reduced, leading to more efficient computation without significantly compromising performance.
-% 介绍一些研究人员的提出的混合网络架构
-% Consequently, hybrid architectures that combine CNNs and attention mechanisms have been developed, enabling the simultaneous processing of both local and global information \cite{petit2021u}.
+% 介绍半监督和SAM当前面对的一些困难
 
-% 介绍目前的一些的研究缺陷
-Despite the remarkable progress achieved by these methods in the field of medical image segmentation, they often require extensive datasets for pretraining.
-Moreover, self-attention mechanisms excel at global information modeling but suffer from non-linear increases in computational complexity as the input image resolution increases \cite{DBLP:journals/corr/abs-2312-00752}.
-Specifically, combining convolutions and attention mechanisms in hybrid architectures presents challenges in the trade-off between capturing local and contextual information.
-Thus, reducing computational complexity and enhancing training efficiency while maintaining high segmentation accuracy remains a key challenge in current research.
-
-% 介绍我们的工作
-To address these challenges, we propose a novel U-shaped architecture that effectively integrates attention mechanisms and convolutional feature extraction, while also reducing computational resource consumption.
-By incorporating the DLKBlock, our network can expand the receptive field of convolution operations to a certain extent while significantly reducing the computational cost of convolutions.
-Additionally, we designed a strategy that dynamically balances the learning weights for edge information and central regions in the image to further enhance the network performance.
-Our contributions can be summarized as:
-(1) We propose the DLKBlock module to capture multi-scale features, effectively balancing contextual feature integration with local feature extraction.
-(2) We design DLKUNet in three different sizes to provide a range of trade-offs between computational complexity and feature extraction capability.
-(3) We introduce a dynamic training strategy that enhances performance in medical image segmentation, demonstrating superior results across various tasks.
-Our experimental results on the Synapse and ACDC datasets demonstrate that the proposed model achieves outstanding performance.
+% 提出自己的方法
 
 \section{Relative works}\label{sec2}
 
