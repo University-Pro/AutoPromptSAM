@@ -1,4 +1,9 @@
 # Test_Amos.py
+"""
+Amos数据集的测试代码
+但是现在这个版本只能测试一个输出结果
+"""
+
 import os
 import argparse
 import torch

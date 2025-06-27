@@ -99,14 +99,9 @@ class DecoupledUncertaintyPrompt(nn.Module):
         # topk_scores/indices shape: [B, C, K]
         _, topk_indices_flat = torch.topk(suppressed_scores_flat, K, dim=-1, sorted=False)
         # 4. 将扁平化的索引转换回 3D 坐标
-        # 创建一个与索引形状匹配的类别标签张量
-        # class_ids shape: [B, C, K]
         class_ids = torch.arange(C, device=scores.device).view(1, C, 1).expand(B, C, K)
         
-        # 坐标转换公式
-        # d = index // (H * W)
-        # h = (index % (H * W)) // W
-        # w = index % W
+        # 坐标转换
         coords_d = topk_indices_flat // (H * W)
         coords_h = (topk_indices_flat % (H * W)) // W
         coords_w = topk_indices_flat % W
@@ -161,6 +156,37 @@ class DecoupledUncertaintyPrompt(nn.Module):
             model.load_state_dict(state_dict, strict=False)
         return model
 
+def decoupled_uncertainty_prompt_test():
+    # 检查CUDA是否可用
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    if device == "cuda":
+        print(f"使用GPU: {torch.cuda.get_device_name(0)}")
+    else:
+        print("使用CPU")
+
+    # 实例化解耦不确定性Prompt生成器
+    prompt_generator = DecoupledUncertaintyPrompt(
+        n_channels=1,  # 输入通道数
+        n_classes=2,  # 输出类别数
+        normalization='batchnorm',
+        has_dropout=True,
+        pretrain_weight_path=None,  # 如果有预训练权重路径，可以传入
+        num_mc_samples=5,  # 蒙特卡洛采样次数
+        w_epistemic=0.5,  # 不确定性权重
+        w_aleatoric=0.5,  # 不确定性权重
+        k_per_class=20,  # 每个类别的top-k数量
+        suppression_radius=7  # NMS半径
+    ).to(device)
+
+    # 模拟输入数据
+    input_tensor = torch.randn(1, 1, 112, 112, 80).to(device)  # LA数据集模拟输入大小
+
+    coords, labels = prompt_generator(input_tensor)
+    
+    print(f"生成的坐标形状: {coords.shape}, 标签形状: {labels.shape}")
+    
+    return coords, labels
+
 class PatchMerging3D(nn.Module):
     def __init__(self, input_dim: int, out_dim: Optional[int] = None, norm_layer=nn.LayerNorm):
         super().__init__()
@@ -192,6 +218,26 @@ class PatchMerging3D(nn.Module):
         x = self.norm(x)
         x = self.reduction(x)
         return x
+
+def pathmerging3D_test():
+    # 检查CUDA是否可用
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    if device == "cuda":
+        print(f"使用GPU: {torch.cuda.get_device_name(0)}")
+    else:
+        print("使用CPU")
+
+    # 实例化PatchMerging3D
+    patch_merging = PatchMerging3D(input_dim=256, out_dim=512).to(device)
+
+    # 模拟输入数据
+    input_tensor = torch.randn(1, 14, 14, 10, 256).to(device)  # 假设输入尺寸为 [B, D, H, W, C]
+
+    output_tensor = patch_merging(input_tensor)
+    
+    print(f"输出张量形状: {output_tensor.shape}")
+    
+    return output_tensor
 
 class ImageEncoderViT3D(nn.Module):
     def __init__(
@@ -264,7 +310,6 @@ class ImageEncoderViT3D(nn.Module):
                     use_rel_pos=use_rel_pos,
                     window_size=window_sizes[i],
                     input_size=input_resolution,
-                    drop_path=dpr[cur_stage + j],
                 ) for j in range(depths[i])
             ])
             self.stages.append(stage)
@@ -285,14 +330,12 @@ class ImageEncoderViT3D(nn.Module):
             norm_layer(dim) for dim in self.embed_dims
         ])
         
-    def forward(self, x: torch.Tensor) -> Dict[str, torch.Tensor]:
-        """
-        返回多尺度特征图，用于分割任务
-        """
+    def forward(self, x: torch.Tensor) -> dict[str, torch.Tensor]:
+
         # 输入检查
         assert x.ndim == 5, f"Input must be 5D [B,C,D,H,W], got {x.shape}"
         B, C, D, H, W = x.shape
-        
+        print(f'Input shape: {x.shape}')
         # Patch embedding
         x = self.patch_embed(x)  # [B, D', H', W', embed_dim]
         
@@ -429,11 +472,16 @@ class Network(nn.Module):
         )
 
     def forward(self, x):
+        print(f'input shape is {x.shape}')
+
         # 0.VNet分支输出结果
         vnet_output, variance = self.vnet(x)
+        print(f'vnet_output shape is {vnet_output.shape}')
+        print(f'variance shape is {variance.shape}')
         
         # 1. 图像主干编码
         after_encoder = self.samencoder(x)
+
         
         # 2. 获得prompt（返回固定维度的张量）
         coords, labels = self.promptgenerator(x)
@@ -458,7 +506,6 @@ class Network(nn.Module):
         )
         
         # 5. 插值还原尺寸
-        # sam_output = self.postprocess_masks(after_maskencoder, input_size=x.shape[-3:], original_size=x.shape[-3:])
         sam_output = self.upsampler(after_maskencoder)
         
         return vnet_output, sam_output
@@ -470,13 +517,10 @@ def networktest():
         print(f"使用GPU: {torch.cuda.get_device_name(0)}")
     else:
         print("使用CPU")
-
     # 实例化网络
     model = Network(in_channels=1).to(device=device)
-
-    input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device)
+    input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device) # LA数据集模拟输入大小
     model(input_tensor) # 向前传播
-
     return 
 
 if __name__ == "__main__":

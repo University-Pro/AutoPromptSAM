@@ -294,8 +294,10 @@ if __name__ == "__main__":
         pbar = tqdm.tqdm(train_loader, total=len(train_loader), desc=f'Epoch {epoch+1}/{args.epochs}')
         for batch_idx, batch_data in enumerate(pbar):
             # 数据准备
-            images = batch_data['image'].to(device)
-            labels = batch_data['label'].to(device)
+            # images = batch_data['image'].to(device)
+            # labels = batch_data['label'].to(device)
+            images = batch_data['image'].to(device, non_blocking=True)  # 异步传输
+            labels = batch_data['label'].to(device, non_blocking=True)
             labeled_bs = args.label_bs
             
             # 模型前向传播（双输出）
