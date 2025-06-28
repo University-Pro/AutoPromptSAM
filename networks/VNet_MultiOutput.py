@@ -1,5 +1,5 @@
 """
-带有双头输出的VNet网络
+能够输出分割结果置信度的VNe网络
 """
 import torch
 from torch import nn
@@ -33,7 +33,6 @@ class ConvBlock(nn.Module):
         x = self.conv(x)
         return x
 
-
 class ResidualConvBlock(nn.Module):
     def __init__(self, n_stages, n_filters_in, n_filters_out, normalization='none'):
         super(ResidualConvBlock, self).__init__()
@@ -66,7 +65,6 @@ class ResidualConvBlock(nn.Module):
         x = self.relu(x)
         return x
 
-
 class DownsamplingConvBlock(nn.Module):
     def __init__(self, n_filters_in, n_filters_out, stride=2, normalization='none'):
         super(DownsamplingConvBlock, self).__init__()
@@ -92,7 +90,6 @@ class DownsamplingConvBlock(nn.Module):
     def forward(self, x):
         x = self.conv(x)
         return x
-
 
 class UpsamplingDeconvBlock(nn.Module):
     def __init__(self, n_filters_in, n_filters_out, stride=2, normalization='none'):
@@ -120,7 +117,6 @@ class UpsamplingDeconvBlock(nn.Module):
         x = self.conv(x)
         return x
 
-
 class Upsampling(nn.Module):
     def __init__(self, n_filters_in, n_filters_out, stride=2, normalization='none'):
         super(Upsampling, self).__init__()
@@ -143,7 +139,6 @@ class Upsampling(nn.Module):
     def forward(self, x):
         x = self.conv(x)
         return x
-
 
 class VNet(nn.Module):
     def __init__(self, n_channels=3, n_classes=2, n_filters=16, normalization='none', has_dropout=False):
@@ -253,7 +248,6 @@ class VNet(nn.Module):
             
         return logits, variance  # 返回元组 (logits, variance)
 
-
 if __name__ == '__main__':
     # 测试修改后的网络
     x = torch.randn(1, 1, 112, 112, 80)
@@ -264,6 +258,3 @@ if __name__ == '__main__':
     logits, variance = model(x)
     print(f'Logits shape: {logits.shape}')
     print(f'Variance shape: {variance.shape}')
-
-    # 打印网络结构
-    # summary(model, (1, 1, 112, 112, 80), device='cpu')

@@ -1,7 +1,6 @@
 """
 v15 dev
-优化很多代码，根据LLM建议优化一下网络结构
-另外也跑一下在Amos数据集上的效果
+优化网络结构
 """
 
 import sys
@@ -24,8 +23,9 @@ from networks.sam_med3d.modeling.image_encoder3D import Block3D
 from networks.sam_med3d.modeling.image_encoder3D import PatchEmbed3D
 from networks.sam_med3d.modeling.image_encoder3D import LayerNorm3d
 
-# 导入不确定性VNet网络
-from networks.VNet_MultiOutput import VNet
+# 导入第二代不确定性VNet网络
+# from networks.VNet_MultiOutput import VNet
+from networks.VNet_MultiOutput_V2 import VNet
 
 # 导入解耦不确定性Prompt部分
 from networks.DecoupledUncertaintyTensorTest import DecoupledUncertaintyGenerator
@@ -245,7 +245,7 @@ class ImageEncoderViT3D(nn.Module):
         img_size: Union[int, Tuple[int, int, int]] = (112, 112, 80),
         patch_size: int = 4,  # 减小patch size保持更多空间细节
         embed_dim: int = 256,  # 增加初始特征维度
-        depths: Tuple[int, ...] = (2, 2, 6, 2),  # 每个阶段的block数量
+        depths: Tuple[int, ...] = (2, 2, 4, 2),  # 每个阶段的block数量
         num_heads: Tuple[int, ...] = (8, 16, 32, 32),  # 每个阶段的注意力头数
         window_sizes: Tuple[int, ...] = (7, 7, 7, 7),  # 增大窗口大小
         mlp_ratio: float = 4.0,
@@ -335,10 +335,11 @@ class ImageEncoderViT3D(nn.Module):
         # 输入检查
         assert x.ndim == 5, f"Input must be 5D [B,C,D,H,W], got {x.shape}"
         B, C, D, H, W = x.shape
-        print(f'Input shape: {x.shape}')
+        # print(f'Input shape: {x.shape}')
         # Patch embedding
-        x = self.patch_embed(x)  # [B, D', H', W', embed_dim]
-        
+        x = self.patch_embed(x)
+        # print(f'after patch embedding: {x.shape}') # BHWDC
+
         # 添加位置编码
         if self.pos_embed is not None:
             x = x + self.pos_embed
@@ -348,6 +349,7 @@ class ImageEncoderViT3D(nn.Module):
         
         # 通过各个阶段
         for i, (stage, norm) in enumerate(zip(self.stages, self.feature_pyramid_norms)):
+
             # 通过当前阶段的所有blocks
             for block in stage:
                 x = block(x)
@@ -358,7 +360,7 @@ class ImageEncoderViT3D(nn.Module):
             # 如果不是最后一个阶段，进行下采样
             if i < len(self.patch_mergings):
                 x = self.patch_mergings[i](x)
-        
+
         return features
 
 class Network(nn.Module):
@@ -366,7 +368,7 @@ class Network(nn.Module):
             self,
             in_channels: int = 1,
             image_size: Tuple[int, int, int] = (112, 112, 80),
-            patch_size: int = 8,
+            patch_size: int = 4,
             embed_dim: int = 768,
             out_chans: int = 768,
             num_classes: int = 2,
@@ -441,7 +443,7 @@ class Network(nn.Module):
         self.samencoder = ImageEncoderViT3D(
             img_size=self.image_size,
             patch_size=self.patch_size,
-            embed_dim=192
+            embed_dim=96
         )
 
         # ------- Mask Decoder -------
@@ -474,17 +476,23 @@ class Network(nn.Module):
     def forward(self, x):
         print(f'input shape is {x.shape}')
 
-        # 0.VNet分支输出结果
-        vnet_output, variance = self.vnet(x)
+        # VNet输出结果
+        vnet_output, variance, encoder_feature = self.vnet(x)
         print(f'vnet_output shape is {vnet_output.shape}')
         print(f'variance shape is {variance.shape}')
+        for i, feat in enumerate(encoder_feature):
+            print(f'Feature {i+1} shape: {feat.shape}')
         
         # 1. 图像主干编码
         after_encoder = self.samencoder(x)
+        print(f'after_encoder shape is {after_encoder["stage_0"].shape}')
+        print(f'after_encoder shape is {after_encoder["stage_1"].shape}')
+        print(f'after_encoder shape is {after_encoder["stage_2"].shape}')
+        print(f'after_encoder shape is {after_encoder["stage_3"].shape}')
 
-        
         # 2. 获得prompt（返回固定维度的张量）
         coords, labels = self.promptgenerator(x)
+        print(f'coords shape is {coords.shape}, labels shape is {labels.shape}')
         
         # 3. prompt 编码
         sparse_embeddings, dense_embeddings = self.promptencoder(
@@ -492,13 +500,16 @@ class Network(nn.Module):
             boxes=None,
             masks=None
         )
-        
+        print(f'sparse_embeddings shape is {sparse_embeddings.shape}')
+        print(f'dense_embeddings shape is {dense_embeddings.shape}')
+
         # 获得位置编码
         image_pe = self.promptencoder.get_dense_pe()
+        print(f'image_pe shape is {image_pe.shape}')
         
         # 4. 掩码解码
         after_maskencoder, iou_pred = self.maskdecoder(
-            image_embeddings=after_encoder,
+            image_embeddings=after_encoder["stage_3"],
             image_pe=image_pe,
             sparse_prompt_embeddings=sparse_embeddings,
             dense_prompt_embeddings=dense_embeddings,

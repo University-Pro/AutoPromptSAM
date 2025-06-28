@@ -3,7 +3,6 @@
 并且计算平均值
 """
 
-
 import os
 import argparse
 import torch
