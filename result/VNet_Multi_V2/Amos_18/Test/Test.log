@@ -1,0 +1,356 @@
+[2025-06-30 21:44:19] INFO     - 
+======================================== 运行配置 ========================================
+[2025-06-30 21:44:19] INFO     - PyTorch 版本: 2.7.1+cu126
+[2025-06-30 21:44:19] INFO     - CUDA 可用: True
+[2025-06-30 21:44:19] INFO     - CUDA 设备数量: 1
+[2025-06-30 21:44:19] INFO     - 当前设备: 0 - NVIDIA GeForce RTX 2080 Ti
+[2025-06-30 21:44:19] INFO     - 设备内存: 21.67 GB
+[2025-06-30 21:44:19] INFO     - 工作设备: cuda
+[2025-06-30 21:44:19] INFO     - 
+-------------------- 实验参数 --------------------
+[2025-06-30 21:44:19] INFO     - model_path          : ./result/VNet_Multi_V2/Amos_18/Pth/model_epoch_100_checkpoint.pth
+[2025-06-30 21:44:19] INFO     - amos_data_path      : ./datasets/Amos
+[2025-06-30 21:44:19] INFO     - output_dir          : ./result/VNet_Multi_V2/Amos_18/Predict
+[2025-06-30 21:44:19] INFO     - split               : test
+[2025-06-30 21:44:19] INFO     - speed               : 0
+[2025-06-30 21:44:19] INFO     - gpu                 : 0
+[2025-06-30 21:44:19] INFO     - n_filters           : 16
+[2025-06-30 21:44:19] INFO     - num_channels        : 1
+[2025-06-30 21:44:19] INFO     - metrics_log         : ./result/VNet_Multi_V2/Amos_18/Test/Test.log
+[2025-06-30 21:44:19] INFO     - save_images         : False
+[2025-06-30 21:44:19] INFO     - 启动时间                : 2025-06-30 21:44:19
+[2025-06-30 21:44:19] INFO     - 
+-------------------- 数据配置 --------------------
+[2025-06-30 21:44:19] INFO     - 输入尺寸: (80, 160, 160)
+[2025-06-30 21:44:19] INFO     - 类别数量: 16
+[2025-06-30 21:44:19] INFO     - 滑动窗口步长: XY=40, Z=20
+[2025-06-30 21:44:19] INFO     - 
+-------------------- 模型架构 --------------------
+[2025-06-30 21:44:19] INFO     - 总参数量: 9.19M
+[2025-06-30 21:44:19] INFO     - 可训练参数: 9.19M
+[2025-06-30 21:44:19] ERROR    - 模型初始化失败!
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 226, in <module>
+    model.load_state_dict(checkpoint)
+  File "/samba/network-storage/remotessd/cache/envs/torch-env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2593, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for VNet:
+	Missing key(s) in state_dict: "block_one.conv.0.weight", "block_one.conv.0.bias", "block_one.conv.1.weight", "block_one.conv.1.bias", "block_one.conv.1.running_mean", "block_one.conv.1.running_var", "block_one_dw.conv.0.weight", "block_one_dw.conv.0.bias", "block_one_dw.conv.1.weight", "block_one_dw.conv.1.bias", "block_one_dw.conv.1.running_mean", "block_one_dw.conv.1.running_var", "block_two.conv.0.weight", "block_two.conv.0.bias", "block_two.conv.1.weight", "block_two.conv.1.bias", "block_two.conv.1.running_mean", "block_two.conv.1.running_var", "block_two.conv.3.weight", "block_two.conv.3.bias", "block_two.conv.4.weight", "block_two.conv.4.bias", "block_two.conv.4.running_mean", "block_two.conv.4.running_var", "block_two_dw.conv.0.weight", "block_two_dw.conv.0.bias", "block_two_dw.conv.1.weight", "block_two_dw.conv.1.bias", "block_two_dw.conv.1.running_mean", "block_two_dw.conv.1.running_var", "block_three.conv.0.weight", "block_three.conv.0.bias", "block_three.conv.1.weight", "block_three.conv.1.bias", "block_three.conv.1.running_mean", "block_three.conv.1.running_var", "block_three.conv.3.weight", "block_three.conv.3.bias", "block_three.conv.4.weight", "block_three.conv.4.bias", "block_three.conv.4.running_mean", "block_three.conv.4.running_var", "block_three.conv.6.weight", "block_three.conv.6.bias", "block_three.conv.7.weight", "block_three.conv.7.bias", "block_three.conv.7.running_mean", "block_three.conv.7.running_var", "block_three_dw.conv.0.weight", "block_three_dw.conv.0.bias", "block_three_dw.conv.1.weight", "block_three_dw.conv.1.bias", "block_three_dw.conv.1.running_mean", "block_three_dw.conv.1.running_var", "block_four.conv.0.weight", "block_four.conv.0.bias", "block_four.conv.1.weight", "block_four.conv.1.bias", "block_four.conv.1.running_mean", "block_four.conv.1.running_var", "block_four.conv.3.weight", "block_four.conv.3.bias", "block_four.conv.4.weight", "block_four.conv.4.bias", "block_four.conv.4.running_mean", "block_four.conv.4.running_var", "block_four.conv.6.weight", "block_four.conv.6.bias", "block_four.conv.7.weight", "block_four.conv.7.bias", "block_four.conv.7.running_mean", "block_four.conv.7.running_var", "block_four_dw.conv.0.weight", "block_four_dw.conv.0.bias", "block_four_dw.conv.1.weight", "block_four_dw.conv.1.bias", "block_four_dw.conv.1.running_mean", "block_four_dw.conv.1.running_var", "block_five.conv.0.weight", "block_five.conv.0.bias", "block_five.conv.1.weight", "block_five.conv.1.bias", "block_five.conv.1.running_mean", "block_five.conv.1.running_var", "block_five.conv.3.weight", "block_five.conv.3.bias", "block_five.conv.4.weight", "block_five.conv.4.bias", "block_five.conv.4.running_mean", "block_five.conv.4.running_var", "block_five.conv.6.weight", "block_five.conv.6.bias", "block_five.conv.7.weight", "block_five.conv.7.bias", "block_five.conv.7.running_mean", "block_five.conv.7.running_var", "block_five_up.conv.0.weight", "block_five_up.conv.0.bias", "block_five_up.conv.1.weight", "block_five_up.conv.1.bias", "block_five_up.conv.1.running_mean", "block_five_up.conv.1.running_var", "block_six.conv.0.weight", "block_six.conv.0.bias", "block_six.conv.1.weight", "block_six.conv.1.bias", "block_six.conv.1.running_mean", "block_six.conv.1.running_var", "block_six.conv.3.weight", "block_six.conv.3.bias", "block_six.conv.4.weight", "block_six.conv.4.bias", "block_six.conv.4.running_mean", "block_six.conv.4.running_var", "block_six.conv.6.weight", "block_six.conv.6.bias", "block_six.conv.7.weight", "block_six.conv.7.bias", "block_six.conv.7.running_mean", "block_six.conv.7.running_var", "block_six_up.conv.0.weight", "block_six_up.conv.0.bias", "block_six_up.conv.1.weight", "block_six_up.conv.1.bias", "block_six_up.conv.1.running_mean", "block_six_up.conv.1.running_var", "block_seven.conv.0.weight", "block_seven.conv.0.bias", "block_seven.conv.1.weight", "block_seven.conv.1.bias", "block_seven.conv.1.running_mean", "block_seven.conv.1.running_var", "block_seven.conv.3.weight", "block_seven.conv.3.bias", "block_seven.conv.4.weight", "block_seven.conv.4.bias", "block_seven.conv.4.running_mean", "block_seven.conv.4.running_var", "block_seven.conv.6.weight", "block_seven.conv.6.bias", "block_seven.conv.7.weight", "block_seven.conv.7.bias", "block_seven.conv.7.running_mean", "block_seven.conv.7.running_var", "block_seven_up.conv.0.weight", "block_seven_up.conv.0.bias", "block_seven_up.conv.1.weight", "block_seven_up.conv.1.bias", "block_seven_up.conv.1.running_mean", "block_seven_up.conv.1.running_var", "block_eight.conv.0.weight", "block_eight.conv.0.bias", "block_eight.conv.1.weight", "block_eight.conv.1.bias", "block_eight.conv.1.running_mean", "block_eight.conv.1.running_var", "block_eight.conv.3.weight", "block_eight.conv.3.bias", "block_eight.conv.4.weight", "block_eight.conv.4.bias", "block_eight.conv.4.running_mean", "block_eight.conv.4.running_var", "block_eight_up.conv.0.weight", "block_eight_up.conv.0.bias", "block_eight_up.conv.1.weight", "block_eight_up.conv.1.bias", "block_eight_up.conv.1.running_mean", "block_eight_up.conv.1.running_var", "block_nine.conv.0.weight", "block_nine.conv.0.bias", "block_nine.conv.1.weight", "block_nine.conv.1.bias", "block_nine.conv.1.running_mean", "block_nine.conv.1.running_var", "logits_head.weight", "logits_head.bias", "variance_head.0.weight", "variance_head.0.bias". 
+	Unexpected key(s) in state_dict: "epoch", "model_state_dict", "optimizer_state_dict", "loss". 
+[2025-06-30 21:49:35] INFO     - 
+======================================== 运行配置 ========================================
+[2025-06-30 21:49:35] INFO     - PyTorch 版本: 2.7.1+cu126
+[2025-06-30 21:49:35] INFO     - CUDA 可用: True
+[2025-06-30 21:49:35] INFO     - CUDA 设备数量: 1
+[2025-06-30 21:49:35] INFO     - 当前设备: 0 - NVIDIA GeForce RTX 2080 Ti
+[2025-06-30 21:49:35] INFO     - 设备内存: 21.67 GB
+[2025-06-30 21:49:35] INFO     - 工作设备: cuda
+[2025-06-30 21:49:35] INFO     - 
+-------------------- 实验参数 --------------------
+[2025-06-30 21:49:35] INFO     - model_path          : ./result/VNet_Multi_V2/Amos_18/Pth/model_epoch_100_checkpoint.pth
+[2025-06-30 21:49:35] INFO     - amos_data_path      : ./datasets/Amos
+[2025-06-30 21:49:35] INFO     - output_dir          : ./result/VNet_Multi_V2/Amos_18/Predict
+[2025-06-30 21:49:35] INFO     - split               : test
+[2025-06-30 21:49:35] INFO     - speed               : 0
+[2025-06-30 21:49:35] INFO     - gpu                 : 0
+[2025-06-30 21:49:35] INFO     - n_filters           : 16
+[2025-06-30 21:49:35] INFO     - num_channels        : 1
+[2025-06-30 21:49:35] INFO     - metrics_log         : ./result/VNet_Multi_V2/Amos_18/Test/Test.log
+[2025-06-30 21:49:35] INFO     - save_images         : False
+[2025-06-30 21:49:35] INFO     - 启动时间                : 2025-06-30 21:49:35
+[2025-06-30 21:49:35] INFO     - 
+-------------------- 数据配置 --------------------
+[2025-06-30 21:49:35] INFO     - 输入尺寸: (80, 160, 160)
+[2025-06-30 21:49:35] INFO     - 类别数量: 16
+[2025-06-30 21:49:35] INFO     - 滑动窗口步长: XY=40, Z=20
+[2025-06-30 21:49:36] INFO     - 
+-------------------- 模型架构 --------------------
+[2025-06-30 21:49:36] INFO     - 总参数量: 9.19M
+[2025-06-30 21:49:36] INFO     - 可训练参数: 9.19M
+[2025-06-30 21:49:36] INFO     - 成功加载模型参数 from ./result/VNet_Multi_V2/Amos_18/Pth/model_epoch_100_checkpoint.pth
+[2025-06-30 21:49:36] INFO     - 训练轮次: 100
+[2025-06-30 21:49:36] INFO     - 模型已设置为评估模式
+[2025-06-30 21:49:36] INFO     - 
+======================================== 数据统计 ========================================
+[2025-06-30 21:49:36] INFO     - 加载数据集分割: test
+[2025-06-30 21:49:36] INFO     - 案例总数: 120
+[2025-06-30 21:49:36] INFO     - 首案例ID示例: amos_0008
+[2025-06-30 21:49:36] INFO     - 
+======================================== 开始推理 ========================================
+[2025-06-30 21:49:38] WARNING  - amos_0008 HD95计算失败
+[2025-06-30 21:49:38] ERROR    - 案例 amos_0008 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:38] WARNING  - amos_0013 HD95计算失败
+[2025-06-30 21:49:38] ERROR    - 案例 amos_0013 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:38] WARNING  - amos_0018 HD95计算失败
+[2025-06-30 21:49:38] ERROR    - 案例 amos_0018 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:39] WARNING  - amos_0022 HD95计算失败
+[2025-06-30 21:49:39] ERROR    - 案例 amos_0022 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:39] WARNING  - amos_0029 HD95计算失败
+[2025-06-30 21:49:39] ERROR    - 案例 amos_0029 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:39] WARNING  - amos_0032 HD95计算失败
+[2025-06-30 21:49:39] ERROR    - 案例 amos_0032 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:40] WARNING  - amos_0034 HD95计算失败
+[2025-06-30 21:49:40] ERROR    - 案例 amos_0034 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:40] WARNING  - amos_0040 HD95计算失败
+[2025-06-30 21:49:40] ERROR    - 案例 amos_0040 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:41] WARNING  - amos_0041 HD95计算失败
+[2025-06-30 21:49:41] ERROR    - 案例 amos_0041 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:41] WARNING  - amos_0051 HD95计算失败
+[2025-06-30 21:49:41] ERROR    - 案例 amos_0051 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:41] WARNING  - amos_0056 HD95计算失败
+[2025-06-30 21:49:41] ERROR    - 案例 amos_0056 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:42] WARNING  - amos_0061 HD95计算失败
+[2025-06-30 21:49:42] ERROR    - 案例 amos_0061 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:42] WARNING  - amos_0063 HD95计算失败
+[2025-06-30 21:49:42] ERROR    - 案例 amos_0063 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:42] WARNING  - amos_0070 HD95计算失败
+[2025-06-30 21:49:42] ERROR    - 案例 amos_0070 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:43] WARNING  - amos_0073 HD95计算失败
+[2025-06-30 21:49:43] ERROR    - 案例 amos_0073 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:43] WARNING  - amos_0085 HD95计算失败
+[2025-06-30 21:49:43] ERROR    - 案例 amos_0085 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:43] WARNING  - amos_0087 HD95计算失败
+[2025-06-30 21:49:43] ERROR    - 案例 amos_0087 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:44] WARNING  - amos_0090 HD95计算失败
+[2025-06-30 21:49:44] ERROR    - 案例 amos_0090 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:44] WARNING  - amos_0106 HD95计算失败
+[2025-06-30 21:49:44] ERROR    - 案例 amos_0106 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:44] WARNING  - amos_0108 HD95计算失败
+[2025-06-30 21:49:44] ERROR    - 案例 amos_0108 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:45] WARNING  - amos_0112 HD95计算失败
+[2025-06-30 21:49:45] ERROR    - 案例 amos_0112 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:45] WARNING  - amos_0117 HD95计算失败
+[2025-06-30 21:49:45] ERROR    - 案例 amos_0117 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:45] WARNING  - amos_0120 HD95计算失败
+[2025-06-30 21:49:45] ERROR    - 案例 amos_0120 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:46] WARNING  - amos_0123 HD95计算失败
+[2025-06-30 21:49:46] ERROR    - 案例 amos_0123 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:46] WARNING  - amos_0128 HD95计算失败
+[2025-06-30 21:49:46] ERROR    - 案例 amos_0128 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:46] WARNING  - amos_0132 HD95计算失败
+[2025-06-30 21:49:46] ERROR    - 案例 amos_0132 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:47] WARNING  - amos_0136 HD95计算失败
+[2025-06-30 21:49:47] ERROR    - 案例 amos_0136 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:47] WARNING  - amos_0140 HD95计算失败
+[2025-06-30 21:49:47] ERROR    - 案例 amos_0140 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:47] WARNING  - amos_0144 HD95计算失败
+[2025-06-30 21:49:47] ERROR    - 案例 amos_0144 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:48] WARNING  - amos_0150 HD95计算失败
+[2025-06-30 21:49:48] ERROR    - 案例 amos_0150 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:48] WARNING  - amos_0155 HD95计算失败
+[2025-06-30 21:49:48] ERROR    - 案例 amos_0155 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:49] WARNING  - amos_0157 HD95计算失败
+[2025-06-30 21:49:49] ERROR    - 案例 amos_0157 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:49] WARNING  - amos_0167 HD95计算失败
+[2025-06-30 21:49:49] ERROR    - 案例 amos_0167 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:49] WARNING  - amos_0174 HD95计算失败
+[2025-06-30 21:49:49] ERROR    - 案例 amos_0174 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:50] WARNING  - amos_0176 HD95计算失败
+[2025-06-30 21:49:50] ERROR    - 案例 amos_0176 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:50] WARNING  - amos_0189 HD95计算失败
+[2025-06-30 21:49:50] ERROR    - 案例 amos_0189 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:50] WARNING  - amos_0191 HD95计算失败
+[2025-06-30 21:49:50] ERROR    - 案例 amos_0191 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:51] WARNING  - amos_0194 HD95计算失败
+[2025-06-30 21:49:51] ERROR    - 案例 amos_0194 处理失败: Unknown format code 'f' for object of type 'str'
+Traceback (most recent call last):
+  File "/samba/network-storage/westdigital/pi/sam2-ssl/Test_Amos.py", line 288, in <module>
+    f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+[2025-06-30 21:49:51] WARNING  - 用户中断执行!
+[2025-06-30 21:49:51] INFO     - 
+======================================== 最终统计 ========================================
+[2025-06-30 21:49:51] INFO     - 成功处理案例数: 38/120 (31.7%)
+[2025-06-30 21:49:51] INFO     - [Dice] 均值 ± 标准差: 0.0000 ± 0.0000
+[2025-06-30 21:49:51] INFO     - [Dice] 中位数 (IQR): 0.0000 (0.0000 - 0.0000)
+[2025-06-30 21:49:51] INFO     - [HD95] 均值 ± 标准差: nan ± nan
+[2025-06-30 21:49:51] INFO     - [HD95] 中位数 (IQR): nan (nan - nan)
+[2025-06-30 21:49:51] INFO     - 峰值显存使用: 0.77 GB
+[2025-06-30 21:49:51] INFO     - 当前显存使用: 0.27 GB
+[2025-06-30 21:49:51] INFO     - 测试流程完成!

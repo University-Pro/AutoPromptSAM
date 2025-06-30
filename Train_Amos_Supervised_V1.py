@@ -223,7 +223,7 @@ if __name__ == "__main__":
     train_loader = DataLoader(
         dataset=db_train,
         batch_size=args.batch_size,
-        num_workers=4,  # 自动适配CPU核心数
+        num_workers=os.cpu_count(),  # 自动适配CPU核心数
         pin_memory=True,
         shuffle=True,
         persistent_workers=True  # 保持worker进程
@@ -231,12 +231,12 @@ if __name__ == "__main__":
 
     # 定义模型
     logging.info("Initializing VNet model...")
-    model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True)
+    model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True) # VNet
     logging.info(f"Model created with {args.num_classes} classes.")
 
     # 定义损失函数
-    criterion = UnifiedLoss(num_classes=args.num_classes, lambda_reg=0.5, loss_weight=[0.6, 1.4])
-    logging.info(f"Using Unified Uncertainty-aware Loss with num_classes={args.num_classes}, lambda_reg=0.5, loss_weight=[0.6, 1.4]")
+    criterion = UnifiedLoss(num_classes=args.num_classes, lambda_reg=0.3, loss_weight=[1, 1])
+    logging.info(f"Using Unified Uncertainty-aware Loss with num_classes={args.num_classes}, lambda_reg=0.3, loss_weight=[1,1")
 
     # 如果继续训练
     if args.continue_train:

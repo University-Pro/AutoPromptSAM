@@ -1,5 +1,6 @@
 """
-LA数据集的测试函数
+LA数据集的测试函数Part2
+一般用于和Part1并行处理不同的Pth用于加快测试速度
 """
 
 import logging

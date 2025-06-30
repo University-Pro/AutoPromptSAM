@@ -1,45 +1,47 @@
 #!/bin/bash
 
-# Directory containing .pth files
-PTH_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Pth_Part1"  # 修改为你存放模型的目录
+# 存放 .pth 文件的目录
+# PTH_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Pth_Part1"  # 修改为你存放模型的目录
+PTH_DIR="result/VNet_Multi_V2/LA_8/Pth"
 
-# Directory to save logs
-LOG_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Test_Part1"  # 修改为你保存日志的目录
+# 保存日志的目录
+# LOG_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Test_Part1"  # 修改为你保存日志的目录
+LOG_DIR="result/VNet_Multi_V2/LA_8/Test"
 
-# Root path for dataset
+# 数据集根路径
 ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
 
-# Number of classes
+# 类别数
 NUM_CLASSES=2  # 修改为你的数据集类别数
 
-# Number of outputs
-NUM_OUTPUT=2  # Assuming this is the default number of outputs
+# 输出数量
+NUM_OUTPUT=1  # 假设这是默认的输出数量
 
-# Test save path (if none, we just ignore it in this script)
+# 测试保存路径 (如果没有，脚本中会忽略)
 TEST_SAVE_PATH="None"  # 如果不保存结果，可以保持None
 
-# Ensure LOG_DIR exists, if not, create it
+# 确保 LOG_DIR 存在，如果不存在则创建
 if [ ! -d "$LOG_DIR" ]; then
   mkdir -p "$LOG_DIR"
 fi
 
-# Iterate over each .pth file in the directory
+# 遍历目录中的每个 .pth 文件
 for MODEL_PATH in $PTH_DIR/*.pth; do
-  # Extract epoch number from filename (optional)
+  # 从文件名中提取 epoch 编号 (可选)
   EPOCH=$(echo $MODEL_PATH | grep -oP '(?<=epoch_)\d+(?=_checkpoint.pth)')
   
-  # Set log filename to include epoch number for logging
+  # 设置日志文件名以包含 epoch 编号
   LOG_FILE="$LOG_DIR/Test.log"
 
-  echo "Testing $MODEL_PATH, logging to $LOG_FILE"
+  echo "正在测试 $MODEL_PATH, 日志记录到 $LOG_FILE"
 
-  # Call the Python script with the current .pth file
+  # 使用当前的 .pth 文件调用 Python 脚本
   python -m Test_LA \
-    --model_name "SAMV14_2_2" \
+    --model_name "VNet_Multi_V2" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \
     --root_path "$ROOT_PATH" \
     --num_classes "$NUM_CLASSES" \
-    --num_outputs "$NUM_OUTPUT"  # Assuming this is the default number of outputs
+    --num_outputs "$NUM_OUTPUT"  # 假设这是默认的输出数量
 done

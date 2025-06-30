@@ -18,7 +18,7 @@ from torch.cuda import get_device_name
 from collections import OrderedDict
 
 # 导入相关网络
-from networks.Double_VNet import Network
+from networks.VNet_MultiOutput_V2 import VNet
 
 # 如果目录不存在则创建
 def maybe_mkdir(path):
@@ -53,16 +53,7 @@ def setup_logging(log_file):
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
-# --- 核心推理函数（滑动窗口）---
-# MODIFIED: 函数现在返回一个包含两个预测图的元组
 def test_single_case(net, image: np.ndarray, stride_xy: int, stride_z: int, patch_size: Tuple[int, int, int], num_classes: int) -> Tuple[np.ndarray, np.ndarray]:
-    """
-    对单个3D图像进行滑动窗口推理。
-    假设网络 `net` 返回一个包含两个输出的元组 `(output1, output2)`。
-    
-    返回:
-        Tuple[np.ndarray, np.ndarray]: 两个输出对应的预测分割图 (pred_map1, pred_map2)。
-    """
     patch_d, patch_h, patch_w = patch_size
     
     # 添加批次和通道维度，转换为张量，发送到GPU

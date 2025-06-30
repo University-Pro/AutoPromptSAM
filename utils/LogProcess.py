@@ -1,3 +1,6 @@
+"""
+旧版本LA日志文件提取最好的结果的工具
+"""
 import re
 import argparse
 

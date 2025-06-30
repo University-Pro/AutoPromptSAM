@@ -1,4 +1,3 @@
-# Test_Amos.py
 """
 Amos数据集的测试代码
 但是现在这个版本只能测试一个输出结果
@@ -14,9 +13,11 @@ from datetime import datetime
 from tqdm import tqdm
 from medpy import metric
 from typing import Tuple
-from networks.VNet import VNet
 from dataloader.DataLoader_Amos import AmosConfig, AmosDataset
 from torch.cuda import get_device_name
+
+# 导入对应的网络
+from networks.VNet_MultiOutput_V2 import VNet
 
 # 如果目录不存在则创建
 def maybe_mkdir(path):
@@ -79,6 +80,11 @@ def test_single_case(net, image: np.ndarray, stride_xy: int, stride_z: int, patc
                     sx = min(stride_xy * ix, w - patch_w)
                     patch = input_tensor[:, :, sz:sz + patch_d, sy:sy + patch_h, sx:sx + patch_w]
                     patch_pred = net(patch)
+
+                    # 如果Patch的长度大于1，那么取第0个
+                    if len(patch_pred) > 1:
+                        patch_pred = patch_pred[0]
+
                     score_map[:, :, sz:sz + patch_d, sy:sy + patch_h, sx:sx + patch_w] += patch_pred.cpu()
                     count_map[:, :, sz:sz + patch_d, sy:sy + patch_h, sx:sx + patch_w] += 1.0
     
@@ -208,15 +214,19 @@ if __name__ == '__main__':
         # 加载权重
         if os.path.exists(args.model_path):
             checkpoint = torch.load(args.model_path, map_location=device)
-            if 'state_dict' in checkpoint:
-                model.load_state_dict(checkpoint['state_dict'])
+            
+            # 检查模型参数键是否存在
+            if 'model_state_dict' in checkpoint:
+                model.load_state_dict(checkpoint['model_state_dict'])
                 logging.info(f"成功加载模型参数 from {args.model_path}")
-                # 记录训练元数据
+                
+                # 记录训练元数据（如果有的话）
                 if 'epoch' in checkpoint:
                     logging.info(f"训练轮次: {checkpoint['epoch']}")
                 if 'best_dice' in checkpoint:
                     logging.info(f"最佳验证Dice: {checkpoint['best_dice']:.4f}")
-            else:  # 兼容旧版模型
+            else:
+                # 兼容旧版模型，假设整个checkpoint是model_state_dict
                 model.load_state_dict(checkpoint)
                 logging.warning("加载未包含元数据的旧版模型参数")
         else:

@@ -1,0 +1,899 @@
+2025-06-29 10:42:06 - INFO - Logging is set up.
+2025-06-29 10:42:06 - INFO - 
+======================================== New Training Session ========================================
+2025-06-29 10:42:06 - INFO - Configuration:
+{
+    "seed": 21,
+    "epochs": 400,
+    "batch_size": 4,
+    "learning_rate": 0.001,
+    "log_path": "./result/VNet_Multi_V2/LA_16/Training.log",
+    "pth_path": "./result/VNet_Multi_V2/LA_16/Pth",
+    "tensorboard_path": "./result/VNet_Multi_V2/LA_16/Train",
+    "continue_train": false,
+    "multi_gpu": true,
+    "training_num": 16,
+    "dataset_name": "LA",
+    "dataset_path": "./datasets/LA",
+    "num_classes": 2,
+    "patch_size": [
+        112,
+        112,
+        80
+    ]
+}
+2025-06-29 10:42:06 - INFO - TensorBoard logging directory: ./result/VNet_Multi_V2/LA_16/Train/20250629-104206
+2025-06-29 10:42:06 - INFO - Training dataset: 16
+2025-06-29 10:42:07 - INFO - Optimizer: AdamW with parameters: {'lr': 0.0001, 'betas': (0.9, 0.999), 'eps': 1e-08, 'weight_decay': 0.01, 'amsgrad': False, 'maximize': False, 'foreach': None, 'capturable': False, 'differentiable': False, 'fused': None, 'decoupled_weight_decay': True}
+2025-06-29 10:42:07 - INFO - Using Unified Uncertainty-aware Loss with λ=0.3, α=1, β=1
+2025-06-29 10:42:12 - INFO - Epoch 1/400, Batch 4/4, Loss: 1.4403
+2025-06-29 10:42:14 - INFO - Epoch 2/400, Batch 4/4, Loss: 1.5703
+2025-06-29 10:42:15 - INFO - Epoch 3/400, Batch 4/4, Loss: 1.0097
+2025-06-29 10:42:17 - INFO - Epoch 4/400, Batch 4/4, Loss: 1.0067
+2025-06-29 10:42:18 - INFO - Epoch 5/400, Batch 4/4, Loss: 1.2021
+2025-06-29 10:42:20 - INFO - Epoch 6/400, Batch 4/4, Loss: 1.2332
+2025-06-29 10:42:21 - INFO - Epoch 7/400, Batch 4/4, Loss: 1.4806
+2025-06-29 10:42:23 - INFO - Epoch 8/400, Batch 4/4, Loss: 1.3598
+2025-06-29 10:42:24 - INFO - Epoch 9/400, Batch 4/4, Loss: 1.0936
+2025-06-29 10:42:26 - INFO - Epoch 10/400, Batch 4/4, Loss: 1.0823
+2025-06-29 10:42:27 - INFO - Epoch 11/400, Batch 4/4, Loss: 1.1717
+2025-06-29 10:42:29 - INFO - Epoch 12/400, Batch 4/4, Loss: 0.9085
+2025-06-29 10:42:30 - INFO - Epoch 13/400, Batch 4/4, Loss: 1.1559
+2025-06-29 10:42:32 - INFO - Epoch 14/400, Batch 4/4, Loss: 1.1244
+2025-06-29 10:42:33 - INFO - Epoch 15/400, Batch 4/4, Loss: 1.0789
+2025-06-29 10:42:35 - INFO - Epoch 16/400, Batch 4/4, Loss: 0.9991
+2025-06-29 10:42:36 - INFO - Epoch 17/400, Batch 4/4, Loss: 0.8080
+2025-06-29 10:42:38 - INFO - Epoch 18/400, Batch 4/4, Loss: 0.8956
+2025-06-29 10:42:39 - INFO - Epoch 19/400, Batch 4/4, Loss: 0.7304
+2025-06-29 10:42:41 - INFO - Epoch 20/400, Batch 4/4, Loss: 0.8940
+2025-06-29 10:42:41 - INFO - Created directory: ./result/VNet_Multi_V2/LA_16/Pth
+2025-06-29 10:42:41 - INFO - Saved checkpoint at epoch 20 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_20_checkpoint.pth
+2025-06-29 10:42:42 - INFO - Epoch 21/400, Batch 4/4, Loss: 0.8123
+2025-06-29 10:42:44 - INFO - Epoch 22/400, Batch 4/4, Loss: 0.7781
+2025-06-29 10:42:45 - INFO - Epoch 23/400, Batch 4/4, Loss: 0.6992
+2025-06-29 10:42:47 - INFO - Epoch 24/400, Batch 4/4, Loss: 0.7633
+2025-06-29 10:42:48 - INFO - Epoch 25/400, Batch 4/4, Loss: 0.8204
+2025-06-29 10:42:50 - INFO - Epoch 26/400, Batch 4/4, Loss: 0.7985
+2025-06-29 10:42:51 - INFO - Epoch 27/400, Batch 4/4, Loss: 0.8172
+2025-06-29 10:42:53 - INFO - Epoch 28/400, Batch 4/4, Loss: 0.7639
+2025-06-29 10:42:54 - INFO - Epoch 29/400, Batch 4/4, Loss: 0.6629
+2025-06-29 10:42:56 - INFO - Epoch 30/400, Batch 4/4, Loss: 0.7834
+2025-06-29 10:42:57 - INFO - Epoch 31/400, Batch 4/4, Loss: 0.8454
+2025-06-29 10:42:59 - INFO - Epoch 32/400, Batch 4/4, Loss: 0.7006
+2025-06-29 10:43:00 - INFO - Epoch 33/400, Batch 4/4, Loss: 0.6445
+2025-06-29 10:43:02 - INFO - Epoch 34/400, Batch 4/4, Loss: 0.7375
+2025-06-29 10:43:03 - INFO - Epoch 35/400, Batch 4/4, Loss: 0.7113
+2025-06-29 10:43:05 - INFO - Epoch 36/400, Batch 4/4, Loss: 0.7014
+2025-06-29 10:43:06 - INFO - Epoch 37/400, Batch 4/4, Loss: 0.7248
+2025-06-29 10:43:08 - INFO - Epoch 38/400, Batch 4/4, Loss: 0.7355
+2025-06-29 10:43:09 - INFO - Epoch 39/400, Batch 4/4, Loss: 0.9023
+2025-06-29 10:43:11 - INFO - Epoch 40/400, Batch 4/4, Loss: 0.5811
+2025-06-29 10:43:11 - INFO - Saved checkpoint at epoch 40 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_40_checkpoint.pth
+2025-06-29 10:43:12 - INFO - Epoch 41/400, Batch 4/4, Loss: 0.6453
+2025-06-29 10:43:14 - INFO - Epoch 42/400, Batch 4/4, Loss: 0.6210
+2025-06-29 10:43:15 - INFO - Epoch 43/400, Batch 4/4, Loss: 0.6883
+2025-06-29 10:43:17 - INFO - Epoch 44/400, Batch 4/4, Loss: 0.6050
+2025-06-29 10:43:18 - INFO - Epoch 45/400, Batch 4/4, Loss: 0.6063
+2025-06-29 10:43:20 - INFO - Epoch 46/400, Batch 4/4, Loss: 0.5421
+2025-06-29 10:43:21 - INFO - Epoch 47/400, Batch 4/4, Loss: 0.5298
+2025-06-29 10:43:23 - INFO - Epoch 48/400, Batch 4/4, Loss: 0.5838
+2025-06-29 10:43:24 - INFO - Epoch 49/400, Batch 4/4, Loss: 0.5117
+2025-06-29 10:43:26 - INFO - Epoch 50/400, Batch 4/4, Loss: 0.4779
+2025-06-29 10:43:27 - INFO - Epoch 51/400, Batch 4/4, Loss: 0.4994
+2025-06-29 10:43:29 - INFO - Epoch 52/400, Batch 4/4, Loss: 0.6194
+2025-06-29 10:43:31 - INFO - Epoch 53/400, Batch 4/4, Loss: 0.5612
+2025-06-29 10:43:34 - INFO - Epoch 54/400, Batch 4/4, Loss: 0.4408
+2025-06-29 10:43:36 - INFO - Epoch 55/400, Batch 4/4, Loss: 0.4298
+2025-06-29 10:43:38 - INFO - Epoch 56/400, Batch 4/4, Loss: 0.4513
+2025-06-29 10:43:40 - INFO - Epoch 57/400, Batch 4/4, Loss: 0.7797
+2025-06-29 10:43:42 - INFO - Epoch 58/400, Batch 4/4, Loss: 0.6724
+2025-06-29 10:43:45 - INFO - Epoch 59/400, Batch 4/4, Loss: 0.6437
+2025-06-29 10:43:47 - INFO - Epoch 60/400, Batch 4/4, Loss: 0.6363
+2025-06-29 10:43:47 - INFO - Saved checkpoint at epoch 60 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_60_checkpoint.pth
+2025-06-29 10:43:49 - INFO - Epoch 61/400, Batch 4/4, Loss: 0.5594
+2025-06-29 10:43:51 - INFO - Epoch 62/400, Batch 4/4, Loss: 0.6485
+2025-06-29 10:43:53 - INFO - Epoch 63/400, Batch 4/4, Loss: 0.7332
+2025-06-29 10:43:56 - INFO - Epoch 64/400, Batch 4/4, Loss: 0.5505
+2025-06-29 10:43:58 - INFO - Epoch 65/400, Batch 4/4, Loss: 0.6198
+2025-06-29 10:44:00 - INFO - Epoch 66/400, Batch 4/4, Loss: 0.6659
+2025-06-29 10:44:02 - INFO - Epoch 67/400, Batch 4/4, Loss: 0.5582
+2025-06-29 10:44:05 - INFO - Epoch 68/400, Batch 4/4, Loss: 0.5246
+2025-06-29 10:44:07 - INFO - Epoch 69/400, Batch 4/4, Loss: 0.5253
+2025-06-29 10:44:09 - INFO - Epoch 70/400, Batch 4/4, Loss: 0.6085
+2025-06-29 10:44:12 - INFO - Epoch 71/400, Batch 4/4, Loss: 0.4572
+2025-06-29 10:44:14 - INFO - Epoch 72/400, Batch 4/4, Loss: 0.6287
+2025-06-29 10:44:16 - INFO - Epoch 73/400, Batch 4/4, Loss: 0.5169
+2025-06-29 10:44:18 - INFO - Epoch 74/400, Batch 4/4, Loss: 0.6058
+2025-06-29 10:44:20 - INFO - Epoch 75/400, Batch 4/4, Loss: 0.4424
+2025-06-29 10:44:23 - INFO - Epoch 76/400, Batch 4/4, Loss: 0.4858
+2025-06-29 10:44:25 - INFO - Epoch 77/400, Batch 4/4, Loss: 0.6272
+2025-06-29 10:44:28 - INFO - Epoch 78/400, Batch 4/4, Loss: 0.4211
+2025-06-29 10:44:30 - INFO - Epoch 79/400, Batch 4/4, Loss: 0.3742
+2025-06-29 10:44:32 - INFO - Epoch 80/400, Batch 4/4, Loss: 0.6041
+2025-06-29 10:44:32 - INFO - Saved checkpoint at epoch 80 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_80_checkpoint.pth
+2025-06-29 10:44:34 - INFO - Epoch 81/400, Batch 4/4, Loss: 0.4520
+2025-06-29 10:44:36 - INFO - Epoch 82/400, Batch 4/4, Loss: 0.4151
+2025-06-29 10:44:39 - INFO - Epoch 83/400, Batch 4/4, Loss: 0.3812
+2025-06-29 10:44:41 - INFO - Epoch 84/400, Batch 4/4, Loss: 0.5097
+2025-06-29 10:44:43 - INFO - Epoch 85/400, Batch 4/4, Loss: 0.5159
+2025-06-29 10:44:45 - INFO - Epoch 86/400, Batch 4/4, Loss: 0.4603
+2025-06-29 10:44:48 - INFO - Epoch 87/400, Batch 4/4, Loss: 0.5499
+2025-06-29 10:44:50 - INFO - Epoch 88/400, Batch 4/4, Loss: 0.4975
+2025-06-29 10:44:52 - INFO - Epoch 89/400, Batch 4/4, Loss: 0.4727
+2025-06-29 10:44:54 - INFO - Epoch 90/400, Batch 4/4, Loss: 0.6157
+2025-06-29 10:44:57 - INFO - Epoch 91/400, Batch 4/4, Loss: 0.4184
+2025-06-29 10:44:59 - INFO - Epoch 92/400, Batch 4/4, Loss: 0.3789
+2025-06-29 10:45:01 - INFO - Epoch 93/400, Batch 4/4, Loss: 0.4465
+2025-06-29 10:45:04 - INFO - Epoch 94/400, Batch 4/4, Loss: 0.4779
+2025-06-29 10:45:06 - INFO - Epoch 95/400, Batch 4/4, Loss: 0.4085
+2025-06-29 10:45:08 - INFO - Epoch 96/400, Batch 4/4, Loss: 0.3533
+2025-06-29 10:45:10 - INFO - Epoch 97/400, Batch 4/4, Loss: 0.4578
+2025-06-29 10:45:12 - INFO - Epoch 98/400, Batch 4/4, Loss: 0.2759
+2025-06-29 10:45:15 - INFO - Epoch 99/400, Batch 4/4, Loss: 0.3782
+2025-06-29 10:45:17 - INFO - Epoch 100/400, Batch 4/4, Loss: 0.6266
+2025-06-29 10:45:17 - INFO - Saved checkpoint at epoch 100 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_100_checkpoint.pth
+2025-06-29 10:45:19 - INFO - Epoch 101/400, Batch 4/4, Loss: 0.4193
+2025-06-29 10:45:21 - INFO - Epoch 102/400, Batch 4/4, Loss: 0.4095
+2025-06-29 10:45:24 - INFO - Epoch 103/400, Batch 4/4, Loss: 0.2695
+2025-06-29 10:45:26 - INFO - Epoch 104/400, Batch 4/4, Loss: 0.5123
+2025-06-29 10:45:28 - INFO - Epoch 105/400, Batch 4/4, Loss: 0.3728
+2025-06-29 10:45:31 - INFO - Epoch 106/400, Batch 4/4, Loss: 0.5625
+2025-06-29 10:45:33 - INFO - Epoch 107/400, Batch 4/4, Loss: 0.3383
+2025-06-29 10:45:35 - INFO - Epoch 108/400, Batch 4/4, Loss: 0.4751
+2025-06-29 10:45:37 - INFO - Epoch 109/400, Batch 4/4, Loss: 0.3689
+2025-06-29 10:45:40 - INFO - Epoch 110/400, Batch 4/4, Loss: 0.3403
+2025-06-29 10:45:42 - INFO - Epoch 111/400, Batch 4/4, Loss: 0.3710
+2025-06-29 10:45:44 - INFO - Epoch 112/400, Batch 4/4, Loss: 0.3002
+2025-06-29 10:45:46 - INFO - Epoch 113/400, Batch 4/4, Loss: 0.4327
+2025-06-29 10:45:48 - INFO - Epoch 114/400, Batch 4/4, Loss: 0.3853
+2025-06-29 10:45:51 - INFO - Epoch 115/400, Batch 4/4, Loss: 0.2891
+2025-06-29 10:45:53 - INFO - Epoch 116/400, Batch 4/4, Loss: 0.3453
+2025-06-29 10:45:55 - INFO - Epoch 117/400, Batch 4/4, Loss: 0.3706
+2025-06-29 10:45:57 - INFO - Epoch 118/400, Batch 4/4, Loss: 0.3928
+2025-06-29 10:46:00 - INFO - Epoch 119/400, Batch 4/4, Loss: 0.5421
+2025-06-29 10:46:02 - INFO - Epoch 120/400, Batch 4/4, Loss: 0.4244
+2025-06-29 10:46:02 - INFO - Saved checkpoint at epoch 120 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_120_checkpoint.pth
+2025-06-29 10:46:04 - INFO - Epoch 121/400, Batch 4/4, Loss: 0.3254
+2025-06-29 10:46:07 - INFO - Epoch 122/400, Batch 4/4, Loss: 0.3913
+2025-06-29 10:46:09 - INFO - Epoch 123/400, Batch 4/4, Loss: 0.4361
+2025-06-29 10:46:11 - INFO - Epoch 124/400, Batch 4/4, Loss: 0.4223
+2025-06-29 10:46:13 - INFO - Epoch 125/400, Batch 4/4, Loss: 0.2815
+2025-06-29 10:46:16 - INFO - Epoch 126/400, Batch 4/4, Loss: 0.5575
+2025-06-29 10:46:18 - INFO - Epoch 127/400, Batch 4/4, Loss: 0.3321
+2025-06-29 10:46:20 - INFO - Epoch 128/400, Batch 4/4, Loss: 0.3733
+2025-06-29 10:46:22 - INFO - Epoch 129/400, Batch 4/4, Loss: 0.2638
+2025-06-29 10:46:25 - INFO - Epoch 130/400, Batch 4/4, Loss: 0.3839
+2025-06-29 10:46:27 - INFO - Epoch 131/400, Batch 4/4, Loss: 0.3346
+2025-06-29 10:46:29 - INFO - Epoch 132/400, Batch 4/4, Loss: 0.3885
+2025-06-29 10:46:31 - INFO - Epoch 133/400, Batch 4/4, Loss: 0.3959
+2025-06-29 10:46:34 - INFO - Epoch 134/400, Batch 4/4, Loss: 0.5481
+2025-06-29 10:46:36 - INFO - Epoch 135/400, Batch 4/4, Loss: 0.3559
+2025-06-29 10:46:38 - INFO - Epoch 136/400, Batch 4/4, Loss: 0.3226
+2025-06-29 10:46:40 - INFO - Epoch 137/400, Batch 4/4, Loss: 0.4197
+2025-06-29 10:46:43 - INFO - Epoch 138/400, Batch 4/4, Loss: 0.2292
+2025-06-29 10:46:45 - INFO - Epoch 139/400, Batch 4/4, Loss: 0.4086
+2025-06-29 10:46:47 - INFO - Epoch 140/400, Batch 4/4, Loss: 0.3844
+2025-06-29 10:46:47 - INFO - Saved checkpoint at epoch 140 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_140_checkpoint.pth
+2025-06-29 10:46:49 - INFO - Epoch 141/400, Batch 4/4, Loss: 0.1544
+2025-06-29 10:46:52 - INFO - Epoch 142/400, Batch 4/4, Loss: 0.3320
+2025-06-29 10:46:54 - INFO - Epoch 143/400, Batch 4/4, Loss: 0.3612
+2025-06-29 10:46:56 - INFO - Epoch 144/400, Batch 4/4, Loss: 0.5349
+2025-06-29 10:46:58 - INFO - Epoch 145/400, Batch 4/4, Loss: 0.3206
+2025-06-29 10:47:01 - INFO - Epoch 146/400, Batch 4/4, Loss: 0.2768
+2025-06-29 10:47:03 - INFO - Epoch 147/400, Batch 4/4, Loss: 0.3892
+2025-06-29 10:47:05 - INFO - Epoch 148/400, Batch 4/4, Loss: 0.2745
+2025-06-29 10:47:08 - INFO - Epoch 149/400, Batch 4/4, Loss: 0.3525
+2025-06-29 10:47:10 - INFO - Epoch 150/400, Batch 4/4, Loss: 0.2649
+2025-06-29 10:47:12 - INFO - Epoch 151/400, Batch 4/4, Loss: 0.3346
+2025-06-29 10:47:15 - INFO - Epoch 152/400, Batch 4/4, Loss: 0.3187
+2025-06-29 10:47:17 - INFO - Epoch 153/400, Batch 4/4, Loss: 0.2844
+2025-06-29 10:47:19 - INFO - Epoch 154/400, Batch 4/4, Loss: 0.2914
+2025-06-29 10:47:21 - INFO - Epoch 155/400, Batch 4/4, Loss: 0.2095
+2025-06-29 10:47:23 - INFO - Epoch 156/400, Batch 4/4, Loss: 0.3235
+2025-06-29 10:47:26 - INFO - Epoch 157/400, Batch 4/4, Loss: 0.2886
+2025-06-29 10:47:28 - INFO - Epoch 158/400, Batch 4/4, Loss: 0.3992
+2025-06-29 10:47:30 - INFO - Epoch 159/400, Batch 4/4, Loss: 0.1512
+2025-06-29 10:47:33 - INFO - Epoch 160/400, Batch 4/4, Loss: 0.2601
+2025-06-29 10:47:33 - INFO - Saved checkpoint at epoch 160 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_160_checkpoint.pth
+2025-06-29 10:47:35 - INFO - Epoch 161/400, Batch 4/4, Loss: 0.1732
+2025-06-29 10:47:37 - INFO - Epoch 162/400, Batch 4/4, Loss: 0.3388
+2025-06-29 10:47:39 - INFO - Epoch 163/400, Batch 4/4, Loss: 0.3096
+2025-06-29 10:47:42 - INFO - Epoch 164/400, Batch 4/4, Loss: 0.3257
+2025-06-29 10:47:44 - INFO - Epoch 165/400, Batch 4/4, Loss: 0.3019
+2025-06-29 10:47:46 - INFO - Epoch 166/400, Batch 4/4, Loss: 0.2349
+2025-06-29 10:47:48 - INFO - Epoch 167/400, Batch 4/4, Loss: 0.3218
+2025-06-29 10:47:51 - INFO - Epoch 168/400, Batch 4/4, Loss: 0.2805
+2025-06-29 10:47:53 - INFO - Epoch 169/400, Batch 4/4, Loss: 0.1426
+2025-06-29 10:47:55 - INFO - Epoch 170/400, Batch 4/4, Loss: 0.2783
+2025-06-29 10:47:58 - INFO - Epoch 171/400, Batch 4/4, Loss: 0.1682
+2025-06-29 10:48:00 - INFO - Epoch 172/400, Batch 4/4, Loss: 0.2406
+2025-06-29 10:48:02 - INFO - Epoch 173/400, Batch 4/4, Loss: 0.2576
+2025-06-29 10:48:04 - INFO - Epoch 174/400, Batch 4/4, Loss: 0.3968
+2025-06-29 10:48:07 - INFO - Epoch 175/400, Batch 4/4, Loss: 0.2516
+2025-06-29 10:48:09 - INFO - Epoch 176/400, Batch 4/4, Loss: 0.2784
+2025-06-29 10:48:11 - INFO - Epoch 177/400, Batch 4/4, Loss: 0.3767
+2025-06-29 10:48:13 - INFO - Epoch 178/400, Batch 4/4, Loss: 0.4589
+2025-06-29 10:48:16 - INFO - Epoch 179/400, Batch 4/4, Loss: 0.1772
+2025-06-29 10:48:18 - INFO - Epoch 180/400, Batch 4/4, Loss: 0.2398
+2025-06-29 10:48:18 - INFO - Saved checkpoint at epoch 180 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_180_checkpoint.pth
+2025-06-29 10:48:20 - INFO - Epoch 181/400, Batch 4/4, Loss: 0.4801
+2025-06-29 10:48:23 - INFO - Epoch 182/400, Batch 4/4, Loss: 0.5006
+2025-06-29 10:48:25 - INFO - Epoch 183/400, Batch 4/4, Loss: 0.2171
+2025-06-29 10:48:27 - INFO - Epoch 184/400, Batch 4/4, Loss: 0.2648
+2025-06-29 10:48:30 - INFO - Epoch 185/400, Batch 4/4, Loss: 0.3454
+2025-06-29 10:48:32 - INFO - Epoch 186/400, Batch 4/4, Loss: 0.3575
+2025-06-29 10:48:34 - INFO - Epoch 187/400, Batch 4/4, Loss: 0.2650
+2025-06-29 10:48:36 - INFO - Epoch 188/400, Batch 4/4, Loss: 0.2093
+2025-06-29 10:48:39 - INFO - Epoch 189/400, Batch 4/4, Loss: 0.3647
+2025-06-29 10:48:41 - INFO - Epoch 190/400, Batch 4/4, Loss: 0.2936
+2025-06-29 10:48:43 - INFO - Epoch 191/400, Batch 4/4, Loss: 0.2142
+2025-06-29 10:48:45 - INFO - Epoch 192/400, Batch 4/4, Loss: 0.2275
+2025-06-29 10:48:48 - INFO - Epoch 193/400, Batch 4/4, Loss: 0.2074
+2025-06-29 10:48:50 - INFO - Epoch 194/400, Batch 4/4, Loss: 0.3043
+2025-06-29 10:48:52 - INFO - Epoch 195/400, Batch 4/4, Loss: 0.3409
+2025-06-29 10:48:54 - INFO - Epoch 196/400, Batch 4/4, Loss: 0.2642
+2025-06-29 10:48:57 - INFO - Epoch 197/400, Batch 4/4, Loss: 0.1833
+2025-06-29 10:48:59 - INFO - Epoch 198/400, Batch 4/4, Loss: 0.4133
+2025-06-29 10:49:01 - INFO - Epoch 199/400, Batch 4/4, Loss: 0.2161
+2025-06-29 10:49:03 - INFO - Epoch 200/400, Batch 4/4, Loss: 0.2535
+2025-06-29 10:49:03 - INFO - Saved checkpoint at epoch 200 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_200_checkpoint.pth
+2025-06-29 10:49:06 - INFO - Epoch 201/400, Batch 4/4, Loss: 0.2725
+2025-06-29 10:49:08 - INFO - Epoch 202/400, Batch 4/4, Loss: 0.0893
+2025-06-29 10:49:10 - INFO - Epoch 203/400, Batch 4/4, Loss: 0.4105
+2025-06-29 10:49:13 - INFO - Epoch 204/400, Batch 4/4, Loss: 0.1321
+2025-06-29 10:49:15 - INFO - Epoch 205/400, Batch 4/4, Loss: 0.2604
+2025-06-29 10:49:17 - INFO - Epoch 206/400, Batch 4/4, Loss: 0.1238
+2025-06-29 10:49:19 - INFO - Epoch 207/400, Batch 4/4, Loss: 0.1092
+2025-06-29 10:49:21 - INFO - Epoch 208/400, Batch 4/4, Loss: 0.1518
+2025-06-29 10:49:24 - INFO - Epoch 209/400, Batch 4/4, Loss: 0.3458
+2025-06-29 10:49:26 - INFO - Epoch 210/400, Batch 4/4, Loss: 0.1919
+2025-06-29 10:49:28 - INFO - Epoch 211/400, Batch 4/4, Loss: 0.1002
+2025-06-29 10:49:30 - INFO - Epoch 212/400, Batch 4/4, Loss: 0.2031
+2025-06-29 10:49:33 - INFO - Epoch 213/400, Batch 4/4, Loss: 0.1320
+2025-06-29 10:49:35 - INFO - Epoch 214/400, Batch 4/4, Loss: 0.1860
+2025-06-29 10:49:37 - INFO - Epoch 215/400, Batch 4/4, Loss: 0.3540
+2025-06-29 10:49:39 - INFO - Epoch 216/400, Batch 4/4, Loss: 0.1787
+2025-06-29 10:49:41 - INFO - Epoch 217/400, Batch 4/4, Loss: 0.2018
+2025-06-29 10:49:44 - INFO - Epoch 218/400, Batch 4/4, Loss: 0.4529
+2025-06-29 10:49:46 - INFO - Epoch 219/400, Batch 4/4, Loss: 0.1069
+2025-06-29 10:49:48 - INFO - Epoch 220/400, Batch 4/4, Loss: 0.0988
+2025-06-29 10:49:48 - INFO - Saved checkpoint at epoch 220 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_220_checkpoint.pth
+2025-06-29 10:49:50 - INFO - Epoch 221/400, Batch 4/4, Loss: 0.1313
+2025-06-29 10:49:53 - INFO - Epoch 222/400, Batch 4/4, Loss: 0.5365
+2025-06-29 10:49:55 - INFO - Epoch 223/400, Batch 4/4, Loss: 0.1107
+2025-06-29 10:49:57 - INFO - Epoch 224/400, Batch 4/4, Loss: 0.2626
+2025-06-29 10:50:00 - INFO - Epoch 225/400, Batch 4/4, Loss: 0.1412
+2025-06-29 10:50:02 - INFO - Epoch 226/400, Batch 4/4, Loss: 0.1045
+2025-06-29 10:50:04 - INFO - Epoch 227/400, Batch 4/4, Loss: 0.1546
+2025-06-29 10:50:06 - INFO - Epoch 228/400, Batch 4/4, Loss: 0.1223
+2025-06-29 10:50:09 - INFO - Epoch 229/400, Batch 4/4, Loss: 0.0840
+2025-06-29 10:50:11 - INFO - Epoch 230/400, Batch 4/4, Loss: 0.3278
+2025-06-29 10:50:13 - INFO - Epoch 231/400, Batch 4/4, Loss: 0.1968
+2025-06-29 10:50:15 - INFO - Epoch 232/400, Batch 4/4, Loss: 0.1499
+2025-06-29 10:50:18 - INFO - Epoch 233/400, Batch 4/4, Loss: 0.1062
+2025-06-29 10:50:20 - INFO - Epoch 234/400, Batch 4/4, Loss: 0.2836
+2025-06-29 10:50:22 - INFO - Epoch 235/400, Batch 4/4, Loss: -0.0230
+2025-06-29 10:50:24 - INFO - Epoch 236/400, Batch 4/4, Loss: 0.1078
+2025-06-29 10:50:26 - INFO - Epoch 237/400, Batch 4/4, Loss: 0.0784
+2025-06-29 10:50:29 - INFO - Epoch 238/400, Batch 4/4, Loss: 0.2131
+2025-06-29 10:50:31 - INFO - Epoch 239/400, Batch 4/4, Loss: 0.1610
+2025-06-29 10:50:33 - INFO - Epoch 240/400, Batch 4/4, Loss: 0.1079
+2025-06-29 10:50:33 - INFO - Saved checkpoint at epoch 240 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_240_checkpoint.pth
+2025-06-29 10:50:36 - INFO - Epoch 241/400, Batch 4/4, Loss: 0.1814
+2025-06-29 10:50:38 - INFO - Epoch 242/400, Batch 4/4, Loss: 0.1870
+2025-06-29 10:50:40 - INFO - Epoch 243/400, Batch 4/4, Loss: 0.0729
+2025-06-29 10:50:42 - INFO - Epoch 244/400, Batch 4/4, Loss: 0.1433
+2025-06-29 10:50:45 - INFO - Epoch 245/400, Batch 4/4, Loss: 0.1663
+2025-06-29 10:50:47 - INFO - Epoch 246/400, Batch 4/4, Loss: 0.1342
+2025-06-29 10:50:49 - INFO - Epoch 247/400, Batch 4/4, Loss: 0.0980
+2025-06-29 10:50:51 - INFO - Epoch 248/400, Batch 4/4, Loss: 0.2682
+2025-06-29 10:50:54 - INFO - Epoch 249/400, Batch 4/4, Loss: 0.1497
+2025-06-29 10:50:56 - INFO - Epoch 250/400, Batch 4/4, Loss: 0.1820
+2025-06-29 10:50:58 - INFO - Epoch 251/400, Batch 4/4, Loss: 0.1567
+2025-06-29 10:51:00 - INFO - Epoch 252/400, Batch 4/4, Loss: 0.1127
+2025-06-29 10:51:02 - INFO - Epoch 253/400, Batch 4/4, Loss: 0.2118
+2025-06-29 10:51:05 - INFO - Epoch 254/400, Batch 4/4, Loss: 0.2964
+2025-06-29 10:51:07 - INFO - Epoch 255/400, Batch 4/4, Loss: 0.1272
+2025-06-29 10:51:09 - INFO - Epoch 256/400, Batch 4/4, Loss: 0.2354
+2025-06-29 10:51:11 - INFO - Epoch 257/400, Batch 4/4, Loss: 0.2124
+2025-06-29 10:51:14 - INFO - Epoch 258/400, Batch 4/4, Loss: 0.1654
+2025-06-29 10:51:16 - INFO - Epoch 259/400, Batch 4/4, Loss: 0.1684
+2025-06-29 10:51:18 - INFO - Epoch 260/400, Batch 4/4, Loss: 0.2896
+2025-06-29 10:51:18 - INFO - Saved checkpoint at epoch 260 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_260_checkpoint.pth
+2025-06-29 10:51:21 - INFO - Epoch 261/400, Batch 4/4, Loss: 0.0221
+2025-06-29 10:51:23 - INFO - Epoch 262/400, Batch 4/4, Loss: 0.1264
+2025-06-29 10:51:25 - INFO - Epoch 263/400, Batch 4/4, Loss: 0.2014
+2025-06-29 10:51:27 - INFO - Epoch 264/400, Batch 4/4, Loss: 0.2035
+2025-06-29 10:51:30 - INFO - Epoch 265/400, Batch 4/4, Loss: 0.0594
+2025-06-29 10:51:32 - INFO - Epoch 266/400, Batch 4/4, Loss: 0.2946
+2025-06-29 10:51:34 - INFO - Epoch 267/400, Batch 4/4, Loss: 0.2199
+2025-06-29 10:51:36 - INFO - Epoch 268/400, Batch 4/4, Loss: 0.0407
+2025-06-29 10:51:39 - INFO - Epoch 269/400, Batch 4/4, Loss: 0.1383
+2025-06-29 10:51:41 - INFO - Epoch 270/400, Batch 4/4, Loss: 0.2555
+2025-06-29 10:51:43 - INFO - Epoch 271/400, Batch 4/4, Loss: 0.3267
+2025-06-29 10:51:45 - INFO - Epoch 272/400, Batch 4/4, Loss: 0.2684
+2025-06-29 10:51:46 - INFO - Epoch 273/400, Batch 4/4, Loss: 0.0447
+2025-06-29 10:51:48 - INFO - Epoch 274/400, Batch 4/4, Loss: 0.0828
+2025-06-29 10:51:49 - INFO - Epoch 275/400, Batch 4/4, Loss: 0.0665
+2025-06-29 10:51:51 - INFO - Epoch 276/400, Batch 4/4, Loss: 0.1591
+2025-06-29 10:51:52 - INFO - Epoch 277/400, Batch 4/4, Loss: 0.2700
+2025-06-29 10:51:54 - INFO - Epoch 278/400, Batch 4/4, Loss: 0.2793
+2025-06-29 10:51:56 - INFO - Epoch 279/400, Batch 4/4, Loss: 0.2367
+2025-06-29 10:51:57 - INFO - Epoch 280/400, Batch 4/4, Loss: 0.0669
+2025-06-29 10:51:57 - INFO - Saved checkpoint at epoch 280 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_280_checkpoint.pth
+2025-06-29 10:51:59 - INFO - Epoch 281/400, Batch 4/4, Loss: 0.0790
+2025-06-29 10:52:00 - INFO - Epoch 282/400, Batch 4/4, Loss: 0.2414
+2025-06-29 10:52:02 - INFO - Epoch 283/400, Batch 4/4, Loss: 0.0089
+2025-06-29 10:52:03 - INFO - Epoch 284/400, Batch 4/4, Loss: 0.1031
+2025-06-29 10:52:05 - INFO - Epoch 285/400, Batch 4/4, Loss: 0.1846
+2025-06-29 10:52:06 - INFO - Epoch 286/400, Batch 4/4, Loss: 0.1682
+2025-06-29 10:52:08 - INFO - Epoch 287/400, Batch 4/4, Loss: 0.1936
+2025-06-29 10:52:09 - INFO - Epoch 288/400, Batch 4/4, Loss: 0.1705
+2025-06-29 10:52:11 - INFO - Epoch 289/400, Batch 4/4, Loss: 0.2618
+2025-06-29 10:52:12 - INFO - Epoch 290/400, Batch 4/4, Loss: 0.1867
+2025-06-29 10:52:14 - INFO - Epoch 291/400, Batch 4/4, Loss: 0.2389
+2025-06-29 10:52:15 - INFO - Epoch 292/400, Batch 4/4, Loss: 0.1813
+2025-06-29 10:52:17 - INFO - Epoch 293/400, Batch 4/4, Loss: 0.1802
+2025-06-29 10:52:18 - INFO - Epoch 294/400, Batch 4/4, Loss: -0.0177
+2025-06-29 10:52:20 - INFO - Epoch 295/400, Batch 4/4, Loss: 0.0626
+2025-06-29 10:52:21 - INFO - Epoch 296/400, Batch 4/4, Loss: 0.0642
+2025-06-29 10:52:23 - INFO - Epoch 297/400, Batch 4/4, Loss: 0.1063
+2025-06-29 10:52:24 - INFO - Epoch 298/400, Batch 4/4, Loss: 0.1102
+2025-06-29 10:52:26 - INFO - Epoch 299/400, Batch 4/4, Loss: 0.0744
+2025-06-29 10:52:27 - INFO - Epoch 300/400, Batch 4/4, Loss: 0.1369
+2025-06-29 10:52:28 - INFO - Saved checkpoint at epoch 300 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_300_checkpoint.pth
+2025-06-29 10:52:29 - INFO - Epoch 301/400, Batch 4/4, Loss: 0.0993
+2025-06-29 10:52:31 - INFO - Epoch 302/400, Batch 4/4, Loss: 0.0705
+2025-06-29 10:52:32 - INFO - Epoch 303/400, Batch 4/4, Loss: 0.0331
+2025-06-29 10:52:34 - INFO - Epoch 304/400, Batch 4/4, Loss: 0.2252
+2025-06-29 10:52:35 - INFO - Epoch 305/400, Batch 4/4, Loss: 0.3300
+2025-06-29 10:52:37 - INFO - Epoch 306/400, Batch 4/4, Loss: 0.2176
+2025-06-29 10:52:38 - INFO - Epoch 307/400, Batch 4/4, Loss: 0.2096
+2025-06-29 10:52:40 - INFO - Epoch 308/400, Batch 4/4, Loss: 0.1261
+2025-06-29 10:52:41 - INFO - Epoch 309/400, Batch 4/4, Loss: 0.0065
+2025-06-29 10:52:43 - INFO - Epoch 310/400, Batch 4/4, Loss: 0.1391
+2025-06-29 10:52:44 - INFO - Epoch 311/400, Batch 4/4, Loss: 0.1584
+2025-06-29 10:52:46 - INFO - Epoch 312/400, Batch 4/4, Loss: 0.2544
+2025-06-29 10:52:47 - INFO - Epoch 313/400, Batch 4/4, Loss: 0.1991
+2025-06-29 10:52:49 - INFO - Epoch 314/400, Batch 4/4, Loss: 0.0209
+2025-06-29 10:52:50 - INFO - Epoch 315/400, Batch 4/4, Loss: 0.0245
+2025-06-29 10:52:52 - INFO - Epoch 316/400, Batch 4/4, Loss: 0.0248
+2025-06-29 10:52:53 - INFO - Epoch 317/400, Batch 4/4, Loss: 0.0572
+2025-06-29 10:52:55 - INFO - Epoch 318/400, Batch 4/4, Loss: 0.0983
+2025-06-29 10:52:56 - INFO - Epoch 319/400, Batch 4/4, Loss: 0.1016
+2025-06-29 10:52:58 - INFO - Epoch 320/400, Batch 4/4, Loss: 0.1441
+2025-06-29 10:52:58 - INFO - Saved checkpoint at epoch 320 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_320_checkpoint.pth
+2025-06-29 10:53:00 - INFO - Epoch 321/400, Batch 4/4, Loss: 0.0835
+2025-06-29 10:53:01 - INFO - Epoch 322/400, Batch 4/4, Loss: 0.1078
+2025-06-29 10:53:03 - INFO - Epoch 323/400, Batch 4/4, Loss: -0.0117
+2025-06-29 10:53:04 - INFO - Epoch 324/400, Batch 4/4, Loss: -0.0404
+2025-06-29 10:53:06 - INFO - Epoch 325/400, Batch 4/4, Loss: 0.0395
+2025-06-29 10:53:07 - INFO - Epoch 326/400, Batch 4/4, Loss: -0.0839
+2025-06-29 10:53:09 - INFO - Epoch 327/400, Batch 4/4, Loss: 0.0640
+2025-06-29 10:53:10 - INFO - Epoch 328/400, Batch 4/4, Loss: -0.0001
+2025-06-29 10:53:12 - INFO - Epoch 329/400, Batch 4/4, Loss: -0.0065
+2025-06-29 10:53:13 - INFO - Epoch 330/400, Batch 4/4, Loss: 0.0009
+2025-06-29 10:53:15 - INFO - Epoch 331/400, Batch 4/4, Loss: 0.0228
+2025-06-29 10:53:16 - INFO - Epoch 332/400, Batch 4/4, Loss: 0.0935
+2025-06-29 10:53:17 - INFO - Epoch 333/400, Batch 4/4, Loss: 0.1838
+2025-06-29 10:53:19 - INFO - Epoch 334/400, Batch 4/4, Loss: 0.1284
+2025-06-29 10:53:20 - INFO - Epoch 335/400, Batch 4/4, Loss: 0.0769
+2025-06-29 10:53:22 - INFO - Epoch 336/400, Batch 4/4, Loss: -0.0296
+2025-06-29 10:53:23 - INFO - Epoch 337/400, Batch 4/4, Loss: 0.1059
+2025-06-29 10:53:25 - INFO - Epoch 338/400, Batch 4/4, Loss: 0.2755
+2025-06-29 10:53:27 - INFO - Epoch 339/400, Batch 4/4, Loss: 0.0330
+2025-06-29 10:53:28 - INFO - Epoch 340/400, Batch 4/4, Loss: 0.0300
+2025-06-29 10:53:28 - INFO - Saved checkpoint at epoch 340 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_340_checkpoint.pth
+2025-06-29 10:53:30 - INFO - Epoch 341/400, Batch 4/4, Loss: 0.0666
+2025-06-29 10:53:31 - INFO - Epoch 342/400, Batch 4/4, Loss: 0.0420
+2025-06-29 10:53:33 - INFO - Epoch 343/400, Batch 4/4, Loss: 0.1085
+2025-06-29 10:53:34 - INFO - Epoch 344/400, Batch 4/4, Loss: 0.1220
+2025-06-29 10:53:36 - INFO - Epoch 345/400, Batch 4/4, Loss: 0.3671
+2025-06-29 10:53:37 - INFO - Epoch 346/400, Batch 4/4, Loss: -0.0078
+2025-06-29 10:53:39 - INFO - Epoch 347/400, Batch 4/4, Loss: 0.0057
+2025-06-29 10:53:40 - INFO - Epoch 348/400, Batch 4/4, Loss: 0.0735
+2025-06-29 10:53:42 - INFO - Epoch 349/400, Batch 4/4, Loss: 0.0503
+2025-06-29 10:53:43 - INFO - Epoch 350/400, Batch 4/4, Loss: 0.1594
+2025-06-29 10:53:45 - INFO - Epoch 351/400, Batch 4/4, Loss: 0.2075
+2025-06-29 10:53:46 - INFO - Epoch 352/400, Batch 4/4, Loss: 0.2386
+2025-06-29 10:53:48 - INFO - Epoch 353/400, Batch 4/4, Loss: -0.1247
+2025-06-29 10:53:49 - INFO - Epoch 354/400, Batch 4/4, Loss: -0.0944
+2025-06-29 10:53:51 - INFO - Epoch 355/400, Batch 4/4, Loss: 0.1929
+2025-06-29 10:53:52 - INFO - Epoch 356/400, Batch 4/4, Loss: 0.0036
+2025-06-29 10:53:54 - INFO - Epoch 357/400, Batch 4/4, Loss: 0.0367
+2025-06-29 10:53:55 - INFO - Epoch 358/400, Batch 4/4, Loss: 0.1703
+2025-06-29 10:53:57 - INFO - Epoch 359/400, Batch 4/4, Loss: 0.2490
+2025-06-29 10:53:58 - INFO - Epoch 360/400, Batch 4/4, Loss: -0.0623
+2025-06-29 10:53:58 - INFO - Saved checkpoint at epoch 360 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_360_checkpoint.pth
+2025-06-29 10:54:00 - INFO - Epoch 361/400, Batch 4/4, Loss: 0.0351
+2025-06-29 10:54:01 - INFO - Epoch 362/400, Batch 4/4, Loss: -0.0047
+2025-06-29 10:54:03 - INFO - Epoch 363/400, Batch 4/4, Loss: 0.0822
+2025-06-29 10:54:04 - INFO - Epoch 364/400, Batch 4/4, Loss: 0.0811
+2025-06-29 10:54:06 - INFO - Epoch 365/400, Batch 4/4, Loss: -0.0051
+2025-06-29 10:54:08 - INFO - Epoch 366/400, Batch 4/4, Loss: 0.0253
+2025-06-29 10:54:09 - INFO - Epoch 367/400, Batch 4/4, Loss: 0.1368
+2025-06-29 10:54:11 - INFO - Epoch 368/400, Batch 4/4, Loss: -0.0017
+2025-06-29 10:54:12 - INFO - Epoch 369/400, Batch 4/4, Loss: -0.0806
+2025-06-29 10:54:14 - INFO - Epoch 370/400, Batch 4/4, Loss: -0.0416
+2025-06-29 10:54:15 - INFO - Epoch 371/400, Batch 4/4, Loss: -0.0668
+2025-06-29 10:54:17 - INFO - Epoch 372/400, Batch 4/4, Loss: 0.1345
+2025-06-29 10:54:18 - INFO - Epoch 373/400, Batch 4/4, Loss: 0.1411
+2025-06-29 10:54:20 - INFO - Epoch 374/400, Batch 4/4, Loss: 0.0270
+2025-06-29 10:54:21 - INFO - Epoch 375/400, Batch 4/4, Loss: 0.1540
+2025-06-29 10:54:23 - INFO - Epoch 376/400, Batch 4/4, Loss: 0.1034
+2025-06-29 10:54:24 - INFO - Epoch 377/400, Batch 4/4, Loss: -0.0021
+2025-06-29 10:54:26 - INFO - Epoch 378/400, Batch 4/4, Loss: 0.0358
+2025-06-29 10:54:27 - INFO - Epoch 379/400, Batch 4/4, Loss: 0.0059
+2025-06-29 10:54:29 - INFO - Epoch 380/400, Batch 4/4, Loss: 0.1469
+2025-06-29 10:54:29 - INFO - Saved checkpoint at epoch 380 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_380_checkpoint.pth
+2025-06-29 10:54:30 - INFO - Epoch 381/400, Batch 4/4, Loss: 0.0885
+2025-06-29 10:54:32 - INFO - Epoch 382/400, Batch 4/4, Loss: 0.0157
+2025-06-29 10:54:33 - INFO - Epoch 383/400, Batch 4/4, Loss: -0.0863
+2025-06-29 10:54:35 - INFO - Epoch 384/400, Batch 4/4, Loss: 0.0083
+2025-06-29 10:54:36 - INFO - Epoch 385/400, Batch 4/4, Loss: 0.0067
+2025-06-29 10:54:38 - INFO - Epoch 386/400, Batch 4/4, Loss: -0.0104
+2025-06-29 10:54:39 - INFO - Epoch 387/400, Batch 4/4, Loss: -0.0938
+2025-06-29 10:54:41 - INFO - Epoch 388/400, Batch 4/4, Loss: -0.0329
+2025-06-29 10:54:42 - INFO - Epoch 389/400, Batch 4/4, Loss: -0.0057
+2025-06-29 10:54:44 - INFO - Epoch 390/400, Batch 4/4, Loss: -0.1198
+2025-06-29 10:54:45 - INFO - Epoch 391/400, Batch 4/4, Loss: 0.0781
+2025-06-29 10:54:47 - INFO - Epoch 392/400, Batch 4/4, Loss: 0.2043
+2025-06-29 10:54:48 - INFO - Epoch 393/400, Batch 4/4, Loss: -0.0432
+2025-06-29 10:54:50 - INFO - Epoch 394/400, Batch 4/4, Loss: 0.0984
+2025-06-29 10:54:51 - INFO - Epoch 395/400, Batch 4/4, Loss: -0.0443
+2025-06-29 10:54:53 - INFO - Epoch 396/400, Batch 4/4, Loss: -0.0217
+2025-06-29 10:54:54 - INFO - Epoch 397/400, Batch 4/4, Loss: 0.0768
+2025-06-29 10:54:56 - INFO - Epoch 398/400, Batch 4/4, Loss: -0.0570
+2025-06-29 10:54:57 - INFO - Epoch 399/400, Batch 4/4, Loss: 0.1636
+2025-06-29 10:54:59 - INFO - Epoch 400/400, Batch 4/4, Loss: 0.0084
+2025-06-29 10:54:59 - INFO - Saved checkpoint at epoch 400 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_400_checkpoint.pth
+2025-06-29 10:54:59 - INFO - Training complete!
+2025-06-29 18:52:06 - INFO - Logging is set up.
+2025-06-29 18:52:06 - INFO - 
+======================================== New Training Session ========================================
+2025-06-29 18:52:06 - INFO - Configuration:
+{
+    "seed": 21,
+    "epochs": 400,
+    "batch_size": 4,
+    "learning_rate": 1e-05,
+    "log_path": "./result/VNet_Multi_V2/LA_16/Training.log",
+    "pth_path": "./result/VNet_Multi_V2/LA_16/Pth",
+    "tensorboard_path": "./result/VNet_Multi_V2/LA_16/Train",
+    "continue_train": true,
+    "multi_gpu": true,
+    "training_num": 16,
+    "dataset_name": "LA",
+    "dataset_path": "./datasets/LA",
+    "num_classes": 2,
+    "patch_size": [
+        112,
+        112,
+        80
+    ]
+}
+2025-06-29 18:52:06 - INFO - TensorBoard logging directory: ./result/VNet_Multi_V2/LA_16/Train
+2025-06-29 18:52:06 - INFO - Training dataset: 16
+2025-06-29 18:52:06 - INFO - Optimizer: AdamW with parameters: {'lr': 0.0001, 'betas': (0.9, 0.999), 'eps': 1e-08, 'weight_decay': 0.01, 'amsgrad': False, 'maximize': False, 'foreach': None, 'capturable': False, 'differentiable': False, 'fused': None, 'decoupled_weight_decay': True}
+2025-06-29 18:52:06 - INFO - Using Unified Uncertainty-aware Loss with λ=0.3, α=1, β=1
+2025-06-29 18:52:09 - INFO - Epoch 1/400, Batch 4/4, Loss: 0.0064
+2025-06-29 18:52:10 - INFO - Epoch 2/400, Batch 4/4, Loss: 0.3092
+2025-06-29 18:52:12 - INFO - Epoch 3/400, Batch 4/4, Loss: 0.1173
+2025-06-29 18:52:13 - INFO - Epoch 4/400, Batch 4/4, Loss: 0.0366
+2025-06-29 18:52:15 - INFO - Epoch 5/400, Batch 4/4, Loss: 0.0437
+2025-06-29 18:52:16 - INFO - Epoch 6/400, Batch 4/4, Loss: -0.1135
+2025-06-29 18:52:18 - INFO - Epoch 7/400, Batch 4/4, Loss: 0.0774
+2025-06-29 18:52:19 - INFO - Epoch 8/400, Batch 4/4, Loss: -0.1050
+2025-06-29 18:52:21 - INFO - Epoch 9/400, Batch 4/4, Loss: 0.0394
+2025-06-29 18:52:22 - INFO - Epoch 10/400, Batch 4/4, Loss: 0.1344
+2025-06-29 18:52:24 - INFO - Epoch 11/400, Batch 4/4, Loss: 0.0305
+2025-06-29 18:52:25 - INFO - Epoch 12/400, Batch 4/4, Loss: 0.0420
+2025-06-29 18:52:27 - INFO - Epoch 13/400, Batch 4/4, Loss: -0.0330
+2025-06-29 18:52:28 - INFO - Epoch 14/400, Batch 4/4, Loss: 0.0203
+2025-06-29 18:52:30 - INFO - Epoch 15/400, Batch 4/4, Loss: -0.1128
+2025-06-29 18:52:31 - INFO - Epoch 16/400, Batch 4/4, Loss: -0.0221
+2025-06-29 18:52:33 - INFO - Epoch 17/400, Batch 4/4, Loss: -0.0079
+2025-06-29 18:52:34 - INFO - Epoch 18/400, Batch 4/4, Loss: -0.0544
+2025-06-29 18:52:36 - INFO - Epoch 19/400, Batch 4/4, Loss: 0.0324
+2025-06-29 18:52:37 - INFO - Epoch 20/400, Batch 4/4, Loss: 0.0101
+2025-06-29 18:52:38 - INFO - Saved checkpoint at epoch 20 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_20_checkpoint.pth
+2025-06-29 18:52:39 - INFO - Epoch 21/400, Batch 4/4, Loss: -0.0283
+2025-06-29 18:52:41 - INFO - Epoch 22/400, Batch 4/4, Loss: -0.0130
+2025-06-29 18:52:42 - INFO - Epoch 23/400, Batch 4/4, Loss: 0.0512
+2025-06-29 18:52:44 - INFO - Epoch 24/400, Batch 4/4, Loss: -0.1064
+2025-06-29 18:52:45 - INFO - Epoch 25/400, Batch 4/4, Loss: 0.0102
+2025-06-29 18:52:47 - INFO - Epoch 26/400, Batch 4/4, Loss: -0.0554
+2025-06-29 18:52:48 - INFO - Epoch 27/400, Batch 4/4, Loss: -0.0982
+2025-06-29 18:52:50 - INFO - Epoch 28/400, Batch 4/4, Loss: -0.0214
+2025-06-29 18:52:51 - INFO - Epoch 29/400, Batch 4/4, Loss: 0.0710
+2025-06-29 18:52:53 - INFO - Epoch 30/400, Batch 4/4, Loss: -0.0659
+2025-06-29 18:52:54 - INFO - Epoch 31/400, Batch 4/4, Loss: 0.2233
+2025-06-29 18:52:56 - INFO - Epoch 32/400, Batch 4/4, Loss: -0.0328
+2025-06-29 18:52:57 - INFO - Epoch 33/400, Batch 4/4, Loss: -0.0281
+2025-06-29 18:52:59 - INFO - Epoch 34/400, Batch 4/4, Loss: -0.0700
+2025-06-29 18:53:00 - INFO - Epoch 35/400, Batch 4/4, Loss: -0.0097
+2025-06-29 18:53:02 - INFO - Epoch 36/400, Batch 4/4, Loss: -0.1224
+2025-06-29 18:53:03 - INFO - Epoch 37/400, Batch 4/4, Loss: 0.0444
+2025-06-29 18:53:05 - INFO - Epoch 38/400, Batch 4/4, Loss: 0.2063
+2025-06-29 18:53:06 - INFO - Epoch 39/400, Batch 4/4, Loss: -0.1371
+2025-06-29 18:53:08 - INFO - Epoch 40/400, Batch 4/4, Loss: 0.0071
+2025-06-29 18:53:08 - INFO - Saved checkpoint at epoch 40 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_40_checkpoint.pth
+2025-06-29 18:53:09 - INFO - Epoch 41/400, Batch 4/4, Loss: -0.1914
+2025-06-29 18:53:11 - INFO - Epoch 42/400, Batch 4/4, Loss: -0.1698
+2025-06-29 18:53:12 - INFO - Epoch 43/400, Batch 4/4, Loss: -0.0491
+2025-06-29 18:53:14 - INFO - Epoch 44/400, Batch 4/4, Loss: -0.0344
+2025-06-29 18:53:15 - INFO - Epoch 45/400, Batch 4/4, Loss: -0.1000
+2025-06-29 18:53:17 - INFO - Epoch 46/400, Batch 4/4, Loss: -0.0776
+2025-06-29 18:53:18 - INFO - Epoch 47/400, Batch 4/4, Loss: -0.0043
+2025-06-29 18:53:20 - INFO - Epoch 48/400, Batch 4/4, Loss: 0.0558
+2025-06-29 18:53:21 - INFO - Epoch 49/400, Batch 4/4, Loss: -0.1499
+2025-06-29 18:53:23 - INFO - Epoch 50/400, Batch 4/4, Loss: 0.0750
+2025-06-29 18:53:24 - INFO - Epoch 51/400, Batch 4/4, Loss: -0.0345
+2025-06-29 18:53:26 - INFO - Epoch 52/400, Batch 4/4, Loss: -0.0515
+2025-06-29 18:53:27 - INFO - Epoch 53/400, Batch 4/4, Loss: 0.0191
+2025-06-29 18:53:29 - INFO - Epoch 54/400, Batch 4/4, Loss: -0.1421
+2025-06-29 18:53:30 - INFO - Epoch 55/400, Batch 4/4, Loss: -0.0242
+2025-06-29 18:53:32 - INFO - Epoch 56/400, Batch 4/4, Loss: 0.1024
+2025-06-29 18:53:33 - INFO - Epoch 57/400, Batch 4/4, Loss: 0.0352
+2025-06-29 18:53:35 - INFO - Epoch 58/400, Batch 4/4, Loss: -0.0024
+2025-06-29 18:53:36 - INFO - Epoch 59/400, Batch 4/4, Loss: -0.0889
+2025-06-29 18:53:38 - INFO - Epoch 60/400, Batch 4/4, Loss: -0.0610
+2025-06-29 18:53:38 - INFO - Saved checkpoint at epoch 60 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_60_checkpoint.pth
+2025-06-29 18:53:39 - INFO - Epoch 61/400, Batch 4/4, Loss: 0.0644
+2025-06-29 18:53:41 - INFO - Epoch 62/400, Batch 4/4, Loss: -0.0635
+2025-06-29 18:53:42 - INFO - Epoch 63/400, Batch 4/4, Loss: -0.1176
+2025-06-29 18:53:44 - INFO - Epoch 64/400, Batch 4/4, Loss: -0.1091
+2025-06-29 18:53:46 - INFO - Epoch 65/400, Batch 4/4, Loss: -0.0863
+2025-06-29 18:53:47 - INFO - Epoch 66/400, Batch 4/4, Loss: -0.0861
+2025-06-29 18:53:49 - INFO - Epoch 67/400, Batch 4/4, Loss: -0.1324
+2025-06-29 18:53:50 - INFO - Epoch 68/400, Batch 4/4, Loss: 0.0349
+2025-06-29 18:53:52 - INFO - Epoch 69/400, Batch 4/4, Loss: -0.1628
+2025-06-29 18:53:53 - INFO - Epoch 70/400, Batch 4/4, Loss: -0.0999
+2025-06-29 18:53:54 - INFO - Epoch 71/400, Batch 4/4, Loss: -0.1811
+2025-06-29 18:53:56 - INFO - Epoch 72/400, Batch 4/4, Loss: -0.0857
+2025-06-29 18:53:57 - INFO - Epoch 73/400, Batch 4/4, Loss: 0.0782
+2025-06-29 18:53:59 - INFO - Epoch 74/400, Batch 4/4, Loss: 0.0226
+2025-06-29 18:54:00 - INFO - Epoch 75/400, Batch 4/4, Loss: -0.1493
+2025-06-29 18:54:02 - INFO - Epoch 76/400, Batch 4/4, Loss: -0.1429
+2025-06-29 18:54:03 - INFO - Epoch 77/400, Batch 4/4, Loss: -0.0557
+2025-06-29 18:54:05 - INFO - Epoch 78/400, Batch 4/4, Loss: -0.0630
+2025-06-29 18:54:07 - INFO - Epoch 79/400, Batch 4/4, Loss: 0.0243
+2025-06-29 18:54:08 - INFO - Epoch 80/400, Batch 4/4, Loss: -0.1501
+2025-06-29 18:54:08 - INFO - Saved checkpoint at epoch 80 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_80_checkpoint.pth
+2025-06-29 18:54:10 - INFO - Epoch 81/400, Batch 4/4, Loss: -0.1099
+2025-06-29 18:54:11 - INFO - Epoch 82/400, Batch 4/4, Loss: -0.1627
+2025-06-29 18:54:13 - INFO - Epoch 83/400, Batch 4/4, Loss: 0.0189
+2025-06-29 18:54:14 - INFO - Epoch 84/400, Batch 4/4, Loss: -0.0820
+2025-06-29 18:54:16 - INFO - Epoch 85/400, Batch 4/4, Loss: 0.0041
+2025-06-29 18:54:17 - INFO - Epoch 86/400, Batch 4/4, Loss: 0.0675
+2025-06-29 18:54:19 - INFO - Epoch 87/400, Batch 4/4, Loss: -0.0429
+2025-06-29 18:54:20 - INFO - Epoch 88/400, Batch 4/4, Loss: 0.0164
+2025-06-29 18:54:22 - INFO - Epoch 89/400, Batch 4/4, Loss: 0.0071
+2025-06-29 18:54:23 - INFO - Epoch 90/400, Batch 4/4, Loss: -0.1061
+2025-06-29 18:54:25 - INFO - Epoch 91/400, Batch 4/4, Loss: -0.0690
+2025-06-29 18:54:26 - INFO - Epoch 92/400, Batch 4/4, Loss: -0.1291
+2025-06-29 18:54:28 - INFO - Epoch 93/400, Batch 4/4, Loss: 0.0197
+2025-06-29 18:54:29 - INFO - Epoch 94/400, Batch 4/4, Loss: -0.0952
+2025-06-29 18:54:31 - INFO - Epoch 95/400, Batch 4/4, Loss: 0.0197
+2025-06-29 18:54:32 - INFO - Epoch 96/400, Batch 4/4, Loss: -0.0692
+2025-06-29 18:54:34 - INFO - Epoch 97/400, Batch 4/4, Loss: -0.1353
+2025-06-29 18:54:35 - INFO - Epoch 98/400, Batch 4/4, Loss: -0.1167
+2025-06-29 18:54:37 - INFO - Epoch 99/400, Batch 4/4, Loss: -0.1970
+2025-06-29 18:54:38 - INFO - Epoch 100/400, Batch 4/4, Loss: -0.1350
+2025-06-29 18:54:38 - INFO - Saved checkpoint at epoch 100 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_100_checkpoint.pth
+2025-06-29 18:54:40 - INFO - Epoch 101/400, Batch 4/4, Loss: -0.1027
+2025-06-29 18:54:41 - INFO - Epoch 102/400, Batch 4/4, Loss: 0.1035
+2025-06-29 18:54:44 - INFO - Epoch 103/400, Batch 4/4, Loss: 0.0801
+2025-06-29 18:54:46 - INFO - Epoch 104/400, Batch 4/4, Loss: -0.0625
+2025-06-29 18:54:48 - INFO - Epoch 105/400, Batch 4/4, Loss: -0.0826
+2025-06-29 18:54:51 - INFO - Epoch 106/400, Batch 4/4, Loss: -0.0889
+2025-06-29 18:54:53 - INFO - Epoch 107/400, Batch 4/4, Loss: -0.1012
+2025-06-29 18:54:55 - INFO - Epoch 108/400, Batch 4/4, Loss: -0.0738
+2025-06-29 18:54:57 - INFO - Epoch 109/400, Batch 4/4, Loss: -0.1945
+2025-06-29 18:55:00 - INFO - Epoch 110/400, Batch 4/4, Loss: -0.0289
+2025-06-29 18:55:02 - INFO - Epoch 111/400, Batch 4/4, Loss: 0.2058
+2025-06-29 18:55:04 - INFO - Epoch 112/400, Batch 4/4, Loss: -0.0336
+2025-06-29 18:55:06 - INFO - Epoch 113/400, Batch 4/4, Loss: -0.2415
+2025-06-29 18:55:09 - INFO - Epoch 114/400, Batch 4/4, Loss: -0.1488
+2025-06-29 18:55:11 - INFO - Epoch 115/400, Batch 4/4, Loss: 0.0176
+2025-06-29 18:55:13 - INFO - Epoch 116/400, Batch 4/4, Loss: -0.1161
+2025-06-29 18:55:15 - INFO - Epoch 117/400, Batch 4/4, Loss: -0.0501
+2025-06-29 18:55:17 - INFO - Epoch 118/400, Batch 4/4, Loss: -0.1183
+2025-06-29 18:55:20 - INFO - Epoch 119/400, Batch 4/4, Loss: -0.0908
+2025-06-29 18:55:22 - INFO - Epoch 120/400, Batch 4/4, Loss: -0.0624
+2025-06-29 18:55:22 - INFO - Saved checkpoint at epoch 120 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_120_checkpoint.pth
+2025-06-29 18:55:24 - INFO - Epoch 121/400, Batch 4/4, Loss: -0.1716
+2025-06-29 18:55:26 - INFO - Epoch 122/400, Batch 4/4, Loss: -0.2228
+2025-06-29 18:55:28 - INFO - Epoch 123/400, Batch 4/4, Loss: -0.2089
+2025-06-29 18:55:31 - INFO - Epoch 124/400, Batch 4/4, Loss: -0.1320
+2025-06-29 18:55:33 - INFO - Epoch 125/400, Batch 4/4, Loss: -0.1063
+2025-06-29 18:55:35 - INFO - Epoch 126/400, Batch 4/4, Loss: 0.0016
+2025-06-29 18:55:37 - INFO - Epoch 127/400, Batch 4/4, Loss: 0.0628
+2025-06-29 18:55:38 - INFO - Epoch 128/400, Batch 4/4, Loss: -0.1683
+2025-06-29 18:55:41 - INFO - Epoch 129/400, Batch 4/4, Loss: -0.0916
+2025-06-29 18:55:43 - INFO - Epoch 130/400, Batch 4/4, Loss: -0.1496
+2025-06-29 18:55:45 - INFO - Epoch 131/400, Batch 4/4, Loss: -0.2031
+2025-06-29 18:55:47 - INFO - Epoch 132/400, Batch 4/4, Loss: -0.1998
+2025-06-29 18:55:49 - INFO - Epoch 133/400, Batch 4/4, Loss: -0.1458
+2025-06-29 18:55:52 - INFO - Epoch 134/400, Batch 4/4, Loss: -0.1827
+2025-06-29 18:55:54 - INFO - Epoch 135/400, Batch 4/4, Loss: -0.1634
+2025-06-29 18:55:56 - INFO - Epoch 136/400, Batch 4/4, Loss: -0.1274
+2025-06-29 18:55:58 - INFO - Epoch 137/400, Batch 4/4, Loss: -0.0675
+2025-06-29 18:56:01 - INFO - Epoch 138/400, Batch 4/4, Loss: -0.1119
+2025-06-29 18:56:03 - INFO - Epoch 139/400, Batch 4/4, Loss: -0.0320
+2025-06-29 18:56:05 - INFO - Epoch 140/400, Batch 4/4, Loss: 0.1046
+2025-06-29 18:56:05 - INFO - Saved checkpoint at epoch 140 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_140_checkpoint.pth
+2025-06-29 18:56:08 - INFO - Epoch 141/400, Batch 4/4, Loss: -0.1754
+2025-06-29 18:56:10 - INFO - Epoch 142/400, Batch 4/4, Loss: -0.1651
+2025-06-29 18:56:12 - INFO - Epoch 143/400, Batch 4/4, Loss: -0.2434
+2025-06-29 18:56:15 - INFO - Epoch 144/400, Batch 4/4, Loss: -0.1050
+2025-06-29 18:56:17 - INFO - Epoch 145/400, Batch 4/4, Loss: -0.1000
+2025-06-29 18:56:19 - INFO - Epoch 146/400, Batch 4/4, Loss: -0.1341
+2025-06-29 18:56:21 - INFO - Epoch 147/400, Batch 4/4, Loss: -0.1490
+2025-06-29 18:56:23 - INFO - Epoch 148/400, Batch 4/4, Loss: 0.0603
+2025-06-29 18:56:26 - INFO - Epoch 149/400, Batch 4/4, Loss: -0.1232
+2025-06-29 18:56:28 - INFO - Epoch 150/400, Batch 4/4, Loss: -0.1001
+2025-06-29 18:56:30 - INFO - Epoch 151/400, Batch 4/4, Loss: -0.2235
+2025-06-29 18:56:32 - INFO - Epoch 152/400, Batch 4/4, Loss: 0.0300
+2025-06-29 18:56:34 - INFO - Epoch 153/400, Batch 4/4, Loss: -0.1444
+2025-06-29 18:56:36 - INFO - Epoch 154/400, Batch 4/4, Loss: -0.1473
+2025-06-29 18:56:38 - INFO - Epoch 155/400, Batch 4/4, Loss: -0.2156
+2025-06-29 18:56:40 - INFO - Epoch 156/400, Batch 4/4, Loss: 0.0522
+2025-06-29 18:56:42 - INFO - Epoch 157/400, Batch 4/4, Loss: -0.1619
+2025-06-29 18:56:45 - INFO - Epoch 158/400, Batch 4/4, Loss: -0.0438
+2025-06-29 18:56:47 - INFO - Epoch 159/400, Batch 4/4, Loss: -0.1179
+2025-06-29 18:56:49 - INFO - Epoch 160/400, Batch 4/4, Loss: -0.1636
+2025-06-29 18:56:49 - INFO - Saved checkpoint at epoch 160 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_160_checkpoint.pth
+2025-06-29 18:56:51 - INFO - Epoch 161/400, Batch 4/4, Loss: -0.1131
+2025-06-29 18:56:54 - INFO - Epoch 162/400, Batch 4/4, Loss: -0.1188
+2025-06-29 18:56:56 - INFO - Epoch 163/400, Batch 4/4, Loss: -0.1343
+2025-06-29 18:56:58 - INFO - Epoch 164/400, Batch 4/4, Loss: -0.1001
+2025-06-29 18:57:00 - INFO - Epoch 165/400, Batch 4/4, Loss: 0.0313
+2025-06-29 18:57:03 - INFO - Epoch 166/400, Batch 4/4, Loss: -0.1521
+2025-06-29 18:57:05 - INFO - Epoch 167/400, Batch 4/4, Loss: -0.1431
+2025-06-29 18:57:07 - INFO - Epoch 168/400, Batch 4/4, Loss: -0.2137
+2025-06-29 18:57:09 - INFO - Epoch 169/400, Batch 4/4, Loss: 0.0253
+2025-06-29 18:57:11 - INFO - Epoch 170/400, Batch 4/4, Loss: 0.1706
+2025-06-29 18:57:14 - INFO - Epoch 171/400, Batch 4/4, Loss: -0.1129
+2025-06-29 18:57:16 - INFO - Epoch 172/400, Batch 4/4, Loss: -0.0616
+2025-06-29 18:57:18 - INFO - Epoch 173/400, Batch 4/4, Loss: -0.1651
+2025-06-29 18:57:20 - INFO - Epoch 174/400, Batch 4/4, Loss: -0.0968
+2025-06-29 18:57:22 - INFO - Epoch 175/400, Batch 4/4, Loss: 0.0910
+2025-06-29 18:57:25 - INFO - Epoch 176/400, Batch 4/4, Loss: -0.2723
+2025-06-29 18:57:27 - INFO - Epoch 177/400, Batch 4/4, Loss: -0.2144
+2025-06-29 18:57:29 - INFO - Epoch 178/400, Batch 4/4, Loss: -0.1790
+2025-06-29 18:57:32 - INFO - Epoch 179/400, Batch 4/4, Loss: -0.3142
+2025-06-29 18:57:33 - INFO - Epoch 180/400, Batch 4/4, Loss: -0.1771
+2025-06-29 18:57:33 - INFO - Saved checkpoint at epoch 180 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_180_checkpoint.pth
+2025-06-29 18:57:35 - INFO - Epoch 181/400, Batch 4/4, Loss: -0.2108
+2025-06-29 18:57:37 - INFO - Epoch 182/400, Batch 4/4, Loss: -0.1646
+2025-06-29 18:57:40 - INFO - Epoch 183/400, Batch 4/4, Loss: -0.2694
+2025-06-29 18:57:42 - INFO - Epoch 184/400, Batch 4/4, Loss: -0.1588
+2025-06-29 18:57:44 - INFO - Epoch 185/400, Batch 4/4, Loss: -0.2259
+2025-06-29 18:57:46 - INFO - Epoch 186/400, Batch 4/4, Loss: -0.2253
+2025-06-29 18:57:49 - INFO - Epoch 187/400, Batch 4/4, Loss: -0.0598
+2025-06-29 18:57:51 - INFO - Epoch 188/400, Batch 4/4, Loss: -0.2526
+2025-06-29 18:57:53 - INFO - Epoch 189/400, Batch 4/4, Loss: 0.1122
+2025-06-29 18:57:56 - INFO - Epoch 190/400, Batch 4/4, Loss: -0.2623
+2025-06-29 18:57:58 - INFO - Epoch 191/400, Batch 4/4, Loss: -0.1071
+2025-06-29 18:58:00 - INFO - Epoch 192/400, Batch 4/4, Loss: -0.1631
+2025-06-29 18:58:03 - INFO - Epoch 193/400, Batch 4/4, Loss: -0.1577
+2025-06-29 18:58:05 - INFO - Epoch 194/400, Batch 4/4, Loss: -0.3098
+2025-06-29 18:58:08 - INFO - Epoch 195/400, Batch 4/4, Loss: -0.0275
+2025-06-29 18:58:10 - INFO - Epoch 196/400, Batch 4/4, Loss: -0.2198
+2025-06-29 18:58:12 - INFO - Epoch 197/400, Batch 4/4, Loss: -0.1951
+2025-06-29 18:58:14 - INFO - Epoch 198/400, Batch 4/4, Loss: -0.1150
+2025-06-29 18:58:16 - INFO - Epoch 199/400, Batch 4/4, Loss: -0.1545
+2025-06-29 18:58:19 - INFO - Epoch 200/400, Batch 4/4, Loss: -0.2181
+2025-06-29 18:58:19 - INFO - Saved checkpoint at epoch 200 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_200_checkpoint.pth
+2025-06-29 18:58:21 - INFO - Epoch 201/400, Batch 4/4, Loss: -0.0908
+2025-06-29 18:58:23 - INFO - Epoch 202/400, Batch 4/4, Loss: -0.1980
+2025-06-29 18:58:25 - INFO - Epoch 203/400, Batch 4/4, Loss: -0.1659
+2025-06-29 18:58:28 - INFO - Epoch 204/400, Batch 4/4, Loss: -0.0828
+2025-06-29 18:58:30 - INFO - Epoch 205/400, Batch 4/4, Loss: -0.2053
+2025-06-29 18:58:31 - INFO - Epoch 206/400, Batch 4/4, Loss: -0.0988
+2025-06-29 18:58:33 - INFO - Epoch 207/400, Batch 4/4, Loss: -0.1509
+2025-06-29 18:58:35 - INFO - Epoch 208/400, Batch 4/4, Loss: -0.1824
+2025-06-29 18:58:38 - INFO - Epoch 209/400, Batch 4/4, Loss: -0.2741
+2025-06-29 18:58:40 - INFO - Epoch 210/400, Batch 4/4, Loss: -0.2879
+2025-06-29 18:58:42 - INFO - Epoch 211/400, Batch 4/4, Loss: -0.0705
+2025-06-29 18:58:45 - INFO - Epoch 212/400, Batch 4/4, Loss: -0.1933
+2025-06-29 18:58:47 - INFO - Epoch 213/400, Batch 4/4, Loss: -0.2317
+2025-06-29 18:58:49 - INFO - Epoch 214/400, Batch 4/4, Loss: -0.2252
+2025-06-29 18:58:52 - INFO - Epoch 215/400, Batch 4/4, Loss: -0.0939
+2025-06-29 18:58:54 - INFO - Epoch 216/400, Batch 4/4, Loss: -0.1532
+2025-06-29 18:58:56 - INFO - Epoch 217/400, Batch 4/4, Loss: -0.1756
+2025-06-29 18:58:59 - INFO - Epoch 218/400, Batch 4/4, Loss: -0.2137
+2025-06-29 18:59:01 - INFO - Epoch 219/400, Batch 4/4, Loss: -0.2262
+2025-06-29 18:59:03 - INFO - Epoch 220/400, Batch 4/4, Loss: -0.2116
+2025-06-29 18:59:03 - INFO - Saved checkpoint at epoch 220 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_220_checkpoint.pth
+2025-06-29 18:59:05 - INFO - Epoch 221/400, Batch 4/4, Loss: -0.1853
+2025-06-29 18:59:08 - INFO - Epoch 222/400, Batch 4/4, Loss: -0.0438
+2025-06-29 18:59:10 - INFO - Epoch 223/400, Batch 4/4, Loss: 0.0089
+2025-06-29 18:59:12 - INFO - Epoch 224/400, Batch 4/4, Loss: -0.1819
+2025-06-29 18:59:15 - INFO - Epoch 225/400, Batch 4/4, Loss: -0.2208
+2025-06-29 18:59:17 - INFO - Epoch 226/400, Batch 4/4, Loss: -0.2495
+2025-06-29 18:59:19 - INFO - Epoch 227/400, Batch 4/4, Loss: -0.2379
+2025-06-29 18:59:21 - INFO - Epoch 228/400, Batch 4/4, Loss: -0.1624
+2025-06-29 18:59:24 - INFO - Epoch 229/400, Batch 4/4, Loss: -0.2524
+2025-06-29 18:59:26 - INFO - Epoch 230/400, Batch 4/4, Loss: -0.1929
+2025-06-29 18:59:28 - INFO - Epoch 231/400, Batch 4/4, Loss: -0.1164
+2025-06-29 18:59:29 - INFO - Epoch 232/400, Batch 4/4, Loss: -0.2687
+2025-06-29 18:59:31 - INFO - Epoch 233/400, Batch 4/4, Loss: -0.2198
+2025-06-29 18:59:33 - INFO - Epoch 234/400, Batch 4/4, Loss: -0.0994
+2025-06-29 18:59:35 - INFO - Epoch 235/400, Batch 4/4, Loss: -0.2853
+2025-06-29 18:59:38 - INFO - Epoch 236/400, Batch 4/4, Loss: -0.0864
+2025-06-29 18:59:40 - INFO - Epoch 237/400, Batch 4/4, Loss: -0.2511
+2025-06-29 18:59:42 - INFO - Epoch 238/400, Batch 4/4, Loss: -0.2742
+2025-06-29 18:59:45 - INFO - Epoch 239/400, Batch 4/4, Loss: -0.0397
+2025-06-29 18:59:47 - INFO - Epoch 240/400, Batch 4/4, Loss: -0.2640
+2025-06-29 18:59:47 - INFO - Saved checkpoint at epoch 240 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_240_checkpoint.pth
+2025-06-29 18:59:50 - INFO - Epoch 241/400, Batch 4/4, Loss: -0.2030
+2025-06-29 18:59:52 - INFO - Epoch 242/400, Batch 4/4, Loss: -0.1829
+2025-06-29 18:59:54 - INFO - Epoch 243/400, Batch 4/4, Loss: -0.3232
+2025-06-29 18:59:56 - INFO - Epoch 244/400, Batch 4/4, Loss: -0.2567
+2025-06-29 18:59:59 - INFO - Epoch 245/400, Batch 4/4, Loss: -0.0915
+2025-06-29 19:00:01 - INFO - Epoch 246/400, Batch 4/4, Loss: -0.2505
+2025-06-29 19:00:03 - INFO - Epoch 247/400, Batch 4/4, Loss: -0.3269
+2025-06-29 19:00:06 - INFO - Epoch 248/400, Batch 4/4, Loss: -0.1716
+2025-06-29 19:00:08 - INFO - Epoch 249/400, Batch 4/4, Loss: -0.1355
+2025-06-29 19:00:10 - INFO - Epoch 250/400, Batch 4/4, Loss: -0.1666
+2025-06-29 19:00:12 - INFO - Epoch 251/400, Batch 4/4, Loss: -0.1735
+2025-06-29 19:00:14 - INFO - Epoch 252/400, Batch 4/4, Loss: -0.2563
+2025-06-29 19:00:17 - INFO - Epoch 253/400, Batch 4/4, Loss: -0.2065
+2025-06-29 19:00:19 - INFO - Epoch 254/400, Batch 4/4, Loss: -0.2377
+2025-06-29 19:00:21 - INFO - Epoch 255/400, Batch 4/4, Loss: -0.1935
+2025-06-29 19:00:23 - INFO - Epoch 256/400, Batch 4/4, Loss: -0.2743
+2025-06-29 19:00:25 - INFO - Epoch 257/400, Batch 4/4, Loss: -0.3178
+2025-06-29 19:00:27 - INFO - Epoch 258/400, Batch 4/4, Loss: -0.2555
+2025-06-29 19:00:28 - INFO - Epoch 259/400, Batch 4/4, Loss: -0.2142
+2025-06-29 19:00:31 - INFO - Epoch 260/400, Batch 4/4, Loss: -0.2423
+2025-06-29 19:00:31 - INFO - Saved checkpoint at epoch 260 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_260_checkpoint.pth
+2025-06-29 19:00:33 - INFO - Epoch 261/400, Batch 4/4, Loss: -0.3443
+2025-06-29 19:00:36 - INFO - Epoch 262/400, Batch 4/4, Loss: -0.0960
+2025-06-29 19:00:38 - INFO - Epoch 263/400, Batch 4/4, Loss: -0.2680
+2025-06-29 19:00:40 - INFO - Epoch 264/400, Batch 4/4, Loss: -0.1928
+2025-06-29 19:00:42 - INFO - Epoch 265/400, Batch 4/4, Loss: -0.3186
+2025-06-29 19:00:45 - INFO - Epoch 266/400, Batch 4/4, Loss: -0.1577
+2025-06-29 19:00:47 - INFO - Epoch 267/400, Batch 4/4, Loss: -0.2104
+2025-06-29 19:00:49 - INFO - Epoch 268/400, Batch 4/4, Loss: -0.3221
+2025-06-29 19:00:51 - INFO - Epoch 269/400, Batch 4/4, Loss: -0.0113
+2025-06-29 19:00:54 - INFO - Epoch 270/400, Batch 4/4, Loss: -0.2368
+2025-06-29 19:00:56 - INFO - Epoch 271/400, Batch 4/4, Loss: -0.1977
+2025-06-29 19:00:58 - INFO - Epoch 272/400, Batch 4/4, Loss: -0.1257
+2025-06-29 19:01:00 - INFO - Epoch 273/400, Batch 4/4, Loss: -0.2896
+2025-06-29 19:01:03 - INFO - Epoch 274/400, Batch 4/4, Loss: -0.2570
+2025-06-29 19:01:05 - INFO - Epoch 275/400, Batch 4/4, Loss: -0.2527
+2025-06-29 19:01:07 - INFO - Epoch 276/400, Batch 4/4, Loss: -0.1784
+2025-06-29 19:01:10 - INFO - Epoch 277/400, Batch 4/4, Loss: -0.2501
+2025-06-29 19:01:12 - INFO - Epoch 278/400, Batch 4/4, Loss: -0.2866
+2025-06-29 19:01:14 - INFO - Epoch 279/400, Batch 4/4, Loss: -0.3302
+2025-06-29 19:01:16 - INFO - Epoch 280/400, Batch 4/4, Loss: -0.1924
+2025-06-29 19:01:16 - INFO - Saved checkpoint at epoch 280 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_280_checkpoint.pth
+2025-06-29 19:01:18 - INFO - Epoch 281/400, Batch 4/4, Loss: -0.3909
+2025-06-29 19:01:21 - INFO - Epoch 282/400, Batch 4/4, Loss: -0.3052
+2025-06-29 19:01:23 - INFO - Epoch 283/400, Batch 4/4, Loss: -0.3401
+2025-06-29 19:01:25 - INFO - Epoch 284/400, Batch 4/4, Loss: -0.3442
+2025-06-29 19:01:27 - INFO - Epoch 285/400, Batch 4/4, Loss: -0.2646
+2025-06-29 19:01:28 - INFO - Epoch 286/400, Batch 4/4, Loss: -0.2535
+2025-06-29 19:01:30 - INFO - Epoch 287/400, Batch 4/4, Loss: -0.0721
+2025-06-29 19:01:33 - INFO - Epoch 288/400, Batch 4/4, Loss: -0.0874
+2025-06-29 19:01:35 - INFO - Epoch 289/400, Batch 4/4, Loss: -0.2195
+2025-06-29 19:01:37 - INFO - Epoch 290/400, Batch 4/4, Loss: -0.0810
+2025-06-29 19:01:39 - INFO - Epoch 291/400, Batch 4/4, Loss: -0.2298
+2025-06-29 19:01:42 - INFO - Epoch 292/400, Batch 4/4, Loss: -0.0163
+2025-06-29 19:01:44 - INFO - Epoch 293/400, Batch 4/4, Loss: -0.1598
+2025-06-29 19:01:46 - INFO - Epoch 294/400, Batch 4/4, Loss: 0.0794
+2025-06-29 19:01:49 - INFO - Epoch 295/400, Batch 4/4, Loss: -0.1827
+2025-06-29 19:01:51 - INFO - Epoch 296/400, Batch 4/4, Loss: -0.3582
+2025-06-29 19:01:53 - INFO - Epoch 297/400, Batch 4/4, Loss: -0.4191
+2025-06-29 19:01:55 - INFO - Epoch 298/400, Batch 4/4, Loss: -0.3357
+2025-06-29 19:01:58 - INFO - Epoch 299/400, Batch 4/4, Loss: -0.3673
+2025-06-29 19:02:00 - INFO - Epoch 300/400, Batch 4/4, Loss: -0.2659
+2025-06-29 19:02:00 - INFO - Saved checkpoint at epoch 300 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_300_checkpoint.pth
+2025-06-29 19:02:02 - INFO - Epoch 301/400, Batch 4/4, Loss: -0.1253
+2025-06-29 19:02:04 - INFO - Epoch 302/400, Batch 4/4, Loss: -0.2143
+2025-06-29 19:02:07 - INFO - Epoch 303/400, Batch 4/4, Loss: -0.3646
+2025-06-29 19:02:09 - INFO - Epoch 304/400, Batch 4/4, Loss: -0.2888
+2025-06-29 19:02:11 - INFO - Epoch 305/400, Batch 4/4, Loss: -0.4237
+2025-06-29 19:02:14 - INFO - Epoch 306/400, Batch 4/4, Loss: -0.2630
+2025-06-29 19:02:16 - INFO - Epoch 307/400, Batch 4/4, Loss: -0.3387
+2025-06-29 19:02:18 - INFO - Epoch 308/400, Batch 4/4, Loss: -0.2904
+2025-06-29 19:02:20 - INFO - Epoch 309/400, Batch 4/4, Loss: -0.3259
+2025-06-29 19:02:23 - INFO - Epoch 310/400, Batch 4/4, Loss: -0.2863
+2025-06-29 19:02:25 - INFO - Epoch 311/400, Batch 4/4, Loss: -0.1937
+2025-06-29 19:02:26 - INFO - Epoch 312/400, Batch 4/4, Loss: -0.2537
+2025-06-29 19:02:28 - INFO - Epoch 313/400, Batch 4/4, Loss: -0.2118
+2025-06-29 19:02:30 - INFO - Epoch 314/400, Batch 4/4, Loss: -0.1520
+2025-06-29 19:02:33 - INFO - Epoch 315/400, Batch 4/4, Loss: -0.1490
+2025-06-29 19:02:35 - INFO - Epoch 316/400, Batch 4/4, Loss: -0.2724
+2025-06-29 19:02:37 - INFO - Epoch 317/400, Batch 4/4, Loss: -0.0659
+2025-06-29 19:02:40 - INFO - Epoch 318/400, Batch 4/4, Loss: -0.3567
+2025-06-29 19:02:42 - INFO - Epoch 319/400, Batch 4/4, Loss: -0.3177
+2025-06-29 19:02:44 - INFO - Epoch 320/400, Batch 4/4, Loss: -0.3133
+2025-06-29 19:02:44 - INFO - Saved checkpoint at epoch 320 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_320_checkpoint.pth
+2025-06-29 19:02:46 - INFO - Epoch 321/400, Batch 4/4, Loss: -0.2110
+2025-06-29 19:02:49 - INFO - Epoch 322/400, Batch 4/4, Loss: -0.2776
+2025-06-29 19:02:51 - INFO - Epoch 323/400, Batch 4/4, Loss: -0.2236
+2025-06-29 19:02:53 - INFO - Epoch 324/400, Batch 4/4, Loss: -0.1858
+2025-06-29 19:02:55 - INFO - Epoch 325/400, Batch 4/4, Loss: -0.1799
+2025-06-29 19:02:58 - INFO - Epoch 326/400, Batch 4/4, Loss: -0.1335
+2025-06-29 19:03:00 - INFO - Epoch 327/400, Batch 4/4, Loss: -0.2919
+2025-06-29 19:03:02 - INFO - Epoch 328/400, Batch 4/4, Loss: -0.1933
+2025-06-29 19:03:05 - INFO - Epoch 329/400, Batch 4/4, Loss: -0.1869
+2025-06-29 19:03:07 - INFO - Epoch 330/400, Batch 4/4, Loss: -0.2628
+2025-06-29 19:03:09 - INFO - Epoch 331/400, Batch 4/4, Loss: -0.3220
+2025-06-29 19:03:11 - INFO - Epoch 332/400, Batch 4/4, Loss: -0.3462
+2025-06-29 19:03:14 - INFO - Epoch 333/400, Batch 4/4, Loss: -0.2811
+2025-06-29 19:03:16 - INFO - Epoch 334/400, Batch 4/4, Loss: -0.3041
+2025-06-29 19:03:18 - INFO - Epoch 335/400, Batch 4/4, Loss: -0.0499
+2025-06-29 19:03:20 - INFO - Epoch 336/400, Batch 4/4, Loss: -0.3285
+2025-06-29 19:03:22 - INFO - Epoch 337/400, Batch 4/4, Loss: -0.2328
+2025-06-29 19:03:24 - INFO - Epoch 338/400, Batch 4/4, Loss: -0.3088
+2025-06-29 19:03:26 - INFO - Epoch 339/400, Batch 4/4, Loss: -0.2959
+2025-06-29 19:03:28 - INFO - Epoch 340/400, Batch 4/4, Loss: -0.3972
+2025-06-29 19:03:28 - INFO - Saved checkpoint at epoch 340 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_340_checkpoint.pth
+2025-06-29 19:03:30 - INFO - Epoch 341/400, Batch 4/4, Loss: -0.1937
+2025-06-29 19:03:33 - INFO - Epoch 342/400, Batch 4/4, Loss: -0.3622
+2025-06-29 19:03:35 - INFO - Epoch 343/400, Batch 4/4, Loss: -0.3561
+2025-06-29 19:03:37 - INFO - Epoch 344/400, Batch 4/4, Loss: -0.3543
+2025-06-29 19:03:39 - INFO - Epoch 345/400, Batch 4/4, Loss: -0.2619
+2025-06-29 19:03:42 - INFO - Epoch 346/400, Batch 4/4, Loss: -0.2048
+2025-06-29 19:03:44 - INFO - Epoch 347/400, Batch 4/4, Loss: -0.2785
+2025-06-29 19:03:46 - INFO - Epoch 348/400, Batch 4/4, Loss: -0.0037
+2025-06-29 19:03:48 - INFO - Epoch 349/400, Batch 4/4, Loss: -0.3203
+2025-06-29 19:03:51 - INFO - Epoch 350/400, Batch 4/4, Loss: -0.3803
+2025-06-29 19:03:53 - INFO - Epoch 351/400, Batch 4/4, Loss: -0.1581
+2025-06-29 19:03:55 - INFO - Epoch 352/400, Batch 4/4, Loss: -0.4329
+2025-06-29 19:03:57 - INFO - Epoch 353/400, Batch 4/4, Loss: -0.1628
+2025-06-29 19:03:59 - INFO - Epoch 354/400, Batch 4/4, Loss: -0.2769
+2025-06-29 19:04:02 - INFO - Epoch 355/400, Batch 4/4, Loss: -0.4645
+2025-06-29 19:04:04 - INFO - Epoch 356/400, Batch 4/4, Loss: -0.2094
+2025-06-29 19:04:06 - INFO - Epoch 357/400, Batch 4/4, Loss: -0.2253
+2025-06-29 19:04:08 - INFO - Epoch 358/400, Batch 4/4, Loss: -0.3014
+2025-06-29 19:04:11 - INFO - Epoch 359/400, Batch 4/4, Loss: -0.3337
+2025-06-29 19:04:13 - INFO - Epoch 360/400, Batch 4/4, Loss: -0.3522
+2025-06-29 19:04:13 - INFO - Saved checkpoint at epoch 360 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_360_checkpoint.pth
+2025-06-29 19:04:15 - INFO - Epoch 361/400, Batch 4/4, Loss: -0.2184
+2025-06-29 19:04:17 - INFO - Epoch 362/400, Batch 4/4, Loss: -0.2963
+2025-06-29 19:04:20 - INFO - Epoch 363/400, Batch 4/4, Loss: 0.4736
+2025-06-29 19:04:22 - INFO - Epoch 364/400, Batch 4/4, Loss: -0.3680
+2025-06-29 19:04:23 - INFO - Epoch 365/400, Batch 4/4, Loss: -0.3464
+2025-06-29 19:04:25 - INFO - Epoch 366/400, Batch 4/4, Loss: -0.3489
+2025-06-29 19:04:27 - INFO - Epoch 367/400, Batch 4/4, Loss: -0.3625
+2025-06-29 19:04:30 - INFO - Epoch 368/400, Batch 4/4, Loss: -0.4163
+2025-06-29 19:04:32 - INFO - Epoch 369/400, Batch 4/4, Loss: -0.2738
+2025-06-29 19:04:34 - INFO - Epoch 370/400, Batch 4/4, Loss: -0.3526
+2025-06-29 19:04:37 - INFO - Epoch 371/400, Batch 4/4, Loss: -0.2838
+2025-06-29 19:04:39 - INFO - Epoch 372/400, Batch 4/4, Loss: -0.1131
+2025-06-29 19:04:41 - INFO - Epoch 373/400, Batch 4/4, Loss: -0.3300
+2025-06-29 19:04:43 - INFO - Epoch 374/400, Batch 4/4, Loss: -0.2379
+2025-06-29 19:04:46 - INFO - Epoch 375/400, Batch 4/4, Loss: -0.1751
+2025-06-29 19:04:48 - INFO - Epoch 376/400, Batch 4/4, Loss: -0.2490
+2025-06-29 19:04:50 - INFO - Epoch 377/400, Batch 4/4, Loss: -0.3673
+2025-06-29 19:04:53 - INFO - Epoch 378/400, Batch 4/4, Loss: -0.3082
+2025-06-29 19:04:55 - INFO - Epoch 379/400, Batch 4/4, Loss: -0.2648
+2025-06-29 19:04:57 - INFO - Epoch 380/400, Batch 4/4, Loss: -0.1239
+2025-06-29 19:04:58 - INFO - Saved checkpoint at epoch 380 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_380_checkpoint.pth
+2025-06-29 19:05:00 - INFO - Epoch 381/400, Batch 4/4, Loss: -0.2700
+2025-06-29 19:05:02 - INFO - Epoch 382/400, Batch 4/4, Loss: -0.3971
+2025-06-29 19:05:04 - INFO - Epoch 383/400, Batch 4/4, Loss: -0.4184
+2025-06-29 19:05:07 - INFO - Epoch 384/400, Batch 4/4, Loss: -0.3367
+2025-06-29 19:05:09 - INFO - Epoch 385/400, Batch 4/4, Loss: -0.2779
+2025-06-29 19:05:11 - INFO - Epoch 386/400, Batch 4/4, Loss: -0.2948
+2025-06-29 19:05:13 - INFO - Epoch 387/400, Batch 4/4, Loss: -0.4571
+2025-06-29 19:05:16 - INFO - Epoch 388/400, Batch 4/4, Loss: -0.4479
+2025-06-29 19:05:18 - INFO - Epoch 389/400, Batch 4/4, Loss: -0.2153
+2025-06-29 19:05:20 - INFO - Epoch 390/400, Batch 4/4, Loss: -0.2326
+2025-06-29 19:05:21 - INFO - Epoch 391/400, Batch 4/4, Loss: -0.2213
+2025-06-29 19:05:23 - INFO - Epoch 392/400, Batch 4/4, Loss: -0.4179
+2025-06-29 19:05:25 - INFO - Epoch 393/400, Batch 4/4, Loss: -0.0935
+2025-06-29 19:05:28 - INFO - Epoch 394/400, Batch 4/4, Loss: -0.3389
+2025-06-29 19:05:30 - INFO - Epoch 395/400, Batch 4/4, Loss: -0.1916
+2025-06-29 19:05:32 - INFO - Epoch 396/400, Batch 4/4, Loss: -0.2360
+2025-06-29 19:05:35 - INFO - Epoch 397/400, Batch 4/4, Loss: -0.3892
+2025-06-29 19:05:37 - INFO - Epoch 398/400, Batch 4/4, Loss: -0.3467
+2025-06-29 19:05:39 - INFO - Epoch 399/400, Batch 4/4, Loss: -0.2486
+2025-06-29 19:05:42 - INFO - Epoch 400/400, Batch 4/4, Loss: -0.3074
+2025-06-29 19:05:42 - INFO - Saved checkpoint at epoch 400 at ./result/VNet_Multi_V2/LA_16/Pth/model_epoch_400_checkpoint.pth
+2025-06-29 19:05:42 - INFO - Training complete!

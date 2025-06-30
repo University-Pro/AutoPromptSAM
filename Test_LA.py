@@ -33,11 +33,12 @@ from collections import OrderedDict
 # from networks.SAM3D_VNet_SSL_V13 import Network
 # from networks.SAM3D_VNet_SSL_V14 import Network
 # from networks.SAM3D_VNet_SSL_V14_1 import Network
-from networks.SAM3D_VNet_SSL_V14_2 import Network
+# from networks.SAM3D_VNet_SSL_V14_2 import Network
 
 # 其他网络
 # from networks.VNet import VNet
 # from networks.VNet_MultiOutput import VNet
+from networks.VNet_MultiOutput_V2 import VNet
 # from networks.Double_VNet import Network
 
 # 导入数据集
@@ -83,19 +84,6 @@ def latest_checkpoint(path):
 
 # 加载模型
 def load_model(model, model_path, device):
-    """
-    加载模型权重。优先加载 EMA 模型权重（如果存在）。
-    处理 'module.' 前缀（用于 DataParallel/DistributedDataParallel 包装的模型）。
-    并将模型设置为评估模式。
-
-    Args:
-        model (torch.nn.Module): 需要加载权重的模型实例。
-        model_path (str): .pth 权重文件的路径。
-        device (torch.device): 模型应该加载到的设备 (e.g., torch.device('cuda')).
-
-    Returns:
-        torch.nn.Module: 加载了权重的模型。
-    """
     try:
         # 加载完整的 checkpoint 字典
         # weights_only=True 是一个安全措施，如果确认来源可信且需要加载非 tensor 数据，可以设为 False
@@ -171,14 +159,6 @@ def getLargestCC(segmentation):
     largestCC = labels == np.argmax(np.bincount(labels.flat)[1:])+1  # 找到最大连通区域
     return largestCC
 
-# 用于解决一些错误
-# def getLargestCC(segmentation):
-#     labels = label(segmentation)
-#     if labels.max() == 0:  # 没有连通组件（全背景）
-#         return np.zeros_like(segmentation)  # 返回全0数组
-#     largestCC = labels == np.argmax(np.bincount(labels.flat)[1:]) + 1
-#     return largestCC.astype(np.uint8)
-
 # 计算所有测试案例的平均Dice系数
 def var_all_case(model, num_classes, patch_size=(112, 112, 80), stride_xy=18, stride_z=4, dataset_name="LA"):
     # 根据数据集名称，选择数据路径
@@ -232,12 +212,6 @@ def test_all_case(model_name, num_outputs, model, image_list, num_classes, patch
         if num_outputs > 1:  # 如果有多个输出解码器
             prediction_average, score_map_average = test_single_case_average_output(model, image, stride_xy, stride_z, patch_size, num_classes=num_classes)
 
-        # if nms:  # 如果需要使用NMS进行后处理
-        #     prediction = getLargestCC(prediction)  # 获取最大连通组件
-        #     if num_outputs > 1:
-        #         prediction_average = getLargestCC(prediction_average)
-
-        # 针对报错修改了下面的内容
         if nms:
             # 对主解码器的预测结果处理
             if np.sum(prediction) > 0:
@@ -353,10 +327,11 @@ def test_single_case_first_output(model, image, stride_xy, stride_z, patch_size,
 
                 with torch.no_grad():  # 不计算梯度
                     # y = model(test_patch)  # 模型推断
-                    y = model(test_patch) # 适用于Vnet_Multi
+                    y = model(test_patch)
                     # print(f'y0 shape: {y[0].shape}')
                     # print(f'y1 shape: {y[1].shape}')
 
+                    # 如果有多个输出，那么只用第一个
                     if len(y) > 1:
                         y = y[0]
 
@@ -543,8 +518,8 @@ if __name__ == '__main__':
     # model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
     # model = Network(in_channels=1).to(device=device) # V14_1
     # model = Network(in_channels=1).to(device=device) # V14_2
-    model = Network(in_channels=1).to(device=device) # V14_3
-    # model = VNet(n_channels=1,n_classes=2,normalization="batchnorm",has_dropout=True).to(device=device)
+    # model = Network(in_channels=1).to(device=device) # V14_3
+    model = VNet(n_channels=1,n_classes=2,normalization="batchnorm",has_dropout=True).to(device=device) # VNet系列
 
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")
