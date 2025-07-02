@@ -181,7 +181,7 @@ if __name__ == "__main__":
                        help="Base path for AMOS dataset")
     parser.add_argument("--num_classes", type=int, default=16, # 已修改
                        help="Number of classes for AMOS (15 organs + background)")
-    parser.add_argument("--patch_size", type=int, nargs=3, default=[80, 160, 160],  # 已修改
+    parser.add_argument("--patch_size", type=int, nargs=3, default=[160,160,80],  # 已修改
                        help="Input patch size (z, y, x)")
     args = parser.parse_args()
 
@@ -272,6 +272,7 @@ if __name__ == "__main__":
             logits, variance, features = model(images)
             # 计算总损失（包含不确定性正则项）
             total_loss = criterion(logits, variance, labels.squeeze(1))
+            logging.info(f'Batch {i_batch+1}/{len(train_loader)}, Loss: {total_loss.item():.4f}')
 
             # 聚合所有GPU的loss
             if args.multi_gpu:

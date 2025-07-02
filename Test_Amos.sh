@@ -1,7 +1,7 @@
 #!/bin/bash
 # 配置参数
-PTH_DIR="./result/VNet_Multi_V2/Amos_18/Pth"
-LOG_DIR="./result/VNet_Multi_V2/Amos_18/Test"
+PTH_DIR="./result/VNet_Multi_V2/Amos_204/Pth"
+LOG_DIR="./result/VNet_Multi_V2/Amos_204/Test"
 ROOT_PATH="./datasets/Amos"
 SCRIPT_NAME="Test_Amos.py"
 
@@ -35,6 +35,7 @@ for MODEL_PATH in "${PTH_DIR}"/model_epoch_*_checkpoint.pth; do
         --model_path "$MODEL_PATH" \
         --amos_data_path "$ROOT_PATH" \
         --output_dir "$LOG_DIR" \
+        --gpu 0 \
         --split test \
         --metrics_log "$LOG_FILE"; then
         echo "[成功] Epoch ${EPOCH}"

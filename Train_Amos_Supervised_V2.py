@@ -83,35 +83,16 @@ def latest_checkpoint(path):
 def load_model(model, model_path, device):
     state_dict = torch.load(model_path, map_location=device, weights_only=True)
     
-    # If loading a DataParallel model, remove `module.` prefix
     if any(key.startswith('module.') for key in state_dict.keys()):
         from collections import OrderedDict
         new_state_dict = OrderedDict()
         for k, v in state_dict.items():
-            new_state_dict[k[7:]] = v  # remove `module.`
+            new_state_dict[k[7:]] = v
         model.load_state_dict(new_state_dict)
     else:
         model.load_state_dict(state_dict)
     
     return model
-
-class UnifiedLoss_V1(nn.Module):
-    def __init__(self, lambda_reg=0.5):
-        super().__init__()
-        self.lambda_reg = lambda_reg  # 正则化项权重
-
-    def uncertainty_regularizer(self, ce_loss_per_pixel, variance):
-        variance = variance.squeeze(1)  # [B,H,W,D]
-        eps = 1e-6
-        variance = variance + eps
-        reg_term = (0.5 * ce_loss_per_pixel / variance) + 0.5 * torch.log(variance)
-        return reg_term.mean()
-
-    def forward(self, logits, variance, target):
-        ce_per_pixel = nn.CrossEntropyLoss(reduction='none')(logits, target)
-        seg_loss = ce_per_pixel.mean()
-        reg_loss = self.uncertainty_regularizer(ce_per_pixel.detach(), variance)
-        return seg_loss + self.lambda_reg * reg_loss
 
 class UnifiedLoss(nn.Module):
     def __init__(self, num_classes, lambda_reg=0.5, loss_weight=[0.4, 0.6]):
@@ -178,13 +159,13 @@ if __name__ == "__main__":
     parser.add_argument("--continue_train", action="store_true")
     parser.add_argument("--multi_gpu", action="store_true")
     parser.add_argument("--training_num", type=int, default=90)
-    # 数据集与模型参数 (专为AMOS定制)
+    # 数据集与模型参数
     parser.add_argument("--dataset_path", type=str, default='./datasets/AMOS',
                         help="Base path for AMOS dataset")
     parser.add_argument("--num_classes", type=int, default=16,
                         help="Number of classes for AMOS (15 organs + background)")
-    parser.add_argument("--patch_size", type=int, nargs=3, default=[80, 160, 160],
-                        help="Input patch size (z, y, x)")
+    parser.add_argument("--patch_size", type=int, nargs=3, default=[160,160,80],
+                        help="Input patch size (xyz)")
     
     args = parser.parse_args()
 
@@ -192,7 +173,7 @@ if __name__ == "__main__":
     setup_logging(args.log_path)
     logging.info(f"\n{'='*40} New Training Session Started {'='*40}")
         
-    start_time = time.time() # [新增日志] 记录训练开始时间
+    start_time = time.time()
 
     if args.multi_gpu:
         local_rank = int(os.environ['LOCAL_RANK'])
@@ -265,7 +246,7 @@ if __name__ == "__main__":
         logging.info("Starting training from scratch.")
 
     if args.multi_gpu:
-        model = DDP(model, device_ids=[local_rank], output_device=local_rank, find_unused_parameters=True) # find_unused_parameters=True 在某些模型下是必要的
+        model = DDP(model, device_ids=[local_rank], output_device=local_rank, find_unused_parameters=False) # find_unused_parameters=True 在某些模型下是必要的
         logging.info("Wrapped model with DistributedDataParallel (DDP).")
         
     criterion = UnifiedLoss(num_classes=args.num_classes, lambda_reg=0.3, loss_weight=[1, 1])
@@ -318,7 +299,7 @@ if __name__ == "__main__":
                     'Uncert': f'{variance.mean().item():.4f}'
                 })
         
-        # [修改/修正日志] 在每个epoch结束后，记录该epoch的平均loss
+        # 日志记录Loss
         avg_epoch_loss = epoch_loss / len(train_loader)
         if local_rank <= 0: # 仅主进程记录epoch日志和保存模型
             logging.info(f"Epoch {epoch+1}/{args.epochs} finished. Average Training Loss: {avg_epoch_loss:.4f}")
@@ -329,15 +310,8 @@ if __name__ == "__main__":
                 if not os.path.exists(save_dir):
                     os.makedirs(save_dir)
                 
-                model_state = model.module.state_dict() if args.multi_gpu else model.state_dict()
                 save_path = os.path.join(save_dir, f'model_epoch_{epoch+1}_checkpoint.pth')
-                
-                torch.save({
-                    'epoch': epoch + 1,
-                    'model_state_dict': model_state,
-                    'optimizer_state_dict': optimizer.state_dict(),
-                    'loss': avg_epoch_loss,
-                }, save_path)
+                torch.save(model.module.state_dict() if args.multi_gpu else model.state_dict(), save_path)
                 logging.info(f"Saved checkpoint for epoch {epoch+1} to {save_path}")
 
     # ---------------- 训练结束 ----------------

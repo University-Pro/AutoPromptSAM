@@ -1,7 +1,8 @@
 """
 Amos数据集dataloader
-训练数据240
+读取的数据BCHWD
 """
+
 import numpy as np
 import os
 from tqdm import tqdm
@@ -75,6 +76,10 @@ class AmosDataset(Dataset):
         image = np.load(img_path)
         label = np.load(label_path)
         
+        # 维度转换 DHW -> HWD，保持和LA数据集一致
+        image = np.transpose(image, (1, 2, 0))  # (D,H,W) -> (H,W,D)
+        label = np.transpose(label, (1, 2, 0))  # (D,H,W) -> (H,W,D)
+        
         # 归一化处理
         image = np.clip(image, -75, 275)
         image = (image - image.min()) / (image.max() - image.min() + 1e-8)
@@ -120,7 +125,7 @@ def analyze_dataset(split: str, training_num: int = None):
         
         print(f"\nAMOS {split.upper()} 数据集分析结果:")
         print(f"- 总样本数: {len(dataset)}")
-        print(f"- 图像尺寸: {sample['image'].shape}")
+        print(f"- 图像尺寸: {sample['image'].shape[1:]}")  # 忽略通道维度
         print(f"- 标签尺寸: {sample['label'].shape}")
         print(f"- 像素值范围: [{sample['image'].min():.2f}, {sample['image'].max():.2f}]")
         print(f"- 唯一标签值: {np.unique(sample['label'])}")

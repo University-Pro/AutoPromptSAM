@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 h5_to_nii.py
 
@@ -27,17 +25,7 @@ def convert_h5_to_nii(base_dir: str,
                       split: str = 'train',
                       num: int = None,
                       output_dir: str = None):
-    """
-    将 H5 格式的 3D 图像和标签保存为 nii.gz。
-
-    参数:
-        base_dir:     根目录，包含 train.list、test.list、data/ 结构
-        split:        'train' 或 'test'，对应 base_dir/train.list
-        num:          转换的样本数，None 表示全部
-        output_dir:   输出主目录，默认 base_dir/nii_data/<split>
-    返回:
-        最终输出目录路径
-    """
+                      
     # 准备输出目录
     if output_dir is None:
         output_dir = os.path.join(base_dir, 'nii_data', split)

@@ -254,10 +254,12 @@ class VNet(nn.Module):
 if __name__ == '__main__':
     # 测试修改后的网络
     # x = torch.randn(1, 1, 112, 112, 80) # BCHWD
-    x = torch.randn(1,1,80,160,160)
+    # x = torch.randn(1,1,80,160,160)
+    x = torch.randn(1,1,160,160,80)
+    
     print(f'Input shape: {x.shape}')
     
-    model = VNet(n_channels=1, n_classes=2, normalization='batchnorm', has_dropout=True)
+    model = VNet(n_channels=1, n_classes=16, normalization='batchnorm', has_dropout=True)
     
     logits, variance, features = model(x)
     print(f'Logits shape: {logits.shape}')

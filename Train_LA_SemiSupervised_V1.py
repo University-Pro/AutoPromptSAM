@@ -37,21 +37,6 @@ from utils.ImageAugment import TwoStreamBatchSampler_LA
 from dataloader.DataLoader_Amos import AmosDataset
 
 # 导入网络框架
-# from networks.VNet import VNet
-# from networks.SAM3D_VNet_SSL import Network
-# from networks.SAM3D_VNet_SSL_V1 import Network
-# from networks.SAM3D_VNet_SSL_V2 import Network
-# from networks.SAM3D_VNet_SSL_V3 import Network
-# from networks.SAM3D_VNet_SSL_V4 import Network
-# from networks.SAM3D_VNet_SSL_V7 import Network
-# from networks.SAM3D_VNet_SSL_V8 import Network
-# from networks.SAM3D_VNet_SSL_V9 import Network
-# from networks.SAM3D_VNet_SSL_V10 import Network
-# from networks.SAM3D_VNet_SSL_V11 import Network
-# from networks.SAM3D_VNet_SSL_V12 import Network
-# from networks.SAM3D_VNet_SSL_V13 import Network
-# from networks.SAM3D_VNet_SSL_V14 import Network
-# from networks.SAM3D_VNet_SSL_V14_1 import Network
 from networks.SAM3D_VNet_SSL_V14_2 import Network
 
 # 导入其他网络

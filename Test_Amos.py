@@ -119,7 +119,6 @@ def calculate_metrics(pred: np.ndarray, target: np.ndarray, num_classes: int) ->
     
     return metrics
 
-# --- 主执行块 ---
 if __name__ == '__main__':
     # ==================== 参数解析 ====================
     parser = argparse.ArgumentParser(description="在Amos数据集上测试VNet模型")
@@ -172,7 +171,8 @@ if __name__ == '__main__':
     try:
         amos_config = AmosConfig(
             save_dir=args.amos_data_path,
-            patch_size=(80, 160, 160)  # 全尺寸设置
+            # patch_size=(80, 160, 160)  # 全尺寸设置
+            patch_size=(160,160,80)  # 全尺寸设置
         )
         patch_size = amos_config.patch_size
         num_classes = amos_config.num_classes
@@ -285,7 +285,7 @@ if __name__ == '__main__':
                     logging.info(
                         f"案例 {case_id} | "
                         f"Dice: {dice:.4f} | "
-                        f"HD95: {hd if not np.isnan(hd) else 'NaN':.2f} | "
+                        f"HD95: {hd:.2f}" if not np.isnan(hd) else "HD95: NaN" + " | "
                         f"预测形状: {pred.shape} | "
                         f"类别分布: {np.unique(pred, return_counts=True)[1].tolist()}"
                     )
