@@ -386,9 +386,12 @@ class DecoupledUncertaintyGenerator(nn.Module):
         all_aleatoric_vars = []
 
         for _ in range(self.num_mc_samples):
-            # 假设你的VNetAleatoric返回两个值
-            logits, log_aleatoric_var = self.network(x)
             
+            # 设置VNet输出，第一个为输出结果，第二个为置信度，其他的不管
+            vnet_output = self.network(x)
+            logits = vnet_output[0]
+            log_aleatoric_var = vnet_output[1]
+
             # 1. 收集softmax输出，用于计算模型不确定性
             softmax_out = F.softmax(logits, dim=1)
             all_softmax_outputs.append(softmax_out)

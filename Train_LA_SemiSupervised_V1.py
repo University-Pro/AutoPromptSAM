@@ -37,7 +37,8 @@ from utils.ImageAugment import TwoStreamBatchSampler_LA
 from dataloader.DataLoader_Amos import AmosDataset
 
 # 导入网络框架
-from networks.SAM3D_VNet_SSL_V14_2 import Network
+# from networks.SAM3D_VNet_SSL_V14_2 import Network
+from networks.SAM3D_VNet_SSL_V15 import Network
 
 # 导入其他网络
 # from networks.Double_VNet import Network
@@ -234,17 +235,8 @@ if __name__ == "__main__":
     train_loader = DataLoader(full_dataset, batch_sampler=batch_sampler, num_workers=8, pin_memory=True)
 
     # ==================== 模型初始化 ====================
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V7
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V8
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=8,num_points_per_class=400).to(device=device) # V9
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # V10
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # DoubleVNet
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V11
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_slice=5).to(device=device) # V12
-    # model = Network(pretrain_weight_path="result/SAM3D_VNet_SSL/LA_16_Supervised/Pth/best.pth",encoder_depth=4,num_points_per_class=400).to(device=device) # V13
-    # model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
-    # model = Network(in_channels=1).to(device=device) # V14_1
-    model = Network(in_channels=1).to(device=device) # V14_2
+    # model = Network(in_channels=1).to(device=device) # V14_2
+    model = Network(in_channels=1,num_classes=2).to(device=device) # V15
     
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:

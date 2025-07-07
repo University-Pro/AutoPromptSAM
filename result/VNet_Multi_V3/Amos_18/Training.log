@@ -1,0 +1,702 @@
+2025-07-04 14:11:14 - INFO - Logging is set up.
+2025-07-04 14:11:14 - INFO - Logging is set up.
+2025-07-04 14:11:14 - INFO - 
+======================================== New Training Session Started ========================================
+2025-07-04 14:11:14 - INFO - 
+======================================== New Training Session Started ========================================
+2025-07-04 14:11:14 - INFO - Initialized distributed training on GPU 0. World size: 2
+2025-07-04 14:11:14 - INFO - Training configuration:
+{
+  "seed": 42,
+  "epochs": 600,
+  "batch_size": 3,
+  "learning_rate": 0.0001,
+  "log_path": "./result/VNet_Multi_V3/Amos_18/Training.log",
+  "pth_path": "./result/VNet_Multi_V3/Amos_18/Pth",
+  "tensorboard_path": "./result/VNet_Multi_V3/Amos_18/Train",
+  "continue_train": false,
+  "multi_gpu": true,
+  "training_num": 18,
+  "dataset_path": "./datasets/AMOS",
+  "num_classes": 16,
+  "patch_size": [
+    160,
+    160,
+    80
+  ]
+}
+2025-07-04 14:11:14 - INFO - Creating new TensorBoard log directory: ./result/VNet_Multi_V3/Amos_18/Train/20250704-141114
+2025-07-04 14:11:14 - INFO - Initializing AMOS dataset...
+2025-07-04 14:11:15 - INFO - Initialized distributed training on GPU 1. World size: 2
+2025-07-04 14:11:15 - INFO - Training configuration:
+{
+  "seed": 42,
+  "epochs": 600,
+  "batch_size": 3,
+  "learning_rate": 0.0001,
+  "log_path": "./result/VNet_Multi_V3/Amos_18/Training.log",
+  "pth_path": "./result/VNet_Multi_V3/Amos_18/Pth",
+  "tensorboard_path": "./result/VNet_Multi_V3/Amos_18/Train",
+  "continue_train": false,
+  "multi_gpu": true,
+  "training_num": 18,
+  "dataset_path": "./datasets/AMOS",
+  "num_classes": 16,
+  "patch_size": [
+    160,
+    160,
+    80
+  ]
+}
+2025-07-04 14:11:15 - INFO - Initializing AMOS dataset...
+2025-07-04 14:11:16 - INFO - Successfully loaded 18 training samples.
+2025-07-04 14:11:16 - INFO - Successfully loaded 18 training samples.
+2025-07-04 14:11:16 - INFO - DataLoader created with batch size: 3, num_workers: 24, shuffle: False.
+2025-07-04 14:11:16 - INFO - Initializing VNet model...
+2025-07-04 14:11:16 - INFO - DataLoader created with batch size: 3, num_workers: 24, shuffle: False.
+2025-07-04 14:11:16 - INFO - Initializing VNet model...
+2025-07-04 14:11:16 - INFO - Model VNet created with 16 classes and batch normalization.
+2025-07-04 14:11:16 - INFO - Model VNet created with 16 classes and batch normalization.
+2025-07-04 14:11:16 - INFO - Starting training from scratch.
+2025-07-04 14:11:16 - INFO - Starting training from scratch.
+2025-07-04 14:11:17 - INFO - Wrapped model with DistributedDataParallel (DDP).
+2025-07-04 14:11:17 - INFO - Wrapped model with DistributedDataParallel (DDP).
+2025-07-04 14:11:17 - INFO - Using loss function: UnifiedLoss with parameters: num_classes=16, lambda_reg=0.3, loss_weight=[1,1]
+2025-07-04 14:11:17 - INFO - Using loss function: UnifiedLoss with parameters: num_classes=16, lambda_reg=0.3, loss_weight=[1,1]
+2025-07-04 14:11:17 - INFO - Optimizer: AdamW with learning rate: 0.0001, weight_decay: 0.01
+2025-07-04 14:11:17 - INFO - Starting model training from epoch 1 to 600...
+2025-07-04 14:11:17 - INFO - Optimizer: AdamW with learning rate: 0.0001, weight_decay: 0.01
+2025-07-04 14:11:17 - INFO - Starting model training from epoch 1 to 600...
+2025-07-04 14:11:22 - INFO - Epoch 1/600 finished. Average Training Loss: 4.3708
+2025-07-04 14:11:24 - INFO - Epoch 2/600 finished. Average Training Loss: 4.4979
+2025-07-04 14:11:27 - INFO - Epoch 3/600 finished. Average Training Loss: 4.3873
+2025-07-04 14:11:29 - INFO - Epoch 4/600 finished. Average Training Loss: 4.3856
+2025-07-04 14:11:32 - INFO - Epoch 5/600 finished. Average Training Loss: 4.4648
+2025-07-04 14:11:34 - INFO - Epoch 6/600 finished. Average Training Loss: 4.3290
+2025-07-04 14:11:36 - INFO - Epoch 7/600 finished. Average Training Loss: 4.2184
+2025-07-04 14:11:39 - INFO - Epoch 8/600 finished. Average Training Loss: 4.2962
+2025-07-04 14:11:41 - INFO - Epoch 9/600 finished. Average Training Loss: 4.1876
+2025-07-04 14:11:44 - INFO - Epoch 10/600 finished. Average Training Loss: 4.1367
+2025-07-04 14:11:46 - INFO - Epoch 11/600 finished. Average Training Loss: 4.1660
+2025-07-04 14:11:49 - INFO - Epoch 12/600 finished. Average Training Loss: 4.0968
+2025-07-04 14:11:51 - INFO - Epoch 13/600 finished. Average Training Loss: 4.0687
+2025-07-04 14:11:54 - INFO - Epoch 14/600 finished. Average Training Loss: 4.0982
+2025-07-04 14:11:56 - INFO - Epoch 15/600 finished. Average Training Loss: 4.0524
+2025-07-04 14:11:59 - INFO - Epoch 16/600 finished. Average Training Loss: 4.0247
+2025-07-04 14:12:01 - INFO - Epoch 17/600 finished. Average Training Loss: 3.9897
+2025-07-04 14:12:04 - INFO - Epoch 18/600 finished. Average Training Loss: 3.9556
+2025-07-04 14:12:06 - INFO - Epoch 19/600 finished. Average Training Loss: 3.9372
+2025-07-04 14:12:09 - INFO - Epoch 20/600 finished. Average Training Loss: 3.8835
+2025-07-04 14:12:09 - INFO - Saved checkpoint for epoch 20 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_20_checkpoint.pth
+2025-07-04 14:12:11 - INFO - Epoch 21/600 finished. Average Training Loss: 4.0139
+2025-07-04 14:12:14 - INFO - Epoch 22/600 finished. Average Training Loss: 4.0159
+2025-07-04 14:12:16 - INFO - Epoch 23/600 finished. Average Training Loss: 3.9482
+2025-07-04 14:12:19 - INFO - Epoch 24/600 finished. Average Training Loss: 3.8466
+2025-07-04 14:12:21 - INFO - Epoch 25/600 finished. Average Training Loss: 4.0091
+2025-07-04 14:12:24 - INFO - Epoch 26/600 finished. Average Training Loss: 3.9527
+2025-07-04 14:12:26 - INFO - Epoch 27/600 finished. Average Training Loss: 3.8659
+2025-07-04 14:12:29 - INFO - Epoch 28/600 finished. Average Training Loss: 3.9338
+2025-07-04 14:12:31 - INFO - Epoch 29/600 finished. Average Training Loss: 3.8774
+2025-07-04 14:12:36 - INFO - Epoch 30/600 finished. Average Training Loss: 3.8846
+2025-07-04 14:12:40 - INFO - Epoch 31/600 finished. Average Training Loss: 3.8198
+2025-07-04 14:12:45 - INFO - Epoch 32/600 finished. Average Training Loss: 3.8545
+2025-07-04 14:12:49 - INFO - Epoch 33/600 finished. Average Training Loss: 3.8078
+2025-07-04 14:12:54 - INFO - Epoch 34/600 finished. Average Training Loss: 3.9060
+2025-07-04 14:12:59 - INFO - Epoch 35/600 finished. Average Training Loss: 3.9270
+2025-07-04 14:13:03 - INFO - Epoch 36/600 finished. Average Training Loss: 3.8122
+2025-07-04 14:13:08 - INFO - Epoch 37/600 finished. Average Training Loss: 3.8325
+2025-07-04 14:13:13 - INFO - Epoch 38/600 finished. Average Training Loss: 3.8284
+2025-07-04 14:13:17 - INFO - Epoch 39/600 finished. Average Training Loss: 3.7403
+2025-07-04 14:13:22 - INFO - Epoch 40/600 finished. Average Training Loss: 3.6886
+2025-07-04 14:13:22 - INFO - Saved checkpoint for epoch 40 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_40_checkpoint.pth
+2025-07-04 14:13:26 - INFO - Epoch 41/600 finished. Average Training Loss: 3.9087
+2025-07-04 14:13:31 - INFO - Epoch 42/600 finished. Average Training Loss: 3.8160
+2025-07-04 14:13:36 - INFO - Epoch 43/600 finished. Average Training Loss: 3.8502
+2025-07-04 14:13:41 - INFO - Epoch 44/600 finished. Average Training Loss: 3.9011
+2025-07-04 14:13:45 - INFO - Epoch 45/600 finished. Average Training Loss: 3.8330
+2025-07-04 14:13:50 - INFO - Epoch 46/600 finished. Average Training Loss: 3.6181
+2025-07-04 14:13:55 - INFO - Epoch 47/600 finished. Average Training Loss: 3.7031
+2025-07-04 14:13:59 - INFO - Epoch 48/600 finished. Average Training Loss: 3.7598
+2025-07-04 14:14:04 - INFO - Epoch 49/600 finished. Average Training Loss: 3.8407
+2025-07-04 14:14:08 - INFO - Epoch 50/600 finished. Average Training Loss: 3.6886
+2025-07-04 14:14:13 - INFO - Epoch 51/600 finished. Average Training Loss: 3.6642
+2025-07-04 14:14:18 - INFO - Epoch 52/600 finished. Average Training Loss: 3.6758
+2025-07-04 14:14:23 - INFO - Epoch 53/600 finished. Average Training Loss: 3.7589
+2025-07-04 14:14:27 - INFO - Epoch 54/600 finished. Average Training Loss: 3.8250
+2025-07-04 14:14:32 - INFO - Epoch 55/600 finished. Average Training Loss: 3.6891
+2025-07-04 14:14:37 - INFO - Epoch 56/600 finished. Average Training Loss: 3.6803
+2025-07-04 14:14:41 - INFO - Epoch 57/600 finished. Average Training Loss: 3.7477
+2025-07-04 14:14:46 - INFO - Epoch 58/600 finished. Average Training Loss: 3.7097
+2025-07-04 14:14:50 - INFO - Epoch 59/600 finished. Average Training Loss: 3.7162
+2025-07-04 14:14:55 - INFO - Epoch 60/600 finished. Average Training Loss: 3.6773
+2025-07-04 14:14:55 - INFO - Saved checkpoint for epoch 60 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_60_checkpoint.pth
+2025-07-04 14:15:00 - INFO - Epoch 61/600 finished. Average Training Loss: 3.6993
+2025-07-04 14:15:05 - INFO - Epoch 62/600 finished. Average Training Loss: 3.7390
+2025-07-04 14:15:09 - INFO - Epoch 63/600 finished. Average Training Loss: 3.6890
+2025-07-04 14:15:14 - INFO - Epoch 64/600 finished. Average Training Loss: 3.6916
+2025-07-04 14:15:19 - INFO - Epoch 65/600 finished. Average Training Loss: 3.7003
+2025-07-04 14:15:24 - INFO - Epoch 66/600 finished. Average Training Loss: 3.7111
+2025-07-04 14:15:28 - INFO - Epoch 67/600 finished. Average Training Loss: 3.6491
+2025-07-04 14:15:33 - INFO - Epoch 68/600 finished. Average Training Loss: 3.6305
+2025-07-04 14:15:38 - INFO - Epoch 69/600 finished. Average Training Loss: 3.6456
+2025-07-04 14:15:43 - INFO - Epoch 70/600 finished. Average Training Loss: 3.6752
+2025-07-04 14:15:48 - INFO - Epoch 71/600 finished. Average Training Loss: 3.5631
+2025-07-04 14:15:52 - INFO - Epoch 72/600 finished. Average Training Loss: 3.5680
+2025-07-04 14:15:58 - INFO - Epoch 73/600 finished. Average Training Loss: 3.7535
+2025-07-04 14:16:03 - INFO - Epoch 74/600 finished. Average Training Loss: 3.6897
+2025-07-04 14:16:08 - INFO - Epoch 75/600 finished. Average Training Loss: 3.4677
+2025-07-04 14:16:12 - INFO - Epoch 76/600 finished. Average Training Loss: 3.6619
+2025-07-04 14:16:17 - INFO - Epoch 77/600 finished. Average Training Loss: 3.5698
+2025-07-04 14:16:23 - INFO - Epoch 78/600 finished. Average Training Loss: 3.7101
+2025-07-04 14:16:28 - INFO - Epoch 79/600 finished. Average Training Loss: 3.5605
+2025-07-04 14:16:33 - INFO - Epoch 80/600 finished. Average Training Loss: 3.7278
+2025-07-04 14:16:33 - INFO - Saved checkpoint for epoch 80 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_80_checkpoint.pth
+2025-07-04 14:16:37 - INFO - Epoch 81/600 finished. Average Training Loss: 3.5250
+2025-07-04 14:16:43 - INFO - Epoch 82/600 finished. Average Training Loss: 3.5214
+2025-07-04 14:16:49 - INFO - Epoch 83/600 finished. Average Training Loss: 3.6347
+2025-07-04 14:16:53 - INFO - Epoch 84/600 finished. Average Training Loss: 3.6601
+2025-07-04 14:16:58 - INFO - Epoch 85/600 finished. Average Training Loss: 3.4784
+2025-07-04 14:17:03 - INFO - Epoch 86/600 finished. Average Training Loss: 3.6771
+2025-07-04 14:17:09 - INFO - Epoch 87/600 finished. Average Training Loss: 3.5849
+2025-07-04 14:17:13 - INFO - Epoch 88/600 finished. Average Training Loss: 3.6696
+2025-07-04 14:17:18 - INFO - Epoch 89/600 finished. Average Training Loss: 3.6024
+2025-07-04 14:17:23 - INFO - Epoch 90/600 finished. Average Training Loss: 3.5684
+2025-07-04 14:17:28 - INFO - Epoch 91/600 finished. Average Training Loss: 3.4317
+2025-07-04 14:17:34 - INFO - Epoch 92/600 finished. Average Training Loss: 3.4937
+2025-07-04 14:17:39 - INFO - Epoch 93/600 finished. Average Training Loss: 3.4864
+2025-07-04 14:17:44 - INFO - Epoch 94/600 finished. Average Training Loss: 3.4541
+2025-07-04 14:17:49 - INFO - Epoch 95/600 finished. Average Training Loss: 3.4847
+2025-07-04 14:17:54 - INFO - Epoch 96/600 finished. Average Training Loss: 3.5447
+2025-07-04 14:17:59 - INFO - Epoch 97/600 finished. Average Training Loss: 3.5841
+2025-07-04 14:18:04 - INFO - Epoch 98/600 finished. Average Training Loss: 3.6589
+2025-07-04 14:18:09 - INFO - Epoch 99/600 finished. Average Training Loss: 3.3805
+2025-07-04 14:18:14 - INFO - Epoch 100/600 finished. Average Training Loss: 3.7637
+2025-07-04 14:18:14 - INFO - Saved checkpoint for epoch 100 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_100_checkpoint.pth
+2025-07-04 14:18:19 - INFO - Epoch 101/600 finished. Average Training Loss: 3.5471
+2025-07-04 14:18:24 - INFO - Epoch 102/600 finished. Average Training Loss: 3.6601
+2025-07-04 14:18:29 - INFO - Epoch 103/600 finished. Average Training Loss: 3.5619
+2025-07-04 14:18:34 - INFO - Epoch 104/600 finished. Average Training Loss: 3.5757
+2025-07-04 14:18:40 - INFO - Epoch 105/600 finished. Average Training Loss: 3.5508
+2025-07-04 14:18:45 - INFO - Epoch 106/600 finished. Average Training Loss: 3.4640
+2025-07-04 14:18:50 - INFO - Epoch 107/600 finished. Average Training Loss: 3.6007
+2025-07-04 14:18:55 - INFO - Epoch 108/600 finished. Average Training Loss: 3.4417
+2025-07-04 14:19:00 - INFO - Epoch 109/600 finished. Average Training Loss: 3.5254
+2025-07-04 14:19:05 - INFO - Epoch 110/600 finished. Average Training Loss: 3.6005
+2025-07-04 14:19:10 - INFO - Epoch 111/600 finished. Average Training Loss: 3.6295
+2025-07-04 14:19:15 - INFO - Epoch 112/600 finished. Average Training Loss: 3.4060
+2025-07-04 14:19:20 - INFO - Epoch 113/600 finished. Average Training Loss: 3.4585
+2025-07-04 14:19:26 - INFO - Epoch 114/600 finished. Average Training Loss: 3.5300
+2025-07-04 14:19:31 - INFO - Epoch 115/600 finished. Average Training Loss: 3.5108
+2025-07-04 14:19:36 - INFO - Epoch 116/600 finished. Average Training Loss: 3.3838
+2025-07-04 14:19:41 - INFO - Epoch 117/600 finished. Average Training Loss: 3.6091
+2025-07-04 14:19:46 - INFO - Epoch 118/600 finished. Average Training Loss: 3.5335
+2025-07-04 14:19:52 - INFO - Epoch 119/600 finished. Average Training Loss: 3.4447
+2025-07-04 14:19:56 - INFO - Epoch 120/600 finished. Average Training Loss: 3.5027
+2025-07-04 14:19:57 - INFO - Saved checkpoint for epoch 120 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_120_checkpoint.pth
+2025-07-04 14:20:01 - INFO - Epoch 121/600 finished. Average Training Loss: 3.4217
+2025-07-04 14:20:07 - INFO - Epoch 122/600 finished. Average Training Loss: 3.4488
+2025-07-04 14:20:12 - INFO - Epoch 123/600 finished. Average Training Loss: 3.4703
+2025-07-04 14:20:17 - INFO - Epoch 124/600 finished. Average Training Loss: 3.5322
+2025-07-04 14:20:21 - INFO - Epoch 125/600 finished. Average Training Loss: 3.4435
+2025-07-04 14:20:26 - INFO - Epoch 126/600 finished. Average Training Loss: 3.4174
+2025-07-04 14:20:32 - INFO - Epoch 127/600 finished. Average Training Loss: 3.5541
+2025-07-04 14:20:37 - INFO - Epoch 128/600 finished. Average Training Loss: 3.3861
+2025-07-04 14:20:41 - INFO - Epoch 129/600 finished. Average Training Loss: 3.3948
+2025-07-04 14:20:46 - INFO - Epoch 130/600 finished. Average Training Loss: 3.4967
+2025-07-04 14:20:52 - INFO - Epoch 131/600 finished. Average Training Loss: 3.4548
+2025-07-04 14:20:57 - INFO - Epoch 132/600 finished. Average Training Loss: 3.4311
+2025-07-04 14:21:02 - INFO - Epoch 133/600 finished. Average Training Loss: 3.3590
+2025-07-04 14:21:06 - INFO - Epoch 134/600 finished. Average Training Loss: 3.4154
+2025-07-04 14:21:12 - INFO - Epoch 135/600 finished. Average Training Loss: 3.3214
+2025-07-04 14:21:18 - INFO - Epoch 136/600 finished. Average Training Loss: 3.2962
+2025-07-04 14:21:22 - INFO - Epoch 137/600 finished. Average Training Loss: 3.3788
+2025-07-04 14:21:27 - INFO - Epoch 138/600 finished. Average Training Loss: 3.2584
+2025-07-04 14:21:32 - INFO - Epoch 139/600 finished. Average Training Loss: 3.2372
+2025-07-04 14:21:38 - INFO - Epoch 140/600 finished. Average Training Loss: 3.2743
+2025-07-04 14:21:38 - INFO - Saved checkpoint for epoch 140 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_140_checkpoint.pth
+2025-07-04 14:21:43 - INFO - Epoch 141/600 finished. Average Training Loss: 3.4187
+2025-07-04 14:21:48 - INFO - Epoch 142/600 finished. Average Training Loss: 3.2857
+2025-07-04 14:21:53 - INFO - Epoch 143/600 finished. Average Training Loss: 3.2917
+2025-07-04 14:21:58 - INFO - Epoch 144/600 finished. Average Training Loss: 3.3741
+2025-07-04 14:22:04 - INFO - Epoch 145/600 finished. Average Training Loss: 3.3862
+2025-07-04 14:22:08 - INFO - Epoch 146/600 finished. Average Training Loss: 3.3025
+2025-07-04 14:22:13 - INFO - Epoch 147/600 finished. Average Training Loss: 3.4347
+2025-07-04 14:22:18 - INFO - Epoch 148/600 finished. Average Training Loss: 3.4435
+2025-07-04 14:22:24 - INFO - Epoch 149/600 finished. Average Training Loss: 3.2199
+2025-07-04 14:22:28 - INFO - Epoch 150/600 finished. Average Training Loss: 3.2576
+2025-07-04 14:22:33 - INFO - Epoch 151/600 finished. Average Training Loss: 3.3972
+2025-07-04 14:22:38 - INFO - Epoch 152/600 finished. Average Training Loss: 3.4215
+2025-07-04 14:22:43 - INFO - Epoch 153/600 finished. Average Training Loss: 3.4382
+2025-07-04 14:22:49 - INFO - Epoch 154/600 finished. Average Training Loss: 3.1637
+2025-07-04 14:22:54 - INFO - Epoch 155/600 finished. Average Training Loss: 3.2907
+2025-07-04 14:22:59 - INFO - Epoch 156/600 finished. Average Training Loss: 3.4222
+2025-07-04 14:23:04 - INFO - Epoch 157/600 finished. Average Training Loss: 3.3802
+2025-07-04 14:23:10 - INFO - Epoch 158/600 finished. Average Training Loss: 3.1186
+2025-07-04 14:23:14 - INFO - Epoch 159/600 finished. Average Training Loss: 3.3738
+2025-07-04 14:23:19 - INFO - Epoch 160/600 finished. Average Training Loss: 3.2042
+2025-07-04 14:23:19 - INFO - Saved checkpoint for epoch 160 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_160_checkpoint.pth
+2025-07-04 14:23:24 - INFO - Epoch 161/600 finished. Average Training Loss: 3.2893
+2025-07-04 14:23:29 - INFO - Epoch 162/600 finished. Average Training Loss: 3.1407
+2025-07-04 14:23:35 - INFO - Epoch 163/600 finished. Average Training Loss: 3.2782
+2025-07-04 14:23:39 - INFO - Epoch 164/600 finished. Average Training Loss: 3.2217
+2025-07-04 14:23:44 - INFO - Epoch 165/600 finished. Average Training Loss: 3.4630
+2025-07-04 14:23:49 - INFO - Epoch 166/600 finished. Average Training Loss: 3.3228
+2025-07-04 14:23:55 - INFO - Epoch 167/600 finished. Average Training Loss: 3.2536
+2025-07-04 14:24:00 - INFO - Epoch 168/600 finished. Average Training Loss: 3.3038
+2025-07-04 14:24:05 - INFO - Epoch 169/600 finished. Average Training Loss: 3.2578
+2025-07-04 14:24:10 - INFO - Epoch 170/600 finished. Average Training Loss: 3.1756
+2025-07-04 14:24:15 - INFO - Epoch 171/600 finished. Average Training Loss: 3.2401
+2025-07-04 14:24:21 - INFO - Epoch 172/600 finished. Average Training Loss: 3.4012
+2025-07-04 14:24:25 - INFO - Epoch 173/600 finished. Average Training Loss: 3.3584
+2025-07-04 14:24:30 - INFO - Epoch 174/600 finished. Average Training Loss: 3.2771
+2025-07-04 14:24:35 - INFO - Epoch 175/600 finished. Average Training Loss: 3.0924
+2025-07-04 14:24:40 - INFO - Epoch 176/600 finished. Average Training Loss: 3.0123
+2025-07-04 14:24:46 - INFO - Epoch 177/600 finished. Average Training Loss: 3.2953
+2025-07-04 14:24:51 - INFO - Epoch 178/600 finished. Average Training Loss: 3.0726
+2025-07-04 14:24:56 - INFO - Epoch 179/600 finished. Average Training Loss: 3.3306
+2025-07-04 14:25:01 - INFO - Epoch 180/600 finished. Average Training Loss: 3.0346
+2025-07-04 14:25:01 - INFO - Saved checkpoint for epoch 180 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_180_checkpoint.pth
+2025-07-04 14:25:06 - INFO - Epoch 181/600 finished. Average Training Loss: 3.0854
+2025-07-04 14:25:12 - INFO - Epoch 182/600 finished. Average Training Loss: 3.1863
+2025-07-04 14:25:17 - INFO - Epoch 183/600 finished. Average Training Loss: 2.9993
+2025-07-04 14:25:22 - INFO - Epoch 184/600 finished. Average Training Loss: 2.9941
+2025-07-04 14:25:27 - INFO - Epoch 185/600 finished. Average Training Loss: 3.1184
+2025-07-04 14:25:32 - INFO - Epoch 186/600 finished. Average Training Loss: 3.0145
+2025-07-04 14:25:37 - INFO - Epoch 187/600 finished. Average Training Loss: 3.2238
+2025-07-04 14:25:42 - INFO - Epoch 188/600 finished. Average Training Loss: 3.0061
+2025-07-04 14:25:46 - INFO - Epoch 189/600 finished. Average Training Loss: 3.2473
+2025-07-04 14:25:52 - INFO - Epoch 190/600 finished. Average Training Loss: 3.2117
+2025-07-04 14:25:57 - INFO - Epoch 191/600 finished. Average Training Loss: 3.1695
+2025-07-04 14:26:01 - INFO - Epoch 192/600 finished. Average Training Loss: 3.1765
+2025-07-04 14:26:06 - INFO - Epoch 193/600 finished. Average Training Loss: 3.0836
+2025-07-04 14:26:11 - INFO - Epoch 194/600 finished. Average Training Loss: 3.0137
+2025-07-04 14:26:17 - INFO - Epoch 195/600 finished. Average Training Loss: 3.0703
+2025-07-04 14:26:22 - INFO - Epoch 196/600 finished. Average Training Loss: 2.9923
+2025-07-04 14:26:27 - INFO - Epoch 197/600 finished. Average Training Loss: 2.9669
+2025-07-04 14:26:32 - INFO - Epoch 198/600 finished. Average Training Loss: 2.8449
+2025-07-04 14:26:37 - INFO - Epoch 199/600 finished. Average Training Loss: 3.0156
+2025-07-04 14:26:43 - INFO - Epoch 200/600 finished. Average Training Loss: 3.0804
+2025-07-04 14:26:43 - INFO - Saved checkpoint for epoch 200 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_200_checkpoint.pth
+2025-07-04 14:26:47 - INFO - Epoch 201/600 finished. Average Training Loss: 2.9454
+2025-07-04 14:26:52 - INFO - Epoch 202/600 finished. Average Training Loss: 3.0125
+2025-07-04 14:26:57 - INFO - Epoch 203/600 finished. Average Training Loss: 3.2213
+2025-07-04 14:27:03 - INFO - Epoch 204/600 finished. Average Training Loss: 2.9792
+2025-07-04 14:27:08 - INFO - Epoch 205/600 finished. Average Training Loss: 2.9929
+2025-07-04 14:27:12 - INFO - Epoch 206/600 finished. Average Training Loss: 2.9706
+2025-07-04 14:27:17 - INFO - Epoch 207/600 finished. Average Training Loss: 2.8674
+2025-07-04 14:27:23 - INFO - Epoch 208/600 finished. Average Training Loss: 3.3230
+2025-07-04 14:27:28 - INFO - Epoch 209/600 finished. Average Training Loss: 3.1139
+2025-07-04 14:27:33 - INFO - Epoch 210/600 finished. Average Training Loss: 2.9334
+2025-07-04 14:27:38 - INFO - Epoch 211/600 finished. Average Training Loss: 3.0506
+2025-07-04 14:27:43 - INFO - Epoch 212/600 finished. Average Training Loss: 3.0277
+2025-07-04 14:27:48 - INFO - Epoch 213/600 finished. Average Training Loss: 3.0375
+2025-07-04 14:27:53 - INFO - Epoch 214/600 finished. Average Training Loss: 3.1379
+2025-07-04 14:27:58 - INFO - Epoch 215/600 finished. Average Training Loss: 3.1125
+2025-07-04 14:28:03 - INFO - Epoch 216/600 finished. Average Training Loss: 2.9144
+2025-07-04 14:28:08 - INFO - Epoch 217/600 finished. Average Training Loss: 3.1223
+2025-07-04 14:28:14 - INFO - Epoch 218/600 finished. Average Training Loss: 3.1172
+2025-07-04 14:28:19 - INFO - Epoch 219/600 finished. Average Training Loss: 3.0426
+2025-07-04 14:28:24 - INFO - Epoch 220/600 finished. Average Training Loss: 3.0301
+2025-07-04 14:28:24 - INFO - Saved checkpoint for epoch 220 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_220_checkpoint.pth
+2025-07-04 14:28:29 - INFO - Epoch 221/600 finished. Average Training Loss: 3.1179
+2025-07-04 14:28:34 - INFO - Epoch 222/600 finished. Average Training Loss: 2.8180
+2025-07-04 14:28:40 - INFO - Epoch 223/600 finished. Average Training Loss: 2.8759
+2025-07-04 14:28:44 - INFO - Epoch 224/600 finished. Average Training Loss: 2.7931
+2025-07-04 14:28:49 - INFO - Epoch 225/600 finished. Average Training Loss: 2.8767
+2025-07-04 14:28:54 - INFO - Epoch 226/600 finished. Average Training Loss: 2.8598
+2025-07-04 14:29:00 - INFO - Epoch 227/600 finished. Average Training Loss: 2.9309
+2025-07-04 14:29:05 - INFO - Epoch 228/600 finished. Average Training Loss: 3.3163
+2025-07-04 14:29:09 - INFO - Epoch 229/600 finished. Average Training Loss: 2.8624
+2025-07-04 14:29:14 - INFO - Epoch 230/600 finished. Average Training Loss: 3.1546
+2025-07-04 14:29:20 - INFO - Epoch 231/600 finished. Average Training Loss: 2.9155
+2025-07-04 14:29:25 - INFO - Epoch 232/600 finished. Average Training Loss: 3.0734
+2025-07-04 14:29:30 - INFO - Epoch 233/600 finished. Average Training Loss: 2.9645
+2025-07-04 14:29:35 - INFO - Epoch 234/600 finished. Average Training Loss: 3.0314
+2025-07-04 14:29:40 - INFO - Epoch 235/600 finished. Average Training Loss: 2.9073
+2025-07-04 14:29:46 - INFO - Epoch 236/600 finished. Average Training Loss: 2.8469
+2025-07-04 14:29:50 - INFO - Epoch 237/600 finished. Average Training Loss: 2.9132
+2025-07-04 14:29:55 - INFO - Epoch 238/600 finished. Average Training Loss: 2.9610
+2025-07-04 14:30:00 - INFO - Epoch 239/600 finished. Average Training Loss: 2.8578
+2025-07-04 14:30:05 - INFO - Epoch 240/600 finished. Average Training Loss: 2.8059
+2025-07-04 14:30:06 - INFO - Saved checkpoint for epoch 240 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_240_checkpoint.pth
+2025-07-04 14:30:11 - INFO - Epoch 241/600 finished. Average Training Loss: 2.9603
+2025-07-04 14:30:16 - INFO - Epoch 242/600 finished. Average Training Loss: 3.0776
+2025-07-04 14:30:21 - INFO - Epoch 243/600 finished. Average Training Loss: 3.0760
+2025-07-04 14:30:26 - INFO - Epoch 244/600 finished. Average Training Loss: 2.6465
+2025-07-04 14:30:31 - INFO - Epoch 245/600 finished. Average Training Loss: 2.7867
+2025-07-04 14:30:36 - INFO - Epoch 246/600 finished. Average Training Loss: 2.8764
+2025-07-04 14:30:41 - INFO - Epoch 247/600 finished. Average Training Loss: 2.9896
+2025-07-04 14:30:45 - INFO - Epoch 248/600 finished. Average Training Loss: 2.8418
+2025-07-04 14:30:51 - INFO - Epoch 249/600 finished. Average Training Loss: 3.0452
+2025-07-04 14:30:56 - INFO - Epoch 250/600 finished. Average Training Loss: 2.7827
+2025-07-04 14:31:01 - INFO - Epoch 251/600 finished. Average Training Loss: 2.8932
+2025-07-04 14:31:06 - INFO - Epoch 252/600 finished. Average Training Loss: 2.8317
+2025-07-04 14:31:11 - INFO - Epoch 253/600 finished. Average Training Loss: 2.7928
+2025-07-04 14:31:16 - INFO - Epoch 254/600 finished. Average Training Loss: 3.0736
+2025-07-04 14:31:21 - INFO - Epoch 255/600 finished. Average Training Loss: 2.8350
+2025-07-04 14:31:26 - INFO - Epoch 256/600 finished. Average Training Loss: 2.8702
+2025-07-04 14:31:31 - INFO - Epoch 257/600 finished. Average Training Loss: 3.0289
+2025-07-04 14:31:36 - INFO - Epoch 258/600 finished. Average Training Loss: 2.8080
+2025-07-04 14:31:41 - INFO - Epoch 259/600 finished. Average Training Loss: 2.9020
+2025-07-04 14:31:46 - INFO - Epoch 260/600 finished. Average Training Loss: 2.9733
+2025-07-04 14:31:46 - INFO - Saved checkpoint for epoch 260 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_260_checkpoint.pth
+2025-07-04 14:31:51 - INFO - Epoch 261/600 finished. Average Training Loss: 2.8346
+2025-07-04 14:31:56 - INFO - Epoch 262/600 finished. Average Training Loss: 2.6401
+2025-07-04 14:32:02 - INFO - Epoch 263/600 finished. Average Training Loss: 2.8262
+2025-07-04 14:32:07 - INFO - Epoch 264/600 finished. Average Training Loss: 2.8839
+2025-07-04 14:32:12 - INFO - Epoch 265/600 finished. Average Training Loss: 2.7914
+2025-07-04 14:32:17 - INFO - Epoch 266/600 finished. Average Training Loss: 2.6072
+2025-07-04 14:32:22 - INFO - Epoch 267/600 finished. Average Training Loss: 2.7880
+2025-07-04 14:32:27 - INFO - Epoch 268/600 finished. Average Training Loss: 3.1108
+2025-07-04 14:32:31 - INFO - Epoch 269/600 finished. Average Training Loss: 3.0093
+2025-07-04 14:32:36 - INFO - Epoch 270/600 finished. Average Training Loss: 2.9912
+2025-07-04 14:32:42 - INFO - Epoch 271/600 finished. Average Training Loss: 2.8658
+2025-07-04 14:32:47 - INFO - Epoch 272/600 finished. Average Training Loss: 2.5293
+2025-07-04 14:32:52 - INFO - Epoch 273/600 finished. Average Training Loss: 2.8048
+2025-07-04 14:32:57 - INFO - Epoch 274/600 finished. Average Training Loss: 2.6406
+2025-07-04 14:33:02 - INFO - Epoch 275/600 finished. Average Training Loss: 2.7968
+2025-07-04 14:33:08 - INFO - Epoch 276/600 finished. Average Training Loss: 2.9059
+2025-07-04 14:33:12 - INFO - Epoch 277/600 finished. Average Training Loss: 2.7429
+2025-07-04 14:33:17 - INFO - Epoch 278/600 finished. Average Training Loss: 2.8050
+2025-07-04 14:33:22 - INFO - Epoch 279/600 finished. Average Training Loss: 2.7785
+2025-07-04 14:33:28 - INFO - Epoch 280/600 finished. Average Training Loss: 2.9358
+2025-07-04 14:33:28 - INFO - Saved checkpoint for epoch 280 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_280_checkpoint.pth
+2025-07-04 14:33:32 - INFO - Epoch 281/600 finished. Average Training Loss: 2.9256
+2025-07-04 14:33:37 - INFO - Epoch 282/600 finished. Average Training Loss: 2.6275
+2025-07-04 14:33:42 - INFO - Epoch 283/600 finished. Average Training Loss: 2.7678
+2025-07-04 14:33:47 - INFO - Epoch 284/600 finished. Average Training Loss: 2.8865
+2025-07-04 14:33:53 - INFO - Epoch 285/600 finished. Average Training Loss: 2.8424
+2025-07-04 14:33:58 - INFO - Epoch 286/600 finished. Average Training Loss: 2.9985
+2025-07-04 14:34:02 - INFO - Epoch 287/600 finished. Average Training Loss: 2.8055
+2025-07-04 14:34:07 - INFO - Epoch 288/600 finished. Average Training Loss: 2.6472
+2025-07-04 14:34:13 - INFO - Epoch 289/600 finished. Average Training Loss: 2.7135
+2025-07-04 14:34:18 - INFO - Epoch 290/600 finished. Average Training Loss: 2.6046
+2025-07-04 14:34:23 - INFO - Epoch 291/600 finished. Average Training Loss: 2.4534
+2025-07-04 14:34:28 - INFO - Epoch 292/600 finished. Average Training Loss: 2.5560
+2025-07-04 14:34:33 - INFO - Epoch 293/600 finished. Average Training Loss: 2.7626
+2025-07-04 14:34:38 - INFO - Epoch 294/600 finished. Average Training Loss: 2.7585
+2025-07-04 14:34:43 - INFO - Epoch 295/600 finished. Average Training Loss: 2.8491
+2025-07-04 14:34:47 - INFO - Epoch 296/600 finished. Average Training Loss: 2.7302
+2025-07-04 14:34:53 - INFO - Epoch 297/600 finished. Average Training Loss: 2.7731
+2025-07-04 14:34:58 - INFO - Epoch 298/600 finished. Average Training Loss: 2.5567
+2025-07-04 14:35:03 - INFO - Epoch 299/600 finished. Average Training Loss: 2.7300
+2025-07-04 14:35:08 - INFO - Epoch 300/600 finished. Average Training Loss: 2.5140
+2025-07-04 14:35:08 - INFO - Saved checkpoint for epoch 300 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_300_checkpoint.pth
+2025-07-04 14:35:13 - INFO - Epoch 301/600 finished. Average Training Loss: 2.7847
+2025-07-04 14:35:19 - INFO - Epoch 302/600 finished. Average Training Loss: 2.6363
+2025-07-04 14:35:23 - INFO - Epoch 303/600 finished. Average Training Loss: 2.4759
+2025-07-04 14:35:28 - INFO - Epoch 304/600 finished. Average Training Loss: 2.6491
+2025-07-04 14:35:33 - INFO - Epoch 305/600 finished. Average Training Loss: 2.9724
+2025-07-04 14:35:38 - INFO - Epoch 306/600 finished. Average Training Loss: 2.6563
+2025-07-04 14:35:44 - INFO - Epoch 307/600 finished. Average Training Loss: 2.6989
+2025-07-04 14:35:49 - INFO - Epoch 308/600 finished. Average Training Loss: 2.6160
+2025-07-04 14:35:54 - INFO - Epoch 309/600 finished. Average Training Loss: 2.6873
+2025-07-04 14:35:59 - INFO - Epoch 310/600 finished. Average Training Loss: 2.6058
+2025-07-04 14:36:04 - INFO - Epoch 311/600 finished. Average Training Loss: 2.6033
+2025-07-04 14:36:09 - INFO - Epoch 312/600 finished. Average Training Loss: 2.7654
+2025-07-04 14:36:14 - INFO - Epoch 313/600 finished. Average Training Loss: 2.7942
+2025-07-04 14:36:19 - INFO - Epoch 314/600 finished. Average Training Loss: 2.7673
+2025-07-04 14:36:24 - INFO - Epoch 315/600 finished. Average Training Loss: 2.5543
+2025-07-04 14:36:30 - INFO - Epoch 316/600 finished. Average Training Loss: 2.5374
+2025-07-04 14:36:35 - INFO - Epoch 317/600 finished. Average Training Loss: 2.7613
+2025-07-04 14:36:39 - INFO - Epoch 318/600 finished. Average Training Loss: 2.7835
+2025-07-04 14:36:44 - INFO - Epoch 319/600 finished. Average Training Loss: 2.6315
+2025-07-04 14:36:50 - INFO - Epoch 320/600 finished. Average Training Loss: 2.5273
+2025-07-04 14:36:50 - INFO - Saved checkpoint for epoch 320 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_320_checkpoint.pth
+2025-07-04 14:36:54 - INFO - Epoch 321/600 finished. Average Training Loss: 2.3591
+2025-07-04 14:36:59 - INFO - Epoch 322/600 finished. Average Training Loss: 2.7529
+2025-07-04 14:37:04 - INFO - Epoch 323/600 finished. Average Training Loss: 2.7860
+2025-07-04 14:37:10 - INFO - Epoch 324/600 finished. Average Training Loss: 2.7219
+2025-07-04 14:37:15 - INFO - Epoch 325/600 finished. Average Training Loss: 2.7709
+2025-07-04 14:37:20 - INFO - Epoch 326/600 finished. Average Training Loss: 2.7344
+2025-07-04 14:37:24 - INFO - Epoch 327/600 finished. Average Training Loss: 2.7167
+2025-07-04 14:37:30 - INFO - Epoch 328/600 finished. Average Training Loss: 2.5891
+2025-07-04 14:37:35 - INFO - Epoch 329/600 finished. Average Training Loss: 2.6596
+2025-07-04 14:37:40 - INFO - Epoch 330/600 finished. Average Training Loss: 2.6178
+2025-07-04 14:37:45 - INFO - Epoch 331/600 finished. Average Training Loss: 2.7531
+2025-07-04 14:37:50 - INFO - Epoch 332/600 finished. Average Training Loss: 2.5768
+2025-07-04 14:37:55 - INFO - Epoch 333/600 finished. Average Training Loss: 2.6004
+2025-07-04 14:38:00 - INFO - Epoch 334/600 finished. Average Training Loss: 2.7266
+2025-07-04 14:38:05 - INFO - Epoch 335/600 finished. Average Training Loss: 2.4264
+2025-07-04 14:38:10 - INFO - Epoch 336/600 finished. Average Training Loss: 2.6824
+2025-07-04 14:38:16 - INFO - Epoch 337/600 finished. Average Training Loss: 2.4271
+2025-07-04 14:38:21 - INFO - Epoch 338/600 finished. Average Training Loss: 2.5537
+2025-07-04 14:38:26 - INFO - Epoch 339/600 finished. Average Training Loss: 2.4312
+2025-07-04 14:38:31 - INFO - Epoch 340/600 finished. Average Training Loss: 2.3681
+2025-07-04 14:38:31 - INFO - Saved checkpoint for epoch 340 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_340_checkpoint.pth
+2025-07-04 14:38:35 - INFO - Epoch 341/600 finished. Average Training Loss: 2.5539
+2025-07-04 14:38:41 - INFO - Epoch 342/600 finished. Average Training Loss: 2.4209
+2025-07-04 14:38:46 - INFO - Epoch 343/600 finished. Average Training Loss: 2.3910
+2025-07-04 14:38:51 - INFO - Epoch 344/600 finished. Average Training Loss: 2.5721
+2025-07-04 14:38:56 - INFO - Epoch 345/600 finished. Average Training Loss: 2.5074
+2025-07-04 14:39:01 - INFO - Epoch 346/600 finished. Average Training Loss: 2.6785
+2025-07-04 14:39:07 - INFO - Epoch 347/600 finished. Average Training Loss: 2.5299
+2025-07-04 14:39:11 - INFO - Epoch 348/600 finished. Average Training Loss: 2.6844
+2025-07-04 14:39:16 - INFO - Epoch 349/600 finished. Average Training Loss: 2.6595
+2025-07-04 14:39:21 - INFO - Epoch 350/600 finished. Average Training Loss: 2.5360
+2025-07-04 14:39:26 - INFO - Epoch 351/600 finished. Average Training Loss: 2.4903
+2025-07-04 14:39:32 - INFO - Epoch 352/600 finished. Average Training Loss: 2.5675
+2025-07-04 14:39:37 - INFO - Epoch 353/600 finished. Average Training Loss: 2.3307
+2025-07-04 14:39:42 - INFO - Epoch 354/600 finished. Average Training Loss: 2.3605
+2025-07-04 14:39:47 - INFO - Epoch 355/600 finished. Average Training Loss: 2.5873
+2025-07-04 14:39:52 - INFO - Epoch 356/600 finished. Average Training Loss: 2.6456
+2025-07-04 14:39:57 - INFO - Epoch 357/600 finished. Average Training Loss: 2.5731
+2025-07-04 14:40:02 - INFO - Epoch 358/600 finished. Average Training Loss: 2.3399
+2025-07-04 14:40:07 - INFO - Epoch 359/600 finished. Average Training Loss: 2.3926
+2025-07-04 14:40:12 - INFO - Epoch 360/600 finished. Average Training Loss: 2.3526
+2025-07-04 14:40:12 - INFO - Saved checkpoint for epoch 360 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_360_checkpoint.pth
+2025-07-04 14:40:18 - INFO - Epoch 361/600 finished. Average Training Loss: 2.6675
+2025-07-04 14:40:22 - INFO - Epoch 362/600 finished. Average Training Loss: 2.6445
+2025-07-04 14:40:27 - INFO - Epoch 363/600 finished. Average Training Loss: 2.3212
+2025-07-04 14:40:32 - INFO - Epoch 364/600 finished. Average Training Loss: 2.6163
+2025-07-04 14:40:38 - INFO - Epoch 365/600 finished. Average Training Loss: 2.4581
+2025-07-04 14:40:43 - INFO - Epoch 366/600 finished. Average Training Loss: 2.4433
+2025-07-04 14:40:47 - INFO - Epoch 367/600 finished. Average Training Loss: 2.4911
+2025-07-04 14:40:52 - INFO - Epoch 368/600 finished. Average Training Loss: 2.4499
+2025-07-04 14:40:58 - INFO - Epoch 369/600 finished. Average Training Loss: 2.4484
+2025-07-04 14:41:03 - INFO - Epoch 370/600 finished. Average Training Loss: 2.5927
+2025-07-04 14:41:08 - INFO - Epoch 371/600 finished. Average Training Loss: 2.5841
+2025-07-04 14:41:13 - INFO - Epoch 372/600 finished. Average Training Loss: 2.3842
+2025-07-04 14:41:18 - INFO - Epoch 373/600 finished. Average Training Loss: 2.5286
+2025-07-04 14:41:23 - INFO - Epoch 374/600 finished. Average Training Loss: 2.5051
+2025-07-04 14:41:28 - INFO - Epoch 375/600 finished. Average Training Loss: 2.6435
+2025-07-04 14:41:33 - INFO - Epoch 376/600 finished. Average Training Loss: 2.5538
+2025-07-04 14:41:38 - INFO - Epoch 377/600 finished. Average Training Loss: 2.6354
+2025-07-04 14:41:43 - INFO - Epoch 378/600 finished. Average Training Loss: 2.6390
+2025-07-04 14:41:49 - INFO - Epoch 379/600 finished. Average Training Loss: 2.3326
+2025-07-04 14:41:53 - INFO - Epoch 380/600 finished. Average Training Loss: 2.3069
+2025-07-04 14:41:54 - INFO - Saved checkpoint for epoch 380 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_380_checkpoint.pth
+2025-07-04 14:41:58 - INFO - Epoch 381/600 finished. Average Training Loss: 2.4470
+2025-07-04 14:42:03 - INFO - Epoch 382/600 finished. Average Training Loss: 2.3049
+2025-07-04 14:42:09 - INFO - Epoch 383/600 finished. Average Training Loss: 2.5197
+2025-07-04 14:42:14 - INFO - Epoch 384/600 finished. Average Training Loss: 2.4739
+2025-07-04 14:42:18 - INFO - Epoch 385/600 finished. Average Training Loss: 2.5157
+2025-07-04 14:42:23 - INFO - Epoch 386/600 finished. Average Training Loss: 2.5864
+2025-07-04 14:42:29 - INFO - Epoch 387/600 finished. Average Training Loss: 2.7350
+2025-07-04 14:42:34 - INFO - Epoch 388/600 finished. Average Training Loss: 2.2538
+2025-07-04 14:42:39 - INFO - Epoch 389/600 finished. Average Training Loss: 2.3557
+2025-07-04 14:42:44 - INFO - Epoch 390/600 finished. Average Training Loss: 2.4454
+2025-07-04 14:42:49 - INFO - Epoch 391/600 finished. Average Training Loss: 2.3521
+2025-07-04 14:42:54 - INFO - Epoch 392/600 finished. Average Training Loss: 2.5457
+2025-07-04 14:42:59 - INFO - Epoch 393/600 finished. Average Training Loss: 2.4874
+2025-07-04 14:43:04 - INFO - Epoch 394/600 finished. Average Training Loss: 2.2550
+2025-07-04 14:43:09 - INFO - Epoch 395/600 finished. Average Training Loss: 2.2722
+2025-07-04 14:43:14 - INFO - Epoch 396/600 finished. Average Training Loss: 2.5165
+2025-07-04 14:43:19 - INFO - Epoch 397/600 finished. Average Training Loss: 2.1194
+2025-07-04 14:43:24 - INFO - Epoch 398/600 finished. Average Training Loss: 2.1265
+2025-07-04 14:43:29 - INFO - Epoch 399/600 finished. Average Training Loss: 2.3270
+2025-07-04 14:43:34 - INFO - Epoch 400/600 finished. Average Training Loss: 2.4594
+2025-07-04 14:43:34 - INFO - Saved checkpoint for epoch 400 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_400_checkpoint.pth
+2025-07-04 14:43:39 - INFO - Epoch 401/600 finished. Average Training Loss: 2.2889
+2025-07-04 14:43:44 - INFO - Epoch 402/600 finished. Average Training Loss: 2.2559
+2025-07-04 14:43:49 - INFO - Epoch 403/600 finished. Average Training Loss: 2.2668
+2025-07-04 14:43:54 - INFO - Epoch 404/600 finished. Average Training Loss: 2.2653
+2025-07-04 14:43:59 - INFO - Epoch 405/600 finished. Average Training Loss: 2.1864
+2025-07-04 14:44:04 - INFO - Epoch 406/600 finished. Average Training Loss: 2.2160
+2025-07-04 14:44:09 - INFO - Epoch 407/600 finished. Average Training Loss: 2.4567
+2025-07-04 14:44:13 - INFO - Epoch 408/600 finished. Average Training Loss: 2.5760
+2025-07-04 14:44:19 - INFO - Epoch 409/600 finished. Average Training Loss: 2.1864
+2025-07-04 14:44:24 - INFO - Epoch 410/600 finished. Average Training Loss: 2.5992
+2025-07-04 14:44:29 - INFO - Epoch 411/600 finished. Average Training Loss: 2.3505
+2025-07-04 14:44:34 - INFO - Epoch 412/600 finished. Average Training Loss: 2.2872
+2025-07-04 14:44:39 - INFO - Epoch 413/600 finished. Average Training Loss: 2.3706
+2025-07-04 14:44:45 - INFO - Epoch 414/600 finished. Average Training Loss: 2.2679
+2025-07-04 14:44:49 - INFO - Epoch 415/600 finished. Average Training Loss: 2.3790
+2025-07-04 14:44:54 - INFO - Epoch 416/600 finished. Average Training Loss: 2.1304
+2025-07-04 14:44:59 - INFO - Epoch 417/600 finished. Average Training Loss: 2.2801
+2025-07-04 14:45:04 - INFO - Epoch 418/600 finished. Average Training Loss: 2.2600
+2025-07-04 14:45:10 - INFO - Epoch 419/600 finished. Average Training Loss: 2.1986
+2025-07-04 14:45:15 - INFO - Epoch 420/600 finished. Average Training Loss: 2.2615
+2025-07-04 14:45:15 - INFO - Saved checkpoint for epoch 420 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_420_checkpoint.pth
+2025-07-04 14:45:20 - INFO - Epoch 421/600 finished. Average Training Loss: 1.9291
+2025-07-04 14:45:25 - INFO - Epoch 422/600 finished. Average Training Loss: 2.6366
+2025-07-04 14:45:30 - INFO - Epoch 423/600 finished. Average Training Loss: 2.2778
+2025-07-04 14:45:35 - INFO - Epoch 424/600 finished. Average Training Loss: 2.1472
+2025-07-04 14:45:40 - INFO - Epoch 425/600 finished. Average Training Loss: 2.0923
+2025-07-04 14:45:45 - INFO - Epoch 426/600 finished. Average Training Loss: 2.4612
+2025-07-04 14:45:50 - INFO - Epoch 427/600 finished. Average Training Loss: 2.3302
+2025-07-04 14:45:56 - INFO - Epoch 428/600 finished. Average Training Loss: 2.3427
+2025-07-04 14:46:00 - INFO - Epoch 429/600 finished. Average Training Loss: 2.6079
+2025-07-04 14:46:05 - INFO - Epoch 430/600 finished. Average Training Loss: 2.0946
+2025-07-04 14:46:10 - INFO - Epoch 431/600 finished. Average Training Loss: 2.2682
+2025-07-04 14:46:15 - INFO - Epoch 432/600 finished. Average Training Loss: 2.0846
+2025-07-04 14:46:21 - INFO - Epoch 433/600 finished. Average Training Loss: 2.2979
+2025-07-04 14:46:25 - INFO - Epoch 434/600 finished. Average Training Loss: 1.9709
+2025-07-04 14:46:30 - INFO - Epoch 435/600 finished. Average Training Loss: 2.4473
+2025-07-04 14:46:36 - INFO - Epoch 436/600 finished. Average Training Loss: 2.1110
+2025-07-04 14:46:41 - INFO - Epoch 437/600 finished. Average Training Loss: 2.0159
+2025-07-04 14:46:46 - INFO - Epoch 438/600 finished. Average Training Loss: 2.1071
+2025-07-04 14:46:51 - INFO - Epoch 439/600 finished. Average Training Loss: 2.2807
+2025-07-04 14:46:56 - INFO - Epoch 440/600 finished. Average Training Loss: 2.1132
+2025-07-04 14:46:56 - INFO - Saved checkpoint for epoch 440 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_440_checkpoint.pth
+2025-07-04 14:47:01 - INFO - Epoch 441/600 finished. Average Training Loss: 2.0440
+2025-07-04 14:47:07 - INFO - Epoch 442/600 finished. Average Training Loss: 1.9425
+2025-07-04 14:47:11 - INFO - Epoch 443/600 finished. Average Training Loss: 2.4423
+2025-07-04 14:47:16 - INFO - Epoch 444/600 finished. Average Training Loss: 2.3582
+2025-07-04 14:47:21 - INFO - Epoch 445/600 finished. Average Training Loss: 1.9856
+2025-07-04 14:47:27 - INFO - Epoch 446/600 finished. Average Training Loss: 1.7968
+2025-07-04 14:47:32 - INFO - Epoch 447/600 finished. Average Training Loss: 2.2454
+2025-07-04 14:47:37 - INFO - Epoch 448/600 finished. Average Training Loss: 2.1443
+2025-07-04 14:47:42 - INFO - Epoch 449/600 finished. Average Training Loss: 2.2748
+2025-07-04 14:47:47 - INFO - Epoch 450/600 finished. Average Training Loss: 2.1318
+2025-07-04 14:47:52 - INFO - Epoch 451/600 finished. Average Training Loss: 2.2021
+2025-07-04 14:47:57 - INFO - Epoch 452/600 finished. Average Training Loss: 2.1659
+2025-07-04 14:48:02 - INFO - Epoch 453/600 finished. Average Training Loss: 2.2217
+2025-07-04 14:48:07 - INFO - Epoch 454/600 finished. Average Training Loss: 2.1916
+2025-07-04 14:48:13 - INFO - Epoch 455/600 finished. Average Training Loss: 2.1289
+2025-07-04 14:48:18 - INFO - Epoch 456/600 finished. Average Training Loss: 2.4037
+2025-07-04 14:48:23 - INFO - Epoch 457/600 finished. Average Training Loss: 2.2351
+2025-07-04 14:48:28 - INFO - Epoch 458/600 finished. Average Training Loss: 1.9874
+2025-07-04 14:48:33 - INFO - Epoch 459/600 finished. Average Training Loss: 2.2041
+2025-07-04 14:48:38 - INFO - Epoch 460/600 finished. Average Training Loss: 2.0590
+2025-07-04 14:48:38 - INFO - Saved checkpoint for epoch 460 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_460_checkpoint.pth
+2025-07-04 14:48:44 - INFO - Epoch 461/600 finished. Average Training Loss: 2.0891
+2025-07-04 14:48:48 - INFO - Epoch 462/600 finished. Average Training Loss: 1.9002
+2025-07-04 14:48:53 - INFO - Epoch 463/600 finished. Average Training Loss: 2.0225
+2025-07-04 14:48:58 - INFO - Epoch 464/600 finished. Average Training Loss: 2.1152
+2025-07-04 14:49:03 - INFO - Epoch 465/600 finished. Average Training Loss: 2.2008
+2025-07-04 14:49:08 - INFO - Epoch 466/600 finished. Average Training Loss: 1.9729
+2025-07-04 14:49:13 - INFO - Epoch 467/600 finished. Average Training Loss: 2.2197
+2025-07-04 14:49:18 - INFO - Epoch 468/600 finished. Average Training Loss: 2.1203
+2025-07-04 14:49:23 - INFO - Epoch 469/600 finished. Average Training Loss: 2.1157
+2025-07-04 14:49:29 - INFO - Epoch 470/600 finished. Average Training Loss: 2.1686
+2025-07-04 14:49:34 - INFO - Epoch 471/600 finished. Average Training Loss: 2.0320
+2025-07-04 14:49:39 - INFO - Epoch 472/600 finished. Average Training Loss: 1.9137
+2025-07-04 14:49:43 - INFO - Epoch 473/600 finished. Average Training Loss: 2.1409
+2025-07-04 14:49:49 - INFO - Epoch 474/600 finished. Average Training Loss: 2.0441
+2025-07-04 14:49:54 - INFO - Epoch 475/600 finished. Average Training Loss: 1.8986
+2025-07-04 14:49:59 - INFO - Epoch 476/600 finished. Average Training Loss: 2.2072
+2025-07-04 14:50:04 - INFO - Epoch 477/600 finished. Average Training Loss: 1.9077
+2025-07-04 14:50:09 - INFO - Epoch 478/600 finished. Average Training Loss: 2.0282
+2025-07-04 14:50:14 - INFO - Epoch 479/600 finished. Average Training Loss: 2.0692
+2025-07-04 14:50:19 - INFO - Epoch 480/600 finished. Average Training Loss: 1.9460
+2025-07-04 14:50:19 - INFO - Saved checkpoint for epoch 480 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_480_checkpoint.pth
+2025-07-04 14:50:24 - INFO - Epoch 481/600 finished. Average Training Loss: 2.2370
+2025-07-04 14:50:29 - INFO - Epoch 482/600 finished. Average Training Loss: 2.0461
+2025-07-04 14:50:34 - INFO - Epoch 483/600 finished. Average Training Loss: 2.1927
+2025-07-04 14:50:39 - INFO - Epoch 484/600 finished. Average Training Loss: 2.3254
+2025-07-04 14:50:44 - INFO - Epoch 485/600 finished. Average Training Loss: 1.9791
+2025-07-04 14:50:49 - INFO - Epoch 486/600 finished. Average Training Loss: 2.2819
+2025-07-04 14:50:54 - INFO - Epoch 487/600 finished. Average Training Loss: 2.0012
+2025-07-04 14:51:00 - INFO - Epoch 488/600 finished. Average Training Loss: 2.1266
+2025-07-04 14:51:05 - INFO - Epoch 489/600 finished. Average Training Loss: 1.8999
+2025-07-04 14:51:10 - INFO - Epoch 490/600 finished. Average Training Loss: 2.3136
+2025-07-04 14:51:15 - INFO - Epoch 491/600 finished. Average Training Loss: 2.1617
+2025-07-04 14:51:20 - INFO - Epoch 492/600 finished. Average Training Loss: 1.8849
+2025-07-04 14:51:25 - INFO - Epoch 493/600 finished. Average Training Loss: 2.2606
+2025-07-04 14:51:29 - INFO - Epoch 494/600 finished. Average Training Loss: 1.9464
+2025-07-04 14:51:34 - INFO - Epoch 495/600 finished. Average Training Loss: 1.8576
+2025-07-04 14:51:40 - INFO - Epoch 496/600 finished. Average Training Loss: 2.0646
+2025-07-04 14:51:45 - INFO - Epoch 497/600 finished. Average Training Loss: 1.9591
+2025-07-04 14:51:50 - INFO - Epoch 498/600 finished. Average Training Loss: 2.1259
+2025-07-04 14:51:55 - INFO - Epoch 499/600 finished. Average Training Loss: 2.1805
+2025-07-04 14:52:00 - INFO - Epoch 500/600 finished. Average Training Loss: 1.8843
+2025-07-04 14:52:00 - INFO - Saved checkpoint for epoch 500 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_500_checkpoint.pth
+2025-07-04 14:52:05 - INFO - Epoch 501/600 finished. Average Training Loss: 1.9467
+2025-07-04 14:52:10 - INFO - Epoch 502/600 finished. Average Training Loss: 2.2271
+2025-07-04 14:52:15 - INFO - Epoch 503/600 finished. Average Training Loss: 2.1001
+2025-07-04 14:52:20 - INFO - Epoch 504/600 finished. Average Training Loss: 2.1528
+2025-07-04 14:52:25 - INFO - Epoch 505/600 finished. Average Training Loss: 1.8180
+2025-07-04 14:52:31 - INFO - Epoch 506/600 finished. Average Training Loss: 1.9176
+2025-07-04 14:52:36 - INFO - Epoch 507/600 finished. Average Training Loss: 2.0581
+2025-07-04 14:52:40 - INFO - Epoch 508/600 finished. Average Training Loss: 1.6765
+2025-07-04 14:52:45 - INFO - Epoch 509/600 finished. Average Training Loss: 1.7766
+2025-07-04 14:52:51 - INFO - Epoch 510/600 finished. Average Training Loss: 2.1990
+2025-07-04 14:52:56 - INFO - Epoch 511/600 finished. Average Training Loss: 1.7485
+2025-07-04 14:53:01 - INFO - Epoch 512/600 finished. Average Training Loss: 1.8557
+2025-07-04 14:53:05 - INFO - Epoch 513/600 finished. Average Training Loss: 1.9641
+2025-07-04 14:53:11 - INFO - Epoch 514/600 finished. Average Training Loss: 2.1587
+2025-07-04 14:53:16 - INFO - Epoch 515/600 finished. Average Training Loss: 1.8855
+2025-07-04 14:53:21 - INFO - Epoch 516/600 finished. Average Training Loss: 1.8022
+2025-07-04 14:53:26 - INFO - Epoch 517/600 finished. Average Training Loss: 1.7769
+2025-07-04 14:53:31 - INFO - Epoch 518/600 finished. Average Training Loss: 1.8371
+2025-07-04 14:53:36 - INFO - Epoch 519/600 finished. Average Training Loss: 2.0416
+2025-07-04 14:53:41 - INFO - Epoch 520/600 finished. Average Training Loss: 1.8558
+2025-07-04 14:53:41 - INFO - Saved checkpoint for epoch 520 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_520_checkpoint.pth
+2025-07-04 14:53:46 - INFO - Epoch 521/600 finished. Average Training Loss: 1.8024
+2025-07-04 14:53:51 - INFO - Epoch 522/600 finished. Average Training Loss: 2.0347
+2025-07-04 14:53:56 - INFO - Epoch 523/600 finished. Average Training Loss: 2.0559
+2025-07-04 14:54:01 - INFO - Epoch 524/600 finished. Average Training Loss: 1.6700
+2025-07-04 14:54:06 - INFO - Epoch 525/600 finished. Average Training Loss: 1.7829
+2025-07-04 14:54:11 - INFO - Epoch 526/600 finished. Average Training Loss: 1.7944
+2025-07-04 14:54:16 - INFO - Epoch 527/600 finished. Average Training Loss: 1.8624
+2025-07-04 14:54:22 - INFO - Epoch 528/600 finished. Average Training Loss: 1.7793
+2025-07-04 14:54:27 - INFO - Epoch 529/600 finished. Average Training Loss: 1.7371
+2025-07-04 14:54:32 - INFO - Epoch 530/600 finished. Average Training Loss: 1.8819
+2025-07-04 14:54:36 - INFO - Epoch 531/600 finished. Average Training Loss: 1.9144
+2025-07-04 14:54:42 - INFO - Epoch 532/600 finished. Average Training Loss: 1.7828
+2025-07-04 14:54:47 - INFO - Epoch 533/600 finished. Average Training Loss: 1.7783
+2025-07-04 14:54:52 - INFO - Epoch 534/600 finished. Average Training Loss: 1.7350
+2025-07-04 14:54:57 - INFO - Epoch 535/600 finished. Average Training Loss: 1.8981
+2025-07-04 14:55:02 - INFO - Epoch 536/600 finished. Average Training Loss: 2.0059
+2025-07-04 14:55:08 - INFO - Epoch 537/600 finished. Average Training Loss: 1.5824
+2025-07-04 14:55:12 - INFO - Epoch 538/600 finished. Average Training Loss: 1.8449
+2025-07-04 14:55:17 - INFO - Epoch 539/600 finished. Average Training Loss: 2.0121
+2025-07-04 14:55:22 - INFO - Epoch 540/600 finished. Average Training Loss: 2.1575
+2025-07-04 14:55:22 - INFO - Saved checkpoint for epoch 540 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_540_checkpoint.pth
+2025-07-04 14:55:28 - INFO - Epoch 541/600 finished. Average Training Loss: 2.0655
+2025-07-04 14:55:33 - INFO - Epoch 542/600 finished. Average Training Loss: 2.1652
+2025-07-04 14:55:38 - INFO - Epoch 543/600 finished. Average Training Loss: 1.6391
+2025-07-04 14:55:43 - INFO - Epoch 544/600 finished. Average Training Loss: 2.1680
+2025-07-04 14:55:48 - INFO - Epoch 545/600 finished. Average Training Loss: 1.9295
+2025-07-04 14:55:53 - INFO - Epoch 546/600 finished. Average Training Loss: 1.9466
+2025-07-04 14:55:58 - INFO - Epoch 547/600 finished. Average Training Loss: 1.8391
+2025-07-04 14:56:03 - INFO - Epoch 548/600 finished. Average Training Loss: 1.8396
+2025-07-04 14:56:08 - INFO - Epoch 549/600 finished. Average Training Loss: 2.1074
+2025-07-04 14:56:13 - INFO - Epoch 550/600 finished. Average Training Loss: 2.0342
+2025-07-04 14:56:18 - INFO - Epoch 551/600 finished. Average Training Loss: 1.9801
+2025-07-04 14:56:23 - INFO - Epoch 552/600 finished. Average Training Loss: 1.6776
+2025-07-04 14:56:28 - INFO - Epoch 553/600 finished. Average Training Loss: 2.0752
+2025-07-04 14:56:33 - INFO - Epoch 554/600 finished. Average Training Loss: 1.6546
+2025-07-04 14:56:39 - INFO - Epoch 555/600 finished. Average Training Loss: 1.6039
+2025-07-04 14:56:43 - INFO - Epoch 556/600 finished. Average Training Loss: 1.8575
+2025-07-04 14:56:48 - INFO - Epoch 557/600 finished. Average Training Loss: 1.6336
+2025-07-04 14:56:53 - INFO - Epoch 558/600 finished. Average Training Loss: 1.8146
+2025-07-04 14:56:58 - INFO - Epoch 559/600 finished. Average Training Loss: 1.8000
+2025-07-04 14:57:04 - INFO - Epoch 560/600 finished. Average Training Loss: 1.8490
+2025-07-04 14:57:04 - INFO - Saved checkpoint for epoch 560 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_560_checkpoint.pth
+2025-07-04 14:57:09 - INFO - Epoch 561/600 finished. Average Training Loss: 1.6272
+2025-07-04 14:57:13 - INFO - Epoch 562/600 finished. Average Training Loss: 1.8399
+2025-07-04 14:57:18 - INFO - Epoch 563/600 finished. Average Training Loss: 1.8792
+2025-07-04 14:57:24 - INFO - Epoch 564/600 finished. Average Training Loss: 1.7360
+2025-07-04 14:57:29 - INFO - Epoch 565/600 finished. Average Training Loss: 1.7608
+2025-07-04 14:57:34 - INFO - Epoch 566/600 finished. Average Training Loss: 1.9541
+2025-07-04 14:57:38 - INFO - Epoch 567/600 finished. Average Training Loss: 1.8581
+2025-07-04 14:57:44 - INFO - Epoch 568/600 finished. Average Training Loss: 1.9462
+2025-07-04 14:57:49 - INFO - Epoch 569/600 finished. Average Training Loss: 1.8190
+2025-07-04 14:57:54 - INFO - Epoch 570/600 finished. Average Training Loss: 1.9532
+2025-07-04 14:57:59 - INFO - Epoch 571/600 finished. Average Training Loss: 1.4742
+2025-07-04 14:58:04 - INFO - Epoch 572/600 finished. Average Training Loss: 1.7159
+2025-07-04 14:58:09 - INFO - Epoch 573/600 finished. Average Training Loss: 1.9962
+2025-07-04 14:58:14 - INFO - Epoch 574/600 finished. Average Training Loss: 1.8428
+2025-07-04 14:58:19 - INFO - Epoch 575/600 finished. Average Training Loss: 1.6490
+2025-07-04 14:58:24 - INFO - Epoch 576/600 finished. Average Training Loss: 1.5761
+2025-07-04 14:58:29 - INFO - Epoch 577/600 finished. Average Training Loss: 1.9885
+2025-07-04 14:58:35 - INFO - Epoch 578/600 finished. Average Training Loss: 1.8580
+2025-07-04 14:58:40 - INFO - Epoch 579/600 finished. Average Training Loss: 1.6657
+2025-07-04 14:58:45 - INFO - Epoch 580/600 finished. Average Training Loss: 1.7398
+2025-07-04 14:58:45 - INFO - Saved checkpoint for epoch 580 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_580_checkpoint.pth
+2025-07-04 14:58:49 - INFO - Epoch 581/600 finished. Average Training Loss: 1.8251
+2025-07-04 14:58:55 - INFO - Epoch 582/600 finished. Average Training Loss: 1.7279
+2025-07-04 14:59:01 - INFO - Epoch 583/600 finished. Average Training Loss: 1.8918
+2025-07-04 14:59:05 - INFO - Epoch 584/600 finished. Average Training Loss: 1.6919
+2025-07-04 14:59:10 - INFO - Epoch 585/600 finished. Average Training Loss: 1.7177
+2025-07-04 14:59:15 - INFO - Epoch 586/600 finished. Average Training Loss: 1.6898
+2025-07-04 14:59:21 - INFO - Epoch 587/600 finished. Average Training Loss: 1.4002
+2025-07-04 14:59:25 - INFO - Epoch 588/600 finished. Average Training Loss: 1.6291
+2025-07-04 14:59:30 - INFO - Epoch 589/600 finished. Average Training Loss: 1.7413
+2025-07-04 14:59:35 - INFO - Epoch 590/600 finished. Average Training Loss: 1.8334
+2025-07-04 14:59:41 - INFO - Epoch 591/600 finished. Average Training Loss: 1.6572
+2025-07-04 14:59:46 - INFO - Epoch 592/600 finished. Average Training Loss: 1.8792
+2025-07-04 14:59:51 - INFO - Epoch 593/600 finished. Average Training Loss: 1.6716
+2025-07-04 14:59:56 - INFO - Epoch 594/600 finished. Average Training Loss: 1.5990
+2025-07-04 15:00:01 - INFO - Epoch 595/600 finished. Average Training Loss: 1.8593
+2025-07-04 15:00:06 - INFO - Epoch 596/600 finished. Average Training Loss: 1.6521
+2025-07-04 15:00:11 - INFO - Epoch 597/600 finished. Average Training Loss: 1.5623
+2025-07-04 15:00:16 - INFO - Epoch 598/600 finished. Average Training Loss: 1.7124
+2025-07-04 15:00:20 - INFO - Epoch 599/600 finished. Average Training Loss: 1.8805
+2025-07-04 15:00:26 - INFO - Epoch 600/600 finished. Average Training Loss: 1.8732
+2025-07-04 15:00:26 - INFO - Saved checkpoint for epoch 600 to ./result/VNet_Multi_V3/Amos_18/Pth/model_epoch_600_checkpoint.pth
+2025-07-04 15:00:26 - INFO - Training complete! Total duration: 0h 49m 11s
+2025-07-04 15:00:26 - INFO - ======================================== Training Session Ended ========================================
+

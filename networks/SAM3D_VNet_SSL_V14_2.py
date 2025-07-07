@@ -321,6 +321,7 @@ class ImageEncoderViT3D(nn.Module):
 
         # Patch Embedding
         x = self.patch_embed1(x)
+        print(f'after patchembedding shape is {x.shape}')
 
         # 添加位置编码
         if self.pos_embed is not None:
@@ -329,21 +330,27 @@ class ImageEncoderViT3D(nn.Module):
         # 通过第一个Block
         x = x.permute(0, 3, 1, 2, 4)
         x = self.block1(x)
+        print(f'after block1 shape is {x.shape}')
 
         # Patchmerging操作
         x = self.patchmerging1(x)
+        print(f'after patchmerging shape is  {x.shape}')
 
         # 通过第二个Block
         x = self.block2(x)
+        print(f'after block2 shape is {x.shape}')
 
         # 通过PatchMerging
         x = self.patchmerging2(x)
+        print(f'after patchmerging2 shape is {x.shape}')
 
         # 通过第三个Block
         x = self.block3(x)
+        print(f'after block3 shape is {x.shape}')
 
         # 通过第四个Block
         x = self.block4(x)
+        print(f'after block4 shape is {x.shape}')
 
         x = x.permute(0,4,2,3,1)
 
@@ -360,7 +367,8 @@ class Network(nn.Module):
             num_classes: int = 2,
             normalization: str = "batchnorm",
             has_dropout: bool = True,
-            pretrain_weight_path: str = "result/VNet_Multi/LA_16/Pth/Best.pth",
+            # pretrain_weight_path: str = "result/VNet_Multi/LA_16/Pth/Best.pth",
+            pretrain_weight_path: str=None,
             num_mc_samples:int = 5,
             w_epistemic:float=0.5,
             w_aleatoric:float=0.5,
@@ -480,6 +488,10 @@ class Network(nn.Module):
         image_pe = self.promptencoder.get_dense_pe()
         
         # 4. 掩码解码
+        print(f'after encoder shape is {after_encoder.shape}')
+        print(f'image pe shape is {image_pe.shape}')
+        print(f'sparse_prompt shape is {sparse_embeddings.shape}')
+        print(f'dense_prompt_embeddings shape is {dense_embeddings.shape}')
         after_maskencoder, iou_pred = self.maskdecoder(
             image_embeddings=after_encoder,
             image_pe=image_pe,

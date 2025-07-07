@@ -34,12 +34,14 @@ from collections import OrderedDict
 # from networks.SAM3D_VNet_SSL_V13 import Network
 # from networks.SAM3D_VNet_SSL_V14 import Network
 # from networks.SAM3D_VNet_SSL_V14_1 import Network
-from networks.SAM3D_VNet_SSL_V14_2 import Network
+# from networks.SAM3D_VNet_SSL_V14_2 import Network
 # from networks.SAM3D_VNet_SSL_V14_3 import Network
+from networks.SAM3D_VNet_SSL_V15 import Network
 
 # 其他网络
 # from networks.VNet import VNet
 # from networks.VNet_MultiOutput import VNet
+# from networks.VNet_MultiOutput_V3 import VNet
 # from networks.Double_VNet import Network
 
 # 导入数据集
@@ -545,8 +547,10 @@ if __name__ == '__main__':
     # model = Network(in_channels=1,encoder_depth=4).to(device=device) # V14
     # model = Network(in_channels=1).to(device=device) # V14_1
     # model = Network(in_channels=1).to(device=device) # V14_2
-    model = Network(in_channels=1).to(device=device) # V14_2_2
+    # model = Network(in_channels=1).to(device=device) # V14_2_2
     # model = VNet(n_channels=1,n_classes=2,normalization="batchnorm",has_dropout=True).to(device=device)
+    # model = VNet(n_channels=1, n_classes=2,normalization="batchnorm", has_dropout=True,n_filters=32).to(device)
+    model = Network(in_channels=1, num_classes=2).to(device=device)  # V15
 
     # 加载模型
     logging.info(f"Loading model weights from: {option.model_load}")

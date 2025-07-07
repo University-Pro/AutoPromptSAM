@@ -17,7 +17,8 @@ from dataloader.DataLoader_Amos import AmosConfig, AmosDataset
 from torch.cuda import get_device_name
 
 # 导入对应的网络
-from networks.VNet_MultiOutput_V2 import VNet
+# from networks.VNet_MultiOutput_V2 import VNet
+from networks.VNet_MultiOutput_V3 import VNet
 
 # 如果目录不存在则创建
 def maybe_mkdir(path):

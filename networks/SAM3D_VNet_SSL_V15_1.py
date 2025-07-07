@@ -1,7 +1,7 @@
 """
-v15 dev
+v15_1
 优化网络结构
-按照计划进行修改
+另外让网络的参数变少，同时提高网络的可解释性
 """
 
 import sys
@@ -549,12 +549,12 @@ class Network(nn.Module):
         return all_coords, all_labels
 
     def forward(self, x):
-        # print(f'input shape is {x.shape}')
-
         # 0. VNet输出结果
         vnet_output, variance, encoder_feature = self.vnet(x)
-        # print(f'vnet_output shape is {vnet_output.shape}')
-        # print(f'encoder feature shape is {encoder_feature[3].shape}')
+        print(f'vnet_output shape is {vnet_output.shape}')
+        print(f'variance shape is {variance.shape}')
+        for i in range(len(encoder_feature)):
+            print(f'encoder_feature[{i}] shape is {encoder_feature[i].shape}')
 
         # 1. 图像主干编码
         after_encoder = self.samencoder(x)
@@ -613,7 +613,7 @@ def networktest():
     model(input_tensor) # 向前传播
 
     # 通过summary计算模型复杂度
-    summary(model, input_size=(1, 1, 112, 112, 80), device=device)
+    # summary(model, input_size=(1, 1, 112, 112, 80), device=device)
 
     return 
 

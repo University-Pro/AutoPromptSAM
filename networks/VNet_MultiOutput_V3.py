@@ -1,7 +1,7 @@
 """
-能够输出分割结果置信度的VNe网络
-在前者的基础上添加了Encoder输出的结果
-方便与SAM的进行一致性学习
+相比于V2只修改了一个参数
+就是下采样从221变成了222
+修改之后旧的checkpoints没法用了，只能重新训练
 """
 
 import torch
@@ -158,10 +158,10 @@ class VNet(nn.Module):
         self.block_three_dw = DownsamplingConvBlock(n_filters * 4, n_filters * 8, normalization=normalization)
 
         self.block_four = ConvBlock(3, n_filters * 8, n_filters * 8, normalization=normalization)
-        self.block_four_dw = DownsamplingConvBlock(n_filters * 8, n_filters * 16, stride=(2,2,1), normalization=normalization)
+        self.block_four_dw = DownsamplingConvBlock(n_filters * 8, n_filters * 16, stride=(2,2,2), normalization=normalization)
 
         self.block_five = ConvBlock(3, n_filters * 16, n_filters * 16, normalization=normalization)
-        self.block_five_up = UpsamplingDeconvBlock(n_filters * 16, n_filters * 8, stride=(2,2,1), normalization=normalization)
+        self.block_five_up = UpsamplingDeconvBlock(n_filters * 16, n_filters * 8, stride=(2,2,2), normalization=normalization)
 
         self.block_six = ConvBlock(3, n_filters * 8, n_filters * 8, normalization=normalization)
         self.block_six_up = UpsamplingDeconvBlock(n_filters * 8, n_filters * 4, normalization=normalization)

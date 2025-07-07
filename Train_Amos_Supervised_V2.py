@@ -39,7 +39,7 @@ from utils.ImageAugment import RandomCrop_LA as RandomCrop
 from utils.ImageAugment import ToTensor_LA as ToTensor
 
 # 导入网络框架
-from networks.VNet_MultiOutput_V2 import VNet
+from networks.VNet_MultiOutput_V3 import VNet
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss

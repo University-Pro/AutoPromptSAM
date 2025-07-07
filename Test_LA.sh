@@ -2,11 +2,13 @@
 
 # 存放 .pth 文件的目录
 # PTH_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Pth_Part1"  # 修改为你存放模型的目录
-PTH_DIR="result/VNet_Multi_V2/LA_8/Pth"
+# PTH_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V15/Pth_Part1"
+PTH_DIR="./result/SAM3D_VNet_SSL/LA_8_SemiSupervised_V15/Pth_Part1"
 
 # 保存日志的目录
 # LOG_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Test_Part1"  # 修改为你保存日志的目录
-LOG_DIR="result/VNet_Multi_V2/LA_8/Test"
+# LOG_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V15/Test_Part1"
+LOG_DIR="./result/SAM3D_VNet_SSL/LA_8_SemiSupervised_V15/Test_Part1"
 
 # 数据集根路径
 ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
@@ -15,7 +17,7 @@ ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
 NUM_CLASSES=2  # 修改为你的数据集类别数
 
 # 输出数量
-NUM_OUTPUT=1  # 假设这是默认的输出数量
+NUM_OUTPUT=2  # 假设这是默认的输出数量
 
 # 测试保存路径 (如果没有，脚本中会忽略)
 TEST_SAVE_PATH="None"  # 如果不保存结果，可以保持None
@@ -37,7 +39,7 @@ for MODEL_PATH in $PTH_DIR/*.pth; do
 
   # 使用当前的 .pth 文件调用 Python 脚本
   python -m Test_LA \
-    --model_name "VNet_Multi_V2" \
+    --model_name "V15" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \

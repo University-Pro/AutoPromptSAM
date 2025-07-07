@@ -1,7 +1,7 @@
 #!/bin/bash
 # 配置参数
-PTH_DIR="./result/VNet_Multi_V2/Amos_204/Pth"
-LOG_DIR="./result/VNet_Multi_V2/Amos_204/Test"
+PTH_DIR="./result/VNet_Multi_V3/Amos_20/Pth"
+LOG_DIR="./result/VNet_Multi_V3/Amos_20/Test"
 ROOT_PATH="./datasets/Amos"
 SCRIPT_NAME="Test_Amos.py"
 
