@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  30 JUN 2025 09:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  11 JUL 2025 17:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/samba/network-storage/westdigital/pi/sam2-ssl/paper/sn-article
-(/samba/network-storage/westdigital/pi/sam2-ssl/paper/sn-article.tex
+**sn-article
+(./sn-article.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/samba/program/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
@@ -627,64 +627,65 @@ Package hyperref Info: Link coloring ON on input line 33.
 \c@lstlisting=\count343
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 55.
+LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 61.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 61.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <8.43146> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 61.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 61.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 (/samba/program/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
  (/samba/program/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 55.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 61.
  (/samba/program/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 61.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 55.
+(Font)              size <8> substituted on input line 61.
 
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 55.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 61.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 55.
+(Font)              size <6> substituted on input line 61.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.52061> not available
-(Font)              size <6> substituted on input line 55.
+(Font)              size <6> substituted on input line 61.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 55.
+(Font)              size <6> substituted on input line 61.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 55.
+(Font)              size <6> substituted on input line 61.
 
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 55.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 {/samba/program/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 61.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
@@ -693,130 +694,134 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [3]
 
 pdfTeX warning: pdflatex (file ./figure1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figure1.pdf, id=148, 1121.14856pt x 680.5425pt>
+<figure1.pdf, id=144, 1121.14856pt x 680.5425pt>
 File: figure1.pdf Graphic file (type pdf)
 <use figure1.pdf>
-Package pdftex.def Info: figure1.pdf  used on input line 138.
+Package pdftex.def Info: figure1.pdf  used on input line 144.
 (pdftex.def)             Requested size: 372.0pt x 225.80505pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./figure1.pdf>]
 
 pdfTeX warning: pdflatex (file ./figure2.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figure2.pdf, id=166, 651.39355pt x 735.70856pt>
+<figure2.pdf, id=202, 651.39355pt x 735.70856pt>
 File: figure2.pdf Graphic file (type pdf)
 <use figure2.pdf>
-Package pdftex.def Info: figure2.pdf  used on input line 166.
+Package pdftex.def Info: figure2.pdf  used on input line 172.
 (pdftex.def)             Requested size: 293.62137pt x 331.62024pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5 <./figure1.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [6 <./figure2.pdf>]
-
-pdfTeX warning: pdflatex (file ./figure3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figure3.pdf, id=239, 645.37106pt x 812.07388pt>
-File: figure3.pdf Graphic file (type pdf)
-<use figure3.pdf>
-Package pdftex.def Info: figure3.pdf  used on input line 243.
-(pdftex.def)             Requested size: 263.54031pt x 331.62024pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8 <./figure3.pdf>]
+pdfTeX warning: pdflatex (file ./figure3.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figure3.pdf, id=244, 645.37106pt x 812.07388pt>
+File: figure3.pdf Graphic file (type pdf)
+<use figure3.pdf>
+Package pdftex.def Info: figure3.pdf  used on input line 249.
+(pdftex.def)             Requested size: 263.54031pt x 331.62024pt.
+
 
 pdfTeX warning: pdflatex (file ./figure4.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figure4.pdf, id=281, 933.4875pt x 298.23419pt>
+<figure4.pdf, id=248, 933.4875pt x 298.23419pt>
 File: figure4.pdf Graphic file (type pdf)
 <use figure4.pdf>
-Package pdftex.def Info: figure4.pdf  used on input line 272.
+Package pdftex.def Info: figure4.pdf  used on input line 278.
 (pdftex.def)             Requested size: 372.0pt x 118.8456pt.
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 295.
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 295.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.015> not available
-(Font)              size <5> substituted on input line 295.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 295.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 295.
-
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 299.
-(/samba/program/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8.03> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 299.
-
+ [8]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./figure4.pdf>]
+ [9 <./figure3.pdf>]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 301.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 301.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.015> not available
+(Font)              size <5> substituted on input line 301.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 301.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 301.
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 305.
+(/samba/program/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8.03> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 305.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
+ [10 <./figure4.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-<figure5.pdf, id=348, 867.24pt x 505.89pt>
+<figure5.pdf, id=343, 867.24pt x 505.89pt>
 File: figure5.pdf Graphic file (type pdf)
 <use figure5.pdf>
-Package pdftex.def Info: figure5.pdf  used on input line 451.
+Package pdftex.def Info: figure5.pdf  used on input line 457.
 (pdftex.def)             Requested size: 372.0pt x 217.00354pt.
-<figure6.pdf, id=350, 867.24pt x 505.89pt>
+<figure6.pdf, id=345, 867.24pt x 505.89pt>
 File: figure6.pdf Graphic file (type pdf)
 <use figure6.pdf>
-Package pdftex.def Info: figure6.pdf  used on input line 462.
+Package pdftex.def Info: figure6.pdf  used on input line 468.
 (pdftex.def)             Requested size: 372.0pt x 217.00354pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 485.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <./figure5.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 479.
-
-<figure7.pdf, id=374, 1204.32993pt x 745.3911pt>
+ [13]
+<figure7.pdf, id=366, 1204.32993pt x 745.3911pt>
 File: figure7.pdf Graphic file (type pdf)
 <use figure7.pdf>
-Package pdftex.def Info: figure7.pdf  used on input line 506.
+Package pdftex.def Info: figure7.pdf  used on input line 512.
 (pdftex.def)             Requested size: 372.0pt x 230.23857pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14 <./figure6.pdf>]
+ [14 <./figure5.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figure8.pdf, id=410, 1190.64821pt x 745.3911pt>
+<figure8.pdf, id=400, 1190.64821pt x 745.3911pt>
 File: figure8.pdf Graphic file (type pdf)
 <use figure8.pdf>
-Package pdftex.def Info: figure8.pdf  used on input line 560.
+Package pdftex.def Info: figure8.pdf  used on input line 566.
 (pdftex.def)             Requested size: 372.0pt x 232.88864pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -824,19 +829,19 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16 <./figure7.pdf>]
+ [16 <./figure6.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17 <./figure8.pdf>]
-<figure9.pdf, id=606, 361.35pt x 289.08pt>
+ [17 <./figure7.pdf>]
+<figure9.pdf, id=520, 361.35pt x 289.08pt>
 File: figure9.pdf Graphic file (type pdf)
 <use figure9.pdf>
-Package pdftex.def Info: figure9.pdf  used on input line 593.
+Package pdftex.def Info: figure9.pdf  used on input line 599.
 (pdftex.def)             Requested size: 182.28204pt x 145.82765pt.
-<figure10.pdf, id=607, 361.35pt x 289.08pt>
+<figure10.pdf, id=521, 361.35pt x 289.08pt>
 File: figure10.pdf Graphic file (type pdf)
 <use figure10.pdf>
-Package pdftex.def Info: figure10.pdf  used on input line 599.
+Package pdftex.def Info: figure10.pdf  used on input line 605.
 (pdftex.def)             Requested size: 182.28204pt x 145.82765pt.
 
 
@@ -846,22 +851,21 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18 <./figure9.pdf> <./figure10.pdf>]
-<figure11.pdf, id=637, 1204.32993pt x 407.80615pt>
-File: figure11.pdf Graphic file (type pdf)
-<use figure11.pdf>
-Package pdftex.def Info: figure11.pdf  used on input line 670.
-(pdftex.def)             Requested size: 372.0pt x 125.96434pt.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19] (./sn-article.bbl
+ [18 <./figure8.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./figure9.pdf> <./figure10.pdf>]
+<figure11.pdf, id=644, 1204.32993pt x 407.80615pt>
+File: figure11.pdf Graphic file (type pdf)
+<use figure11.pdf>
+Package pdftex.def Info: figure11.pdf  used on input line 676.
+(pdftex.def)             Requested size: 372.0pt x 125.96434pt.
+ (./sn-article.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20 <./figure11.pdf>]
@@ -892,15 +896,15 @@ Package rerunfilecheck Info: File `sn-article.out' has not changed.
 (rerunfilecheck)             Checksum: A10936A37B1804983201ACE24BBE98D6;2488.
  ) 
 Here is how much of TeX's memory you used:
- 16308 strings out of 474116
- 254220 string characters out of 5748214
- 1942187 words of memory out of 5000000
+ 16307 strings out of 474116
+ 254063 string characters out of 5748214
+ 1945187 words of memory out of 5000000
  38299 multiletter control sequences out of 15000+600000
  578099 words of font info for 120 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,13n,131p,713b,668s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,131p,660b,668s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></samba/program/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on sn-article.pdf (23 pages, 19137407 bytes).
+Output written on sn-article.pdf (23 pages, 19141825 bytes).
 PDF statistics:
  839 PDF objects out of 1000 (max. 8388607)
  559 compressed objects within 6 object streams

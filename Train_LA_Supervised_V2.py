@@ -35,7 +35,9 @@ from torch.utils.data.distributed import DistributedSampler
 
 # 导入网络框架
 # from networks.VNet_MultiOutput_V2 import VNet
-from networks.VNet_MultiOutput_V3 import VNet
+# from networks.VNet_MultiOutput_V3 import VNet
+# from networks.VNet_MultiOutput_V4 import VNet
+from networks.VNet_MultiOutput_V5 import VNet
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -189,7 +191,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # ==================== DDP 环境初始化 ====================
-    # [!!! 已修正 !!!] 将 dict.init_process_group 修改为 dist.init_process_group
     dist.init_process_group(backend='nccl', init_method='env://')
     local_rank = int(os.environ['LOCAL_RANK'])
     world_size = dist.get_world_size()
@@ -198,7 +199,6 @@ if __name__ == "__main__":
     is_main_process = (local_rank <= 0)
 
     # ==================== 日志、种子、目录创建 ====================
-    # 每个进程都设置日志记录，但只有主进程会写入文件
     setup_logging(args.log_path)
 
     if is_main_process:
@@ -245,8 +245,10 @@ if __name__ == "__main__":
 
     # ==================== 模型、损失函数、优化器 ====================
     logging.info("Initializing VNet model...")
-    # 假设您的VNet接受n_filters参数
-    model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True,n_filters=32).to(device)
+
+    # model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True,n_filters=16).to(device) # VNet_V4
+    model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True,n_filters=16).to(device) # VNet_V5
+    
     optimizer = optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), lr=args.learning_rate, weight_decay=0.01)
 
     start_epoch = 0

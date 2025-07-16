@@ -357,16 +357,18 @@ class Network(nn.Module):
     def __init__(
             self,
             in_channels: int = 1,
-            image_size: Tuple[int, int, int] = (112, 112, 80),
+            # image_size: Tuple[int, int, int] = (112, 112, 80),
+            image_size: Tuple[int, int, int] = (160, 160, 80),  # Amos数据集的输入大小
             patch_size: int = 8,
             embed_dim: int = 768,
             out_chans: int = 768,
-            num_classes: int = 2,
+            # num_classes: int = 2,
+            num_classes: int = 16,
             normalization: str = "batchnorm",
             has_dropout: bool = True,
             # pretrain_weight_path: str = "./result/VNet_Multi_V3/Amos_90/Pth/Best.pth",
             pretrain_weight_path: str = None,
-            num_mc_samples:int = 5,
+            num_mc_samples:int = 3,
             w_epistemic:float=0.5,
             w_aleatoric:float=0.5,
             k_per_class:int=20,
@@ -558,6 +560,7 @@ class Network(nn.Module):
 
         # 1. 图像主干编码
         after_encoder = self.samencoder(x)
+        # print(f'after_encoder shape is {after_encoder.shape}')
 
         # 2. 获得prompt
         coords, labels = self.DecoupledUncertaintyPrompt_forward(x)
@@ -605,15 +608,15 @@ def networktest():
     else:
         print("使用CPU")
     # 实例化网络
-    model = Network(in_channels=1,num_classes=2).to(device=device)
+    model = Network(in_channels=1,num_classes=16).to(device=device)
 
-    input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device) # LA数据集模拟输入大小
-    # input_tensor = torch.randn(1,1,160,160,80).to(device=device) # Amos数据集的输入大小
+    # input_tensor = torch.randn(1, 1, 112, 112, 80).to(device=device) # LA数据集模拟输入大小
+    input_tensor = torch.randn(1,1,160,160,80).to(device=device) # Amos数据集的输入大小
 
     model(input_tensor) # 向前传播
 
     # 通过summary计算模型复杂度
-    summary(model, input_size=(1, 1, 112, 112, 80), device=device)
+    summary(model, input_size=(1, 1, 160,160,80), device=device)
 
     return 
 

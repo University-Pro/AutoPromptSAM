@@ -38,10 +38,8 @@ from dataloader.DataLoader_Amos import AmosDataset
 
 # 导入网络框架
 # from networks.SAM3D_VNet_SSL_V14_2 import Network
-from networks.SAM3D_VNet_SSL_V15 import Network
-
-# 导入其他网络
-# from networks.Double_VNet import Network
+# from networks.SAM3D_VNet_SSL_V15 import Network
+from networks.SAM3D_VNet_SSL_V15_2 import Network
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -236,7 +234,7 @@ if __name__ == "__main__":
 
     # ==================== 模型初始化 ====================
     # model = Network(in_channels=1).to(device=device) # V14_2
-    model = Network(in_channels=1,num_classes=2).to(device=device) # V15
+    model = Network(in_channels=1,num_classes=2,pretrain_weight_path=args.pretrained_weights).to(device=device) # V15_2
     
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:

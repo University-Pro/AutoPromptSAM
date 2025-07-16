@@ -18,7 +18,10 @@ from torch.cuda import get_device_name
 from collections import OrderedDict
 
 # 导入相关网络
-from networks.VNet_MultiOutput_V2 import VNet
+# from networks.VNet_MultiOutput_V2 import VNet
+from networks.VNet_MultiOutput_V4 import VNet
+
+# from networks.SAM3D_VNet_SSL_V15 import Network
 
 # 如果目录不存在则创建
 def maybe_mkdir(path):
@@ -53,7 +56,7 @@ def setup_logging(log_file):
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
-def test_single_case(net, image: np.ndarray, stride_xy: int, stride_z: int, patch_size: Tuple[int, int, int], num_classes: int) -> Tuple[np.ndarray, np.ndarray]:
+def test_single_case_backup(net, image: np.ndarray, stride_xy: int, stride_z: int, patch_size: Tuple[int, int, int], num_classes: int) -> Tuple[np.ndarray, np.ndarray]:
     patch_d, patch_h, patch_w = patch_size
     
     # 添加批次和通道维度，转换为张量，发送到GPU
@@ -90,6 +93,51 @@ def test_single_case(net, image: np.ndarray, stride_xy: int, stride_z: int, patc
     count_map[count_map == 0] = 1.0
     
     # MODIFIED: 分别对两个 score_map 进行平均和 argmax
+    score_map1 = score_map1 / count_map
+    pred_map1 = torch.argmax(score_map1, dim=1).squeeze(0).cpu().numpy().astype(np.uint8)
+    
+    score_map2 = score_map2 / count_map
+    pred_map2 = torch.argmax(score_map2, dim=1).squeeze(0).cpu().numpy().astype(np.uint8)
+    
+    return pred_map1, pred_map2
+
+# 将这个函数替换你原来的 test_single_case
+def test_single_case(net, image: np.ndarray, stride_xy: int, stride_z: int, patch_size: Tuple[int, int, int], num_classes: int) -> Tuple[np.ndarray, np.ndarray]:
+    patch_d, patch_h, patch_w = patch_size
+    
+    # 添加批次和通道维度，转换为张量，直接发送到GPU
+    input_tensor = torch.from_numpy(image).unsqueeze(0).unsqueeze(0).float().cuda()
+    _, _, d, h, w = input_tensor.shape
+    
+    # OPTIMIZED: 将 score_map 和 count_map 保留在GPU上进行累加
+    score_map1 = torch.zeros((1, num_classes, d, h, w), dtype=torch.float32, device='cuda')
+    score_map2 = torch.zeros((1, num_classes, d, h, w), dtype=torch.float32, device='cuda')
+    count_map = torch.zeros((1, 1, d, h, w), dtype=torch.float32, device='cuda')
+    
+    steps_z = int(np.ceil((d - patch_d) / stride_z)) + 1
+    steps_y = int(np.ceil((h - patch_h) / stride_xy)) + 1
+    steps_x = int(np.ceil((w - patch_w) / stride_xy)) + 1
+    
+    with torch.no_grad():
+        for iz in range(steps_z):
+            sz = min(stride_z * iz, d - patch_d)
+            for iy in range(steps_y):
+                sy = min(stride_xy * iy, h - patch_h)
+                for ix in range(steps_x):
+                    sx = min(stride_xy * ix, w - patch_w)
+                    patch = input_tensor[:, :, sz:sz + patch_d, sy:sy + patch_h, sx:sx + patch_w]
+                    
+                    patch_pred1, patch_pred2 = net(patch)
+                    
+                    # OPTIMIZED: 在GPU上直接累加，避免了 .cpu() 操作
+                    score_map1[:, :, sz:sz + patch_d, sy:sy + patch_h, sx:sx + patch_w] += patch_pred1
+                    score_map2[:, :, sz:sz + patch_d, sy:sy + patch_h, sx:sx + patch_w] += patch_pred2
+                    count_map[:, :, sz:sz + patch_d, sy:sy + patch_h, sx:sx + patch_w] += 1.0
+    
+    # 确保分母不为0
+    count_map[count_map == 0] = 1.0
+    
+    # OPTIMIZED: 在GPU上完成平均和argmax，最后才将结果传回CPU
     score_map1 = score_map1 / count_map
     pred_map1 = torch.argmax(score_map1, dim=1).squeeze(0).cpu().numpy().astype(np.uint8)
     
@@ -229,10 +277,11 @@ if __name__ == '__main__':
 
     # ==================== 数据集配置 ====================
     try:
-        amos_config = AmosConfig(save_dir=args.amos_data_path, patch_size=(80, 160, 160))
+        amos_config = AmosConfig(save_dir=args.amos_data_path, patch_size=(160,160,80))
         patch_size = amos_config.patch_size
         num_classes = amos_config.num_classes
-        stride_config = {0: (patch_size[1]//4, patch_size[0]//4), 1: (patch_size[1]//2, patch_size[0]//2), 2: (patch_size[1], patch_size[0])}
+        # stride_config = {0: (patch_size[1]//4, patch_size[0]//4), 1: (patch_size[1]//2, patch_size[0]//2), 2: (patch_size[1], patch_size[0])}
+        stride_config = {0: (patch_size[0] // 4, patch_size[2] // 4), 1: (patch_size[0] // 2, patch_size[2] // 2), 2: (patch_size[0], patch_size[2])} # 滑动窗口步长不对会导致测试失败
         stride_xy, stride_z = [max(1, x) for x in stride_config[args.speed]]
         logging.info(f"输入尺寸: {patch_size}, 类别数量: {num_classes}, 滑动窗口步长: XY={stride_xy}, Z={stride_z}")
     except Exception as e:
@@ -242,7 +291,10 @@ if __name__ == '__main__':
     # ==================== 模型初始化 ====================
     try:
         # 确保你的VNet类能够返回两个输出
-        model = Network(in_channels=1,num_classes=16).to(device=device) # 测试网络
+        # model = Network(in_channels=1,num_classes=16).to(device=device) # 测试网络
+        # model = Network(in_channels=1,num_classes=16,num_multimask_outputs=16).to(device=device) # V15
+        model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True,n_filters=16).to(device) # VNet_V4
+
         total_params = sum(p.numel() for p in model.parameters())
         logging.info(f"模型总参数量: {total_params/1e6:.2f}M")
         

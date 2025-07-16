@@ -43,10 +43,16 @@
 \affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
 
 \abstract{
-Large amount of high-quality annotated data for training is required by medical image segmentation area, this limitation restricts their broader clinical use in disease diagnosis, treatment planning, and monitoring.
-Semi-supervised learning (SSL) has recently emerged as a promising approach to address this challenge, enabling the utilization of both labeled and unlabeled data to improve segmentation performance.
-Also, Segment Anything (SAM) from Meta has shown great potential in medical image segmentation, leveraging large-scale pretraining on diverse datasets to enhance model generalization.
-However, existing SSL methods often rely on complex architectures and extensive computational resources, making them less practical for real-world applications.
+Large amount of high-quality annotated 3D data for training is required by medical image segmentation area, this limitation restricts their broader clinical use in disease diagnosis, treatment planning, and monitoring.
+Semi-supervised learning (SSL) has emerged as a promising paradigm to address this data scarcity challenge by effectively leveraging both labeled and unlabeled data to enhance segmentation performance.
+While existing SSL approaches have primarily focused on model-centric innovations through novel regularization strategies, the recent emergence of promptable segmentation foundation models presents unprecedented opportunities for paradigmatic advancement.
+Segment Anything Model(SAM)'s sophisticated encoder-decoder architecture, with its innovative mask decoder and prompt encoder design, demonstrates exceptional adaptability and generalization capabilities across diverse segmentation tasks.
+However, the integration of such prompt-based segmentation models into semi-supervised medical image segmentation presents unique challenges. 
+Specifically, these models require datasets with additional prompt annotations to guide the segmentation process, yet most existing semi-supervised medical imaging datasets lack such prompt information.
+This absence creates a critical bottleneck: how to generate appropriate prompts and achieve high-performance segmentation of target lesion regions without explicit prompt supervision remains an open and challenging problem. 
+To address this fundamental limitation, we introduce a novel Semi-Supervised 3D Medical Image Segmentation framework with Decoupled Uncertainty Prompt Generator (DUPG), which intelligently generates effective prompts while maintaining superior segmentation performance in data-scarce scenarios. 
+To address these limitations, we propose XXX, a novel semi-supervised learning training processes that harnesses the power of foundation models while maintaining computational efficiency for medical image segmentation. 
+Our approaches and demonstrates superior performance across multiple medical imaging modalities while requiring significantly reduced computational resources compared to existing methods.
 }
 
 \keywords{Medical Image Segmentation, Semi-Supervised Learning, Deep Learning}

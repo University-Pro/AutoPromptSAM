@@ -1,6 +1,7 @@
 """
 此脚本用于解析包含多个“最终统计”区块的日志文件，适用于Amos数据集
 并筛选出具有最佳Dice（最高）和HD95（最低）指标的记录。
+不适用于SAM
 """
 import re
 import argparse

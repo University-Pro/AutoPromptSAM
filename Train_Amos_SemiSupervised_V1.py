@@ -35,7 +35,9 @@ from utils.ImageAugment import ToTensor_LA as ToTensor
 from utils.ImageAugment import TwoStreamBatchSampler_LA
 
 # 导入网络框架
-from networks.Double_VNet import Network # 导入模拟测试网络进行测试处理
+# from networks.Double_VNet import Network # 导入模拟测试网络进行测试处理
+# from networks.SAM3D_VNet_SSL_V15 import Network
+from networks.SAM3D_VNet_SSL_V15_2 import Network  # 导入实际训练网络
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -208,7 +210,8 @@ if __name__ == "__main__":
     logging.info(f"训练配置参数:\n{vars(args)}")
 
     # ==================== 数据准备 ====================
-    patch_size = (80, 160, 160)  # 根据实际数据集调整
+    # patch_size = (80, 160, 160)  # 根据实际数据集调整
+    patch_size = (160,160,80)  # 根据实际数据集调整
     config = AmosConfig(
         save_dir=args.dataset_path,
         patch_size=patch_size,  # 根据实际数据集调整
@@ -242,7 +245,7 @@ if __name__ == "__main__":
     train_loader = DataLoader(full_dataset, batch_sampler=batch_sampler, num_workers=4, pin_memory=True)
 
     # ==================== 模型初始化 ====================
-    model = Network(in_channels=1,num_classes=16).to(device=device) # 测试网络
+    model = Network(in_channels=1,num_classes=16,num_multimask_outputs=16).to(device=device) # 测试网络
     
     # 多GPU支持
     if args.multi_gpu and torch.cuda.device_count() > 1:
@@ -289,15 +292,15 @@ if __name__ == "__main__":
         model.train()
         epoch_loss = 0.0
         epoch_dice_loss = 0.0
+        epoch_dice_loss1 = 0.0
+        epoch_dice_loss2 = 0.0
         epoch_consistency_loss = 0.0
         
         pbar = tqdm.tqdm(train_loader, total=len(train_loader), desc=f'Epoch {epoch+1}/{args.epochs}')
         for batch_idx, batch_data in enumerate(pbar):
             # 数据准备
-            # images = batch_data['image'].to(device)
-            # labels = batch_data['label'].to(device)
-            images = batch_data['image'].to(device, non_blocking=True)  # 异步传输
-            labels = batch_data['label'].to(device, non_blocking=True)
+            images = batch_data['image'].to(device)
+            labels = batch_data['label'].to(device)
             labeled_bs = args.label_bs
             
             # 模型前向传播（双输出）

@@ -1,7 +1,7 @@
 """
 适用于利用LA数据集进行半监督学习的相关代码
 相比于V1添加了DDP训练，提高了训练效率和显卡占用率
-这里的DDP需要修改双流编码器
+这里的DDP需要修改双流编码器，还在开发中
 """
 
 import torch.optim as optim
@@ -22,6 +22,8 @@ from torch.optim.lr_scheduler import StepLR  # 动态学习率
 from torch.utils.tensorboard import SummaryWriter  # 启用Tensorboard
 import logging  # 日志系统
 import argparse
+from itertools import chain, cycle, islice
+from torch.utils.data.sampler import Sampler
 from glob import glob
 import json
 
@@ -32,9 +34,6 @@ from dataloader.DataLoader_LA import LAHeart
 from utils.ImageAugment import RandomRotFlip_LA as RandomRotFlip
 from utils.ImageAugment import RandomCrop_LA as RandomCrop
 from utils.ImageAugment import ToTensor_LA as ToTensor
-
-# 导入加载无标签的工具
-from utils.ImageAugment import TwoStreamBatchSampler_LA
 
 # 导入DDP相关内容
 import torch.distributed as dist
@@ -48,6 +47,80 @@ from networks.SAM3D_VNet_SSL_V15 import Network
 from utils.LA_Train_Metrics import softmax_mse_loss
 from utils.LA_Train_Metrics import kl_loss
 from utils.LA_Train_Metrics import CeDiceLoss
+
+
+# ===================== 双流采样器相关内容 ====================
+def iterate_once_la_ddp(indices, rank, world_size):
+    """在DDP中，只遍历分配给当前rank的索引子集一次"""
+    # np.random.seed(rank) # 如果需要更强的进程间随机性隔离，可以取消注释
+    
+    # 对主索引进行分区
+    num_samples = len(indices)
+    indices_for_rank = indices[rank:num_samples:world_size]
+    random.shuffle(indices_for_rank)
+    return iter(indices_for_rank)
+
+    """在DDP中，无限遍历分配给当前rank的索引子集"""
+    # 对次索引进行分区
+    num_samples = len(indices)
+    indices_for_rank = indices[rank:num_samples:world_size]
+    
+    while True:
+        random.shuffle(indices_for_rank)
+        yield from indices_for_rank
+        
+def grouper_la(iterable, n):
+    "将可迭代对象分组为固定长度的块"
+    it = iter(iterable)
+    while True:
+        chunk = tuple(islice(it, n))
+        if not chunk:
+            return
+        yield chunk
+
+class TwoStreamBatchSampler_LA(Sampler):
+    """
+    DDP兼容的双流批次采样器。
+    
+    它根据rank和world_size对主索引和次索引进行分区，
+    确保每个进程加载不同的数据子集。
+    """
+    def __init__(self, primary_indices, secondary_indices, batch_size, secondary_batch_size,
+                 rank=0, world_size=1):
+        self.primary_indices = primary_indices
+        self.secondary_indices = secondary_indices
+        self.secondary_batch_size = secondary_batch_size
+        self.primary_batch_size = batch_size - secondary_batch_size
+        self.rank = rank
+        self.world_size = world_size
+
+        assert len(self.primary_indices) >= self.primary_batch_size > 0
+        assert len(self.secondary_indices) >= self.secondary_batch_size > 0
+
+        # 计算每个rank的样本数
+        self.num_primary_samples_per_rank = len(self.primary_indices) // self.world_size
+        
+    def __iter__(self):
+        # 为每个进程创建独立的迭代器
+        primary_iter = iterate_once_la_ddp(self.primary_indices, self.rank, self.world_size)
+        secondary_iter = iterate_eternally_la_ddp(self.secondary_indices, self.rank, self.world_size)
+        
+        # 使用zip和grouper组合批次
+        return (
+            primary_batch + secondary_batch
+            for (primary_batch, secondary_batch)
+            in zip(grouper_la(primary_iter, self.primary_batch_size),
+                    grouper_la(secondary_iter, self.secondary_batch_size))
+        )
+
+    def __len__(self):
+        # 长度应为每个进程的主样本数除以每个批次的主样本大小
+        return self.num_primary_samples_per_rank // self.primary_batch_size
+
+# ===================== 训练初始化相关内容 ====================
+def ddp_setup():
+    dist.init_process_group(backend="nccl")
+    torch.cuda.set_device(int(os.environ["LOCAL_RANK"]))
 
 def set_seed(seed_value=42):
     """设置随机种子以确保结果可复现"""
@@ -176,92 +249,6 @@ def load_pretrained_v2(model, pretrained_path,multi_gpu=False):
     print(f"匹配率: {len(loaded_keys)/len(expected_keys):.1%}")
     
     return model
-
-class DistributedTwoStreamBatchSampler(TwoStreamBatchSampler_LA):
-    def __init__(self, primary_indices, secondary_indices, batch_size, secondary_batch_size,
-                 num_replicas=None, rank=None, seed=21):
-        if num_replicas is None:
-            if not dist.is_available():
-                raise RuntimeError("Requires distributed package to be available")
-            num_replicas = dist.get_world_size()
-        if rank is None:
-            if not dist.is_available():
-                raise RuntimeError("Requires distributed package to be available")
-            rank = dist.get_rank()
-            
-        self.num_replicas = num_replicas
-        self.rank = rank
-        self.seed = seed
-        self.epoch = 0
-
-        self.primary_indices = primary_indices
-        self.secondary_indices = secondary_indices
-        self.batch_size = batch_size
-        self.secondary_batch_size = secondary_batch_size
-        
-        # 计算每个进程应该处理的大约批次数量
-        self.primary_batch_size = self.batch_size - self.secondary_batch_size
-        
-        # 确保有标签和无标签数据的数量足够
-        assert len(self.primary_indices) >= self.primary_batch_size > 0
-        assert len(self.secondary_indices) >= self.secondary_batch_size > 0
-
-        self.num_primary_batches = len(self.primary_indices) // self.primary_batch_size
-        self.num_secondary_batches_per_primary = len(self.secondary_indices) // self.secondary_batch_size
-        
-        # 以有标签数据为主导，计算总批次数
-        self.total_batches = self.num_primary_batches
-        self.num_samples = self.total_batches // self.num_replicas
-        
-        logging.info(f"[Rank {self.rank}] Initialized DistributedTwoStreamBatchSampler.")
-        logging.info(f"[Rank {self.rank}] Total batches per epoch: {self.total_batches}, Samples per replica: {self.num_samples}")
-
-    def __iter__(self):
-        # 1. 创建随机数生成器，并使用 epoch + seed 来保证每个 epoch 的 shuffle 不同
-        g = torch.Generator()
-        g.manual_seed(self.seed + self.epoch)
-        
-        # 2. 对有标签和无标签的索引进行 shuffle
-        primary_iter = torch.randperm(len(self.primary_indices), generator=g).tolist()
-        secondary_iter = torch.randperm(len(self.secondary_indices), generator=g).tolist()
-
-        # 3. 生成完整的批次列表
-        batches = []
-        for i in range(self.total_batches):
-            # 取有标签数据索引
-            primary_start_idx = i * self.primary_batch_size
-            primary_batch_indices = [self.primary_indices[j] for j in primary_iter[primary_start_idx : primary_start_idx + self.primary_batch_size]]
-            
-            # 取无标签数据索引 (循环使用)
-            secondary_start_idx = (i * self.secondary_batch_size) % len(secondary_iter)
-            secondary_end_idx = secondary_start_idx + self.secondary_batch_size
-            
-            if secondary_end_idx > len(secondary_iter):
-                # 如果超出了范围，就从头取
-                secondary_batch_indices_raw = secondary_iter[secondary_start_idx:] + secondary_iter[:secondary_end_idx - len(secondary_iter)]
-            else:
-                secondary_batch_indices_raw = secondary_iter[secondary_start_idx:secondary_end_idx]
-
-            secondary_batch_indices = [self.secondary_indices[j] for j in secondary_batch_indices_raw]
-            
-            # 合并批次
-            batch = primary_batch_indices + secondary_batch_indices
-            batches.append(batch)
-            
-        # 4. 根据 rank 分发批次
-        # 这是分布式采样的关键：每个进程只获取自己的一部分批次
-        indices = batches[self.rank:len(batches):self.num_replicas]
-        logging.info(f"[Rank {self.rank}, Epoch {self.epoch}] Yielding {len(indices)} batches.")
-        
-        return iter(indices)
-
-    def __len__(self):
-        # 返回当前进程需要处理的批次数
-        return (self.total_batches + self.num_replicas - 1) // self.num_replicas
-
-    def set_epoch(self, epoch):
-        self.epoch = epoch
-        logging.info(f"[Rank {self.rank}] Sampler epoch set to {self.epoch}")
 
 if __name__ == "__main__":
 

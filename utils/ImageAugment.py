@@ -527,7 +527,6 @@ def grouper_LA(iterable, n):
     args = [iter(iterable)] * n
     return zip(*args)
 
-
 # ————————————————————————————————————————————————————————————
 # 来自Github的数据增强类，for LA，不进行任何更改
 # ————————————————————————————————————————————————————————————
@@ -589,7 +588,6 @@ class CenterCrop_Github(object):
 
         return {'image': image, 'label': label}
 
-
 class RandomRotFlip_Github(object):
     """
     Crop randomly flip the dataset in a sample
@@ -607,7 +605,6 @@ class RandomRotFlip_Github(object):
         label = np.flip(label, axis=axis).copy()
 
         return {'image': image, 'label': label}
-
 
 class ToTensor_Github(object):
     """Convert ndarrays in sample to Tensors."""

@@ -6,8 +6,6 @@
 \Newlabel{1}{1}
 \Newlabel{2}{2}
 \Newlabel{3}{3}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
-\newlabel{sec1}{{1}{1}{Introduction}{section.1}{}}
 \citation{long2015fully}
 \citation{ronneberger2015u}
 \citation{aitken2021understanding}
@@ -15,9 +13,8 @@
 \citation{zhou2018unet++}
 \citation{lou2021dc}
 \citation{huang2020unet}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Relative works}{2}{section.2}\protected@file@percent }
-\newlabel{sec2}{{2}{2}{Relative works}{section.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}U-shaped CNNs Methods}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
+\newlabel{sec1}{{1}{2}{Introduction}{section.1}{}}
 \citation{chen2019multi}
 \citation{hu2018squeeze}
 \citation{oktay2018attention}
@@ -26,6 +23,10 @@
 \citation{liu2021swin}
 \citation{cao2022swin}
 \citation{huang2022missformer}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Relative works}{3}{section.2}\protected@file@percent }
+\newlabel{sec2}{{2}{3}{Relative works}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}U-shaped CNNs Methods}{3}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Attention-Based Methods}{3}{subsection.2.2}\protected@file@percent }
 \citation{zheng2024lightweight}
 \citation{xie2017aggregated}
 \citation{howard2017mobilenets}
@@ -37,10 +38,9 @@
 \citation{tolstikhin2021mlp}
 \citation{tang2023cmu}
 \citation{guo2023visual}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Attention-Based Methods}{3}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Lightweight-Based Methods}{3}{subsection.2.3}\protected@file@percent }
 \citation{ronneberger2015u}
 \citation{howard2017mobilenets}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Lightweight-Based Methods}{4}{subsection.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Method}{4}{section.3}\protected@file@percent }
 \newlabel{sec3}{{3}{4}{Method}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Architecture Overview}{4}{subsection.3.1}\protected@file@percent }
@@ -48,58 +48,56 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces An illustration of \textbf  {DLKUNet}, which is composed of encoder (\textcolor {green}{Green}), decoder (\textcolor {blue}{Blue}) and reprojection layer. The blue arrow represents the downsample between different modules in the encoder, and the orange arrow represents the upsample in the decoder. The two pictures below show the internal structure of \textbf  {EBlock} and \textbf  {DFB} respectively.}}{5}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig1}{{1}{5}{An illustration of \textbf {DLKUNet}, which is composed of encoder (\textcolor {green}{Green}), decoder (\textcolor {blue}{Blue}) and reprojection layer. The blue arrow represents the downsample between different modules in the encoder, and the orange arrow represents the upsample in the decoder. The two pictures below show the internal structure of \textbf {EBlock} and \textbf {DFB} respectively}{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}EBlock}{5}{subsection.3.2}\protected@file@percent }
-\newlabel{subsec2}{{3.2}{5}{EBlock}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}EBlock}{6}{subsection.3.2}\protected@file@percent }
+\newlabel{subsec2}{{3.2}{6}{EBlock}{subsection.3.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The architecture of \textbf  {EBlock} and the components of convolution part and attention part}}{6}{figure.caption.3}\protected@file@percent }
 \newlabel{fig2}{{2}{6}{The architecture of \textbf {EBlock} and the components of convolution part and attention part}{figure.caption.3}{}}
-\newlabel{eq1}{{1}{6}{EBlock}{equation.3.1}{}}
-\newlabel{eq2}{{2}{6}{EBlock}{equation.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}DFB}{7}{subsection.3.3}\protected@file@percent }
-\newlabel{subsec3}{{3.3}{7}{DFB}{subsection.3.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The architecture of \textbf  {DFB} and its major components with working processes}}{8}{figure.caption.4}\protected@file@percent }
-\newlabel{fig3}{{3}{8}{The architecture of \textbf {DFB} and its major components with working processes}{figure.caption.4}{}}
+\newlabel{eq1}{{1}{7}{EBlock}{equation.3.1}{}}
+\newlabel{eq2}{{2}{7}{EBlock}{equation.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}DFB}{8}{subsection.3.3}\protected@file@percent }
+\newlabel{subsec3}{{3.3}{8}{DFB}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Architecture Variants}{8}{subsection.3.4}\protected@file@percent }
+\newlabel{subsec4}{{3.4}{8}{Architecture Variants}{subsection.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The architecture of \textbf  {DFB} and its major components with working processes}}{9}{figure.caption.4}\protected@file@percent }
+\newlabel{fig3}{{3}{9}{The architecture of \textbf {DFB} and its major components with working processes}{figure.caption.4}{}}
 \citation{cao2022swin,chen2021transunet}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Architecture Variants}{9}{subsection.3.4}\protected@file@percent }
-\newlabel{subsec4}{{3.4}{9}{Architecture Variants}{subsection.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The architectural configurations of DLKUNet-M and DLKUNet-S}}{9}{figure.caption.5}\protected@file@percent }
-\newlabel{fig4}{{4}{9}{The architectural configurations of DLKUNet-M and DLKUNet-S}{figure.caption.5}{}}
 \citation{cao2022swin,chen2021transunet}
-\citation{sudre2017generalised,cao2022swin}
-\citation{huttenlocher1993comparing,chen2021transunet}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The architectural configurations of DLKUNet-M and DLKUNet-S}}{10}{figure.caption.5}\protected@file@percent }
+\newlabel{fig4}{{4}{10}{The architectural configurations of DLKUNet-M and DLKUNet-S}{figure.caption.5}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Configurations of different DLKUNet models}}{10}{table.caption.7}\protected@file@percent }
 \newlabel{tab1}{{1}{10}{Configurations of different DLKUNet models}{table.caption.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Experiments and Results}{10}{section.4}\protected@file@percent }
 \newlabel{sec4}{{4}{10}{Experiments and Results}{section.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{10}{subsection.4.1}\protected@file@percent }
 \newlabel{subsec5}{{4.1}{10}{Datasets}{subsection.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Evaluation Metrics}{10}{subsection.4.2}\protected@file@percent }
-\newlabel{eq11}{{5}{10}{Evaluation Metrics}{equation.4.5}{}}
+\citation{sudre2017generalised,cao2022swin}
+\citation{huttenlocher1993comparing,chen2021transunet}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Evaluation Metrics}{11}{subsection.4.2}\protected@file@percent }
+\newlabel{eq11}{{5}{11}{Evaluation Metrics}{equation.4.5}{}}
 \newlabel{eq12}{{6}{11}{Evaluation Metrics}{equation.4.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Implementation details}{11}{subsection.4.3}\protected@file@percent }
 \newlabel{subsec6}{{4.3}{11}{Implementation details}{subsection.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Training Strategies}{11}{subsection.4.4}\protected@file@percent }
-\newlabel{eq13}{{7}{11}{Training Strategies}{equation.4.7}{}}
-\newlabel{eq14}{{8}{11}{Training Strategies}{equation.4.8}{}}
-\newlabel{eq15}{{9}{11}{Training Strategies}{equation.4.9}{}}
-\newlabel{eq16}{{10}{12}{Training Strategies}{equation.4.10}{}}
-\newlabel{eq17}{{11}{12}{Training Strategies}{equation.4.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces DSC scores obtained from segmenting the Synapse dataset using DLKUNet-L under different loss functions. The blue line represents the OrdinaryLoss method, while the red line denotes the Phase-Based Loss method.}}{13}{figure.caption.8}\protected@file@percent }
-\newlabel{fig5}{{5}{13}{DSC scores obtained from segmenting the Synapse dataset using DLKUNet-L under different loss functions. The blue line represents the OrdinaryLoss method, while the red line denotes the Phase-Based Loss method}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Training Strategies}{12}{subsection.4.4}\protected@file@percent }
+\newlabel{eq13}{{7}{12}{Training Strategies}{equation.4.7}{}}
+\newlabel{eq14}{{8}{12}{Training Strategies}{equation.4.8}{}}
+\newlabel{eq15}{{9}{12}{Training Strategies}{equation.4.9}{}}
 \citation{chen2021transunet}
 \citation{ronneberger2015u}
 \citation{oktay2018attention}
 \citation{chen2021transunet}
 \citation{cao2022swin}
+\newlabel{eq16}{{10}{13}{Training Strategies}{equation.4.10}{}}
+\newlabel{eq17}{{11}{13}{Training Strategies}{equation.4.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Experiment Results}{13}{subsection.4.5}\protected@file@percent }
+\newlabel{subsec7}{{4.5}{13}{Experiment Results}{subsection.4.5}{}}
 \citation{cao2022swin}
 \citation{ronneberger2015u}
 \citation{cao2022swin}
 \citation{cao2022swin}
 \citation{cao2022swin}
 \citation{chen2021transunet}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces DSC scores obtained from segmenting the ACDC dataset using DLKUNet-L under different loss functions. The blue line represents the use of the Phase-Based Loss strategy, while the red line denotes the use of the Dynamic Loss strategy.}}{14}{figure.caption.9}\protected@file@percent }
-\newlabel{fig6}{{6}{14}{DSC scores obtained from segmenting the ACDC dataset using DLKUNet-L under different loss functions. The blue line represents the use of the Phase-Based Loss strategy, while the red line denotes the use of the Dynamic Loss strategy}{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Experiment Results}{14}{subsection.4.5}\protected@file@percent }
-\newlabel{subsec7}{{4.5}{14}{Experiment Results}{subsection.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces DSC scores obtained from segmenting the Synapse dataset using DLKUNet-L under different loss functions. The blue line represents the OrdinaryLoss method, while the red line denotes the Phase-Based Loss method.}}{14}{figure.caption.8}\protected@file@percent }
+\newlabel{fig5}{{5}{14}{DSC scores obtained from segmenting the Synapse dataset using DLKUNet-L under different loss functions. The blue line represents the OrdinaryLoss method, while the red line denotes the Phase-Based Loss method}{figure.caption.8}{}}
 \newlabel{RF1}{15}
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Comparative results of various methods in the Synapse segmentation task. The parameter count is measured in Million (M), and FLOPs are calculated in Gigaflops (G). Higher DSC indicates better performance, while lower HD95 indicates better performance. Evaluation on Aorta(Aor), Gallbladder(Gal), Left Kidney(Kid(L)), Right Kidney(Kid(R)), Liver(Liv), Pancreas(Pan), Spleen(Spl), Stomach(Sto) \textcolor {red}{Red} highlights the best results, while \textcolor {blue}{Blue} indicates the second-best results.}}{15}{table.caption.11}\protected@file@percent }
 \newlabel{tab2}{{2}{15}{Comparative results of various methods in the Synapse segmentation task. The parameter count is measured in Million (M), and FLOPs are calculated in Gigaflops (G). Higher DSC indicates better performance, while lower HD95 indicates better performance. Evaluation on Aorta(Aor), Gallbladder(Gal), Left Kidney(Kid(L)), Right Kidney(Kid(R)), Liver(Liv), Pancreas(Pan), Spleen(Spl), Stomach(Sto) \textcolor {red}{Red} highlights the best results, while \textcolor {blue}{Blue} indicates the second-best results}{table.caption.11}{}}
@@ -109,16 +107,18 @@
 \citation{dosovitskiy2020image}
 \citation{chen2021transunet}
 \citation{cao2022swin}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Visualization results obtained using different methods on the Synapse dataset.}}{16}{figure.caption.12}\protected@file@percent }
-\newlabel{fig7}{{7}{16}{Visualization results obtained using different methods on the Synapse dataset}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces DSC scores obtained from segmenting the ACDC dataset using DLKUNet-L under different loss functions. The blue line represents the use of the Phase-Based Loss strategy, while the red line denotes the use of the Dynamic Loss strategy.}}{16}{figure.caption.9}\protected@file@percent }
+\newlabel{fig6}{{6}{16}{DSC scores obtained from segmenting the ACDC dataset using DLKUNet-L under different loss functions. The blue line represents the use of the Phase-Based Loss strategy, while the red line denotes the use of the Dynamic Loss strategy}{figure.caption.9}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Ablation Study}{16}{section.5}\protected@file@percent }
 \newlabel{sec5}{{5}{16}{Ablation Study}{section.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Visualization results obtained using different methods on the Synapse dataset.}}{17}{figure.caption.12}\protected@file@percent }
+\newlabel{fig7}{{7}{17}{Visualization results obtained using different methods on the Synapse dataset}{figure.caption.12}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Comparison of results for the ACDC task using different methods in terms of parameters (M) and DSC. Higher DSC scores indicate better segmentation performance.}}{17}{table.caption.14}\protected@file@percent }
 \newlabel{tab3}{{3}{17}{Comparison of results for the ACDC task using different methods in terms of parameters (M) and DSC. Higher DSC scores indicate better segmentation performance}{table.caption.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Segmentation results obtained using different methods on the ACDC task.}}{17}{figure.caption.15}\protected@file@percent }
-\newlabel{fig8}{{8}{17}{Segmentation results obtained using different methods on the ACDC task}{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces DSC scores (left) and HD95 scores (right) for models of different sizes under various channel configurations on the Synapse dataset.}}{18}{figure.caption.16}\protected@file@percent }
-\newlabel{fig9}{{9}{18}{DSC scores (left) and HD95 scores (right) for models of different sizes under various channel configurations on the Synapse dataset}{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Segmentation results obtained using different methods on the ACDC task.}}{18}{figure.caption.15}\protected@file@percent }
+\newlabel{fig8}{{8}{18}{Segmentation results obtained using different methods on the ACDC task}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces DSC scores (left) and HD95 scores (right) for models of different sizes under various channel configurations on the Synapse dataset.}}{19}{figure.caption.16}\protected@file@percent }
+\newlabel{fig9}{{9}{19}{DSC scores (left) and HD95 scores (right) for models of different sizes under various channel configurations on the Synapse dataset}{figure.caption.16}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The impact of input datasets of different resolutions on DLKUNet-L and segmentation results in DSC score}}{19}{table.caption.18}\protected@file@percent }
 \newlabel{tab4}{{4}{19}{The impact of input datasets of different resolutions on DLKUNet-L and segmentation results in DSC score}{table.caption.18}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Impact of different convolutional kernel configurations on the segmentation results using DLKUNet-L}}{19}{table.caption.20}\protected@file@percent }
@@ -127,13 +127,13 @@
 \newlabel{sec6}{{6}{19}{Discussion}{section.6}{}}
 \bibdata{sn-bibliography}
 \bibcite{long2015fully}{{1}{2015}{{Long et~al.}}{{}}}
-\bibcite{ronneberger2015u}{{2}{2015}{{Ronneberger et~al.}}{{}}}
-\bibcite{aitken2021understanding}{{3}{2021}{{Aitken et~al.}}{{}}}
-\bibcite{milletari2016v}{{4}{2016}{{Milletari et~al.}}{{}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Segmentation Results for Pancreas Using Different Methods}}{20}{figure.caption.21}\protected@file@percent }
 \newlabel{fig10}{{10}{20}{Segmentation Results for Pancreas Using Different Methods}{figure.caption.21}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{20}{section.7}\protected@file@percent }
 \newlabel{sec7}{{7}{20}{Conclusion}{section.7}{}}
+\bibcite{ronneberger2015u}{{2}{2015}{{Ronneberger et~al.}}{{}}}
+\bibcite{aitken2021understanding}{{3}{2021}{{Aitken et~al.}}{{}}}
+\bibcite{milletari2016v}{{4}{2016}{{Milletari et~al.}}{{}}}
 \bibcite{zhou2018unet++}{{5}{2018}{{Zhou et~al.}}{{}}}
 \bibcite{lou2021dc}{{6}{2021}{{Lou et~al.}}{{}}}
 \bibcite{huang2020unet}{{7}{2020}{{Huang et~al.}}{{}}}

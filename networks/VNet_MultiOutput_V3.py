@@ -253,13 +253,13 @@ class VNet(nn.Module):
 
 if __name__ == '__main__':
     # 测试修改后的网络
-    x = torch.randn(1, 1, 112, 112, 80) # BCHWD
+    # x = torch.randn(1, 1, 112, 112, 80) # BCHWD
     # x = torch.randn(1,1,80,160,160)
-    # x = torch.randn(1,1,160,160,80)
+    x = torch.randn(1,1,160,160,80)
     
     print(f'Input shape: {x.shape}')
     
-    model = VNet(n_channels=1, n_classes=16, normalization='batchnorm', has_dropout=True,n_filters=32)
+    model = VNet(n_channels=1, n_classes=16, normalization='batchnorm', has_dropout=True,n_filters=16)
     
     logits, variance, features = model(x)
     print(f'Logits shape: {logits.shape}')
@@ -267,3 +267,5 @@ if __name__ == '__main__':
     print(f'Number of feature maps from encoder: {len(features)}')
     for i, feat in enumerate(features):
         print(f'  Feature {i+1} shape: {feat.shape}')
+        
+    summary(model, input_size=(1, 1, 160, 160, 80), device='cpu')

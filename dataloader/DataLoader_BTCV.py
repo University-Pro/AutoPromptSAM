@@ -1,3 +1,7 @@
+"""
+BTCV的Dataloader
+"""
+
 import torch
 import os
 import sys
@@ -12,7 +16,7 @@ from skimage import transform as sk_trans
 from scipy.ndimage import rotate, zoom
 import h5py
 
-class BTCV(Dataset):
+class BTCV_backup(Dataset):
     """ Synapse Dataset """
     def __init__(self, image_list, base_dir=None, transform=None):
         self._base_dir = base_dir
@@ -34,21 +38,20 @@ class BTCV(Dataset):
             sample = self.transform(sample)
         return sample
 
-class MACT(Dataset):
-    """ Multi-organ Abdominal CT Reference Standard Segmentations Dataset """
-    def __init__(self, image_list, base_dir=None, transform=None):
+class BTCV(Dataset):
+    """ Synapse Dataset """
+    def __init__(self, image_list, base_dir=None, transform=None, train_num=None):
         self._base_dir = base_dir
         self.transform = transform
-        self.image_list = ['{:0>4}'.format(i + 1) for i in image_list]
-
-        print("Total {} samples for training".format(len(self.image_list)))
-
+        # 如果指定了train_num，则只取前train_num个样本
+        self.image_list = image_list[:train_num] if train_num is not None else image_list
+        # print("Total {} samples for training".format(len(self.image_list)))
+    
     def __len__(self):
         return len(self.image_list)
-
+    
     def __getitem__(self, idx):
         image_name = self.image_list[idx]
-        # ex: self._base_dir: '../data/MACT_h5'
         image_path = self._base_dir + '/{}.h5'.format(image_name)
         h5f = h5py.File(image_path, 'r')
         image, label = h5f['image'][:], h5f['label'][:]
@@ -163,51 +166,71 @@ def grouper(iterable, n):
 def dataloader_test():
     # 配置数据集路径
     base_dir = "./datasets/BTCV/data"
-    
-    # 创建文件列表 (0001 到 0040)
     list_path = './datasets/BTCV/btcv.txt'
     
     # 读取图像列表文件
     with open(list_path, 'r') as f:
         image_list = [line.strip() for line in f.readlines()]
-
-    # 创建数据集实例
-    dataset = BTCV(image_list=image_list, base_dir=base_dir)
     
-    print("\n===== 开始数据加载测试 =====")
-    print(f"数据集大小：{len(dataset)} 个样本")
+    # 测试不同数据量
+    test_sizes = [5, 10, 15, 20, 25, 30]
     
-    # 测试随机样本
-    for i in [0, 10, 20, 30, 39]:  # 测试不同位置的样本
-        try:
-            sample = dataset[i]
+    print("===== 数据集基本属性测试 =====")
+    print(f"完整数据集大小: {len(image_list)} 个样本\n")
+    
+    for size in test_sizes:
+        print(f"\n=== 测试 train_num={size} ===")
+        
+        # 创建数据集实例
+        dataset = BTCV(image_list=image_list, base_dir=base_dir, train_num=size)
+        print(f"实际加载样本数: {len(dataset)}")
+        
+        # 收集所有样本的类别信息
+        all_classes = set()
+        
+        # 测试第一个样本的属性
+        if len(dataset) > 0:
+            sample = dataset[0]
             img = sample['image']
             label = sample['label']
             
-            print(f"\n样本 {i} ({image_list[i]}.h5):")
-            print(f"  图像形状：{img.shape} | 数据类型：{img.dtype} | 值范围：[{img.min()}, {img.max()}]")
-            print(f"  标签形状：{label.shape} | 数据类型：{label.dtype} | 唯一值：{np.unique(label)}")
+            # 获取当前样本的类别
+            current_classes = np.unique(label)
+            all_classes.update(current_classes)
             
-        except Exception as e:
-            print(f"加载样本 {i} 失败: {str(e)}")
-    
-    # 测试随机裁剪变换
-    print("\n===== 测试数据变换 =====")
-    crop_transform = RandomCrop(output_size=(128, 128, 128))
-    sample = dataset[0]
-    cropped = crop_transform(sample)
-    
-    print("随机裁剪 (128x128x128) 结果:")
-    print(f"  原始图像形状: {sample['image'].shape}")
-    print(f"  裁剪后形状: {cropped['image'].shape}")
-    
-    # 测试Tensor转换
-    tensor_transform = ToTensor()
-    tensor_sample = tensor_transform(cropped)
-    
-    print("\nTensor转换结果:")
-    print(f"  图像Tensor形状: {tensor_sample['image'].shape} | 类型: {type(tensor_sample['image'])}")
-    print(f"  标签Tensor形状: {tensor_sample['label'].shape} | 类型: {type(tensor_sample['label'])}")
+            print(f"\n第一个样本 ({image_list[0]}.h5):")
+            print(f"  原始图像形状: {img.shape}")
+            print(f"  原始标签形状: {label.shape}")
+            print(f"  包含类别数: {len(current_classes)}")
+            print(f"  具体类别: {sorted(current_classes)}")
+            
+            # 测试裁剪
+            crop_transform = RandomCrop(output_size=(128, 128, 128))
+            cropped = crop_transform(sample)
+            print(f"  裁剪后图像形状: {cropped['image'].shape}")
+            
+            # 裁剪后的类别
+            cropped_classes = np.unique(cropped['label'])
+            print(f"  裁剪后类别数: {len(cropped_classes)}")
+            
+            # 测试Tensor转换
+            tensor_transform = ToTensor()
+            tensor_sample = tensor_transform(cropped)
+            print(f"  Tensor转换后形状: {tensor_sample['image'].shape}")
+            
+            # 检查其他样本的类别
+            for i in range(1, min(3, len(dataset))):  # 检查前3个样本
+                try:
+                    sample = dataset[i]
+                    classes = np.unique(sample['label'])
+                    all_classes.update(classes)
+                except:
+                    continue
+            
+            print(f"\n前{min(3, len(dataset))}个样本中的总类别数: {len(all_classes)}")
+            print(f"所有出现的类别: {sorted(all_classes)}")
+        else:
+            print("数据集为空")
 
 if __name__ == "__main__":
     dataloader_test()

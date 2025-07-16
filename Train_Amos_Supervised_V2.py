@@ -39,7 +39,9 @@ from utils.ImageAugment import RandomCrop_LA as RandomCrop
 from utils.ImageAugment import ToTensor_LA as ToTensor
 
 # 导入网络框架
-from networks.VNet_MultiOutput_V3 import VNet
+# from networks.VNet_MultiOutput_V3 import VNet
+# from networks.VNet_MultiOutput_V4 import VNet
+from networks.VNet_MultiOutput_V5 import VNet
 
 # 导入Loss函数
 from utils.LA_Train_Metrics import softmax_mse_loss
@@ -228,7 +230,10 @@ if __name__ == "__main__":
 
     # ---------------- 模型、损失函数、优化器 ----------------
     logging.info("Initializing VNet model...")
-    model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True)
+    # model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True)
+    # model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True, n_filters=16).to(device)  # VNet_V4
+    model = VNet(n_channels=1, n_classes=args.num_classes, normalization="batchnorm", has_dropout=True,n_filters=16).to(device) # VNet_V5
+    
     logging.info(f"Model VNet created with {args.num_classes} classes and batch normalization.")
     
     model.to(device)

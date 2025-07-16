@@ -2,13 +2,12 @@
 
 # 存放 .pth 文件的目录
 # PTH_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Pth_Part1"  # 修改为你存放模型的目录
-# PTH_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V15/Pth_Part1"
-PTH_DIR="./result/SAM3D_VNet_SSL/LA_8_SemiSupervised_V15/Pth_Part1"
+PTH_DIR="./result/SAM3D_VNet_SSL/LA_8_SemiSupervised_V15_2/Pth_Part1"
 
 # 保存日志的目录
 # LOG_DIR="result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V14_2_2/Test_Part1"  # 修改为你保存日志的目录
-# LOG_DIR="./result/SAM3D_VNet_SSL/LA_16_SemiSupervised_V15/Test_Part1"
-LOG_DIR="./result/SAM3D_VNet_SSL/LA_8_SemiSupervised_V15/Test_Part1"
+LOG_DIR="./result/SAM3D_VNet_SSL/LA_8_SemiSupervised_V15_2/Test_Part1"
+# LOG_DIR="./result/VNet_Multi_V5/LA_8/Test"
 
 # 数据集根路径
 ROOT_PATH="./datasets/LA"  # 修改为你数据集的路径
@@ -39,7 +38,7 @@ for MODEL_PATH in $PTH_DIR/*.pth; do
 
   # 使用当前的 .pth 文件调用 Python 脚本
   python -m Test_LA \
-    --model_name "V15" \
+    --model_name "V15_Part1" \
     --model_load "$MODEL_PATH" \
     --log_path "$LOG_FILE" \
     --test_save_path "$TEST_SAVE_PATH" \

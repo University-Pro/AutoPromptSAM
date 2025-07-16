@@ -1,3 +1,7 @@
+"""
+3D Patch Merging Layer for Semi-Supervised Learning in Medical Image Segmentation
+测试使用
+"""
 import torch
 import torch.nn as nn
 from torchinfo import summ
